@@ -393,18 +393,29 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         partes_cuota.append(f"{cuota_v}")
     cuota_str = " | ".join(partes_cuota) if partes_cuota else ""
 
+    def _fila(nombre, val_local, val_visitante, ancho_nombre=18, ancho_val=7):
+        return f"│ {nombre:<{ancho_nombre}}│{str(val_visitante):^{ancho_val}}│{str(val_local):^{ancho_val}}│"
+
+    tabla = "<pre>"
+    tabla += "┌──────────────────────┬─────────┬─────────┐\n"
+    tabla += "│                      │ Visit   │  Local  │\n"
+    tabla += "├──────────────────────┼─────────┼─────────┤\n"
+    tabla += _fila("Tiros a puerta", _n(stats_local,'shotsOnTarget'), _n(stats_visitante,'shotsOnTarget')) + "\n"
+    tabla += _fila("Tiros totales", _n(stats_local,'totalShots'), _n(stats_visitante,'totalShots')) + "\n"
+    tabla += _fila("Corners", _n(stats_local,'wonCorners'), _n(stats_visitante,'wonCorners')) + "\n"
+    tabla += _fila("Tiros bloqueados", _n(stats_local,'blockedShots'), _n(stats_visitante,'blockedShots')) + "\n"
+    tabla += _fila("Posesion", f"{_n(stats_local,'possessionPct')}%", f"{_n(stats_visitante,'possessionPct')}%") + "\n"
+    tabla += _fila("Faltas", _n(stats_local,'foulsCommitted'), _n(stats_visitante,'foulsCommitted')) + "\n"
+    tabla += "└──────────────────────┴─────────┴─────────┘"
+    tabla += "</pre>"
+
     lineas = [f"<b>{texto}</b>"]
-    lineas.append(f"{escapar_html(partido['local'])}{corona_local} {gl} - {gv} {escapar_html(partido['visitante'])}{corona_visitante}")
+    lineas.append(f"{escapar_html(partido['local'])}{corona_local} <b>{gl} - {gv}</b> {escapar_html(partido['visitante'])}{corona_visitante}")
     if cuota_str:
         lineas.append(f"Cuotas: {cuota_str}")
     lineas.append(f"Min {minuto}")
     lineas.append("")
-    lineas.append(f"Tiros a puerta: {_n(stats_local,'shotsOnTarget')} vs {_n(stats_visitante,'shotsOnTarget')}")
-    lineas.append(f"Tiros totales: {_n(stats_local,'totalShots')} vs {_n(stats_visitante,'totalShots')}")
-    lineas.append(f"Corners: {_n(stats_local,'wonCorners')} vs {_n(stats_visitante,'wonCorners')}")
-    lineas.append(f"Tiros bloqueados: {_n(stats_local,'blockedShots')} vs {_n(stats_visitante,'blockedShots')}")
-    lineas.append(f"Posesion: {_n(stats_local,'possessionPct')}% vs {_n(stats_visitante,'possessionPct')}%")
-    lineas.append(f"Faltas: {_n(stats_local,'foulsCommitted')} vs {_n(stats_visitante,'foulsCommitted')}")
+    lineas.append(tabla)
 
     if dominancia_fav is not None and z is not None:
         conf = momentum.etiqueta_confianza(z)
