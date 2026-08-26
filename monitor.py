@@ -96,26 +96,25 @@ ESCALON_MAXIMO_UMBRAL = 2
 INCREMENTO_POR_ESCALON = 0.4
 
 # Multiplicadores de umbral por prioridad (a pedido explicito, agosto 2026)
-# ALTA: sin cambio (multiplicador 1.0)
-# MEDIA: +40% mas estricto (multiplicador 1.4)
-# BAJA: +80% mas estricto (multiplicador 1.8)
-MULTIPLICADOR_PRIORIDAD = {
-    "ALTA": 1.0,
-    "MEDIA": 1.4,
-    "BAJA": 1.8,
+# ALTA: z-score >= 1.7
+# MEDIA: z-score >= 2.0
+# BAJA: z-score >= 2.3
+UMBRAL_Z_POR_PRIORIDAD = {
+    "ALTA": 1.7,
+    "MEDIA": 2.0,
+    "BAJA": 2.3,
 }
 
 
 def _umbral_efectivo_favorito(partido, diferencia):
-    if partido.get("tipo_pronostico") != "favorito_directo":
-        umbral_base = UMBRAL_Z_ALERTA
-    else:
-        escalon = max(0, min(diferencia, ESCALON_MAXIMO_UMBRAL))
-        umbral_base = UMBRAL_Z_ALERTA + (escalon * INCREMENTO_POR_ESCALON)
-
     prioridad = partido.get("prioridad", "ALTA")
-    multiplicador = MULTIPLICADOR_PRIORIDAD.get(prioridad, 1.0)
-    return umbral_base * multiplicador
+    umbral_base = UMBRAL_Z_POR_PRIORIDAD.get(prioridad, 1.7)
+
+    if partido.get("tipo_pronostico") == "favorito_directo":
+        escalon = max(0, min(diferencia, ESCALON_MAXIMO_UMBRAL))
+        umbral_base += (escalon * INCREMENTO_POR_ESCALON)
+
+    return umbral_base
 
 
 # =====================================================================
