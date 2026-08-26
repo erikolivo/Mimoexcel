@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+
+# NOTA: data/ NO se ignora a proposito. El sistema corre como varias
+# fases de GitHub Actions separadas (checkout limpio cada vez) y usa
+# los archivos de data/ como capa de persistencia entre corridas -- cada
+# workflow los comitea con 'git add -A' al terminar. Ignorarlos rompe el
+# sistema completo, no solo el cache de ClubElo.
