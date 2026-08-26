@@ -413,6 +413,10 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
                          f"{escapar_html(partido['visitante'])} {cuota_v}" if cuota_v else None]
         lineas.append("Cuota inicial: " + " | ".join(p for p in partes_cuota if p))
 
+    local_besoccer = partido['local'].replace(' ', '+')
+    visitante_besoccer = partido['visitante'].replace(' ', '+')
+    lineas.append(f"\U0001F517 BeSoccer: https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}")
+
     return "\n".join(lineas)
 
 
