@@ -74,7 +74,7 @@ NOMBRE_PROYECTO = "Alertas Excel"  # antes "Alertas ESPN" -- renombrado a pedido
 
 
 def enviar_mensaje_telegram(texto):
-    texto_con_encabezado = f"\u2699\uFE0F <b>{NOMBRE_PROYECTO}</b>\n{texto}"
+    texto_con_encabezado = f"{texto}"
     partes = _dividir_mensaje(texto_con_encabezado)
     if len(partes) > 1:
         print(f"[INFO] Mensaje de {len(texto_con_encabezado)} caracteres supera el limite de Telegram, "

@@ -378,14 +378,27 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     def _n(stats, campo):
         return stats.get(campo, "?")
 
-    titulo = (
-        f"<b>{escapar_html(partido['local'])}{corona_local}</b> vs "
-        f"<b>{escapar_html(partido['visitante'])}{corona_visitante}</b>"
-    )
+    gl = snap_actual['goles_local']
+    gv = snap_actual['goles_visitante']
 
-    lineas = [texto, ""]
+    cuota_l = partido.get("cuota_local_inicial")
+    cuota_x = partido.get("cuota_empate_inicial")
+    cuota_v = partido.get("cuota_visitante_inicial")
+    partes_cuota = []
+    if cuota_l:
+        partes_cuota.append(f"{cuota_l}")
+    if cuota_x:
+        partes_cuota.append(f"{cuota_x}")
+    if cuota_v:
+        partes_cuota.append(f"{cuota_v}")
+    cuota_str = " | ".join(partes_cuota) if partes_cuota else ""
 
-    lineas.append("\U0001F4CA <i>Estadisticas acumuladas del partido (siempre Local vs Visitante):</i>")
+    lineas = [f"<b>{texto}</b>"]
+    lineas.append(f"{escapar_html(partido['local'])}{corona_local} {gl} - {gv} {escapar_html(partido['visitante'])}{corona_visitante}")
+    if cuota_str:
+        lineas.append(f"Cuotas: {cuota_str}")
+    lineas.append(f"Min {minuto}")
+    lineas.append("")
     lineas.append(f"Tiros a puerta: {_n(stats_local,'shotsOnTarget')} vs {_n(stats_visitante,'shotsOnTarget')}")
     lineas.append(f"Tiros totales: {_n(stats_local,'totalShots')} vs {_n(stats_visitante,'totalShots')}")
     lineas.append(f"Corners: {_n(stats_local,'wonCorners')} vs {_n(stats_visitante,'wonCorners')}")
@@ -399,23 +412,9 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         dominancia_mostrada = dominancia_fav if z >= 0 else (1 - dominancia_fav)
         lineas.append(f"Confianza: {conf} ({round(dominancia_mostrada*100)}% a favor de {escapar_html(lado_domina)}, z={z:.2f})")
 
-    lineas.append("")
-    lineas.append(f"{titulo} -- min {minuto}")
-    lineas.append(f"Marcador: {snap_actual['goles_local']}-{snap_actual['goles_visitante']}")
-    lineas.append(f"Favorito: {escapar_html(partido['favorito'])}")
-
-    cuota_l = partido.get("cuota_local_inicial")
-    cuota_x = partido.get("cuota_empate_inicial")
-    cuota_v = partido.get("cuota_visitante_inicial")
-    if cuota_l or cuota_v:
-        partes_cuota = [f"{escapar_html(partido['local'])} {cuota_l}" if cuota_l else None,
-                         f"Empate {cuota_x}" if cuota_x else None,
-                         f"{escapar_html(partido['visitante'])} {cuota_v}" if cuota_v else None]
-        lineas.append("Cuota inicial: " + " | ".join(p for p in partes_cuota if p))
-
     local_besoccer = partido['local'].replace(' ', '+')
     visitante_besoccer = partido['visitante'].replace(' ', '+')
-    lineas.append(f"\U0001F517 BeSoccer: https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}")
+    lineas.append(f"\U0001F517 https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}")
 
     return "\n".join(lineas)
 
