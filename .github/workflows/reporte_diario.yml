@@ -1,0 +1,37 @@
+name: Reporte diario (6am)
+
+# Local (UTC-5): reintenta cada 15 min entre las 06:00 y las 07:00.
+on:
+  schedule:
+    - cron: "0,15,30,45 11 * * *"   # 11:00-11:59 UTC = 06:00-06:59 local
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  reportar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Enviar reporte de ayer
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python reporte_diario.py
+
+      - name: Guardar cambios en data/
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data/
+          git diff --staged --quiet || git commit -m "Reporte diario enviado $(date -u +%Y-%m-%d)"
+          git push

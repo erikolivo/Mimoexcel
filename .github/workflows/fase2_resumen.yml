@@ -1,0 +1,56 @@
+name: Fase 2 - Resumen diario
+
+# Local (UTC-5): reintenta cada 5 min entre las 07:00 y las 07:15 (a
+# pedido explicito: se quiere el mensaje justo a las 7am, se acorto la
+# ventana de reintento de 07:00-08:30 a solo este colchon corto -- lo
+# suficiente para absorber un atraso tipico de GitHub Actions sin
+# arriesgarse a que llegue tarde en la manana).
+#
+# NUEVO (agosto 2026, a pedido explicito): opcion manual de "forzar"
+# desde Actions -- reenvia el resumen aunque ya se haya mandado hoy,
+# util para probar cambios de formato sin esperar al dia siguiente.
+on:
+  schedule:
+    - cron: "0,5,10,15 12 * * *"   # 12:00-12:15 UTC = 07:00-07:15 local
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Forzar el reenvio (ignora si ya se hizo hoy)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  resumen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Enviar resumen del dia
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ "${{ github.event.inputs.forzar }}" = "true" ]; then
+            echo "Reenvio forzado del resumen."
+            python resumen.py --forzar
+          else
+            python resumen.py
+          fi
+
+      - name: Guardar cambios en data/
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data/
+          git diff --staged --quiet || git commit -m "Fase 2: resumen enviado $(date -u +%Y-%m-%d)"
+          git push
