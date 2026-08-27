@@ -425,8 +425,16 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     visitante_besoccer = partido['visitante'].replace(' ', '+')
     fecha_partido = partido.get('hora_inicio', '')[:10] if partido.get('hora_inicio') else ''
     year = fecha_partido[:4] if fecha_partido else ''
-    lineas.append(f"\U0001F517 https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}+{year}")
-    lineas.append(f"\U0001F517 https://www.1xbet.com/en/search?q={local_besoccer.replace('+', '%20')}+vs+{visitante_besoccer.replace('+', '%20')}")
+    url_besoccer = f"https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}+{year}"
+    url_1xbet = f"https://www.1xbet.com/en/search?q={local_besoccer.replace('+', '%20')}+vs+{visitante_besoccer.replace('+', '%20')}"
+    try:
+        import requests as _req
+        url_besoccer = _req.get(f"https://tinyurl.com/api-create.php?url={url_besoccer}", timeout=3).text or url_besoccer
+        url_1xbet = _req.get(f"https://tinyurl.com/api-create.php?url={url_1xbet}", timeout=3).text or url_1xbet
+    except Exception:
+        pass
+    lineas.append(f"\U0001F517 BeSoccer: {url_besoccer}")
+    lineas.append(f"\U0001F517 1xBet: {url_1xbet}")
 
     return "\n".join(lineas)
 
