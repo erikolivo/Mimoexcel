@@ -324,7 +324,7 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
             tipo = "cuidado_rival_presiona"
             conf = momentum.etiqueta_confianza(z)
             marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
-            texto = f"\u26A0\uFE0F Cuidado{marca_prioridad} -- el rival esta dominando ({round(dominancia_pct*100)}%, confianza {conf})."
+            texto = f"\u26A0\uFE0F Rival domina{marca_prioridad}"
         if tipo and not _ya_se_envio_reciente(partido, tipo, minuto_int):
             return [(tipo, texto)]
 
@@ -419,11 +419,14 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         conf = momentum.etiqueta_confianza(z)
         lado_domina = partido['favorito'] if z >= 0 else partido['no_favorito']
         dominancia_mostrada = dominancia_fav if z >= 0 else (1 - dominancia_fav)
-        lineas.append(f"Confianza: {conf} ({round(dominancia_mostrada*100)}% a favor de {escapar_html(lado_domina)}, z={z:.2f})")
+        lineas.append(f"⚡ {conf} ({round(dominancia_mostrada*100)}% {escapar_html(lado_domina)}, z={z:.2f})")
 
     local_besoccer = partido['local'].replace(' ', '+')
     visitante_besoccer = partido['visitante'].replace(' ', '+')
-    lineas.append(f"\U0001F517 https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}")
+    fecha_partido = partido.get('hora_inicio', '')[:10] if partido.get('hora_inicio') else ''
+    year = fecha_partido[:4] if fecha_partido else ''
+    lineas.append(f"\U0001F517 https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}+{year}")
+    lineas.append(f"\U0001F517 https://www.1xbet.com/en/search?q={local_besoccer.replace('+', '%20')}+vs+{visitante_besoccer.replace('+', '%20')}")
 
     return "\n".join(lineas)
 
