@@ -396,19 +396,17 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     cuota_str = " | ".join(partes_cuota) if partes_cuota else ""
 
     def _fila(nombre, val_local, val_visitante):
-        return f"│{nombre:<18}│{str(val_local):^7}│{str(val_visitante):^7}│"
+        return f"{nombre:<18}{str(val_local):>7}{str(val_visitante):>7}"
 
     tabla = "<pre>"
-    tabla += "┌──────────────────┬───────┬───────┐\n"
-    tabla += "│                  │ Local │ Visit │\n"
-    tabla += "├──────────────────┼───────┼───────┤\n"
+    tabla += "                  Local  Visit\n"
+    tabla += "---------------- ------ ------\n"
     tabla += _fila("Tiros a puerta", _n(stats_local,'shotsOnTarget'), _n(stats_visitante,'shotsOnTarget')) + "\n"
     tabla += _fila("Tiros totales", _n(stats_local,'totalShots'), _n(stats_visitante,'totalShots')) + "\n"
     tabla += _fila("Corners", _n(stats_local,'wonCorners'), _n(stats_visitante,'wonCorners')) + "\n"
     tabla += _fila("Tiros bloqueados", _n(stats_local,'blockedShots'), _n(stats_visitante,'blockedShots')) + "\n"
     tabla += _fila("Posesion", f"{_n(stats_local,'possessionPct')}%", f"{_n(stats_visitante,'possessionPct')}%") + "\n"
     tabla += _fila("Faltas", _n(stats_local,'foulsCommitted'), _n(stats_visitante,'foulsCommitted')) + "\n"
-    tabla += "└──────────────────┴───────┴───────┘"
     tabla += "</pre>"
 
     lineas = [f"<b>{texto}</b>"]
