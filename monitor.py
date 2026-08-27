@@ -232,10 +232,12 @@ def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad=
     if diferencia <= 0 and minuto_int >= MINUTO_INICIO_CIERRE and z >= UMBRAL_Z_CIERRE:
         return "gol_de_cierre", f"\u23F0 Gol de cierre{marca_prioridad}"
     if diferencia < 0:
-        return "posible_empate", f"\U0001F7E0 Fav{marca_prioridad}"
+        return "posible_empate", f"\U0001F7E0 Gana Fav{marca_prioridad}"
     if diferencia == 0:
-        return "posible_victoria_favorito", f"\U0001F7E2 Fav{marca_prioridad}"
-    return "ampliacion_marcador", f"\U0001F535 Proximo gol{marca_prioridad}"
+        return "posible_victoria_favorito", f"\U0001F7E2 Gana Fav{marca_prioridad}"
+    if z >= 0:
+        return "ampliacion_marcador", f"\U0001F535 Proximo gol: Fav{marca_prioridad}"
+    return "ampliacion_marcador", f"\U0001F535 Proximo gol: No Fav{marca_prioridad}"
 
 
 def _evaluar_chequeo_empate(partido, minuto_int, snap_actual, historial):
