@@ -435,6 +435,7 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         pass
     lineas.append(f"\U0001F517 BeSoccer: {url_besoccer}")
     lineas.append(f"\U0001F517 1xBet: {url_1xbet}")
+    lineas.append(f"\U0001F517 SofaScore: https://www.sofascore.com/search?q={local_besoccer.replace('+', ' ')}%20{visitante_besoccer.replace('+', ' ')}")
 
     return "\n".join(lineas)
 
