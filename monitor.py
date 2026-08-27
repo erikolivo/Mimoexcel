@@ -230,12 +230,12 @@ def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad=
     conf = momentum.etiqueta_confianza(z)
     marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
     if diferencia <= 0 and minuto_int >= MINUTO_INICIO_CIERRE and z >= UMBRAL_Z_CIERRE:
-        return "gol_de_cierre", f"\u23F0 Posible gol de cierre{marca_prioridad} -- dominancia alta ({round(dominancia_pct*100)}%, confianza {conf}) en el tramo final."
+        return "gol_de_cierre", f"\u23F0 Gol de cierre{marca_prioridad}"
     if diferencia < 0:
-        return "posible_empate", f"\U0001F7E0 Posible empate{marca_prioridad} -- el favorito domina ({round(dominancia_pct*100)}%, confianza {conf})."
+        return "posible_empate", f"\U0001F7E0 Fav{marca_prioridad}"
     if diferencia == 0:
-        return "posible_victoria_favorito", f"\U0001F7E2 Posible victoria del favorito{marca_prioridad} -- domina claramente ({round(dominancia_pct*100)}%, confianza {conf})."
-    return "ampliacion_marcador", f"\U0001F535 Posible ampliacion de marcador{marca_prioridad} -- sigue dominando ({round(dominancia_pct*100)}%, confianza {conf})."
+        return "posible_victoria_favorito", f"\U0001F7E2 Fav{marca_prioridad}"
+    return "ampliacion_marcador", f"\U0001F535 Proximo gol{marca_prioridad}"
 
 
 def _evaluar_chequeo_empate(partido, minuto_int, snap_actual, historial):
@@ -427,15 +427,17 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     year = fecha_partido[:4] if fecha_partido else ''
     url_besoccer = f"https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}+{year}"
     url_1xbet = f"https://www.1xbet.com/en/search?q={local_besoccer.replace('+', '%20')}+vs+{visitante_besoccer.replace('+', '%20')}"
+    url_sofascore = f"https://www.sofascore.com/search?q={local_besoccer.replace('+', '%20')}%20{visitante_besoccer.replace('+', '%20')}"
     try:
         import requests as _req
         url_besoccer = _req.get(f"https://tinyurl.com/api-create.php?url={url_besoccer}", timeout=3).text or url_besoccer
         url_1xbet = _req.get(f"https://tinyurl.com/api-create.php?url={url_1xbet}", timeout=3).text or url_1xbet
+        url_sofascore = _req.get(f"https://tinyurl.com/api-create.php?url={url_sofascore}", timeout=3).text or url_sofascore
     except Exception:
         pass
     lineas.append(f"\U0001F517 BeSoccer: {url_besoccer}")
     lineas.append(f"\U0001F517 1xBet: {url_1xbet}")
-    lineas.append(f"\U0001F517 SofaScore: https://www.sofascore.com/search?q={local_besoccer.replace('+', ' ')}%20{visitante_besoccer.replace('+', ' ')}")
+    lineas.append(f"\U0001F517 SofaScore: {url_sofascore}")
 
     return "\n".join(lineas)
 
