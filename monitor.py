@@ -333,13 +333,13 @@ def _mensaje_idv(datos_idv, prioridad="MEDIA"):
         return None, None
     idv = datos_idv['idv']
     if idv >= UMBRAL_IDV_ALTO:
-        nivel = "\U0001F525 VALUE ALTO"
+        nivel = "\U0001F525 DESAFIO"
     elif idv >= UMBRAL_IDV_MEDIO:
-        nivel = "\u26A0\uFE0F VALUE MEDIO"
+        nivel = "\u26A0\uFE0F OJO"
     else:
-        nivel = "\U0001F4A1 VALUE BAJO"
+        nivel = "\U0001F4A1 PISTA"
     marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
-    texto = f"\U0001F4B0 {nivel}{marca_prioridad}\n{datos_idv['equipo']} domina inesperado"
+    texto = f"{nivel}{marca_prioridad}\n{datos_idv['equipo']} domina inesperado"
     return "value_alert", texto
 
 
@@ -541,7 +541,7 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         datos_idv = _calcular_idv(partido, snap_actual, historial, momentum._minuto_a_entero(minuto) or 0)
         if datos_idv:
             lineas.append(f"\U0001F4CA IDV: {round(datos_idv['idv'],1)} | OD:{round(datos_idv['od'],3)} MS:{round(datos_idv['ms'],3)} SD:{round(datos_idv['sd'],3)} TC:{round(datos_idv['tc'],3)} CF:{round(datos_idv['cf'],3)}")
-            lineas.append(f"\U0001F4B0 Cuota fav: {datos_idv['cuota_fav']} | Posesion: {round(datos_idv['posesion_fav'])}% | Tiros: {datos_idv['tiros_fav']}-{datos_idv['tiros_riv']}")
+            lineas.append(f"\U0001F4B0 Cuota fav: {datos_idv['cuota_fav']} | Posesion: {round(datos_idv['posesion_fav'])}% | Tiros: {datos_idv['tiros_fav']}-{datos_idv['tiros_riv']} | z={datos_idv['z']:.2f}")
 
     local_besoccer = partido['local'].replace(' ', '+')
     visitante_besoccer = partido['visitante'].replace(' ', '+')
