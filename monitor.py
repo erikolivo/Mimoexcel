@@ -71,6 +71,91 @@ MINUTO_INICIO_1ER_TIEMPO = 25
 MINUTO_FIN_1ER_TIEMPO = 40
 
 # =====================================================================
+# IDV - INDICE DE DESVIACION DE VALOR (agosto 2026)
+# Detecta cuando un equipo domina en partidos con cuotas parejas
+# =====================================================================
+
+UMBRAL_IDV_BAJO = 5
+UMBRAL_IDV_MEDIO = 10
+UMBRAL_IDV_ALTO = 20
+MINUTOS_MINIMOS_IDV = 10
+
+
+def _calcular_idv(partido, snap_actual, historial, minuto_int):
+    cuota_local = partido.get("cuota_local_inicial")
+    cuota_visitante = partido.get("cuota_visitante_inicial")
+    if not cuota_local or not cuota_visitante or cuota_local <=0 or cuota_visitante <=0:
+        return None
+
+    favorito_es_local = partido["favorito_es_local"]
+    gl, gv = snap_actual["goles_local"], snap_actual["goles_visitante"]
+
+    diferencia_cuotas = abs(cuota_local - cuota_visitante)
+    suma_cuotas = cuota_local + cuota_visitante
+    if suma_cuotas ==0:
+        return None
+    od = 1 - (diferencia_cuotas / suma_cuotas)
+
+    prob_esperada_local = (1/cuota_local) / (1/cuota_local + 1/cuota_visitante)
+    posesion_local = snap_actual["stats_local"].get("possessionPct",50)
+    posesion_visitante = snap_actual["stats_visitante"].get("possessionPct",50)
+    if posesion_local + posesion_visitante ==0:
+        return None
+    prob_real_local = posesion_local / (posesion_local + posesion_visitante)
+    ms = abs(prob_real_local - prob_esperada_local)
+
+    if favorito_es_local:
+        dominancia_pct, z = momentum.z_score_dominancia(
+            momentum.presion_ponderada_por_tiempo(historial, minuto_int, "local"),
+            momentum.presion_ponderada_por_tiempo(historial, minuto_int, "visitante"),
+            momentum.num_eventos_por_lado(historial, minuto_int, "local"),
+            momentum.num_eventos_por_lado(historial, minuto_int, "visitante"),
+        )
+    else:
+        dominancia_pct, z = momentum.z_score_dominancia(
+            momentum.presion_ponderada_por_tiempo(historial, minuto_int, "visitante"),
+            momentum.presion_ponderada_por_tiempo(historial, minuto_int, "local"),
+            momentum.num_eventos_por_lado(historial, minuto_int, "visitante"),
+            momentum.num_eventos_por_lado(historial, minuto_int, "local"),
+        )
+    sd = min(abs(z) / 3, 1)
+
+    minutos_dominando = 0
+    for i in range(len(historial)-1, -1, -1):
+        snap = historial[i]
+        t_local = snap.get("stats_local",{}).get("possessionPct",50)
+        t_visitante = snap.get("stats_visitante",{}).get("possessionPct",50)
+        if favorito_es_local and t_local > t_visitante:
+            minutos_dominando +=1
+        elif not favorito_es_local and t_visitante > t_local:
+            minutos_dominando +=1
+        else:
+            break
+    tc = min(minutos_dominando / MINUTOS_MINIMOS_IDV, 1)
+
+    tiros_local = snap_actual["stats_local"].get("shotsOnTarget",0) or0
+    tiros_visitante = snap_actual["stats_visitante"].get("shotsOnTarget",0) or0
+    if favorito_es_local:
+        tiros_fav, tiros_riv = tiros_local, tiros_visitante
+    else:
+        tiros_fav, tiros_riv = tiros_visitante, tiros_local
+    max_tiros = max(tiros_fav, 1)
+    cf = (tiros_fav / max_tiros) * (1 - tiros_riv / max_tiros)
+
+    idv = od * ms * sd * tc * cf * 100
+
+    if idv >= UMBRAL_IDV_BAJO:
+        equipo_domina = partido['local'] if favorito_es_local else partido['visitante']
+        return {
+            'idv': idv, 'equipo': equipo_domina, 'od': od, 'ms': ms,
+            'sd': sd, 'tc': tc, 'cf': cf, 'z': z,
+            'posesion_fav': posesion_local if favorito_es_local else posesion_visitante,
+            'tiros_fav': tiros_fav, 'tiros_riv': tiros_riv,
+            'cuota_fav': cuota_local if favorito_es_local else cuota_visitante,
+        }
+    return None
+
+# =====================================================================
 # UMBRAL PROGRESIVO POR DIFERENCIA DE GOLES (agosto 2026, a pedido
 # explicito) -- SOLO para favorito_directo, y SOLO para el lado del
 # favorito (el umbral del rival no cambia). Mientras mas ventaja tiene
@@ -243,6 +328,21 @@ def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad=
     return "ampliacion_marcador", f"\U0001F535 Proximo gol: No Fav{marca_prioridad}"
 
 
+def _mensaje_idv(datos_idv, prioridad="MEDIA"):
+    if datos_idv is None:
+        return None, None
+    idv = datos_idv['idv']
+    if idv >= UMBRAL_IDV_ALTO:
+        nivel = "\U0001F525 VALUE ALTO"
+    elif idv >= UMBRAL_IDV_MEDIO:
+        nivel = "\u26A0\uFE0F VALUE MEDIO"
+    else:
+        nivel = "\U0001F4A1 VALUE BAJO"
+    marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
+    texto = f"\U0001F4B0 {nivel}{marca_prioridad}\n{datos_idv['equipo']} domina inesperado"
+    return "value_alert", texto
+
+
 def _evaluar_chequeo_empate(partido, minuto_int, snap_actual, historial):
     """Red de seguridad por tiempo -- ver comentario de las constantes
     CHEQUEOS_EMPATE_MINUTOS mas arriba."""
@@ -336,8 +436,17 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
         if tipo and not _ya_se_envio_reciente(partido, tipo, minuto_int):
             return [(tipo, texto)]
 
-    # --- Chequeo "siguen empatados" (red de seguridad por tiempo) ---
+    # --- IDV: Alerta de VALUE en partidos con cuotas parejas ---
     historial = partido.get("historial_snapshots", [])
+    prioridad = partido.get("prioridad", "ALTA")
+    if minuto_int >= MINUTOS_MINIMOS_IDV and minuto_int < MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
+        datos_idv = _calcular_idv(partido, snap_actual, historial, minuto_int)
+        if datos_idv and not _ya_se_envio_reciente(partido, "value_alert", minuto_int, ventana=30):
+            tipo_idv, texto_idv = _mensaje_idv(datos_idv, prioridad)
+            if tipo_idv:
+                return [(tipo_idv, texto_idv)]
+
+    # --- Chequeo "siguen empatados" (red de seguridad por tiempo) ---
     resultado_chequeo = _evaluar_chequeo_empate(partido, minuto_int, snap_actual, historial)
     if resultado_chequeo:
         return [resultado_chequeo]
@@ -426,6 +535,13 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         lado_domina = partido['favorito'] if z >= 0 else partido['no_favorito']
         dominancia_mostrada = dominancia_fav if z >= 0 else (1 - dominancia_fav)
         lineas.append(f"⚡ {conf} ({round(dominancia_mostrada*100)}% {escapar_html(lado_domina)}, z={z:.2f})")
+
+    if "value" in texto.lower() or "VALUE" in texto:
+        historial = partido.get("historial_snapshots", [])
+        datos_idv = _calcular_idv(partido, snap_actual, historial, momentum._minuto_a_entero(minuto) or 0)
+        if datos_idv:
+            lineas.append(f"\U0001F4CA IDV: {round(datos_idv['idv'],1)} | OD:{round(datos_idv['od'],3)} MS:{round(datos_idv['ms'],3)} SD:{round(datos_idv['sd'],3)} TC:{round(datos_idv['tc'],3)} CF:{round(datos_idv['cf'],3)}")
+            lineas.append(f"\U0001F4B0 Cuota fav: {datos_idv['cuota_fav']} | Posesion: {round(datos_idv['posesion_fav'])}% | Tiros: {datos_idv['tiros_fav']}-{datos_idv['tiros_riv']}")
 
     local_besoccer = partido['local'].replace(' ', '+')
     visitante_besoccer = partido['visitante'].replace(' ', '+')
