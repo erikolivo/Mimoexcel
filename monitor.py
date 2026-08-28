@@ -82,6 +82,19 @@ UMBRAL_IDV_ALTO = 20
 MINUTOS_MINIMOS_IDV = 10
 
 
+def _to_float(valor, default=0.0):
+    """Convierte a float valores que la API de ESPN a veces entrega como
+    string (ej. "55.3", "55%", None). Si no se puede convertir, usa default."""
+    if valor is None:
+        return default
+    if isinstance(valor, (int, float)):
+        return float(valor)
+    try:
+        return float(str(valor).strip().replace("%", ""))
+    except (ValueError, TypeError):
+        return default
+
+
 def _calcular_idv(partido, snap_actual, historial, minuto_int):
     cuota_local = partido.get("cuota_local_inicial")
     cuota_visitante = partido.get("cuota_visitante_inicial")
@@ -98,8 +111,8 @@ def _calcular_idv(partido, snap_actual, historial, minuto_int):
     od = 1 - (diferencia_cuotas / suma_cuotas)
 
     prob_esperada_local = (1/cuota_local) / (1/cuota_local + 1/cuota_visitante)
-    posesion_local = snap_actual["stats_local"].get("possessionPct",50)
-    posesion_visitante = snap_actual["stats_visitante"].get("possessionPct",50)
+    posesion_local = _to_float(snap_actual["stats_local"].get("possessionPct", 50), 50)
+    posesion_visitante = _to_float(snap_actual["stats_visitante"].get("possessionPct", 50), 50)
     if posesion_local + posesion_visitante ==0:
         return None
     prob_real_local = posesion_local / (posesion_local + posesion_visitante)
@@ -124,8 +137,8 @@ def _calcular_idv(partido, snap_actual, historial, minuto_int):
     minutos_dominando = 0
     for i in range(len(historial)-1, -1, -1):
         snap = historial[i]
-        t_local = snap.get("stats_local",{}).get("possessionPct",50)
-        t_visitante = snap.get("stats_visitante",{}).get("possessionPct",50)
+        t_local = _to_float(snap.get("stats_local",{}).get("possessionPct", 50), 50)
+        t_visitante = _to_float(snap.get("stats_visitante",{}).get("possessionPct", 50), 50)
         if favorito_es_local and t_local > t_visitante:
             minutos_dominando +=1
         elif not favorito_es_local and t_visitante > t_local:
@@ -134,8 +147,8 @@ def _calcular_idv(partido, snap_actual, historial, minuto_int):
             break
     tc = min(minutos_dominando / MINUTOS_MINIMOS_IDV, 1)
 
-    tiros_local = snap_actual["stats_local"].get("shotsOnTarget", 0) or 0
-    tiros_visitante = snap_actual["stats_visitante"].get("shotsOnTarget", 0) or 0
+    tiros_local = _to_float(snap_actual["stats_local"].get("shotsOnTarget", 0), 0)
+    tiros_visitante = _to_float(snap_actual["stats_visitante"].get("shotsOnTarget", 0), 0)
     if favorito_es_local:
         tiros_fav, tiros_riv = tiros_local, tiros_visitante
     else:
