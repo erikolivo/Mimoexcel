@@ -39,6 +39,7 @@ DATA_DIR = Path(__file__).parent / "data"
 ARCHIVO_PARTIDOS = DATA_DIR / "partidos_hoy.json"
 
 MINUTO_INICIO_CIERRE = 75
+MAXIMO_MINUTO_ALERTAS_NO_CIERRE = 80
 
 MINUTO_MINIMO_ALERTA_MOMENTUM = 15
 
@@ -64,7 +65,7 @@ CORONA_FAVORITO = "\U0001F451"  # 👑
 # =====================================================================
 
 UMBRAL_Z_ALERTA = momentum.UMBRAL_Z_CONFIANZA_MEDIA    # ~90% de confianza
-UMBRAL_Z_CIERRE = momentum.UMBRAL_Z_CONFIANZA_ALTA      # ~95% de confianza, para "gol de cierre"
+UMBRAL_Z_CIERRE = 2.7                            # subido a pedido explicito, mas estricto
 UMBRAL_Z_1ER_TIEMPO = 1.28                              # ~80%, mas permisivo a proposito
 MINUTO_INICIO_1ER_TIEMPO = 25
 MINUTO_FIN_1ER_TIEMPO = 40
@@ -231,6 +232,8 @@ def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad=
     marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
     if diferencia <= 0 and minuto_int >= MINUTO_INICIO_CIERRE and z >= UMBRAL_Z_CIERRE:
         return "gol_de_cierre", f"\u23F0 Gol de cierre{marca_prioridad}"
+    if minuto_int >= MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
+        return None, None
     if diferencia < 0:
         return "posible_empate", f"\U0001F7E0 Gana Fav{marca_prioridad}"
     if diferencia == 0:
@@ -323,10 +326,13 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
         if lado_resultado == "favorito":
             tipo, texto = _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad)
         else:
-            tipo = "cuidado_rival_presiona"
-            conf = momentum.etiqueta_confianza(z)
-            marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
-            texto = f"\u26A0\uFE0F Rival domina{marca_prioridad}"
+            tipo = None
+            texto = None
+            if minuto_int < MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
+                tipo = "cuidado_rival_presiona"
+                conf = momentum.etiqueta_confianza(z)
+                marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
+                texto = f"\u26A0\uFE0F Rival domina{marca_prioridad}"
         if tipo and not _ya_se_envio_reciente(partido, tipo, minuto_int):
             return [(tipo, texto)]
 
