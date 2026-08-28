@@ -425,21 +425,15 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     visitante_besoccer = partido['visitante'].replace(' ', '+')
     fecha_partido = partido.get('hora_inicio', '')[:10] if partido.get('hora_inicio') else ''
     year = fecha_partido[:4] if fecha_partido else ''
-    url_besoccer = f"https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}+{year}"
-    url_1xbet = f"https://www.1xbet.com/en/search?q={local_besoccer.replace('+', '%20')}+vs+{visitante_besoccer.replace('+', '%20')}"
-    url_sofascore = f"https://www.sofascore.com/search?q={local_besoccer.replace('+', '%20')}%20{visitante_besoccer.replace('+', '%20')}"
-    try:
-        import requests as _req
-        url_besoccer = _req.get(f"https://tinyurl.com/api-create.php?url={url_besoccer}", timeout=3).text or url_besoccer
-        url_1xbet = _req.get(f"https://tinyurl.com/api-create.php?url={url_1xbet}", timeout=3).text or url_1xbet
-        url_sofascore = _req.get(f"https://tinyurl.com/api-create.php?url={url_sofascore}", timeout=3).text or url_sofascore
-    except Exception:
-        pass
-    lineas.append(f"\U0001F517 BeSoccer: {url_besoccer}")
-    lineas.append(f"\U0001F517 1xBet: {url_1xbet}")
-    lineas.append(f"\U0001F517 SofaScore: {url_sofascore}")
 
-    return "\n".join(lineas)
+    keyboard = [[
+        {"text": "⚽ BeSoccer", "url": f"https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}+{year}"},
+        {"text": "🎰 1xBet", "url": f"https://www.1xbet.com/en/search?q={local_besoccer.replace('+', '%20')}+vs+{visitante_besoccer.replace('+', '%20')}"},
+        {"text": "📊 SofaScore", "url": f"https://www.sofascore.com/search?q={local_besoccer.replace('+', '%20')}%20{visitante_besoccer.replace('+', '%20')}"},
+    ]]
+    reply_markup = {"inline_keyboard": keyboard}
+
+    return "\n".join(lineas), reply_markup
 
 
 def _mensaje_partido_finalizado(partido, gh, gv):
@@ -538,9 +532,9 @@ def vigilar():
             z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
 
         for tipo, texto in alertas:
-            mensaje = _mensaje_partido(partido, box["minuto"], snap_actual, texto,
+            mensaje, reply_markup = _mensaje_partido(partido, box["minuto"], snap_actual, texto,
                                         dominancia_fav=dominancia_fav, z=z)
-            if enviar_mensaje_telegram(mensaje):
+            if enviar_mensaje_telegram(mensaje, reply_markup=reply_markup):
                 _registrar_alerta(partido, tipo, texto, box["minuto"], diferencia_goles=diferencia_actual)
 
     if hubo_cambios:

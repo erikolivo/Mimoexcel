@@ -49,15 +49,18 @@ def _dividir_mensaje(texto, limite=LIMITE_EFECTIVO):
     return partes
 
 
-def _enviar_una_parte(texto):
+def _enviar_una_parte(texto, reply_markup=None):
     if not TOKEN or not CHAT_ID:
         print("[AVISO] Falta TELEGRAM_BOT_TOKEN o TELEGRAM_CHAT_ID. No se envio el mensaje:")
         print(texto)
         return False
 
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    payload = {"chat_id": CHAT_ID, "text": texto, "parse_mode": "HTML"}
+    if reply_markup:
+        payload["reply_markup"] = reply_markup
     try:
-        r = requests.post(url, data={"chat_id": CHAT_ID, "text": texto, "parse_mode": "HTML"}, timeout=15)
+        r = requests.post(url, json=payload, timeout=15)
         if not r.ok:
             print(f"[ERROR] Telegram respondio {r.status_code}: {r.text}")
         r.raise_for_status()
@@ -73,7 +76,7 @@ def _enviar_una_parte(texto):
 NOMBRE_PROYECTO = "Alertas Excel"  # antes "Alertas ESPN" -- renombrado a pedido explicito, agosto 2026
 
 
-def enviar_mensaje_telegram(texto):
+def enviar_mensaje_telegram(texto, reply_markup=None):
     texto_con_encabezado = f"{texto}"
     partes = _dividir_mensaje(texto_con_encabezado)
     if len(partes) > 1:
@@ -83,6 +86,7 @@ def enviar_mensaje_telegram(texto):
     exito_total = True
     for i, parte in enumerate(partes, start=1):
         prefijo = f"(parte {i}/{len(partes)})\n" if len(partes) > 1 else ""
-        if not _enviar_una_parte(prefijo + parte):
+        markup = reply_markup if i == len(partes) else None
+        if not _enviar_una_parte(prefijo + parte, reply_markup=markup):
             exito_total = False
     return exito_total
