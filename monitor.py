@@ -134,8 +134,8 @@ def _calcular_idv(partido, snap_actual, historial, minuto_int):
             break
     tc = min(minutos_dominando / MINUTOS_MINIMOS_IDV, 1)
 
-    tiros_local = snap_actual["stats_local"].get("shotsOnTarget",0) or0
-    tiros_visitante = snap_actual["stats_visitante"].get("shotsOnTarget",0) or0
+    tiros_local = snap_actual["stats_local"].get("shotsOnTarget", 0) or 0
+    tiros_visitante = snap_actual["stats_visitante"].get("shotsOnTarget", 0) or 0
     if favorito_es_local:
         tiros_fav, tiros_riv = tiros_local, tiros_visitante
     else:
