@@ -155,6 +155,27 @@ def _calcular_idv(partido, snap_actual, historial, minuto_int):
         }
     return None
 
+
+def _calcular_momentum_equipo(equipo, historial_snapshots, favorito_es_local):
+    if not historial_snapshots or len(historial_snapshots) <2:
+        return None
+    puntos =0
+    ultimos6 = historial_snapshots[-6:] if len(historial_snapshots) >=6 else historial_snapshots
+    for i, snap in enumerate(ultimos6):
+        peso = len(ultimos6) - i
+        if favorito_es_local:
+            gf = snap.get("goles_local",0)
+            gc = snap.get("goles_visitante",0)
+        else:
+            gf = snap.get("goles_visitante",0)
+            gc = snap.get("goles_local",0)
+        if gf > gc:
+            puntos += peso *1
+        elif gf < gc:
+            puntos += peso * -1
+    return puntos
+
+
 # =====================================================================
 # UMBRAL PROGRESIVO POR DIFERENCIA DE GOLES (agosto 2026, a pedido
 # explicito) -- SOLO para favorito_directo, y SOLO para el lado del
@@ -535,6 +556,13 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         lado_domina = partido['favorito'] if z >= 0 else partido['no_favorito']
         dominancia_mostrada = dominancia_fav if z >= 0 else (1 - dominancia_fav)
         lineas.append(f"⚡ {conf} ({round(dominancia_mostrada*100)}% {escapar_html(lado_domina)}, z={z:.2f})")
+
+    historial_momentum = partido.get("historial_snapshots", [])
+    if len(historial_momentum) >=2:
+        momentum_local = _calcular_momentum_equipo("local", historial_momentum, True)
+        momentum_visitante = _calcular_momentum_equipo("visitante", historial_momentum, False)
+        if momentum_local is not None and momentum_visitante is not None:
+            lineas.append(f"\U0001F4C8 Forma: {escapar_html(partido['local'])} {momentum_local:+d} | {escapar_html(partido['visitante'])} {momentum_visitante:+d}")
 
     if "value" in texto.lower() or "VALUE" in texto:
         historial = partido.get("historial_snapshots", [])
