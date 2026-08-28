@@ -122,15 +122,15 @@ def _calcular_idv(partido, snap_actual, historial, minuto_int):
         dominancia_pct, z = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "local"),
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "visitante"),
-            momentum.num_eventos_por_lado(historial, minuto_int, "local"),
-            momentum.num_eventos_por_lado(historial, minuto_int, "visitante"),
+            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "local"),
+            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "visitante"),
         )
     else:
         dominancia_pct, z = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "visitante"),
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "local"),
-            momentum.num_eventos_por_lado(historial, minuto_int, "visitante"),
-            momentum.num_eventos_por_lado(historial, minuto_int, "local"),
+            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "visitante"),
+            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "local"),
         )
     sd = min(abs(z) / 3, 1)
 
