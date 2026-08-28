@@ -66,6 +66,7 @@ CORONA_FAVORITO = "\U0001F451"  # 👑
 
 UMBRAL_Z_ALERTA = momentum.UMBRAL_Z_CONFIANZA_MEDIA    # ~90% de confianza
 UMBRAL_Z_CIERRE = 2.7                            # subido a pedido explicito, mas estricto
+UMBRAL_Z_RIVAL = 2.7                             # rival domina: z-score minimo para alertar
 UMBRAL_Z_1ER_TIEMPO = 1.28                              # ~80%, mas permisivo a proposito
 MINUTO_INICIO_1ER_TIEMPO = 25
 MINUTO_FIN_1ER_TIEMPO = 40
@@ -311,7 +312,7 @@ def _evaluar_dominancia_general(partido, minuto_int, diferencia):
     umbral_favorito = _umbral_efectivo_favorito(partido, diferencia)
     if z >= umbral_favorito:
         return "favorito", dominancia_fav, z
-    if -z >= UMBRAL_Z_ALERTA:
+    if -z >= UMBRAL_Z_RIVAL:
         return "rival", 1 - dominancia_fav, -z
     return None
 
