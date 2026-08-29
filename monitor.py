@@ -33,6 +33,7 @@ from pathlib import Path
 from fetch_data import obtener_boxscore_en_vivo, obtener_historial_equipo
 from telegram_utils import enviar_mensaje_telegram, escapar_html
 from cerrar_resultados import calcular_acierto
+from resumen import _calcular_poder_match
 import momentum
 
 DATA_DIR = Path(__file__).parent / "data"
@@ -188,45 +189,6 @@ def _calcular_momentum_equipo(equipo, historial_snapshots, favorito_es_local):
         elif gf < gc:
             puntos += peso * -1
     return puntos
-
-
-def _calcular_poder_match(historial_equipo, es_local):
-    """
-    Calcula el Poder de Match (0-10) basado en el historial del equipo.
-    Formula: (Ataque×0.4) + (Defensa×0.3) + (Forma×0.3) × 10
-    
-    Ataque = GF ÷ partidos jugados
-    Defensa =1 - (GC ÷ partidos jugados)
-    Forma = (V×3+E) ÷18
-    """
-    if not historial_equipo or len(historial_equipo) <2:
-        return None, None
-    
-    partidos = historial_equipo[-6:] if len(historial_equipo) >=6 else historial_equipo
-    
-    gf_total = sum(p['goles_favor'] for p in partidos)
-    gc_total = sum(p['goles_contra'] for p in partidos)
-    victorias = sum(1 for p in partidos if p['resultado'] == 'V')
-    empates = sum(1 for p in partidos if p['resultado'] == 'E')
-    
-    n = len(partidos)
-    ataque = gf_total / n
-    defensa =1 - (gc_total / n)
-    forma = (victorias *3 + empates) /18
-    
-    poder = (ataque *0.4 + defensa *0.3 + forma *0.3) *10
-    poder = max(0, min(10, poder))
-    
-    if poder >=8:
-        color = "🔵"
-    elif poder >=6:
-        color = "🟢"
-    elif poder >=4:
-        color = "🟡"
-    else:
-        color = "🔴"
-    
-    return poder, color
 
 
 # =====================================================================
