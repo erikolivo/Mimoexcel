@@ -13,7 +13,7 @@ name: Fase 1 - Seleccion de partidos
 # (salvo en la corrida de la noche, que fuerza a proposito).
 on:
   schedule:
-    - cron: "*/5 9-10 * * *"   # 09:00-10:59 UTC = 04:00-05:59 local (seleccion de la manana)
+    - cron: "*/5 11 * * *"     # 11:00-11:55 UTC = 06:00-06:55 local (seleccion de la manana)
     - cron: "*/5 0 * * *"      # 00:00-00:55 UTC = 19:00-19:55 local (revision de la noche, forzada)
   workflow_dispatch:
     inputs:

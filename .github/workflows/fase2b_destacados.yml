@@ -5,7 +5,7 @@ name: Fase 2.5 - Destacados del dia
 # grupos de 3, de los que ya tienen seguimiento en vivo disponible.
 on:
   schedule:
-    - cron: "30,35,40,45 12 * * *"   # 12:30-12:45 UTC = 07:30-07:45 local
+    - cron: "0,5,10,15 12 * * *"   # 12:00-12:15 UTC = 07:00-07:15 local
   workflow_dispatch:
     inputs:
       forzar:
