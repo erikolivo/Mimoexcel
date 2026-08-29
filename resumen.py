@@ -213,10 +213,6 @@ def enviar_resumen(forzar=False):
         # Hora y partido
         lineas.append(f"{hora} \u26BD {escapar_html(p['local'])}{corona_local} vs {escapar_html(p['visitante'])}{corona_visitante}")
         
-        # Tipo de pronostico
-        tipo_texto = "Favorito Directo" if p.get("tipo_pronostico") == "favorito_directo" else "Doble Oportunidad"
-        lineas.append(f"{emoji_tipo} {tipo_texto}")
-        
         # Cuotas
         cuota_l = p.get("cuota_local_inicial")
         cuota_x = p.get("cuota_empate_inicial")
