@@ -569,7 +569,7 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         conf = momentum.etiqueta_confianza(z)
         lado_domina = partido['favorito'] if z >= 0 else partido['no_favorito']
         dominancia_mostrada = dominancia_fav if z >= 0 else (1 - dominancia_fav)
-        lineas.append(f"⚡ {conf} ({round(dominancia_mostrada*100)}% {escapar_html(lado_domina)}, z={z:.2f})")
+        lineas.append(f"⚡ {conf} ({round(dominancia_mostrada*100)}% {escapar_html(lado_domina)}, z={z:.1f})")
 
     historial_momentum = partido.get("historial_snapshots", [])
     if len(historial_momentum) >=2:
@@ -583,17 +583,21 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         datos_idv = _calcular_idv(partido, snap_actual, historial, momentum._minuto_a_entero(minuto) or 0)
         if datos_idv:
             lineas.append(f"\U0001F4CA IDV: {round(datos_idv['idv'],1)} | OD:{round(datos_idv['od'],3)} MS:{round(datos_idv['ms'],3)} SD:{round(datos_idv['sd'],3)} TC:{round(datos_idv['tc'],3)} CF:{round(datos_idv['cf'],3)}")
-            lineas.append(f"\U0001F4B0 Cuota fav: {datos_idv['cuota_fav']} | Posesion: {round(datos_idv['posesion_fav'])}% | Tiros: {datos_idv['tiros_fav']}-{datos_idv['tiros_riv']} | z={datos_idv['z']:.2f}")
+            lineas.append(f"\U0001F4B0 Cuota fav: {datos_idv['cuota_fav']} | Posesion: {round(datos_idv['posesion_fav'])}% | Tiros: {datos_idv['tiros_fav']}-{datos_idv['tiros_riv']} | z={datos_idv['z']:.1f}")
 
     local_besoccer = partido['local'].replace(' ', '+')
     visitante_besoccer = partido['visitante'].replace(' ', '+')
     fecha_partido = partido.get('hora_inicio', '')[:10] if partido.get('hora_inicio') else ''
     year = fecha_partido[:4] if fecha_partido else ''
+    mes = fecha_partido[5:7] if fecha_partido else ''
+    dia = fecha_partido[8:10] if fecha_partido else ''
 
     keyboard = [[
-        {"text": "⚽ BeSoccer", "url": f"https://www.google.com/search?q=site:besoccer.com+{local_besoccer}+{visitante_besoccer}+{year}"},
+        {"text": "⚽ BeSoccer", "url": f"https://www.besoccer.com/buscar?q={local_besoccer.replace('+', '%20')}+{visitante_besoccer.replace('+', '%20')}"},
         {"text": "🎰 1xBet", "url": f"https://www.1xbet.com/en/search?q={local_besoccer.replace('+', '%20')}+vs+{visitante_besoccer.replace('+', '%20')}"},
+    ],[
         {"text": "📊 SofaScore", "url": f"https://www.sofascore.com/search?q={local_besoccer.replace('+', '%20')}%20{visitante_besoccer.replace('+', '%20')}"},
+        {"text": "⚡ Flashscore", "url": f"https://www.flashscore.com/search/?q={local_besoccer.replace('+', '%20')}+{visitante_besoccer.replace('+', '%20')}"},
     ]]
     reply_markup = {"inline_keyboard": keyboard}
 
