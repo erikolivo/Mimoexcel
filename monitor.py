@@ -30,7 +30,7 @@ import json
 import datetime
 from pathlib import Path
 
-from fetch_data import obtener_boxscore_en_vivo
+from fetch_data import obtener_boxscore_en_vivo, obtener_historial_equipo
 from telegram_utils import enviar_mensaje_telegram, escapar_html
 from cerrar_resultados import calcular_acierto
 import momentum
@@ -188,6 +188,45 @@ def _calcular_momentum_equipo(equipo, historial_snapshots, favorito_es_local):
         elif gf < gc:
             puntos += peso * -1
     return puntos
+
+
+def _calcular_poder_match(historial_equipo, es_local):
+    """
+    Calcula el Poder de Match (0-10) basado en el historial del equipo.
+    Formula: (Ataque×0.4) + (Defensa×0.3) + (Forma×0.3) × 10
+    
+    Ataque = GF ÷ partidos jugados
+    Defensa =1 - (GC ÷ partidos jugados)
+    Forma = (V×3+E) ÷18
+    """
+    if not historial_equipo or len(historial_equipo) <2:
+        return None, None
+    
+    partidos = historial_equipo[-6:] if len(historial_equipo) >=6 else historial_equipo
+    
+    gf_total = sum(p['goles_favor'] for p in partidos)
+    gc_total = sum(p['goles_contra'] for p in partidos)
+    victorias = sum(1 for p in partidos if p['resultado'] == 'V')
+    empates = sum(1 for p in partidos if p['resultado'] == 'E')
+    
+    n = len(partidos)
+    ataque = gf_total / n
+    defensa =1 - (gc_total / n)
+    forma = (victorias *3 + empates) /18
+    
+    poder = (ataque *0.4 + defensa *0.3 + forma *0.3) *10
+    poder = max(0, min(10, poder))
+    
+    if poder >=8:
+        color = "🔵"
+    elif poder >=6:
+        color = "🟢"
+    elif poder >=4:
+        color = "🟡"
+    else:
+        color = "🔴"
+    
+    return poder, color
 
 
 # =====================================================================
@@ -577,6 +616,20 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         momentum_visitante = _calcular_momentum_equipo("visitante", historial_momentum, False)
         if momentum_local is not None and momentum_visitante is not None:
             lineas.append(f"\U0001F4C8 Forma: {escapar_html(partido['local'])} {momentum_local:+d} | {escapar_html(partido['visitante'])} {momentum_visitante:+d}")
+    
+    # Poder de Match
+    home_id = partido.get('home_id')
+    away_id = partido.get('away_id')
+    liga_slug = partido.get('liga_slug')
+    if home_id and away_id and liga_slug:
+        historial_local = obtener_historial_equipo(home_id, liga_slug)
+        historial_visitante = obtener_historial_equipo(away_id, liga_slug)
+        poder_local, color_local = _calcular_poder_match(historial_local, True)
+        poder_visitante, color_visitante = _calcular_poder_match(historial_visitante, False)
+        if poder_local is not None and poder_visitante is not None:
+            lineas.append(f"\U0001F4C8 Poder de Match:")
+            lineas.append(f"{color_local} {escapar_html(partido['local'])}: {poder_local:.1f} (GF:{sum(p['goles_favor'] for p in historial_local[-6:])} GC:{sum(p['goles_contra'] for p in historial_local[-6:])} Forma:{sum(3 for p in historial_local[-6:] if p['resultado']=='V')+sum(1 for p in historial_local[-6:] if p['resultado']=='E')})")
+            lineas.append(f"{color_visitante} {escapar_html(partido['visitante'])}: {poder_visitante:.1f} (GF:{sum(p['goles_favor'] for p in historial_visitante[-6:])} GC:{sum(p['goles_contra'] for p in historial_visitante[-6:])} Forma:{sum(3 for p in historial_visitante[-6:] if p['resultado']=='V')+sum(1 for p in historial_visitante[-6:] if p['resultado']=='E')})")
 
     if "value" in texto.lower() or "VALUE" in texto:
         historial = partido.get("historial_snapshots", [])
