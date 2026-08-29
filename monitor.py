@@ -590,10 +590,12 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         historial_visitante = obtener_historial_equipo(away_id, liga_slug)
         poder_local, color_local = _calcular_poder_match(historial_local, True)
         poder_visitante, color_visitante = _calcular_poder_match(historial_visitante, False)
+        lineas.append(f"\U0001F4C8 Poder de Match:")
         if poder_local is not None and poder_visitante is not None:
-            lineas.append(f"\U0001F4C8 Poder de Match:")
-            lineas.append(f"{color_local} {escapar_html(partido['local'])}: {poder_local:.1f} (GF:{sum(p['goles_favor'] for p in historial_local[-6:])} GC:{sum(p['goles_contra'] for p in historial_local[-6:])} Forma:{sum(3 for p in historial_local[-6:] if p['resultado']=='V')+sum(1 for p in historial_local[-6:] if p['resultado']=='E')})")
-            lineas.append(f"{color_visitante} {escapar_html(partido['visitante'])}: {poder_visitante:.1f} (GF:{sum(p['goles_favor'] for p in historial_visitante[-6:])} GC:{sum(p['goles_contra'] for p in historial_visitante[-6:])} Forma:{sum(3 for p in historial_visitante[-6:] if p['resultado']=='V')+sum(1 for p in historial_visitante[-6:] if p['resultado']=='E')})")
+            lineas.append(f"{color_local} {escapar_html(partido['local'])}: {poder_local:.1f} (GF:{sum(p['goles_favor'] for p in historial_local[-6:])} GC:{sum(p['goles_contra'] for p in historial_local[-6:])})")
+            lineas.append(f"{color_visitante} {escapar_html(partido['visitante'])}: {poder_visitante:.1f} (GF:{sum(p['goles_favor'] for p in historial_visitante[-6:])} GC:{sum(p['goles_contra'] for p in historial_visitante[-6:])})")
+        else:
+            lineas.append("No hay datos suficientes")
 
     if "value" in texto.lower() or "VALUE" in texto:
         historial = partido.get("historial_snapshots", [])

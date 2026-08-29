@@ -129,11 +129,26 @@ def _obtener_datos_estilo(equipo, liga_slug):
 def _calcular_poder_match(historial_equipo, es_local):
     """
     Calcula el Poder de Match (0-10) basado en el historial del equipo.
+    Requiere entre5 y6 partidos, con no mas de1 mes de diferencia entre el primero y ultimo.
     """
-    if not historial_equipo or len(historial_equipo) < 2:
+    if not historial_equipo:
         return None, None
     
-    partidos = historial_equipo[-6:] if len(historial_equipo) >= 6 else historial_equipo
+    partidos = historial_equipo[-6:] if len(historial_equipo) >=6 else historial_equipo
+    
+    # Condicion de cantidad: minimo5 partidos
+    if len(partidos) <5:
+        return None, None
+    
+    # Condicion de fecha: no mas de1 mes de diferencia
+    try:
+        fecha_primero = datetime.datetime.fromisoformat(partidos[0]['fecha'].replace("Z", "+00:00"))
+        fecha_ultimo = datetime.datetime.fromisoformat(partidos[-1]['fecha'].replace("Z", "+00:00"))
+        dias_diferencia = (fecha_ultimo - fecha_primero).days
+        if dias_diferencia >30:
+            return None, None
+    except (KeyError, ValueError):
+        return None, None
     
     gf_total = sum(p['goles_favor'] for p in partidos)
     gc_total = sum(p['goles_contra'] for p in partidos)
@@ -143,16 +158,16 @@ def _calcular_poder_match(historial_equipo, es_local):
     n = len(partidos)
     ataque = gf_total / n
     defensa = 1 - (gc_total / n)
-    forma = (victorias * 3 + empates) / 18
+    forma = (victorias *3 + empates) /18
     
-    poder = (ataque * 0.4 + defensa * 0.3 + forma * 0.3) * 10
+    poder = (ataque *0.4 + defensa *0.3 + forma *0.3) *10
     poder = max(0, min(10, poder))
     
-    if poder >= 8:
+    if poder >=8:
         color = "🔵"
-    elif poder >= 6:
+    elif poder >=6:
         color = "🟢"
-    elif poder >= 4:
+    elif poder >=4:
         color = "🟡"
     else:
         color = "🔴"
