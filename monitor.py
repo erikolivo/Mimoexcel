@@ -40,7 +40,7 @@ DATA_DIR = Path(__file__).parent / "data"
 ARCHIVO_PARTIDOS = DATA_DIR / "partidos_hoy.json"
 
 MINUTO_INICIO_CIERRE = 75
-MAXIMO_MINUTO_ALERTAS_NO_CIERRE = 80
+MAXIMO_MINUTO_ALERTAS_NO_CIERRE = 75
 
 MINUTO_MINIMO_ALERTA_MOMENTUM = 15
 
@@ -558,6 +558,10 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     tabla += _fila("Tiros bloqueados", _n(stats_local,'blockedShots'), _n(stats_visitante,'blockedShots')) + "\n"
     tabla += _fila("Posesion", f"{_n(stats_local,'possessionPct')}%", f"{_n(stats_visitante,'possessionPct')}%") + "\n"
     tabla += _fila("Faltas", _n(stats_local,'foulsCommitted'), _n(stats_visitante,'foulsCommitted')) + "\n"
+    if z is not None:
+        z_local = f"{z:.1f}" if z >=0 else f"{z:.1f}"
+        z_visitante = f"{-z:.1f}" if z >=0 else f"{-z:.1f}"
+        tabla += _fila("z-score", z_local, z_visitante) + "\n"
     tabla += "</pre>"
 
     lineas = [f"<b>{texto}</b>"]
@@ -568,16 +572,14 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
 
     if dominancia_fav is not None and z is not None:
         conf = momentum.etiqueta_confianza(z)
-        lado_domina = partido['favorito'] if z >= 0 else partido['no_favorito']
-        dominancia_mostrada = dominancia_fav if z >= 0 else (1 - dominancia_fav)
-        lineas.append(f"⚡ {conf} ({round(dominancia_mostrada*100)}% {escapar_html(lado_domina)}, z={z:.1f})")
+        lado_domina = partido['favorito'] if z >=0 else partido['no_favorito']
+        dominancia_mostrada = dominancia_fav if z >=0 else (1 - dominancia_fav)
+        lineas.append(f"⚡ {conf} ({round(dominancia_mostrada*100)}% {escapar_html(lado_domina)})")
 
     historial_momentum = partido.get("historial_snapshots", [])
     if len(historial_momentum) >=2:
         momentum_local = _calcular_momentum_equipo("local", historial_momentum, True)
         momentum_visitante = _calcular_momentum_equipo("visitante", historial_momentum, False)
-        if momentum_local is not None and momentum_visitante is not None:
-            lineas.append(f"\U0001F4C8 Forma: {escapar_html(partido['local'])} {momentum_local:+d} | {escapar_html(partido['visitante'])} {momentum_visitante:+d}")
     
     # Poder de Match
     home_id = partido.get('home_id')
