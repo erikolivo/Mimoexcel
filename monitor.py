@@ -607,12 +607,19 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     mes = fecha_partido[5:7] if fecha_partido else ''
     dia = fecha_partido[8:10] if fecha_partido else ''
 
+    # Fechas para buscar (actual + año anterior)
+    year_actual = fecha_partido[:4] if fecha_partido else ''
+    year_anterior = str(int(year_actual) -1) if year_actual else ''
+    
+    local_search = partido['local'].replace(' ', '+')
+    visitante_search = partido['visitante'].replace(' ', '+')
+    
     keyboard = [[
-        {"text": "⚽ BeSoccer", "url": f"https://www.besoccer.com/buscar?q={local_besoccer.replace('+', '%20')}+{visitante_besoccer.replace('+', '%20')}"},
-        {"text": "🎰 1xBet", "url": f"https://www.1xbet.com/en/search?q={local_besoccer.replace('+', '%20')}+vs+{visitante_besoccer.replace('+', '%20')}"},
+        {"text": "⚽ BeSoccer", "url": f"https://www.google.com/search?q=site:besoccer.com+{local_search}+vs+{visitante_search}+{year_actual}"},
+        {"text": "📊 SofaScore", "url": f"https://www.google.com/search?q=site:sofascore.com+{local_search}+vs+{visitante_search}+{year_actual}"},
     ],[
-        {"text": "📊 SofaScore", "url": f"https://www.sofascore.com/search?q={local_besoccer.replace('+', '%20')}%20{visitante_besoccer.replace('+', '%20')}"},
-        {"text": "⚡ Flashscore", "url": f"https://www.flashscore.com/search/?q={local_besoccer.replace('+', '%20')}+{visitante_besoccer.replace('+', '%20')}"},
+        {"text": "⚡ Flashscore", "url": f"https://www.google.com/search?q=site:flashscore.com+{local_search}+vs+{visitante_search}+{year_actual}"},
+        {"text": "🎰 1xBet", "url": f"https://www.google.com/search?q=site:1xbet.com+{local_search}+vs+{visitante_search}+{year_actual}"},
     ]]
     reply_markup = {"inline_keyboard": keyboard}
 
