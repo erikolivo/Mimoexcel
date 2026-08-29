@@ -160,7 +160,7 @@ def _calcular_poder_match(historial_equipo, es_local):
     defensa = 1 - (gc_total / n)
     forma = (victorias *3 + empates) /18
     
-    poder = (ataque *0.4 + defensa *0.3 + forma *0.3) *10
+    poder = (ataque *0.45 + defensa *0.3 + forma *0.25) *10
     poder = max(0, min(10, poder))
     
     if poder >=8:
