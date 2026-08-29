@@ -185,70 +185,26 @@ def enviar_destacados(forzar=False):
         print("Destacados: 0 partidos disponibles hoy." if exito else "Fallo el envio de destacados.")
         return
 
-    lineas = [f"\U0001F3B2 <b>Selección destacada de hoy</b> ({len(elegidos)} partido(s), {CANTIDAD_GRUPOS} grupos)"]
+    lineas = [f"\U0001F3B2 <b>Selección destacada de hoy</b>"]
     
     for idx, grupo in enumerate(grupos, start=1):
         if not grupo:
             continue
-        lineas.append(f"\n<b>Grupo {idx}</b>")
         
-        for p in grupo:
-            hora = _hora_local(p.get("hora_inicio"))
-            
-            # Separador visual
-            lineas.append("=" * 35)
-            
-            # Hora y partido
-            lineas.append(f"{hora} -- {_titulo_partido(p)}")
-            
-            # Tipo de pronostico
-            tipo_texto = "Favorito Directo" if p.get("tipo_pronostico") == "favorito_directo" else "Doble Oportunidad"
+        # Separador visual
+        lineas.append("\n" + "=" * 35)
+        lineas.append(f"<b>Grupo {idx}</b>")
+        lineas.append("=" * 35)
+        
+        for i, p in enumerate(grupo, start=1):
             emoji_tipo = EMOJI_TIPO_PRONOSTICO.get(p.get("tipo_pronostico"), EMOJI_TIPO_PRONOSTICO["favorito_directo"])
-            lineas.append(f"{emoji_tipo} {tipo_texto}")
+            corona_local = emoji_tipo + CORONA_FAVORITO if p.get("favorito_es_local") else ""
+            corona_visitante = emoji_tipo + CORONA_FAVORITO if not p.get("favorito_es_local") else ""
             
-            # Cuotas
-            cuota_l = p.get("cuota_local_inicial")
-            cuota_x = p.get("cuota_empate_inicial")
-            cuota_v = p.get("cuota_visitante_inicial")
-            if cuota_l or cuota_v:
-                partes_cuota = [f"{cuota_l}" if cuota_l else None,
-                                 f"{cuota_x}" if cuota_x else None,
-                                 f"{cuota_v}" if cuota_v else None]
-                lineas.append("Cuota: " + " | ".join(c for c in partes_cuota if c))
-            
-            # Poder de Match
-            home_id = p.get('home_id')
-            away_id = p.get('away_id')
-            liga_slug = p.get('liga_slug')
-            
-            if home_id and away_id:
-                try:
-                    historial_local = obtener_historial_equipo(home_id, liga_slug)
-                    historial_visitante = obtener_historial_equipo(away_id, liga_slug)
-                    
-                    poder_local, color_local = _calcular_poder_match(historial_local, True)
-                    poder_visitante, color_visitante = _calcular_poder_match(historial_visitante, False)
-                    
-                    if poder_local is not None and poder_visitante is not None:
-                        lineas.append(f"{color_local} {escapar_html(p['local'])}: {poder_local:.1f} | {color_visitante} {escapar_html(p['visitante'])}: {poder_visitante:.1f}")
-                except Exception:
-                    pass
-            
-            # Estilo de Juego
-            if liga_slug:
-                try:
-                    datos_estilo_local = _obtener_datos_estilo(p['local'], liga_slug)
-                    datos_estilo_visitante = _obtener_datos_estilo(p['visitante'], liga_slug)
-                    
-                    estilo_local, _ = _calcular_estilo_juego(datos_estilo_local)
-                    estilo_visitante, _ = _calcular_estilo_juego(datos_estilo_visitante)
-                    
-                    if estilo_local and estilo_visitante:
-                        lineas.append(f"{estilo_local} vs {estilo_visitante}")
-                except Exception:
-                    pass
-            
-            lineas.append("=" * 35)
+            titulo = f"{escapar_html(p['local'])}{corona_local} vs {escapar_html(p['visitante'])}{corona_visitante}"
+            lineas.append(f"{i}. {titulo}")
+        
+        lineas.append("=" * 35)
 
     exito = enviar_mensaje_telegram("\n".join(lineas))
     if exito:
