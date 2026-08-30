@@ -28,6 +28,7 @@ Qué SI cambio de forma segura (evidencia real de esta migracion):
 
 import json
 import datetime
+import traceback
 from pathlib import Path
 
 from fetch_data import obtener_boxscore_en_vivo, obtener_historial_equipo
@@ -794,7 +795,7 @@ def vigilar():
 def _vigilar_interno():
     global PREDICCIONES_ACTIVAS, HISTORIAL_PREDICCIONES
     datos = _cargar()
-    if not datos:
+    if not datos or "partidos" not in datos:
         print("No hay partidos_hoy.json todavia. Se reintentara en el proximo ciclo.")
         return
 
