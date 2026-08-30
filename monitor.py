@@ -612,7 +612,7 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
     if minuto_int >=15:
         faltas_rival = _to_float(snap_actual["stats_local"].get("foulsCommitted", 0) if lado_rival == "local" else snap_actual["stats_visitante"].get("foulsCommitted", 0), 0)
         if faltas_rival >=3 and not _ya_se_envio_reciente(partido, "falta_peligrosa", minuto_int, ventana=10):
-            return [("falta_peligrosa", f"\U0001F525 {escapar_html(partido['rival'])} con {int(faltas_rival)} faltas -- posible tiro libre")]
+            return [("falta_peligrosa", f"\U0001F525 {escapar_html(partido['no_favorito'])} con {int(faltas_rival)} faltas -- posible tiro libre")]
 
     return []
 
