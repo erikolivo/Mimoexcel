@@ -28,7 +28,6 @@ Qué SI cambio de forma segura (evidencia real de esta migracion):
 
 import json
 import datetime
-import traceback
 from pathlib import Path
 
 from fetch_data import obtener_boxscore_en_vivo, obtener_historial_equipo
@@ -121,14 +120,14 @@ def _calcular_idv(partido, snap_actual, historial, minuto_int):
     ms = abs(prob_real_local - prob_esperada_local)
 
     if favorito_es_local:
-        z, dominancia_pct = momentum.z_score_dominancia(
+        dominancia_pct, z = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "local"),
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "visitante"),
             momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "local"),
             momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "visitante"),
         )
     else:
-        z, dominancia_pct = momentum.z_score_dominancia(
+        dominancia_pct, z = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "visitante"),
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "local"),
             momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "visitante"),
@@ -782,14 +781,6 @@ def _mensaje_partido_finalizado(partido, gh, gv):
 
 
 def vigilar():
-    try:
-        _vigilar_interno()
-    except Exception:
-        print("[ERROR] Excepcion no capturada en vigilar():")
-        traceback.print_exc()
-
-
-def _vigilar_interno():
     datos = _cargar()
     if not datos:
         print("No hay partidos_hoy.json todavia. Se reintentara en el proximo ciclo.")
