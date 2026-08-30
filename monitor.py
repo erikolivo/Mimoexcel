@@ -434,15 +434,6 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
             equipo = partido['local'] if lado_favorito == "local" else partido['visitante']
             return [("tarjeta_roja", f"\U0001F7E5 Tarjeta roja para {equipo}.")]
 
-    if momentum.hubo_penal(snap_actual, snap_anterior, lado_favorito):
-        if not _ya_se_envio_reciente(partido, "penal", minuto, ventana=15):
-            equipo = partido['local'] if lado_favorito == "local" else partido['visitante']
-            return [("penal", f"\U0001F3AF Penal para {equipo}.")]
-    if momentum.hubo_penal(snap_actual, snap_anterior, lado_rival):
-        if not _ya_se_envio_reciente(partido, "penal", minuto, ventana=15):
-            equipo = partido['visitante'] if lado_rival == "visitante" else partido['local']
-            return [("penal", f"\U0001F3AF Penal para {equipo}.")]
-
     minuto_int = momentum._minuto_a_entero(minuto) or 45
     if minuto_int < MINUTO_MINIMO_ALERTA_MOMENTUM:
         return []
