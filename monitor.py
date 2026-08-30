@@ -600,18 +600,18 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
     if minuto_int >=15:
         corners_fav = _to_float(snap_actual["stats_local"].get("wonCorners", 0) if lado_favorito == "local" else snap_actual["stats_visitante"].get("wonCorners", 0), 0)
         corners_riv = _to_float(snap_actual["stats_visitante"].get("wonCorners", 0) if lado_favorito == "local" else snap_actual["stats_local"].get("wonCorners", 0), 0)
-        if corners_fav > 0 and corners_fav >= corners_riv * 3 and not _ya_se_envio_reciente(partido, "secuencia_corners", minuto_int, ventana=10):
+        if corners_fav > 0 and corners_fav >= corners_riv * 2 and not _ya_se_envio_reciente(partido, "secuencia_corners", minuto_int, ventana=10):
             return [("secuencia_corners", f"\U0001F6A9 Secuencia de corners: {escapar_html(partido['favorito'])} ({int(corners_fav)} corners)")]
-        if corners_riv > 0 and corners_riv >= corners_fav * 3 and not _ya_se_envio_reciente(partido, "secuencia_corners", minuto_int, ventana=10):
+        if corners_riv > 0 and corners_riv >= corners_fav * 2 and not _ya_se_envio_reciente(partido, "secuencia_corners", minuto_int, ventana=10):
             return [("secuencia_corners", f"\U0001F6A9 Secuencia de corners: {escapar_html(partido['no_favorito'])} ({int(corners_riv)} corners)")]
 
     # --- Falta Peligrosa ---
     if minuto_int >=15:
         faltas_fav = _to_float(snap_actual["stats_local"].get("foulsCommitted", 0) if lado_favorito == "local" else snap_actual["stats_visitante"].get("foulsCommitted", 0), 0)
         faltas_riv = _to_float(snap_actual["stats_local"].get("foulsCommitted", 0) if lado_rival == "local" else snap_actual["stats_visitante"].get("foulsCommitted", 0), 0)
-        if faltas_riv > 0 and faltas_riv >= faltas_fav * 3 and not _ya_se_envio_reciente(partido, "falta_peligrosa", minuto_int, ventana=10):
+        if faltas_riv > 0 and faltas_riv >= faltas_fav * 2 and not _ya_se_envio_reciente(partido, "falta_peligrosa", minuto_int, ventana=10):
             return [("falta_peligrosa", f"\U0001F525 {escapar_html(partido['no_favorito'])} con {int(faltas_riv)} faltas -- posible tiro libre")]
-        if faltas_fav > 0 and faltas_fav >= faltas_riv * 3 and not _ya_se_envio_reciente(partido, "falta_peligrosa", minuto_int, ventana=10):
+        if faltas_fav > 0 and faltas_fav >= faltas_riv * 2 and not _ya_se_envio_reciente(partido, "falta_peligrosa", minuto_int, ventana=10):
             return [("falta_peligrosa", f"\U0001F525 {escapar_html(partido['favorito'])} con {int(faltas_fav)} faltas -- posible tiro libre")]
 
     return []
