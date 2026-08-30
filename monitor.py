@@ -33,7 +33,7 @@ from pathlib import Path
 from fetch_data import obtener_boxscore_en_vivo, obtener_historial_equipo
 from telegram_utils import enviar_mensaje_telegram, escapar_html
 from cerrar_resultados import calcular_acierto
-from resumen import _calcular_poder_match
+from resumen import _calcular_nivel_actual
 import momentum
 
 DATA_DIR = Path(__file__).parent / "data"
@@ -351,7 +351,7 @@ def _evaluar_dominancia_1er_tiempo(partido, minuto_int):
 def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad="ALTA"):
     conf = momentum.etiqueta_confianza(z)
     marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
-    if diferencia <= 0 and minuto_int >= MINUTO_INICIO_CIERRE and z >= UMBRAL_Z_CIERRE:
+    if minuto_int >= MINUTO_INICIO_CIERRE and z >= UMBRAL_Z_CIERRE:
         return "gol_de_cierre", f"\u23F0 Gol de cierre{marca_prioridad}"
     if minuto_int >= MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
         return None, None
