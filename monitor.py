@@ -301,18 +301,22 @@ def _verificar_predicciones(partido_id, goles_local, goles_visitante, favorito_e
     predicciones = PREDICCIONES_ACTIVAS[partido_id].copy()
     
     for tipo, datos in predicciones.items():
-        equipo_prediccion = datos["equipo"]
+        equipo_prediccion = datos["prediccion"]
+        equipo_nombre = datos["equipo"]
         
         if favorito_es_local:
-            equipo_real_gol = "local" if goles_local > (PREDICCIONES_ACTIVAS.get(partido_id, {}).get(f"{tipo}_goles_local", 0)) else "visitante"
+            marco_favorito = goles_local > 0
+            marco_rival = goles_visitante > 0
         else:
-            equipo_real_gol = "visitante" if goles_visitante > (PREDICCIONES_ACTIVAS.get(partido_id, {}).get(f"{tipo}_goles_visitante", 0)) else "local"
+            marco_favorito = goles_visitante > 0
+            marco_rival = goles_local > 0
         
-        if equipo_prediccion == equipo_real_gol:
-            resultados.append((tipo, True, datos))
+        if equipo_prediccion == "fav":
+            acierto = marco_favorito
         else:
-            resultados.append((tipo, False, datos))
+            acierto = marco_rival
         
+        resultados.append((tipo, acierto, datos))
         del PREDICCIONES_ACTIVAS[partido_id][tipo]
     
     return resultados
@@ -325,10 +329,8 @@ def _calcular_efectividad(tipo_alerta):
     for partido_id, predicciones in PREDICCIONES_ACTIVAS.items():
         if tipo_alerta in predicciones:
             total += 1
-    
-    for partido_id, predicciones in predicciones.items():
-        if tipo_alerta in predicciones and predicciones[tipo_alerta].get("acierto"):
-            aciertos += 1
+            if predicciones[tipo_alerta].get("acierto"):
+                aciertos += 1
     
     if total == 0:
         return 0, 0, 0
@@ -594,13 +596,6 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
             direccion = "fav" if z_actual > z_anterior else "rival"
             return [("cambio_momentum", f"\U0001F504 Cambio de momentum: {escapar_html(partido['favorito'])} {'recupera' if direccion == 'fav' else 'pierde'} control")]
 
-    # --- Gol en Contra Reciente ---
-    if minuto_int >=10 and snap_anterior is not None:
-        goles_fav_anterior = snap_anterior["goles_local"] if favorito_es_local else snap_anterior["goles_visitante"]
-        goles_rival_anterior = snap_anterior["goles_visitante"] if favorito_es_local else snap_anterior["goles_local"]
-        if goles_favorito < goles_fav_anterior and not _ya_se_envio_reciente(partido, "gol_contra", minuto_int, ventana=10):
-            return [("gol_contra", f"\u26A1 {escapar_html(partido['favorito'])} recibe gol -- oportunidad de rebote")]
-
     # --- Secuencia de Corners ---
     if minuto_int >=15:
         corners_fav = _to_float(snap_actual["stats_local"].get("wonCorners", 0) if lado_favorito == "local" else snap_actual["stats_visitante"].get("wonCorners", 0), 0)
@@ -721,7 +716,7 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         historial_visitante = obtener_historial_equipo(away_id, liga_slug)
         poder_local, color_local = _calcular_nivel_actual(historial_local, True)
         poder_visitante, color_visitante = _calcular_nivel_actual(historial_visitante, False)
-        lineas.append(f"\U0001F4C8 Poder de Match:")
+        lineas.append(f"\U0001F4C8 Nivel Actual:")
         if poder_local is not None and poder_visitante is not None:
             lineas.append(f"{color_local} {escapar_html(partido['local'])}: {poder_local:.1f} (GF:{sum(p['goles_favor'] for p in historial_local[-6:])} GC:{sum(p['goles_contra'] for p in historial_local[-6:])})")
             lineas.append(f"{color_visitante} {escapar_html(partido['visitante'])}: {poder_visitante:.1f} (GF:{sum(p['goles_favor'] for p in historial_visitante[-6:])} GC:{sum(p['goles_contra'] for p in historial_visitante[-6:])})")
@@ -735,14 +730,7 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
             lineas.append(f"\U0001F4CA IDV: {round(datos_idv['idv'],1)} | OD:{round(datos_idv['od'],3)} MS:{round(datos_idv['ms'],3)} SD:{round(datos_idv['sd'],3)} TC:{round(datos_idv['tc'],3)} CF:{round(datos_idv['cf'],3)}")
             lineas.append(f"\U0001F4B0 Cuota fav: {datos_idv['cuota_fav']} | Posesion: {round(datos_idv['posesion_fav'])}% | Tiros: {datos_idv['tiros_fav']}-{datos_idv['tiros_riv']} | z={datos_idv['z']:.1f}")
 
-    local_besoccer = partido['local'].replace(' ', '+')
-    visitante_besoccer = partido['visitante'].replace(' ', '+')
     fecha_partido = partido.get('hora_inicio', '')[:10] if partido.get('hora_inicio') else ''
-    year = fecha_partido[:4] if fecha_partido else ''
-    mes = fecha_partido[5:7] if fecha_partido else ''
-    dia = fecha_partido[8:10] if fecha_partido else ''
-
-    # Fecha exacta para buscar (YYYY-MM-DD)
     fecha_exacta = fecha_partido if fecha_partido else ''
     
     local_search = partido['local'].replace(' ', '+')
