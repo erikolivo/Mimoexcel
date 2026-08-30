@@ -42,12 +42,8 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
-          if [ "${{ github.event.schedule }}" = "*/5 0 * * *" ] || [ "${{ github.event.inputs.forzar }}" = "true" ]; then
-            echo "Revision forzada -- se fusiona con lo ya seleccionado."
-            python seleccionar_partidos.py --forzar
-          else
-            python seleccionar_partidos.py
-          fi
+          echo "Siempre forzado -- se fusiona con lo ya seleccionado."
+          python seleccionar_partidos.py --forzar
 
       - name: Guardar cambios en data/
         run: |
