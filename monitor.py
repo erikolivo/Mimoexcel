@@ -65,7 +65,7 @@ CORONA_FAVORITO = "\U0001F451"  # 👑
 # matematica, sin necesitar un piso aparte.
 # =====================================================================
 
-UMBRAL_Z_ALERTA = momentum.UMBRAL_Z_CONFIANZA_MEDIA    # ~90% de confianza
+UMBRAL_Z_ALERTA = 1.95                              # z-score para Gana Fav (empate o perdiendo <2 goles)
 UMBRAL_Z_CIERRE = 2.7                            # subido a pedido explicito, mas estricto
 UMBRAL_Z_RIVAL = 2.7                             # rival domina: z-score minimo para alertar
 UMBRAL_Z_1ER_TIEMPO = 1.28                              # ~80%, mas permisivo a proposito
@@ -355,10 +355,10 @@ def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad=
         return "gol_de_cierre", f"\u23F0 Gol de cierre{marca_prioridad}"
     if minuto_int >= MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
         return None, None
-    if diferencia < 0:
-        return "posible_empate", f"\U0001F7E0 Gana Fav{marca_prioridad}"
     if diferencia == 0:
         return "posible_victoria_favorito", f"\U0001F7E2 Gana Fav{marca_prioridad}"
+    if -2 < diferencia < 0:
+        return "posible_empate", f"\U0001F7E0 Gana Fav{marca_prioridad}"
     if z >= 0:
         return "ampliacion_marcador", f"\U0001F535 Proximo gol: Fav{marca_prioridad}"
     return "ampliacion_marcador", f"\U0001F535 Proximo gol: No Fav{marca_prioridad}"
