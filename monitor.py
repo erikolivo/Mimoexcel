@@ -538,8 +538,9 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
     if gl == 0 and gv == 0 and MINUTO_INICIO_1ER_TIEMPO <= minuto_int <= MINUTO_FIN_1ER_TIEMPO:
         score_1t = _evaluar_dominancia_1er_tiempo(partido, minuto_int)
         if score_1t is not None and not _ya_se_envio_reciente(partido, "alerta_1er_tiempo", minuto_int, ventana=999):
+            dominancia_fav_1t, z_1t = score_1t
             return [("alerta_1er_tiempo",
-                      f"\u23F1\uFE0F Alerta de primer tiempo -- el favorito domina el 0-0 ({round(score_1t*100)}%).")]
+                      f"\u23F1\uFE0F Alerta de primer tiempo -- el favorito domina el 0-0 ({round(dominancia_fav_1t*100)}%).")]
 
     # --- Dominancia general (decaimiento exponencial + z-score), favorito o rival ---
     resultado = _evaluar_dominancia_general(partido, minuto_int, diferencia)
