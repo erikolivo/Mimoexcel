@@ -856,12 +856,12 @@ def vigilar():
                     
                     enviar_mensaje_telegram(texto_resultado)
 
+        lado_favorito = "local" if favorito_es_local else "visitante"
+        lado_rival = "visitante" if favorito_es_local else "local"
+        presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, box["minuto"], lado_favorito, lado_rival)
+        z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
+        
         alertas = _evaluar_alertas(partido, snap_actual, snap_anterior, box["minuto"])
-        if alertas:
-            lado_favorito = "local" if favorito_es_local else "visitante"
-            lado_rival = "visitante" if favorito_es_local else "local"
-            presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, box["minuto"], lado_favorito, lado_rival)
-            z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
 
         for tipo, texto in alertas:
             mensaje, reply_markup = _mensaje_partido(partido, box["minuto"], snap_actual, texto,
