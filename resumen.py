@@ -253,6 +253,33 @@ def enviar_resumen(forzar=False):
                 
                 if poder_local is not None and poder_visitante is not None:
                     lineas.append(f"{color_local} {escapar_html(p['local'])}: {poder_local:.1f} | {color_visitante} {escapar_html(p['visitante'])}: {poder_visitante:.1f}")
+                    
+                    # Ultimos resultados
+                    ultimos_local = historial_local[-5:] if len(historial_local) >=5 else historial_local
+                    ultimos_visitante = historial_visitante[-5:] if len(historial_visitante) >=5 else historial_visitante
+                    
+                    resultados_local = ""
+                    for r in ultimos_local:
+                        if r['resultado'] == 'V':
+                            resultados_local += "✅"
+                        elif r['resultado'] == 'E':
+                            resultados_local += "🟡"
+                        else:
+                            resultados_local += "❌"
+                    
+                    resultados_visitante = ""
+                    for r in ultimos_visitante:
+                        if r['resultado'] == 'V':
+                            resultados_visitante += "✅"
+                        elif r['resultado'] == 'E':
+                            resultados_visitante += "🟡"
+                        else:
+                            resultados_visitante += "❌"
+                    
+                    if resultados_local:
+                        lineas.append(f"  {escapar_html(p['local'])}: {resultados_local}")
+                    if resultados_visitante:
+                        lineas.append(f"  {escapar_html(p['visitante'])}: {resultados_visitante}")
             except Exception:
                 pass
         
