@@ -28,6 +28,7 @@ Qué SI cambio de forma segura (evidencia real de esta migracion):
 
 import json
 import datetime
+import traceback
 from pathlib import Path
 
 from fetch_data import obtener_boxscore_en_vivo, obtener_historial_equipo
@@ -120,14 +121,14 @@ def _calcular_idv(partido, snap_actual, historial, minuto_int):
     ms = abs(prob_real_local - prob_esperada_local)
 
     if favorito_es_local:
-        dominancia_pct, z = momentum.z_score_dominancia(
+        z, dominancia_pct = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "local"),
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "visitante"),
             momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "local"),
             momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "visitante"),
         )
     else:
-        dominancia_pct, z = momentum.z_score_dominancia(
+        z, dominancia_pct = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "visitante"),
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "local"),
             momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "visitante"),
@@ -781,6 +782,14 @@ def _mensaje_partido_finalizado(partido, gh, gv):
 
 
 def vigilar():
+    try:
+        _vigilar_interno()
+    except Exception:
+        print("[ERROR] Excepcion no capturada en vigilar():")
+        traceback.print_exc()
+
+
+def _vigilar_interno():
     datos = _cargar()
     if not datos:
         print("No hay partidos_hoy.json todavia. Se reintentara en el proximo ciclo.")
@@ -866,7 +875,7 @@ def vigilar():
         minuto_int = momentum._minuto_a_entero(box["minuto"]) or 0
         
         if minuto_int >= 5 and len(historial) >= 2:
-            presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, box["minuto"], lado_favorito, lado_rival)
+            presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
             z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
         
         alertas = _evaluar_alertas(partido, snap_actual, snap_anterior, box["minuto"])
