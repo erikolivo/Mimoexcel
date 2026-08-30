@@ -266,6 +266,8 @@ def _cargar():
 
 
 def _guardar(datos):
+    datos["predicciones_activas"] = PREDICCIONES_ACTIVAS
+    datos["historial_predicciones"] = HISTORIAL_PREDICCIONES
     ARCHIVO_PARTIDOS.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
@@ -274,6 +276,7 @@ def _guardar(datos):
 # =====================================================================
 
 PREDICCIONES_ACTIVAS = {}  # {partido_id: {tipo: {minuto, prediccion, equipo}}}
+HISTORIAL_PREDICCIONES = {}  # {tipo: {total: N, aciertos: N}}
 
 TIPOS_PREDICCION_FAV = [
     "gol_de_cierre", "posible_victoria_favorito", "posible_empate",
@@ -322,24 +325,24 @@ def _verificar_predicciones(partido_id, goles_local_nuevos, goles_visitante_nuev
             acierto = marco_rival
         
         resultados.append((tipo, acierto, datos))
+        if tipo not in HISTORIAL_PREDICCIONES:
+            HISTORIAL_PREDICCIONES[tipo] = {"total": 0, "aciertos": 0}
+        HISTORIAL_PREDICCIONES[tipo]["total"] += 1
+        if acierto:
+            HISTORIAL_PREDICCIONES[tipo]["aciertos"] += 1
         del PREDICCIONES_ACTIVAS[partido_id][tipo]
     
     return resultados
 
 
 def _calcular_efectividad(tipo_alerta):
-    total = 0
-    aciertos = 0
-    
-    for partido_id, predicciones in PREDICCIONES_ACTIVAS.items():
-        if tipo_alerta in predicciones:
-            total += 1
-            if predicciones[tipo_alerta].get("acierto"):
-                aciertos += 1
-    
+    if tipo_alerta not in HISTORIAL_PREDICCIONES:
+        return 0, 0, 0
+    datos = HISTORIAL_PREDICCIONES[tipo_alerta]
+    total = datos["total"]
+    aciertos = datos["aciertos"]
     if total == 0:
         return 0, 0, 0
-    
     return total, aciertos, round((aciertos / total) * 100)
 
 
@@ -790,10 +793,14 @@ def vigilar():
 
 
 def _vigilar_interno():
+    global PREDICCIONES_ACTIVAS, HISTORIAL_PREDICCIONES
     datos = _cargar()
     if not datos:
         print("No hay partidos_hoy.json todavia. Se reintentara en el proximo ciclo.")
         return
+
+    PREDICCIONES_ACTIVAS = datos.get("predicciones_activas", {})
+    HISTORIAL_PREDICCIONES = datos.get("historial_predicciones", {})
 
     hubo_cambios = False
     for partido in datos["partidos"]:
@@ -824,6 +831,7 @@ def _vigilar_interno():
             if enviar_mensaje_telegram(mensaje):
                 partido["aviso_final_enviado"] = True
                 hubo_cambios = True
+                PREDICCIONES_ACTIVAS.pop(partido.get("fixture_id"), None)
             continue
 
         if box.get("estado") != "in":
