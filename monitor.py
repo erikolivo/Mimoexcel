@@ -68,8 +68,8 @@ CORONA_FAVORITO = "\U0001F451"  # 👑
 UMBRAL_Z_ALERTA = 1.95                              # z-score para Gana Fav (empate o perdiendo <2 goles)
 UMBRAL_Z_CIERRE = 2.7                            # subido a pedido explicito, mas estricto
 UMBRAL_Z_RIVAL = 2.1                             # rival domina: z-score minimo para alertar
-UMBRAL_Z_1ER_TIEMPO = 1.28                              # ~80%, mas permisivo a proposito
-MINUTO_INICIO_1ER_TIEMPO = 25
+UMBRAL_Z_1ER_TIEMPO = 1.5                               # z-score para alerta de primer tiempo
+MINUTO_INICIO_1ER_TIEMPO = 15
 MINUTO_FIN_1ER_TIEMPO = 40
 
 # =====================================================================
