@@ -829,7 +829,7 @@ def vigilar():
         snap_actual = {
             "minuto": box["minuto"], "goles_local": box["goles_local"],
             "goles_visitante": box["goles_visitante"],
-            "stats_local": box["stats_local"], "stats_visitante": box["stats_visitante"],
+            "stats_local": dict(box["stats_local"]), "stats_visitante": dict(box["stats_visitante"]),
         }
         historial = partido.setdefault("historial_snapshots", [])
         snap_anterior = historial[-1] if historial else None
