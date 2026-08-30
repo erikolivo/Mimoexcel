@@ -129,26 +129,16 @@ def _obtener_datos_estilo(equipo, liga_slug):
 def _calcular_nivel_actual(historial_equipo, es_local):
     """
     Calcula el Nivel Actual (0-10) basado en el historial del equipo.
-    Requiere entre5 y6 partidos, con no mas de1 mes de diferencia entre el primero y ultimo.
+    idealmente5-6 partidos, pero acepta desde3 para mostrar algo.
+    Retorna (poder, color, n_partidos) o (None, None, 0) si no hay datos.
     """
     if not historial_equipo:
-        return None, None
+        return None, None, 0
     
     partidos = historial_equipo[-6:] if len(historial_equipo) >=6 else historial_equipo
     
-    # Condicion de cantidad: minimo5 partidos
-    if len(partidos) <5:
-        return None, None
-    
-    # Condicion de fecha: no mas de1 mes de diferencia
-    try:
-        fecha_primero = datetime.datetime.fromisoformat(partidos[0]['fecha'].replace("Z", "+00:00"))
-        fecha_ultimo = datetime.datetime.fromisoformat(partidos[-1]['fecha'].replace("Z", "+00:00"))
-        dias_diferencia = (fecha_ultimo - fecha_primero).days
-        if dias_diferencia >30:
-            return None, None
-    except (KeyError, ValueError):
-        return None, None
+    if len(partidos) <3:
+        return None, None, 0
     
     gf_total = sum(p['goles_favor'] for p in partidos)
     gc_total = sum(p['goles_contra'] for p in partidos)
@@ -172,7 +162,7 @@ def _calcular_nivel_actual(historial_equipo, es_local):
     else:
         color = "🔴"
     
-    return poder, color
+    return poder, color, n
 
 
 def _hora_local(hora_inicio_utc_iso):
@@ -248,11 +238,20 @@ def enviar_resumen(forzar=False):
                 historial_local = obtener_historial_equipo(home_id, liga_slug)
                 historial_visitante = obtener_historial_equipo(away_id, liga_slug)
                 
-                poder_local, color_local = _calcular_nivel_actual(historial_local, True)
-                poder_visitante, color_visitante = _calcular_nivel_actual(historial_visitante, False)
+                poder_local, color_local, n_local = _calcular_nivel_actual(historial_local, True)
+                poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(historial_visitante, False)
                 
-                if poder_local is not None and poder_visitante is not None:
-                    lineas.append(f"{color_local} {escapar_html(p['local'])}: {poder_local:.1f} | {color_visitante} {escapar_html(p['visitante'])}: {poder_visitante:.1f}")
+                if poder_local is not None or poder_visitante is not None:
+                    if poder_local is not None:
+                        marca_n = f" ({n_local})" if n_local < 5 else ""
+                        gf_local = sum(p['goles_favor'] for p in historial_local[-6:])
+                        gc_local = sum(p['goles_contra'] for p in historial_local[-6:])
+                        lineas.append(f"{color_local} {escapar_html(p['local'])}: {poder_local:.1f}{marca_n} (GF:{gf_local} GC:{gc_local})")
+                    if poder_visitante is not None:
+                        marca_n = f" ({n_visitante})" if n_visitante < 5 else ""
+                        gf_visitante = sum(p['goles_favor'] for p in historial_visitante[-6:])
+                        gc_visitante = sum(p['goles_contra'] for p in historial_visitante[-6:])
+                        lineas.append(f"{color_visitante} {escapar_html(p['visitante'])}: {poder_visitante:.1f}{marca_n} (GF:{gf_visitante} GC:{gc_visitante})")
                     
                     # Ultimos resultados
                     ultimos_local = historial_local[-5:] if len(historial_local) >=5 else historial_local
