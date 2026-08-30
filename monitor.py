@@ -268,6 +268,81 @@ def _guardar(datos):
     ARCHIVO_PARTIDOS.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+# =====================================================================
+# SISTEMA DE PREDICCIONES Y EFECTIVIDAD
+# =====================================================================
+
+PREDICCIONES_ACTIVAS = {}  # {partido_id: {tipo: {minuto, prediccion, equipo}}}
+
+TIPOS_PREDICCION_FAV = [
+    "gol_de_cierre", "posible_victoria_favorito", "posible_empate",
+    "ampliacion_marcador", "alerta_1er_tiempo", "value_alert",
+    "siguen_empatados", "cambio_momentum"
+]
+
+TIPOS_PREDICCION_RIVAL = ["cuidado_rival_presiona"]
+
+
+def _registrar_prediccion(partido_id, tipo, minuto, prediccion, equipo):
+    if partido_id not in PREDICCIONES_ACTIVAS:
+        PREDICCIONES_ACTIVAS[partido_id] = {}
+    PREDICCIONES_ACTIVAS[partido_id][tipo] = {
+        "minuto": minuto,
+        "prediccion": prediccion,
+        "equipo": equipo,
+    }
+
+
+def _verificar_predicciones(partido_id, goles_local, goles_visitante, favorito_es_local):
+    if partido_id not in PREDICCIONES_ACTIVAS:
+        return []
+    
+    resultados = []
+    predicciones = PREDICCIONES_ACTIVAS[partido_id].copy()
+    
+    for tipo, datos in predicciones.items():
+        equipo_prediccion = datos["equipo"]
+        
+        if favorito_es_local:
+            equipo_real_gol = "local" if goles_local > (PREDICCIONES_ACTIVAS.get(partido_id, {}).get(f"{tipo}_goles_local", 0)) else "visitante"
+        else:
+            equipo_real_gol = "visitante" if goles_visitante > (PREDICCIONES_ACTIVAS.get(partido_id, {}).get(f"{tipo}_goles_visitante", 0)) else "local"
+        
+        if equipo_prediccion == equipo_real_gol:
+            resultados.append((tipo, True, datos))
+        else:
+            resultados.append((tipo, False, datos))
+        
+        del PREDICCIONES_ACTIVAS[partido_id][tipo]
+    
+    return resultados
+
+
+def _calcular_efectividad(tipo_alerta):
+    total = 0
+    aciertos = 0
+    
+    for partido_id, predicciones in PREDICCIONES_ACTIVAS.items():
+        if tipo_alerta in predicciones:
+            total += 1
+    
+    for partido_id, predicciones in predicciones.items():
+        if tipo_alerta in predicciones and predicciones[tipo_alerta].get("acierto"):
+            aciertos += 1
+    
+    if total == 0:
+        return 0, 0, 0
+    
+    return total, aciertos, round((aciertos / total) * 100)
+
+
+def _mensaje_efectividad(tipo_alerta):
+    total, aciertos, porcentaje = _calcular_efectividad(tipo_alerta)
+    if total == 0:
+        return ""
+    return f"📊 Efectividad hoy: {porcentaje}% ({aciertos}/{total} aciertos)"
+
+
 def _en_ventana_horaria(partido):
     """Chequeo local, gratis: da margen razonable antes/despues del
     kickoff -- misma filosofia de siempre, nunca gastar una peticion
@@ -285,6 +360,11 @@ def _registrar_alerta(partido, tipo, texto, minuto, diferencia_goles=None):
     partido.setdefault("alertas_enviadas", []).append({
         "tipo": tipo, "minuto": minuto, "texto": texto, "diferencia_goles": diferencia_goles,
     })
+    
+    if tipo in TIPOS_PREDICCION_FAV:
+        _registrar_prediccion(partido["fixture_id"], tipo, minuto, "fav", partido["favorito"])
+    elif tipo in TIPOS_PREDICCION_RIVAL:
+        _registrar_prediccion(partido["fixture_id"], tipo, minuto, "rival", partido["no_favorito"])
 
 
 def _ya_se_envio_reciente(partido, tipo, minuto_actual, ventana=10):
@@ -766,6 +846,26 @@ def vigilar():
         goles_favorito = box["goles_local"] if favorito_es_local else box["goles_visitante"]
         goles_rival = box["goles_visitante"] if favorito_es_local else box["goles_local"]
         diferencia_actual = goles_favorito - goles_rival
+        
+        if snap_anterior:
+            goles_fav_anterior = snap_anterior["goles_local"] if favorito_es_local else snap_anterior["goles_visitante"]
+            goles_rival_anterior = snap_anterior["goles_visitante"] if favorito_es_local else snap_anterior["goles_local"]
+            
+            if goles_favorito > goles_fav_anterior or goles_rival > goles_rival_anterior:
+                resultados = _verificar_predicciones(partido["fixture_id"], box["goles_local"], box["goles_visitante"], favorito_es_local)
+                for tipo, acierto, datos in resultados:
+                    if acierto:
+                        emoji = "✅"
+                        texto_resultado = f"{emoji} [ACIERTO] {tipo.replace('_', ' ').title()} - {datos['equipo']} marcó"
+                    else:
+                        emoji = "❌"
+                        texto_resultado = f"{emoji} [FALLO] {tipo.replace('_', ' ').title()} - rival marcó primero"
+                    
+                    efectividad = _mensaje_efectividad(tipo)
+                    if efectividad:
+                        texto_resultado += f"\n{efectividad}"
+                    
+                    enviar_mensaje_telegram(texto_resultado)
 
         alertas = _evaluar_alertas(partido, snap_actual, snap_anterior, box["minuto"])
         if alertas:
