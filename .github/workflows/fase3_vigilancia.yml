@@ -32,6 +32,15 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Asegurar partidos del dia (si falta partidos_hoy.json)
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          if [ ! -f data/partidos_hoy.json ]; then
+            echo "No hay partidos_hoy.json — ejecutando Fase 1 primero..."
+            python seleccionar_partidos.py
+          fi
+
       - name: Vigilar en vivo durante ~5.5 horas (revision cada 5 min)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -39,7 +48,13 @@ jobs:
         run: |
           FIN=$(( $(date +%s) + 330*60 ))
           while [ "$(date +%s)" -lt "$FIN" ]; do
-            python monitor.py || echo "[AVISO] Un ciclo de monitor.py fallo, se reintenta en el proximo."
+            python monitor.py
+            if [ $? -ne 0 ]; then
+              echo "[AVISO] monitor.py fallo — reintentando seleccion si falta el archivo..."
+              if [ ! -f data/partidos_hoy.json ]; then
+                python seleccionar_partidos.py
+              fi
+            fi
             sleep 300
           done
 
