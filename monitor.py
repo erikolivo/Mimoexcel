@@ -67,7 +67,7 @@ CORONA_FAVORITO = "\U0001F451"  # 👑
 
 UMBRAL_Z_ALERTA = 1.95                              # z-score para Gana Fav (empate o perdiendo <2 goles)
 UMBRAL_Z_CIERRE = 2.7                            # subido a pedido explicito, mas estricto
-UMBRAL_Z_RIVAL = 2.7                             # rival domina: z-score minimo para alertar
+UMBRAL_Z_RIVAL = 2.1                             # rival domina: z-score minimo para alertar
 UMBRAL_Z_1ER_TIEMPO = 1.28                              # ~80%, mas permisivo a proposito
 MINUTO_INICIO_1ER_TIEMPO = 25
 MINUTO_FIN_1ER_TIEMPO = 40
@@ -559,8 +559,12 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     tabla += _fila("Posesion", f"{_n(stats_local,'possessionPct')}%", f"{_n(stats_visitante,'possessionPct')}%") + "\n"
     tabla += _fila("Faltas", _n(stats_local,'foulsCommitted'), _n(stats_visitante,'foulsCommitted')) + "\n"
     if z is not None:
-        z_local = f"{z:.1f}" if z >=0 else f"{z:.1f}"
-        z_visitante = f"{-z:.1f}" if z >=0 else f"{-z:.1f}"
+        if z >=0:
+            z_local = f"⬅️ {z:.1f}"
+            z_visitante = f"{-z:.1f}"
+        else:
+            z_local = f"{z:.1f}"
+            z_visitante = f"➡️ {-z:.1f}"
         tabla += _fila("z-score", z_local, z_visitante) + "\n"
     tabla += "</pre>"
 
