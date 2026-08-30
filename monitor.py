@@ -858,8 +858,12 @@ def vigilar():
 
         lado_favorito = "local" if favorito_es_local else "visitante"
         lado_rival = "visitante" if favorito_es_local else "local"
-        presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, box["minuto"], lado_favorito, lado_rival)
-        z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
+        
+        z = 0.0
+        dominancia_fav = 0.5
+        if len(historial) >= 2:
+            presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, box["minuto"], lado_favorito, lado_rival)
+            z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
         
         alertas = _evaluar_alertas(partido, snap_actual, snap_anterior, box["minuto"])
 
