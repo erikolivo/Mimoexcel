@@ -494,6 +494,45 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
     if resultado_chequeo:
         return [resultado_chequeo]
 
+    # --- Cambio de Momentum ---
+    if minuto_int >=15 and len(historial) >=3:
+        z_actual = momentum.z_score_dominancia(
+            momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_favorito),
+            momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_rival),
+            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_favorito),
+            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_rival),
+        )[0]
+        z_anterior = momentum.z_score_dominancia(
+            momentum.presion_ponderada_por_tiempo(historial, max(0, minuto_int-5), lado_favorito),
+            momentum.presion_ponderada_por_tiempo(historial, max(0, minuto_int-5), lado_rival),
+            momentum.eventos_ponderados_por_tiempo(historial, max(0, minuto_int-5), lado_favorito),
+            momentum.eventos_ponderados_por_tiempo(historial, max(0, minuto_int-5), lado_rival),
+        )[0]
+        cambio = abs(z_actual - z_anterior)
+        if cambio >=1.5 and not _ya_se_envio_reciente(partido, "cambio_momentum", minuto_int, ventana=10):
+            direccion = "fav" if z_actual > z_anterior else "rival"
+            return [("cambio_momentum", f"\U0001F504 Cambio de momentum: {escapar_html(partido['favorito'])} {'recupera' if direccion == 'fav' else 'pierde'} control")]
+
+    # --- Gol en Contra Reciente ---
+    if minuto_int >=10 and snap_anterior is not None:
+        goles_fav_anterior = snap_anterior["goles_local"] if favorito_es_local else snap_anterior["goles_visitante"]
+        goles_rival_anterior = snap_anterior["goles_visitante"] if favorito_es_local else snap_anterior["goles_local"]
+        if goles_favorito < goles_fav_anterior and not _ya_se_envio_reciente(partido, "gol_contra", minuto_int, ventana=10):
+            return [("gol_contra", f"\u26A1 {escapar_html(partido['favorito'])} recibe gol -- oportunidad de rebote")]
+
+    # --- Secuencia de Corners ---
+    if minuto_int >=15:
+        corners_fav = _to_float(snap_actual["stats_local"].get("wonCorners", 0) if lado_favorito == "local" else snap_actual["stats_visitante"].get("wonCorners", 0), 0)
+        corners_riv = _to_float(snap_actual["stats_visitante"].get("wonCorners", 0) if lado_favorito == "local" else snap_actual["stats_local"].get("wonCorners", 0), 0)
+        if corners_fav >= corners_riv +3 and not _ya_se_envio_reciente(partido, "secuencia_corners", minuto_int, ventana=10):
+            return [("secuencia_corners", f"\U0001F6A9 Secuencia de corners: {escapar_html(partido['favorito'])} ({int(corners_fav)} corners)")]
+
+    # --- Falta Peligrosa ---
+    if minuto_int >=15:
+        faltas_rival = _to_float(snap_actual["stats_local"].get("foulsCommitted", 0) if lado_rival == "local" else snap_actual["stats_visitante"].get("foulsCommitted", 0), 0)
+        if faltas_rival >=3 and not _ya_se_envio_reciente(partido, "falta_peligrosa", minuto_int, ventana=10):
+            return [("falta_peligrosa", f"\U0001F525 {escapar_html(partido['rival'])} con {int(faltas_rival)} faltas -- posible tiro libre")]
+
     return []
 
 
