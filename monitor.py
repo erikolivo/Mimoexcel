@@ -861,7 +861,9 @@ def vigilar():
         
         z = 0.0
         dominancia_fav = 0.5
-        if len(historial) >= 2:
+        minuto_int = momentum._minuto_a_entero(box["minuto"]) or 0
+        
+        if minuto_int >= 5 and len(historial) >= 2:
             presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, box["minuto"], lado_favorito, lado_rival)
             z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
         
