@@ -359,9 +359,9 @@ def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad=
         return "posible_victoria_favorito", f"\U0001F7E2 Gana Fav{marca_prioridad}"
     if -2 < diferencia < 0:
         return "posible_empate", f"\U0001F7E0 Gana Fav{marca_prioridad}"
-    if z >= 0:
+    if diferencia > 0 and z >= 2:
         return "ampliacion_marcador", f"\U0001F535 Proximo gol: Fav{marca_prioridad}"
-    return "ampliacion_marcador", f"\U0001F535 Proximo gol: No Fav{marca_prioridad}"
+    return None, None
 
 
 def _mensaje_idv(datos_idv, prioridad="MEDIA"):
