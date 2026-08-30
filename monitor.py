@@ -418,10 +418,11 @@ def _evaluar_chequeo_empate(partido, minuto_int, snap_actual, historial):
         if abs(z_local) < 0.7:
             return None
         
-        # Minimo1 remate al arco del favorito
+        # Minimo remates al arco segun checkpoint
         stats_fav = snap_actual["stats_local"] if lado_favorito == "local" else snap_actual["stats_visitante"]
         tiros_arco = _to_float(stats_fav.get("shotsOnTarget", 0), 0)
-        if tiros_arco < 1:
+        tiros_minimos = {22:1, 55:2, 70:3}
+        if tiros_arco < tiros_minimos.get(checkpoint, 1):
             return None
 
         return tipo_chequeo, f"\u23F1\uFE0F Siguen empatados (min {checkpoint}+) -- {escapar_html(partido['favorito'])} con ligera ventaja."
