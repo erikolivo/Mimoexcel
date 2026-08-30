@@ -400,14 +400,29 @@ def _evaluar_chequeo_empate(partido, minuto_int, snap_actual, historial):
         if _ya_se_envio_reciente(partido, "posible_victoria_favorito", minuto_int, ventana=VENTANA_ANTIDUP_CHEQUEO_EMPATE):
             return None
 
-        # Chequeo BLANDO: basta con que el favorito tenga alguna ventaja
-        # de presion, sin exigir el umbral estadistico de z-score
+        # Chequeo BLANDO: favorito con ventaja minima + minimo1 remate al arco
         lado_favorito = "local" if partido["favorito_es_local"] else "visitante"
         lado_rival = "visitante" if partido["favorito_es_local"] else "local"
         presion_fav = momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_favorito)
         presion_riv = momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_rival)
         if presion_fav <= presion_riv:
-            return None  # sin ventaja todavia -- se reintenta en el siguiente ciclo, dentro de la misma franja
+            return None
+        
+        # Calcular z-score minimo
+        z_local, dominancia_fav = momentum.z_score_dominancia(
+            momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_favorito),
+            momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_rival),
+            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_favorito),
+            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_rival),
+        )
+        if abs(z_local) < 0.7:
+            return None
+        
+        # Minimo1 remate al arco del favorito
+        stats_fav = snap_actual["stats_local"] if lado_favorito == "local" else snap_actual["stats_visitante"]
+        tiros_arco = _to_float(stats_fav.get("shotsOnTarget", 0), 0)
+        if tiros_arco < 1:
+            return None
 
         return tipo_chequeo, f"\u23F1\uFE0F Siguen empatados (min {checkpoint}+) -- {escapar_html(partido['favorito'])} con ligera ventaja."
 
