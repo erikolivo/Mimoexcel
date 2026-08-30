@@ -126,9 +126,9 @@ def _obtener_datos_estilo(equipo, liga_slug):
         return None
 
 
-def _calcular_poder_match(historial_equipo, es_local):
+def _calcular_nivel_actual(historial_equipo, es_local):
     """
-    Calcula el Poder de Match (0-10) basado en el historial del equipo.
+    Calcula el Nivel Actual (0-10) basado en el historial del equipo.
     Requiere entre5 y6 partidos, con no mas de1 mes de diferencia entre el primero y ultimo.
     """
     if not historial_equipo:
@@ -248,8 +248,8 @@ def enviar_resumen(forzar=False):
                 historial_local = obtener_historial_equipo(home_id, liga_slug)
                 historial_visitante = obtener_historial_equipo(away_id, liga_slug)
                 
-                poder_local, color_local = _calcular_poder_match(historial_local, True)
-                poder_visitante, color_visitante = _calcular_poder_match(historial_visitante, False)
+                poder_local, color_local = _calcular_nivel_actual(historial_local, True)
+                poder_visitante, color_visitante = _calcular_nivel_actual(historial_visitante, False)
                 
                 if poder_local is not None and poder_visitante is not None:
                     lineas.append(f"{color_local} {escapar_html(p['local'])}: {poder_local:.1f} | {color_visitante} {escapar_html(p['visitante'])}: {poder_visitante:.1f}")

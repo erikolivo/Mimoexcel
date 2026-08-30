@@ -719,8 +719,8 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     if home_id and away_id and liga_slug:
         historial_local = obtener_historial_equipo(home_id, liga_slug)
         historial_visitante = obtener_historial_equipo(away_id, liga_slug)
-        poder_local, color_local = _calcular_poder_match(historial_local, True)
-        poder_visitante, color_visitante = _calcular_poder_match(historial_visitante, False)
+        poder_local, color_local = _calcular_nivel_actual(historial_local, True)
+        poder_visitante, color_visitante = _calcular_nivel_actual(historial_visitante, False)
         lineas.append(f"\U0001F4C8 Poder de Match:")
         if poder_local is not None and poder_visitante is not None:
             lineas.append(f"{color_local} {escapar_html(partido['local'])}: {poder_local:.1f} (GF:{sum(p['goles_favor'] for p in historial_local[-6:])} GC:{sum(p['goles_contra'] for p in historial_local[-6:])})")

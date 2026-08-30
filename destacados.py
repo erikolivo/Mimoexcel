@@ -25,7 +25,7 @@ from pathlib import Path
 from telegram_utils import enviar_mensaje_telegram, escapar_html
 from estado_diario import ya_se_hizo, marcar_hecho
 from fetch_data import obtener_historial_equipo
-from resumen import _calcular_poder_match, _calcular_estilo_juego, _obtener_datos_estilo
+from resumen import _calcular_nivel_actual, _calcular_estilo_juego, _obtener_datos_estilo
 
 ARCHIVO = Path(__file__).parent / "data" / "partidos_hoy.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
@@ -94,8 +94,8 @@ def _calcular_probabilidad_exito(partido):
             historial_local = obtener_historial_equipo(home_id, liga_slug)
             historial_visitante = obtener_historial_equipo(away_id, liga_slug)
             
-            poder_local, _ = _calcular_poder_match(historial_local, True)
-            poder_visitante, _ = _calcular_poder_match(historial_visitante, False)
+            poder_local, _ = _calcular_nivel_actual(historial_local, True)
+            poder_visitante, _ = _calcular_nivel_actual(historial_visitante, False)
             
             if poder_local is not None and poder_visitante is not None:
                 if partido.get("favorito_es_local"):
