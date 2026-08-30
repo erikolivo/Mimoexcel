@@ -77,10 +77,10 @@ MINUTO_FIN_1ER_TIEMPO = 40
 # Detecta cuando un equipo domina en partidos con cuotas parejas
 # =====================================================================
 
-UMBRAL_IDV_BAJO = 5
-UMBRAL_IDV_MEDIO = 10
-UMBRAL_IDV_ALTO = 20
-MINUTOS_MINIMOS_IDV = 10
+UMBRAL_IDV_BAJO = 2
+UMBRAL_IDV_MEDIO = 5
+UMBRAL_IDV_ALTO = 10
+MINUTOS_MINIMOS_IDV = 5
 
 
 def _to_float(valor, default=0.0):
