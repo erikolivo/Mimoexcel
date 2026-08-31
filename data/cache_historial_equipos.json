@@ -43709,5 +43709,24 @@
         "resultado": "D"
       }
     ]
+  },
+  "8293_all_2026": {
+    "fecha_cache": "2026-08-31T18:50:53.431926",
+    "historial": [
+      {
+        "fecha": "2026-08-18",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-08-15",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      }
+    ]
   }
 }
