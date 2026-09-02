@@ -126,42 +126,68 @@ def _obtener_datos_estilo(equipo, liga_slug):
         return None
 
 
-def _calcular_nivel_actual(historial_equipo, es_local, n_matches=None):
+def _calcular_nivel_actual(historial_equipo, es_local):
     """
-    Calcula el Nivel Actual (0-10) basado en el historial del equipo.
-    Si n_matches se especifica, usa exactamente esos ultimos partidos.
+    Calcula el Nivel Actual (0-10) con el nuevo sistema de 3 componentes:
+    1. Score de Forma Global (decaimiento exponencial 0.85^i)
+    2. Score de Goles Global (diferencia GF-GC)
+    3. Score Local/Visitante (ventanas independientes de 6 partidos)
+    Combinacion: 40% forma global + 40% sede especifica + 20% goles global
     Retorna (poder, color, n_partidos) o (None, None, 0) si no hay datos.
     """
-    if not historial_equipo:
+    MIN_MATCHES = 4
+
+    if not historial_equipo or len(historial_equipo) < MIN_MATCHES:
         return None, None, 0
-    
-    partidos = historial_equipo[-n_matches:] if n_matches else historial_equipo[-6:]
-    
-    if len(partidos) <3:
-        return None, None, 0
-    
-    gf_total = sum(p['goles_favor'] for p in partidos)
-    gc_total = sum(p['goles_contra'] for p in partidos)
-    victorias = sum(1 for p in partidos if p['resultado'] == 'V')
-    empates = sum(1 for p in partidos if p['resultado'] == 'E')
-    
-    n = len(partidos)
-    ataque = gf_total / n
-    defensa = 1 - (gc_total / n)
-    forma = (victorias *3 + empates) /18
-    
-    poder = (ataque *0.45 + defensa *0.3 + forma *0.25) *10
+
+    ultimos = historial_equipo[-6:] if len(historial_equipo) >= 6 else historial_equipo
+    n = len(ultimos)
+
+    # --- 1. Score de Forma Global ---
+    Puntos = {"V": 3, "E": 1, "D": 0}
+    pesos = [0.85 ** i for i in range(n)]
+    suma_ponderada = sum(Puntos.get(p["resultado"], 0) * w for p, w in zip(ultimos, pesos))
+    suma_pesos = sum(pesos)
+    score_forma_global = (suma_ponderada / (suma_pesos * 3)) * 100
+
+    # --- 2. Score de Goles Global ---
+    gf_prom = sum(p["goles_favor"] for p in ultimos) / n
+    gc_prom = sum(p["goles_contra"] for p in ultimos) / n
+    diferencia_global = gf_prom - gc_prom
+    score_goles_global = max(0, min(100, 50 + (diferencia_global * 10)))
+
+    # --- 3. Score Local / Visitante (ventanas independientes) ---
+    ultimos_local = [p for p in historial_equipo if p.get("es_local") is True][-6:]
+    ultimos_visitante = [p for p in historial_equipo if p.get("es_local") is False][-6:]
+
+    def _score_sede(subset):
+        if len(subset) < 2:
+            return None
+        ns = len(subset)
+        puntos_s = sum(Puntos.get(p["resultado"], 0) for p in subset)
+        gf_s = sum(p["goles_favor"] for p in subset) / ns
+        gc_s = sum(p["goles_contra"] for p in subset) / ns
+        forma_s = puntos_s / (ns * 3)
+        diff_s = gf_s - gc_s
+        return 50 + (forma_s - 0.5) * 60 + diff_s * 8
+
+    score_sede = _score_sede(ultimos_local) if es_local else _score_sede(ultimos_visitante)
+    if score_sede is None:
+        score_sede = score_forma_global
+
+    # --- 4. Combinacion final ---
+    poder = (score_forma_global * 0.40 + score_sede * 0.40 + score_goles_global * 0.20) / 10
     poder = max(0, min(10, poder))
-    
-    if poder >=8:
+
+    if poder >= 8:
         color = "🔵"
-    elif poder >=6:
+    elif poder >= 6:
         color = "🟢"
-    elif poder >=4:
+    elif poder >= 4:
         color = "🟡"
     else:
         color = "🔴"
-    
+
     return poder, color, n
 
 
@@ -237,26 +263,27 @@ def enviar_resumen(forzar=False):
             try:
                 historial_local = obtener_historial_equipo(home_id, liga_slug)
                 historial_visitante = obtener_historial_equipo(away_id, liga_slug)
-                n_matches = min(len(historial_local), len(historial_visitante))
                 
-                poder_local, color_local, n_local = _calcular_nivel_actual(historial_local, True, n_matches)
-                poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(historial_visitante, False, n_matches)
+                poder_local, color_local, n_local = _calcular_nivel_actual(historial_local, True)
+                poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(historial_visitante, False)
                 
                 if poder_local is not None or poder_visitante is not None:
                     if poder_local is not None:
                         marca_n = f" ({n_local})" if n_local < 5 else ""
-                        gf_local = sum(p['goles_favor'] for p in historial_local[-n_matches:])
-                        gc_local = sum(p['goles_contra'] for p in historial_local[-n_matches:])
+                        ventana = historial_local[-6:] if len(historial_local) >= 6 else historial_local
+                        gf_local = sum(p['goles_favor'] for p in ventana)
+                        gc_local = sum(p['goles_contra'] for p in ventana)
                         lineas.append(f"{color_local} {escapar_html(p['local'])}: {poder_local:.1f}{marca_n} (GF:{gf_local} GC:{gc_local})")
                     if poder_visitante is not None:
                         marca_n = f" ({n_visitante})" if n_visitante < 5 else ""
-                        gf_visitante = sum(p['goles_favor'] for p in historial_visitante[-n_matches:])
-                        gc_visitante = sum(p['goles_contra'] for p in historial_visitante[-n_matches:])
+                        ventana = historial_visitante[-6:] if len(historial_visitante) >= 6 else historial_visitante
+                        gf_visitante = sum(p['goles_favor'] for p in ventana)
+                        gc_visitante = sum(p['goles_contra'] for p in ventana)
                         lineas.append(f"{color_visitante} {escapar_html(p['visitante'])}: {poder_visitante:.1f}{marca_n} (GF:{gf_visitante} GC:{gc_visitante})")
                     
                     # Ultimos resultados
-                    ultimos_local = historial_local[-n_matches:] if len(historial_local) >=3 else historial_local
-                    ultimos_visitante = historial_visitante[-n_matches:] if len(historial_visitante) >=3 else historial_visitante
+                    ultimos_local = historial_local[-6:] if len(historial_local) >= 6 else historial_local
+                    ultimos_visitante = historial_visitante[-6:] if len(historial_visitante) >= 6 else historial_visitante
                     
                     resultados_local = ""
                     for r in ultimos_local:

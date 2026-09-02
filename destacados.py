@@ -93,10 +93,9 @@ def _calcular_probabilidad_exito(partido):
         try:
             historial_local = obtener_historial_equipo(home_id, liga_slug)
             historial_visitante = obtener_historial_equipo(away_id, liga_slug)
-            n_matches = min(len(historial_local), len(historial_visitante))
             
-            poder_local, _, _ = _calcular_nivel_actual(historial_local, True, n_matches)
-            poder_visitante, _, _ = _calcular_nivel_actual(historial_visitante, False, n_matches)
+            poder_local, _, _ = _calcular_nivel_actual(historial_local, True)
+            poder_visitante, _, _ = _calcular_nivel_actual(historial_visitante, False)
             
             if poder_local is not None and poder_visitante is not None:
                 if partido.get("favorito_es_local"):
