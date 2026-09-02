@@ -116,6 +116,15 @@ BASE_ESPN_SITE = "https://site.api.espn.com/apis/site/v2/sports/soccer"
 # real consultado), mex.1 y usa.1 (tabla oficial de Leagues Cup),
 # concacaf.leagues.cup (partido real seguido en vivo, Queretaro-Seattle).
 # El resto sigue el patron estandar pero no se probo uno por uno.
+
+# Ligas internacionales: para el calculo de Nivel Actual se usa todo el
+# historial (todas las temporadas), no solo la temporada actual.
+LIGAS_INTERNACIONALES = {
+    "concacaf.leagues.cup", "concacaf.champions",
+    "conmebol.libertadores", "conmebol.sudamericana",
+    "uefa.champions", "uefa.europa",
+}
+
 LIGAS_ESPN = {
     "eng.1": ("England", "Premier League"),
     "eng.2": ("England", "Championship"),
@@ -497,11 +506,14 @@ def obtener_info_equipo(team_id):
 def obtener_historial_equipo(team_id, liga_slug, anio_inicio=None):
     """
     Obtiene el historial de partidos de un equipo desde ESPN.
+    Para ligas locales usa temporada actual; para internacionales usa todo el historial.
     Devuelve lista de dicts con: {fecha, goles_favor, goles_contra, es_local, resultado}
     resultado: 'V' (victoria), 'E' (empate), 'D' (derrota)
     """
+    es_internacional = liga_slug in LIGAS_INTERNACIONALES
+
     if anio_inicio is None:
-        anio_inicio = datetime.now().year
+        anio_inicio = 2010 if es_internacional else datetime.now().year
     
     cache_key = f"{team_id}_{liga_slug}_{anio_inicio}"
     
