@@ -1,11 +1,9 @@
 name: Fase 2.5 - Destacados del dia
 
-# Local (UTC-5): reintenta cada 5 min entre las 07:30 y las 07:45.
-# NUEVO (agosto 2026, a pedido explicito) -- 6 partidos al azar en 2
-# grupos de 3, de los que ya tienen seguimiento en vivo disponible.
+# Local (UTC-5): reintenta entre las 06:05 y las 06:15.
 on:
   schedule:
-    - cron: "0,5,10,15 12 * * *"   # 12:00-12:15 UTC = 07:00-07:15 local
+    - cron: "5,10,15 11 * * *"   # 11:05-11:15 UTC = 06:05-06:15 local
   workflow_dispatch:
     inputs:
       forzar:

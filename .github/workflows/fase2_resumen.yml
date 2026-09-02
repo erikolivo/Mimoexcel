@@ -1,17 +1,9 @@
 name: Fase 2 - Resumen diario
 
-# Local (UTC-5): reintenta cada 5 min entre las 07:00 y las 07:15 (a
-# pedido explicito: se quiere el mensaje justo a las 7am, se acorto la
-# ventana de reintento de 07:00-08:30 a solo este colchon corto -- lo
-# suficiente para absorber un atraso tipico de GitHub Actions sin
-# arriesgarse a que llegue tarde en la manana).
-#
-# NUEVO (agosto 2026, a pedido explicito): opcion manual de "forzar"
-# desde Actions -- reenvia el resumen aunque ya se haya mandado hoy,
-# util para probar cambios de formato sin esperar al dia siguiente.
+# Local (UTC-5): reintenta entre las 05:31 y las 05:45.
 on:
   schedule:
-    - cron: "31,35,40,45 11 * * *"   # 11:31-11:45 UTC = 06:31-06:45 local
+    - cron: "31,35,40,45 10 * * *"   # 10:31-10:45 UTC = 05:31-05:45 local
   workflow_dispatch:
     inputs:
       forzar:
