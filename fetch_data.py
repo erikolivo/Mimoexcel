@@ -503,21 +503,23 @@ def obtener_info_equipo(team_id):
         return None
 
 
-def obtener_historial_equipo(team_id, liga_slug, anio_inicio=None):
-    """
-    Obtiene el historial de partidos de un equipo desde ESPN.
-    Para ligas locales usa temporada actual; para internacionales usa todo el historial.
-    Devuelve lista de dicts con: {fecha, goles_favor, goles_contra, es_local, resultado}
-    resultado: 'V' (victoria), 'E' (empate), 'D' (derrota)
-    """
-    es_internacional = liga_slug in LIGAS_INTERNACIONALES
+def _es_amistoso(evento):
+    """Detecta si un partido es amistoso basandose en el tipo de competicion."""
+    for comp in evento.get("competitions", []):
+        tipo = comp.get("type", {}).get("slug", "")
+        nombre = comp.get("type", {}).get("name", "")
+        if "friendly" in tipo or "friendly" in nombre.lower():
+            return True
+        if "amistoso" in nombre.lower():
+            return True
+    return False
 
-    if anio_inicio is None:
-        anio_inicio = 2010 if es_internacional else datetime.now().year
-    
-    cache_key = f"{team_id}_{liga_slug}_{anio_inicio}"
-    
-    # Intentar cargar desde cache
+
+def _obtener_historial_todas_competiciones(team_id, anio_inicio):
+    """Obtiene los ultimos partidos de un equipo en TODAS sus competiciones
+    (liga local + internacional), excluyendo amistosos."""
+    cache_key = f"{team_id}_all_{anio_inicio}"
+
     cache = {}
     if os.path.exists(CACHE_HISTORIAL_FILE):
         try:
@@ -525,36 +527,124 @@ def obtener_historial_equipo(team_id, liga_slug, anio_inicio=None):
                 cache = json.load(f)
         except Exception:
             cache = {}
-    
-    # Verificar si tenemos cache valido
+
     if cache_key in cache:
         entrada = cache[cache_key]
         fecha_cache = datetime.fromisoformat(entrada['fecha_cache'])
         if datetime.now() - fecha_cache < timedelta(days=CACHE_HISTORIAL_DIAS):
             return entrada['historial']
-    
-    # Fetch desde ESPN
+
+    historial = []
+    current_year = datetime.now().year
+    seasons = range(anio_inicio, current_year + 1)
+
+    for season in seasons:
+        url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/all/schedule?season={season}&team={team_id}"
+        try:
+            r = requests.get(url, timeout=TIMEOUT)
+            if r.status_code != 200:
+                continue
+            data = r.json()
+            for evento in data.get("events", []):
+                if _es_amistoso(evento):
+                    continue
+                for comp in evento.get("competitions", []):
+                    fecha = comp.get("date", "")[:10]
+                    es_local = None
+                    goles_favor = 0
+                    goles_contra = 0
+                    for competidor in comp.get("competitors", []):
+                        if competidor.get("id") == str(team_id):
+                            es_local = competidor.get("homeAway") == "home"
+                            goles_favor = int(competidor.get("score", {}).get("value", 0))
+                        else:
+                            goles_contra = int(competidor.get("score", {}).get("value", 0))
+                    if es_local is not None:
+                        if goles_favor > goles_contra:
+                            resultado = "V"
+                        elif goles_favor < goles_contra:
+                            resultado = "D"
+                        else:
+                            resultado = "E"
+                        historial.append({
+                            "fecha": fecha,
+                            "goles_favor": goles_favor,
+                            "goles_contra": goles_contra,
+                            "es_local": es_local,
+                            "resultado": resultado,
+                        })
+        except Exception:
+            continue
+
+    historial.sort(key=lambda x: x["fecha"])
+
+    cache[cache_key] = {
+        "fecha_cache": datetime.now().isoformat(),
+        "historial": historial,
+    }
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(CACHE_HISTORIAL_FILE, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2)
+
+    return historial
+
+
+def obtener_historial_equipo(team_id, liga_slug, anio_inicio=None):
+    """
+    Obtiene el historial de partidos de un equipo desde ESPN.
+    - Ligas internacionales: ultimos partidos en TODAS las competiciones (liga + copa), excluyendo amistosos.
+    - Ligas locales: partidos de la liga actual, excluyendo amistosos.
+    Retorna lista de dicts: {fecha, goles_favor, goles_contra, es_local, resultado}
+    """
+    es_internacional = liga_slug in LIGAS_INTERNACIONALES
+
+    if es_internacional:
+        anio_inicio = anio_inicio or 2010
+        return _obtener_historial_todas_competiciones(team_id, anio_inicio)
+
+    # --- Ligas locales: temporada actual, solo esa liga ---
+    if anio_inicio is None:
+        anio_inicio = datetime.now().year
+
+    cache_key = f"{team_id}_{liga_slug}_{anio_inicio}"
+
+    cache = {}
+    if os.path.exists(CACHE_HISTORIAL_FILE):
+        try:
+            with open(CACHE_HISTORIAL_FILE, 'r', encoding='utf-8') as f:
+                cache = json.load(f)
+        except Exception:
+            cache = {}
+
+    if cache_key in cache:
+        entrada = cache[cache_key]
+        fecha_cache = datetime.fromisoformat(entrada['fecha_cache'])
+        if datetime.now() - fecha_cache < timedelta(days=CACHE_HISTORIAL_DIAS):
+            return entrada['historial']
+
     url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{liga_slug}/teams/{team_id}/schedule?season={anio_inicio}"
     try:
         r = requests.get(url, timeout=TIMEOUT)
         r.raise_for_status()
         data = r.json()
-        
+
         historial = []
         for evento in data.get('events', []):
+            if _es_amistoso(evento):
+                continue
             for competicion in evento.get('competitions', []):
                 fecha = competicion.get('date', '')[:10]
                 es_local = None
                 goles_favor = 0
                 goles_contra = 0
-                
+
                 for competidor in competicion.get('competitors', []):
                     if competidor.get('id') == str(team_id):
                         es_local = competidor.get('homeAway') == 'home'
                         goles_favor = int(competidor.get('score', {}).get('value', 0))
                     else:
                         goles_contra = int(competidor.get('score', {}).get('value', 0))
-                
+
                 if es_local is not None:
                     if goles_favor > goles_contra:
                         resultado = 'V'
@@ -562,7 +652,7 @@ def obtener_historial_equipo(team_id, liga_slug, anio_inicio=None):
                         resultado = 'D'
                     else:
                         resultado = 'E'
-                    
+
                     historial.append({
                         'fecha': fecha,
                         'goles_favor': goles_favor,
@@ -570,18 +660,15 @@ def obtener_historial_equipo(team_id, liga_slug, anio_inicio=None):
                         'es_local': es_local,
                         'resultado': resultado
                     })
-        
-        # Guardar en cache
+
         cache[cache_key] = {
             'fecha_cache': datetime.now().isoformat(),
             'historial': historial
         }
-        
-        # Guardar archivo
         os.makedirs(DATA_DIR, exist_ok=True)
         with open(CACHE_HISTORIAL_FILE, 'w', encoding='utf-8') as f:
             json.dump(cache, f, ensure_ascii=False, indent=2)
-        
+
         return historial
     except Exception as e:
         print(f"[AVISO] No se pudo obtener historial del equipo {team_id}: {e}")
