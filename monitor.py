@@ -83,6 +83,13 @@ UMBRAL_IDV_MEDIO = 5
 UMBRAL_IDV_ALTO = 10
 MINUTOS_MINIMOS_IDV = 5
 
+# --- Nuevas alertas de valor (septiembre 2026) ---
+UMBRAL_Z_FAV_NO_GANA = 1.5       # favorito dominando pero empatando/perdiendo
+UMBRAL_Z_NO_FAV_DOMINA = 1.5     # no-favorito dominando claramente
+UMBRAL_CUOTA_FAVORITO = 2.0      # cuota para ser considerado "favorito"
+MINUTOS_MINIMOS_VALOR = 15       # minutos minimos para ambas alertas
+DIFERENCIA_CUOTAS_MINIMA = 1.0   # diferencia minima entre cuotas para alerta de favorito
+
 
 def _to_float(valor, default=0.0):
     """Convierte a float valores que la API de ESPN a veces entrega como
@@ -172,6 +179,138 @@ def _calcular_idv(partido, snap_actual, historial, minuto_int):
             'cuota_fav': cuota_local if favorito_es_local else cuota_visitante,
         }
     return None
+
+
+def _evaluar_fav_domina_no_gana(partido, snap_actual, historial, minuto_int):
+    """Detecta cuando el favorito domina estadisticamente pero esta
+    empatando o perdiendo. Significa que las cuotas en vivo estan
+    infladas (dan mas valor del que deberia tener el favorito)."""
+    cuota_local = partido.get("cuota_local_inicial")
+    cuota_visitante = partido.get("cuota_visitante_inicial")
+    if not cuota_local or not cuota_visitante or cuota_local <= 0 or cuota_visitante <= 0:
+        return None
+
+    favorito_es_local = partido["favorito_es_local"]
+    gl, gv = snap_actual["goles_local"], snap_actual["goles_visitante"]
+
+    if favorito_es_local:
+        diferencia = gl - gv
+        cuota_fav = cuota_local
+        cuota_riv = cuota_visitante
+    else:
+        diferencia = gv - gl
+        cuota_fav = cuota_visitante
+        cuota_riv = cuota_local
+
+    if cuota_fav >= UMBRAL_CUOTA_FAVORITO:
+        return None
+    if abs(cuota_local - cuota_visitante) < DIFERENCIA_CUOTAS_MINIMA:
+        return None
+    if diferencia > 0:
+        return None
+    if minuto_int < MINUTOS_MINIMOS_VALOR:
+        return None
+
+    lado_fav = "local" if favorito_es_local else "visitante"
+    lado_riv = "visitante" if favorito_es_local else "local"
+    n_fav, sq_fav = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_fav)
+    n_riv, sq_riv = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_riv)
+    dominancia_pct, z = momentum.z_score_dominancia(
+        momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_fav),
+        momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_riv),
+        n_fav, n_riv, sq_fav, sq_riv,
+    )
+
+    if z < UMBRAL_Z_FAV_NO_GANA:
+        return None
+
+    equipo_fav = partido['local'] if favorito_es_local else partido['visitante']
+    tiros_fav = _to_float(snap_actual[f"stats_{lado_fav}"].get("shotsOnTarget", 0), 0)
+    tiros_riv = _to_float(snap_actual[f"stats_{lado_riv}"].get("shotsOnTarget", 0), 0)
+    posesion_fav = _to_float(snap_actual[f"stats_{lado_fav}"].get("possessionPct", 50), 50)
+
+    if diferencia == 0:
+        texto_score = "Empate"
+    else:
+        texto_score = f"Perdiendo {gl}-{gv}"
+
+    conf = momentum.etiqueta_confianza(z)
+    nivel = f"{conf} | IDV: {_nivel_idv_basico(z)}"
+    texto = (
+        f"\U0001F526 FAVORITO DOMINA\n"
+        f"{equipo_fav} {texto_score}\n"
+        f"z: {z:.1f} | Tiros: {tiros_fav}-{tiros_riv}\n"
+        f"Posesi\u00f3n: {posesion_fav:.0f}%\n"
+        f"Cuota pre: {cuota_fav:.2f} -> en vivo deber\u00eda bajar"
+    )
+    return "fav_domina_no_gana", texto
+
+
+def _evaluar_no_favorito_domina(partido, snap_actual, historial, minuto_int):
+    """Detecta cuando el no-favorito domina estadisticamente.
+    Significa que el mercado se equivoco, el 'perdedor' esta jugando mejor."""
+    cuota_local = partido.get("cuota_local_inicial")
+    cuota_visitante = partido.get("cuota_visitante_inicial")
+    if not cuota_local or not cuota_visitante or cuota_local <= 0 or cuota_visitante <= 0:
+        return None
+
+    favorito_es_local = partido["favorito_es_local"]
+    gl, gv = snap_actual["goles_local"], snap_actual["goles_visitante"]
+
+    if favorito_es_local:
+        cuota_no_fav = cuota_visitante
+        lado_no_fav = "visitante"
+        lado_fav = "local"
+    else:
+        cuota_no_fav = cuota_local
+        lado_no_fav = "local"
+        lado_fav = "visitante"
+
+    if cuota_no_fav <= UMBRAL_CUOTA_FAVORITO:
+        return None
+    if minuto_int < MINUTOS_MINIMOS_VALOR:
+        return None
+
+    n_no_fav, sq_no_fav = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_no_fav)
+    n_fav, sq_fav = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_fav)
+    dominancia_pct, z = momentum.z_score_dominancia(
+        momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_no_fav),
+        momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_fav),
+        n_no_fav, n_fav, sq_no_fav, sq_fav,
+    )
+
+    if z < UMBRAL_Z_NO_FAV_DOMINA:
+        return None
+
+    equipo_no_fav = partido['local'] if not favorito_es_local else partido['visitante']
+    tiros_no_fav = _to_float(snap_actual[f"stats_{lado_no_fav}"].get("shotsOnTarget", 0), 0)
+    tiros_fav = _to_float(snap_actual[f"stats_{lado_fav}"].get("shotsOnTarget", 0), 0)
+    posesion_no_fav = _to_float(snap_actual[f"stats_{lado_no_fav}"].get("possessionPct", 50), 50)
+
+    gl_no_fav = gv if not favorito_es_local else gl
+    gl_fav = gl if not favorito_es_local else gv
+
+    conf = momentum.etiqueta_confianza(z)
+    nivel = f"{conf} | IDV: {_nivel_idv_basico(z)}"
+    texto = (
+        f"\U0001F4CA MERCADO SE EQUIVOCO\n"
+        f"{equipo_no_fav} domina (cuota {cuota_no_fav:.2f})\n"
+        f"z: {z:.1f} | Tiros: {tiros_no_fav}-{tiros_fav}\n"
+        f"Posesi\u00f3n: {posesion_no_fav:.0f}%\n"
+        f"Marcador: {gl}-{gv}"
+    )
+    return "no_fav_domina", texto
+
+
+def _nivel_idv_basico(z):
+    """Nivel IDV basico para alertas de valor (sin calcular IDV completo)."""
+    z_abs = abs(z)
+    if z_abs >= 3:
+        return "ALTO"
+    elif z_abs >= 2:
+        return "MEDIO"
+    else:
+        return "BAJO"
 
 
 def _calcular_momentum_equipo(equipo, historial_snapshots, favorito_es_local):
@@ -580,6 +719,18 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
             tipo_idv, texto_idv = _mensaje_idv(datos_idv, prioridad)
             if tipo_idv:
                 return [(tipo_idv, texto_idv)]
+
+    # --- Favorito domina pero no gana (valor en cuotas en vivo) ---
+    if minuto_int >= MINUTOS_MINIMOS_VALOR and minuto_int < MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
+        resultado_fav = _evaluar_fav_domina_no_gana(partido, snap_actual, historial, minuto_int)
+        if resultado_fav and not _ya_se_envio_reciente(partido, resultado_fav[0], minuto_int, ventana=30):
+            return [resultado_fav]
+
+    # --- No-favorito domina (mercado se equivoco) ---
+    if minuto_int >= MINUTOS_MINIMOS_VALOR and minuto_int < MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
+        resultado_no_fav = _evaluar_no_favorito_domina(partido, snap_actual, historial, minuto_int)
+        if resultado_no_fav and not _ya_se_envio_reciente(partido, resultado_no_fav[0], minuto_int, ventana=30):
+            return [resultado_no_fav]
 
     # --- Chequeo "siguen empatados" (red de seguridad por tiempo) ---
     resultado_chequeo = _evaluar_chequeo_empate(partido, minuto_int, snap_actual, historial)
