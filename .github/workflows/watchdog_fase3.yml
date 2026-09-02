@@ -1,0 +1,60 @@
+name: Watchdog Fase 3
+
+# Verifica cada 30 min que Fase 3 esté corriendo correctamente.
+# Si el heartbeat (.fase3_heartbeat) tiene más de 10 min de antigüedad
+# y hay partidos en vivo, re-dispara Fase 3.
+on:
+  schedule:
+    - cron: "15,45 * * * *"   # Cada 30 min en :15 y :45
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Verificar heartbeat y re-disparar Fase 3 si es necesario
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          python -c "
+          import os, time
+          from pathlib import Path
+
+          heartbeat = Path('data/.fase3_heartbeat')
+          partidos = Path('data/partidos_hoy.json')
+
+          if not partidos.exists():
+              print('No hay partidos_hoy.json — nada que vigilar.')
+              exit(0)
+
+          if not heartbeat.exists():
+              print('No hay heartbeat — Fase 3 nunca corrió hoy. Re-disparando...')
+              exit(1)
+
+          antiguedad = time.time() - heartbeat.stat().st_mtime
+          print(f'Heartbeat tiene {antiguedad/60:.1f} min.')
+
+          if antiguedad > 600:  # 10 min
+              print('Heartbeat stale (>10 min) — re-disparando Fase 3...')
+              exit(1)
+
+          print('Fase 3 OK.')
+          "
+
+      - name: Re-disparar Fase 3
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run fase3_vigilancia.yml
