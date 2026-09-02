@@ -131,3 +131,123 @@ def obtener_favoritos_google(hoy=None):
     respuesta = requests.get(URL_EXPORTACION, timeout=TIMEOUT, headers={"User-Agent": "alertas-favoritos/1.0"})
     respuesta.raise_for_status()
     return interpretar_csv(respuesta.content.decode("utf-8-sig"), hoy=hoy)
+
+
+# ---------------------------------------------------------------------------
+# Hoja2: resultados históricos del día anterior
+# ---------------------------------------------------------------------------
+
+_HOJA2_URL_EXPORT = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&sheet=Hoja2"
+
+
+def _parsear_resultado(texto):
+    """Interpreta la columna Resultado de Hoja2.
+
+    Devuelve (resultado_str, acierto) donde:
+      resultado_str = "LOCAL", "VISITANTE", "EMPATE", "DC LOCAL", "DC VISITANTE", "-" o ""
+      acierto = True / False / None (True si tiene ✓, False si tiene ✗, None si no tiene símbolo)
+    """
+    texto = str(texto or "").strip()
+    if not texto or texto == "-":
+        return ("EMPATE" if texto == "-" else "", None)
+    acierto = None
+    if "\u2713" in texto or "\u2714" in texto:   # ✓ or ✔
+        acierto = True
+    elif "\u2717" in texto or "\u2718" in texto or "\u274c" in texto:  # ✗ or ✘ or ❌
+        acierto = False
+    limpio = texto.replace("\u2713", "").replace("\u2714", "").replace("\u2717", "").replace("\u2718", "").replace("\u274c", "").strip()
+    return (limpio if limpio else texto, acierto)
+
+
+def obtener_resultados_hoja2(fecha_str=None):
+    """Lee Hoja2 y devuelve resultados para una fecha dada (YYYY-MM-DD).
+
+    Cada dict tiene: pais, liga, fecha, hora, local, cuota_local,
+    cuota_empate, cuota_visitante, visitante, pronostico, confianza,
+    prioridad, fixture_id, resultado, acierto.
+    """
+    import requests
+    from datetime import datetime
+
+    resp = requests.get(_HOJA2_URL_EXPORT, timeout=TIMEOUT, headers={"User-Agent": "alertas-favoritos/1.0"})
+    resp.raise_for_status()
+    contenido = resp.content.decode("utf-8-sig")
+
+    try:
+        dialecto = csv.Sniffer().sniff(contenido[:4096], delimiters=",;\t")
+    except csv.Error:
+        dialecto = csv.excel
+    filas = list(csv.DictReader(io.StringIO(contenido), dialect=dialecto))
+    if not filas:
+        return []
+
+    encabezados = list(filas[0].keys())
+    col_map = {h.lower().strip(): h for h in encabezados}
+
+    # Mapear columnas conocidas
+    def _col(*candidatos):
+        for c in candidatos:
+            if c in col_map:
+                return col_map[c]
+        return None
+
+    col_fecha = _col("fecha", "date", "dia")
+    col_local = _col("local", "home")
+    col_visitante = _col("visitante", "away")
+    col_pronostico = _col("pronostico", "pronóstico", "favorito", "pick")
+    col_resultado = _col("resultado")
+    col_pais = _col("país", "pais", "country")
+    col_liga = _col("liga", "league", "competition")
+    col_hora = _col("hora", "hour", "hora (ecuador)")
+    col_cuota_local = _col("cuota 1", "cuota local")
+    col_cuota_empate = _col("cuota x", "cuota empate")
+    col_cuota_visitante = _col("cuota 2", "cuota visitante")
+    col_confianza = _col("confianza", "confidence")
+    col_prioridad = _col("prioridad", "priority")
+    col_fixture = _col("fixture id", "fixture")
+
+    def _num(valor):
+        try:
+            return float(str(valor).strip().replace(",", "."))
+        except (TypeError, ValueError):
+            return None
+
+    resultados = []
+    for fila in filas:
+        fecha_raw = str(fila.get(col_fecha, "")).strip() if col_fecha else ""
+        if not fecha_raw:
+            continue
+        # Normalizar fecha a YYYY-MM-DD
+        fecha_norm = None
+        for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y", "%m/%d/%Y"):
+            try:
+                fecha_norm = datetime.strptime(fecha_raw, fmt).strftime("%Y-%m-%d")
+                break
+            except ValueError:
+                pass
+        if fecha_norm is None:
+            continue
+        if fecha_str and fecha_norm != fecha_str:
+            continue
+
+        resultado_raw = str(fila.get(col_resultado, "")).strip() if col_resultado else ""
+        resultado, acierto = _parsear_resultado(resultado_raw)
+
+        resultados.append({
+            "pais": str(fila.get(col_pais, "")).strip() if col_pais else "",
+            "liga": str(fila.get(col_liga, "")).strip() if col_liga else "",
+            "fecha": fecha_norm,
+            "hora": str(fila.get(col_hora, "")).strip() if col_hora else "",
+            "local": str(fila.get(col_local, "")).strip() if col_local else "",
+            "cuota_local": _num(fila.get(col_cuota_local)) if col_cuota_local else None,
+            "cuota_empate": _num(fila.get(col_cuota_empate)) if col_cuota_empate else None,
+            "cuota_visitante": _num(fila.get(col_cuota_visitante)) if col_cuota_visitante else None,
+            "visitante": str(fila.get(col_visitante, "")).strip() if col_visitante else "",
+            "pronostico": str(fila.get(col_pronostico, "")).strip() if col_pronostico else "",
+            "confianza": str(fila.get(col_confianza, "")).strip() if col_confianza else "",
+            "prioridad": str(fila.get(col_prioridad, "")).strip() if col_prioridad else "",
+            "fixture_id": str(fila.get(col_fixture, "")).strip() if col_fixture else "",
+            "resultado": resultado,
+            "acierto": acierto,
+        })
+    return resultados

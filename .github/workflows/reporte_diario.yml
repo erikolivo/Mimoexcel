@@ -1,9 +1,9 @@
-name: Reporte diario (6am)
+name: Reporte diario (8:30am)
 
-# Local (UTC-5): reintenta cada 15 min entre las 06:00 y las 07:00.
+# Local (UTC-5): 08:30 y 08:45.
 on:
   schedule:
-    - cron: "30,35,40,45,49 11 * * *"   # 11:30-11:49 UTC = 06:30-06:49 local
+    - cron: "30,45 13 * * *"   # 13:30-13:45 UTC = 08:30-08:45 local
   workflow_dispatch: {}
 
 permissions:
@@ -22,16 +22,8 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Enviar reporte de ayer
+      - name: Enviar reporte de ayer (Hoja2)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python reporte_diario.py
-
-      - name: Guardar cambios en data/
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A data/
-          git diff --staged --quiet || git commit -m "Reporte diario enviado $(date -u +%Y-%m-%d)"
-          git push
