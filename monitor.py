@@ -410,7 +410,7 @@ def _evaluar_dominancia_general(partido, minuto_int, diferencia):
     lado_rival = "visitante" if partido["favorito_es_local"] else "local"
     historial = partido.get("historial_snapshots", [])
 
-    presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
+    presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
     z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
 
     umbral_favorito = _umbral_efectivo_favorito(partido, diferencia)
@@ -430,7 +430,7 @@ def _evaluar_dominancia_1er_tiempo(partido, minuto_int):
     lado_rival = "visitante" if partido["favorito_es_local"] else "local"
     historial = partido.get("historial_snapshots", [])
 
-    presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
+    presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
     z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
 
     if z >= UMBRAL_Z_1ER_TIEMPO:
