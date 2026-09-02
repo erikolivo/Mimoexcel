@@ -48,9 +48,21 @@ jobs:
         run: |
           FIN=$(( $(date +%s) + 330*60 ))
           while [ "$(date +%s)" -lt "$FIN" ]; do
-            python monitor.py
-            if [ $? -ne 0 ]; then
-              echo "[AVISO] monitor.py fallo — reintentando seleccion si falta el archivo..."
+            # Reintentar hasta 3 veces si monitor.py falla
+            INTENTOS=0
+            HUBO_EXITO=false
+            while [ "$INTENTOS" -lt 3 ]; do
+              python monitor.py
+              if [ $? -eq 0 ]; then
+                HUBO_EXITO=true
+                break
+              fi
+              INTENTOS=$((INTENTOS + 1))
+              echo "[AVISO] monitor.py fallo (intento $INTENTOS/3) — reintentando..."
+              sleep 10
+            done
+            if [ "$HUBO_EXITO" = false ]; then
+              echo "[ERROR] monitor.py fallo 3 veces seguidas. Verificando partidos_hoy.json..."
               if [ ! -f data/partidos_hoy.json ]; then
                 python seleccionar_partidos.py --forzar
               fi

@@ -902,6 +902,8 @@ def _vigilar_interno():
     if hubo_cambios:
         _guardar(datos)
 
+    Path(DATA_DIR, ".fase3_heartbeat").write_text(datetime.datetime.now(datetime.timezone.utc).isoformat(), encoding="utf-8")
+
 
 if __name__ == "__main__":
     vigilar()
