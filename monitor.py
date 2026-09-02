@@ -66,10 +66,10 @@ CORONA_FAVORITO = "\U0001F451"  # 👑
 # matematica, sin necesitar un piso aparte.
 # =====================================================================
 
-UMBRAL_Z_ALERTA = 1.95                              # z-score para Gana Fav (empate o perdiendo <2 goles)
-UMBRAL_Z_CIERRE = 2.7                            # subido a pedido explicito, mas estricto
-UMBRAL_Z_RIVAL = 2.1                             # rival domina: z-score minimo para alertar
-UMBRAL_Z_1ER_TIEMPO = 1.5                               # z-score para alerta de primer tiempo
+UMBRAL_Z_ALERTA = 1.65                              # z-score para Gana Fav (empate o perdiendo <2 goles) — bajado con Kish
+UMBRAL_Z_CIERRE = 2.3                            # bajado con Kish (antes 2.7)
+UMBRAL_Z_RIVAL = 1.8                             # rival domina: z-score minimo — bajado con Kish
+UMBRAL_Z_1ER_TIEMPO = 1.3                               # z-score para alerta de primer tiempo — bajado con Kish
 MINUTO_INICIO_1ER_TIEMPO = 15
 MINUTO_FIN_1ER_TIEMPO = 40
 
@@ -121,18 +121,20 @@ def _calcular_idv(partido, snap_actual, historial, minuto_int):
     ms = abs(prob_real_local - prob_esperada_local)
 
     if favorito_es_local:
+        n_local, sq_local = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "local")
+        n_visitante, sq_visitante = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "visitante")
         dominancia_pct, z = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "local"),
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "visitante"),
-            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "local"),
-            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "visitante"),
+            n_local, n_visitante, sq_local, sq_visitante,
         )
     else:
+        n_local, sq_local = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "local")
+        n_visitante, sq_visitante = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "visitante")
         dominancia_pct, z = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "visitante"),
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, "local"),
-            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "visitante"),
-            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, "local"),
+            n_visitante, n_local, sq_visitante, sq_local,
         )
     sd = min(abs(z) / 3, 1)
 
@@ -223,9 +225,9 @@ INCREMENTO_POR_ESCALON = 0.4
 # MEDIA: z-score >= 2.0
 # BAJA: z-score >= 2.3
 UMBRAL_Z_POR_PRIORIDAD = {
-    "ALTA": 1.7,
-    "MEDIA": 2.0,
-    "BAJA": 2.3,
+    "ALTA": 1.4,    # bajado con Kish
+    "MEDIA": 1.7,   # bajado con Kish
+    "BAJA": 2.0,    # bajado con Kish
 }
 
 
@@ -390,14 +392,12 @@ def _ya_se_envio_reciente(partido, tipo, minuto_actual, ventana=10):
 
 
 def _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival):
-    """Calcula, para el favorito y el rival, la presion ponderada por
-    tiempo (decide quien domina) y el conteo de eventos ponderado por
-    tiempo (decide que tan confiable es esa lectura). Ver momentum.py."""
+    """Calcula presion ponderada y eventos ponderados (con suma de pesos^2 para Kish)."""
     presion_fav = momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_favorito)
     presion_riv = momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_rival)
-    n_fav = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_favorito)
-    n_riv = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_rival)
-    return presion_fav, presion_riv, n_fav, n_riv
+    n_fav, sq_fav = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_favorito)
+    n_riv, sq_riv = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_rival)
+    return presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv
 
 
 def _evaluar_dominancia_general(partido, minuto_int, diferencia):
@@ -499,11 +499,12 @@ def _evaluar_chequeo_empate(partido, minuto_int, snap_actual, historial):
             return None
         
         # Calcular z-score minimo
+        n_fav_ev, sq_fav_ev = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_favorito)
+        n_riv_ev, sq_riv_ev = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_rival)
         z_local, dominancia_fav = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_favorito),
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_rival),
-            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_favorito),
-            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_rival),
+            n_fav_ev, n_riv_ev, sq_fav_ev, sq_riv_ev,
         )
         if abs(z_local) < 0.7:
             return None
@@ -587,17 +588,19 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
 
     # --- Cambio de Momentum ---
     if minuto_int >=15 and len(historial) >=3:
+        n_fav_cm, sq_fav_cm = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_favorito)
+        n_riv_cm, sq_riv_cm = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_rival)
         z_actual = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_favorito),
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_rival),
-            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_favorito),
-            momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_rival),
+            n_fav_cm, n_riv_cm, sq_fav_cm, sq_riv_cm,
         )[0]
+        n_fav_cm2, sq_fav_cm2 = momentum.eventos_ponderados_por_tiempo(historial, max(0, minuto_int-5), lado_favorito)
+        n_riv_cm2, sq_riv_cm2 = momentum.eventos_ponderados_por_tiempo(historial, max(0, minuto_int-5), lado_rival)
         z_anterior = momentum.z_score_dominancia(
             momentum.presion_ponderada_por_tiempo(historial, max(0, minuto_int-5), lado_favorito),
             momentum.presion_ponderada_por_tiempo(historial, max(0, minuto_int-5), lado_rival),
-            momentum.eventos_ponderados_por_tiempo(historial, max(0, minuto_int-5), lado_favorito),
-            momentum.eventos_ponderados_por_tiempo(historial, max(0, minuto_int-5), lado_rival),
+            n_fav_cm2, n_riv_cm2, sq_fav_cm2, sq_riv_cm2,
         )[0]
         cambio = abs(z_actual - z_anterior)
         if cambio >=1.5 and not _ya_se_envio_reciente(partido, "cambio_momentum", minuto_int, ventana=10):
@@ -885,8 +888,8 @@ def _vigilar_interno():
         minuto_int = momentum._minuto_a_entero(box["minuto"]) or 0
         
         if minuto_int >= 5 and len(historial) >= 2:
-            presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
-            z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
+            presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
+            z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv)
         
         alertas = _evaluar_alertas(partido, snap_actual, snap_anterior, box["minuto"])
 

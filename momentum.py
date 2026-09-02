@@ -199,40 +199,46 @@ def presion_ponderada_por_tiempo(historial_snapshots, minuto_actual, lado):
 
 
 def eventos_ponderados_por_tiempo(historial_snapshots, minuto_actual, lado):
-    """Conteo CRUDO de eventos (tiros + corners, SIN el peso x3/x0.8/x1/
-    x0.5 por tipo -- solo con el peso por tiempo). Se usa como tamano
-    de muestra (n) para el z-score de confianza -- si se usara la
-    presion YA ponderada por tipo como 'n', un solo tiro a puerta (peso
-    3) pareceria mas evidencia de la que realmente es, solo por su
-    peso, no por su cantidad. Aqui cada evento cuenta 1, sin importar
-    el tipo -- lo unico que decae es que tan viejo es."""
+    """Conteo ponderado de eventos y suma de pesos al cuadrado (para Kish).
+    Retorna (n_ponderado, suma_pesos_cuadrado).
+    n_ponderado: cada evento cuenta 1, decaimiento por tiempo.
+    suma_pesos_cuadrado: suma de (peso_tipo * peso_tiempo)^2 por evento,
+    necesaria para calcular n_efectivo con la formula de Kish."""
     total = 0.0
+    suma_sq = 0.0
     minuto_actual_int = _minuto_a_entero(minuto_actual)
     if minuto_actual_int is None or not historial_snapshots:
-        return total
+        return total, suma_sq
     clave = "stats_local" if lado == "local" else "stats_visitante"
     for i in range(1, len(historial_snapshots)):
         stats_prev = historial_snapshots[i - 1].get(clave, {})
         stats_actual_i = historial_snapshots[i].get(clave, {})
-        n_intervalo = _delta_stat(stats_actual_i, stats_prev, "totalShots") + \
-                      _delta_stat(stats_actual_i, stats_prev, "wonCorners")
         m = _minuto_a_entero(historial_snapshots[i].get("minuto"))
         if m is None:
             continue
         antiguedad = minuto_actual_int - m
-        total += n_intervalo * peso_decaimiento(antiguedad)
-    return total
+        w_tiempo = peso_decaimiento(antiguedad)
+
+        for nombre, peso_tipo in [("totalShots", PESO_TIRO_NO_PUERTA),
+                                   ("shotsOnTarget", PESO_TIRO_PUERTA),
+                                   ("wonCorners", PESO_CORNER),
+                                   ("blockedShots", PESO_TIRO_BLOQUEADO)]:
+            conteo = _delta_stat(stats_actual_i, stats_prev, nombre)
+            if conteo > 0:
+                w = peso_tipo * w_tiempo
+                total += conteo * w_tiempo  # conteo * 1 * w_tiempo (cada evento vale 1)
+                suma_sq += conteo * w * w
+    return total, suma_sq
 
 
 def z_score_dominancia(presion_ponderada_lado_a, presion_ponderada_lado_b,
-                        n_ponderado_lado_a, n_ponderado_lado_b):
+                        n_ponderado_lado_a, n_ponderado_lado_b,
+                        suma_sq_lado_a=0.0, suma_sq_lado_b=0.0):
     """Que tan lejos esta el reparto de PRESION (ponderada por tipo de
     evento) de un 50/50 parejo, en desviaciones estandar -- usando el
-    conteo CRUDO de eventos (sin peso por tipo, solo por tiempo) como
-    tamano de muestra (n) para el error estandar. Con pocos eventos,
-    hace falta un % de dominancia mas extremo para alcanzar el mismo
-    z-score que con muchos -- sin necesitar un piso de volumen fijo
-    inventado a mano.
+    tamano de muestra EFECTIVO (formula de Kish) para el error estandar,
+    que corrige la sobreestimacion de confianza cuando los pesos de
+    evento varian.
 
     Devuelve (z, dominancia_lado_a). z positivo = domina lado_a;
     z negativo = domina lado_b."""
@@ -241,10 +247,15 @@ def z_score_dominancia(presion_ponderada_lado_a, presion_ponderada_lado_b,
         return 0.0, 0.5
     dominancia_a = presion_ponderada_lado_a / total_presion
 
-    n_total = n_ponderado_lado_a + n_ponderado_lado_b
-    if n_total <= 0:
+    # Kish: n_efectivo = (suma_pesos)^2 / suma(pesos^2)
+    suma_sq_total = suma_sq_lado_a + suma_sq_lado_b
+    if suma_sq_total <= 0:
         return 0.0, dominancia_a
-    error_estandar = math.sqrt(0.25 / n_total)
+
+    n_efectivo = (total_presion ** 2) / suma_sq_total
+    n_efectivo = max(n_efectivo, 1.0)  # piso para evitar division por cero
+
+    error_estandar = math.sqrt(0.25 / n_efectivo)
     if error_estandar <= 0:
         return 0.0, dominancia_a
     z = (dominancia_a - 0.5) / error_estandar
