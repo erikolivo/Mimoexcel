@@ -43,5 +43,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A data/
-          git diff --staged --quiet || git commit -m "Fase 1: seleccion de partidos $(date -u +%Y-%m-%d)"
-          git push
+          git diff --staged --quiet && exit 0
+          git commit -m "Fase 1: seleccion de partidos $(date -u +%Y-%m-%d)"
+          for i in 1 2 3 4 5; do
+            git push && exit 0
+            echo "[AVISO] push rechazado, intento $i/5 -- reintentando con rebase..."
+            git pull --rebase
+            sleep 3
+          done
+          echo "[ERROR] no se pudo pushear tras 5 intentos."
+          exit 1
