@@ -215,7 +215,7 @@ def _evaluar_fav_domina_no_gana(partido, snap_actual, historial, minuto_int):
     lado_riv = "visitante" if favorito_es_local else "local"
     n_fav, sq_fav = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_fav)
     n_riv, sq_riv = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_riv)
-    dominancia_pct, z = momentum.z_score_dominancia(
+    z, dominancia_fav = momentum.z_score_dominancia(
         momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_fav),
         momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_riv),
         n_fav, n_riv, sq_fav, sq_riv,
@@ -273,7 +273,7 @@ def _evaluar_no_favorito_domina(partido, snap_actual, historial, minuto_int):
 
     n_no_fav, sq_no_fav = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_no_fav)
     n_fav, sq_fav = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_fav)
-    dominancia_pct, z = momentum.z_score_dominancia(
+    z, dominancia_fav = momentum.z_score_dominancia(
         momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_no_fav),
         momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_fav),
         n_no_fav, n_fav, sq_no_fav, sq_fav,
@@ -550,7 +550,7 @@ def _evaluar_dominancia_general(partido, minuto_int, diferencia):
     historial = partido.get("historial_snapshots", [])
 
     presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
-    z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
+    z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv)
 
     umbral_favorito = _umbral_efectivo_favorito(partido, diferencia)
     if z >= umbral_favorito:
@@ -570,7 +570,7 @@ def _evaluar_dominancia_1er_tiempo(partido, minuto_int):
     historial = partido.get("historial_snapshots", [])
 
     presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
-    z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
+    z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv)
 
     if z >= UMBRAL_Z_1ER_TIEMPO:
         return dominancia_fav, z
