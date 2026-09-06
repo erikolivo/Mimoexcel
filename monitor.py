@@ -941,11 +941,29 @@ def _mensaje_partido_finalizado(partido, gh, gv):
 
 
 def vigilar():
+    import signal as _signal
+    import time as _time
+
+    _INICIO = _time.time()
+    _MAX_DURACION = 120  # segundos maximos por ejecucion
+
+    def _timeout_handler(signum, frame):
+        raise TimeoutError("monitor.py excedio tiempo maximo")
+
+    old_handler = _signal.getsignal(_signal.SIGALRM)
+    _signal.signal(_signal.SIGALRM, _timeout_handler)
+    _signal.alarm(_MAX_DURACION)
+
     try:
         _vigilar_interno()
+    except TimeoutError:
+        print(f"[TIMEOUT] monitor.py tardo mas de {_MAX_DURACION}s, cortando ciclo.")
     except Exception:
         print("[ERROR] Excepcion no capturada en vigilar():")
         traceback.print_exc()
+    finally:
+        _signal.alarm(0)
+        _signal.signal(_signal.SIGALRM, old_handler)
 
 
 def _vigilar_interno():
