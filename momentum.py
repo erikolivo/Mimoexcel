@@ -53,6 +53,20 @@ ZONA_PARIDAD_BAJA = 0.35
 ZONA_PARIDAD_ALTA = 0.65
 
 
+def factor_contexto_goles(diferencia):
+    """Ajusta el peso de los eventos segun el contexto del marcador.
+    Un tiro cuando esta 0-0 (diferencia 0) es mas amenazante que uno
+    cuando ya vas 3-0. Inversamente, un tiro de quien va perdiendo
+    por mucho ya no genera la misma presion."""
+    diff = abs(diferencia)
+    if diff <= 1:
+        return 1.3
+    elif diff == 2:
+        return 1.0
+    else:
+        return 0.7
+
+
 def _minuto_a_entero(minuto):
     try:
         return int(str(minuto).rstrip("'").split("+")[0])
@@ -124,8 +138,13 @@ def calcular_presion(snap_actual, snap_anterior, lado, xg_disponible=False):
     corners = _delta_stat(stats_actual, stats_anterior, "wonCorners")
     posesion = _stat(stats_actual, "possessionPct")
 
-    score = (tiros_puerta * PESO_TIRO_PUERTA) + (tiros_no_puerta * PESO_TIRO_NO_PUERTA) + \
-            (corners * PESO_CORNER) + (tiros_bloqueados * PESO_TIRO_BLOQUEADO)
+    gl = snap_actual.get("goles_local", 0) or 0
+    gv = snap_actual.get("goles_visitante", 0) or 0
+    diff_goles = gl - gv if lado == "local" else gv - gl
+    factor_gc = factor_contexto_goles(diff_goles)
+
+    score = (tiros_puerta * PESO_TIRO_PUERTA + tiros_no_puerta * PESO_TIRO_NO_PUERTA +
+             corners * PESO_CORNER + tiros_bloqueados * PESO_TIRO_BLOQUEADO) * factor_gc
 
     detalle = {
         "tiros_puerta": tiros_puerta, "tiros_no_puerta": tiros_no_puerta,
