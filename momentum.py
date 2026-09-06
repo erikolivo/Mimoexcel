@@ -29,7 +29,7 @@ inventa un valor sin evidencia real.
 import math
 
 # --- Pesos de presion (simplificados: ya no hay tiros dentro/fuera del area) ---
-PESO_TIRO_PUERTA = 3
+PESO_TIRO_PUERTA = 3.5
 PESO_TIRO_NO_PUERTA = 0.8    # antes: PESO_TIRO_AREA (2) + PESO_TIRO_FUERA_AREA (0.5), promediado
 PESO_CORNER = 1
 PESO_TIRO_BLOQUEADO = 0.5     # NUEVO -- ESPN lo da (blockedShots), no existia antes
