@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-06",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Kashima Antlers vs Urawa Red Diamonds",
@@ -2918,5 +2917,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 108
 }
