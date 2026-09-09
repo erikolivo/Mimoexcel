@@ -164,7 +164,7 @@
       "fila_fuente": 12701,
       "hora_inicio": "2026-09-08T18:00Z",
       "fixture_id": "401913075",
-      "liga_slug": "all",
+      "liga_slug": "eng.trophy",
       "home_id": "279",
       "away_id": "335",
       "kickoff_utc": "2026-09-08T18:00Z",
@@ -172,7 +172,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "England",
+      "liga_nombre": "EFL Trophy"
     },
     {
       "partido": "Exeter City vs Tottenham Hotspur U21",
@@ -191,7 +193,7 @@
       "fila_fuente": 12702,
       "hora_inicio": "2026-09-08T18:00Z",
       "fixture_id": "401906381",
-      "liga_slug": "all",
+      "liga_slug": "eng.trophy",
       "home_id": "324",
       "away_id": "18787",
       "kickoff_utc": "2026-09-08T18:00Z",
@@ -199,7 +201,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "England",
+      "liga_nombre": "EFL Trophy"
     },
     {
       "partido": "Al Ittihad vs Al Fayha",
@@ -421,7 +425,7 @@
       "fila_fuente": 12703,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401914267",
-      "liga_slug": "all",
+      "liga_slug": "eng.league_cup",
       "home_id": "349",
       "away_id": "314",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -429,7 +433,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "England",
+      "liga_nombre": "Carabao Cup"
     },
     {
       "partido": "Crystal Palace vs Middlesbrough",
@@ -448,7 +454,7 @@
       "fila_fuente": 12704,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401914269",
-      "liga_slug": "all",
+      "liga_slug": "eng.league_cup",
       "home_id": "384",
       "away_id": "369",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -456,7 +462,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "England",
+      "liga_nombre": "Carabao Cup"
     },
     {
       "partido": "Leyton Orient vs Bradford City",
@@ -475,7 +483,7 @@
       "fila_fuente": 12705,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401914254",
-      "liga_slug": "all",
+      "liga_slug": "eng.league_cup",
       "home_id": "309",
       "away_id": "387",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -483,7 +491,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "England",
+      "liga_nombre": "Carabao Cup"
     },
     {
       "partido": "Sunderland vs Hull City",
@@ -502,7 +512,7 @@
       "fila_fuente": 12706,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401914259",
-      "liga_slug": "all",
+      "liga_slug": "eng.league_cup",
       "home_id": "366",
       "away_id": "306",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -510,7 +520,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "England",
+      "liga_nombre": "Carabao Cup"
     },
     {
       "partido": "Hitchin Town vs Biggleswade Town",
@@ -537,7 +549,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "",
+      "liga_nombre": "English FA Cup Qualifying, First Round Qualifying"
     },
     {
       "partido": "Needham Market vs Stanway Rovers FC",
@@ -564,7 +578,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "",
+      "liga_nombre": "English FA Cup Qualifying, First Round Qualifying"
     },
     {
       "partido": "Worcester City vs Knowle",
@@ -591,7 +607,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "",
+      "liga_nombre": "English FA Cup Qualifying, First Round Qualifying"
     },
     {
       "partido": "Annan Athletic vs Motherwell B",
@@ -610,7 +628,7 @@
       "fila_fuente": 13043,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401896331",
-      "liga_slug": "all",
+      "liga_slug": "sco.challenge",
       "home_id": "7166",
       "away_id": "19307",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -618,7 +636,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "Scotland",
+      "liga_nombre": "SPFL Challenge Cup"
     },
     {
       "partido": "Banks O'Dee vs Forfar Athletic",
@@ -637,7 +657,7 @@
       "fila_fuente": 13044,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401896330",
-      "liga_slug": "all",
+      "liga_slug": "sco.challenge",
       "home_id": "9980",
       "away_id": "408",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -645,7 +665,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "Scotland",
+      "liga_nombre": "SPFL Challenge Cup"
     },
     {
       "partido": "Berwick Rangers vs Hibernian B",
@@ -664,7 +686,7 @@
       "fila_fuente": 13045,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401896329",
-      "liga_slug": "all",
+      "liga_slug": "sco.challenge",
       "home_id": "412",
       "away_id": "19306",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -672,7 +694,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "Scotland",
+      "liga_nombre": "SPFL Challenge Cup"
     },
     {
       "partido": "Clyde vs East Fife",
@@ -691,7 +715,7 @@
       "fila_fuente": 13046,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401896327",
-      "liga_slug": "all",
+      "liga_slug": "sco.challenge",
       "home_id": "255",
       "away_id": "421",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -699,7 +723,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "Scotland",
+      "liga_nombre": "SPFL Challenge Cup"
     },
     {
       "partido": "Clydebank vs Alloa Athletic",
@@ -718,7 +744,7 @@
       "fila_fuente": 13047,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401896328",
-      "liga_slug": "all",
+      "liga_slug": "sco.challenge",
       "home_id": "404",
       "away_id": "403",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -726,7 +752,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "Scotland",
+      "liga_nombre": "SPFL Challenge Cup"
     },
     {
       "partido": "Cove Rangers vs Dumbarton",
@@ -745,7 +773,7 @@
       "fila_fuente": 13048,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401896326",
-      "liga_slug": "all",
+      "liga_slug": "sco.challenge",
       "home_id": "2613",
       "away_id": "415",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -753,7 +781,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "Scotland",
+      "liga_nombre": "SPFL Challenge Cup"
     },
     {
       "partido": "Cowdenbeath vs Kilmarnock B",
@@ -772,7 +802,7 @@
       "fila_fuente": 13049,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401896325",
-      "liga_slug": "all",
+      "liga_slug": "sco.challenge",
       "home_id": "410",
       "away_id": "21579",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -780,7 +810,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "Scotland",
+      "liga_nombre": "SPFL Challenge Cup"
     },
     {
       "partido": "Cumbernauld Colts vs Kelty Hearts",
@@ -799,7 +831,7 @@
       "fila_fuente": 13050,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401896324",
-      "liga_slug": "all",
+      "liga_slug": "sco.challenge",
       "home_id": "18012",
       "away_id": "18018",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -807,7 +839,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "Scotland",
+      "liga_nombre": "SPFL Challenge Cup"
     },
     {
       "partido": "East Kilbride vs Bonnyrigg Rose",
@@ -826,7 +860,7 @@
       "fila_fuente": 13051,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401896323",
-      "liga_slug": "all",
+      "liga_slug": "sco.challenge",
       "home_id": "17582",
       "away_id": "10605",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -834,7 +868,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "Scotland",
+      "liga_nombre": "SPFL Challenge Cup"
     },
     {
       "partido": "Edinburgh City vs Queen of the South",
@@ -853,7 +889,7 @@
       "fila_fuente": 13052,
       "hora_inicio": "2026-09-08T18:45Z",
       "fixture_id": "401896322",
-      "liga_slug": "all",
+      "liga_slug": "sco.challenge",
       "home_id": "2832",
       "away_id": "406",
       "kickoff_utc": "2026-09-08T18:45Z",
@@ -861,7 +897,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "Scotland",
+      "liga_nombre": "SPFL Challenge Cup"
     },
     {
       "partido": "Borussia Dortmund vs Villarreal",
@@ -1025,7 +1063,7 @@
       "fila_fuente": 12707,
       "hora_inicio": "2026-09-08T19:00Z",
       "fixture_id": "401914255",
-      "liga_slug": "all",
+      "liga_slug": "eng.league_cup",
       "home_id": "391",
       "away_id": "361",
       "kickoff_utc": "2026-09-08T19:00Z",
@@ -1033,7 +1071,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "England",
+      "liga_nombre": "Carabao Cup"
     },
     {
       "partido": "Independiente Santa Fe vs Vasco da Gama",
@@ -1089,7 +1129,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "",
+      "liga_nombre": "Copa Bolivia, Group C"
     },
     {
       "partido": "Hartford Athletic vs Colorado Springs Switchbacks FC",
@@ -1116,7 +1158,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "",
+      "liga_nombre": "USL Cup, Semifinals"
     },
     {
       "partido": "Cuiabá vs Athletic",
@@ -1630,7 +1674,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "liga_pais": "",
+      "liga_nombre": "Copa Bolivia, Group D"
     }
   ]
 }
