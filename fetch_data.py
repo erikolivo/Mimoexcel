@@ -375,7 +375,12 @@ def _registrar_ligas_pendientes(fixtures_por_id, fecha_iso):
         registro = {}
         if ruta.exists():
             try:
-                registro = _json.loads(ruta.read_text(encoding="utf-8"))
+                previo = _json.loads(ruta.read_text(encoding="utf-8"))
+                # Se guarda como {"actualizado":..., "ligas":[...]}; se
+                # reindexa por "pais | liga" para acumular conteos.
+                for ent in previo.get("ligas", []):
+                    if isinstance(ent, dict) and ent.get("liga"):
+                        registro[f"{ent.get('pais','')} | {ent.get('liga','')}"] = ent
             except Exception:
                 registro = {}
         hoy = fecha_iso
