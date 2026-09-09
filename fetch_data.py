@@ -332,7 +332,56 @@ def obtener_fixtures_por_fecha(fecha_iso):
 
     print(f"ESPN (lista curada, {len(LIGAS_ESPN)} liga(s) consultada(s)): "
           f"{nuevos_del_respaldo} fixture(s) adicional(es) que el global no traia.")
+    _registrar_ligas_pendientes(fixtures_por_id, fecha_iso)
     return list(fixtures_por_id.values())
+
+
+def _registrar_ligas_pendientes(fixtures_por_id, fecha_iso):
+    """Registro automatico de ligas sin slug (septiembre 2026): los
+    fixtures que solo vinieron del scoreboard global quedan con
+    _liga_slug 'all', que NO sirve para el summary en vivo. Se guardan
+    en data/ligas_pendientes.json (pais, nombre, cuantas veces visto,
+    ejemplo) para revisar y agregar el slug real a LIGAS_ESPN despues.
+    Nunca rompe Fase 1: todo va en try/except."""
+    try:
+        from pathlib import Path
+        import json as _json
+        import datetime as _dt
+        ruta = Path("data/ligas_pendientes.json")
+        registro = {}
+        if ruta.exists():
+            try:
+                registro = _json.loads(ruta.read_text(encoding="utf-8"))
+            except Exception:
+                registro = {}
+        hoy = fecha_iso
+        for f in fixtures_por_id.values():
+            if f.get("_liga_slug") != "all":
+                continue
+            liga = f.get("league", {}) or {}
+            pais = liga.get("country", "") or ""
+            nombre = liga.get("name", "") or ""
+            clave = f"{pais} | {nombre}"
+            try:
+                home = f["teams"]["home"]["name"]
+                away = f["teams"]["away"]["name"]
+                fid = f["fixture"]["id"]
+            except Exception:
+                continue
+            ent = registro.get(clave, {"pais": pais, "liga": nombre, "veces_visto": 0,
+                                       "ejemplo_partido": "", "fixture_id": "", "ultimo_visto": ""})
+            ent["veces_visto"] = ent.get("veces_visto", 0) + 1
+            ent["ultimo_visto"] = hoy
+            if not ent.get("ejemplo_partido"):
+                ent["ejemplo_partido"] = f"{home} vs {away}"
+                ent["fixture_id"] = fid
+            registro[clave] = ent
+        # Top 200 por veces visto, para que el archivo no crezca sin control
+        top = sorted(registro.values(), key=lambda e: e.get("veces_visto", 0), reverse=True)[:200]
+        ruta.write_text(_json.dumps({"actualizado": hoy, "ligas": top}, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"Ligas pendientes de slug: {len(top)} registrada(s) en data/ligas_pendientes.json.")
+    except Exception as e:
+        print(f"[AVISO] No se pudo registrar ligas pendientes: {e}")
 
 
 def extraer_favorito_odds_espn(fixture):

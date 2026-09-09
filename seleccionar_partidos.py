@@ -191,6 +191,7 @@ def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja, confianza_estrellas
         "prioridad": prioridad,
         "fuente_favorito": "Google Sheets", "fila_fuente": fila_hoja,
         "hora_inicio": fixture["fixture"]["date"], "fixture_id": fixture["fixture"]["id"], "liga_slug": fixture.get("_liga_slug"),
+        "liga_pais": fixture.get("league", {}).get("country", ""), "liga_nombre": fixture.get("league", {}).get("name", ""),
         "home_id": local["id"], "away_id": visitante["id"], "kickoff_utc": fixture["fixture"]["date"],
         "resultado_final": None, "acierto": None, "historial_snapshots": [], "alertas_enviadas": [], "diferencia_maxima_alcanzada": 0,
     }
@@ -261,6 +262,9 @@ def seleccionar(forzar=False):
                 if (not previo.get("liga_slug") or previo.get("liga_slug") == "all") \
                         and nuevo.get("liga_slug") not in (None, "", "all"):
                     previo["liga_slug"] = nuevo["liga_slug"]
+                if not previo.get("liga_nombre") and nuevo.get("liga_nombre"):
+                    previo["liga_pais"] = nuevo.get("liga_pais", "")
+                    previo["liga_nombre"] = nuevo.get("liga_nombre", "")
                 fusionados.append(previo)  # conserva historial si ya existia
             nuevos_en_revision = sum(1 for p in seleccionados if p["fixture_id"] not in previos_por_id)
             seleccionados = fusionados
