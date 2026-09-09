@@ -19,12 +19,21 @@ on:
 permissions:
   contents: write
 
+# Un solo runner activo: si el watchdog re-dispara porque el anterior
+# se colgo, el nuevo cancela al viejo en vez de correr en paralelo
+# (dos runners empujando data/ a la vez = conflictos y runs fallidos).
+concurrency:
+  group: fase3-vigilancia
+  cancel-in-progress: true
+
 jobs:
   vigilar:
     runs-on: ubuntu-latest
     timeout-minutes: 340   # 5.5h + margen
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # necesario para pull --rebase en el push periodico
 
       - uses: actions/setup-python@v5
         with:
@@ -46,6 +55,14 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          sincronizar() {
+            git add -A data/
+            git diff --staged --quiet || git commit -m "Fase 3: avance $(date -u +%Y-%m-%dT%H:%M)" || true
+            git pull --rebase --autostash || true
+            git push || true
+          }
           FIN=$(( $(date +%s) + 330*60 ))
           while [ "$(date +%s)" -lt "$FIN" ]; do
             # Reintentar hasta 3 veces si monitor.py falla
@@ -67,13 +84,18 @@ jobs:
                 python seleccionar_partidos.py --forzar
               fi
             fi
+            # Push periodico: si el job muere (timeout, cancel), lo ya
+            # vigilado + heartbeat quedan guardados, no se pierde todo.
+            sincronizar
             sleep 300
           done
 
       - name: Guardar cambios en data/
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A data/
           git diff --staged --quiet || git commit -m "Fase 3: vigilancia en vivo $(date -u +%Y-%m-%dT%H:%M)"
-          git push
+          git pull --rebase --autostash || true
+          git push || true

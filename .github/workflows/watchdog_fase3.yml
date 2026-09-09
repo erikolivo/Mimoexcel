@@ -30,11 +30,11 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
           python -c "
-          import os, time
+          import subprocess, time
           from pathlib import Path
 
-          heartbeat = Path('data/.fase3_heartbeat')
           partidos = Path('data/partidos_hoy.json')
+          heartbeat = Path('data/.fase3_heartbeat')
 
           if not partidos.exists():
               print('No hay partidos_hoy.json — nada que vigilar.')
@@ -44,11 +44,23 @@ jobs:
               print('No hay heartbeat — Fase 3 nunca corrió hoy. Re-disparando...')
               exit(1)
 
-          antiguedad = time.time() - heartbeat.stat().st_mtime
-          print(f'Heartbeat tiene {antiguedad/60:.1f} min.')
+          # OJO: en un checkout fresco el mtime del archivo es la hora
+          # del checkout, NO sirve. Se usa la hora del ultimo commit que
+          # toco el heartbeat (Fase 3 pushea cada ciclo, ~5 min).
+          try:
+              ts = int(subprocess.check_output(
+                  ['git', 'log', '-1', '--format=%ct', '--', 'data/.fase3_heartbeat'],
+                  text=True).strip())
+          except Exception as e:
+              print(f'Heartbeat sin commits — re-disparando... ({e})')
+              exit(1)
 
-          if antiguedad > 600:  # 10 min
-              print('Heartbeat stale (>10 min) — re-disparando Fase 3...')
+          antiguedad = time.time() - ts
+          print(f'Heartbeat hace {antiguedad/60:.1f} min.')
+
+          if antiguedad > 1500:  # 25 min sin push = colgado o muerto
+              print('Heartbeat stale (>25 min) — re-disparando Fase 3...')
+              print('(concurrency del workflow cancela el run colgado si aun existe)')
               exit(1)
 
           print('Fase 3 OK.')

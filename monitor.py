@@ -941,29 +941,20 @@ def _mensaje_partido_finalizado(partido, gh, gv):
 
 
 def vigilar():
-    import signal as _signal
-    import time as _time
-
-    _INICIO = _time.time()
-    _MAX_DURACION = 120  # segundos maximos por ejecucion
-
-    def _timeout_handler(signum, frame):
-        raise TimeoutError("monitor.py excedio tiempo maximo")
-
-    old_handler = _signal.getsignal(_signal.SIGALRM)
-    _signal.signal(_signal.SIGALRM, _timeout_handler)
-    _signal.alarm(_MAX_DURACION)
-
+    # SIN alarma global: con 100+ partidos un ciclo puede tardar varios
+    # minutos y una alarma fija cortaba a la mitad perdiendo TODO el
+    # progreso (el guardado estaba solo al final). Los requests ya tienen
+    # timeout propio y cada partido va en try/except + guardado
+    # incremental dentro de _vigilar_interno.
     try:
         _vigilar_interno()
-    except TimeoutError:
-        print(f"[TIMEOUT] monitor.py tardo mas de {_MAX_DURACION}s, cortando ciclo.")
     except Exception:
         print("[ERROR] Excepcion no capturada en vigilar():")
         traceback.print_exc()
-    finally:
-        _signal.alarm(0)
-        _signal.signal(_signal.SIGALRM, old_handler)
+    try:
+        Path(DATA_DIR, ".fase3_heartbeat").write_text(datetime.datetime.now(datetime.timezone.utc).isoformat(), encoding="utf-8")
+    except Exception as e:
+        print(f"[AVISO] No se pudo escribir heartbeat: {e}")
 
 
 def _vigilar_interno():
@@ -977,101 +968,120 @@ def _vigilar_interno():
     HISTORIAL_PREDICCIONES = datos.get("historial_predicciones", {})
 
     hubo_cambios = False
+    procesados = 0
     for partido in datos["partidos"]:
-        # NUEVO: una vez que se manda el aviso de finalizado, ya no se
-        # vuelve a consultar este partido en NINGUN ciclo posterior --
-        # ahorro de peticiones (ya no tiene sentido seguir gastando
-        # cupo de ESPN en un partido que ya termino). 'acierto' NO se
-        # toca aqui a proposito -- eso lo sigue decidiendo
-        # cerrar_resultados.py esa noche, con su propio flujo completo
-        # (rating propio Glicko-2 + auditoria de cada alerta
-        # individual), sin interferencia de este aviso en vivo.
-        if partido.get("aviso_final_enviado") or not partido.get("fixture_id"):
-            continue
-        if not _en_ventana_horaria(partido):
-            continue
+        try:
+            procesados += 1
+            # NUEVO: una vez que se manda el aviso de finalizado, ya no se
+            # vuelve a consultar este partido en NINGUN ciclo posterior --
+            # ahorro de peticiones (ya no tiene sentido seguir gastando
+            # cupo de ESPN en un partido que ya termino). 'acierto' NO se
+            # toca aqui a proposito -- eso lo sigue decidiendo
+            # cerrar_resultados.py esa noche, con su propio flujo completo
+            # (rating propio Glicko-2 + auditoria de cada alerta
+            # individual), sin interferencia de este aviso en vivo.
+            if partido.get("aviso_final_enviado") or not partido.get("fixture_id"):
+                continue
+            if not _en_ventana_horaria(partido):
+                continue
 
-        liga_slug = partido.get("liga_slug")
-        if not liga_slug:
-            print(f"[AVISO] {partido['partido']} no tiene liga_slug guardado, no se puede vigilar.")
-            continue
+            liga_slug = partido.get("liga_slug")
+            if not liga_slug or liga_slug == "all":
+                # "all" viene del scoreboard global y NO sirve para el
+                # endpoint summary -- se salta rapido sin gastar peticion.
+                # Fase 1 (fusion) lo corrige al slug real en la proxima
+                # revision; ver fetch_data.obtener_fixtures_por_fecha.
+                print(f"[AVISO] {partido['partido']} tiene liga_slug '{liga_slug}', se salta (Fase 1 lo corrige).")
+                continue
 
-        box = obtener_boxscore_en_vivo(liga_slug, partido["fixture_id"])
-        if box is None:
-            continue
+            box = obtener_boxscore_en_vivo(liga_slug, partido["fixture_id"])
+            if box is None:
+                continue
 
-        if box.get("estado") == "post":
-            mensaje = _mensaje_partido_finalizado(partido, box["goles_local"], box["goles_visitante"])
-            if enviar_mensaje_telegram(mensaje):
-                partido["aviso_final_enviado"] = True
-                hubo_cambios = True
-                PREDICCIONES_ACTIVAS.pop(partido.get("fixture_id"), None)
-            continue
+            if box.get("estado") == "post":
+                mensaje = _mensaje_partido_finalizado(partido, box["goles_local"], box["goles_visitante"])
+                if enviar_mensaje_telegram(mensaje):
+                    partido["aviso_final_enviado"] = True
+                    hubo_cambios = True
+                    PREDICCIONES_ACTIVAS.pop(partido.get("fixture_id"), None)
+                continue
 
-        if box.get("estado") != "in":
-            continue
+            if box.get("estado") != "in":
+                continue
 
-        snap_actual = {
-            "minuto": box["minuto"], "goles_local": box["goles_local"],
-            "goles_visitante": box["goles_visitante"],
-            "stats_local": dict(box["stats_local"]), "stats_visitante": dict(box["stats_visitante"]),
-        }
-        historial = partido.setdefault("historial_snapshots", [])
-        snap_anterior = historial[-1] if historial else None
-        historial.append(snap_actual)
-        hubo_cambios = True
+            snap_actual = {
+                "minuto": box["minuto"], "goles_local": box["goles_local"],
+                "goles_visitante": box["goles_visitante"],
+                "stats_local": dict(box["stats_local"]), "stats_visitante": dict(box["stats_visitante"]),
+            }
+            historial = partido.setdefault("historial_snapshots", [])
+            snap_anterior = historial[-1] if historial else None
+            historial.append(snap_actual)
+            hubo_cambios = True
 
-        favorito_es_local = partido["favorito_es_local"]
-        goles_favorito = box["goles_local"] if favorito_es_local else box["goles_visitante"]
-        goles_rival = box["goles_visitante"] if favorito_es_local else box["goles_local"]
-        diferencia_actual = goles_favorito - goles_rival
+            favorito_es_local = partido["favorito_es_local"]
+            goles_favorito = box["goles_local"] if favorito_es_local else box["goles_visitante"]
+            goles_rival = box["goles_visitante"] if favorito_es_local else box["goles_local"]
+            diferencia_actual = goles_favorito - goles_rival
         
-        if snap_anterior:
-            goles_fav_anterior = snap_anterior["goles_local"] if favorito_es_local else snap_anterior["goles_visitante"]
-            goles_rival_anterior = snap_anterior["goles_visitante"] if favorito_es_local else snap_anterior["goles_local"]
-            
-            if goles_favorito > goles_fav_anterior or goles_rival > goles_rival_anterior:
-                goles_local_anterior = snap_anterior["goles_local"]
-                goles_visitante_anterior = snap_anterior["goles_visitante"]
-                resultados = _verificar_predicciones(partido["fixture_id"], box["goles_local"], box["goles_visitante"],
-                                                     goles_local_anterior, goles_visitante_anterior, favorito_es_local)
-                for tipo, acierto, datos in resultados:
-                    if acierto:
-                        emoji = "✅"
-                        texto_resultado = f"{emoji} [ACIERTO] {tipo.replace('_', ' ').title()} - {datos['equipo']} marcó"
-                    else:
-                        emoji = "❌"
-                        texto_resultado = f"{emoji} [FALLO] {tipo.replace('_', ' ').title()} - rival marcó primero"
-                    
-                    efectividad = _mensaje_efectividad(tipo)
-                    if efectividad:
-                        texto_resultado += f"\n{efectividad}"
-                    
-                    enviar_mensaje_telegram(texto_resultado)
+            if snap_anterior:
+                goles_fav_anterior = snap_anterior["goles_local"] if favorito_es_local else snap_anterior["goles_visitante"]
+                goles_rival_anterior = snap_anterior["goles_visitante"] if favorito_es_local else snap_anterior["goles_local"]
 
-        lado_favorito = "local" if favorito_es_local else "visitante"
-        lado_rival = "visitante" if favorito_es_local else "local"
-        
-        z = 0.0
-        dominancia_fav = 0.5
-        minuto_int = momentum._minuto_a_entero(box["minuto"]) or 0
-        
-        if minuto_int >= 5 and len(historial) >= 2:
-            presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
-            z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv)
-        
-        alertas = _evaluar_alertas(partido, snap_actual, snap_anterior, box["minuto"])
+                if goles_favorito > goles_fav_anterior or goles_rival > goles_rival_anterior:
+                    goles_local_anterior = snap_anterior["goles_local"]
+                    goles_visitante_anterior = snap_anterior["goles_visitante"]
+                    resultados = _verificar_predicciones(partido["fixture_id"], box["goles_local"], box["goles_visitante"],
+                                                         goles_local_anterior, goles_visitante_anterior, favorito_es_local)
+                    for tipo, acierto, datos in resultados:
+                        if acierto:
+                            emoji = "✅"
+                            texto_resultado = f"{emoji} [ACIERTO] {tipo.replace('_', ' ').title()} - {datos['equipo']} marcó"
+                        else:
+                            emoji = "❌"
+                            texto_resultado = f"{emoji} [FALLO] {tipo.replace('_', ' ').title()} - rival marcó primero"
 
-        for tipo, texto in alertas:
-            mensaje, reply_markup = _mensaje_partido(partido, box["minuto"], snap_actual, texto,
-                                        dominancia_fav=dominancia_fav, z=z)
-            if enviar_mensaje_telegram(mensaje, reply_markup=reply_markup):
-                _registrar_alerta(partido, tipo, texto, box["minuto"], diferencia_goles=diferencia_actual)
+                        efectividad = _mensaje_efectividad(tipo)
+                        if efectividad:
+                            texto_resultado += f"\n{efectividad}"
+
+                        enviar_mensaje_telegram(texto_resultado)
+
+            lado_favorito = "local" if favorito_es_local else "visitante"
+            lado_rival = "visitante" if favorito_es_local else "local"
+
+            z = 0.0
+            dominancia_fav = 0.5
+            minuto_int = momentum._minuto_a_entero(box["minuto"]) or 0
+
+            if minuto_int >= 5 and len(historial) >= 2:
+                presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
+                z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv)
+
+            alertas = _evaluar_alertas(partido, snap_actual, snap_anterior, box["minuto"])
+
+            for tipo, texto in alertas:
+                mensaje, reply_markup = _mensaje_partido(partido, box["minuto"], snap_actual, texto,
+                                            dominancia_fav=dominancia_fav, z=z)
+                if enviar_mensaje_telegram(mensaje, reply_markup=reply_markup):
+                    _registrar_alerta(partido, tipo, texto, box["minuto"], diferencia_goles=diferencia_actual)
+
+            # Guardado incremental: si el ciclo muere a la mitad (runner
+            # caido, timeout del job), lo ya procesado no se pierde.
+            if hubo_cambios and procesados % 15 == 0:
+                try:
+                    _guardar(datos)
+                except Exception as e:
+                    print(f"[AVISO] Guardado incremental fallo: {e}")
+        except Exception as e:
+            try:
+                fid_err = partido.get("fixture_id", "?")
+            except Exception:
+                fid_err = "?"
+            print(f"[AVISO] Fallo procesando partido {fid_err}, se sigue con el siguiente: {e}")
 
     if hubo_cambios:
         _guardar(datos)
-
-    Path(DATA_DIR, ".fase3_heartbeat").write_text(datetime.datetime.now(datetime.timezone.utc).isoformat(), encoding="utf-8")
 
 
 if __name__ == "__main__":

@@ -303,7 +303,14 @@ def obtener_fixtures_por_fecha(fecha_iso):
 
         for evento in data.get("events", []):
             if evento["id"] in fixtures_por_id:
-                continue  # ya vino del global, no se duplica
+                # Ya vino del global (con _liga_slug "all", que NO sirve
+                # para el endpoint summary). Si la liga curada lo trae,
+                # se corrige el slug sin duplicar.
+                existente = fixtures_por_id[evento["id"]]
+                if existente.get("_liga_slug") == "all":
+                    existente["_liga_slug"] = slug
+                    existente["league"] = {"country": pais, "name": nombre_liga}
+                continue  # ya contado, no se duplica
             try:
                 comp = evento["competitions"][0]
                 home = next(c for c in comp["competitors"] if c["homeAway"] == "home")

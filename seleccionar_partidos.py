@@ -251,7 +251,17 @@ def seleccionar(forzar=False):
             fusionados = []
             for nuevo in seleccionados:
                 fid = nuevo["fixture_id"]
-                fusionados.append(previos_por_id.get(fid, nuevo))  # conserva historial si ya existia
+                previo = previos_por_id.get(fid)
+                if previo is None:
+                    fusionados.append(nuevo)
+                    continue
+                # Conserva historial si ya existia, pero repara el
+                # liga_slug si el previo quedo con "all" (no sirve para
+                # el summary en vivo) y el nuevo trae el slug real.
+                if (not previo.get("liga_slug") or previo.get("liga_slug") == "all") \
+                        and nuevo.get("liga_slug") not in (None, "", "all"):
+                    previo["liga_slug"] = nuevo["liga_slug"]
+                fusionados.append(previo)  # conserva historial si ya existia
             nuevos_en_revision = sum(1 for p in seleccionados if p["fixture_id"] not in previos_por_id)
             seleccionados = fusionados
 
