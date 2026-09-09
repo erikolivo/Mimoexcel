@@ -54,6 +54,7 @@ import os
 import csv
 import io
 import json
+import re
 import difflib
 import requests
 from datetime import datetime, timedelta
@@ -218,6 +219,16 @@ LIGAS_ESPN = {
     "nga.1": ("Nigeria", "NPFL"),
     "ang.1": ("Angola", "Girabola"),
     "tun.1": ("Tunisia", "Ligue 1"),
+
+    # AGREGADO septiembre 2026 -- copas verificadas EN VIVO contra ESPN
+    # (scoreboard por slug devolvio 200 + eventos reales; eng.fa_cup da
+    # 400, el slug correcto es eng.fa). Detectadas gracias al registro
+    # automatico data/ligas_pendientes.json.
+    "eng.league_cup": ("England", "Carabao Cup"),          # verificado: 5 eventos
+    "eng.trophy": ("England", "EFL Trophy"),               # verificado
+    "eng.fa": ("England", "FA Cup"),                       # verificado (slug responde)
+    "sco.challenge": ("Scotland", "SPFL Challenge Cup"),   # verificado: 19 eventos
+    "esp.copa_de_la_reina": ("Spain", "Copa de la Reina"), # verificado
 }
 
 
@@ -267,15 +278,28 @@ def obtener_fixtures_por_fecha(fecha_iso):
                 away = next(c for c in comp["competitors"] if c["homeAway"] == "away")
             except (KeyError, IndexError, StopIteration):
                 continue
-            liga = evento.get("league", {})
+            # El scoreboard global NO trae objeto "league" -- pero si trae
+            # competitions[0].altGameNote ("Carabao Cup, Third Round") y el
+            # id numerico de liga en el uid ("s:600~l:3920~e:..."). Se
+            # guardan para el registro de ligas pendientes (el slug real
+            # se agrega a LIGAS_ESPN despues de verificarlo).
+            liga_id = ""
+            try:
+                m = re.search(r"~l:(\d+)~", evento.get("uid", ""))
+                if m:
+                    liga_id = m.group(1)
+            except Exception:
+                pass
+            nota = comp.get("altGameNote", "") or ""
             fixtures_por_id[evento["id"]] = {
                 "fixture": {"id": evento["id"], "date": evento["date"]},
                 "teams": {
                     "home": {"id": home["team"]["id"], "name": home["team"]["displayName"]},
                     "away": {"id": away["team"]["id"], "name": away["team"]["displayName"]},
                 },
-                "league": {"country": liga.get("country", ""), "name": liga.get("name", "")},
+                "league": {"country": "", "name": nota},
                 "_liga_slug": "all",
+                "_liga_id": liga_id,
                 "_odds_raw": comp.get("odds"),
             }
         print(f"ESPN global: {len(fixtures_por_id)} fixtures encontrados.")
@@ -368,10 +392,12 @@ def _registrar_ligas_pendientes(fixtures_por_id, fecha_iso):
                 fid = f["fixture"]["id"]
             except Exception:
                 continue
-            ent = registro.get(clave, {"pais": pais, "liga": nombre, "veces_visto": 0,
+            ent = registro.get(clave, {"pais": pais, "liga": nombre, "liga_id": "", "veces_visto": 0,
                                        "ejemplo_partido": "", "fixture_id": "", "ultimo_visto": ""})
             ent["veces_visto"] = ent.get("veces_visto", 0) + 1
             ent["ultimo_visto"] = hoy
+            if not ent.get("liga_id"):
+                ent["liga_id"] = f.get("_liga_id", "") or ""
             if not ent.get("ejemplo_partido"):
                 ent["ejemplo_partido"] = f"{home} vs {away}"
                 ent["fixture_id"] = fid
