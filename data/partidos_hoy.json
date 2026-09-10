@@ -10629,7 +10629,8 @@
           "diferencia_goles": 0
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Minnesota United FC vs FC Dallas",
@@ -12179,7 +12180,8 @@
           "diferencia_goles": -1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Houston Dynamo FC vs Real Salt Lake",
@@ -13723,7 +13725,8 @@
           "diferencia_goles": 0
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Estudiantes de La Plata vs Corinthians",
@@ -17108,22 +17111,7 @@
         "equipo": "FC Twente"
       }
     },
-    "761786": {},
-    "761793": {
-      "cuidado_rival_presiona": {
-        "minuto": "90'+3'",
-        "prediccion": "rival",
-        "equipo": "FC Dallas"
-      }
-    },
-    "761791": {},
-    "761792": {
-      "cuidado_rival_presiona": {
-        "minuto": "90'+3'",
-        "prediccion": "rival",
-        "equipo": "Inter Miami CF"
-      }
-    }
+    "761786": {}
   },
   "historial_predicciones": {
     "posible_victoria_favorito": {
