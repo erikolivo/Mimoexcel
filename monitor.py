@@ -407,6 +407,12 @@ def _cargar():
 
 
 def _guardar(datos):
+    # Defensa: nunca escribir un dict que no sea el archivo completo
+    # (un shadowing de variable una vez sobrescribio partidos_hoy.json
+    # con un registro de prediccion y cego a Fase 3 por horas).
+    if not isinstance(datos, dict) or "partidos" not in datos:
+        print(f"[ERROR] _guardar rechazo escritura: datos sin 'partidos' (keys={list(datos.keys()) if isinstance(datos, dict) else type(datos)}).")
+        return
     datos["predicciones_activas"] = PREDICCIONES_ACTIVAS
     datos["historial_predicciones"] = HISTORIAL_PREDICCIONES
     ARCHIVO_PARTIDOS.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -1033,10 +1039,10 @@ def _vigilar_interno():
                     goles_visitante_anterior = snap_anterior["goles_visitante"]
                     resultados = _verificar_predicciones(partido["fixture_id"], box["goles_local"], box["goles_visitante"],
                                                          goles_local_anterior, goles_visitante_anterior, favorito_es_local)
-                    for tipo, acierto, datos in resultados:
+                    for tipo, acierto, datos_pred in resultados:
                         if acierto:
                             emoji = "✅"
-                            texto_resultado = f"{emoji} [ACIERTO] {tipo.replace('_', ' ').title()} - {datos['equipo']} marcó"
+                            texto_resultado = f"{emoji} [ACIERTO] {tipo.replace('_', ' ').title()} - {datos_pred['equipo']} marcó"
                         else:
                             emoji = "❌"
                             texto_resultado = f"{emoji} [FALLO] {tipo.replace('_', ' ').title()} - rival marcó primero"
