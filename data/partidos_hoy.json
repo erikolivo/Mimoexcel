@@ -12023,7 +12023,8 @@
           "diferencia_goles": -1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Aurora FC vs Municipal",
@@ -12274,9 +12275,7 @@
       "grupo_destacado": 2
     }
   ],
-  "predicciones_activas": {
-    "401885474": {}
-  },
+  "predicciones_activas": {},
   "historial_predicciones": {
     "cuidado_rival_presiona": {
       "total": 2,
