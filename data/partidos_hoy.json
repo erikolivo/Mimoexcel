@@ -6061,7 +6061,8 @@
           "diferencia_goles": 4
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Como vs RB Leipzig",
@@ -7521,7 +7522,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Manchester United vs Sabah FK",
@@ -9000,7 +9002,8 @@
           "diferencia_goles": 1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Stevenage vs Luton Town",
@@ -10546,7 +10549,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 2
+      "grupo_destacado": 2,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Estrela vs Braga",
@@ -11808,6 +11812,71 @@
             "effectiveClearance": "16",
             "totalClearance": "16"
           }
+        },
+        {
+          "minuto": "83'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "4",
+            "saves": "2",
+            "possessionPct": "39.4",
+            "totalShots": "8",
+            "shotsOnTarget": "4",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "267",
+            "totalPasses": "330",
+            "passPct": "0.8",
+            "accurateCrosses": "3",
+            "totalCrosses": "12",
+            "crossPct": "0.3",
+            "totalLongBalls": "52",
+            "accurateLongBalls": "21",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "11",
+            "totalTackles": "16",
+            "tacklePct": "0.7",
+            "interceptions": "11",
+            "effectiveClearance": "27",
+            "totalClearance": "27"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "13",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "7",
+            "saves": "2",
+            "possessionPct": "60.6",
+            "totalShots": "8",
+            "shotsOnTarget": "4",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "445",
+            "totalPasses": "512",
+            "passPct": "0.9",
+            "accurateCrosses": "2",
+            "totalCrosses": "14",
+            "crossPct": "0.1",
+            "totalLongBalls": "29",
+            "accurateLongBalls": "15",
+            "longballPct": "0.5",
+            "blockedShots": "2",
+            "effectiveTackles": "8",
+            "totalTackles": "9",
+            "tacklePct": "0.9",
+            "interceptions": "4",
+            "effectiveClearance": "16",
+            "totalClearance": "16"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -12076,9 +12145,6 @@
     }
   ],
   "predicciones_activas": {
-    "401915443": {},
-    "401915442": {},
-    "401880856": {},
     "401885474": {}
   },
   "historial_predicciones": {
