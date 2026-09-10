@@ -2212,35 +2212,6 @@
       "grupo_destacado": 2
     },
     {
-      "partido": "Chelsea vs Leeds United",
-      "local": "Chelsea",
-      "visitante": "Leeds United",
-      "favorito": "Chelsea",
-      "no_favorito": "Leeds United",
-      "favorito_es_local": true,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 1,
-      "cuota_local_inicial": 1.62,
-      "cuota_empate_inicial": 4.0,
-      "cuota_visitante_inicial": 4.75,
-      "prioridad": "ALTA",
-      "fuente_favorito": "Google Sheets",
-      "fila_fuente": 13140,
-      "hora_inicio": "2026-09-09T19:00Z",
-      "fixture_id": "401914256",
-      "liga_slug": "eng.league_cup",
-      "liga_pais": "England",
-      "liga_nombre": "Carabao Cup",
-      "home_id": "363",
-      "away_id": "357",
-      "kickoff_utc": "2026-09-09T19:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Real Oruro vs Nacional Potosí",
       "local": "Real Oruro",
       "visitante": "Nacional Potosí",
@@ -2262,6 +2233,35 @@
       "liga_nombre": "Copa Bolivia, Group B",
       "home_id": "22523",
       "away_id": "10311",
+      "kickoff_utc": "2026-09-09T19:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
+    },
+    {
+      "partido": "Chelsea vs Leeds United",
+      "local": "Chelsea",
+      "visitante": "Leeds United",
+      "favorito": "Chelsea",
+      "no_favorito": "Leeds United",
+      "favorito_es_local": true,
+      "tipo_pronostico": "favorito_directo",
+      "confianza_estrellas": 1,
+      "cuota_local_inicial": 1.62,
+      "cuota_empate_inicial": 4.0,
+      "cuota_visitante_inicial": 4.75,
+      "prioridad": "ALTA",
+      "fuente_favorito": "Google Sheets",
+      "fila_fuente": 13140,
+      "hora_inicio": "2026-09-09T19:00Z",
+      "fixture_id": "401914256",
+      "liga_slug": "eng.league_cup",
+      "liga_pais": "England",
+      "liga_nombre": "Carabao Cup",
+      "home_id": "363",
+      "away_id": "357",
       "kickoff_utc": "2026-09-09T19:00Z",
       "resultado_final": null,
       "acierto": null,
@@ -18924,55 +18924,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {
-    "401915424": {
-      "ampliacion_marcador": {
-        "minuto": "16'",
-        "prediccion": "fav",
-        "equipo": "Barcelona"
-      }
-    },
-    "401915448": {
-      "cuidado_rival_presiona": {
-        "minuto": "15'",
-        "prediccion": "rival",
-        "equipo": "Viking FK"
-      }
-    },
-    "401875612": {
-      "alerta_1er_tiempo": {
-        "minuto": "17'",
-        "prediccion": "fav",
-        "equipo": "FC Twente"
-      }
-    },
-    "761786": {}
-  },
-  "historial_predicciones": {
-    "posible_victoria_favorito": {
-      "total": 3,
-      "aciertos": 2
-    },
-    "cuidado_rival_presiona": {
-      "total": 3,
-      "aciertos": 2
-    },
-    "ampliacion_marcador": {
-      "total": 3,
-      "aciertos": 1
-    },
-    "value_alert": {
-      "total": 1,
-      "aciertos": 1
-    },
-    "gol_de_cierre": {
-      "total": 1,
-      "aciertos": 0
-    },
-    "alerta_1er_tiempo": {
-      "total": 2,
-      "aciertos": 1
-    }
-  }
+  ]
 }
