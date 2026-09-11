@@ -45667,6 +45667,71 @@
             "effectiveClearance": "27",
             "totalClearance": "27"
           }
+        },
+        {
+          "minuto": "90'+3'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "7",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "6",
+            "saves": "0",
+            "possessionPct": "47.9",
+            "totalShots": "13",
+            "shotsOnTarget": "4",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "274",
+            "totalPasses": "341",
+            "passPct": "0.8",
+            "accurateCrosses": "9",
+            "totalCrosses": "26",
+            "crossPct": "0.3",
+            "totalLongBalls": "45",
+            "accurateLongBalls": "29",
+            "longballPct": "0.6",
+            "blockedShots": "4",
+            "effectiveTackles": "10",
+            "totalTackles": "16",
+            "tacklePct": "0.6",
+            "interceptions": "8",
+            "effectiveClearance": "19",
+            "totalClearance": "19"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "12",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "3",
+            "saves": "3",
+            "possessionPct": "52.1",
+            "totalShots": "2",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "311",
+            "totalPasses": "383",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "12",
+            "crossPct": "0.2",
+            "totalLongBalls": "46",
+            "accurateLongBalls": "15",
+            "longballPct": "0.3",
+            "blockedShots": "1",
+            "effectiveTackles": "11",
+            "totalTackles": "20",
+            "tacklePct": "0.6",
+            "interceptions": "5",
+            "effectiveClearance": "29",
+            "totalClearance": "29"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -45705,6 +45770,12 @@
           "minuto": "78'",
           "texto": "⏰ Gol de cierre [BAJA]",
           "diferencia_goles": 0
+        },
+        {
+          "tipo": "ampliacion_marcador",
+          "minuto": "90'+3'",
+          "texto": "🔵 Proximo gol: Fav [BAJA]",
+          "diferencia_goles": 1
         }
       ],
       "diferencia_maxima_alcanzada": 0
@@ -47188,7 +47259,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 2
+      "grupo_destacado": 2,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Pisa vs Virtus Entella",
@@ -48655,7 +48727,8 @@
           "diferencia_goles": -2
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Sportivo Ameliano vs Sportivo San Lorenzo",
@@ -50115,7 +50188,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "UTC vs Juan Pablo II",
@@ -50857,6 +50931,71 @@
             "effectiveClearance": "0",
             "totalClearance": "6"
           }
+        },
+        {
+          "minuto": "45'+8'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "6",
+            "yellowCards": "2",
+            "redCards": "1",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "43.4",
+            "totalShots": "6",
+            "shotsOnTarget": "4",
+            "shotPct": "0.7",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "157",
+            "totalPasses": "178",
+            "passPct": "0.9",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "4",
+            "totalTackles": "8",
+            "tacklePct": "0.5",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "8"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "3",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "4",
+            "possessionPct": "56.6",
+            "totalShots": "9",
+            "shotsOnTarget": "1",
+            "shotPct": "0.1",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "206",
+            "totalPasses": "230",
+            "passPct": "0.9",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "3",
+            "effectiveTackles": "6",
+            "totalTackles": "7",
+            "tacklePct": "0.9",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "7"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -51432,8 +51571,13 @@
     }
   ],
   "predicciones_activas": {
-    "401880257": {},
-    "401882878": {},
+    "401882878": {
+      "ampliacion_marcador": {
+        "minuto": "90'+3'",
+        "prediccion": "fav",
+        "equipo": "Sevilla"
+      }
+    },
     "401886205": {}
   },
   "historial_predicciones": {
