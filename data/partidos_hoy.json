@@ -17558,6 +17558,71 @@
             "effectiveClearance": "30",
             "totalClearance": "30"
           }
+        },
+        {
+          "minuto": "90'+5'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "15",
+            "yellowCards": "4",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "7",
+            "saves": "4",
+            "possessionPct": "53",
+            "totalShots": "17",
+            "shotsOnTarget": "7",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "305",
+            "totalPasses": "387",
+            "passPct": "0.8",
+            "accurateCrosses": "8",
+            "totalCrosses": "25",
+            "crossPct": "0.3",
+            "totalLongBalls": "59",
+            "accurateLongBalls": "19",
+            "longballPct": "0.3",
+            "blockedShots": "5",
+            "effectiveTackles": "10",
+            "totalTackles": "14",
+            "tacklePct": "0.7",
+            "interceptions": "7",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "12",
+            "yellowCards": "5",
+            "redCards": "0",
+            "offsides": "3",
+            "wonCorners": "3",
+            "saves": "6",
+            "possessionPct": "47",
+            "totalShots": "11",
+            "shotsOnTarget": "5",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "285",
+            "totalPasses": "352",
+            "passPct": "0.8",
+            "accurateCrosses": "3",
+            "totalCrosses": "13",
+            "crossPct": "0.2",
+            "totalLongBalls": "60",
+            "accurateLongBalls": "22",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "10",
+            "totalTackles": "14",
+            "tacklePct": "0.7",
+            "interceptions": "5",
+            "effectiveClearance": "30",
+            "totalClearance": "30"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -17571,6 +17636,12 @@
           "tipo": "gol_de_cierre",
           "minuto": "85'",
           "texto": "⏰ Gol de cierre",
+          "diferencia_goles": 0
+        },
+        {
+          "tipo": "posible_victoria_favorito",
+          "minuto": "90'+5'",
+          "texto": "🟢 Gana Fav",
           "diferencia_goles": 0
         }
       ],
@@ -17614,7 +17685,7 @@
     "401860323": {},
     "401878013": {
       "posible_victoria_favorito": {
-        "minuto": "70'",
+        "minuto": "90'+5'",
         "prediccion": "fav",
         "equipo": "Millonarios"
       },
