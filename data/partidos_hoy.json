@@ -17647,7 +17647,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 1
+      "grupo_destacado": 1,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Xelajú MC vs Cobán Imperial",
@@ -17682,19 +17683,7 @@
     }
   ],
   "predicciones_activas": {
-    "401860323": {},
-    "401878013": {
-      "posible_victoria_favorito": {
-        "minuto": "90'+5'",
-        "prediccion": "fav",
-        "equipo": "Millonarios"
-      },
-      "gol_de_cierre": {
-        "minuto": "85'",
-        "prediccion": "fav",
-        "equipo": "Millonarios"
-      }
-    }
+    "401860323": {}
   },
   "historial_predicciones": {
     "cuidado_rival_presiona": {
