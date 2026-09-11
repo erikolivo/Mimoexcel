@@ -3,20 +3,20 @@
   "ligas": [
     {
       "pais": "",
-      "liga": "NCAAM Soccer",
-      "liga_id": "5487",
-      "veces_visto": 95,
-      "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
-      "fixture_id": "401902569",
+      "liga": "NCAAW Soccer",
+      "liga_id": "5499",
+      "veces_visto": 140,
+      "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
+      "fixture_id": "401900232",
       "ultimo_visto": "2026-09-10"
     },
     {
       "pais": "",
-      "liga": "NCAAW Soccer",
-      "liga_id": "5499",
-      "veces_visto": 76,
-      "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
-      "fixture_id": "401900232",
+      "liga": "NCAAM Soccer",
+      "liga_id": "5487",
+      "veces_visto": 103,
+      "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
+      "fixture_id": "401902569",
       "ultimo_visto": "2026-09-10"
     },
     {
@@ -30,6 +30,15 @@
     },
     {
       "pais": "",
+      "liga": "Guatemalan Liga Nacional",
+      "liga_id": "3928",
+      "veces_visto": 15,
+      "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
+      "fixture_id": "401879630",
+      "ultimo_visto": "2026-09-10"
+    },
+    {
+      "pais": "",
       "liga": "Copa Colombia, Round of 16",
       "liga_id": "8313",
       "veces_visto": 12,
@@ -39,18 +48,9 @@
     },
     {
       "pais": "",
-      "liga": "Guatemalan Liga Nacional",
-      "liga_id": "3928",
-      "veces_visto": 12,
-      "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
-      "fixture_id": "401879630",
-      "ultimo_visto": "2026-09-10"
-    },
-    {
-      "pais": "",
       "liga": "Club Friendly",
       "liga_id": "19834",
-      "veces_visto": 10,
+      "veces_visto": 11,
       "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
       "fixture_id": "401914230",
       "ultimo_visto": "2026-09-10"
@@ -68,7 +68,7 @@
       "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals",
       "liga_id": "22947",
-      "veces_visto": 7,
+      "veces_visto": 8,
       "ejemplo_partido": "Saprissa vs Cartaginés",
       "fixture_id": "401914488",
       "ultimo_visto": "2026-09-10"
@@ -81,6 +81,24 @@
       "ejemplo_partido": "Oriente Petrolero vs Guabirá",
       "fixture_id": "401907922",
       "ultimo_visto": "2026-09-09"
+    },
+    {
+      "pais": "",
+      "liga": "Copa Bolivia, Group B",
+      "liga_id": "23284",
+      "veces_visto": 5,
+      "ejemplo_partido": "Real Oruro vs Nacional Potosí",
+      "fixture_id": "401907940",
+      "ultimo_visto": "2026-09-10"
+    },
+    {
+      "pais": "",
+      "liga": "Copa Bolivia, Group A",
+      "liga_id": "23284",
+      "veces_visto": 5,
+      "ejemplo_partido": "Blooming vs GV San José",
+      "fixture_id": "401907939",
+      "ultimo_visto": "2026-09-10"
     },
     {
       "pais": "",
@@ -99,24 +117,6 @@
       "ejemplo_partido": "ABB vs San Antonio Bulo Bulo",
       "fixture_id": "401907941",
       "ultimo_visto": "2026-09-08"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Group B",
-      "liga_id": "23284",
-      "veces_visto": 4,
-      "ejemplo_partido": "Real Oruro vs Nacional Potosí",
-      "fixture_id": "401907940",
-      "ultimo_visto": "2026-09-10"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Group A",
-      "liga_id": "23284",
-      "veces_visto": 4,
-      "ejemplo_partido": "Blooming vs GV San José",
-      "fixture_id": "401907939",
-      "ultimo_visto": "2026-09-10"
     },
     {
       "pais": "",
@@ -149,16 +149,16 @@
       "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals - 1st Leg",
       "liga_id": "22947",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "FC Motagua vs Alianza FC",
       "fixture_id": "401914487",
-      "ultimo_visto": "2026-09-09"
+      "ultimo_visto": "2026-09-10"
     },
     {
       "pais": "",
       "liga": "Liga de Expansión MX",
       "liga_id": "3932",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
       "fixture_id": "401886377",
       "ultimo_visto": "2026-09-10"
@@ -167,7 +167,7 @@
       "pais": "",
       "liga": "Northern Super League",
       "liga_id": "23286",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
       "fixture_id": "401859943",
       "ultimo_visto": "2026-09-10"
@@ -176,7 +176,7 @@
       "pais": "",
       "liga": "CAF Champions League, First Preliminary Round",
       "liga_id": "2391",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "Foresters vs Wiliete SC",
       "fixture_id": "401911593",
       "ultimo_visto": "2026-09-10"
@@ -185,7 +185,7 @@
       "pais": "",
       "liga": "CAF Confederation Cup, First Preliminary Round",
       "liga_id": "18000",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "The Panthers FC vs ASPAC",
       "fixture_id": "401909271",
       "ultimo_visto": "2026-09-10"
