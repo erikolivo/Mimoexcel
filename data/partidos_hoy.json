@@ -16100,7 +16100,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 2
+      "grupo_destacado": 2,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Millonarios vs Deportivo Cali",
@@ -17297,6 +17298,71 @@
             "effectiveClearance": "22",
             "totalClearance": "22"
           }
+        },
+        {
+          "minuto": "75'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "10",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "7",
+            "saves": "3",
+            "possessionPct": "52.7",
+            "totalShots": "12",
+            "shotsOnTarget": "4",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "247",
+            "totalPasses": "310",
+            "passPct": "0.8",
+            "accurateCrosses": "6",
+            "totalCrosses": "23",
+            "crossPct": "0.3",
+            "totalLongBalls": "47",
+            "accurateLongBalls": "16",
+            "longballPct": "0.3",
+            "blockedShots": "4",
+            "effectiveTackles": "10",
+            "totalTackles": "13",
+            "tacklePct": "0.8",
+            "interceptions": "6",
+            "effectiveClearance": "11",
+            "totalClearance": "11"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "3",
+            "saves": "5",
+            "possessionPct": "47.3",
+            "totalShots": "9",
+            "shotsOnTarget": "3",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "235",
+            "totalPasses": "289",
+            "passPct": "0.8",
+            "accurateCrosses": "1",
+            "totalCrosses": "9",
+            "crossPct": "0.1",
+            "totalLongBalls": "50",
+            "accurateLongBalls": "21",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "8",
+            "totalTackles": "10",
+            "tacklePct": "0.8",
+            "interceptions": "4",
+            "effectiveClearance": "27",
+            "totalClearance": "27"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -17345,7 +17411,6 @@
   ],
   "predicciones_activas": {
     "401860323": {},
-    "401860324": {},
     "401878013": {
       "posible_victoria_favorito": {
         "minuto": "70'",
