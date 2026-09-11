@@ -12667,6 +12667,71 @@
             "effectiveClearance": "3",
             "totalClearance": "3"
           }
+        },
+        {
+          "minuto": "45'+1'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "5",
+            "possessionPct": "60.3",
+            "totalShots": "7",
+            "shotsOnTarget": "1",
+            "shotPct": "0.1",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "195",
+            "totalPasses": "241",
+            "passPct": "0.8",
+            "accurateCrosses": "4",
+            "totalCrosses": "7",
+            "crossPct": "0.6",
+            "totalLongBalls": "46",
+            "accurateLongBalls": "20",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "2",
+            "totalTackles": "3",
+            "tacklePct": "0.7",
+            "interceptions": "2",
+            "effectiveClearance": "15",
+            "totalClearance": "15"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "5",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "0",
+            "possessionPct": "39.7",
+            "totalShots": "10",
+            "shotsOnTarget": "6",
+            "shotPct": "0.6",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "97",
+            "totalPasses": "152",
+            "passPct": "0.6",
+            "accurateCrosses": "2",
+            "totalCrosses": "11",
+            "crossPct": "0.2",
+            "totalLongBalls": "48",
+            "accurateLongBalls": "19",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "9",
+            "totalTackles": "9",
+            "tacklePct": "1.0",
+            "interceptions": "4",
+            "effectiveClearance": "5",
+            "totalClearance": "5"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -14373,7 +14438,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 1
+      "grupo_destacado": 1,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Real Tomayapo vs Always Ready",
@@ -14527,6 +14593,71 @@
             "effectiveClearance": "0",
             "totalClearance": "0"
           }
+        },
+        {
+          "minuto": "6'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "0",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "0",
+            "possessionPct": "87.5",
+            "totalShots": "0",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "46",
+            "totalPasses": "48",
+            "passPct": "1.0",
+            "accurateCrosses": "1",
+            "totalCrosses": "1",
+            "crossPct": "1.0",
+            "totalLongBalls": "3",
+            "accurateLongBalls": "3",
+            "longballPct": "1.0",
+            "blockedShots": "0",
+            "effectiveTackles": "0",
+            "totalTackles": "0",
+            "tacklePct": "0.0",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "0"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "0",
+            "possessionPct": "12.5",
+            "totalShots": "1",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "4",
+            "totalPasses": "7",
+            "passPct": "0.6",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "2",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "0",
+            "effectiveTackles": "0",
+            "totalTackles": "0",
+            "tacklePct": "0.0",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "0"
+          }
         }
       ],
       "alertas_enviadas": [],
@@ -14598,24 +14729,11 @@
     }
   ],
   "predicciones_activas": {
-    "401860326": {
-      "ampliacion_marcador": {
-        "minuto": "90'+1'",
-        "prediccion": "fav",
-        "equipo": "Vila Nova"
-      }
-    },
-    "401860323": {
-      "cuidado_rival_presiona": {
-        "minuto": "41'",
-        "prediccion": "rival",
-        "equipo": "Londrina"
-      }
-    }
+    "401860323": {}
   },
   "historial_predicciones": {
     "cuidado_rival_presiona": {
-      "total": 2,
+      "total": 3,
       "aciertos": 1
     },
     "alerta_1er_tiempo": {
