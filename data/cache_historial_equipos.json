@@ -15546,8 +15546,15 @@
     ]
   },
   "3975_ita.2_2026": {
-    "fecha_cache": "2026-08-30T01:37:53.417477",
+    "fecha_cache": "2026-09-12T13:38:45.016394",
     "historial": [
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-08-29",
         "goles_favor": 2,
@@ -15742,8 +15749,15 @@
     ]
   },
   "3346_ita.2_2026": {
-    "fecha_cache": "2026-08-30T01:38:11.666037",
+    "fecha_cache": "2026-09-12T13:38:46.324519",
     "historial": [
+      {
+        "fecha": "2026-09-05",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-08-29",
         "goles_favor": 1,
@@ -15799,8 +15813,15 @@
     ]
   },
   "120_ita.2_2026": {
-    "fecha_cache": "2026-08-30T01:38:14.277002",
+    "fecha_cache": "2026-09-12T13:38:44.827244",
     "historial": [
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-08-29",
         "goles_favor": 0,
@@ -109577,6 +109598,32 @@
         "goles_contra": 1,
         "es_local": true,
         "resultado": "D"
+      }
+    ]
+  },
+  "3952_ita.2_2026": {
+    "fecha_cache": "2026-09-12T13:38:46.155717",
+    "historial": [
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-08-29",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-23",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
       }
     ]
   }
