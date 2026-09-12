@@ -3,21 +3,21 @@
   "ligas": [
     {
       "pais": "",
+      "liga": "NCAAM Soccer",
+      "liga_id": "5487",
+      "veces_visto": 145,
+      "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
+      "fixture_id": "401902569",
+      "ultimo_visto": "2026-09-11"
+    },
+    {
+      "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
       "veces_visto": 140,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-09-10"
-    },
-    {
-      "pais": "",
-      "liga": "NCAAM Soccer",
-      "liga_id": "5487",
-      "veces_visto": 124,
-      "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
-      "fixture_id": "401902569",
-      "ultimo_visto": "2026-09-11"
     },
     {
       "pais": "",
@@ -75,6 +75,42 @@
     },
     {
       "pais": "",
+      "liga": "CAF Champions League, First Preliminary Round",
+      "liga_id": "2391",
+      "veces_visto": 8,
+      "ejemplo_partido": "Foresters vs Wiliete SC",
+      "fixture_id": "401911593",
+      "ultimo_visto": "2026-09-11"
+    },
+    {
+      "pais": "",
+      "liga": "CAF Confederation Cup, First Preliminary Round",
+      "liga_id": "18000",
+      "veces_visto": 8,
+      "ejemplo_partido": "The Panthers FC vs ASPAC",
+      "fixture_id": "401909271",
+      "ultimo_visto": "2026-09-11"
+    },
+    {
+      "pais": "",
+      "liga": "Liga de Expansión MX",
+      "liga_id": "3932",
+      "veces_visto": 6,
+      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
+      "fixture_id": "401886377",
+      "ultimo_visto": "2026-09-11"
+    },
+    {
+      "pais": "",
+      "liga": "NWSL",
+      "liga_id": "8301",
+      "veces_visto": 6,
+      "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
+      "fixture_id": "401853996",
+      "ultimo_visto": "2026-09-11"
+    },
+    {
+      "pais": "",
       "liga": "Copa Bolivia, Group D",
       "liga_id": "23284",
       "veces_visto": 5,
@@ -102,20 +138,11 @@
     },
     {
       "pais": "",
-      "liga": "CAF Champions League, First Preliminary Round",
-      "liga_id": "2391",
+      "liga": "Argentine Nacional B",
+      "liga_id": "3903",
       "veces_visto": 5,
-      "ejemplo_partido": "Foresters vs Wiliete SC",
-      "fixture_id": "401911593",
-      "ultimo_visto": "2026-09-11"
-    },
-    {
-      "pais": "",
-      "liga": "CAF Confederation Cup, First Preliminary Round",
-      "liga_id": "18000",
-      "veces_visto": 5,
-      "ejemplo_partido": "The Panthers FC vs ASPAC",
-      "fixture_id": "401909271",
+      "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
+      "fixture_id": "401843983",
       "ultimo_visto": "2026-09-11"
     },
     {
@@ -138,20 +165,38 @@
     },
     {
       "pais": "",
-      "liga": "Argentine Nacional B",
-      "liga_id": "3903",
+      "liga": "USL Championship",
+      "liga_id": "4002",
       "veces_visto": 4,
-      "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
-      "fixture_id": "401843983",
+      "ejemplo_partido": "New Mexico United vs Indy Eleven",
+      "fixture_id": "401842218",
       "ultimo_visto": "2026-09-11"
     },
     {
       "pais": "",
-      "liga": "Liga de Expansión MX",
-      "liga_id": "3932",
+      "liga": "USL League One",
+      "liga_id": "19915",
       "veces_visto": 4,
-      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
-      "fixture_id": "401886377",
+      "ejemplo_partido": "One Knoxville vs FC Naples",
+      "fixture_id": "401842107",
+      "ultimo_visto": "2026-09-11"
+    },
+    {
+      "pais": "",
+      "liga": "Argentine Primera B",
+      "liga_id": "3904",
+      "veces_visto": 4,
+      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
+      "fixture_id": "401845087",
+      "ultimo_visto": "2026-09-11"
+    },
+    {
+      "pais": "",
+      "liga": "Bolivian Liga Profesional",
+      "liga_id": "620",
+      "veces_visto": 4,
+      "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
+      "fixture_id": "401906485",
       "ultimo_visto": "2026-09-11"
     },
     {
@@ -174,15 +219,6 @@
     },
     {
       "pais": "",
-      "liga": "NWSL",
-      "liga_id": "8301",
-      "veces_visto": 3,
-      "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
-      "fixture_id": "401853996",
-      "ultimo_visto": "2026-09-11"
-    },
-    {
-      "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals - 1st Leg",
       "liga_id": "22947",
       "veces_visto": 2,
@@ -201,45 +237,9 @@
     },
     {
       "pais": "",
-      "liga": "USL Championship",
-      "liga_id": "4002",
-      "veces_visto": 2,
-      "ejemplo_partido": "New Mexico United vs Indy Eleven",
-      "fixture_id": "401842218",
-      "ultimo_visto": "2026-09-11"
-    },
-    {
-      "pais": "",
-      "liga": "USL League One",
-      "liga_id": "19915",
-      "veces_visto": 2,
-      "ejemplo_partido": "One Knoxville vs FC Naples",
-      "fixture_id": "401842107",
-      "ultimo_visto": "2026-09-11"
-    },
-    {
-      "pais": "",
-      "liga": "Argentine Primera B",
-      "liga_id": "3904",
-      "veces_visto": 2,
-      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
-      "fixture_id": "401845087",
-      "ultimo_visto": "2026-09-11"
-    },
-    {
-      "pais": "",
-      "liga": "Bolivian Liga Profesional",
-      "liga_id": "620",
-      "veces_visto": 2,
-      "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
-      "fixture_id": "401906485",
-      "ultimo_visto": "2026-09-11"
-    },
-    {
-      "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-09-11"
@@ -248,7 +248,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-09-11"
@@ -257,7 +257,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-09-11"
@@ -266,7 +266,7 @@
       "pais": "",
       "liga": "Scottish League Cup, Quarterfinals",
       "liga_id": "5330",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "Stenhousemuir vs Heart of Midlothian",
       "fixture_id": "401909668",
       "ultimo_visto": "2026-09-11"
@@ -275,7 +275,7 @@
       "pais": "",
       "liga": "Austrian Bundesliga",
       "liga_id": "3907",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
       "fixture_id": "401881790",
       "ultimo_visto": "2026-09-11"
@@ -284,7 +284,7 @@
       "pais": "",
       "liga": "Scottish Cup Qualifying, Preliminary Round Three",
       "liga_id": "24457",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "ST CADOC'S vs Glasgow University",
       "fixture_id": "401914087",
       "ultimo_visto": "2026-09-11"
@@ -293,7 +293,7 @@
       "pais": "",
       "liga": "Honduran Liga Nacional",
       "liga_id": "3929",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "CD Estrella Roja vs Platense",
       "fixture_id": "401915261",
       "ultimo_visto": "2026-09-11"
@@ -302,7 +302,7 @@
       "pais": "",
       "liga": "Liga FPD",
       "liga_id": "4005",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
       "fixture_id": "401876853",
       "ultimo_visto": "2026-09-11"

@@ -62621,44 +62621,5 @@
       "es_destacado": true,
       "grupo_destacado": 1
     }
-  ],
-  "predicciones_activas": {
-    "401886205": {
-      "cuidado_rival_presiona": {
-        "minuto": "90'+3'",
-        "prediccion": "rival",
-        "equipo": "Juan Pablo II"
-      }
-    }
-  },
-  "historial_predicciones": {
-    "alerta_1er_tiempo": {
-      "total": 12,
-      "aciertos": 9
-    },
-    "posible_victoria_favorito": {
-      "total": 15,
-      "aciertos": 9
-    },
-    "posible_empate": {
-      "total": 5,
-      "aciertos": 5
-    },
-    "cuidado_rival_presiona": {
-      "total": 12,
-      "aciertos": 6
-    },
-    "ampliacion_marcador": {
-      "total": 2,
-      "aciertos": 0
-    },
-    "gol_de_cierre": {
-      "total": 4,
-      "aciertos": 3
-    },
-    "value_alert": {
-      "total": 1,
-      "aciertos": 1
-    }
-  }
+  ]
 }
