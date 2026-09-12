@@ -55824,6 +55824,71 @@
             "effectiveClearance": "0",
             "totalClearance": "14"
           }
+        },
+        {
+          "minuto": "45'+2'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "5",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "5",
+            "saves": "2",
+            "possessionPct": "49.5",
+            "totalShots": "3",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "147",
+            "totalPasses": "180",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "5",
+            "totalTackles": "6",
+            "tacklePct": "0.8",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "13"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "3",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "0",
+            "possessionPct": "50.5",
+            "totalShots": "6",
+            "shotsOnTarget": "2",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "153",
+            "totalPasses": "187",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "4",
+            "totalTackles": "7",
+            "tacklePct": "0.6",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "13"
+          }
         }
       ],
       "alertas_enviadas": [],
@@ -56179,9 +56244,81 @@
             "effectiveClearance": "2",
             "totalClearance": "2"
           }
+        },
+        {
+          "minuto": "27'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "3",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "59.7",
+            "totalShots": "5",
+            "shotsOnTarget": "3",
+            "shotPct": "0.6",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "137",
+            "totalPasses": "156",
+            "passPct": "0.9",
+            "accurateCrosses": "4",
+            "totalCrosses": "6",
+            "crossPct": "0.7",
+            "totalLongBalls": "21",
+            "accurateLongBalls": "12",
+            "longballPct": "0.6",
+            "blockedShots": "1",
+            "effectiveTackles": "1",
+            "totalTackles": "3",
+            "tacklePct": "0.3",
+            "interceptions": "3",
+            "effectiveClearance": "2",
+            "totalClearance": "2"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "1",
+            "possessionPct": "40.3",
+            "totalShots": "2",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "83",
+            "totalPasses": "107",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "3",
+            "crossPct": "0.0",
+            "totalLongBalls": "12",
+            "accurateLongBalls": "4",
+            "longballPct": "0.3",
+            "blockedShots": "0",
+            "effectiveTackles": "3",
+            "totalTackles": "4",
+            "tacklePct": "0.8",
+            "interceptions": "3",
+            "effectiveClearance": "5",
+            "totalClearance": "5"
+          }
         }
       ],
-      "alertas_enviadas": [],
+      "alertas_enviadas": [
+        {
+          "tipo": "value_alert",
+          "minuto": "27'",
+          "texto": "💡 PISTA\nBoca Juniors domina inesperado",
+          "diferencia_goles": 2
+        }
+      ],
       "diferencia_maxima_alcanzada": 0
     },
     {
@@ -56483,6 +56620,13 @@
         "minuto": "90'+3'",
         "prediccion": "rival",
         "equipo": "Juan Pablo II"
+      }
+    },
+    "401841557": {
+      "value_alert": {
+        "minuto": "27'",
+        "prediccion": "fav",
+        "equipo": "Boca Juniors"
       }
     }
   },
