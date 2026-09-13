@@ -7518,8 +7518,22 @@
     ]
   },
   "3457_bra.1_2026": {
-    "fecha_cache": "2026-08-29T05:22:13.679803",
+    "fecha_cache": "2026-09-13T20:22:50.096123",
     "historial": [
+      {
+        "fecha": "2026-09-07",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-08-29",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-08-23",
         "goles_favor": 0,
@@ -32496,8 +32510,15 @@
     ]
   },
   "9169_bra.1_2026": {
-    "fecha_cache": "2026-09-06T13:44:20.959046",
+    "fecha_cache": "2026-09-13T20:22:49.850795",
     "historial": [
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-02",
         "goles_favor": 0,
