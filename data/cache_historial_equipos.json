@@ -16621,8 +16621,22 @@
     ]
   },
   "8110_chi.1_2026": {
-    "fecha_cache": "2026-08-30T01:38:19.050821",
+    "fecha_cache": "2026-09-13T21:13:40.976532",
     "historial": [
+      {
+        "fecha": "2026-09-05",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-08-30",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-08-23",
         "goles_favor": 1,
@@ -33286,8 +33300,15 @@
     ]
   },
   "2688_chi.1_2026": {
-    "fecha_cache": "2026-09-06T13:44:43.175234",
+    "fecha_cache": "2026-09-13T21:13:40.132113",
     "historial": [
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-08-30",
         "goles_favor": 5,
