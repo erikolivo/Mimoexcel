@@ -3799,8 +3799,22 @@
     ]
   },
   "17534_esp.2_2026": {
-    "fecha_cache": "2026-08-29T05:21:57.022721",
+    "fecha_cache": "2026-09-13T19:16:49.386953",
     "historial": [
+      {
+        "fecha": "2026-09-04",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-29",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-08-22",
         "goles_favor": 1,
@@ -118659,6 +118673,39 @@
         "fecha": "2026-08-23",
         "goles_favor": 1,
         "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      }
+    ]
+  },
+  "245_esp.2_2026": {
+    "fecha_cache": "2026-09-13T19:16:49.152322",
+    "historial": [
+      {
+        "fecha": "2026-09-05",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-28",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-08-23",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-08-16",
+        "goles_favor": 3,
+        "goles_contra": 1,
         "es_local": false,
         "resultado": "V"
       }
