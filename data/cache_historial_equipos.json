@@ -118611,5 +118611,57 @@
         "resultado": "D"
       }
     ]
+  },
+  "3997_ita.1_2026": {
+    "fecha_cache": "2026-09-13T19:06:37.218161",
+    "historial": [
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-29",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-08-23",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D"
+      }
+    ]
+  },
+  "111_ita.1_2026": {
+    "fecha_cache": "2026-09-13T19:06:37.429372",
+    "historial": [
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-29",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-08-23",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      }
+    ]
   }
 }
