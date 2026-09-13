@@ -118543,5 +118543,52 @@
         "resultado": "E"
       }
     ]
+  },
+  "21965_ksa.1_2026": {
+    "fecha_cache": "2026-09-13T18:25:52.553751",
+    "historial": [
+      {
+        "fecha": "2026-09-07",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-09-04",
+        "goles_favor": 0,
+        "goles_contra": 5,
+        "es_local": false,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-08-28",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-08-25",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-21",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-08-14",
+        "goles_favor": 2,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D"
+      }
+    ]
   }
 }
