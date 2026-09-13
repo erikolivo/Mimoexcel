@@ -3858,8 +3858,15 @@
     ]
   },
   "17086_ecu.1_2026": {
-    "fecha_cache": "2026-09-05T13:29:46.499410",
+    "fecha_cache": "2026-09-13T23:15:37.276804",
     "historial": [
+      {
+        "fecha": "2026-09-05",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-03",
         "goles_favor": 1,
@@ -26847,8 +26854,15 @@
     ]
   },
   "21843_ecu.1_2026": {
-    "fecha_cache": "2026-09-06T13:44:51.501574",
+    "fecha_cache": "2026-09-13T23:15:36.269496",
     "historial": [
+      {
+        "fecha": "2026-09-07",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-04",
         "goles_favor": 1,
