@@ -15645,8 +15645,15 @@
     ]
   },
   "11487_esp.2_2026": {
-    "fecha_cache": "2026-08-30T01:37:40.791434",
+    "fecha_cache": "2026-09-13T17:41:39.209086",
     "historial": [
+      {
+        "fecha": "2026-09-07",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-08-29",
         "goles_favor": 1,
@@ -77231,8 +77238,15 @@
     ]
   },
   "84_esp.2_2026": {
-    "fecha_cache": "2026-09-05T13:29:41.983318",
+    "fecha_cache": "2026-09-13T17:41:38.982744",
     "historial": [
+      {
+        "fecha": "2026-09-05",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-08-30",
         "goles_favor": 3,
