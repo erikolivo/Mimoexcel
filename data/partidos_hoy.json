@@ -52326,35 +52326,6 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
-      "partido": "Richmond Kickers vs Chattanooga Red Wolves",
-      "local": "Richmond Kickers",
-      "visitante": "Chattanooga Red Wolves",
-      "favorito": "Chattanooga Red Wolves",
-      "no_favorito": "Richmond Kickers",
-      "favorito_es_local": false,
-      "tipo_pronostico": "doble_oportunidad",
-      "confianza_estrellas": 1,
-      "cuota_local_inicial": 2.62,
-      "cuota_empate_inicial": 3.5,
-      "cuota_visitante_inicial": 2.2,
-      "prioridad": "BAJA",
-      "fuente_favorito": "Google Sheets",
-      "fila_fuente": 15196,
-      "hora_inicio": "2026-09-12T22:00Z",
-      "fixture_id": "401842112",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "USL League One",
-      "home_id": "17545",
-      "away_id": "20000",
-      "kickoff_utc": "2026-09-12T22:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Talleres (Córdoba) vs Unión (Santa Fe)",
       "local": "Talleres (Córdoba)",
       "visitante": "Unión (Santa Fe)",
@@ -54235,35 +54206,6 @@
       "liga_nombre": "USL Championship",
       "home_id": "19405",
       "away_id": "9729",
-      "kickoff_utc": "2026-09-12T23:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
-      "partido": "Charlotte Independence vs Westchester SC",
-      "local": "Charlotte Independence",
-      "visitante": "Westchester SC",
-      "favorito": "Charlotte Independence",
-      "no_favorito": "Westchester SC",
-      "favorito_es_local": true,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 1,
-      "cuota_local_inicial": 1.53,
-      "cuota_empate_inicial": 4.2,
-      "cuota_visitante_inicial": 4.5,
-      "prioridad": "ALTA",
-      "fuente_favorito": "Google Sheets",
-      "fila_fuente": 16574,
-      "hora_inicio": "2026-09-12T23:00Z",
-      "fixture_id": "401842109",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "USL League One",
-      "home_id": "17826",
-      "away_id": "22524",
       "kickoff_utc": "2026-09-12T23:00Z",
       "resultado_final": null,
       "acierto": null,
@@ -56981,6 +56923,35 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "aviso_final_enviado": true
+    },
+    {
+      "partido": "Richmond Kickers vs Chattanooga Red Wolves",
+      "local": "Richmond Kickers",
+      "visitante": "Chattanooga Red Wolves",
+      "favorito": "Chattanooga Red Wolves",
+      "no_favorito": "Richmond Kickers",
+      "favorito_es_local": false,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 1,
+      "cuota_local_inicial": 2.62,
+      "cuota_empate_inicial": 3.5,
+      "cuota_visitante_inicial": 2.2,
+      "prioridad": "BAJA",
+      "fuente_favorito": "Google Sheets",
+      "fila_fuente": 15196,
+      "hora_inicio": "2026-09-12T22:00Z",
+      "fixture_id": "401842112",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "USL League One",
+      "home_id": "17545",
+      "away_id": "20000",
+      "kickoff_utc": "2026-09-12T22:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
     },
     {
       "partido": "Botafogo vs Red Bull Bragantino",
@@ -64616,6 +64587,35 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "aviso_final_enviado": true
+    },
+    {
+      "partido": "Charlotte Independence vs Westchester SC",
+      "local": "Charlotte Independence",
+      "visitante": "Westchester SC",
+      "favorito": "Charlotte Independence",
+      "no_favorito": "Westchester SC",
+      "favorito_es_local": true,
+      "tipo_pronostico": "favorito_directo",
+      "confianza_estrellas": 1,
+      "cuota_local_inicial": 1.53,
+      "cuota_empate_inicial": 4.2,
+      "cuota_visitante_inicial": 4.5,
+      "prioridad": "ALTA",
+      "fuente_favorito": "Google Sheets",
+      "fila_fuente": 16574,
+      "hora_inicio": "2026-09-12T23:00Z",
+      "fixture_id": "401842109",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "USL League One",
+      "home_id": "17826",
+      "away_id": "22524",
+      "kickoff_utc": "2026-09-12T23:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
     },
     {
       "partido": "Santos vs Cruzeiro",
@@ -77860,67 +77860,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {
-    "401899624": {
-      "alerta_1er_tiempo": {
-        "minuto": "37'",
-        "prediccion": "fav",
-        "equipo": "Vicenza"
-      }
-    },
-    "401899622": {
-      "cuidado_rival_presiona": {
-        "minuto": "35'",
-        "prediccion": "rival",
-        "equipo": "Ascoli"
-      }
-    },
-    "761802": {
-      "posible_empate": {
-        "minuto": "60'",
-        "prediccion": "fav",
-        "equipo": "FC Cincinnati"
-      },
-      "gol_de_cierre": {
-        "minuto": "90'",
-        "prediccion": "fav",
-        "equipo": "FC Cincinnati"
-      }
-    },
-    "761801": {},
-    "761805": {},
-    "761807": {},
-    "761809": {}
-  },
-  "historial_predicciones": {
-    "cuidado_rival_presiona": {
-      "total": 19,
-      "aciertos": 8
-    },
-    "alerta_1er_tiempo": {
-      "total": 13,
-      "aciertos": 7
-    },
-    "posible_empate": {
-      "total": 7,
-      "aciertos": 5
-    },
-    "gol_de_cierre": {
-      "total": 4,
-      "aciertos": 2
-    },
-    "posible_victoria_favorito": {
-      "total": 14,
-      "aciertos": 8
-    },
-    "value_alert": {
-      "total": 4,
-      "aciertos": 3
-    },
-    "ampliacion_marcador": {
-      "total": 3,
-      "aciertos": 2
-    }
-  }
+  ]
 }

@@ -30,6 +30,15 @@
     },
     {
       "pais": "",
+      "liga": "USL Championship",
+      "liga_id": "4002",
+      "veces_visto": 24,
+      "ejemplo_partido": "New Mexico United vs Indy Eleven",
+      "fixture_id": "401842218",
+      "ultimo_visto": "2026-09-12"
+    },
+    {
+      "pais": "",
       "liga": "Guatemalan Liga Nacional",
       "liga_id": "3928",
       "veces_visto": 15,
@@ -39,11 +48,29 @@
     },
     {
       "pais": "",
-      "liga": "USL Championship",
-      "liga_id": "4002",
+      "liga": "Liga de Expansión MX",
+      "liga_id": "3932",
       "veces_visto": 14,
-      "ejemplo_partido": "New Mexico United vs Indy Eleven",
-      "fixture_id": "401842218",
+      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
+      "fixture_id": "401886377",
+      "ultimo_visto": "2026-09-12"
+    },
+    {
+      "pais": "",
+      "liga": "USL League One",
+      "liga_id": "19915",
+      "veces_visto": 14,
+      "ejemplo_partido": "One Knoxville vs FC Naples",
+      "fixture_id": "401842107",
+      "ultimo_visto": "2026-09-12"
+    },
+    {
+      "pais": "",
+      "liga": "Club Friendly",
+      "liga_id": "19834",
+      "veces_visto": 13,
+      "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
+      "fixture_id": "401914230",
       "ultimo_visto": "2026-09-12"
     },
     {
@@ -57,38 +84,20 @@
     },
     {
       "pais": "",
-      "liga": "Club Friendly",
-      "liga_id": "19834",
-      "veces_visto": 12,
-      "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
-      "fixture_id": "401914230",
-      "ultimo_visto": "2026-09-12"
-    },
-    {
-      "pais": "",
-      "liga": "Liga de Expansión MX",
-      "liga_id": "3932",
-      "veces_visto": 10,
-      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
-      "fixture_id": "401886377",
-      "ultimo_visto": "2026-09-12"
-    },
-    {
-      "pais": "",
       "liga": "NWSL",
       "liga_id": "8301",
-      "veces_visto": 9,
+      "veces_visto": 12,
       "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
       "fixture_id": "401853996",
       "ultimo_visto": "2026-09-12"
     },
     {
       "pais": "",
-      "liga": "USL League One",
-      "liga_id": "19915",
-      "veces_visto": 9,
-      "ejemplo_partido": "One Knoxville vs FC Naples",
-      "fixture_id": "401842107",
+      "liga": "Première Ligue",
+      "liga_id": "20955",
+      "veces_visto": 12,
+      "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
+      "fixture_id": "401885667",
       "ultimo_visto": "2026-09-12"
     },
     {
@@ -129,11 +138,20 @@
     },
     {
       "pais": "",
-      "liga": "Première Ligue",
-      "liga_id": "20955",
-      "veces_visto": 7,
-      "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
-      "fixture_id": "401885667",
+      "liga": "Liga F",
+      "liga_id": "20956",
+      "veces_visto": 8,
+      "ejemplo_partido": "Deportivo vs Real Madrid",
+      "fixture_id": "401882522",
+      "ultimo_visto": "2026-09-12"
+    },
+    {
+      "pais": "",
+      "liga": "Scottish League Cup, Quarterfinals",
+      "liga_id": "5330",
+      "veces_visto": 6,
+      "ejemplo_partido": "Stenhousemuir vs Heart of Midlothian",
+      "fixture_id": "401909668",
       "ultimo_visto": "2026-09-12"
     },
     {
@@ -174,15 +192,6 @@
     },
     {
       "pais": "",
-      "liga": "Liga F",
-      "liga_id": "20956",
-      "veces_visto": 5,
-      "ejemplo_partido": "Deportivo vs Real Madrid",
-      "fixture_id": "401882522",
-      "ultimo_visto": "2026-09-12"
-    },
-    {
-      "pais": "",
       "liga": "USL Cup, Semifinals",
       "liga_id": "22059",
       "veces_visto": 4,
@@ -219,11 +228,20 @@
     },
     {
       "pais": "",
-      "liga": "Scottish League Cup, Quarterfinals",
-      "liga_id": "5330",
+      "liga": "Northern Super League",
+      "liga_id": "23286",
       "veces_visto": 4,
-      "ejemplo_partido": "Stenhousemuir vs Heart of Midlothian",
-      "fixture_id": "401909668",
+      "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
+      "fixture_id": "401859943",
+      "ultimo_visto": "2026-09-12"
+    },
+    {
+      "pais": "",
+      "liga": "USL Super League",
+      "liga_id": "23633",
+      "veces_visto": 4,
+      "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
+      "fixture_id": "401878641",
       "ultimo_visto": "2026-09-12"
     },
     {
@@ -243,24 +261,6 @@
       "ejemplo_partido": "Deportivo Riestra vs Banfield",
       "fixture_id": "401912728",
       "ultimo_visto": "2026-09-09"
-    },
-    {
-      "pais": "",
-      "liga": "Northern Super League",
-      "liga_id": "23286",
-      "veces_visto": 3,
-      "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
-      "fixture_id": "401859943",
-      "ultimo_visto": "2026-09-12"
-    },
-    {
-      "pais": "",
-      "liga": "USL Super League",
-      "liga_id": "23633",
-      "veces_visto": 3,
-      "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
-      "fixture_id": "401878641",
-      "ultimo_visto": "2026-09-12"
     },
     {
       "pais": "",
@@ -311,7 +311,7 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 1,
+      "veces_visto": 2,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
       "ultimo_visto": "2026-09-12"
