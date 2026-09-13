@@ -78561,8 +78561,15 @@
     ]
   },
   "2919_col.1_2026": {
-    "fecha_cache": "2026-09-05T13:29:44.572971",
+    "fecha_cache": "2026-09-13T23:51:16.274053",
     "historial": [
+      {
+        "fecha": "2026-09-05",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-02",
         "goles_favor": 2,
