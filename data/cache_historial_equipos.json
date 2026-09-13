@@ -2180,7 +2180,7 @@
     ]
   },
   "11336_rus.1_2026": {
-    "fecha_cache": "2026-09-05T13:28:59.978325",
+    "fecha_cache": "2026-09-13T17:56:55.215488",
     "historial": [
       {
         "fecha": "2026-09-05",
@@ -117577,6 +117577,60 @@
         "goles_contra": 0,
         "es_local": true,
         "resultado": "V"
+      }
+    ]
+  },
+  "22271_rus.1_2026": {
+    "fecha_cache": "2026-09-13T17:56:55.420146",
+    "historial": [
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-28",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-23",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-08-15",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-08",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-01",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-07-25",
+        "goles_favor": 0,
+        "goles_contra": 5,
+        "es_local": true,
+        "resultado": "D"
       }
     ]
   }
