@@ -101349,7 +101349,8 @@
           "diferencia_goles": -1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "San Diego FC vs Philadelphia Union",
@@ -102740,6 +102741,71 @@
             "interceptions": "17",
             "effectiveClearance": "27",
             "totalClearance": "27"
+          }
+        },
+        {
+          "minuto": "87'",
+          "goles_local": 0,
+          "goles_visitante": 3,
+          "stats_local": {
+            "foulsCommitted": "12",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "11",
+            "saves": "1",
+            "possessionPct": "59.5",
+            "totalShots": "10",
+            "shotsOnTarget": "5",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "438",
+            "totalPasses": "516",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "23",
+            "crossPct": "0.1",
+            "totalLongBalls": "36",
+            "accurateLongBalls": "21",
+            "longballPct": "0.6",
+            "blockedShots": "1",
+            "effectiveTackles": "7",
+            "totalTackles": "13",
+            "tacklePct": "0.5",
+            "interceptions": "9",
+            "effectiveClearance": "16",
+            "totalClearance": "16"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "15",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "4",
+            "saves": "5",
+            "possessionPct": "40.5",
+            "totalShots": "18",
+            "shotsOnTarget": "4",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "280",
+            "totalPasses": "355",
+            "passPct": "0.8",
+            "accurateCrosses": "5",
+            "totalCrosses": "13",
+            "crossPct": "0.4",
+            "totalLongBalls": "49",
+            "accurateLongBalls": "15",
+            "longballPct": "0.3",
+            "blockedShots": "3",
+            "effectiveTackles": "9",
+            "totalTackles": "15",
+            "tacklePct": "0.6",
+            "interceptions": "17",
+            "effectiveClearance": "29",
+            "totalClearance": "29"
           }
         }
       ],
@@ -104173,6 +104239,71 @@
             "effectiveClearance": "16",
             "totalClearance": "16"
           }
+        },
+        {
+          "minuto": "88'",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "stats_local": {
+            "foulsCommitted": "7",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "5",
+            "saves": "6",
+            "possessionPct": "46.1",
+            "totalShots": "11",
+            "shotsOnTarget": "6",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "219",
+            "totalPasses": "291",
+            "passPct": "0.8",
+            "accurateCrosses": "4",
+            "totalCrosses": "17",
+            "crossPct": "0.2",
+            "totalLongBalls": "61",
+            "accurateLongBalls": "26",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "7",
+            "totalTackles": "8",
+            "tacklePct": "0.9",
+            "interceptions": "6",
+            "effectiveClearance": "20",
+            "totalClearance": "20"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "8",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "4",
+            "wonCorners": "5",
+            "saves": "5",
+            "possessionPct": "53.9",
+            "totalShots": "16",
+            "shotsOnTarget": "8",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "269",
+            "totalPasses": "346",
+            "passPct": "0.8",
+            "accurateCrosses": "4",
+            "totalCrosses": "14",
+            "crossPct": "0.3",
+            "totalLongBalls": "66",
+            "accurateLongBalls": "39",
+            "longballPct": "0.6",
+            "blockedShots": "1",
+            "effectiveTackles": "6",
+            "totalTackles": "9",
+            "tacklePct": "0.7",
+            "interceptions": "5",
+            "effectiveClearance": "17",
+            "totalClearance": "17"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -104215,13 +104346,6 @@
         "minuto": "75'",
         "prediccion": "fav",
         "equipo": "Vancouver Whitecaps"
-      }
-    },
-    "401876976": {
-      "cuidado_rival_presiona": {
-        "minuto": "90'+3'",
-        "prediccion": "rival",
-        "equipo": "Santos"
       }
     },
     "761814": {},
