@@ -104450,7 +104450,8 @@
           "diferencia_goles": 0
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     }
   ],
   "predicciones_activas": {
@@ -104478,8 +104479,7 @@
         "equipo": "Vancouver Whitecaps"
       }
     },
-    "761814": {},
-    "401878022": {}
+    "761814": {}
   },
   "historial_predicciones": {
     "cuidado_rival_presiona": {
