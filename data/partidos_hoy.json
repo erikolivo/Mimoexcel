@@ -23141,7 +23141,8 @@
           "diferencia_goles": 0
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Banfield vs Barracas Central",
@@ -23445,8 +23446,7 @@
     }
   ],
   "predicciones_activas": {
-    "401874021": {},
-    "401885445": {}
+    "401874021": {}
   },
   "historial_predicciones": {
     "alerta_1er_tiempo": {
