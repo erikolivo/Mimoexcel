@@ -22959,6 +22959,71 @@
             "effectiveClearance": "15",
             "totalClearance": "15"
           }
+        },
+        {
+          "minuto": "87'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "7",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "4",
+            "saves": "1",
+            "possessionPct": "56.5",
+            "totalShots": "17",
+            "shotsOnTarget": "6",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "468",
+            "totalPasses": "542",
+            "passPct": "0.9",
+            "accurateCrosses": "3",
+            "totalCrosses": "13",
+            "crossPct": "0.2",
+            "totalLongBalls": "40",
+            "accurateLongBalls": "22",
+            "longballPct": "0.6",
+            "blockedShots": "4",
+            "effectiveTackles": "8",
+            "totalTackles": "16",
+            "tacklePct": "0.5",
+            "interceptions": "7",
+            "effectiveClearance": "14",
+            "totalClearance": "14"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "1",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "4",
+            "possessionPct": "43.5",
+            "totalShots": "12",
+            "shotsOnTarget": "1",
+            "shotPct": "0.1",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "349",
+            "totalPasses": "422",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "3",
+            "crossPct": "0.7",
+            "totalLongBalls": "70",
+            "accurateLongBalls": "37",
+            "longballPct": "0.5",
+            "blockedShots": "6",
+            "effectiveTackles": "8",
+            "totalTackles": "12",
+            "tacklePct": "0.7",
+            "interceptions": "12",
+            "effectiveClearance": "17",
+            "totalClearance": "17"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -23316,40 +23381,24 @@
   ],
   "predicciones_activas": {
     "401874021": {},
-    "401885445": {
-      "alerta_1er_tiempo": {
-        "minuto": "15'",
-        "prediccion": "fav",
-        "equipo": "Braga"
-      },
-      "posible_victoria_favorito": {
-        "minuto": "52'",
-        "prediccion": "fav",
-        "equipo": "Braga"
-      },
-      "value_alert": {
-        "minuto": "25'",
-        "prediccion": "fav",
-        "equipo": "Braga"
-      }
-    }
+    "401885445": {}
   },
   "historial_predicciones": {
     "alerta_1er_tiempo": {
-      "total": 6,
-      "aciertos": 6
+      "total": 7,
+      "aciertos": 7
     },
     "posible_victoria_favorito": {
-      "total": 6,
-      "aciertos": 6
+      "total": 7,
+      "aciertos": 7
     },
     "ampliacion_marcador": {
       "total": 5,
       "aciertos": 5
     },
     "value_alert": {
-      "total": 1,
-      "aciertos": 1
+      "total": 2,
+      "aciertos": 2
     },
     "cuidado_rival_presiona": {
       "total": 2,
