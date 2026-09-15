@@ -35198,6 +35198,71 @@
             "effectiveClearance": "13",
             "totalClearance": "13"
           }
+        },
+        {
+          "minuto": "70'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "5",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "4",
+            "saves": "1",
+            "possessionPct": "45",
+            "totalShots": "17",
+            "shotsOnTarget": "6",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "271",
+            "totalPasses": "317",
+            "passPct": "0.9",
+            "accurateCrosses": "5",
+            "totalCrosses": "14",
+            "crossPct": "0.4",
+            "totalLongBalls": "34",
+            "accurateLongBalls": "18",
+            "longballPct": "0.5",
+            "blockedShots": "4",
+            "effectiveTackles": "9",
+            "totalTackles": "10",
+            "tacklePct": "0.9",
+            "interceptions": "10",
+            "effectiveClearance": "6",
+            "totalClearance": "6"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "6",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "5",
+            "possessionPct": "55",
+            "totalShots": "11",
+            "shotsOnTarget": "1",
+            "shotPct": "0.1",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "356",
+            "totalPasses": "397",
+            "passPct": "0.9",
+            "accurateCrosses": "2",
+            "totalCrosses": "4",
+            "crossPct": "0.5",
+            "totalLongBalls": "31",
+            "accurateLongBalls": "17",
+            "longballPct": "0.5",
+            "blockedShots": "1",
+            "effectiveTackles": "7",
+            "totalTackles": "14",
+            "tacklePct": "0.5",
+            "interceptions": "8",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -35228,6 +35293,12 @@
         {
           "tipo": "ampliacion_marcador",
           "minuto": "55'",
+          "texto": "🔵 Proximo gol: Fav [MEDIA]",
+          "diferencia_goles": 1
+        },
+        {
+          "tipo": "ampliacion_marcador",
+          "minuto": "70'",
           "texto": "🔵 Proximo gol: Fav [MEDIA]",
           "diferencia_goles": 1
         }
@@ -36366,6 +36437,71 @@
             "effectiveClearance": "16",
             "totalClearance": "16"
           }
+        },
+        {
+          "minuto": "65'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "9",
+            "yellowCards": "2",
+            "redCards": "1",
+            "offsides": "0",
+            "wonCorners": "3",
+            "saves": "3",
+            "possessionPct": "55.7",
+            "totalShots": "7",
+            "shotsOnTarget": "1",
+            "shotPct": "0.1",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "303",
+            "totalPasses": "366",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "13",
+            "crossPct": "0.0",
+            "totalLongBalls": "42",
+            "accurateLongBalls": "20",
+            "longballPct": "0.5",
+            "blockedShots": "3",
+            "effectiveTackles": "7",
+            "totalTackles": "8",
+            "tacklePct": "0.9",
+            "interceptions": "5",
+            "effectiveClearance": "3",
+            "totalClearance": "3"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "1",
+            "possessionPct": "44.3",
+            "totalShots": "8",
+            "shotsOnTarget": "3",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "236",
+            "totalPasses": "291",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "6",
+            "crossPct": "0.3",
+            "totalLongBalls": "50",
+            "accurateLongBalls": "20",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "5",
+            "totalTackles": "6",
+            "tacklePct": "0.8",
+            "interceptions": "2",
+            "effectiveClearance": "17",
+            "totalClearance": "17"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -36403,6 +36539,12 @@
           "tipo": "cuidado_rival_presiona",
           "minuto": "60'",
           "texto": "⚠️ Rival domina",
+          "diferencia_goles": 0
+        },
+        {
+          "tipo": "no_fav_domina",
+          "minuto": "65'",
+          "texto": "📊 MERCADO SE EQUIVOCO\nDeportivo Pasto domina (cuota 7.50)\nz: 2.2 | Tiros: 3.0-1.0\nPosesión: 44%\nMarcador: 0-0",
           "diferencia_goles": 0
         }
       ],
@@ -36446,7 +36588,7 @@
     "401874021": {},
     "401876977": {
       "ampliacion_marcador": {
-        "minuto": "55'",
+        "minuto": "70'",
         "prediccion": "fav",
         "equipo": "León"
       }
