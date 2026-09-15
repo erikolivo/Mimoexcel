@@ -39628,7 +39628,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Liverpool vs Tottenham Hotspur",
@@ -41095,7 +41096,8 @@
           "diferencia_goles": 1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Reading vs Brentford",
@@ -42568,7 +42570,8 @@
           "diferencia_goles": 1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Fiorentina vs Pisa",
@@ -43693,6 +43696,71 @@
             "effectiveClearance": "12",
             "totalClearance": "12"
           }
+        },
+        {
+          "minuto": "63'",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "stats_local": {
+            "foulsCommitted": "15",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "2",
+            "possessionPct": "55.6",
+            "totalShots": "8",
+            "shotsOnTarget": "1",
+            "shotPct": "0.1",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "335",
+            "totalPasses": "371",
+            "passPct": "0.9",
+            "accurateCrosses": "2",
+            "totalCrosses": "12",
+            "crossPct": "0.2",
+            "totalLongBalls": "23",
+            "accurateLongBalls": "13",
+            "longballPct": "0.6",
+            "blockedShots": "2",
+            "effectiveTackles": "4",
+            "totalTackles": "10",
+            "tacklePct": "0.4",
+            "interceptions": "11",
+            "effectiveClearance": "14",
+            "totalClearance": "14"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "5",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "4",
+            "wonCorners": "5",
+            "saves": "1",
+            "possessionPct": "44.4",
+            "totalShots": "12",
+            "shotsOnTarget": "3",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "262",
+            "totalPasses": "294",
+            "passPct": "0.9",
+            "accurateCrosses": "4",
+            "totalCrosses": "14",
+            "crossPct": "0.3",
+            "totalLongBalls": "29",
+            "accurateLongBalls": "19",
+            "longballPct": "0.7",
+            "blockedShots": "1",
+            "effectiveTackles": "2",
+            "totalTackles": "8",
+            "tacklePct": "0.3",
+            "interceptions": "7",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -44009,7 +44077,6 @@
     }
   ],
   "predicciones_activas": {
-    "401914285": {},
     "401882872": {}
   },
   "historial_predicciones": {
