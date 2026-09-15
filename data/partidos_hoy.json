@@ -18643,7 +18643,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 1
+      "grupo_destacado": 1,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Falkirk vs Heart of Midlothian",
@@ -21680,7 +21681,8 @@
           "diferencia_goles": -1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Motherwell vs Aberdeen",
@@ -24675,7 +24677,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Aldershot Town vs Yeovil Town",
@@ -26207,7 +26210,8 @@
           "diferencia_goles": -1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Boston United vs Woking",
@@ -29193,7 +29197,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Harrogate Town vs AFC Fylde",
@@ -32186,7 +32191,8 @@
           "diferencia_goles": 0
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Southend United vs Tamworth",
@@ -33713,7 +33719,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 2
+      "grupo_destacado": 2,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Sutton United vs Eastleigh",
@@ -35238,7 +35245,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Wealdstone vs FC Halifax Town",
@@ -39487,6 +39495,71 @@
             "effectiveClearance": "16",
             "totalClearance": "16"
           }
+        },
+        {
+          "minuto": "85'",
+          "goles_local": 1,
+          "goles_visitante": 4,
+          "stats_local": {
+            "foulsCommitted": "10",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "3",
+            "wonCorners": "3",
+            "saves": "2",
+            "possessionPct": "41.2",
+            "totalShots": "7",
+            "shotsOnTarget": "2",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "310",
+            "totalPasses": "366",
+            "passPct": "0.8",
+            "accurateCrosses": "1",
+            "totalCrosses": "11",
+            "crossPct": "0.1",
+            "totalLongBalls": "45",
+            "accurateLongBalls": "27",
+            "longballPct": "0.6",
+            "blockedShots": "0",
+            "effectiveTackles": "15",
+            "totalTackles": "24",
+            "tacklePct": "0.6",
+            "interceptions": "10",
+            "effectiveClearance": "22",
+            "totalClearance": "22"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "10",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "1",
+            "possessionPct": "58.8",
+            "totalShots": "12",
+            "shotsOnTarget": "6",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "473",
+            "totalPasses": "531",
+            "passPct": "0.9",
+            "accurateCrosses": "0",
+            "totalCrosses": "4",
+            "crossPct": "0.0",
+            "totalLongBalls": "22",
+            "accurateLongBalls": "7",
+            "longballPct": "0.3",
+            "blockedShots": "6",
+            "effectiveTackles": "10",
+            "totalTackles": "14",
+            "tacklePct": "0.7",
+            "interceptions": "8",
+            "effectiveClearance": "17",
+            "totalClearance": "17"
+          }
         }
       ],
       "alertas_enviadas": [],
@@ -40812,6 +40885,71 @@
             "blockedShots": "5",
             "effectiveTackles": "10",
             "totalTackles": "16",
+            "tacklePct": "0.6",
+            "interceptions": "7",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          }
+        },
+        {
+          "minuto": "85'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "14",
+            "yellowCards": "3",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "4",
+            "saves": "2",
+            "possessionPct": "44.2",
+            "totalShots": "10",
+            "shotsOnTarget": "4",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "295",
+            "totalPasses": "351",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "12",
+            "crossPct": "0.2",
+            "totalLongBalls": "48",
+            "accurateLongBalls": "23",
+            "longballPct": "0.5",
+            "blockedShots": "4",
+            "effectiveTackles": "16",
+            "totalTackles": "22",
+            "tacklePct": "0.7",
+            "interceptions": "14",
+            "effectiveClearance": "27",
+            "totalClearance": "27"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "11",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "3",
+            "wonCorners": "6",
+            "saves": "2",
+            "possessionPct": "55.8",
+            "totalShots": "11",
+            "shotsOnTarget": "3",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "385",
+            "totalPasses": "443",
+            "passPct": "0.9",
+            "accurateCrosses": "3",
+            "totalCrosses": "17",
+            "crossPct": "0.2",
+            "totalLongBalls": "33",
+            "accurateLongBalls": "15",
+            "longballPct": "0.5",
+            "blockedShots": "5",
+            "effectiveTackles": "12",
+            "totalTackles": "19",
             "tacklePct": "0.6",
             "interceptions": "7",
             "effectiveClearance": "13",
@@ -42154,6 +42292,71 @@
             "effectiveClearance": "25",
             "totalClearance": "25"
           }
+        },
+        {
+          "minuto": "87'",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "stats_local": {
+            "foulsCommitted": "8",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "5",
+            "saves": "5",
+            "possessionPct": "29.7",
+            "totalShots": "17",
+            "shotsOnTarget": "3",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "184",
+            "totalPasses": "247",
+            "passPct": "0.7",
+            "accurateCrosses": "5",
+            "totalCrosses": "12",
+            "crossPct": "0.4",
+            "totalLongBalls": "49",
+            "accurateLongBalls": "17",
+            "longballPct": "0.3",
+            "blockedShots": "6",
+            "effectiveTackles": "10",
+            "totalTackles": "14",
+            "tacklePct": "0.7",
+            "interceptions": "10",
+            "effectiveClearance": "19",
+            "totalClearance": "19"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "10",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "5",
+            "saves": "2",
+            "possessionPct": "70.3",
+            "totalShots": "21",
+            "shotsOnTarget": "6",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "547",
+            "totalPasses": "604",
+            "passPct": "0.9",
+            "accurateCrosses": "5",
+            "totalCrosses": "18",
+            "crossPct": "0.3",
+            "totalLongBalls": "30",
+            "accurateLongBalls": "16",
+            "longballPct": "0.5",
+            "blockedShots": "5",
+            "effectiveTackles": "9",
+            "totalTackles": "10",
+            "tacklePct": "0.9",
+            "interceptions": "6",
+            "effectiveClearance": "26",
+            "totalClearance": "26"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -43165,6 +43368,71 @@
             "effectiveClearance": "9",
             "totalClearance": "9"
           }
+        },
+        {
+          "minuto": "53'",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "stats_local": {
+            "foulsCommitted": "13",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "2",
+            "possessionPct": "53.7",
+            "totalShots": "6",
+            "shotsOnTarget": "1",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "262",
+            "totalPasses": "290",
+            "passPct": "0.9",
+            "accurateCrosses": "2",
+            "totalCrosses": "10",
+            "crossPct": "0.2",
+            "totalLongBalls": "20",
+            "accurateLongBalls": "11",
+            "longballPct": "0.6",
+            "blockedShots": "2",
+            "effectiveTackles": "3",
+            "totalTackles": "8",
+            "tacklePct": "0.4",
+            "interceptions": "8",
+            "effectiveClearance": "14",
+            "totalClearance": "14"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "5",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "3",
+            "wonCorners": "4",
+            "saves": "1",
+            "possessionPct": "46.3",
+            "totalShots": "9",
+            "shotsOnTarget": "3",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "224",
+            "totalPasses": "248",
+            "passPct": "0.9",
+            "accurateCrosses": "2",
+            "totalCrosses": "12",
+            "crossPct": "0.2",
+            "totalLongBalls": "21",
+            "accurateLongBalls": "16",
+            "longballPct": "0.8",
+            "blockedShots": "0",
+            "effectiveTackles": "2",
+            "totalTackles": "7",
+            "tacklePct": "0.3",
+            "interceptions": "6",
+            "effectiveClearance": "10",
+            "totalClearance": "10"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -43481,23 +43749,6 @@
     }
   ],
   "predicciones_activas": {
-    "401878402": {
-      "cuidado_rival_presiona": {
-        "minuto": "56'",
-        "prediccion": "rival",
-        "equipo": "Kilmarnock"
-      },
-      "posible_empate": {
-        "minuto": "90'+2'",
-        "prediccion": "fav",
-        "equipo": "Hibernian"
-      },
-      "gol_de_cierre": {
-        "minuto": "77'",
-        "prediccion": "fav",
-        "equipo": "Hibernian"
-      }
-    },
     "401914285": {},
     "401882872": {}
   },
