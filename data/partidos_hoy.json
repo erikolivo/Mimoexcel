@@ -37278,7 +37278,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 3
+      "grupo_destacado": 3,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Antigua GFC vs Suchitepequez",
@@ -37313,14 +37314,7 @@
     }
   ],
   "predicciones_activas": {
-    "401874021": {},
-    "401877902": {
-      "cuidado_rival_presiona": {
-        "minuto": "90'+5'",
-        "prediccion": "rival",
-        "equipo": "Deportivo Pasto"
-      }
-    }
+    "401874021": {}
   },
   "historial_predicciones": {
     "alerta_1er_tiempo": {
