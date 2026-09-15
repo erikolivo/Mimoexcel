@@ -526,6 +526,71 @@
             "effectiveClearance": "5",
             "totalClearance": "5"
           }
+        },
+        {
+          "minuto": "27'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "0",
+            "possessionPct": "72",
+            "totalShots": "4",
+            "shotsOnTarget": "2",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "152",
+            "totalPasses": "179",
+            "passPct": "0.8",
+            "accurateCrosses": "1",
+            "totalCrosses": "4",
+            "crossPct": "0.3",
+            "totalLongBalls": "20",
+            "accurateLongBalls": "8",
+            "longballPct": "0.4",
+            "blockedShots": "2",
+            "effectiveTackles": "3",
+            "totalTackles": "5",
+            "tacklePct": "0.6",
+            "interceptions": "3",
+            "effectiveClearance": "0",
+            "totalClearance": "0"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "28",
+            "totalShots": "2",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "49",
+            "totalPasses": "68",
+            "passPct": "0.7",
+            "accurateCrosses": "2",
+            "totalCrosses": "4",
+            "crossPct": "0.5",
+            "totalLongBalls": "12",
+            "accurateLongBalls": "2",
+            "longballPct": "0.2",
+            "blockedShots": "0",
+            "effectiveTackles": "3",
+            "totalTackles": "6",
+            "tacklePct": "0.5",
+            "interceptions": "2",
+            "effectiveClearance": "9",
+            "totalClearance": "9"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -1718,13 +1783,12 @@
     }
   ],
   "predicciones_activas": {
-    "401882868": {
-      "value_alert": {
-        "minuto": "17'",
-        "prediccion": "fav",
-        "equipo": "Rayo Vallecano"
-      }
-    }
+    "401882868": {}
   },
-  "historial_predicciones": {}
+  "historial_predicciones": {
+    "value_alert": {
+      "total": 1,
+      "aciertos": 1
+    }
+  }
 }
