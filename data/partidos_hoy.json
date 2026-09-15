@@ -35133,6 +35133,71 @@
             "effectiveClearance": "13",
             "totalClearance": "13"
           }
+        },
+        {
+          "minuto": "65'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "5",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "4",
+            "saves": "1",
+            "possessionPct": "43.9",
+            "totalShots": "17",
+            "shotsOnTarget": "6",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "257",
+            "totalPasses": "302",
+            "passPct": "0.9",
+            "accurateCrosses": "5",
+            "totalCrosses": "13",
+            "crossPct": "0.4",
+            "totalLongBalls": "33",
+            "accurateLongBalls": "17",
+            "longballPct": "0.5",
+            "blockedShots": "4",
+            "effectiveTackles": "9",
+            "totalTackles": "10",
+            "tacklePct": "0.9",
+            "interceptions": "8",
+            "effectiveClearance": "6",
+            "totalClearance": "6"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "5",
+            "possessionPct": "56.1",
+            "totalShots": "11",
+            "shotsOnTarget": "1",
+            "shotPct": "0.1",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "356",
+            "totalPasses": "395",
+            "passPct": "0.9",
+            "accurateCrosses": "2",
+            "totalCrosses": "4",
+            "crossPct": "0.5",
+            "totalLongBalls": "31",
+            "accurateLongBalls": "17",
+            "longballPct": "0.5",
+            "blockedShots": "1",
+            "effectiveTackles": "7",
+            "totalTackles": "14",
+            "tacklePct": "0.5",
+            "interceptions": "7",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -36236,6 +36301,71 @@
             "effectiveClearance": "16",
             "totalClearance": "16"
           }
+        },
+        {
+          "minuto": "60'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "9",
+            "yellowCards": "2",
+            "redCards": "1",
+            "offsides": "0",
+            "wonCorners": "3",
+            "saves": "1",
+            "possessionPct": "57.4",
+            "totalShots": "6",
+            "shotsOnTarget": "1",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "293",
+            "totalPasses": "351",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "12",
+            "crossPct": "0.0",
+            "totalLongBalls": "38",
+            "accurateLongBalls": "19",
+            "longballPct": "0.5",
+            "blockedShots": "3",
+            "effectiveTackles": "7",
+            "totalTackles": "8",
+            "tacklePct": "0.9",
+            "interceptions": "5",
+            "effectiveClearance": "2",
+            "totalClearance": "2"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "7",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "1",
+            "possessionPct": "42.6",
+            "totalShots": "5",
+            "shotsOnTarget": "1",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "207",
+            "totalPasses": "260",
+            "passPct": "0.8",
+            "accurateCrosses": "1",
+            "totalCrosses": "5",
+            "crossPct": "0.2",
+            "totalLongBalls": "49",
+            "accurateLongBalls": "19",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "5",
+            "totalTackles": "6",
+            "tacklePct": "0.8",
+            "interceptions": "2",
+            "effectiveClearance": "16",
+            "totalClearance": "16"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -36267,6 +36397,12 @@
           "tipo": "tarjeta_roja",
           "minuto": "45'+5'",
           "texto": "🟥 Tarjeta roja para América de Cali.",
+          "diferencia_goles": 0
+        },
+        {
+          "tipo": "cuidado_rival_presiona",
+          "minuto": "60'",
+          "texto": "⚠️ Rival domina",
           "diferencia_goles": 0
         }
       ],
@@ -36325,6 +36461,11 @@
         "minuto": "39'",
         "prediccion": "fav",
         "equipo": "América de Cali"
+      },
+      "cuidado_rival_presiona": {
+        "minuto": "60'",
+        "prediccion": "rival",
+        "equipo": "Deportivo Pasto"
       }
     }
   },
