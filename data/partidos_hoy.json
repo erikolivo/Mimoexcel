@@ -44175,7 +44175,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 1
+      "grupo_destacado": 1,
+      "aviso_final_enviado": true
     },
     {
       "partido": "ABB vs The Strongest",
@@ -44472,9 +44473,7 @@
       "diferencia_maxima_alcanzada": 0
     }
   ],
-  "predicciones_activas": {
-    "401882872": {}
-  },
+  "predicciones_activas": {},
   "historial_predicciones": {
     "value_alert": {
       "total": 3,
