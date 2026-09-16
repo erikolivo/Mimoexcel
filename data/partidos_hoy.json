@@ -19884,7 +19884,8 @@
           "diferencia_goles": -2
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Anderlecht vs Lyon",
@@ -24381,7 +24382,8 @@
           "diferencia_goles": 0
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Olympiacos vs Jagiellonia Bialystok",
@@ -27465,7 +27467,8 @@
           "diferencia_goles": 0
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Sunderland vs AZ Alkmaar",
@@ -31998,7 +32001,8 @@
           "diferencia_goles": 1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Barcelona vs Racing Santander",
@@ -33065,6 +33069,71 @@
             "effectiveClearance": "26",
             "totalClearance": "26"
           }
+        },
+        {
+          "minuto": "62'",
+          "goles_local": 4,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "8",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "14",
+            "saves": "0",
+            "possessionPct": "68.1",
+            "totalShots": "22",
+            "shotsOnTarget": "6",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "2",
+            "accuratePasses": "395",
+            "totalPasses": "431",
+            "passPct": "0.9",
+            "accurateCrosses": "7",
+            "totalCrosses": "22",
+            "crossPct": "0.3",
+            "totalLongBalls": "21",
+            "accurateLongBalls": "14",
+            "longballPct": "0.7",
+            "blockedShots": "5",
+            "effectiveTackles": "1",
+            "totalTackles": "3",
+            "tacklePct": "0.3",
+            "interceptions": "6",
+            "effectiveClearance": "4",
+            "totalClearance": "4"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "8",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "3",
+            "possessionPct": "31.9",
+            "totalShots": "3",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "163",
+            "totalPasses": "204",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "3",
+            "crossPct": "0.7",
+            "totalLongBalls": "23",
+            "accurateLongBalls": "10",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "7",
+            "totalTackles": "8",
+            "tacklePct": "0.9",
+            "interceptions": "6",
+            "effectiveClearance": "28",
+            "totalClearance": "28"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -33767,53 +33836,11 @@
     }
   ],
   "predicciones_activas": {
-    "401915589": {
-      "alerta_1er_tiempo": {
-        "minuto": "18'",
-        "prediccion": "fav",
-        "equipo": "Dinamo Zagreb"
-      },
-      "posible_victoria_favorito": {
-        "minuto": "23'",
-        "prediccion": "fav",
-        "equipo": "Dinamo Zagreb"
-      },
-      "cuidado_rival_presiona": {
-        "minuto": "90'+3'",
-        "prediccion": "rival",
-        "equipo": "Hapoel Be'er"
-      }
-    },
-    "401915593": {
-      "alerta_1er_tiempo": {
-        "minuto": "17'",
-        "prediccion": "fav",
-        "equipo": "Stade Rennais"
-      },
-      "posible_victoria_favorito": {
-        "minuto": "69'",
-        "prediccion": "fav",
-        "equipo": "Stade Rennais"
-      },
-      "gol_de_cierre": {
-        "minuto": "79'",
-        "prediccion": "fav",
-        "equipo": "Stade Rennais"
-      }
-    },
-    "401914261": {},
     "401882871": {
       "ampliacion_marcador": {
         "minuto": "57'",
         "prediccion": "fav",
         "equipo": "Barcelona"
-      }
-    },
-    "401915586": {
-      "gol_de_cierre": {
-        "minuto": "79'",
-        "prediccion": "fav",
-        "equipo": "AC Milan"
       }
     }
   },
