@@ -1017,6 +1017,71 @@
             "effectiveClearance": "0",
             "totalClearance": "30"
           }
+        },
+        {
+          "minuto": "52'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "5",
+            "saves": "1",
+            "possessionPct": "74.3",
+            "totalShots": "15",
+            "shotsOnTarget": "3",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "284",
+            "totalPasses": "348",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "4",
+            "effectiveTackles": "1",
+            "totalTackles": "2",
+            "tacklePct": "0.5",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "8"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "12",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "3",
+            "possessionPct": "25.7",
+            "totalShots": "2",
+            "shotsOnTarget": "1",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "70",
+            "totalPasses": "121",
+            "passPct": "0.6",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "3",
+            "totalTackles": "7",
+            "tacklePct": "0.4",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "30"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -1041,6 +1106,12 @@
         {
           "tipo": "posible_victoria_favorito",
           "minuto": "40'",
+          "texto": "🟢 Gana Fav",
+          "diferencia_goles": 0
+        },
+        {
+          "tipo": "posible_victoria_favorito",
+          "minuto": "52'",
           "texto": "🟢 Gana Fav",
           "diferencia_goles": 0
         }
@@ -2553,7 +2624,7 @@
         "equipo": "Spartak Moscow"
       },
       "posible_victoria_favorito": {
-        "minuto": "40'",
+        "minuto": "52'",
         "prediccion": "fav",
         "equipo": "Spartak Moscow"
       }
