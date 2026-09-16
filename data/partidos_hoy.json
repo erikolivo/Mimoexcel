@@ -33548,7 +33548,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 1
+      "grupo_destacado": 1,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Levante vs Athletic Club",
@@ -34225,9 +34226,7 @@
       "diferencia_maxima_alcanzada": 0
     }
   ],
-  "predicciones_activas": {
-    "401882871": {}
-  },
+  "predicciones_activas": {},
   "historial_predicciones": {
     "cuidado_rival_presiona": {
       "total": 4,
