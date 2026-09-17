@@ -11218,7 +11218,8 @@
           "diferencia_goles": 0
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Celtic vs Ferencvaros",
@@ -17171,7 +17172,8 @@
           "diferencia_goles": -1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Real Sociedad vs AFC Bournemouth",
@@ -21238,6 +21240,71 @@
             "effectiveClearance": "7",
             "totalClearance": "7"
           }
+        },
+        {
+          "minuto": "68'",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "stats_local": {
+            "foulsCommitted": "11",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "3",
+            "possessionPct": "34.8",
+            "totalShots": "2",
+            "shotsOnTarget": "1",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "195",
+            "totalPasses": "249",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "5",
+            "crossPct": "0.0",
+            "totalLongBalls": "36",
+            "accurateLongBalls": "15",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "17",
+            "totalTackles": "19",
+            "tacklePct": "0.9",
+            "interceptions": "5",
+            "effectiveClearance": "22",
+            "totalClearance": "22"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "6",
+            "saves": "0",
+            "possessionPct": "65.2",
+            "totalShots": "12",
+            "shotsOnTarget": "6",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "421",
+            "totalPasses": "468",
+            "passPct": "0.9",
+            "accurateCrosses": "5",
+            "totalCrosses": "15",
+            "crossPct": "0.3",
+            "totalLongBalls": "39",
+            "accurateLongBalls": "25",
+            "longballPct": "0.6",
+            "blockedShots": "3",
+            "effectiveTackles": "4",
+            "totalTackles": "6",
+            "tacklePct": "0.7",
+            "interceptions": "6",
+            "effectiveClearance": "9",
+            "totalClearance": "9"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -21361,19 +21428,11 @@
     }
   ],
   "predicciones_activas": {
-    "401915591": {},
     "401882869": {
       "ampliacion_marcador": {
         "minuto": "45'+4'",
         "prediccion": "fav",
         "equipo": "Villarreal"
-      }
-    },
-    "401915570": {
-      "posible_empate": {
-        "minuto": "90'+4'",
-        "prediccion": "fav",
-        "equipo": "Lillestrom"
       }
     }
   },
