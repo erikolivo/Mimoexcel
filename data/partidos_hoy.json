@@ -11137,6 +11137,71 @@
             "effectiveClearance": "17",
             "totalClearance": "17"
           }
+        },
+        {
+          "minuto": "90'+2'",
+          "goles_local": 4,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "8",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "3",
+            "saves": "1",
+            "possessionPct": "54.6",
+            "totalShots": "18",
+            "shotsOnTarget": "7",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "442",
+            "totalPasses": "508",
+            "passPct": "0.9",
+            "accurateCrosses": "3",
+            "totalCrosses": "11",
+            "crossPct": "0.3",
+            "totalLongBalls": "52",
+            "accurateLongBalls": "29",
+            "longballPct": "0.6",
+            "blockedShots": "3",
+            "effectiveTackles": "10",
+            "totalTackles": "16",
+            "tacklePct": "0.6",
+            "interceptions": "8",
+            "effectiveClearance": "15",
+            "totalClearance": "15"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "12",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "3",
+            "saves": "3",
+            "possessionPct": "45.4",
+            "totalShots": "10",
+            "shotsOnTarget": "2",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "362",
+            "totalPasses": "420",
+            "passPct": "0.9",
+            "accurateCrosses": "2",
+            "totalCrosses": "11",
+            "crossPct": "0.2",
+            "totalLongBalls": "29",
+            "accurateLongBalls": "11",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "9",
+            "totalTackles": "15",
+            "tacklePct": "0.6",
+            "interceptions": "17",
+            "effectiveClearance": "17",
+            "totalClearance": "17"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -12632,7 +12697,8 @@
           "diferencia_goles": -1
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Crystal Palace vs Lech Poznan",
@@ -14099,7 +14165,8 @@
           "diferencia_goles": 4
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Juventus vs NEC Nijmegen",
@@ -15559,7 +15626,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Lillestrom vs Torreense",
@@ -17016,6 +17084,71 @@
             "effectiveClearance": "38",
             "totalClearance": "38"
           }
+        },
+        {
+          "minuto": "90'+4'",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "stats_local": {
+            "foulsCommitted": "14",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "10",
+            "saves": "1",
+            "possessionPct": "66.7",
+            "totalShots": "21",
+            "shotsOnTarget": "6",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "478",
+            "totalPasses": "553",
+            "passPct": "0.9",
+            "accurateCrosses": "4",
+            "totalCrosses": "20",
+            "crossPct": "0.2",
+            "totalLongBalls": "40",
+            "accurateLongBalls": "22",
+            "longballPct": "0.6",
+            "blockedShots": "7",
+            "effectiveTackles": "5",
+            "totalTackles": "11",
+            "tacklePct": "0.5",
+            "interceptions": "8",
+            "effectiveClearance": "7",
+            "totalClearance": "7"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "14",
+            "yellowCards": "3",
+            "redCards": "1",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "4",
+            "possessionPct": "33.3",
+            "totalShots": "11",
+            "shotsOnTarget": "3",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "209",
+            "totalPasses": "280",
+            "passPct": "0.7",
+            "accurateCrosses": "6",
+            "totalCrosses": "11",
+            "crossPct": "0.5",
+            "totalLongBalls": "63",
+            "accurateLongBalls": "26",
+            "longballPct": "0.4",
+            "blockedShots": "5",
+            "effectiveTackles": "9",
+            "totalTackles": "16",
+            "tacklePct": "0.6",
+            "interceptions": "12",
+            "effectiveClearance": "40",
+            "totalClearance": "40"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -17029,6 +17162,12 @@
           "tipo": "tarjeta_roja",
           "minuto": "89'",
           "texto": "🟥 Tarjeta roja para Torreense.",
+          "diferencia_goles": -1
+        },
+        {
+          "tipo": "posible_empate",
+          "minuto": "90'+4'",
+          "texto": "🟠 Gana Fav",
           "diferencia_goles": -1
         }
       ],
@@ -18492,7 +18631,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "AFC Wimbledon vs Milton Keynes Dons",
@@ -19965,7 +20105,8 @@
           "diferencia_goles": 0
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Málaga vs Villarreal",
@@ -21032,6 +21173,71 @@
             "effectiveClearance": "7",
             "totalClearance": "7"
           }
+        },
+        {
+          "minuto": "63'",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "stats_local": {
+            "foulsCommitted": "10",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "3",
+            "possessionPct": "34.7",
+            "totalShots": "1",
+            "shotsOnTarget": "1",
+            "shotPct": "1.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "181",
+            "totalPasses": "228",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "4",
+            "crossPct": "0.0",
+            "totalLongBalls": "33",
+            "accurateLongBalls": "15",
+            "longballPct": "0.5",
+            "blockedShots": "0",
+            "effectiveTackles": "15",
+            "totalTackles": "16",
+            "tacklePct": "0.9",
+            "interceptions": "5",
+            "effectiveClearance": "22",
+            "totalClearance": "22"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "6",
+            "saves": "0",
+            "possessionPct": "65.3",
+            "totalShots": "12",
+            "shotsOnTarget": "6",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "390",
+            "totalPasses": "430",
+            "passPct": "0.9",
+            "accurateCrosses": "5",
+            "totalCrosses": "14",
+            "crossPct": "0.4",
+            "totalLongBalls": "34",
+            "accurateLongBalls": "23",
+            "longballPct": "0.7",
+            "blockedShots": "3",
+            "effectiveTackles": "3",
+            "totalTackles": "5",
+            "tacklePct": "0.6",
+            "interceptions": "6",
+            "effectiveClearance": "7",
+            "totalClearance": "7"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -21155,25 +21361,19 @@
     }
   ],
   "predicciones_activas": {
-    "401915581": {},
-    "401880850": {
-      "cuidado_rival_presiona": {
-        "minuto": "18'",
-        "prediccion": "rival",
-        "equipo": "AFC Wimbledon"
-      },
-      "alerta_1er_tiempo": {
-        "minuto": "33'",
-        "prediccion": "fav",
-        "equipo": "Milton Keynes Dons"
-      }
-    },
     "401915591": {},
     "401882869": {
       "ampliacion_marcador": {
         "minuto": "45'+4'",
         "prediccion": "fav",
         "equipo": "Villarreal"
+      }
+    },
+    "401915570": {
+      "posible_empate": {
+        "minuto": "90'+4'",
+        "prediccion": "fav",
+        "equipo": "Lillestrom"
       }
     }
   },
