@@ -42199,36 +42199,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {
-    "cuidado_rival_presiona": {
-      "total": 4,
-      "aciertos": 3
-    },
-    "ampliacion_marcador": {
-      "total": 6,
-      "aciertos": 4
-    },
-    "alerta_1er_tiempo": {
-      "total": 6,
-      "aciertos": 2
-    },
-    "posible_victoria_favorito": {
-      "total": 6,
-      "aciertos": 4
-    },
-    "gol_de_cierre": {
-      "total": 2,
-      "aciertos": 1
-    },
-    "value_alert": {
-      "total": 4,
-      "aciertos": 2
-    },
-    "posible_empate": {
-      "total": 2,
-      "aciertos": 1
-    }
-  }
+  ]
 }
