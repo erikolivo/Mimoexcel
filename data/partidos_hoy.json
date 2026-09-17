@@ -38687,7 +38687,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 1
+      "grupo_destacado": 1,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Metropolitanos vs Caracas FC",
@@ -39292,6 +39293,71 @@
             "effectiveClearance": "8",
             "totalClearance": "8"
           }
+        },
+        {
+          "minuto": "43'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "2",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "58.2",
+            "totalShots": "4",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "171",
+            "totalPasses": "216",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "3",
+            "crossPct": "0.7",
+            "totalLongBalls": "29",
+            "accurateLongBalls": "10",
+            "longballPct": "0.3",
+            "blockedShots": "0",
+            "effectiveTackles": "4",
+            "totalTackles": "7",
+            "tacklePct": "0.6",
+            "interceptions": "2",
+            "effectiveClearance": "8",
+            "totalClearance": "8"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "1",
+            "possessionPct": "41.8",
+            "totalShots": "1",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "111",
+            "totalPasses": "148",
+            "passPct": "0.8",
+            "accurateCrosses": "1",
+            "totalCrosses": "6",
+            "crossPct": "0.2",
+            "totalLongBalls": "28",
+            "accurateLongBalls": "14",
+            "longballPct": "0.5",
+            "blockedShots": "0",
+            "effectiveTackles": "4",
+            "totalTackles": "4",
+            "tacklePct": "1.0",
+            "interceptions": "0",
+            "effectiveClearance": "11",
+            "totalClearance": "11"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -39304,6 +39370,12 @@
         {
           "tipo": "posible_victoria_favorito",
           "minuto": "23'",
+          "texto": "🟢 Gana Fav",
+          "diferencia_goles": 0
+        },
+        {
+          "tipo": "posible_victoria_favorito",
+          "minuto": "43'",
           "texto": "🟢 Gana Fav",
           "diferencia_goles": 0
         }
@@ -39548,18 +39620,6 @@
     }
   ],
   "predicciones_activas": {
-    "401878023": {
-      "cuidado_rival_presiona": {
-        "minuto": "42'",
-        "prediccion": "rival",
-        "equipo": "Deportes Tolima"
-      },
-      "gol_de_cierre": {
-        "minuto": "86'",
-        "prediccion": "fav",
-        "equipo": "Once Caldas"
-      }
-    },
     "401912540": {
       "alerta_1er_tiempo": {
         "minuto": "18'",
@@ -39567,7 +39627,7 @@
         "equipo": "Corinthians"
       },
       "posible_victoria_favorito": {
-        "minuto": "23'",
+        "minuto": "43'",
         "prediccion": "fav",
         "equipo": "Corinthians"
       }
