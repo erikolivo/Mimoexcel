@@ -39618,6 +39618,71 @@
             "effectiveClearance": "13",
             "totalClearance": "13"
           }
+        },
+        {
+          "minuto": "50'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "3",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "57.5",
+            "totalShots": "4",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "201",
+            "totalPasses": "251",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "5",
+            "crossPct": "0.4",
+            "totalLongBalls": "37",
+            "accurateLongBalls": "15",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "4",
+            "totalTackles": "9",
+            "tacklePct": "0.4",
+            "interceptions": "2",
+            "effectiveClearance": "10",
+            "totalClearance": "10"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "12",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "1",
+            "possessionPct": "42.5",
+            "totalShots": "2",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "136",
+            "totalPasses": "180",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "7",
+            "crossPct": "0.3",
+            "totalLongBalls": "33",
+            "accurateLongBalls": "15",
+            "longballPct": "0.5",
+            "blockedShots": "0",
+            "effectiveTackles": "5",
+            "totalTackles": "5",
+            "tacklePct": "1.0",
+            "interceptions": "0",
+            "effectiveClearance": "14",
+            "totalClearance": "14"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -39643,6 +39708,12 @@
           "tipo": "fav_domina_no_gana",
           "minuto": "45'+2'",
           "texto": "🔦 FAVORITO DOMINA\nCorinthians Empate\nz: 1.6 | Tiros: 1.0-0.0\nPosesión: 60%\nCuota pre: 1.90 -> en vivo debería bajar",
+          "diferencia_goles": 0
+        },
+        {
+          "tipo": "value_alert",
+          "minuto": "50'",
+          "texto": "💡 PISTA\nCorinthians domina inesperado",
           "diferencia_goles": 0
         }
       ],
@@ -40015,9 +40086,81 @@
             "effectiveClearance": "1",
             "totalClearance": "1"
           }
+        },
+        {
+          "minuto": "18'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "5",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "1",
+            "possessionPct": "28.3",
+            "totalShots": "0",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "34",
+            "totalPasses": "54",
+            "passPct": "0.6",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "10",
+            "accurateLongBalls": "2",
+            "longballPct": "0.2",
+            "blockedShots": "0",
+            "effectiveTackles": "5",
+            "totalTackles": "5",
+            "tacklePct": "1.0",
+            "interceptions": "2",
+            "effectiveClearance": "4",
+            "totalClearance": "4"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "3",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "71.7",
+            "totalShots": "3",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "118",
+            "totalPasses": "134",
+            "passPct": "0.9",
+            "accurateCrosses": "0",
+            "totalCrosses": "2",
+            "crossPct": "0.0",
+            "totalLongBalls": "4",
+            "accurateLongBalls": "1",
+            "longballPct": "0.3",
+            "blockedShots": "1",
+            "effectiveTackles": "2",
+            "totalTackles": "4",
+            "tacklePct": "0.5",
+            "interceptions": "0",
+            "effectiveClearance": "1",
+            "totalClearance": "1"
+          }
         }
       ],
-      "alertas_enviadas": [],
+      "alertas_enviadas": [
+        {
+          "tipo": "alerta_1er_tiempo",
+          "minuto": "18'",
+          "texto": "⏱️ Alerta de primer tiempo -- el favorito domina el 0-0 (100%).",
+          "diferencia_goles": 0
+        }
+      ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
       "grupo_destacado": 1
@@ -40092,6 +40235,18 @@
         "minuto": "43'",
         "prediccion": "fav",
         "equipo": "Corinthians"
+      },
+      "value_alert": {
+        "minuto": "50'",
+        "prediccion": "fav",
+        "equipo": "Corinthians"
+      }
+    },
+    "401878010": {
+      "alerta_1er_tiempo": {
+        "minuto": "18'",
+        "prediccion": "fav",
+        "equipo": "Atlético Nacional"
       }
     }
   },
