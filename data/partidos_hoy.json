@@ -143,7 +143,73 @@
       "kickoff_utc": "2026-09-17T13:15Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "79'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "14",
+            "yellowCards": "3",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "3",
+            "saves": "1",
+            "possessionPct": "40.1",
+            "totalShots": "14",
+            "shotsOnTarget": "5",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "157",
+            "totalPasses": "244",
+            "passPct": "0.6",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "5",
+            "effectiveTackles": "5",
+            "totalTackles": "8",
+            "tacklePct": "0.6",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "23"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "13",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "5",
+            "saves": "5",
+            "possessionPct": "59.9",
+            "totalShots": "11",
+            "shotsOnTarget": "1",
+            "shotPct": "0.1",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "304",
+            "totalPasses": "375",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "4",
+            "effectiveTackles": "11",
+            "totalTackles": "14",
+            "tacklePct": "0.8",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "46"
+          }
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
@@ -640,5 +706,7 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "predicciones_activas": {},
+  "historial_predicciones": {}
 }
