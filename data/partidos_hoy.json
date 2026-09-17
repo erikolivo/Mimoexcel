@@ -1870,6 +1870,71 @@
             "effectiveClearance": "0",
             "totalClearance": "26"
           }
+        },
+        {
+          "minuto": "90'+3'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "17",
+            "yellowCards": "3",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "6",
+            "saves": "2",
+            "possessionPct": "61.4",
+            "totalShots": "16",
+            "shotsOnTarget": "4",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "404",
+            "totalPasses": "465",
+            "passPct": "0.9",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "4",
+            "effectiveTackles": "10",
+            "totalTackles": "16",
+            "tacklePct": "0.6",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "12"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "14",
+            "yellowCards": "5",
+            "redCards": "1",
+            "offsides": "1",
+            "wonCorners": "5",
+            "saves": "2",
+            "possessionPct": "38.6",
+            "totalShots": "5",
+            "shotsOnTarget": "2",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "227",
+            "totalPasses": "284",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "0",
+            "effectiveTackles": "12",
+            "totalTackles": "17",
+            "tacklePct": "0.7",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "27"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -1896,6 +1961,12 @@
           "minuto": "68'",
           "texto": "⚠️ Rival domina [BAJA]",
           "diferencia_goles": -1
+        },
+        {
+          "tipo": "cuidado_rival_presiona",
+          "minuto": "90'+3'",
+          "texto": "⚠️ Rival domina [BAJA]",
+          "diferencia_goles": -2
         }
       ],
       "diferencia_maxima_alcanzada": 0,
@@ -2447,6 +2518,71 @@
             "effectiveClearance": "2",
             "totalClearance": "2"
           }
+        },
+        {
+          "minuto": "43'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "3",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "2",
+            "possessionPct": "33.9",
+            "totalShots": "3",
+            "shotsOnTarget": "2",
+            "shotPct": "0.7",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "91",
+            "totalPasses": "136",
+            "passPct": "0.7",
+            "accurateCrosses": "0",
+            "totalCrosses": "3",
+            "crossPct": "0.0",
+            "totalLongBalls": "36",
+            "accurateLongBalls": "16",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "3",
+            "totalTackles": "6",
+            "tacklePct": "0.5",
+            "interceptions": "3",
+            "effectiveClearance": "18",
+            "totalClearance": "18"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "10",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "1",
+            "possessionPct": "66.1",
+            "totalShots": "7",
+            "shotsOnTarget": "2",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "227",
+            "totalPasses": "264",
+            "passPct": "0.9",
+            "accurateCrosses": "6",
+            "totalCrosses": "11",
+            "crossPct": "0.5",
+            "totalLongBalls": "24",
+            "accurateLongBalls": "14",
+            "longballPct": "0.6",
+            "blockedShots": "2",
+            "effectiveTackles": "5",
+            "totalTackles": "6",
+            "tacklePct": "0.8",
+            "interceptions": "6",
+            "effectiveClearance": "2",
+            "totalClearance": "2"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -2455,6 +2591,12 @@
           "minuto": "23'",
           "texto": "⏱️ Siguen empatados (min 22+) -- TSG Hoffenheim con ligera ventaja.",
           "diferencia_goles": 0
+        },
+        {
+          "tipo": "posible_empate",
+          "minuto": "43'",
+          "texto": "🟠 Gana Fav",
+          "diferencia_goles": -1
         }
       ],
       "diferencia_maxima_alcanzada": 0
@@ -2744,9 +2886,81 @@
             "effectiveClearance": "6",
             "totalClearance": "6"
           }
+        },
+        {
+          "minuto": "25'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "5",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "1",
+            "possessionPct": "74.8",
+            "totalShots": "5",
+            "shotsOnTarget": "2",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "148",
+            "totalPasses": "169",
+            "passPct": "0.9",
+            "accurateCrosses": "0",
+            "totalCrosses": "3",
+            "crossPct": "0.0",
+            "totalLongBalls": "16",
+            "accurateLongBalls": "12",
+            "longballPct": "0.8",
+            "blockedShots": "1",
+            "effectiveTackles": "1",
+            "totalTackles": "1",
+            "tacklePct": "1.0",
+            "interceptions": "2",
+            "effectiveClearance": "8",
+            "totalClearance": "8"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "0",
+            "saves": "2",
+            "possessionPct": "25.2",
+            "totalShots": "1",
+            "shotsOnTarget": "1",
+            "shotPct": "1.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "37",
+            "totalPasses": "55",
+            "passPct": "0.7",
+            "accurateCrosses": "1",
+            "totalCrosses": "3",
+            "crossPct": "0.3",
+            "totalLongBalls": "11",
+            "accurateLongBalls": "6",
+            "longballPct": "0.5",
+            "blockedShots": "0",
+            "effectiveTackles": "1",
+            "totalTackles": "1",
+            "tacklePct": "1.0",
+            "interceptions": "5",
+            "effectiveClearance": "10",
+            "totalClearance": "10"
+          }
         }
       ],
-      "alertas_enviadas": [],
+      "alertas_enviadas": [
+        {
+          "tipo": "alerta_1er_tiempo",
+          "minuto": "25'",
+          "texto": "⏱️ Alerta de primer tiempo -- el favorito domina el 0-0 (77%).",
+          "diferencia_goles": 0
+        }
+      ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
       "grupo_destacado": 3
@@ -3167,7 +3381,27 @@
     }
   ],
   "predicciones_activas": {
-    "401879848": {}
+    "401879848": {
+      "cuidado_rival_presiona": {
+        "minuto": "90'+3'",
+        "prediccion": "rival",
+        "equipo": "Akron Tolyatti"
+      }
+    },
+    "401915585": {
+      "posible_empate": {
+        "minuto": "43'",
+        "prediccion": "fav",
+        "equipo": "TSG Hoffenheim"
+      }
+    },
+    "401882874": {
+      "alerta_1er_tiempo": {
+        "minuto": "25'",
+        "prediccion": "fav",
+        "equipo": "Real Betis"
+      }
+    }
   },
   "historial_predicciones": {
     "cuidado_rival_presiona": {
