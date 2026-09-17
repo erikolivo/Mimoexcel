@@ -21435,6 +21435,71 @@
             "effectiveClearance": "11",
             "totalClearance": "11"
           }
+        },
+        {
+          "minuto": "84'",
+          "goles_local": 1,
+          "goles_visitante": 3,
+          "stats_local": {
+            "foulsCommitted": "14",
+            "yellowCards": "4",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "4",
+            "saves": "3",
+            "possessionPct": "36.6",
+            "totalShots": "4",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "248",
+            "totalPasses": "309",
+            "passPct": "0.8",
+            "accurateCrosses": "1",
+            "totalCrosses": "11",
+            "crossPct": "0.1",
+            "totalLongBalls": "41",
+            "accurateLongBalls": "17",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "18",
+            "totalTackles": "23",
+            "tacklePct": "0.8",
+            "interceptions": "6",
+            "effectiveClearance": "24",
+            "totalClearance": "24"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "6",
+            "saves": "0",
+            "possessionPct": "63.4",
+            "totalShots": "15",
+            "shotsOnTarget": "7",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "490",
+            "totalPasses": "547",
+            "passPct": "0.9",
+            "accurateCrosses": "6",
+            "totalCrosses": "16",
+            "crossPct": "0.4",
+            "totalLongBalls": "47",
+            "accurateLongBalls": "30",
+            "longballPct": "0.6",
+            "blockedShots": "3",
+            "effectiveTackles": "6",
+            "totalTackles": "10",
+            "tacklePct": "0.6",
+            "interceptions": "7",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -21558,13 +21623,7 @@
     }
   ],
   "predicciones_activas": {
-    "401882869": {
-      "ampliacion_marcador": {
-        "minuto": "45'+4'",
-        "prediccion": "fav",
-        "equipo": "Villarreal"
-      }
-    }
+    "401882869": {}
   },
   "historial_predicciones": {
     "cuidado_rival_presiona": {
@@ -21588,8 +21647,8 @@
       "aciertos": 0
     },
     "ampliacion_marcador": {
-      "total": 1,
-      "aciertos": 1
+      "total": 2,
+      "aciertos": 2
     }
   }
 }
