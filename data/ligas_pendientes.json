@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-09-16",
+  "actualizado": "2026-09-17",
   "ligas": [
     {
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 253,
+      "veces_visto": 259,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
-      "ultimo_visto": "2026-09-16"
+      "ultimo_visto": "2026-09-17"
     },
     {
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 156,
+      "veces_visto": 217,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
-      "ultimo_visto": "2026-09-16"
+      "ultimo_visto": "2026-09-17"
     },
     {
       "pais": "",
@@ -59,10 +59,19 @@
       "pais": "",
       "liga": "Liga de Expansión MX",
       "liga_id": "3932",
-      "veces_visto": 18,
+      "veces_visto": 19,
       "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
       "fixture_id": "401886377",
-      "ultimo_visto": "2026-09-15"
+      "ultimo_visto": "2026-09-17"
+    },
+    {
+      "pais": "",
+      "liga": "Club Friendly",
+      "liga_id": "19834",
+      "veces_visto": 18,
+      "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
+      "fixture_id": "401914230",
+      "ultimo_visto": "2026-09-17"
     },
     {
       "pais": "",
@@ -72,15 +81,6 @@
       "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
       "fixture_id": "401879630",
       "ultimo_visto": "2026-09-14"
-    },
-    {
-      "pais": "",
-      "liga": "Club Friendly",
-      "liga_id": "19834",
-      "veces_visto": 17,
-      "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
-      "fixture_id": "401914230",
-      "ultimo_visto": "2026-09-16"
     },
     {
       "pais": "",
@@ -111,6 +111,15 @@
     },
     {
       "pais": "",
+      "liga": "Bolivian Liga Profesional",
+      "liga_id": "620",
+      "veces_visto": 16,
+      "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
+      "fixture_id": "401906485",
+      "ultimo_visto": "2026-09-17"
+    },
+    {
+      "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
       "veces_visto": 14,
@@ -120,21 +129,21 @@
     },
     {
       "pais": "",
-      "liga": "Bolivian Liga Profesional",
-      "liga_id": "620",
-      "veces_visto": 14,
-      "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
-      "fixture_id": "401906485",
-      "ultimo_visto": "2026-09-16"
-    },
-    {
-      "pais": "",
       "liga": "Liga FUTVE",
       "liga_id": "3949",
       "veces_visto": 14,
       "ejemplo_partido": "Carabobo vs Deportivo La Guaira",
       "fixture_id": "401903324",
       "ultimo_visto": "2026-09-16"
+    },
+    {
+      "pais": "",
+      "liga": "Concacaf Central American Cup, Quarterfinals",
+      "liga_id": "22947",
+      "veces_visto": 13,
+      "ejemplo_partido": "Saprissa vs Cartaginés",
+      "fixture_id": "401914488",
+      "ultimo_visto": "2026-09-17"
     },
     {
       "pais": "",
@@ -170,15 +179,6 @@
       "veces_visto": 11,
       "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
       "fixture_id": "401843983",
-      "ultimo_visto": "2026-09-16"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Central American Cup, Quarterfinals",
-      "liga_id": "22947",
-      "veces_visto": 11,
-      "ejemplo_partido": "Saprissa vs Cartaginés",
-      "fixture_id": "401914488",
       "ultimo_visto": "2026-09-16"
     },
     {
@@ -423,6 +423,33 @@
       "ejemplo_partido": "AZSV  vs Saestum II",
       "fixture_id": "401917361",
       "ultimo_visto": "2026-09-16"
+    },
+    {
+      "pais": "",
+      "liga": "AFC Champions League Two, Group F",
+      "liga_id": "2466",
+      "veces_visto": 2,
+      "ejemplo_partido": "Adelaide United vs Tai Po FC",
+      "fixture_id": "401912808",
+      "ultimo_visto": "2026-09-17"
+    },
+    {
+      "pais": "",
+      "liga": "AFC Champions League Two, Group G",
+      "liga_id": "2466",
+      "veces_visto": 2,
+      "ejemplo_partido": "Machida Zelvia vs Preah Khan Reach Svay Rieng FC",
+      "fixture_id": "401912807",
+      "ultimo_visto": "2026-09-17"
+    },
+    {
+      "pais": "",
+      "liga": "AFC Champions League Two, Group H",
+      "liga_id": "2466",
+      "veces_visto": 2,
+      "ejemplo_partido": "Kitchee vs Gangwon FC",
+      "fixture_id": "401912805",
+      "ultimo_visto": "2026-09-17"
     },
     {
       "pais": "",
