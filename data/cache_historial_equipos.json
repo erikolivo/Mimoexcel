@@ -111048,8 +111048,15 @@
     ]
   },
   "598_ger.1_2026": {
-    "fecha_cache": "2026-09-11T14:57:19.425140",
+    "fecha_cache": "2026-09-18T18:55:36.146409",
     "historial": [
+      {
+        "fecha": "2026-09-11",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 0,
