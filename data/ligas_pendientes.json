@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-09-17",
+  "actualizado": "2026-09-18",
   "ligas": [
-    {
-      "pais": "",
-      "liga": "NCAAW Soccer",
-      "liga_id": "5499",
-      "veces_visto": 278,
-      "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
-      "fixture_id": "401900232",
-      "ultimo_visto": "2026-09-17"
-    },
     {
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 265,
+      "veces_visto": 289,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
-      "ultimo_visto": "2026-09-17"
+      "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
+      "liga": "NCAAW Soccer",
+      "liga_id": "5499",
+      "veces_visto": 283,
+      "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
+      "fixture_id": "401900232",
+      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
@@ -48,57 +48,57 @@
     },
     {
       "pais": "",
-      "liga": "NWSL",
-      "liga_id": "8301",
-      "veces_visto": 20,
-      "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
-      "fixture_id": "401853996",
-      "ultimo_visto": "2026-09-16"
+      "liga": "Liga de Expansión MX",
+      "liga_id": "3932",
+      "veces_visto": 23,
+      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
+      "fixture_id": "401886377",
+      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
-      "liga": "Liga de Expansión MX",
-      "liga_id": "3932",
-      "veces_visto": 20,
-      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
-      "fixture_id": "401886377",
-      "ultimo_visto": "2026-09-17"
+      "liga": "NWSL",
+      "liga_id": "8301",
+      "veces_visto": 21,
+      "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
+      "fixture_id": "401853996",
+      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
       "liga": "Club Friendly",
       "liga_id": "19834",
-      "veces_visto": 19,
+      "veces_visto": 21,
       "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
       "fixture_id": "401914230",
-      "ultimo_visto": "2026-09-17"
+      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
       "liga": "Bolivian Liga Profesional",
       "liga_id": "620",
-      "veces_visto": 18,
+      "veces_visto": 19,
       "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
       "fixture_id": "401906485",
-      "ultimo_visto": "2026-09-17"
+      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
       "liga": "Guatemalan Liga Nacional",
       "liga_id": "3928",
-      "veces_visto": 17,
+      "veces_visto": 18,
       "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
       "fixture_id": "401879630",
-      "ultimo_visto": "2026-09-14"
+      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 16,
+      "veces_visto": 17,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
-      "ultimo_visto": "2026-09-13"
+      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
@@ -122,10 +122,19 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 14,
+      "veces_visto": 15,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
-      "ultimo_visto": "2026-09-13"
+      "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
+      "liga": "Première Ligue",
+      "liga_id": "20955",
+      "veces_visto": 15,
+      "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
+      "fixture_id": "401885667",
+      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
@@ -147,30 +156,21 @@
     },
     {
       "pais": "",
+      "liga": "Salvadoran Primera",
+      "liga_id": "3943",
+      "veces_visto": 13,
+      "ejemplo_partido": "Inca Aruba vs Atletico Balboa",
+      "fixture_id": "401899791",
+      "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
       "liga": "Copa Colombia, Round of 16",
       "liga_id": "8313",
       "veces_visto": 12,
       "ejemplo_partido": "América de Cali vs Deportivo Pereira",
       "fixture_id": "401902716",
       "ultimo_visto": "2026-09-09"
-    },
-    {
-      "pais": "",
-      "liga": "Première Ligue",
-      "liga_id": "20955",
-      "veces_visto": 12,
-      "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
-      "fixture_id": "401885667",
-      "ultimo_visto": "2026-09-12"
-    },
-    {
-      "pais": "",
-      "liga": "Salvadoran Primera",
-      "liga_id": "3943",
-      "veces_visto": 12,
-      "ejemplo_partido": "Inca Aruba vs Atletico Balboa",
-      "fixture_id": "401899791",
-      "ultimo_visto": "2026-09-16"
     },
     {
       "pais": "",
@@ -201,6 +201,24 @@
     },
     {
       "pais": "",
+      "liga": "USL Super League",
+      "liga_id": "23633",
+      "veces_visto": 10,
+      "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
+      "fixture_id": "401878641",
+      "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
+      "liga": "Austrian Bundesliga",
+      "liga_id": "3907",
+      "veces_visto": 9,
+      "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
+      "fixture_id": "401881790",
+      "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
       "liga": "CAF Champions League, First Preliminary Round",
       "liga_id": "2391",
       "veces_visto": 8,
@@ -215,24 +233,6 @@
       "veces_visto": 8,
       "ejemplo_partido": "Stenhousemuir vs Heart of Midlothian",
       "fixture_id": "401909668",
-      "ultimo_visto": "2026-09-13"
-    },
-    {
-      "pais": "",
-      "liga": "USL Super League",
-      "liga_id": "23633",
-      "veces_visto": 8,
-      "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
-      "fixture_id": "401878641",
-      "ultimo_visto": "2026-09-13"
-    },
-    {
-      "pais": "",
-      "liga": "Austrian Bundesliga",
-      "liga_id": "3907",
-      "veces_visto": 8,
-      "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
-      "fixture_id": "401881790",
       "ultimo_visto": "2026-09-13"
     },
     {
@@ -282,6 +282,15 @@
     },
     {
       "pais": "",
+      "liga": "Argentine Primera B",
+      "liga_id": "3904",
+      "veces_visto": 5,
+      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
+      "fixture_id": "401845087",
+      "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
       "liga": "USL Cup, Semifinals",
       "liga_id": "22059",
       "veces_visto": 4,
@@ -297,15 +306,6 @@
       "ejemplo_partido": "ABB vs San Antonio Bulo Bulo",
       "fixture_id": "401907941",
       "ultimo_visto": "2026-09-08"
-    },
-    {
-      "pais": "",
-      "liga": "Argentine Primera B",
-      "liga_id": "3904",
-      "veces_visto": 4,
-      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
-      "fixture_id": "401845087",
-      "ultimo_visto": "2026-09-11"
     },
     {
       "pais": "",
@@ -399,12 +399,30 @@
     },
     {
       "pais": "",
+      "liga": "Honduran Liga Nacional",
+      "liga_id": "3929",
+      "veces_visto": 4,
+      "ejemplo_partido": "CD Estrella Roja vs Platense",
+      "fixture_id": "401915261",
+      "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
       "veces_visto": 3,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
       "ultimo_visto": "2026-09-09"
+    },
+    {
+      "pais": "",
+      "liga": "Liga FPD",
+      "liga_id": "4005",
+      "veces_visto": 3,
+      "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
+      "fixture_id": "401876853",
+      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
@@ -422,24 +440,6 @@
       "veces_visto": 2,
       "ejemplo_partido": "ST CADOC'S vs Glasgow University",
       "fixture_id": "401914087",
-      "ultimo_visto": "2026-09-11"
-    },
-    {
-      "pais": "",
-      "liga": "Honduran Liga Nacional",
-      "liga_id": "3929",
-      "veces_visto": 2,
-      "ejemplo_partido": "CD Estrella Roja vs Platense",
-      "fixture_id": "401915261",
-      "ultimo_visto": "2026-09-11"
-    },
-    {
-      "pais": "",
-      "liga": "Liga FPD",
-      "liga_id": "4005",
-      "veces_visto": 2,
-      "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
-      "fixture_id": "401876853",
       "ultimo_visto": "2026-09-11"
     },
     {
@@ -462,6 +462,15 @@
     },
     {
       "pais": "",
+      "liga": "English FA Cup Qualifying, Second Round Qualifying",
+      "liga_id": "23480",
+      "veces_visto": 2,
+      "ejemplo_partido": "Worcester City vs Stratford Town",
+      "fixture_id": "401917298",
+      "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
       "liga": "Campeones Cup, 2026 Campeones Cup",
       "liga_id": "18771",
       "veces_visto": 1,
@@ -477,6 +486,33 @@
       "ejemplo_partido": "Inter Miami CF vs Cruz Azul",
       "fixture_id": "401901377",
       "ultimo_visto": "2026-09-16"
+    },
+    {
+      "pais": "",
+      "liga": "Men's International Friendly",
+      "liga_id": "3922",
+      "veces_visto": 1,
+      "ejemplo_partido": "Fiji vs Solomon Islands",
+      "fixture_id": "401922313",
+      "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
+      "liga": "Taca de Portugal, 2nd Round",
+      "liga_id": "20922",
+      "veces_visto": 1,
+      "ejemplo_partido": "Real Sport Clube vs Académica de Coimbra",
+      "fixture_id": "401913076",
+      "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
+      "liga": "Chinese Super League",
+      "liga_id": "8376",
+      "veces_visto": 1,
+      "ejemplo_partido": "Zhejiang Professional FC vs Wuhan Three Towns",
+      "fixture_id": "401861443",
+      "ultimo_visto": "2026-09-18"
     }
   ]
 }
