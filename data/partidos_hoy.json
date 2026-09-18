@@ -24814,36 +24814,5 @@
       "diferencia_maxima_alcanzada": 0,
       "aviso_final_enviado": true
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {
-    "cuidado_rival_presiona": {
-      "total": 4,
-      "aciertos": 2
-    },
-    "alerta_1er_tiempo": {
-      "total": 4,
-      "aciertos": 3
-    },
-    "posible_victoria_favorito": {
-      "total": 4,
-      "aciertos": 4
-    },
-    "posible_empate": {
-      "total": 3,
-      "aciertos": 2
-    },
-    "gol_de_cierre": {
-      "total": 1,
-      "aciertos": 0
-    },
-    "ampliacion_marcador": {
-      "total": 2,
-      "aciertos": 2
-    },
-    "value_alert": {
-      "total": 1,
-      "aciertos": 0
-    }
-  }
+  ]
 }
