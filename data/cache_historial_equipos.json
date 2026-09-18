@@ -13973,8 +13973,15 @@
     ]
   },
   "3243_fra.2_2026": {
-    "fecha_cache": "2026-09-11T14:57:08.781916",
+    "fecha_cache": "2026-09-18T18:25:48.631026",
     "historial": [
+      {
+        "fecha": "2026-09-11",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 2,
