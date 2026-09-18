@@ -24440,6 +24440,71 @@
             "effectiveClearance": "23",
             "totalClearance": "23"
           }
+        },
+        {
+          "minuto": "74'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "10",
+            "yellowCards": "1",
+            "redCards": "1",
+            "offsides": "0",
+            "wonCorners": "5",
+            "saves": "0",
+            "possessionPct": "60.1",
+            "totalShots": "9",
+            "shotsOnTarget": "2",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "382",
+            "totalPasses": "439",
+            "passPct": "0.9",
+            "accurateCrosses": "5",
+            "totalCrosses": "16",
+            "crossPct": "0.3",
+            "totalLongBalls": "35",
+            "accurateLongBalls": "19",
+            "longballPct": "0.5",
+            "blockedShots": "3",
+            "effectiveTackles": "8",
+            "totalTackles": "14",
+            "tacklePct": "0.6",
+            "interceptions": "6",
+            "effectiveClearance": "11",
+            "totalClearance": "11"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "3",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "2",
+            "possessionPct": "39.9",
+            "totalShots": "3",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "231",
+            "totalPasses": "294",
+            "passPct": "0.8",
+            "accurateCrosses": "3",
+            "totalCrosses": "9",
+            "crossPct": "0.3",
+            "totalLongBalls": "34",
+            "accurateLongBalls": "11",
+            "longballPct": "0.3",
+            "blockedShots": "1",
+            "effectiveTackles": "7",
+            "totalTackles": "12",
+            "tacklePct": "0.6",
+            "interceptions": "5",
+            "effectiveClearance": "23",
+            "totalClearance": "23"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -24478,6 +24543,12 @@
           "minuto": "68'",
           "texto": "🟥 Tarjeta roja para Flamengo.",
           "diferencia_goles": -1
+        },
+        {
+          "tipo": "posible_empate",
+          "minuto": "74'",
+          "texto": "🟠 Gana Fav",
+          "diferencia_goles": -1
         }
       ],
       "diferencia_maxima_alcanzada": 0
@@ -24486,7 +24557,7 @@
   "predicciones_activas": {
     "401912526": {
       "posible_empate": {
-        "minuto": "58'",
+        "minuto": "74'",
         "prediccion": "fav",
         "equipo": "Flamengo"
       }
