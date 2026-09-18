@@ -22757,6 +22757,71 @@
             "effectiveClearance": "14",
             "totalClearance": "14"
           }
+        },
+        {
+          "minuto": "64'",
+          "goles_local": 2,
+          "goles_visitante": 2,
+          "stats_local": {
+            "foulsCommitted": "7",
+            "yellowCards": "0",
+            "redCards": "1",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "2",
+            "possessionPct": "35.8",
+            "totalShots": "4",
+            "shotsOnTarget": "2",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "121",
+            "totalPasses": "172",
+            "passPct": "0.7",
+            "accurateCrosses": "1",
+            "totalCrosses": "8",
+            "crossPct": "0.1",
+            "totalLongBalls": "43",
+            "accurateLongBalls": "19",
+            "longballPct": "0.4",
+            "blockedShots": "2",
+            "effectiveTackles": "12",
+            "totalTackles": "13",
+            "tacklePct": "0.9",
+            "interceptions": "3",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "12",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "4",
+            "saves": "0",
+            "possessionPct": "64.2",
+            "totalShots": "12",
+            "shotsOnTarget": "4",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "1",
+            "accuratePasses": "271",
+            "totalPasses": "312",
+            "passPct": "0.9",
+            "accurateCrosses": "4",
+            "totalCrosses": "12",
+            "crossPct": "0.3",
+            "totalLongBalls": "17",
+            "accurateLongBalls": "12",
+            "longballPct": "0.7",
+            "blockedShots": "3",
+            "effectiveTackles": "4",
+            "totalTackles": "5",
+            "tacklePct": "0.8",
+            "interceptions": "6",
+            "effectiveClearance": "14",
+            "totalClearance": "14"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -22771,6 +22836,12 @@
           "minuto": "38'",
           "texto": "📊 MERCADO SE EQUIVOCO\nIndependiente Medellín domina (cuota 3.40)\nz: 1.7 | Tiros: 2.0-1.0\nPosesión: 57%\nMarcador: 1-0",
           "diferencia_goles": 1
+        },
+        {
+          "tipo": "cuidado_rival_presiona",
+          "minuto": "64'",
+          "texto": "⚠️ Rival domina [BAJA]",
+          "diferencia_goles": 0
         }
       ],
       "diferencia_maxima_alcanzada": 0,
@@ -23452,6 +23523,71 @@
             "effectiveClearance": "10",
             "totalClearance": "10"
           }
+        },
+        {
+          "minuto": "45'+5'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "5",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "0",
+            "possessionPct": "59.9",
+            "totalShots": "5",
+            "shotsOnTarget": "2",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "287",
+            "totalPasses": "325",
+            "passPct": "0.9",
+            "accurateCrosses": "4",
+            "totalCrosses": "11",
+            "crossPct": "0.4",
+            "totalLongBalls": "24",
+            "accurateLongBalls": "14",
+            "longballPct": "0.6",
+            "blockedShots": "1",
+            "effectiveTackles": "5",
+            "totalTackles": "12",
+            "tacklePct": "0.4",
+            "interceptions": "6",
+            "effectiveClearance": "11",
+            "totalClearance": "11"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "0",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "2",
+            "possessionPct": "40.1",
+            "totalShots": "3",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "172",
+            "totalPasses": "219",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "7",
+            "crossPct": "0.3",
+            "totalLongBalls": "23",
+            "accurateLongBalls": "8",
+            "longballPct": "0.3",
+            "blockedShots": "1",
+            "effectiveTackles": "5",
+            "totalTackles": "9",
+            "tacklePct": "0.6",
+            "interceptions": "5",
+            "effectiveClearance": "14",
+            "totalClearance": "14"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -23489,6 +23625,13 @@
         "minuto": "43'",
         "prediccion": "fav",
         "equipo": "Flamengo"
+      }
+    },
+    "401878062": {
+      "cuidado_rival_presiona": {
+        "minuto": "64'",
+        "prediccion": "rival",
+        "equipo": "Independiente Medellín"
       }
     }
   },
