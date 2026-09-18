@@ -21595,8 +21595,15 @@
     ]
   },
   "3812_ger.2_2026": {
-    "fecha_cache": "2026-09-11T14:56:46.632577",
+    "fecha_cache": "2026-09-18T17:39:47.504505",
     "historial": [
+      {
+        "fecha": "2026-09-11",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 0,
