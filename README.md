@@ -80,18 +80,23 @@ puede eliminarse de GitHub Actions — ver la sección de Secrets abajo.
 
 ## Los tipos de alerta
 
-| Situación | Alerta |
-|---|---|
-| Favorito perdiendo por 1, momentum a favor del favorito | 🟠 Posible empate |
-| Empatando, momentum a favor del favorito | 🟢 Posible victoria del favorito |
-| 0-0, antes del min 30, favorito con el momentum | ⏱️ Gana favorito 1er tiempo |
-| Empatando o perdiendo, momentum a favor del rival | 🔴 Posible gol del no favorito / ⚠️ Cuidado rival presiona |
-| Favorito ganando, momentum sigue a su favor | 🔵 Posible ampliación de marcador |
-| Momentum parejo (35%-65%), peligro real de cualquier lado | ⚡ Partido abierto |
-| Tarjeta roja detectada | 🟥 Tarjeta roja |
-| Penal detectado | 🎯 Penal |
-| Min 75-90+, empatado o -1, dominancia acumulada ≥75% | ⏰ Posible gol de cierre |
-| Diferencia ≥3 goles | 🏁 Seguimiento cerrado (una sola vez) |
+| Situación | Alerta | Condición mínima |
+|---|---|---|
+| Favorito perdiendo por 1, favorito directo, min ≤ 60 | 🟠 Posible descuento | z ≥ 1.65 |
+| Empatando, favorito directo, min ≤ 30 | ⏱️ Gana favorito 1er tiempo | z ≥ 1.3, presión fav ≥ 8 |
+| Empatando o perdiendo, momentum a favor del rival (≥2 tiros a puerta rival) | 🔴 Cuidado rival presiona | z_rival ≥ 2.0, sot_riv ≥ 2 |
+| Favorito ganando, min 75-84, empatando o perdiendo por 1 | ⏰ Gol de cierre | z ≥ 3.2, dif ∈ {-1, 0} |
+| Favorito dominando pero empatando o perdiendo (≤2 goles) | 💪 Fav domina no gana | presión fav ≥ 8, dif ≥ -2 |
+| No favorito dominando con ventaja o empate | 🔴 No fav domina | presión rival ≥ 11, dif ≥ 0 |
+| Favorito ganando, momentum a favor | 🔵 Posible ampliación | presión fav ≥ 11 |
+| Empatando, momentum a favor del favorito | 🟢 Posible victoria | presión fav ≥ 8 |
+| Empatado min 22-54 / 55-69 / 70-89 | 📊 Siguen empatados | z ≥ 1.65 |
+| Tarjeta roja detectada | 🟥 Tarjeta roja | sin límite por partido |
+| Penal detectado | 🎯 Penal | — |
+| Favorito dominando, 0-0, min 15-30, solo favorito directo | ⏱️ Alerta 1er tiempo | z ≥ 1.3 |
+| Diferencia ≥3 goles | 🏁 Seguimiento cerrado (una sola vez) | — |
+
+**Alertas desactivadas**: `value_alert` (bug en z-score IDV), `cambio_momentum` (no aporta lift).
 
 ## Cómo agregar una liga nueva
 
@@ -194,3 +199,20 @@ data/estadisticas.xlsx     -> 3 pestanas: resultados, resumen por dia, acierto p
 - **`LIGAS_ESPN` es una lista curada, no exhaustiva** — fácil de
   expandir, algunos slugs no verificados uno por uno (marcado en el
   código).
+
+## Mejoras recientes (rama mejoras-alertas, septiembre 2026)
+
+Refactorización de 4 fases para mejorar la precisión y cobertura:
+
+- **Fase A** (resolución/mensajes): criterios individuales por tipo de
+  alerta (`CRITERIO_POR_TIPO`), mensajes en vivo con resultado, auditoría
+  en cierre consistente.
+- **Fase B** (reglas de alerta): 12 cambios (C1-C12) — umbrales de
+  presión, filtros de tipo_pronostico, minuto límite, desactivación de
+  value_alert y cambio_momentum. Reducción de 77→32 alertas/día (−58%).
+- **Fase C** (cobertura aviso final): F1 — fallback para `liga_slug "all"`
+  vía scoreboard global; F2 — ventana horaria extendida a 240 min;
+  F3 — cron 08:00 UTC para cubrir hueco; F4 — resolución de alerts
+  pendientes en cierre.
+- **Backtest** (`backtest_mejoras.py`): reproduce Anexo A exacto
+  (77.1→32.0 alertas/día, 58% menos). Correr con `python backtest_mejoras.py`.

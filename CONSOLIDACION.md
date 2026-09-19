@@ -75,3 +75,47 @@ tal cual.
 
 Ver `MIGRACION_ESPN.md` para los cambios posteriores por la migración de
 proveedor de datos en vivo.
+
+## Refactorización de alertas (septiembre 2026, rama mejoras-alertas)
+
+Se implementó una refactorización de 4 fases para mejorar la precisión
+y cobertura del sistema de alertas:
+
+### Fase A — Resolución y mensajes
+- Criterios individuales por tipo de alerta (`CRITERIO_POR_TIPO` en
+  `resolucion_alertas.py`) reemplazan la lógica monolítica anterior.
+- Mensajes en vivo incluyen resultado si ya terminó el partido.
+- Auditoría en cierre (`cerrar_resultados.py`) usa las mismas reglas
+  que el monitoreo en vivo (X1).
+- 21 tests en `tests/test_resolucion.py` + `tests/test_registro_mensajes.py`
+  + `tests/test_auditoria_excel.py`.
+
+### Fase B — Reglas de alerta
+- 12 cambios (C1-C12) en `_evaluar_alertas`:
+  - C1: `posible_victoria_favorito` exige presión fav ≥ 8
+  - C2: `posible_empate` → `posible_descuento`, solo favorito directo, min ≤ 60
+  - C3: `ampliacion_marcador` exige presión fav ≥ 11
+  - C4: `cuidado_rival_presiona` exige sot_riv ≥ 2
+  - C5: `alerta_1er_tiempo` solo favorito directo, min ≤ 30
+  - C6: `gol_de_cierre` con dif ∈ {-1,0}, min ≤ 84, z ≥ 3.2
+  - C7: `fav_domina_no_gana` con tope de 2 goles de déficit
+  - C8: `no_fav_domina` con presión rival ≥ 11 y dif ≥ 0
+  - C9: `value_alert` desactivado
+  - C11: `cambio_momentum` desactivado
+  - C12: `tarjeta_roja` sin límite de una por partido
+- Resultado: 77.1 → 32.0 alertas/día (−58%), con lift mejorado en
+  todos los tipos que se mantienen activos.
+- 24 tests en `tests/test_reglas_disparo.py` + 5 en `tests/test_idv.py`.
+
+### Fase C — Cobertura aviso final
+- F1: `liga_slug == "all"` ya no se salta — usa `all/scoreboard`
+  como fallback para detectar fin de partido y enviar aviso final.
+- F2: Ventana horaria extendida de 130 a 240 minutos.
+- F3: Cron 08:00 UTC agregado para cubrir hueco entre jobs.
+- F4: Alertas pendientes se resuelven en `cerrar_resultados.py`
+  usando `resolver_pendientes()`.
+
+### Verificación
+- `backtest_mejoras.py`: reproduce Anexo A exacto (77.1→32.0).
+- 50/50 tests pasan (`pytest`).
+- Commits: `1c0ed41` (A), `adf5278` (B), `d0868f7` (C).
