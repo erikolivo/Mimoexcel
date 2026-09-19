@@ -103685,8 +103685,22 @@
     ]
   },
   "374_eng.2_2026": {
-    "fecha_cache": "2026-09-09T11:30:23.440587",
+    "fecha_cache": "2026-09-19T15:12:30.297340",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-09-09",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 0,
@@ -104089,8 +104103,15 @@
     ]
   },
   "267_sco.1_2026": {
-    "fecha_cache": "2026-09-09T11:30:38.449439",
+    "fecha_cache": "2026-09-19T15:12:34.555286",
     "historial": [
+      {
+        "fecha": "2026-09-09",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 2,
@@ -114737,8 +114758,15 @@
     ]
   },
   "379_eng.2_2026": {
-    "fecha_cache": "2026-09-12T13:41:19.616751",
+    "fecha_cache": "2026-09-19T15:12:29.869066",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-08",
         "goles_favor": 1,
