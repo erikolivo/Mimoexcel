@@ -544,6 +544,52 @@ def obtener_boxscore_en_vivo(liga_slug, fixture_id):
     }
 
 
+def obtener_estado_desde_scoreboard(fixture_id, fecha_iso):
+    """F1: fallback para fixtures con liga_slug 'all'. Consulta el
+    scoreboard global (que SI funciona con slug 'all') y devuelve un
+    dict con minuto, periodo, estado, goles_local, goles_visitante --
+    el mismo formato minimo que boxscore_en_vivo para que el caller
+    pueda resolver pendientes y enviar el aviso final.
+
+    Retorna None si no encuentra el fixture o falla la peticion."""
+    url = f"{BASE_ESPN_SITE}/all/scoreboard?dates={_fecha_espn(fecha_iso)}"
+    try:
+        r = requests.get(url, timeout=TIMEOUT)
+        r.raise_for_status()
+        data = r.json()
+        try:
+            from cuota_espn import registrar_uso
+            registrar_uso()
+        except Exception:
+            pass
+    except Exception as e:
+        print(f"[AVISO] No se pudo consultar scoreboard global para fixture {fixture_id}: {e}")
+        return None
+
+    for evento in data.get("events", []):
+        if str(evento["id"]) != str(fixture_id):
+            continue
+        try:
+            comp = evento["competitions"][0]
+            status_obj = comp.get("status", {})
+            state = status_obj.get("type", {}).get("state")  # "pre" | "in" | "post"
+            home = next(c for c in comp["competitors"] if c["homeAway"] == "home")
+            away = next(c for c in comp["competitors"] if c["homeAway"] == "away")
+            gh = home.get("score")
+            ga = away.get("score")
+            return {
+                "minuto": status_obj.get("displayClock"),
+                "periodo": status_obj.get("period"),
+                "estado": state,
+                "estado_detalle": status_obj.get("type", {}).get("description"),
+                "goles_local": int(gh) if gh is not None else None,
+                "goles_visitante": int(ga) if ga is not None else None,
+            }
+        except Exception:
+            return None
+    return None
+
+
 def obtener_resultado_fixture(fixture_id, liga_slug):
     """
     Resultado final, en la MISMA forma que antes daba API-Football
