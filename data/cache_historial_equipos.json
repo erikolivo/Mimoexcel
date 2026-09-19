@@ -16490,8 +16490,15 @@
     ]
   },
   "165_fra.2_2026": {
-    "fecha_cache": "2026-09-12T13:40:13.169896",
+    "fecha_cache": "2026-09-19T13:54:55.217570",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-07",
         "goles_favor": 1,
@@ -110244,8 +110251,15 @@
     ]
   },
   "7869_fra.2_2026": {
-    "fecha_cache": "2026-09-11T14:56:58.441548",
+    "fecha_cache": "2026-09-19T13:54:54.980042",
     "historial": [
+      {
+        "fecha": "2026-09-11",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-09-04",
         "goles_favor": 1,
