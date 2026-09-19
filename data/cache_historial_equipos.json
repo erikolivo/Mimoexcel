@@ -38686,8 +38686,15 @@
     ]
   },
   "11995_per.1_2026": {
-    "fecha_cache": "2026-09-11T14:57:50.158599",
+    "fecha_cache": "2026-09-19T19:40:22.288046",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 2,
@@ -116051,8 +116058,15 @@
     ]
   },
   "131655_per.1_2026": {
-    "fecha_cache": "2026-09-12T13:41:58.943426",
+    "fecha_cache": "2026-09-19T19:40:22.021515",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-04",
         "goles_favor": 2,
