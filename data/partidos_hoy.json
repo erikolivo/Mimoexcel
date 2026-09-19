@@ -53959,6 +53959,71 @@
             "effectiveClearance": "35",
             "totalClearance": "35"
           }
+        },
+        {
+          "minuto": "90'+2'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "9",
+            "yellowCards": "3",
+            "redCards": "0",
+            "offsides": "5",
+            "wonCorners": "2",
+            "saves": "7",
+            "possessionPct": "45.5",
+            "totalShots": "8",
+            "shotsOnTarget": "3",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "236",
+            "totalPasses": "327",
+            "passPct": "0.7",
+            "accurateCrosses": "3",
+            "totalCrosses": "12",
+            "crossPct": "0.3",
+            "totalLongBalls": "50",
+            "accurateLongBalls": "16",
+            "longballPct": "0.3",
+            "blockedShots": "2",
+            "effectiveTackles": "13",
+            "totalTackles": "19",
+            "tacklePct": "0.7",
+            "interceptions": "12",
+            "effectiveClearance": "34",
+            "totalClearance": "34"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "12",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "9",
+            "saves": "1",
+            "possessionPct": "54.5",
+            "totalShots": "21",
+            "shotsOnTarget": "8",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "296",
+            "totalPasses": "375",
+            "passPct": "0.8",
+            "accurateCrosses": "7",
+            "totalCrosses": "31",
+            "crossPct": "0.2",
+            "totalLongBalls": "31",
+            "accurateLongBalls": "14",
+            "longballPct": "0.5",
+            "blockedShots": "5",
+            "effectiveTackles": "10",
+            "totalTackles": "21",
+            "tacklePct": "0.5",
+            "interceptions": "10",
+            "effectiveClearance": "35",
+            "totalClearance": "35"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -54002,6 +54067,12 @@
           "tipo": "gol_de_cierre",
           "minuto": "87'",
           "texto": "⏰ Gol de cierre [BAJA]",
+          "diferencia_goles": -1
+        },
+        {
+          "tipo": "posible_empate",
+          "minuto": "90'+2'",
+          "texto": "🟠 Gana Fav [BAJA]",
           "diferencia_goles": -1
         }
       ],
@@ -55072,6 +55143,71 @@
             "effectiveClearance": "10",
             "totalClearance": "10"
           }
+        },
+        {
+          "minuto": "67'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "7",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "4",
+            "possessionPct": "36.6",
+            "totalShots": "5",
+            "shotsOnTarget": "3",
+            "shotPct": "0.6",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "1",
+            "accuratePasses": "196",
+            "totalPasses": "237",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "8",
+            "crossPct": "0.0",
+            "totalLongBalls": "42",
+            "accurateLongBalls": "18",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "5",
+            "totalTackles": "7",
+            "tacklePct": "0.7",
+            "interceptions": "3",
+            "effectiveClearance": "28",
+            "totalClearance": "28"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "11",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "7",
+            "saves": "2",
+            "possessionPct": "63.4",
+            "totalShots": "16",
+            "shotsOnTarget": "4",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "349",
+            "totalPasses": "394",
+            "passPct": "0.9",
+            "accurateCrosses": "10",
+            "totalCrosses": "31",
+            "crossPct": "0.3",
+            "totalLongBalls": "30",
+            "accurateLongBalls": "20",
+            "longballPct": "0.7",
+            "blockedShots": "8",
+            "effectiveTackles": "4",
+            "totalTackles": "12",
+            "tacklePct": "0.3",
+            "interceptions": "5",
+            "effectiveClearance": "10",
+            "totalClearance": "10"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -56037,6 +56173,71 @@
             "effectiveClearance": "21",
             "totalClearance": "21"
           }
+        },
+        {
+          "minuto": "56'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "4",
+            "saves": "0",
+            "possessionPct": "69.6",
+            "totalShots": "8",
+            "shotsOnTarget": "4",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "267",
+            "totalPasses": "317",
+            "passPct": "0.8",
+            "accurateCrosses": "3",
+            "totalCrosses": "16",
+            "crossPct": "0.2",
+            "totalLongBalls": "36",
+            "accurateLongBalls": "15",
+            "longballPct": "0.4",
+            "blockedShots": "2",
+            "effectiveTackles": "3",
+            "totalTackles": "8",
+            "tacklePct": "0.4",
+            "interceptions": "1",
+            "effectiveClearance": "9",
+            "totalClearance": "9"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "2",
+            "possessionPct": "30.4",
+            "totalShots": "3",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "80",
+            "totalPasses": "142",
+            "passPct": "0.6",
+            "accurateCrosses": "1",
+            "totalCrosses": "3",
+            "crossPct": "0.3",
+            "totalLongBalls": "44",
+            "accurateLongBalls": "14",
+            "longballPct": "0.3",
+            "blockedShots": "0",
+            "effectiveTackles": "3",
+            "totalTackles": "6",
+            "tacklePct": "0.5",
+            "interceptions": "4",
+            "effectiveClearance": "24",
+            "totalClearance": "24"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -56411,6 +56612,71 @@
             "effectiveClearance": "1",
             "totalClearance": "1"
           }
+        },
+        {
+          "minuto": "27'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "0",
+            "possessionPct": "48.9",
+            "totalShots": "2",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "99",
+            "totalPasses": "128",
+            "passPct": "0.8",
+            "accurateCrosses": "1",
+            "totalCrosses": "1",
+            "crossPct": "1.0",
+            "totalLongBalls": "20",
+            "accurateLongBalls": "12",
+            "longballPct": "0.6",
+            "blockedShots": "1",
+            "effectiveTackles": "3",
+            "totalTackles": "5",
+            "tacklePct": "0.6",
+            "interceptions": "5",
+            "effectiveClearance": "10",
+            "totalClearance": "10"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "0",
+            "possessionPct": "51.1",
+            "totalShots": "7",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "103",
+            "totalPasses": "127",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "8",
+            "crossPct": "0.0",
+            "totalLongBalls": "8",
+            "accurateLongBalls": "2",
+            "longballPct": "0.3",
+            "blockedShots": "2",
+            "effectiveTackles": "3",
+            "totalTackles": "5",
+            "tacklePct": "0.6",
+            "interceptions": "1",
+            "effectiveClearance": "4",
+            "totalClearance": "4"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -56774,6 +57040,71 @@
             "effectiveClearance": "0",
             "totalClearance": "13"
           }
+        },
+        {
+          "minuto": "26'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "3",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "3",
+            "saves": "1",
+            "possessionPct": "64.2",
+            "totalShots": "4",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "91",
+            "totalPasses": "109",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "2",
+            "effectiveTackles": "2",
+            "totalTackles": "2",
+            "tacklePct": "1.0",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "1"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "35.8",
+            "totalShots": "3",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "46",
+            "totalPasses": "63",
+            "passPct": "0.7",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "0",
+            "effectiveTackles": "3",
+            "totalTackles": "4",
+            "tacklePct": "0.8",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "16"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -56856,7 +57187,7 @@
   "predicciones_activas": {
     "401860343": {
       "posible_empate": {
-        "minuto": "67'",
+        "minuto": "90'+2'",
         "prediccion": "fav",
         "equipo": "Novorizontino"
       },
@@ -56866,20 +57197,8 @@
         "equipo": "Novorizontino"
       }
     },
-    "401860345": {
-      "cuidado_rival_presiona": {
-        "minuto": "45'+2'",
-        "prediccion": "rival",
-        "equipo": "Atlético Goianiense"
-      }
-    },
-    "401841580": {
-      "posible_victoria_favorito": {
-        "minuto": "50'",
-        "prediccion": "fav",
-        "equipo": "Racing Club"
-      }
-    },
+    "401860345": {},
+    "401841580": {},
     "401876973": {
       "cuidado_rival_presiona": {
         "minuto": "17'",
@@ -56906,15 +57225,15 @@
       "aciertos": 10
     },
     "posible_victoria_favorito": {
-      "total": 10,
-      "aciertos": 7
+      "total": 11,
+      "aciertos": 8
     },
     "posible_empate": {
       "total": 3,
       "aciertos": 2
     },
     "cuidado_rival_presiona": {
-      "total": 10,
+      "total": 11,
       "aciertos": 9
     },
     "ampliacion_marcador": {
