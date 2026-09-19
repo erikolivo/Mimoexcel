@@ -3128,8 +3128,29 @@
     ]
   },
   "2575_gre.1_2026": {
-    "fecha_cache": "2026-08-29T05:21:53.806420",
+    "fecha_cache": "2026-09-19T16:50:37.063123",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-09-07",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-08-29",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-08-22",
         "goles_favor": 0,
