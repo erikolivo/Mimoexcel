@@ -114457,8 +114457,15 @@
     ]
   },
   "393_eng.1_2026": {
-    "fecha_cache": "2026-09-12T13:40:51.193329",
+    "fecha_cache": "2026-09-19T16:45:31.429997",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 0,
