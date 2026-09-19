@@ -114084,8 +114084,15 @@
     ]
   },
   "268_ger.1_2026": {
-    "fecha_cache": "2026-09-12T13:40:41.081695",
+    "fecha_cache": "2026-09-19T14:51:44.920176",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 0,
+        "goles_contra": 5,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 3,
@@ -114141,8 +114148,15 @@
     ]
   },
   "2950_ger.1_2026": {
-    "fecha_cache": "2026-09-12T13:40:47.662699",
+    "fecha_cache": "2026-09-19T14:51:45.107246",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 5,
