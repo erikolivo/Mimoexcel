@@ -30424,8 +30424,22 @@
     ]
   },
   "2670_par.1_2026": {
-    "fecha_cache": "2026-09-06T13:44:39.670392",
+    "fecha_cache": "2026-09-19T19:50:39.758624",
     "historial": [
+      {
+        "fecha": "2026-09-11",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 4,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-02",
         "goles_favor": 0,
@@ -34785,8 +34799,22 @@
     ]
   },
   "21313_par.1_2026": {
-    "fecha_cache": "2026-09-06T13:44:45.846263",
+    "fecha_cache": "2026-09-19T19:50:40.031031",
     "historial": [
+      {
+        "fecha": "2026-09-11",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-02",
         "goles_favor": 0,
