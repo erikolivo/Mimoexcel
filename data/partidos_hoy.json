@@ -58725,7 +58725,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 3
+      "grupo_destacado": 3,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Tepatitlán FC vs Mineros de Zacatecas",
@@ -60341,7 +60342,8 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 3
+      "grupo_destacado": 3,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Pérez Zeledón vs Sporting San José",
@@ -60402,10 +60404,7 @@
       "diferencia_maxima_alcanzada": 0
     }
   ],
-  "predicciones_activas": {
-    "401876973": {},
-    "401886199": {}
-  },
+  "predicciones_activas": {},
   "historial_predicciones": {
     "alerta_1er_tiempo": {
       "total": 17,
