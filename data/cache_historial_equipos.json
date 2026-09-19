@@ -16443,8 +16443,15 @@
     ]
   },
   "171_fra.2_2026": {
-    "fecha_cache": "2026-09-12T13:40:09.569894",
+    "fecha_cache": "2026-09-19T13:54:10.191867",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 2,
