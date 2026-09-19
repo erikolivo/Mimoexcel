@@ -25177,8 +25177,22 @@
     ]
   },
   "2715_nor.1_2026": {
-    "fecha_cache": "2026-09-06T13:44:25.181273",
+    "fecha_cache": "2026-09-19T16:25:12.843008",
     "historial": [
+      {
+        "fecha": "2026-09-13",
+        "goles_favor": 5,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-08-30",
         "goles_favor": 4,
