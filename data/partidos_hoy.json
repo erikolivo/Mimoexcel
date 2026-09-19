@@ -53309,6 +53309,71 @@
             "effectiveClearance": "18",
             "totalClearance": "18"
           }
+        },
+        {
+          "minuto": "45'+6'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "5",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "2",
+            "saves": "2",
+            "possessionPct": "51.8",
+            "totalShots": "4",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "134",
+            "totalPasses": "181",
+            "passPct": "0.7",
+            "accurateCrosses": "2",
+            "totalCrosses": "8",
+            "crossPct": "0.3",
+            "totalLongBalls": "28",
+            "accurateLongBalls": "12",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "8",
+            "totalTackles": "11",
+            "tacklePct": "0.7",
+            "interceptions": "3",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "6",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "5",
+            "saves": "0",
+            "possessionPct": "48.2",
+            "totalShots": "8",
+            "shotsOnTarget": "3",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "123",
+            "totalPasses": "164",
+            "passPct": "0.8",
+            "accurateCrosses": "4",
+            "totalCrosses": "11",
+            "crossPct": "0.4",
+            "totalLongBalls": "19",
+            "accurateLongBalls": "7",
+            "longballPct": "0.4",
+            "blockedShots": "2",
+            "effectiveTackles": "6",
+            "totalTackles": "13",
+            "tacklePct": "0.5",
+            "interceptions": "6",
+            "effectiveClearance": "18",
+            "totalClearance": "18"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -53754,6 +53819,71 @@
             "effectiveClearance": "4",
             "totalClearance": "4"
           }
+        },
+        {
+          "minuto": "34'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "3",
+            "possessionPct": "34.6",
+            "totalShots": "0",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "101",
+            "totalPasses": "125",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "3",
+            "crossPct": "0.0",
+            "totalLongBalls": "23",
+            "accurateLongBalls": "9",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "2",
+            "totalTackles": "3",
+            "tacklePct": "0.7",
+            "interceptions": "2",
+            "effectiveClearance": "16",
+            "totalClearance": "16"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "6",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "4",
+            "saves": "0",
+            "possessionPct": "65.4",
+            "totalShots": "12",
+            "shotsOnTarget": "3",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "204",
+            "totalPasses": "228",
+            "passPct": "0.9",
+            "accurateCrosses": "5",
+            "totalCrosses": "15",
+            "crossPct": "0.3",
+            "totalLongBalls": "15",
+            "accurateLongBalls": "11",
+            "longballPct": "0.7",
+            "blockedShots": "5",
+            "effectiveTackles": "1",
+            "totalTackles": "6",
+            "tacklePct": "0.2",
+            "interceptions": "1",
+            "effectiveClearance": "4",
+            "totalClearance": "4"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -53767,6 +53897,12 @@
           "tipo": "no_fav_domina",
           "minuto": "24'",
           "texto": "📊 MERCADO SE EQUIVOCO\nAtlético Goianiense domina (cuota 3.00)\nz: 3.5 | Tiros: 1.0-0.0\nPosesión: 65%\nMarcador: 0-0",
+          "diferencia_goles": 0
+        },
+        {
+          "tipo": "cuidado_rival_presiona",
+          "minuto": "34'",
+          "texto": "⚠️ Rival domina [BAJA]",
           "diferencia_goles": 0
         }
       ],
@@ -54057,6 +54193,71 @@
             "effectiveClearance": "7",
             "totalClearance": "7"
           }
+        },
+        {
+          "minuto": "23'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "73.8",
+            "totalShots": "1",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "119",
+            "totalPasses": "144",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "6",
+            "crossPct": "0.0",
+            "totalLongBalls": "18",
+            "accurateLongBalls": "8",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "2",
+            "totalTackles": "5",
+            "tacklePct": "0.4",
+            "interceptions": "1",
+            "effectiveClearance": "6",
+            "totalClearance": "6"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "0",
+            "possessionPct": "26.2",
+            "totalShots": "0",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "26",
+            "totalPasses": "54",
+            "passPct": "0.5",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "18",
+            "accurateLongBalls": "6",
+            "longballPct": "0.3",
+            "blockedShots": "0",
+            "effectiveTackles": "0",
+            "totalTackles": "3",
+            "tacklePct": "0.0",
+            "interceptions": "0",
+            "effectiveClearance": "10",
+            "totalClearance": "10"
+          }
         }
       ],
       "alertas_enviadas": [
@@ -54064,6 +54265,12 @@
           "tipo": "alerta_1er_tiempo",
           "minuto": "18'",
           "texto": "⏱️ Alerta de primer tiempo -- el favorito domina el 0-0 (100%).",
+          "diferencia_goles": 0
+        },
+        {
+          "tipo": "posible_victoria_favorito",
+          "minuto": "23'",
+          "texto": "🟢 Gana Fav",
           "diferencia_goles": 0
         }
       ],
@@ -54258,7 +54465,7 @@
     },
     "401860345": {
       "cuidado_rival_presiona": {
-        "minuto": "19'",
+        "minuto": "34'",
         "prediccion": "rival",
         "equipo": "Atlético Goianiense"
       }
@@ -54266,6 +54473,11 @@
     "401841580": {
       "alerta_1er_tiempo": {
         "minuto": "18'",
+        "prediccion": "fav",
+        "equipo": "Racing Club"
+      },
+      "posible_victoria_favorito": {
+        "minuto": "23'",
         "prediccion": "fav",
         "equipo": "Racing Club"
       }
