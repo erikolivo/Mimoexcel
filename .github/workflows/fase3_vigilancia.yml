@@ -6,11 +6,12 @@ name: Fase 3 - Vigilancia en vivo
 # hueco de madrugada local, franja de muy baja probabilidad de
 # partidos en vivo).
 #
-# Horarios LOCALES (UTC-5) de arranque: 05:00, 10:30, 16:00, 21:30
-# Convertidos a UTC (+5h):               10:00, 15:30, 21:00, 02:30
+# Horarios LOCALES (UTC-5) de arranque: 05:00, 08:00, 10:30, 16:00, 21:30
+# Convertidos a UTC (+5h):               10:00, 13:00, 15:30, 21:00, 02:30
 on:
   schedule:
     - cron: "0 10 * * *"
+    - cron: "0 13 * * *"
     - cron: "30 15 * * *"
     - cron: "0 21 * * *"
     - cron: "30 2 * * *"

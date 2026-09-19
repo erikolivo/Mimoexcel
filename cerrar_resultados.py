@@ -18,10 +18,10 @@ de cada alerta individual, archivo del dia, Excel) sigue igual.
 import json
 from pathlib import Path
 
-from fetch_data import obtener_resultado_fixture
+from fetch_data import obtener_resultado_fixture, obtener_estado_desde_scoreboard
 from cuota_espn import uso_de_hoy
 from estado_diario import ya_se_hizo, marcar_hecho
-from resolucion_alertas import CRITERIO_POR_TIPO, TIPO_ALIAS, evaluar_alerta, nombre_normalizado
+from resolucion_alertas import CRITERIO_POR_TIPO, TIPO_ALIAS, evaluar_alerta, nombre_normalizado, resolver_pendientes
 import ratings_store
 
 DATA_DIR = Path(__file__).parent / "data"
@@ -118,8 +118,27 @@ def cerrar():
             continue
 
         liga_slug = p.get("liga_slug")
-        if not liga_slug:
-            print(f"[AVISO] {p['partido']} no tiene liga_slug (partido de antes de la migracion) -- se salta.")
+        if not liga_slug or liga_slug == "all":
+            # F1/F4: para liga_slug "all" se usa el scoreboard global
+            try:
+                estado_info = obtener_estado_desde_scoreboard(
+                    p["fixture_id"], datos.get("fecha", ""))
+            except Exception as e:
+                print(f"[AVISO] No se pudo consultar scoreboard global para {p['partido']}: {e}")
+                continue
+            if not estado_info:
+                continue
+            if estado_info.get("estado") != "post":
+                continue
+            gh = estado_info.get("goles_local")
+            ga = estado_info.get("goles_visitante")
+            if gh is None or ga is None:
+                continue
+            p["resultado_final"] = f"{gh}-{ga}"
+            p["acierto"] = calcular_acierto(p, gh, ga)
+            _actualizar_rating_propio(p, gh, ga)
+            _auditar_alertas(p)
+            cambios = True
             continue
 
         try:
@@ -141,6 +160,24 @@ def cerrar():
         p["acierto"] = calcular_acierto(p, gh, ga)
 
         _actualizar_rating_propio(p, gh, ga)
+
+        # F4: resolver alertas pendientes que nunca se procesaron en
+        # vivo (p.ej. liga_slug "all" sin monitoreo en tiempo real).
+        snap_fin = {"minuto": None, "goles_local": gh, "goles_visitante": ga,
+                    "stats_local": {}, "stats_visitante": {}}
+        resueltas = resolver_pendientes(
+            p, None, snap_fin, terminado=True,
+            marcador_final=(gh, ga), sin_gol_es_fallo=True)
+        if resueltas:
+            for alerta in resueltas:
+                if alerta.get("estado") == "acierto":
+                    alerta["acierto"] = True
+                elif alerta.get("estado") == "fallo":
+                    alerta["acierto"] = False
+                else:
+                    alerta["acierto"] = None
+            print(f"  F4: {len(resueltas)} alerta(s) resuelta(s) en cierre para {p['partido']}")
+
         _auditar_alertas(p)
 
         cambios = True
