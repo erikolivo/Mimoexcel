@@ -13827,8 +13827,15 @@
     ]
   },
   "396_eng.4_2026": {
-    "fecha_cache": "2026-09-12T13:41:30.368711",
+    "fecha_cache": "2026-09-19T15:17:43.867377",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 1,
@@ -15179,8 +15186,15 @@
     ]
   },
   "308_eng.4_2026": {
-    "fecha_cache": "2026-09-12T13:40:08.480046",
+    "fecha_cache": "2026-09-19T15:17:45.111753",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 1,
@@ -15379,8 +15393,29 @@
     ]
   },
   "302_eng.4_2026": {
-    "fecha_cache": "2026-08-30T01:37:38.708886",
+    "fecha_cache": "2026-09-19T15:17:44.056361",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-05",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-09-01",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-08-29",
         "goles_favor": 1,
@@ -76810,8 +76845,22 @@
     ]
   },
   "389_eng.4_2026": {
-    "fecha_cache": "2026-09-05T13:29:17.617755",
+    "fecha_cache": "2026-09-19T15:17:44.882621",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-05",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-01",
         "goles_favor": 1,
