@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-18",
+  "actualizado": "2026-09-19",
   "ligas": [
     {
       "pais": "",
@@ -32,10 +32,10 @@
       "pais": "",
       "liga": "USL Championship",
       "liga_id": "4002",
-      "veces_visto": 30,
+      "veces_visto": 37,
       "ejemplo_partido": "New Mexico United vs Indy Eleven",
       "fixture_id": "401842218",
-      "ultimo_visto": "2026-09-16"
+      "ultimo_visto": "2026-09-19"
     },
     {
       "pais": "",
@@ -59,19 +59,37 @@
       "pais": "",
       "liga": "Club Friendly",
       "liga_id": "19834",
-      "veces_visto": 23,
+      "veces_visto": 25,
       "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
       "fixture_id": "401914230",
-      "ultimo_visto": "2026-09-18"
+      "ultimo_visto": "2026-09-19"
     },
     {
       "pais": "",
       "liga": "NWSL",
       "liga_id": "8301",
-      "veces_visto": 22,
+      "veces_visto": 25,
       "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
       "fixture_id": "401853996",
-      "ultimo_visto": "2026-09-18"
+      "ultimo_visto": "2026-09-19"
+    },
+    {
+      "pais": "",
+      "liga": "Liga F",
+      "liga_id": "20956",
+      "veces_visto": 22,
+      "ejemplo_partido": "Deportivo vs Real Madrid",
+      "fixture_id": "401882522",
+      "ultimo_visto": "2026-09-19"
+    },
+    {
+      "pais": "",
+      "liga": "Première Ligue",
+      "liga_id": "20955",
+      "veces_visto": 21,
+      "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
+      "fixture_id": "401885667",
+      "ultimo_visto": "2026-09-19"
     },
     {
       "pais": "",
@@ -93,21 +111,12 @@
     },
     {
       "pais": "",
-      "liga": "Liga F",
-      "liga_id": "20956",
-      "veces_visto": 18,
-      "ejemplo_partido": "Deportivo vs Real Madrid",
-      "fixture_id": "401882522",
-      "ultimo_visto": "2026-09-18"
-    },
-    {
-      "pais": "",
-      "liga": "Première Ligue",
-      "liga_id": "20955",
-      "veces_visto": 18,
-      "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
-      "fixture_id": "401885667",
-      "ultimo_visto": "2026-09-18"
+      "liga": "Women's Super League",
+      "liga_id": "8097",
+      "veces_visto": 19,
+      "ejemplo_partido": "West Ham United vs London City Lionesses",
+      "fixture_id": "401902921",
+      "ultimo_visto": "2026-09-19"
     },
     {
       "pais": "",
@@ -126,15 +135,6 @@
       "ejemplo_partido": "Daejeon Hana Citizen vs Kyoto Sanga",
       "fixture_id": "401912672",
       "ultimo_visto": "2026-09-16"
-    },
-    {
-      "pais": "",
-      "liga": "Women's Super League",
-      "liga_id": "8097",
-      "veces_visto": 16,
-      "ejemplo_partido": "West Ham United vs London City Lionesses",
-      "fixture_id": "401902921",
-      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
@@ -165,21 +165,30 @@
     },
     {
       "pais": "",
+      "liga": "USL Super League",
+      "liga_id": "23633",
+      "veces_visto": 13,
+      "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
+      "fixture_id": "401878641",
+      "ultimo_visto": "2026-09-19"
+    },
+    {
+      "pais": "",
+      "liga": "Taca de Portugal, 2nd Round",
+      "liga_id": "20922",
+      "veces_visto": 13,
+      "ejemplo_partido": "Real Sport Clube vs Académica de Coimbra",
+      "fixture_id": "401913076",
+      "ultimo_visto": "2026-09-19"
+    },
+    {
+      "pais": "",
       "liga": "Copa Colombia, Round of 16",
       "liga_id": "8313",
       "veces_visto": 12,
       "ejemplo_partido": "América de Cali vs Deportivo Pereira",
       "fixture_id": "401902716",
       "ultimo_visto": "2026-09-09"
-    },
-    {
-      "pais": "",
-      "liga": "USL Super League",
-      "liga_id": "23633",
-      "veces_visto": 12,
-      "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
-      "fixture_id": "401878641",
-      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
@@ -476,15 +485,6 @@
       "veces_visto": 2,
       "ejemplo_partido": "Fiji vs Solomon Islands",
       "fixture_id": "401922313",
-      "ultimo_visto": "2026-09-18"
-    },
-    {
-      "pais": "",
-      "liga": "Taca de Portugal, 2nd Round",
-      "liga_id": "20922",
-      "veces_visto": 2,
-      "ejemplo_partido": "Real Sport Clube vs Académica de Coimbra",
-      "fixture_id": "401913076",
       "ultimo_visto": "2026-09-18"
     },
     {
