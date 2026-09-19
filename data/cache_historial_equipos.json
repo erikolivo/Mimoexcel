@@ -112024,8 +112024,22 @@
     ]
   },
   "231_mex.1_2026": {
-    "fecha_cache": "2026-09-11T14:57:50.719008",
+    "fecha_cache": "2026-09-19T01:18:23.789621",
     "historial": [
+      {
+        "fecha": "2026-09-16",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-08-30",
         "goles_favor": 0,
@@ -112998,8 +113012,15 @@
     ]
   },
   "226_mex.1_2026": {
-    "fecha_cache": "2026-09-11T14:57:56.318700",
+    "fecha_cache": "2026-09-19T01:18:24.023335",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 1,
