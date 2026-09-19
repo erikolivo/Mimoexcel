@@ -61002,44 +61002,5 @@
       ],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {
-    "401876972": {
-      "cuidado_rival_presiona": {
-        "minuto": "34'",
-        "prediccion": "rival",
-        "equipo": "Tigres UANL"
-      }
-    }
-  },
-  "historial_predicciones": {
-    "alerta_1er_tiempo": {
-      "total": 17,
-      "aciertos": 11
-    },
-    "posible_victoria_favorito": {
-      "total": 12,
-      "aciertos": 9
-    },
-    "posible_empate": {
-      "total": 3,
-      "aciertos": 2
-    },
-    "cuidado_rival_presiona": {
-      "total": 13,
-      "aciertos": 10
-    },
-    "ampliacion_marcador": {
-      "total": 2,
-      "aciertos": 1
-    },
-    "value_alert": {
-      "total": 1,
-      "aciertos": 1
-    },
-    "gol_de_cierre": {
-      "total": 2,
-      "aciertos": 0
-    }
-  }
+  ]
 }
