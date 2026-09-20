@@ -33768,8 +33768,22 @@
     ]
   },
   "2029_bra.1_2026": {
-    "fecha_cache": "2026-09-06T13:44:44.916520",
+    "fecha_cache": "2026-09-20T14:23:27.098414",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-08-30",
         "goles_favor": 1,
@@ -114456,8 +114470,15 @@
     ]
   },
   "4057_ita.1_2026": {
-    "fecha_cache": "2026-09-12T13:40:20.076478",
+    "fecha_cache": "2026-09-20T14:23:25.693367",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 3,
