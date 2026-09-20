@@ -185578,7 +185578,8 @@
           "acierto": true
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Real Salt Lake vs Vancouver Whitecaps",
@@ -189844,7 +189845,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "América vs Guadalajara",
@@ -190477,7 +190479,10 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     }
-  ]
+  ],
+  "predicciones_activas": {},
+  "historial_predicciones": {}
 }
