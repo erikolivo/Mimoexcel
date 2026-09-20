@@ -81066,8 +81066,15 @@
     ]
   },
   "19_arg.1_2026": {
-    "fecha_cache": "2026-09-12T13:43:16.335276",
+    "fecha_cache": "2026-09-20T00:42:42.881243",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 0,
