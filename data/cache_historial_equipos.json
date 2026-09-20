@@ -94226,8 +94226,22 @@
     ]
   },
   "14_arg.1_2026": {
-    "fecha_cache": "2026-09-06T13:44:34.473750",
+    "fecha_cache": "2026-09-20T21:47:00.598496",
     "historial": [
+      {
+        "fecha": "2026-09-11",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-08-31",
         "goles_favor": 0,
@@ -117607,8 +117621,15 @@
     ]
   },
   "7764_arg.1_2026": {
-    "fecha_cache": "2026-09-12T13:42:42.199793",
+    "fecha_cache": "2026-09-20T21:47:00.377480",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-04",
         "goles_favor": 1,
