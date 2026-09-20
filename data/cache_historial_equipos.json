@@ -115187,8 +115187,15 @@
     ]
   },
   "370_eng.1_2026": {
-    "fecha_cache": "2026-09-12T13:41:01.756973",
+    "fecha_cache": "2026-09-20T15:45:08.940119",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 2,
