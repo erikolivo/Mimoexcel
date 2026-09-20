@@ -86030,8 +86030,15 @@
     ]
   },
   "3445_bra.1_2026": {
-    "fecha_cache": "2026-09-12T13:43:05.376531",
+    "fecha_cache": "2026-09-20T20:21:02.917950",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 1,
