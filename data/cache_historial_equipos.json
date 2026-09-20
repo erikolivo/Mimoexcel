@@ -119913,8 +119913,15 @@
     ]
   },
   "938_bel.1_2026": {
-    "fecha_cache": "2026-09-13T14:23:07.451325",
+    "fecha_cache": "2026-09-20T17:03:52.324390",
     "historial": [
+      {
+        "fecha": "2026-09-13",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 0,
@@ -130870,6 +130877,53 @@
         "goles_contra": 2,
         "es_local": false,
         "resultado": "E"
+      }
+    ]
+  },
+  "570_bel.1_2026": {
+    "fecha_cache": "2026-09-20T17:03:52.079001",
+    "historial": [
+      {
+        "fecha": "2026-09-13",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-04",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-08-30",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-08-23",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-08-15",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-08-07",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
       }
     ]
   }
