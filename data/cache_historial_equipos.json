@@ -22476,8 +22476,29 @@
     ]
   },
   "2495_swe.1_2026": {
-    "fecha_cache": "2026-08-30T09:00:12.401938",
+    "fecha_cache": "2026-09-20T14:48:59.065454",
     "historial": [
+      {
+        "fecha": "2026-09-13",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E"
+      },
+      {
+        "fecha": "2026-08-30",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-08-23",
         "goles_favor": 2,
