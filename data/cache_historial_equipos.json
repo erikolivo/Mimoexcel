@@ -97312,8 +97312,22 @@
     ]
   },
   "7312_per.1_2026": {
-    "fecha_cache": "2026-09-06T13:44:50.486180",
+    "fecha_cache": "2026-09-20T01:33:45.160005",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-01",
         "goles_favor": 0,
