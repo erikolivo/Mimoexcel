@@ -107828,8 +107828,22 @@
     ]
   },
   "185_usa.1_2026": {
-    "fecha_cache": "2026-09-09T11:30:47.670125",
+    "fecha_cache": "2026-09-20T01:03:04.141915",
     "historial": [
+      {
+        "fecha": "2026-09-13",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-10",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 4,
