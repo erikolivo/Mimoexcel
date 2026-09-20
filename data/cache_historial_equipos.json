@@ -120527,8 +120527,15 @@
     ]
   },
   "360_eng.1_2026": {
-    "fecha_cache": "2026-09-13T15:59:32.936226",
+    "fecha_cache": "2026-09-20T17:19:06.097673",
     "historial": [
+      {
+        "fecha": "2026-09-13",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 2,
