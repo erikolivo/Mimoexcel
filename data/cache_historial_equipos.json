@@ -24641,8 +24641,15 @@
     ]
   },
   "6750_nor.1_2026": {
-    "fecha_cache": "2026-09-13T15:18:48.868655",
+    "fecha_cache": "2026-09-20T16:20:56.625077",
     "historial": [
+      {
+        "fecha": "2026-09-13",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-04",
         "goles_favor": 0,
