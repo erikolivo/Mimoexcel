@@ -120739,8 +120739,22 @@
     ]
   },
   "90_esp.1_2026": {
-    "fecha_cache": "2026-09-13T16:50:29.868164",
+    "fecha_cache": "2026-09-20T17:49:32.595991",
     "historial": [
+      {
+        "fecha": "2026-09-16",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-09-13",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-09-05",
         "goles_favor": 3,
