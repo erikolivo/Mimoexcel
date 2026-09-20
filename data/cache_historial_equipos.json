@@ -118043,8 +118043,22 @@
     ]
   },
   "86_esp.1_2026": {
-    "fecha_cache": "2026-09-12T13:43:01.644656",
+    "fecha_cache": "2026-09-20T14:33:43.569976",
     "historial": [
+      {
+        "fecha": "2026-09-15",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-04",
         "goles_favor": 0,
