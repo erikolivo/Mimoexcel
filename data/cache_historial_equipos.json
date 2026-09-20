@@ -26258,8 +26258,15 @@
     ]
   },
   "1010_gre.1_2026": {
-    "fecha_cache": "2026-09-12T13:42:03.252460",
+    "fecha_cache": "2026-09-20T16:15:52.653012",
     "historial": [
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 2,
