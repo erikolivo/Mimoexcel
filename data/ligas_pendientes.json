@@ -21,6 +21,15 @@
     },
     {
       "pais": "",
+      "liga": "Taca de Portugal, 2nd Round",
+      "liga_id": "20922",
+      "veces_visto": 78,
+      "ejemplo_partido": "Real Sport Clube vs Académica de Coimbra",
+      "fixture_id": "401913076",
+      "ultimo_visto": "2026-09-20"
+    },
+    {
+      "pais": "",
       "liga": "English FA Cup Qualifying, First Round Qualifying",
       "liga_id": "23480",
       "veces_visto": 63,
@@ -30,18 +39,9 @@
     },
     {
       "pais": "",
-      "liga": "Taca de Portugal, 2nd Round",
-      "liga_id": "20922",
-      "veces_visto": 51,
-      "ejemplo_partido": "Real Sport Clube vs Académica de Coimbra",
-      "fixture_id": "401913076",
-      "ultimo_visto": "2026-09-20"
-    },
-    {
-      "pais": "",
       "liga": "USL Championship",
       "liga_id": "4002",
-      "veces_visto": 46,
+      "veces_visto": 48,
       "ejemplo_partido": "New Mexico United vs Indy Eleven",
       "fixture_id": "401842218",
       "ultimo_visto": "2026-09-20"
@@ -50,27 +50,45 @@
       "pais": "",
       "liga": "NWSL",
       "liga_id": "8301",
-      "veces_visto": 32,
+      "veces_visto": 36,
       "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
       "fixture_id": "401853996",
       "ultimo_visto": "2026-09-20"
     },
     {
       "pais": "",
+      "liga": "Liga F",
+      "liga_id": "20956",
+      "veces_visto": 32,
+      "ejemplo_partido": "Deportivo vs Real Madrid",
+      "fixture_id": "401882522",
+      "ultimo_visto": "2026-09-20"
+    },
+    {
+      "pais": "",
       "liga": "USL League One",
       "liga_id": "19915",
-      "veces_visto": 29,
+      "veces_visto": 30,
       "ejemplo_partido": "One Knoxville vs FC Naples",
       "fixture_id": "401842107",
       "ultimo_visto": "2026-09-20"
     },
     {
       "pais": "",
-      "liga": "Liga F",
-      "liga_id": "20956",
-      "veces_visto": 29,
-      "ejemplo_partido": "Deportivo vs Real Madrid",
-      "fixture_id": "401882522",
+      "liga": "Liga de Expansión MX",
+      "liga_id": "3932",
+      "veces_visto": 28,
+      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
+      "fixture_id": "401886377",
+      "ultimo_visto": "2026-09-20"
+    },
+    {
+      "pais": "",
+      "liga": "Women's Super League",
+      "liga_id": "8097",
+      "veces_visto": 28,
+      "ejemplo_partido": "West Ham United vs London City Lionesses",
+      "fixture_id": "401902921",
       "ultimo_visto": "2026-09-20"
     },
     {
@@ -81,24 +99,6 @@
       "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
       "fixture_id": "401914230",
       "ultimo_visto": "2026-09-19"
-    },
-    {
-      "pais": "",
-      "liga": "Liga de Expansión MX",
-      "liga_id": "3932",
-      "veces_visto": 27,
-      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
-      "fixture_id": "401886377",
-      "ultimo_visto": "2026-09-20"
-    },
-    {
-      "pais": "",
-      "liga": "Women's Super League",
-      "liga_id": "8097",
-      "veces_visto": 25,
-      "ejemplo_partido": "West Ham United vs London City Lionesses",
-      "fixture_id": "401902921",
-      "ultimo_visto": "2026-09-20"
     },
     {
       "pais": "",
@@ -149,7 +149,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 15,
+      "veces_visto": 16,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-09-20"
@@ -248,9 +248,18 @@
       "pais": "",
       "liga": "Northern Super League",
       "liga_id": "23286",
-      "veces_visto": 7,
+      "veces_visto": 8,
       "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
       "fixture_id": "401859943",
+      "ultimo_visto": "2026-09-20"
+    },
+    {
+      "pais": "",
+      "liga": "Women's International Friendly",
+      "liga_id": "3923",
+      "veces_visto": 7,
+      "ejemplo_partido": "China vs Vietnam",
+      "fixture_id": "401916262",
       "ultimo_visto": "2026-09-20"
     },
     {
@@ -306,15 +315,6 @@
       "ejemplo_partido": "Deportivo Riestra vs Banfield",
       "fixture_id": "401912728",
       "ultimo_visto": "2026-09-16"
-    },
-    {
-      "pais": "",
-      "liga": "Women's International Friendly",
-      "liga_id": "3923",
-      "veces_visto": 5,
-      "ejemplo_partido": "China vs Vietnam",
-      "fixture_id": "401916262",
-      "ultimo_visto": "2026-09-20"
     },
     {
       "pais": "",
