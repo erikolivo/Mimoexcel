@@ -93,7 +93,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 1
+      "grupo_destacado": 1,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Barracas Central vs Independiente Rivadavia",
@@ -281,5 +282,7 @@
       "es_destacado": true,
       "grupo_destacado": 3
     }
-  ]
+  ],
+  "predicciones_activas": {},
+  "historial_predicciones": {}
 }
