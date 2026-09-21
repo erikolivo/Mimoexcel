@@ -119166,8 +119166,22 @@
     ]
   },
   "223_mex.1_2026": {
-    "fecha_cache": "2026-09-12T13:43:22.435107",
+    "fecha_cache": "2026-09-21T00:16:43.465618",
     "historial": [
+      {
+        "fecha": "2026-09-16",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 5,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-08-31",
         "goles_favor": 4,
