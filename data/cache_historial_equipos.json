@@ -123342,8 +123342,15 @@
     ]
   },
   "225_mex.1_2026": {
-    "fecha_cache": "2026-09-14T01:22:23.146269",
+    "fecha_cache": "2026-09-21T01:58:06.110614",
     "historial": [
+      {
+        "fecha": "2026-09-14",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 0,
