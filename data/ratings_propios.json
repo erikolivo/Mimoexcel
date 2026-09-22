@@ -2380,13 +2380,13 @@
       "nombre": "Independiente Rivadavia",
       "pais": null,
       "liga": null,
-      "rating": 1583.51,
-      "rd": 199.64,
-      "vol": 0.059997,
-      "partidos_jugados": 4,
+      "rating": 1645.76,
+      "rd": 181.72,
+      "vol": 0.059996,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-17"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-22"
     },
     "espn:15": {
       "nombre": "Racing Club",
@@ -3076,25 +3076,25 @@
       "nombre": "San Antonio Bulo Bulo",
       "pais": null,
       "liga": null,
-      "rating": 1520.97,
-      "rd": 209.62,
+      "rating": 1433.73,
+      "rd": 189.41,
       "vol": 0.059999,
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-19"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-22"
     },
     "espn:9497": {
       "nombre": "Guabirá",
       "pais": null,
       "liga": null,
-      "rating": 1491.53,
-      "rd": 243.06,
+      "rating": 1604.98,
+      "rd": 210.31,
       "vol": 0.060004,
-      "partidos_jugados": 3,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-17"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-22"
     },
     "espn:1929": {
       "nombre": "Benfica",
@@ -3196,13 +3196,13 @@
       "nombre": "Estudiantes de La Plata",
       "pais": null,
       "liga": null,
-      "rating": 1471.89,
-      "rd": 181.92,
-      "vol": 0.059997,
-      "partidos_jugados": 5,
+      "rating": 1440.32,
+      "rd": 172.77,
+      "vol": 0.059996,
+      "partidos_jugados": 6,
       "partidos_bootstrap": 0,
-      "partidos_reales": 5,
-      "ultima_actualizacion": "2026-09-17"
+      "partidos_reales": 6,
+      "ultima_actualizacion": "2026-09-22"
     },
     "espn:14": {
       "nombre": "Newell's Old Boys",
@@ -3448,13 +3448,13 @@
       "nombre": "Barracas Central",
       "pais": null,
       "liga": null,
-      "rating": 1499.63,
-      "rd": 226.25,
-      "vol": 0.059997,
-      "partidos_jugados": 3,
+      "rating": 1422.45,
+      "rd": 199.34,
+      "vol": 0.059996,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-15"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-22"
     },
     "espn:5489": {
       "nombre": "Deportes Tolima",
@@ -5212,13 +5212,13 @@
       "nombre": "Cuiabá",
       "pais": null,
       "liga": null,
-      "rating": 1511.74,
-      "rd": 230.79,
+      "rating": 1623.22,
+      "rd": 208.46,
       "vol": 0.06,
-      "partidos_jugados": 3,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-14"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-22"
     },
     "espn:19410": {
       "nombre": "Loudoun United FC",
@@ -8608,13 +8608,13 @@
       "nombre": "Lanús",
       "pais": null,
       "liga": null,
-      "rating": 1731.88,
-      "rd": 286.93,
-      "vol": 0.06,
-      "partidos_jugados": 1,
+      "rating": 1797.49,
+      "rd": 247.52,
+      "vol": 0.059999,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-09-07"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-09-22"
     },
     "espn:22534": {
       "nombre": "Juan Pablo II",
@@ -10205,12 +10205,12 @@
       "pais": null,
       "liga": null,
       "rating": 1500.0,
-      "rd": 253.53,
-      "vol": 0.059998,
-      "partidos_jugados": 2,
+      "rd": 227.98,
+      "vol": 0.059997,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-17"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-22"
     },
     "espn:20724": {
       "nombre": "Cancún FC",
@@ -10948,13 +10948,13 @@
       "nombre": "Náutico",
       "pais": null,
       "liga": null,
-      "rating": 1613.6,
-      "rd": 290.48,
+      "rating": 1444.67,
+      "rd": 242.99,
       "vol": 0.059999,
-      "partidos_jugados": 1,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-09-16"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-09-22"
     },
     "espn:7119": {
       "nombre": "Jeonbuk Motors",
@@ -11999,6 +11999,90 @@
       "partidos_bootstrap": 0,
       "partidos_reales": 1,
       "ultima_actualizacion": "2026-09-21"
+    },
+    "espn:4888": {
+      "nombre": "New Caledonia",
+      "pais": null,
+      "liga": null,
+      "rating": 1337.69,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-22"
+    },
+    "espn:4861": {
+      "nombre": "Solomon Islands",
+      "pais": null,
+      "liga": null,
+      "rating": 1662.31,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-22"
+    },
+    "espn:4862": {
+      "nombre": "Fiji",
+      "pais": null,
+      "liga": null,
+      "rating": 1337.69,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-22"
+    },
+    "espn:4864": {
+      "nombre": "Vanuatu",
+      "pais": null,
+      "liga": null,
+      "rating": 1662.31,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-22"
+    },
+    "espn:10146": {
+      "nombre": "Atlanta",
+      "pais": null,
+      "liga": null,
+      "rating": 1500.0,
+      "rd": 275.4,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-22"
+    },
+    "espn:236": {
+      "nombre": "Nueva Chicago",
+      "pais": null,
+      "liga": null,
+      "rating": 1500.0,
+      "rd": 290.32,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-22"
+    },
+    "espn:10374": {
+      "nombre": "Patronato",
+      "pais": null,
+      "liga": null,
+      "rating": 1500.0,
+      "rd": 290.32,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-22"
     }
   }
 }
