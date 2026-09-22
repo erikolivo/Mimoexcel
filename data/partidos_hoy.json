@@ -58,7 +58,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Wigan Athletic vs Blackpool",
@@ -116,7 +118,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "York City vs Rotherham United",
@@ -232,7 +236,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Notts County vs Grimsby Town",
@@ -1044,7 +1050,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Independiente Medellín vs Jaguares de Córdoba",
@@ -1073,7 +1081,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Nacional Potosí vs Real Potosí",
@@ -1102,7 +1112,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Audax Italiano vs Colo Colo",
@@ -1131,7 +1143,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Cobreloa vs Coquimbo Unido",
@@ -1160,7 +1174,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Independiente Santa Fe vs Deportivo Cali",
@@ -1189,7 +1205,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     }
   ]
 }
