@@ -72,3 +72,57 @@ def test_excel_unifica_alias_y_no_cuenta_none(tmp_path, monkeypatch):
     val = filas["value_alert"]
     assert val[2] == 1 and val[6] == 1  # ambigua -> Sin determinar, no fallo
     assert val[4] is None  # sin denominador -> sin % espurio
+
+
+def test_excel_agrupa_mismo_tipo_mismo_partido(tmp_path, monkeypatch):
+    """4 alertas 'gana_fav' en el mismo partido cuentan COMO 1 fila."""
+    import openpyxl
+    xlsx = tmp_path / "est.xlsx"
+    monkeypatch.setattr(C, "ARCHIVO_EXCEL", xlsx)
+    p = partido_con_alertas()
+    p["acierto"] = True
+    p["favorito"] = "Sevilla"
+    p["cuota_inicial"] = ""
+    p["probabilidad_inicial"] = ""
+    p["alertas_enviadas"] = [
+        {"tipo": "posible_victoria_favorito", "minuto": m, "texto": "x",
+         "estado": "fallo", "acierto": False}
+        for m in ("30'", "45'", "60'", "75'")
+    ]
+    C._actualizar_excel("2026-09-19", [p], 10)
+    wb = openpyxl.load_workbook(xlsx)
+    hoja3 = wb["Acierto por tipo de alerta"]
+    filas = {(r[1].value): [c.value for c in r] for r in hoja3.iter_rows(min_row=2)}
+    assert "posible_victoria_favorito" in filas
+    row = filas["posible_victoria_favorito"]
+    # enviadas=1 (grupo), fallos=1, aciertos=0
+    assert row[2] == 1 and row[5] == 1 and row[3] == 0
+
+
+def test_excel_agrupa_mixed_usa_mayoria(tmp_path, monkeypatch):
+    """3 aciertos + 1 fallo del mismo tipo/partido → 1 acierto (mayoría)."""
+    import openpyxl
+    xlsx = tmp_path / "est2.xlsx"
+    monkeypatch.setattr(C, "ARCHIVO_EXCEL", xlsx)
+    p = partido_con_alertas()
+    p["acierto"] = True
+    p["favorito"] = "Sevilla"
+    p["cuota_inicial"] = ""
+    p["probabilidad_inicial"] = ""
+    p["alertas_enviadas"] = [
+        {"tipo": "posible_victoria_favorito", "minuto": "30'", "texto": "x",
+         "estado": "acierto", "acierto": True},
+        {"tipo": "posible_victoria_favorito", "minuto": "45'", "texto": "x",
+         "estado": "acierto", "acierto": True},
+        {"tipo": "posible_victoria_favorito", "minuto": "60'", "texto": "x",
+         "estado": "acierto", "acierto": True},
+        {"tipo": "posible_victoria_favorito", "minuto": "75'", "texto": "x",
+         "estado": "fallo", "acierto": False},
+    ]
+    C._actualizar_excel("2026-09-20", [p], 10)
+    wb = openpyxl.load_workbook(xlsx)
+    hoja3 = wb["Acierto por tipo de alerta"]
+    filas = {(r[1].value): [c.value for c in r] for r in hoja3.iter_rows(min_row=2)}
+    row = filas["posible_victoria_favorito"]
+    # 1 grupo, mayoría aciertos (3 vs 1)
+    assert row[2] == 1 and row[3] == 1 and row[5] == 0

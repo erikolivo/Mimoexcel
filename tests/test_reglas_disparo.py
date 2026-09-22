@@ -268,14 +268,63 @@ def test_c6_dispara_con_dif_0_minuto_80_z_alto():
     assert "gol_de_cierre" in tipos
 
 
-def test_c6_a_partir_75_no_cae_a_otra():
-    """A partir del min 75, si no cumple cierre, no debe caer a otra alerta."""
+def test_c6_a_partir_81_no_cae_a_otra():
+    """A partir del min 81 (límite global 80), si no cumple cierre, no
+    debe caer a otra alerta. 75-80 ahora SÍ permite reglas normales
+    (mejora 2026-09: límite subido de 75 a 80)."""
     p = _partido()
-    p["historial_snapshots"] = _historial_close(76)
-    snap = _snap("76'", gl=1, gv=0, sot_l=6, sot_v=0)
-    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "76'")
+    p["historial_snapshots"] = _historial_close(81)
+    snap = _snap("81'", gl=1, gv=0, sot_l=6, sot_v=0)
+    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "81'")
     tipos = [t for t, _ in alertas]
     assert len(tipos) == 0
+
+
+def test_limite_minuto_80_no_fav_domina():
+    """fav_domina_no_gana no debe disparar en minuto 81 (límite 80)."""
+    p = _partido()
+    p["historial_snapshots"] = _historial_gana_fav(81)
+    snap = _snap("81'", gl=0, gv=2, sot_l=6, sot_v=0)
+    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "81'")
+    tipos = [t for t, _ in alertas]
+    assert "fav_domina_no_gana" not in tipos
+
+
+def test_ventana_15_min_bloquea_reenvio():
+    """Misma alerta a min 6 y min 14: bloqueada por ventana de 15."""
+    p = _partido()
+    p["alertas_enviadas"] = [{
+        "tipo": "posible_victoria_favorito", "minuto": "6'", "texto": "x",
+        "minuto_int": 6, "presion_lado": 5.0, "estado": "pendiente",
+        "acierto": None, "lado": "fav", "criterio": "siguiente_gol",
+    }]
+    assert not monitor._puede_reenviar(p, "posible_victoria_favorito", "14'", 20.0)
+
+
+def test_ventana_15_min_permite_pasado_gap():
+    """Gap de 15 (min 6 -> min 21): pasa la ventana, ahora chequea presión."""
+    p = _partido()
+    p["alertas_enviadas"] = [{
+        "tipo": "posible_victoria_favorito", "minuto": "6'", "texto": "x",
+        "minuto_int": 6, "presion_lado": 5.0, "estado": "pendiente",
+        "acierto": None, "lado": "fav", "criterio": "siguiente_gol",
+    }]
+    # presión insuficiente (5.0 * 1.15 = 5.75; 5.5 < 5.75)
+    assert not monitor._puede_reenviar(p, "posible_victoria_favorito", "21'", 5.5)
+    # presión suficiente (5.0 * 1.15 = 5.75; 6.0 >= 5.75)
+    assert monitor._puede_reenviar(p, "posible_victoria_favorito", "21'", 6.0)
+
+
+def test_presion_igual_no_reenvia():
+    """Pasada la ventana pero presión igual a la anterior: no reenviar."""
+    p = _partido()
+    p["alertas_enviadas"] = [{
+        "tipo": "posible_victoria_favorito", "minuto": "6'", "texto": "x",
+        "minuto_int": 6, "presion_lado": 10.0, "estado": "pendiente",
+        "acierto": None, "lado": "fav", "criterio": "siguiente_gol",
+    }]
+    # 10.0 * 1.15 = 11.5; presión actual 10.0 (igual) → bloqueada
+    assert not monitor._puede_reenviar(p, "posible_victoria_favorito", "30'", 10.0)
 
 
 # ── C7: fav_domina_no_gana ────────────────────────────────────────────────

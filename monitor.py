@@ -146,6 +146,20 @@ CIERRE_DIFS_PERMITIDAS = (-1, 0)
 FAV_NO_GANA_MAX_DEFICIT = 2                     # C7/Fase B
 NO_FAV_DIF_MIN = 0                              # C8/Fase B
 
+# Límite global de minuto (mejora 2026-09): ninguna alerta después del
+# minuto MAXIMO_MINUTO_ALERTAS salvo los tipos exentos (gol_de_cierre,
+# que mantiene su ventana propia hasta CIERRE_MAX_MINUTO).
+MAXIMO_MINUTO_ALERTAS = 80
+TIPOS_EXENTOS_MINUTO = {"gol_de_cierre"}
+
+# Antiduplicado unificado (mejora 2026-09): misma alerta + mismo partido
+# exige al menos VENTANA_ANTIDUP_TIPO_MIN minutos Y que la presión del
+# lado que disparó haya subido al menos RATIO_PRESION_MINIMO respecto
+# de la alerta anterior. Si la presión sigue igual/menor/marginal, no se
+# reenvía aunque haya pasado la ventana.
+VENTANA_ANTIDUP_TIPO_MIN = 15
+RATIO_PRESION_MINIMO = 1.15
+
 
 def _to_float(valor, default=0.0):
     """Convierte a float valores que la API de ESPN a veces entrega como
@@ -578,11 +592,13 @@ def _en_ventana_horaria(partido):
     return -10 <= minutos_desde_inicio <= VENTANA_MAX_MINUTOS
 
 
-def _registrar_alerta(partido, tipo, texto, minuto, diferencia_goles=None, marcador=None):
+def _registrar_alerta(partido, tipo, texto, minuto, diferencia_goles=None,
+                      marcador=None, presion_lado=None):
     """Registra el envio de una alerta con los campos del modelo R1
     (compatibles hacia atras: los antiguos solo tenian los 4 primeros).
     Ya no alimenta el sistema viejo de PREDICCIONES (R1): la resolucion
-    se hace sobre estas mismas alertas."""
+    se hace sobre estas mismas alertas. presion_lado guarda la presión
+    del lado que disparó (fav/rival) para el antiduplicado con ratio."""
     alertas = partido.setdefault("alertas_enviadas", [])
     lado, criterio = CRITERIO_POR_TIPO.get(tipo, (None, None))
     minuto_int = momentum._minuto_a_entero(minuto)
@@ -597,6 +613,7 @@ def _registrar_alerta(partido, tipo, texto, minuto, diferencia_goles=None, marca
         "resuelta_minuto": None, "resuelta_motivo": None,
         "resolucion_notificada": True if criterio is None else False,
         "acierto": None,
+        "presion_lado": presion_lado,
     })
 
 
@@ -610,6 +627,31 @@ def _ya_se_envio_reciente(partido, tipo, minuto_actual, ventana=10):
             return True
         return abs(minuto_actual_int - minuto_previo_int) <= ventana
     return False
+
+
+def _puede_reenviar(partido, tipo, minuto_actual, presion_actual):
+    """Antiduplicado unificado (mejora 2026-09): misma alerta mismo partido
+    requiere al menos VENTANA_ANTIDUP_TIPO_MIN minutos de separación Y que
+    la presión del lado que disparó haya subido al menos RATIO_PRESION_MINIMO
+    respecto de la alerta anterior. Si la presión sigue igual, menor o solo
+    marginalmente superior, no se reenvía aunque haya pasado la ventana.
+    Si no hay alerta previa del mismo tipo, siempre permite."""
+    minuto_actual_int = momentum._minuto_a_entero(minuto_actual)
+    for a in reversed(partido.get("alertas_enviadas", [])):
+        if a["tipo"] != tipo:
+            continue
+        minuto_previo_int = momentum._minuto_a_entero(a["minuto"])
+        if minuto_actual_int is None or minuto_previo_int is None:
+            return False
+        if abs(minuto_actual_int - minuto_previo_int) < VENTANA_ANTIDUP_TIPO_MIN:
+            return False
+        prev_p = a.get("presion_lado")
+        if prev_p is None or prev_p <= 0:
+            return True  # sin dato de presión: basta la ventana
+        if presion_actual is None:
+            return False  # no se puede comparar
+        return presion_actual >= prev_p * RATIO_PRESION_MINIMO
+    return True
 
 
 def _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival):
@@ -667,13 +709,13 @@ def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad=
     conf = momentum.etiqueta_confianza(z)
     marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
     if minuto_int >= MINUTO_INICIO_CIERRE:
-        # C6: cierre SOLO con dif -1/0, min<=84 y z>=3.2. Pasado el 75',
-        # si no es cierre no cae a ninguna otra alerta (igual que hoy).
+        # C6: cierre SOLO con dif -1/0, min<=84 y z>=3.2.
         if diferencia in CIERRE_DIFS_PERMITIDAS and minuto_int <= CIERRE_MAX_MINUTO \
                 and z >= UMBRAL_Z_CIERRE:
             return "gol_de_cierre", f"\u23F0 Gol de cierre{marca_prioridad}"
-        return None, None
-    if minuto_int >= MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
+        # 75-79: si no es cierre, se permite caer a las reglas normales
+        # (mejora 2026-09: límite subido de 75 a 80). >=80: corta abajo.
+    if minuto_int > MAXIMO_MINUTO_ALERTAS:
         return None, None
     if diferencia == 0:
         if presion_fav < PRESION_MIN_VICTORIA:  # C1
@@ -770,19 +812,20 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
     lado_favorito = "local" if favorito_es_local else "visitante"
     lado_rival = "visitante" if favorito_es_local else "local"
 
+    minuto_int = momentum._minuto_a_entero(minuto) or 45
+    if minuto_int < MINUTO_MINIMO_ALERTA_MOMENTUM:
+        return []
+
     # --- Eventos discretos: inmediatos, sin filtro de minuto minimo ---
     # C12: sin limite de una por partido; hubo_tarjeta_roja ya evita duplicados por delta.
-    if ALERTA_ACTIVA.get("tarjeta_roja", True):
+    # Límite global de minuto (mejora 2026-09): tarjeta_roja NO es exenta.
+    if ALERTA_ACTIVA.get("tarjeta_roja", True) and minuto_int <= MAXIMO_MINUTO_ALERTAS:
         if momentum.hubo_tarjeta_roja(snap_actual, snap_anterior, lado_rival):
             equipo = partido['visitante'] if lado_rival == "visitante" else partido['local']
             return [("tarjeta_roja", f"\U0001F7E5 Tarjeta roja para {equipo}.")]
         if momentum.hubo_tarjeta_roja(snap_actual, snap_anterior, lado_favorito):
             equipo = partido['local'] if lado_favorito == "local" else partido['visitante']
             return [("tarjeta_roja", f"\U0001F7E5 Tarjeta roja para {equipo}.")]
-
-    minuto_int = momentum._minuto_a_entero(minuto) or 45
-    if minuto_int < MINUTO_MINIMO_ALERTA_MOMENTUM:
-        return []
 
     # --- Alerta de primer tiempo: ventana y umbral propios, mas suave ---
     # C5: solo favorito_directo
@@ -807,7 +850,7 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
         else:
             tipo = None
             texto = None
-            if minuto_int < MAXIMO_MINUTO_ALERTAS_NO_CIERRE and ALERTA_ACTIVA.get("cuidado_rival_presiona", True):
+            if minuto_int <= MAXIMO_MINUTO_ALERTAS and ALERTA_ACTIVA.get("cuidado_rival_presiona", True):
                 # C4: exigir al menos RIVAL_TIROS_PUERTA_MIN tiros a puerta del rival
                 stats_riv = snap_actual[f"stats_{lado_rival}"]
                 sot_riv = _to_float(stats_riv.get("shotsOnTarget", 0), 0)
@@ -816,32 +859,40 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
                     conf = momentum.etiqueta_confianza(z)
                     marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
                     texto = f"\u26A0\uFE0F Rival domina{marca_prioridad}"
-        if tipo and ALERTA_ACTIVA.get(tipo, True) and not _ya_se_envio_reciente(partido, tipo, minuto_int):
-            return [(tipo, texto)]
+        if tipo and ALERTA_ACTIVA.get(tipo, True):
+            pres_act = presion_fav if lado_resultado == "favorito" else presion_riv
+            if _puede_reenviar(partido, tipo, minuto_int, pres_act):
+                return [(tipo, texto)]
 
     # --- IDV: Alerta de VALUE en partidos con cuotas parejas ---
     historial = partido.get("historial_snapshots", [])
     prioridad = partido.get("prioridad", "ALTA")
+    lado_fav_c = "local" if favorito_es_local else "visitante"
+    lado_riv_c = "visitante" if favorito_es_local else "local"
+    hist = partido.get("historial_snapshots", [])
+    pres_fav_c = momentum.presion_ponderada_por_tiempo(hist, minuto_int, lado_fav_c)
+    pres_riv_c = momentum.presion_ponderada_por_tiempo(hist, minuto_int, lado_riv_c)
+
     if ALERTA_ACTIVA.get("value_alert", True):
-        if minuto_int >= MINUTOS_MINIMOS_IDV and minuto_int < MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
+        if minuto_int >= MINUTOS_MINIMOS_IDV and minuto_int <= MAXIMO_MINUTO_ALERTAS:
             datos_idv = _calcular_idv(partido, snap_actual, historial, minuto_int)
-            if datos_idv and not _ya_se_envio_reciente(partido, "value_alert", minuto_int, ventana=30):
+            if datos_idv and _puede_reenviar(partido, "value_alert", minuto_int, pres_fav_c):
                 tipo_idv, texto_idv = _mensaje_idv(datos_idv, prioridad)
                 if tipo_idv:
                     return [(tipo_idv, texto_idv)]
 
     # --- Favorito domina pero no gana (valor en cuotas en vivo) ---
     if ALERTA_ACTIVA.get("fav_domina_no_gana", True):
-        if minuto_int >= MINUTOS_MINIMOS_VALOR and minuto_int < MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
+        if minuto_int >= MINUTOS_MINIMOS_VALOR and minuto_int <= MAXIMO_MINUTO_ALERTAS:
             resultado_fav = _evaluar_fav_domina_no_gana(partido, snap_actual, historial, minuto_int)
-            if resultado_fav and not _ya_se_envio_reciente(partido, resultado_fav[0], minuto_int, ventana=30):
+            if resultado_fav and _puede_reenviar(partido, resultado_fav[0], minuto_int, pres_fav_c):
                 return [resultado_fav]
 
     # --- No-favorito domina (mercado se equivoco) ---
     if ALERTA_ACTIVA.get("no_fav_domina", True):
-        if minuto_int >= MINUTOS_MINIMOS_VALOR and minuto_int < MAXIMO_MINUTO_ALERTAS_NO_CIERRE:
+        if minuto_int >= MINUTOS_MINIMOS_VALOR and minuto_int <= MAXIMO_MINUTO_ALERTAS:
             resultado_no_fav = _evaluar_no_favorito_domina(partido, snap_actual, historial, minuto_int)
-            if resultado_no_fav and not _ya_se_envio_reciente(partido, resultado_no_fav[0], minuto_int, ventana=30):
+            if resultado_no_fav and _puede_reenviar(partido, resultado_no_fav[0], minuto_int, pres_riv_c):
                 return [resultado_no_fav]
 
     # --- Chequeo "siguen empatados" (red de seguridad por tiempo) ---
@@ -871,8 +922,10 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
                     n_fav_cm2, n_riv_cm2, sq_fav_cm2, sq_riv_cm2,
                 )[0]
                 cambio = abs(z_actual - z_anterior)
-                if cambio >= 1.5 and not _ya_se_envio_reciente(partido, "cambio_momentum", minuto_int, ventana=10):
-                    direccion = "fav" if z_actual > z_anterior else "rival"
+                direccion = "fav" if z_actual > z_anterior else "rival"
+                pres_cm = pres_fav_c if direccion == "fav" else pres_riv_c
+                if cambio >= 1.5 and minuto_int <= MAXIMO_MINUTO_ALERTAS \
+                        and _puede_reenviar(partido, "cambio_momentum", minuto_int, pres_cm):
                     return [("cambio_momentum", f"\U0001F504 Cambio de momentum: {escapar_html(partido['favorito'])} {'recupera' if direccion == 'fav' else 'pierde'} control")]
 
     return []
@@ -1219,6 +1272,11 @@ def _vigilar_interno():
             dominancia_fav = 0.5
             minuto_int = momentum._minuto_a_entero(box["minuto"]) or 0
 
+            z = 0.0
+            dominancia_fav = 0.5
+            minuto_int = momentum._minuto_a_entero(box["minuto"]) or 0
+            presion_fav = presion_riv = None
+
             if minuto_int >= 5 and len(historial) >= 2:
                 presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
                 z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv, sq_fav, sq_riv)
@@ -1229,8 +1287,16 @@ def _vigilar_interno():
                 mensaje, reply_markup = _mensaje_partido(partido, box["minuto"], snap_actual, texto,
                                             dominancia_fav=dominancia_fav, z=z)
                 if enviar_mensaje_telegram(mensaje, reply_markup=reply_markup):
+                    lado_a = CRITERIO_POR_TIPO.get(tipo, (None, None))[0]
+                    if lado_a == "rival":
+                        pres_lado = presion_riv
+                    elif lado_a == "fav":
+                        pres_lado = presion_fav
+                    else:
+                        pres_lado = None
                     _registrar_alerta(partido, tipo, texto, box["minuto"], diferencia_goles=diferencia_actual,
-                                      marcador=[box["goles_local"], box["goles_visitante"]])
+                                      marcador=[box["goles_local"], box["goles_visitante"]],
+                                      presion_lado=pres_lado)
 
             # Guardado incremental: si el ciclo muere a la mitad (runner
             # caido, timeout del job), lo ya procesado no se pierde.

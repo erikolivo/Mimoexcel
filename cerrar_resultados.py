@@ -251,19 +251,29 @@ def _actualizar_excel(fecha, partidos, usadas):
             p.get("rating_propio_partidos_local", 0), p.get("rating_propio_partidos_visitante", 0),
             "si" if p.get("pais_verificado") else "no",
         ])
+        # Agrupación por tipo dentro del partido (mejora 2026-09): varias
+        # alertas del mismo tipo en el mismo partido cuentan COMO UNA sola
+        # fila/resultado en "Acierto por tipo de alerta".
+        grupos = {}
         for alerta in p.get("alertas_enviadas", []):
-            # Une posible_empate bajo el nombre nuevo (C2) para que el
-            # historico no se parta en dos filas.
             tipo = nombre_normalizado(alerta.get("tipo"))
-            conteo_por_tipo.setdefault(tipo, {"enviadas": 0, "aciertos": 0, "fallos": 0, "sin_det": 0})
-            conteo_por_tipo[tipo]["enviadas"] += 1
-            if alerta.get("acierto") is True:
-                conteo_por_tipo[tipo]["aciertos"] += 1
-            elif alerta.get("acierto") is False:
-                conteo_por_tipo[tipo]["fallos"] += 1
+            grupos.setdefault(tipo, []).append(alerta)
+        for tipo, alertas_grupo in grupos.items():
+            conteo = conteo_por_tipo.setdefault(tipo, {"enviadas": 0, "aciertos": 0, "fallos": 0, "sin_det": 0})
+            conteo["enviadas"] += 1
+            estados = [a.get("acierto") for a in alertas_grupo if a.get("acierto") is not None]
+            if not estados:
+                conteo["sin_det"] += 1
+            elif all(estados):
+                conteo["aciertos"] += 1
+            elif not any(estados):
+                conteo["fallos"] += 1
             else:
-                # Ambiguo, pendiente o informativo: ya no cuenta como fallo.
-                conteo_por_tipo[tipo]["sin_det"] += 1
+                # Mixto: mayoría decide
+                if sum(1 for e in estados if e) * 2 > len(estados):
+                    conteo["aciertos"] += 1
+                else:
+                    conteo["fallos"] += 1
 
     for tipo, c in conteo_por_tipo.items():
         denom = c["aciertos"] + c["fallos"]

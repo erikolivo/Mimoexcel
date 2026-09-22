@@ -277,6 +277,9 @@ def tabla(A, B):
             continue
         regla = REGLAS_NUEVAS.get(t)
         d = a[[bool(regla(r)) if regla else True for r in a.itertuples()]]
+        # Límite global de minuto (mejora 2026-09): nada después del 80
+        # salvo gol_de_cierre (ventana propia hasta 84).
+        d = d[(d["min"] <= 80) | (d.tipo == "gol_de_cierre")]
         b_ant = base_hit(B, t, BASES[t][0])[0]
         b_des = base_hit(B, t, BASES[t][1])[0]
         h1 = d[d.fecha.isin(mitad)].hit
