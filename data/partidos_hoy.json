@@ -30134,17 +30134,18 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 19.444855581552225
         }
       ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 2
+      "grupo_destacado": 2,
+      "aviso_final_enviado": true
     }
   ],
   "predicciones_activas": {},
