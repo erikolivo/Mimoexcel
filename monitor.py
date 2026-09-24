@@ -76,7 +76,7 @@ CORONA_FAVORITO = "\U0001F451"  # 👑
 UMBRAL_Z_ALERTA = 1.65                              # z-score para Gana Fav (empate o perdiendo <2 goles) — bajado con Kish
 UMBRAL_Z_CIERRE = 3.2                            # C6/Fase B (antes 2.3)
 UMBRAL_Z_RIVAL = 2.0                             # C4/Fase B: rival domina (antes 1.8)
-UMBRAL_Z_1ER_TIEMPO = 1.3                               # z-score para alerta de primer tiempo — bajado con Kish
+UMBRAL_Z_1ER_TIEMPO = 1.64                              # z-score alerta 1er tiempo (~90% confianza; subido de 1.3)
 MINUTO_INICIO_1ER_TIEMPO = 15
 MINUTO_FIN_1ER_TIEMPO = 30                          # C5/Fase B (antes 40)
 

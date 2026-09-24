@@ -163,7 +163,7 @@ REGLAS_NUEVAS = {
     "posible_empate": lambda r: r.tp == "favorito_directo" and r.min <= 60,
     "ampliacion_marcador": lambda r: r.pf >= 11,
     "cuidado_rival_presiona": lambda r: (-r.z) >= 2.0 and r.sot_riv >= 2,
-    "alerta_1er_tiempo": lambda r: r.tp == "favorito_directo" and r.min <= 30,
+    "alerta_1er_tiempo": lambda r: r.tp == "favorito_directo" and r.min <= 30 and r.z >= 1.64,
     "gol_de_cierre": lambda r: r.dif in (-1, 0) and r.min <= 84 and r.z >= 3.2,
     "fav_domina_no_gana": lambda r: r.dif >= -2,
     "no_fav_domina": lambda r: r.pr >= 11 and r.dif >= 0,

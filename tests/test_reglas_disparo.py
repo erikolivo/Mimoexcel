@@ -426,6 +426,34 @@ def test_c5_no_dispara_en_minuto_31():
     assert "alerta_1er_tiempo" not in tipos
 
 
+def test_c5_no_dispara_si_z_bajo():
+    """Con z=1.35 (pasaba con umbral 1.3, no con 1.64) no debe disparar."""
+    p = _partido()
+    snaps = []
+    for i in range(6):
+        m = max(5, int(25 * (i + 1) / 6))
+        snaps.append(_snap(f"{m}'", gl=0, gv=0,
+                           sot_l=1 + i // 2 + (1 if i >= 3 else 0),
+                           sot_v=i // 4,
+                           shots_l=3 + i,
+                           shots_v=2 + i // 3,
+                           corners_l=1 + i // 4, corners_v=1))
+    p["historial_snapshots"] = snaps
+    alertas = monitor._evaluar_alertas(p, snaps[-1], snaps[-2], "25'")
+    tipos = [t for t, _ in alertas]
+    assert "alerta_1er_tiempo" not in tipos
+
+
+def test_c5_dispara_si_z_alto():
+    """Con dominancia fuerte (z >= 1.64) en 0-0 y min 15-30 debe disparar."""
+    p = _partido()
+    p["historial_snapshots"] = _historial_gana_fav(25)
+    snap = _snap("25'", gl=0, gv=0, sot_l=5, sot_v=0)
+    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "25'")
+    tipos = [t for t, _ in alertas]
+    assert "alerta_1er_tiempo" in tipos
+
+
 # ── ALERTA_ACTIVA gates ───────────────────────────────────────────────────
 
 def test_alerta_inactiva_no_dispara():
