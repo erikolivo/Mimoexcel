@@ -137,7 +137,7 @@ def test_c1_no_dispara_con_pf_bajo():
     p["historial_snapshots"] = _historial_gana_fav_debil(50)
     snap = _snap("50'", gl=0, gv=0, sot_l=2, sot_v=1)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "posible_victoria_favorito" not in tipos
 
 
@@ -147,7 +147,7 @@ def test_c1_dispara_con_pf_suficiente():
     p["historial_snapshots"] = _historial_gana_fav(50)
     snap = _snap("50'", gl=0, gv=0, sot_l=6, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "posible_victoria_favorito" in tipos
 
 
@@ -159,7 +159,7 @@ def test_c2_no_dispara_con_dif_menos_2():
     p["historial_snapshots"] = _historial_gana_fav(50)
     snap = _snap("50'", gl=0, gv=2, sot_l=5, sot_v=2)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "posible_descuento" not in tipos
 
 
@@ -169,7 +169,7 @@ def test_c2_no_dispara_con_doble_oportunidad():
     p["historial_snapshots"] = _historial_gana_fav(50)
     snap = _snap("50'", gl=0, gv=1, sot_l=5, sot_v=2)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "posible_descuento" not in tipos
 
 
@@ -179,7 +179,7 @@ def test_c2_no_dispara_en_minuto_41():
     p["historial_snapshots"] = _historial_gana_fav(41)
     snap = _snap("41'", gl=0, gv=1, sot_l=5, sot_v=2)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "41'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "posible_descuento" not in tipos
 
 
@@ -189,7 +189,7 @@ def test_c2_dispara_con_dif_menos_1_fav_directo_minuto_35():
     p["historial_snapshots"] = _historial_gana_fav(35)
     snap = _snap("35'", gl=0, gv=1, sot_l=5, sot_v=1)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "35'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "posible_descuento" in tipos
 
 
@@ -201,7 +201,7 @@ def test_c3_no_dispara_con_pf_bajo():
     p["historial_snapshots"] = _historial_gana_fav_debil(50)
     snap = _snap("50'", gl=1, gv=0, sot_l=2, sot_v=1)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "ampliacion_marcador" not in tipos
 
 
@@ -211,7 +211,7 @@ def test_c3_dispara_con_pf_suficiente():
     p["historial_snapshots"] = _historial_gana_fav(50)
     snap = _snap("50'", gl=1, gv=0, sot_l=6, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "ampliacion_marcador" in tipos
 
 
@@ -223,7 +223,7 @@ def test_c6_no_dispara_con_dif_positivo():
     p["historial_snapshots"] = _historial_close(80)
     snap = _snap("80'", gl=2, gv=1, sot_l=6, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "80'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "gol_de_cierre" not in tipos
 
 
@@ -233,7 +233,7 @@ def test_c6_no_dispara_con_dif_menos_2():
     p["historial_snapshots"] = _historial_close(80)
     snap = _snap("80'", gl=0, gv=2, sot_l=6, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "80'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "gol_de_cierre" not in tipos
 
 
@@ -243,7 +243,7 @@ def test_c6_no_dispara_en_minuto_81():
     p["historial_snapshots"] = _historial_close(81)
     snap = _snap("81'", gl=0, gv=0, sot_l=6, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "81'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "gol_de_cierre" not in tipos
 
 
@@ -254,7 +254,7 @@ def test_c6_no_dispara_con_z_bajo():
     p["historial_snapshots"] = _historial_close_empate(80)
     snap = _snap("80'", gl=0, gv=0, sot_l=3, sot_v=3)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "80'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "gol_de_cierre" not in tipos
 
 
@@ -264,7 +264,7 @@ def test_c6_dispara_con_dif_0_minuto_80_z_alto():
     p["historial_snapshots"] = _historial_close(80)
     snap = _snap("80'", gl=0, gv=0, sot_l=6, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "80'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "gol_de_cierre" in tipos
 
 
@@ -276,7 +276,7 @@ def test_c6_a_partir_81_no_cae_a_otra():
     p["historial_snapshots"] = _historial_close(81)
     snap = _snap("81'", gl=1, gv=0, sot_l=6, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "81'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert len(tipos) == 0
 
 
@@ -286,7 +286,7 @@ def test_limite_minuto_80_no_fav_domina():
     p["historial_snapshots"] = _historial_gana_fav(81)
     snap = _snap("81'", gl=0, gv=2, sot_l=6, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "81'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "fav_domina_no_gana" not in tipos
 
 
@@ -335,7 +335,7 @@ def test_c7_no_dispara_con_dif_menos_3():
     p["historial_snapshots"] = _historial_gana_fav(50)
     snap = _snap("50'", gl=0, gv=3, sot_l=5, sot_v=1)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "fav_domina_no_gana" not in tipos
 
 
@@ -345,7 +345,7 @@ def test_c7_dispara_con_dif_menos_2():
     p["historial_snapshots"] = _historial_gana_fav(50)
     snap = _snap("50'", gl=0, gv=2, sot_l=6, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "fav_domina_no_gana" in tipos
 
 
@@ -357,7 +357,7 @@ def test_c8_no_dispara_con_pr_bajo():
     p["historial_snapshots"] = _historial_rival_debil(50)
     snap = _snap("50'", gl=0, gv=0, sot_l=1, sot_v=2)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "no_fav_domina" not in tipos
 
 
@@ -367,7 +367,7 @@ def test_c8_no_dispara_con_dif_menos_1():
     p["historial_snapshots"] = _historial_close_rival(50)
     snap = _snap("50'", gl=0, gv=1, sot_l=0, sot_v=6)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "no_fav_domina" not in tipos
 
 
@@ -378,7 +378,7 @@ def test_c8_dispara_con_pr_suficiente_dif_0():
     # sot_riv=1 bloquea cuidado_rival_presiona (RIVAL_TIROS_PUERTA_MIN=2)
     snap = _snap("50'", gl=0, gv=0, sot_l=0, sot_v=1)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "no_fav_domina" in tipos
 
 
@@ -390,7 +390,7 @@ def test_c4_no_dispara_con_z_rival_bajo():
     p["historial_snapshots"] = _historial_rival_debil(50)
     snap = _snap("50'", gl=0, gv=0, sot_l=1, sot_v=2)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "cuidado_rival_presiona" not in tipos
 
 
@@ -400,7 +400,7 @@ def test_c4_no_dispara_con_sot_riv_bajo():
     p["historial_snapshots"] = _historial_close_rival(50)
     snap = _snap("50'", gl=0, gv=0, sot_l=0, sot_v=1)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "cuidado_rival_presiona" not in tipos
 
 
@@ -412,7 +412,7 @@ def test_c5_no_dispara_con_doble_oportunidad():
     p["historial_snapshots"] = _historial_gana_fav(25)
     snap = _snap("25'", gl=0, gv=0, sot_l=5, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "25'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "alerta_1er_tiempo" not in tipos
 
 
@@ -422,7 +422,7 @@ def test_c5_no_dispara_en_minuto_31():
     p["historial_snapshots"] = _historial_gana_fav(31)
     snap = _snap("31'", gl=0, gv=0, sot_l=5, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "31'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "alerta_1er_tiempo" not in tipos
 
 
@@ -440,7 +440,7 @@ def test_c5_no_dispara_si_z_bajo():
                            corners_l=1 + i // 4, corners_v=1))
     p["historial_snapshots"] = snaps
     alertas = monitor._evaluar_alertas(p, snaps[-1], snaps[-2], "25'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "alerta_1er_tiempo" not in tipos
 
 
@@ -450,7 +450,7 @@ def test_c5_dispara_si_z_alto():
     p["historial_snapshots"] = _historial_gana_fav(25)
     snap = _snap("25'", gl=0, gv=0, sot_l=5, sot_v=0)
     alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "25'")
-    tipos = [t for t, _ in alertas]
+    tipos = [a[0] for a in alertas]
     assert "alerta_1er_tiempo" in tipos
 
 
@@ -465,7 +465,7 @@ def test_alerta_inactiva_no_dispara():
         p["historial_snapshots"] = _historial_gana_fav(50)
         snap = _snap("50'", gl=0, gv=0, sot_l=6, sot_v=0)
         alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
-        tipos = [t for t, _ in alertas]
+        tipos = [a[0] for a in alertas]
         assert "posible_victoria_favorito" not in tipos
     finally:
         monitor.ALERTA_ACTIVA.update(original)

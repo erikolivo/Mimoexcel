@@ -81,8 +81,8 @@ def _auditar_alertas(p):
     resolucion_alertas.evaluar_alerta (siguiente gol / 15 min / fin 1T).
     Ya no se usa _hubo_gol_en_ventana salvo dentro de ventana_15."""
     for alerta in p.get("alertas_enviadas", []):
-        if alerta.get("estado") in ("acierto", "fallo", "ambiguo"):
-            continue  # resuelto en vivo, no se recalcula
+        if alerta.get("estado") in ("acierto", "fallo", "ambiguo", "no_aplica"):
+            continue  # resuelto en vivo o sin criterio aplicable; no se recalcula
         tipo = nombre_normalizado(alerta.get("tipo"))
         lado, criterio = CRITERIO_POR_TIPO.get(tipo, (None, None))
         if criterio is None:

@@ -109,6 +109,7 @@ DIFERENCIA_CUOTAS_MINIMA = 1.0   # diferencia minima entre cuotas para alerta de
 SIN_GOL_ES_FALLO = True
 RESOLUCION_MODO = "individual"        # "individual" | "resumen_final"
 VENTANA_MAX_MINUTOS = 240             # F2/Fase C (hoy _en_ventana_horaria usa 130)
+ENVIAR_RESULTADO_PARTIDO = False       # 2026-09: aviso "Partido finalizado" desactivado (reactivar poniendo True)
 
 ALERTA_ACTIVA = {
     "posible_victoria_favorito": True,
@@ -119,15 +120,26 @@ ALERTA_ACTIVA = {
     "gol_de_cierre": True,
     "fav_domina_no_gana": True,
     "no_fav_domina": True,
-    "value_alert": False,             # C9/Fase B
+    "value_alert": False,             # C9/Fase B — bug B7 corregido, sin lift real (53% vs base 51%)
     "siguen_empatados": True,
-    "cambio_momentum": False,         # C11/Fase B
+    "cambio_momentum": False,         # C11/Fase B — lift débil (fav 53% vs 49%, rival 34% vs 31%)
     "tarjeta_roja": True,
+    "penal": False,                   # 2026-09: desactivada por completo (evaluación inútil)
 }
 
-PRESION_MIN_VICTORIA = 8.0            # C1/Fase B
-PRESION_MIN_AMPLIACION = 14.0         # C3 (subido de 11: 60%→72% n=18)
-PRESION_MIN_NO_FAV = 11.0             # C8/Fase B
+# Tipos que se EVALÚAN y REGISTRAN pero NO se envían a Telegram
+# (seguimiento/evaluación interna; user 2026-09).
+TIPOS_SIN_TELEGRAM = {
+    "siguen_empatados_55",
+    "siguen_empatados_70",
+    "tarjeta_roja",
+}
+
+PRESION_MIN_VICTORIA = 10.0          # C1 (subido de 8: 57%→60% con z≥1.8)
+Z_MIN_VICTORIA_FAVORITO = 1.8        # C1 (nuevo: z-score mínimo para posible_victoria)
+PRESION_MIN_AMPLIACION = 14.0        # C3 (subido de 11: 60%→72% n=18)
+PRESION_MIN_NO_FAV = 11.0            # C8/Fase B
+PRESION_MIN_RIVAL_CUIDADO = 16.0     # C4 (subido de z-only: 21%→43% n=14)
 
 DESCUENTO_MAX_MINUTO = 40                       # C2 (bajado de 60: 74%→86% n=7)
 DESCUENTO_SOLO_FAVORITO_DIRECTO = True          # C2/Fase B
@@ -145,6 +157,7 @@ CIERRE_DIFS_PERMITIDAS = (-1, 0)
 
 FAV_NO_GANA_MAX_DEFICIT = 2                     # C7/Fase B
 NO_FAV_DIF_MIN = 0                              # C8/Fase B
+NO_FAV_DIF_MAX = 0                              # C8 (2026-09: solo dif==0, no si no-fav gana)
 
 # Límite global de minuto (mejora 2026-09): ninguna alerta después del
 # minuto MAXIMO_MINUTO_ALERTAS salvo los tipos exentos (gol_de_cierre,
@@ -344,7 +357,7 @@ def _evaluar_no_favorito_domina(partido, snap_actual, historial, minuto_int):
         return None
     if minuto_int < MINUTOS_MINIMOS_VALOR:
         return None
-    if diferencia < NO_FAV_DIF_MIN:  # C8: no enviar si el no-favorito ya va ganando
+    if not (NO_FAV_DIF_MIN <= diferencia <= NO_FAV_DIF_MAX):  # C8: solo dif==0 (2026-09)
         return None
 
     n_no_fav, sq_no_fav = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_no_fav)
@@ -477,6 +490,7 @@ def _umbral_efectivo_favorito(partido, diferencia):
 # =====================================================================
 CHEQUEOS_EMPATE_MINUTOS = [22, 55, 70]
 VENTANA_ANTIDUP_CHEQUEO_EMPATE = 25
+UMBRAL_Z_CHEQUEO_EMPATE = 1.1  # 2026-09: subido de 0.7 (69%→82% para checkpoint 22')
 
 
 def _cargar():
@@ -593,14 +607,18 @@ def _en_ventana_horaria(partido):
 
 
 def _registrar_alerta(partido, tipo, texto, minuto, diferencia_goles=None,
-                      marcador=None, presion_lado=None):
+                      marcador=None, presion_lado=None, lado=None):
     """Registra el envio de una alerta con los campos del modelo R1
     (compatibles hacia atras: los antiguos solo tenian los 4 primeros).
     Ya no alimenta el sistema viejo de PREDICCIONES (R1): la resolucion
     se hace sobre estas mismas alertas. presion_lado guarda la presión
-    del lado que disparó (fav/rival) para el antiduplicado con ratio."""
+    del lado que disparó (fav/rival) para el antiduplicado con ratio.
+    lado (opcional) sobreescribe el lado por defecto de CRITERIO_POR_TIPO
+    (usado por tarjeta_roja: lado = equipo SIN la tarjeta)."""
     alertas = partido.setdefault("alertas_enviadas", [])
-    lado, criterio = CRITERIO_POR_TIPO.get(tipo, (None, None))
+    lado_default, criterio = CRITERIO_POR_TIPO.get(tipo, (None, None))
+    if lado is None:
+        lado = lado_default
     minuto_int = momentum._minuto_a_entero(minuto)
     fid = partido.get("fixture_id", "?")
     alertas.append({
@@ -718,7 +736,7 @@ def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad=
     if minuto_int > MAXIMO_MINUTO_ALERTAS:
         return None, None
     if diferencia == 0:
-        if presion_fav < PRESION_MIN_VICTORIA:  # C1
+        if presion_fav < PRESION_MIN_VICTORIA or z < Z_MIN_VICTORIA_FAVORITO:  # C1 (2026-09: pf≥10, z≥1.8)
             return None, None
         return "posible_victoria_favorito", f"\U0001F7E2 Gana Fav{marca_prioridad}"
     if diferencia == -1:
@@ -787,7 +805,7 @@ def _evaluar_chequeo_empate(partido, minuto_int, snap_actual, historial):
             momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_rival),
             n_fav_ev, n_riv_ev, sq_fav_ev, sq_riv_ev,
         )
-        if abs(z_local) < 0.7:
+        if abs(z_local) < UMBRAL_Z_CHEQUEO_EMPATE:  # 2026-09: subido de 0.7 a 1.1
             return None
         
         # Minimo remates al arco segun checkpoint
@@ -819,13 +837,17 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
     # --- Eventos discretos: inmediatos, sin filtro de minuto minimo ---
     # C12: sin limite de una por partido; hubo_tarjeta_roja ya evita duplicados por delta.
     # Límite global de minuto (mejora 2026-09): tarjeta_roja NO es exenta.
+    # 2026-09: sin envío Telegram (TIPOS_SIN_TELEGRAM); se registra y evalúa
+    # "siguiente gol del equipo SIN la tarjeta" (lado = equipo contrario al que recibió la roja).
     if ALERTA_ACTIVA.get("tarjeta_roja", True) and minuto_int <= MAXIMO_MINUTO_ALERTAS:
         if momentum.hubo_tarjeta_roja(snap_actual, snap_anterior, lado_rival):
             equipo = partido['visitante'] if lado_rival == "visitante" else partido['local']
-            return [("tarjeta_roja", f"\U0001F7E5 Tarjeta roja para {equipo}.")]
+            # roja al rival → equipo SIN roja = favorito
+            return [("tarjeta_roja", f"\U0001F7E5 Tarjeta roja para {equipo}.", "fav")]
         if momentum.hubo_tarjeta_roja(snap_actual, snap_anterior, lado_favorito):
             equipo = partido['local'] if lado_favorito == "local" else partido['visitante']
-            return [("tarjeta_roja", f"\U0001F7E5 Tarjeta roja para {equipo}.")]
+            # roja al favorito → equipo SIN roja = rival
+            return [("tarjeta_roja", f"\U0001F7E5 Tarjeta roja para {equipo}.", "rival")]
 
     # --- Alerta de primer tiempo: ventana y umbral propios, mas suave ---
     # C5: solo favorito_directo
@@ -851,10 +873,10 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
             tipo = None
             texto = None
             if minuto_int <= MAXIMO_MINUTO_ALERTAS and ALERTA_ACTIVA.get("cuidado_rival_presiona", True):
-                # C4: exigir al menos RIVAL_TIROS_PUERTA_MIN tiros a puerta del rival
+                # C4: sot_riv ≥ 2 Y presión rival ≥ 16 (2026-09: 21%→43% n=14)
                 stats_riv = snap_actual[f"stats_{lado_rival}"]
                 sot_riv = _to_float(stats_riv.get("shotsOnTarget", 0), 0)
-                if sot_riv >= RIVAL_TIROS_PUERTA_MIN:
+                if sot_riv >= RIVAL_TIROS_PUERTA_MIN and presion_riv >= PRESION_MIN_RIVAL_CUIDADO:
                     tipo = "cuidado_rival_presiona"
                     conf = momentum.etiqueta_confianza(z)
                     marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
@@ -1080,9 +1102,15 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
 def _enviar_resoluciones(partido, datos, resueltas, gl, gv):
     """Manda un mensaje por alerta resuelta (R3) y marca
     resolucion_notificada SOLO si Telegram acepto el mensaje -- si
-    falla, queda pendiente y se reintenta en el proximo ciclo."""
+    falla, queda pendiente y se reintenta en el proximo ciclo.
+    Tipos en TIPOS_SIN_TELEGRAM: se resuelven y registran pero no se
+    notifican (marcados como notificados para no reintentar)."""
     cambios = False
     for alerta in resueltas:
+        if alerta.get("tipo") in TIPOS_SIN_TELEGRAM:
+            alerta["resolucion_notificada"] = True
+            cambios = True
+            continue
         linea = linea_efectividad(datos.get("partidos", []), alerta.get("tipo"))
         texto = mensaje_resolucion(alerta, partido, f"{gl}-{gv}", linea)
         if enviar_mensaje_telegram(texto):
@@ -1197,8 +1225,13 @@ def _vigilar_interno():
                             if resueltas and RESOLUCION_MODO == "individual":
                                 if _enviar_resoluciones(partido, datos, resueltas, gl, gv):
                                     hubo_cambios = True
-                            mensaje = _mensaje_partido_finalizado(partido, gl, gv, resueltas)
-                            if enviar_mensaje_telegram(mensaje):
+                            if ENVIAR_RESULTADO_PARTIDO:
+                                mensaje = _mensaje_partido_finalizado(partido, gl, gv, resueltas)
+                                if enviar_mensaje_telegram(mensaje):
+                                    partido["aviso_final_enviado"] = True
+                                    hubo_cambios = True
+                                    PREDICCIONES_ACTIVAS.pop(partido.get("fixture_id"), None)
+                            else:
                                 partido["aviso_final_enviado"] = True
                                 hubo_cambios = True
                                 PREDICCIONES_ACTIVAS.pop(partido.get("fixture_id"), None)
@@ -1228,8 +1261,13 @@ def _vigilar_interno():
                 if resueltas and RESOLUCION_MODO == "individual":
                     if _enviar_resoluciones(partido, datos, resueltas, gl, gv):
                         hubo_cambios = True
-                mensaje = _mensaje_partido_finalizado(partido, gl, gv, resueltas)
-                if enviar_mensaje_telegram(mensaje):
+                if ENVIAR_RESULTADO_PARTIDO:
+                    mensaje = _mensaje_partido_finalizado(partido, gl, gv, resueltas)
+                    if enviar_mensaje_telegram(mensaje):
+                        partido["aviso_final_enviado"] = True
+                        hubo_cambios = True
+                        PREDICCIONES_ACTIVAS.pop(partido.get("fixture_id"), None)
+                else:
                     partido["aviso_final_enviado"] = True
                     hubo_cambios = True
                     PREDICCIONES_ACTIVAS.pop(partido.get("fixture_id"), None)
@@ -1283,20 +1321,25 @@ def _vigilar_interno():
 
             alertas = _evaluar_alertas(partido, snap_actual, snap_anterior, box["minuto"])
 
-            for tipo, texto in alertas:
-                mensaje, reply_markup = _mensaje_partido(partido, box["minuto"], snap_actual, texto,
-                                            dominancia_fav=dominancia_fav, z=z)
-                if enviar_mensaje_telegram(mensaje, reply_markup=reply_markup):
-                    lado_a = CRITERIO_POR_TIPO.get(tipo, (None, None))[0]
-                    if lado_a == "rival":
-                        pres_lado = presion_riv
-                    elif lado_a == "fav":
-                        pres_lado = presion_fav
-                    else:
-                        pres_lado = None
-                    _registrar_alerta(partido, tipo, texto, box["minuto"], diferencia_goles=diferencia_actual,
-                                      marcador=[box["goles_local"], box["goles_visitante"]],
-                                      presion_lado=pres_lado)
+            for item in alertas:
+                tipo, texto = item[0], item[1]
+                lado_override = item[2] if len(item) > 2 else None
+                solo_registro = tipo in TIPOS_SIN_TELEGRAM
+                if not solo_registro:
+                    mensaje, reply_markup = _mensaje_partido(partido, box["minuto"], snap_actual, texto,
+                                                dominancia_fav=dominancia_fav, z=z)
+                    if not enviar_mensaje_telegram(mensaje, reply_markup=reply_markup):
+                        continue
+                lado_a = lado_override if lado_override is not None else CRITERIO_POR_TIPO.get(tipo, (None, None))[0]
+                if lado_a == "rival":
+                    pres_lado = presion_riv
+                elif lado_a == "fav":
+                    pres_lado = presion_fav
+                else:
+                    pres_lado = None
+                _registrar_alerta(partido, tipo, texto, box["minuto"], diferencia_goles=diferencia_actual,
+                                  marcador=[box["goles_local"], box["goles_visitante"]],
+                                  presion_lado=pres_lado, lado=lado_override)
 
             # Guardado incremental: si el ciclo muere a la mitad (runner
             # caido, timeout del job), lo ya procesado no se pierde.

@@ -84,19 +84,21 @@ puede eliminarse de GitHub Actions — ver la sección de Secrets abajo.
 |---|---|---|
 | Favorito perdiendo por 1, favorito directo, min ≤ 40 | 🟠 Posible descuento | z ≥ 1.65 |
 | Empatando, favorito directo, min ≤ 30 | ⏱️ Gana favorito 1er tiempo | z ≥ 1.8, presión fav ≥ 8 |
-| Empatando o perdiendo, momentum a favor del rival (≥2 tiros a puerta rival) | 🔴 Cuidado rival presiona | z_rival ≥ 2.0, sot_riv ≥ 2 |
+| Empatando o perdiendo, momentum a favor del rival (≥2 tiros a puerta rival) | 🔴 Cuidado rival presiona | z_rival ≥ 2.0, sot_riv ≥ 2, presión rival ≥ 16 |
 | Favorito ganando, min 75-80, empatando o perdiendo por 1 | ⏰ Gol de cierre | z ≥ 3.8, dif ∈ {-1, 0} |
 | Favorito dominando pero empatando o perdiendo (≤2 goles) | 💪 Fav domina no gana | presión fav ≥ 8, dif ≥ -2 |
-| No favorito dominando con ventaja o empate | 🔴 No fav domina | presión rival ≥ 11, dif ≥ 0 |
+| No favorito dominando con empate (dif = 0) | 🔴 No fav domina | presión rival ≥ 11, dif = 0 |
 | Favorito ganando, momentum a favor | 🔵 Posible ampliación | presión fav ≥ 14 |
-| Empatando, momentum a favor del favorito | 🟢 Posible victoria | presión fav ≥ 8 |
-| Empatado min 22-54 / 55-69 / 70-89 | 📊 Siguen empatados | z ≥ 1.65 |
-| Tarjeta roja detectada | 🟥 Tarjeta roja | sin límite por partido |
-| Penal detectado | 🎯 Penal | — |
+| Empatando, momentum a favor del favorito | 🟢 Posible victoria | presión fav ≥ 10, z ≥ 1.8 |
+| Empatado min 22-54 | 📊 Siguen empatados | z ≥ 1.1 |
+| Empatado min 55-69 / 70-89 | 📊 Siguen empatados (solo registro) | sin envío Telegram |
+| Tarjeta roja detectada (solo registro) | 🟥 Tarjeta roja | siguiente gol del equipo SIN la roja |
 | Favorito dominando, 0-0, min 15-30, solo favorito directo | ⏱️ Alerta 1er tiempo | z ≥ 1.8 |
 | Diferencia ≥3 goles | 🏁 Seguimiento cerrado (una sola vez) | — |
 
-**Alertas desactivadas**: `value_alert` (bug en z-score IDV), `cambio_momentum` (no aporta lift).
+**Alertas desactivadas**: `value_alert` (bug B7 corregido, sin lift real: 53% vs base 51%), `cambio_momentum` (lift débil), `penal` (desactivada por completo).
+
+**Aviso de resultado del partido desactivado** (`ENVIAR_RESULTADO_PARTIDO = False` en `monitor.py`): no se envía el mensaje "🏁 Partido finalizado" con marcador final y acierto/fallo del pronóstico. Las resoluciones de alertas individuales siguen activas. Para reactivar: poner `ENVIAR_RESULTADO_PARTIDO = True`.
 
 ## Cómo agregar una liga nueva
 

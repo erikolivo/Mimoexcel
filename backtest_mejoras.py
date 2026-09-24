@@ -159,15 +159,19 @@ TIPOS = {
 # pf/pr = presion ponderada del favorito / del rival (momentum.presion_ponderada_por_tiempo)
 # z = z-score de dominancia del favorito (positivo = domina el favorito)
 REGLAS_NUEVAS = {
-    "posible_victoria_favorito": lambda r: r.pf >= 8,
+    "posible_victoria_favorito": lambda r: r.pf >= 10 and r.z >= 1.8,  # 2026-09: 57%→60%
     "posible_empate": lambda r: r.tp == "favorito_directo" and r.min <= 40,
     "ampliacion_marcador": lambda r: r.pf >= 14,
-    "cuidado_rival_presiona": lambda r: (-r.z) >= 2.0 and r.sot_riv >= 2,
+    "cuidado_rival_presiona": lambda r: (-r.z) >= 2.0 and r.sot_riv >= 2 and r.pr >= 16,  # 2026-09: 21%→43% n=14
     "alerta_1er_tiempo": lambda r: r.tp == "favorito_directo" and r.min <= 30 and r.z >= 1.8,
     "gol_de_cierre": lambda r: r.dif in (-1, 0) and r.min <= 80 and r.z >= 3.8,
     "fav_domina_no_gana": lambda r: r.dif >= -2,
-    "no_fav_domina": lambda r: r.pr >= 11 and r.dif >= 0,
-    "value_alert": lambda r: False,           # apagada hasta corregir el bug del z
+    "no_fav_domina": lambda r: r.pr >= 11 and r.dif == 0,  # 2026-09: solo dif==0
+    "value_alert": lambda r: False,           # apagada: bug B7 corregido, sin lift real (53% vs 51%)
+    "siguen_empatados_22": lambda r: r.z >= 1.1,  # 2026-09: 69%→82%
+    "siguen_empatados_55": lambda r: False,   # 2026-09: solo registro, sin Telegram
+    "siguen_empatados_70": lambda r: False,   # 2026-09: solo registro, sin Telegram
+    "cambio_momentum": lambda r: False,       # apagada: lift débil (fav 53% vs 49%)
 }
 
 # Situacion (sin alerta) contra la que se compara cada tipo: (antes, despues) sobre la tabla BASE
@@ -313,10 +317,15 @@ def _cargar_idv(src):
               if isinstance(n, ast.FunctionDef) and n.name in ("_to_float", "_calcular_idv")}
     exec(codigo["_to_float"], ns)
     buggy = dict(ns); exec(codigo["_calcular_idv"], buggy)
-    fixed_src = codigo["_calcular_idv"].replace("dominancia_pct, z = momentum.z_score_dominancia(",
-                                                "z, dominancia_pct = momentum.z_score_dominancia(")
-    assert fixed_src != codigo["_calcular_idv"], "no se encontro el desempaquetado a corregir"
-    fixed = dict(ns); exec(fixed_src, fixed)
+    # Bug B7 ya corregido en monitor.py (z, dominancia_pct = ...). Comparar
+    # con la version invertida (dominancia_pct, z = ...) como "actual (bug)".
+    src_buggy = codigo["_calcular_idv"].replace("z, dominancia_pct = momentum.z_score_dominancia(",
+                                                "dominancia_pct, z = momentum.z_score_dominancia(")
+    fixed = dict(ns); exec(codigo["_calcular_idv"], fixed)
+    if src_buggy == codigo["_calcular_idv"]:
+        print("[IDV] aviso: no se encontro el orden correcto; solo hay una version")
+        return fixed["_calcular_idv"], fixed["_calcular_idv"]
+    buggy = dict(ns); exec(src_buggy, buggy)
     return buggy["_calcular_idv"], fixed["_calcular_idv"]
 
 

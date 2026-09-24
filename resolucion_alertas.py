@@ -38,8 +38,11 @@ CRITERIO_POR_TIPO = {
     "siguen_empatados_55": ("fav", "siguiente_gol"),
     "siguen_empatados_70": ("fav", "siguiente_gol"),
     "cambio_momentum": ("fav", "siguiente_gol"),
-    "tarjeta_roja": (None, None),                     # informativa
-    "penal": (None, None),                            # informativa (legado)
+    # tarjeta_roja: lado se setea al registrar = equipo SIN la tarjeta
+    # (roja al rival → lado=fav; roja al fav → lado=rival). criterio:
+    # siguiente_gol del equipo sin roja.
+    "tarjeta_roja": (None, "siguiente_gol"),
+    "penal": (None, None),                            # informativa (legado, desactivada 2026-09)
     "partido_resuelto": (None, None),                 # informativa (legado)
 }
 
@@ -232,7 +235,12 @@ def resolver_pendientes(partido, snap_anterior, snap_actual,
     for alerta in alertas:
         if alerta.get("estado", "pendiente") != "pendiente":
             continue
-        lado, criterio = CRITERIO_POR_TIPO.get(alerta.get("tipo"), (None, None))
+        # Preferir lado/criterio ya guardados en la alerta (p.ej. tarjeta_roja
+        # con lado dinámico = equipo sin roja); si no, caer a CRITERIO_POR_TIPO.
+        lado = alerta.get("lado")
+        criterio = alerta.get("criterio")
+        if criterio is None:
+            lado, criterio = CRITERIO_POR_TIPO.get(alerta.get("tipo"), (None, None))
         if criterio is None:
             alerta["estado"] = "no_aplica"
             alerta["acierto"] = None

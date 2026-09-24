@@ -92,20 +92,32 @@ y cobertura del sistema de alertas:
 
 ### Fase B — Reglas de alerta
 - 12 cambios (C1-C12) en `_evaluar_alertas`:
-  - C1: `posible_victoria_favorito` exige presión fav ≥ 8
+  - C1: `posible_victoria_favorito` exige presión fav ≥ 10 y z ≥ 1.8
   - C2: `posible_empate` → `posible_descuento`, solo favorito directo, min ≤ 40
   - C3: `ampliacion_marcador` exige presión fav ≥ 14
-  - C4: `cuidado_rival_presiona` exige sot_riv ≥ 2
+  - C4: `cuidado_rival_presiona` exige sot_riv ≥ 2 y presión rival ≥ 16
   - C5: `alerta_1er_tiempo` solo favorito directo, min ≤ 30, z ≥ 1.8
   - C6: `gol_de_cierre` con dif ∈ {-1,0}, min ≤ 80, z ≥ 3.8
   - C7: `fav_domina_no_gana` con tope de 2 goles de déficit
-  - C8: `no_fav_domina` con presión rival ≥ 11 y dif ≥ 0
-  - C9: `value_alert` desactivado
-  - C11: `cambio_momentum` desactivado
+  - C8: `no_fav_domina` con presión rival ≥ 11 y dif = 0
+  - C9: `value_alert` desactivado (bug B7 corregido, sin lift real)
+  - C11: `cambio_momentum` desactivado (lift débil)
   - C12: `tarjeta_roja` sin límite de una por partido
 - Resultado: 77.1 → 32.0 alertas/día (−58%), con lift mejorado en
   todos los tipos que se mantienen activos.
 - 24 tests en `tests/test_reglas_disparo.py` + 5 en `tests/test_idv.py`.
+
+### Ajustes 2026-09 (Round 5 — decisiones del usuario)
+- C1: `posible_victoria_favorito` → pf ≥ 10, z ≥ 1.8 (57%→60%)
+- C4: `cuidado_rival_presiona` → pr ≥ 16 (21%→43%, n 89→14)
+- C8: `no_fav_domina` → solo dif = 0 (48%→52%)
+- `siguen_empatados_22` → z ≥ 1.1 (69%→82%)
+- `siguen_empatados_55/70` → solo registro, sin envío Telegram
+- `tarjeta_roja` → solo registro; criterio: siguiente gol del equipo SIN la roja
+- `penal` → desactivada por completo (`ALERTA_ACTIVA["penal"]=False`)
+- `value_alert` / `cambio_momentum` → se mantienen apagadas (sin lift real)
+- Mecanismo `TIPOS_SIN_TELEGRAM` en `monitor.py`: evalúa y registra sin enviar
+- `ENVIAR_RESULTADO_PARTIDO = False` → aviso "Partido finalizado" desactivado (solo resoluciones de alertas; reactivar poniendo True)
 
 ### Fase C — Cobertura aviso final
 - F1: `liga_slug == "all"` ya no se salta — usa `all/scoreboard`
