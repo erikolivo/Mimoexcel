@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 367,
+      "veces_visto": 375,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-09-23"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 305,
+      "veces_visto": 320,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-09-23"
@@ -41,9 +41,18 @@
       "pais": "",
       "liga": "USL Championship",
       "liga_id": "4002",
-      "veces_visto": 49,
+      "veces_visto": 50,
       "ejemplo_partido": "New Mexico United vs Indy Eleven",
       "fixture_id": "401842218",
+      "ultimo_visto": "2026-09-23"
+    },
+    {
+      "pais": "",
+      "liga": "KNVB Beker, Second Preliminary Round",
+      "liga_id": "3957",
+      "veces_visto": 40,
+      "ejemplo_partido": "ACV vs Hoogeveen",
+      "fixture_id": "401916456",
       "ultimo_visto": "2026-09-23"
     },
     {
@@ -54,15 +63,6 @@
       "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
       "fixture_id": "401853996",
       "ultimo_visto": "2026-09-20"
-    },
-    {
-      "pais": "",
-      "liga": "KNVB Beker, Second Preliminary Round",
-      "liga_id": "3957",
-      "veces_visto": 34,
-      "ejemplo_partido": "ACV vs Hoogeveen",
-      "fixture_id": "401916456",
-      "ultimo_visto": "2026-09-23"
     },
     {
       "pais": "",
@@ -77,7 +77,7 @@
       "pais": "",
       "liga": "English FA Cup Qualifying, Second Round Qualifying",
       "liga_id": "23480",
-      "veces_visto": 31,
+      "veces_visto": 32,
       "ejemplo_partido": "Worcester City vs Stratford Town",
       "fixture_id": "401917298",
       "ultimo_visto": "2026-09-23"
@@ -90,6 +90,24 @@
       "ejemplo_partido": "One Knoxville vs FC Naples",
       "fixture_id": "401842107",
       "ultimo_visto": "2026-09-20"
+    },
+    {
+      "pais": "",
+      "liga": "Club Friendly",
+      "liga_id": "19834",
+      "veces_visto": 29,
+      "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
+      "fixture_id": "401914230",
+      "ultimo_visto": "2026-09-23"
+    },
+    {
+      "pais": "",
+      "liga": "Women's Europa Cup, Second Qualifying Round",
+      "liga_id": "24079",
+      "veces_visto": 29,
+      "ejemplo_partido": "Metalist 1925 Kharkiv vs Torreense",
+      "fixture_id": "401916437",
+      "ultimo_visto": "2026-09-23"
     },
     {
       "pais": "",
@@ -111,21 +129,21 @@
     },
     {
       "pais": "",
-      "liga": "Club Friendly",
-      "liga_id": "19834",
-      "veces_visto": 28,
-      "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
-      "fixture_id": "401914230",
-      "ultimo_visto": "2026-09-23"
-    },
-    {
-      "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
       "veces_visto": 24,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-09-19"
+    },
+    {
+      "pais": "",
+      "liga": "Guatemalan Liga Nacional",
+      "liga_id": "3928",
+      "veces_visto": 21,
+      "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
+      "fixture_id": "401879630",
+      "ultimo_visto": "2026-09-23"
     },
     {
       "pais": "",
@@ -138,21 +156,30 @@
     },
     {
       "pais": "",
-      "liga": "Guatemalan Liga Nacional",
-      "liga_id": "3928",
-      "veces_visto": 20,
-      "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
-      "fixture_id": "401879630",
-      "ultimo_visto": "2026-09-23"
-    },
-    {
-      "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
       "veces_visto": 18,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-09-22"
+    },
+    {
+      "pais": "",
+      "liga": "Salvadoran Primera",
+      "liga_id": "3943",
+      "veces_visto": 18,
+      "ejemplo_partido": "Inca Aruba vs Atletico Balboa",
+      "fixture_id": "401899791",
+      "ultimo_visto": "2026-09-23"
+    },
+    {
+      "pais": "",
+      "liga": "UEFA Women's Champions League, League Phase",
+      "liga_id": "19483",
+      "veces_visto": 18,
+      "ejemplo_partido": "Bayern Munich vs Manchester City",
+      "fixture_id": "401917018",
+      "ultimo_visto": "2026-09-23"
     },
     {
       "pais": "",
@@ -174,11 +201,11 @@
     },
     {
       "pais": "",
-      "liga": "Salvadoran Primera",
-      "liga_id": "3943",
+      "liga": "WSL Players Cup, League Phase",
+      "liga_id": "23390",
       "veces_visto": 16,
-      "ejemplo_partido": "Inca Aruba vs Atletico Balboa",
-      "fixture_id": "401899791",
+      "ejemplo_partido": "Crystal Palace vs Watford",
+      "fixture_id": "401923288",
       "ultimo_visto": "2026-09-23"
     },
     {
@@ -219,20 +246,29 @@
     },
     {
       "pais": "",
-      "liga": "UEFA Women's Champions League, League Phase",
-      "liga_id": "19483",
-      "veces_visto": 14,
-      "ejemplo_partido": "Bayern Munich vs Manchester City",
-      "fixture_id": "401917018",
+      "liga": "Men's International Friendly",
+      "liga_id": "3922",
+      "veces_visto": 12,
+      "ejemplo_partido": "Fiji vs Solomon Islands",
+      "fixture_id": "401922313",
       "ultimo_visto": "2026-09-23"
     },
     {
       "pais": "",
-      "liga": "Women's Europa Cup, Second Qualifying Round",
-      "liga_id": "24079",
-      "veces_visto": 14,
-      "ejemplo_partido": "Metalist 1925 Kharkiv vs Torreense",
-      "fixture_id": "401916437",
+      "liga": "Copa Chile, Round of 16",
+      "liga_id": "8312",
+      "veces_visto": 12,
+      "ejemplo_partido": "Puerto Montt vs Ñublense",
+      "fixture_id": "401916351",
+      "ultimo_visto": "2026-09-23"
+    },
+    {
+      "pais": "",
+      "liga": "Women's International Friendly",
+      "liga_id": "3923",
+      "veces_visto": 11,
+      "ejemplo_partido": "China vs Vietnam",
+      "fixture_id": "401916262",
       "ultimo_visto": "2026-09-23"
     },
     {
@@ -264,39 +300,12 @@
     },
     {
       "pais": "",
-      "liga": "Men's International Friendly",
-      "liga_id": "3922",
-      "veces_visto": 10,
-      "ejemplo_partido": "Fiji vs Solomon Islands",
-      "fixture_id": "401922313",
-      "ultimo_visto": "2026-09-23"
-    },
-    {
-      "pais": "",
       "liga": "Copa Bolivia, Group D",
       "liga_id": "23284",
       "veces_visto": 9,
       "ejemplo_partido": "Oriente Petrolero vs Guabirá",
       "fixture_id": "401907922",
       "ultimo_visto": "2026-09-21"
-    },
-    {
-      "pais": "",
-      "liga": "Women's International Friendly",
-      "liga_id": "3923",
-      "veces_visto": 9,
-      "ejemplo_partido": "China vs Vietnam",
-      "fixture_id": "401916262",
-      "ultimo_visto": "2026-09-23"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Chile, Round of 16",
-      "liga_id": "8312",
-      "veces_visto": 9,
-      "ejemplo_partido": "Puerto Montt vs Ñublense",
-      "fixture_id": "401916351",
-      "ultimo_visto": "2026-09-23"
     },
     {
       "pais": "",
@@ -324,15 +333,6 @@
       "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
       "fixture_id": "401859943",
       "ultimo_visto": "2026-09-20"
-    },
-    {
-      "pais": "",
-      "liga": "WSL Players Cup, League Phase",
-      "liga_id": "23390",
-      "veces_visto": 8,
-      "ejemplo_partido": "Crystal Palace vs Watford",
-      "fixture_id": "401923288",
-      "ultimo_visto": "2026-09-23"
     },
     {
       "pais": "",
@@ -498,6 +498,15 @@
     },
     {
       "pais": "",
+      "liga": "Arabian Gulf Cup, Group B",
+      "liga_id": "23107",
+      "veces_visto": 4,
+      "ejemplo_partido": "Iraq vs Oman",
+      "fixture_id": "401922489",
+      "ultimo_visto": "2026-09-23"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals - 1st Leg",
       "liga_id": "22947",
       "veces_visto": 2,
@@ -543,11 +552,29 @@
     },
     {
       "pais": "",
-      "liga": "Arabian Gulf Cup, Group B",
-      "liga_id": "23107",
+      "liga": "Concacaf Nations League, League C, Group B",
+      "liga_id": "19267",
       "veces_visto": 2,
-      "ejemplo_partido": "Iraq vs Oman",
-      "fixture_id": "401922489",
+      "ejemplo_partido": "Turks and Caicos Islands vs Montserrat",
+      "fixture_id": "401900641",
+      "ultimo_visto": "2026-09-23"
+    },
+    {
+      "pais": "",
+      "liga": "Concacaf Nations League, League C, Group A",
+      "liga_id": "19267",
+      "veces_visto": 2,
+      "ejemplo_partido": "Bahamas vs St. Martin",
+      "fixture_id": "401900639",
+      "ultimo_visto": "2026-09-23"
+    },
+    {
+      "pais": "",
+      "liga": "Concacaf Nations League, League B, Group C",
+      "liga_id": "19267",
+      "veces_visto": 2,
+      "ejemplo_partido": "Aruba vs Antigua and Barbuda",
+      "fixture_id": "401900640",
       "ultimo_visto": "2026-09-23"
     },
     {
@@ -567,33 +594,6 @@
       "ejemplo_partido": "Inter Miami CF vs Cruz Azul",
       "fixture_id": "401901377",
       "ultimo_visto": "2026-09-16"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Nations League, League C, Group B",
-      "liga_id": "19267",
-      "veces_visto": 1,
-      "ejemplo_partido": "Turks and Caicos Islands vs Montserrat",
-      "fixture_id": "401900641",
-      "ultimo_visto": "2026-09-23"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Nations League, League C, Group A",
-      "liga_id": "19267",
-      "veces_visto": 1,
-      "ejemplo_partido": "Bahamas vs St. Martin",
-      "fixture_id": "401900639",
-      "ultimo_visto": "2026-09-23"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Nations League, League B, Group C",
-      "liga_id": "19267",
-      "veces_visto": 1,
-      "ejemplo_partido": "Aruba vs Antigua and Barbuda",
-      "fixture_id": "401900640",
-      "ultimo_visto": "2026-09-23"
     },
     {
       "pais": "",
