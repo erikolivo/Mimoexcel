@@ -93,11 +93,11 @@ y cobertura del sistema de alertas:
 ### Fase B — Reglas de alerta
 - 12 cambios (C1-C12) en `_evaluar_alertas`:
   - C1: `posible_victoria_favorito` exige presión fav ≥ 8
-  - C2: `posible_empate` → `posible_descuento`, solo favorito directo, min ≤ 60
-  - C3: `ampliacion_marcador` exige presión fav ≥ 11
+  - C2: `posible_empate` → `posible_descuento`, solo favorito directo, min ≤ 40
+  - C3: `ampliacion_marcador` exige presión fav ≥ 14
   - C4: `cuidado_rival_presiona` exige sot_riv ≥ 2
-  - C5: `alerta_1er_tiempo` solo favorito directo, min ≤ 30
-  - C6: `gol_de_cierre` con dif ∈ {-1,0}, min ≤ 84, z ≥ 3.2
+  - C5: `alerta_1er_tiempo` solo favorito directo, min ≤ 30, z ≥ 1.8
+  - C6: `gol_de_cierre` con dif ∈ {-1,0}, min ≤ 80, z ≥ 3.8
   - C7: `fav_domina_no_gana` con tope de 2 goles de déficit
   - C8: `no_fav_domina` con presión rival ≥ 11 y dif ≥ 0
   - C9: `value_alert` desactivado

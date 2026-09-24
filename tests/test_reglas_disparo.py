@@ -173,22 +173,22 @@ def test_c2_no_dispara_con_doble_oportunidad():
     assert "posible_descuento" not in tipos
 
 
-def test_c2_no_dispara_en_minuto_61():
-    """En minuto 61 no debe disparar (tope DESCUENTO_MAX_MINUTO=60)."""
+def test_c2_no_dispara_en_minuto_41():
+    """En minuto 41 no debe disparar (tope DESCUENTO_MAX_MINUTO=40)."""
     p = _partido()
-    p["historial_snapshots"] = _historial_gana_fav(61)
-    snap = _snap("61'", gl=0, gv=1, sot_l=5, sot_v=2)
-    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "61'")
+    p["historial_snapshots"] = _historial_gana_fav(41)
+    snap = _snap("41'", gl=0, gv=1, sot_l=5, sot_v=2)
+    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "41'")
     tipos = [t for t, _ in alertas]
     assert "posible_descuento" not in tipos
 
 
-def test_c2_dispara_con_dif_menos_1_fav_directo_minuto_50():
-    """Con dif=-1, favorito_directo, minuto 50, sí debe disparar."""
+def test_c2_dispara_con_dif_menos_1_fav_directo_minuto_35():
+    """Con dif=-1, favorito_directo, minuto 35, sí debe disparar."""
     p = _partido(tipo_pronostico="favorito_directo")
-    p["historial_snapshots"] = _historial_gana_fav(50)
-    snap = _snap("50'", gl=0, gv=1, sot_l=5, sot_v=1)
-    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "50'")
+    p["historial_snapshots"] = _historial_gana_fav(35)
+    snap = _snap("35'", gl=0, gv=1, sot_l=5, sot_v=1)
+    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "35'")
     tipos = [t for t, _ in alertas]
     assert "posible_descuento" in tipos
 
@@ -196,7 +196,7 @@ def test_c2_dispara_con_dif_menos_1_fav_directo_minuto_50():
 # ── C3: ampliacion_marcador ────────────────────────────────────────────────
 
 def test_c3_no_dispara_con_pf_bajo():
-    """Con pf < 11 no debe disparar ampliacion_marcador."""
+    """Con pf < 14 no debe disparar ampliacion_marcador."""
     p = _partido()
     p["historial_snapshots"] = _historial_gana_fav_debil(50)
     snap = _snap("50'", gl=1, gv=0, sot_l=2, sot_v=1)
@@ -206,7 +206,7 @@ def test_c3_no_dispara_con_pf_bajo():
 
 
 def test_c3_dispara_con_pf_suficiente():
-    """Con pf >= 11, dif>0, z>=2, sí debe disparar."""
+    """Con pf >= 14, dif>0, z>=2, sí debe disparar."""
     p = _partido()
     p["historial_snapshots"] = _historial_gana_fav(50)
     snap = _snap("50'", gl=1, gv=0, sot_l=6, sot_v=0)
@@ -237,18 +237,18 @@ def test_c6_no_dispara_con_dif_menos_2():
     assert "gol_de_cierre" not in tipos
 
 
-def test_c6_no_dispara_en_minuto_85():
-    """En minuto 85 no debe disparar (tope CIERRE_MAX_MINUTO=84)."""
+def test_c6_no_dispara_en_minuto_81():
+    """En minuto 81 no debe disparar (tope CIERRE_MAX_MINUTO=80)."""
     p = _partido()
-    p["historial_snapshots"] = _historial_close(85)
-    snap = _snap("85'", gl=0, gv=0, sot_l=6, sot_v=0)
-    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "85'")
+    p["historial_snapshots"] = _historial_close(81)
+    snap = _snap("81'", gl=0, gv=0, sot_l=6, sot_v=0)
+    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "81'")
     tipos = [t for t, _ in alertas]
     assert "gol_de_cierre" not in tipos
 
 
 def test_c6_no_dispara_con_z_bajo():
-    """Con z=3.1 no debe disparar (tope UMBRAL_Z_CIERRE=3.2).
+    """Con z bajo no debe disparar (tope UMBRAL_Z_CIERRE=3.8).
     Usamos stats equilibrados para que z sea bajo."""
     p = _partido()
     p["historial_snapshots"] = _historial_close_empate(80)
@@ -259,7 +259,7 @@ def test_c6_no_dispara_con_z_bajo():
 
 
 def test_c6_dispara_con_dif_0_minuto_80_z_alto():
-    """Con dif=0, minuto 80, z>=3.2, sí debe disparar."""
+    """Con dif=0, minuto 80, z>=3.8, sí debe disparar."""
     p = _partido()
     p["historial_snapshots"] = _historial_close(80)
     snap = _snap("80'", gl=0, gv=0, sot_l=6, sot_v=0)
@@ -427,7 +427,7 @@ def test_c5_no_dispara_en_minuto_31():
 
 
 def test_c5_no_dispara_si_z_bajo():
-    """Con z=1.35 (pasaba con umbral 1.3, no con 1.64) no debe disparar."""
+    """Con z=1.35 (pasaba con umbral 1.3, no con 1.8) no debe disparar."""
     p = _partido()
     snaps = []
     for i in range(6):
@@ -445,7 +445,7 @@ def test_c5_no_dispara_si_z_bajo():
 
 
 def test_c5_dispara_si_z_alto():
-    """Con dominancia fuerte (z >= 1.64) en 0-0 y min 15-30 debe disparar."""
+    """Con dominancia fuerte (z >= 1.8) en 0-0 y min 15-30 debe disparar."""
     p = _partido()
     p["historial_snapshots"] = _historial_gana_fav(25)
     snap = _snap("25'", gl=0, gv=0, sot_l=5, sot_v=0)

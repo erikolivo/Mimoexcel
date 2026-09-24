@@ -160,11 +160,11 @@ TIPOS = {
 # z = z-score de dominancia del favorito (positivo = domina el favorito)
 REGLAS_NUEVAS = {
     "posible_victoria_favorito": lambda r: r.pf >= 8,
-    "posible_empate": lambda r: r.tp == "favorito_directo" and r.min <= 60,
-    "ampliacion_marcador": lambda r: r.pf >= 11,
+    "posible_empate": lambda r: r.tp == "favorito_directo" and r.min <= 40,
+    "ampliacion_marcador": lambda r: r.pf >= 14,
     "cuidado_rival_presiona": lambda r: (-r.z) >= 2.0 and r.sot_riv >= 2,
-    "alerta_1er_tiempo": lambda r: r.tp == "favorito_directo" and r.min <= 30 and r.z >= 1.64,
-    "gol_de_cierre": lambda r: r.dif in (-1, 0) and r.min <= 84 and r.z >= 3.2,
+    "alerta_1er_tiempo": lambda r: r.tp == "favorito_directo" and r.min <= 30 and r.z >= 1.8,
+    "gol_de_cierre": lambda r: r.dif in (-1, 0) and r.min <= 80 and r.z >= 3.8,
     "fav_domina_no_gana": lambda r: r.dif >= -2,
     "no_fav_domina": lambda r: r.pr >= 11 and r.dif >= 0,
     "value_alert": lambda r: False,           # apagada hasta corregir el bug del z
@@ -180,12 +180,12 @@ def _sit(dmin, dmax, pred=None):
 BASES = {
     "posible_victoria_favorito": (_sit(15, 74, lambda b: b.dif == 0), _sit(15, 74, lambda b: b.dif == 0)),
     "posible_empate": (_sit(15, 74, lambda b: b.dif == -1),
-                       _sit(15, 60, lambda b: (b.dif == -1) & (b.tp == "favorito_directo"))),
+                       _sit(15, 40, lambda b: (b.dif == -1) & (b.tp == "favorito_directo"))),
     "ampliacion_marcador": (_sit(15, 74, lambda b: b.dif > 0), _sit(15, 74, lambda b: b.dif > 0)),
     "cuidado_rival_presiona": (_sit(15, 74), _sit(15, 74)),
     "alerta_1er_tiempo": (_sit(15, 40, lambda b: (b.gf0 == 0) & (b.gr0 == 0)),
                           _sit(15, 30, lambda b: (b.gf0 == 0) & (b.gr0 == 0) & (b.tp == "favorito_directo"))),
-    "gol_de_cierre": (_sit(75, 89), _sit(75, 84, lambda b: b.dif.isin([-1, 0]))),
+    "gol_de_cierre": (_sit(75, 89), _sit(75, 80, lambda b: b.dif.isin([-1, 0]))),
     "fav_domina_no_gana": (_sit(15, 74, lambda b: b.dif <= 0), _sit(15, 74, lambda b: (b.dif <= 0) & (b.dif >= -2))),
     "no_fav_domina": (_sit(15, 74), _sit(15, 74, lambda b: b.dif >= 0)),
     "value_alert": (_sit(5, 74), _sit(5, 74)),
@@ -278,7 +278,7 @@ def tabla(A, B):
         regla = REGLAS_NUEVAS.get(t)
         d = a[[bool(regla(r)) if regla else True for r in a.itertuples()]]
         # Límite global de minuto (mejora 2026-09): nada después del 80
-        # salvo gol_de_cierre (ventana propia hasta 84).
+        # salvo gol_de_cierre (ventana propia hasta 80 con CIERRE_MAX_MINUTO).
         d = d[(d["min"] <= 80) | (d.tipo == "gol_de_cierre")]
         b_ant = base_hit(B, t, BASES[t][0])[0]
         b_des = base_hit(B, t, BASES[t][1])[0]
@@ -395,8 +395,8 @@ def detalle(A):
     print("\n=== gol_de_cierre: antes vs reglas parciales ===")
     g = A[A.tipo == "gol_de_cierre"]
     for nombre, f in [("actual", lambda x: x.z >= 0), ("solo dif -1/0", lambda x: x.dif.isin([-1, 0])),
-                      ("+ min<=84", lambda x: x.dif.isin([-1, 0]) & (x["min"] <= 84)),
-                      ("+ z>=3.2 (regla nueva)", lambda x: x.dif.isin([-1, 0]) & (x["min"] <= 84) & (x.z >= 3.2))]:
+                      ("+ min<=80", lambda x: x.dif.isin([-1, 0]) & (x["min"] <= 80)),
+                      ("+ z>=3.8 (regla nueva)", lambda x: x.dif.isin([-1, 0]) & (x["min"] <= 80) & (x.z >= 3.8))]:
         s = g[f(g)]
         print(f"  {nombre:26s} n={len(s):2d}  acierto={s.hit.mean() * 100:3.0f}%")
 

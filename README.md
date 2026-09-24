@@ -82,18 +82,18 @@ puede eliminarse de GitHub Actions — ver la sección de Secrets abajo.
 
 | Situación | Alerta | Condición mínima |
 |---|---|---|
-| Favorito perdiendo por 1, favorito directo, min ≤ 60 | 🟠 Posible descuento | z ≥ 1.65 |
-| Empatando, favorito directo, min ≤ 30 | ⏱️ Gana favorito 1er tiempo | z ≥ 1.64, presión fav ≥ 8 |
+| Favorito perdiendo por 1, favorito directo, min ≤ 40 | 🟠 Posible descuento | z ≥ 1.65 |
+| Empatando, favorito directo, min ≤ 30 | ⏱️ Gana favorito 1er tiempo | z ≥ 1.8, presión fav ≥ 8 |
 | Empatando o perdiendo, momentum a favor del rival (≥2 tiros a puerta rival) | 🔴 Cuidado rival presiona | z_rival ≥ 2.0, sot_riv ≥ 2 |
-| Favorito ganando, min 75-84, empatando o perdiendo por 1 | ⏰ Gol de cierre | z ≥ 3.2, dif ∈ {-1, 0} |
+| Favorito ganando, min 75-80, empatando o perdiendo por 1 | ⏰ Gol de cierre | z ≥ 3.8, dif ∈ {-1, 0} |
 | Favorito dominando pero empatando o perdiendo (≤2 goles) | 💪 Fav domina no gana | presión fav ≥ 8, dif ≥ -2 |
 | No favorito dominando con ventaja o empate | 🔴 No fav domina | presión rival ≥ 11, dif ≥ 0 |
-| Favorito ganando, momentum a favor | 🔵 Posible ampliación | presión fav ≥ 11 |
+| Favorito ganando, momentum a favor | 🔵 Posible ampliación | presión fav ≥ 14 |
 | Empatando, momentum a favor del favorito | 🟢 Posible victoria | presión fav ≥ 8 |
 | Empatado min 22-54 / 55-69 / 70-89 | 📊 Siguen empatados | z ≥ 1.65 |
 | Tarjeta roja detectada | 🟥 Tarjeta roja | sin límite por partido |
 | Penal detectado | 🎯 Penal | — |
-| Favorito dominando, 0-0, min 15-30, solo favorito directo | ⏱️ Alerta 1er tiempo | z ≥ 1.64 |
+| Favorito dominando, 0-0, min 15-30, solo favorito directo | ⏱️ Alerta 1er tiempo | z ≥ 1.8 |
 | Diferencia ≥3 goles | 🏁 Seguimiento cerrado (una sola vez) | — |
 
 **Alertas desactivadas**: `value_alert` (bug en z-score IDV), `cambio_momentum` (no aporta lift).

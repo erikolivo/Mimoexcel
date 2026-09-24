@@ -74,9 +74,9 @@ CORONA_FAVORITO = "\U0001F451"  # 👑
 # =====================================================================
 
 UMBRAL_Z_ALERTA = 1.65                              # z-score para Gana Fav (empate o perdiendo <2 goles) — bajado con Kish
-UMBRAL_Z_CIERRE = 3.2                            # C6/Fase B (antes 2.3)
+UMBRAL_Z_CIERRE = 3.8                            # C6 (subido de 3.2: 48%→60% con min≤80)
 UMBRAL_Z_RIVAL = 2.0                             # C4/Fase B: rival domina (antes 1.8)
-UMBRAL_Z_1ER_TIEMPO = 1.64                              # z-score alerta 1er tiempo (~90% confianza; subido de 1.3)
+UMBRAL_Z_1ER_TIEMPO = 1.8                              # z-score alerta 1er tiempo (mejor punto: 44% n=43; subido de 1.3)
 MINUTO_INICIO_1ER_TIEMPO = 15
 MINUTO_FIN_1ER_TIEMPO = 30                          # C5/Fase B (antes 40)
 
@@ -126,10 +126,10 @@ ALERTA_ACTIVA = {
 }
 
 PRESION_MIN_VICTORIA = 8.0            # C1/Fase B
-PRESION_MIN_AMPLIACION = 11.0         # C3/Fase B
+PRESION_MIN_AMPLIACION = 14.0         # C3 (subido de 11: 60%→72% n=18)
 PRESION_MIN_NO_FAV = 11.0             # C8/Fase B
 
-DESCUENTO_MAX_MINUTO = 60                       # C2/Fase B
+DESCUENTO_MAX_MINUTO = 40                       # C2 (bajado de 60: 74%→86% n=7)
 DESCUENTO_SOLO_FAVORITO_DIRECTO = True          # C2/Fase B
 
 # cuidado_rival_presiona (C4)
@@ -140,7 +140,7 @@ VENTANA_RIVAL_MINUTOS = 15
 PRIMER_TIEMPO_SOLO_FAVORITO_DIRECTO = True
 
 # gol_de_cierre (C6)
-CIERRE_MAX_MINUTO = 84
+CIERRE_MAX_MINUTO = 80
 CIERRE_DIFS_PERMITIDAS = (-1, 0)
 
 FAV_NO_GANA_MAX_DEFICIT = 2                     # C7/Fase B
@@ -709,7 +709,7 @@ def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad=
     conf = momentum.etiqueta_confianza(z)
     marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
     if minuto_int >= MINUTO_INICIO_CIERRE:
-        # C6: cierre SOLO con dif -1/0, min<=84 y z>=3.2.
+        # C6: cierre SOLO con dif -1/0, min<=80 y z>=3.8.
         if diferencia in CIERRE_DIFS_PERMITIDAS and minuto_int <= CIERRE_MAX_MINUTO \
                 and z >= UMBRAL_Z_CIERRE:
             return "gol_de_cierre", f"\u23F0 Gol de cierre{marca_prioridad}"
@@ -722,7 +722,7 @@ def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad=
             return None, None
         return "posible_victoria_favorito", f"\U0001F7E2 Gana Fav{marca_prioridad}"
     if diferencia == -1:
-        # C2 (B14): texto propio, solo favorito_directo y hasta el 60'.
+        # C2 (B14): texto propio, solo favorito_directo y hasta el 40'.
         if DESCUENTO_SOLO_FAVORITO_DIRECTO and tipo_pronostico != "favorito_directo":
             return None, None
         if minuto_int > DESCUENTO_MAX_MINUTO:
