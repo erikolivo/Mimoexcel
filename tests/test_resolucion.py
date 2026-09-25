@@ -131,3 +131,58 @@ def test_evaluar_alerta_reproduce_en_historial():
     assert R.evaluar_alerta(h, a, True, marcador_final=(1, 0)) is True
     h2 = [snap("20'", 0, 0), snap("34'", 0, 0), snap("50'", 0, 1)]
     assert R.evaluar_alerta(h2, copy.deepcopy(a), True, marcador_final=(0, 1)) is False
+
+
+# ── Regresión 2026-09: efectividad agrupa por partido ──────────────────────
+
+def _resuelta(tipo, minuto, estado):
+    if minuto == "90'+5'":
+        a = alerta(tipo, "70'")
+        a["minuto"] = "90'+5'"
+        a["minuto_int"] = None
+    else:
+        a = alerta(tipo, minuto)
+    a["estado"] = estado
+    a["acierto"] = True if estado == "acierto" else (False if estado == "fallo" else None)
+    return a
+
+
+def test_efectividad_hoy_agrupa_mismo_partido():
+    """Dos alertas del mismo tipo en el mismo partido cuentan COMO UNA
+    (mayoría decide), igual que la hoja del Excel. Regresión: la pareja
+    70' + 90'+5' de fav_domina_no_gana se contaba como DOS fallos."""
+    p = partido_base()
+    p["alertas_enviadas"] = [_resuelta("fav_domina_no_gana", "70'", "fallo"),
+                             _resuelta("fav_domina_no_gana", "90'+5'", "fallo")]
+    assert R.efectividad_hoy([p], "fav_domina_no_gana") == (0, 1)
+
+
+def test_efectividad_hoy_partidos_distintos_se_suman():
+    """Cada partido aporta una sola unidad por tipo."""
+    p1 = partido_base()
+    p1["alertas_enviadas"] = [_resuelta("fav_domina_no_gana", "70'", "fallo"),
+                              _resuelta("fav_domina_no_gana", "90'+5'", "fallo")]
+    p2 = partido_base()
+    p2["alertas_enviadas"] = [_resuelta("fav_domina_no_gana", "30'", "acierto")]
+    assert R.efectividad_hoy([p1, p2], "fav_domina_no_gana") == (1, 1)
+
+
+def test_efectividad_hoy_mixto_decide_mayoria():
+    """Acierto + fallo del mismo tipo/partido: mayoría decide; empate 1-1
+    cuenta como fallo (misma regla que cerrar_resultados.py)."""
+    p = partido_base()
+    p["alertas_enviadas"] = [_resuelta("posible_victoria_favorito", "20'", "acierto"),
+                             _resuelta("posible_victoria_favorito", "45'", "fallo")]
+    assert R.efectividad_hoy([p], "posible_victoria_favorito") == (0, 1)
+    p["alertas_enviadas"].append(_resuelta("posible_victoria_favorito", "60'", "acierto"))
+    assert R.efectividad_hoy([p], "posible_victoria_favorito") == (1, 0)
+
+
+def test_efectividad_hoy_excluye_ambiguas_y_otros_tipos():
+    """Ambiguas/pendientes no cuentan; los otros tipos se ignoran."""
+    p = partido_base()
+    p["alertas_enviadas"] = [_resuelta("fav_domina_no_gana", "50'", "ambiguo"),
+                             _resuelta("fav_domina_no_gana", "60'", "pendiente"),
+                             _resuelta("ampliacion_marcador", "55'", "acierto")]
+    assert R.efectividad_hoy([p], "fav_domina_no_gana") == (0, 0)
+    assert R.efectividad_hoy([p], "ampliacion_marcador") == (1, 0)

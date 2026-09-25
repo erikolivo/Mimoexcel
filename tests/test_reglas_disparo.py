@@ -469,3 +469,54 @@ def test_alerta_inactiva_no_dispara():
         assert "posible_victoria_favorito" not in tipos
     finally:
         monitor.ALERTA_ACTIVA.update(original)
+
+
+# ── Regresión 2026-09: minuto de descuento burlaba el tope de 80' ──────────
+
+def test_minuto_descuento_se_parsea_como_entero():
+    """ESPN envía "90'+5'"; antes parseaba a None y el fallback `or 45`
+    hacía que la alerta se evaluara como minuto 45 (bug: fav_domina_no_gana
+    recibida en minuto 95, fuera del tope de 80')."""
+    assert momentum._minuto_a_entero("90'+5'") == 95
+    assert momentum._minuto_a_entero("45'+2'") == 47
+    assert momentum._minuto_a_entero("45'+11'") == 56
+    assert momentum._minuto_a_entero("90+5'") == 95
+    assert momentum._minuto_a_entero("97'") == 97
+    assert momentum._minuto_a_entero("80'") == 80
+    assert momentum._minuto_a_entero("0'") == 0
+    assert momentum._minuto_a_entero(None) is None
+    assert momentum._minuto_a_entero("") is None
+    assert momentum._minuto_a_entero("HT") is None
+    assert momentum._minuto_a_entero("FT") is None
+
+
+def test_no_dispara_en_minuto_descuento_90_mas_5():
+    """Regresión: en 90'+5' (=95 > 80) no debe emitir NINGUNA alerta."""
+    p = _partido()
+    p["historial_snapshots"] = _historial_gana_fav(70)
+    snap = _snap("90'+5'", gl=0, gv=2, sot_l=6, sot_v=0)
+    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "90'+5'")
+    assert alertas == []
+
+
+def test_fav_domina_dispara_en_60_con_mismo_tipo_de_historial():
+    """Complemento: con el mismo tipo de historial dominante, DENTRO del
+    tope (60' <= 80) sí debe disparar -- prueba que el test anterior no
+    pasa por falta de dominancia, sino por el minuto."""
+    p = _partido()
+    p["historial_snapshots"] = _historial_gana_fav(70)
+    snap = _snap("60'", gl=0, gv=2, sot_l=6, sot_v=0)
+    alertas = monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "60'")
+    tipos = [a[0] for a in alertas]
+    assert "fav_domina_no_gana" in tipos
+
+
+def test_minuto_no_parseable_no_se_evalua_como_45():
+    """Minuto desconocido (None/HT/"") no debe evaluarse: antes caía en
+    `or 45` y se disparaba como si fuera minuto 45."""
+    p = _partido()
+    p["historial_snapshots"] = _historial_gana_fav(50)
+    snap = _snap("HT", gl=0, gv=2, sot_l=6, sot_v=0)
+    assert monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "HT") == []
+    assert monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], None) == []
+    assert monitor._evaluar_alertas(p, snap, p["historial_snapshots"][-1], "") == []

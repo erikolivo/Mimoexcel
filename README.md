@@ -218,3 +218,12 @@ Refactorización de 4 fases para mejorar la precisión y cobertura:
   pendientes en cierre.
 - **Backtest** (`backtest_mejoras.py`): reproduce Anexo A exacto
   (77.1→32.0 alertas/día, 58% menos). Correr con `python backtest_mejoras.py`.
+- **Round 6** (bugs de minutos, 2026-09-24): `_minuto_a_entero` ahora
+  parsea el descuento de ESPN (`"90'+5'"`→95, `"45'+2'"`→47) — antes
+  devolvía `None` y el fallback `or 45` evaluaba esas alertas como
+  minuto 45, burlando el tope de 80' (fav_domina_no_gana recibida en
+  minuto 95). Minuto no parseable ya no se evalúa (return []). Y
+  `efectividad_hoy` agrupa varias alertas del mismo tipo en el mismo
+  partido como UNA (mayoría decide), igual que el Excel — la pareja
+  70'+90'+5' contaba como dos fallos. Backtest corregido: 80.1→24.4
+  alertas/día (69% menos).

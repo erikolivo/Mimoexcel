@@ -290,17 +290,31 @@ def tiene_trabajo_pendiente(partido):
 
 def efectividad_hoy(partidos, tipo):
     """(aciertos, fallos) del tipo en los partidos dados. Unifica el
-    alias posible_empate/descuento. Excluye ambiguas y pendientes."""
+    alias posible_empate/descuento. Excluye ambiguas y pendientes.
+    Varias alertas del mismo tipo en el mismo partido cuentan COMO UNA
+    (mayoría decide), igual que la hoja 'Acierto por tipo de alerta'
+    del Excel (cerrar_resultados.py) -- mejora 2026-09."""
     clave = nombre_normalizado(tipo)
     ok = nok = 0
     for p in partidos or []:
+        estados = []
         for a in p.get("alertas_enviadas", []):
             if nombre_normalizado(a.get("tipo")) != clave:
                 continue
             if a.get("estado") == "acierto" and a.get("acierto") is True:
-                ok += 1
+                estados.append(True)
             elif a.get("estado") == "fallo" and a.get("acierto") is False:
-                nok += 1
+                estados.append(False)
+        if not estados:
+            continue
+        if all(estados):
+            ok += 1
+        elif not any(estados):
+            nok += 1
+        elif sum(1 for e in estados if e) * 2 > len(estados):
+            ok += 1
+        else:
+            nok += 1
     return ok, nok
 
 

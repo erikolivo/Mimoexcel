@@ -68,8 +68,15 @@ def factor_contexto_goles(diferencia):
 
 
 def _minuto_a_entero(minuto):
+    """Convierte el minuto del boxscore a entero, incluyendo el
+    tiempo de descuento de ESPN ("90'+5'" -> 95, "45'+2'" -> 47).
+    Devuelve None si no es parseable (None, "", "HT", "FT")."""
     try:
-        return int(str(minuto).rstrip("'").split("+")[0])
+        texto = str(minuto).strip()
+        if "+" in texto:
+            base, extra = texto.split("+", 1)
+            return int(base.rstrip("'")) + int(extra.rstrip("'"))
+        return int(texto.rstrip("'"))
     except (TypeError, ValueError):
         return None
 

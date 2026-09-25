@@ -830,7 +830,13 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
     lado_favorito = "local" if favorito_es_local else "visitante"
     lado_rival = "visitante" if favorito_es_local else "local"
 
-    minuto_int = momentum._minuto_a_entero(minuto) or 45
+    minuto_int = momentum._minuto_a_entero(minuto)
+    if minuto_int is None:
+        # Minuto no parseable (None, "", "HT", "FT"): no evaluar en vez de
+        # asumir 45, que burlaba el tope de 80' con minutos de descuento
+        # ("90'+5'" parseaba a None y caía en 45) y hacía que minuto 0
+        # se evaluara como 45.
+        return []
     if minuto_int < MINUTO_MINIMO_ALERTA_MOMENTUM:
         return []
 
