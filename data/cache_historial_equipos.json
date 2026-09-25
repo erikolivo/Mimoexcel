@@ -16354,8 +16354,15 @@
     ]
   },
   "5291_ned.2_2026": {
-    "fecha_cache": "2026-09-18T18:30:59.774414",
+    "fecha_cache": "2026-09-25T20:13:11.542114",
     "historial": [
+      {
+        "fecha": "2026-09-18",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-11",
         "goles_favor": 4,
