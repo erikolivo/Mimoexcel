@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-24",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Solomon Islands vs Vanuatu",
@@ -1528,5 +1527,6 @@
       "diferencia_maxima_alcanzada": 0,
       "aviso_final_enviado": true
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 34
 }
