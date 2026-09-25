@@ -87,7 +87,8 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "VfB Stuttgart vs 1. FC Heidenheim 1846",
@@ -118,7 +119,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 3
+      "grupo_destacado": 3,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Niger vs Lesotho",
@@ -147,7 +149,8 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Iceland U21 vs France U21",
@@ -178,7 +181,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 1
+      "grupo_destacado": 1,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Finland U21 vs Spain U21",
@@ -209,7 +213,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 3
+      "grupo_destacado": 3,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Bulgaria U21 vs Portugal U21",
@@ -240,7 +245,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 3
+      "grupo_destacado": 3,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Georgia vs Northern Ireland",
@@ -472,7 +478,8 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Slovakia U21 vs Republic of Ireland U21",
@@ -501,7 +508,8 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Netherlands U21 vs Norway U21",
@@ -1789,5 +1797,7 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "predicciones_activas": {},
+  "historial_predicciones": {}
 }
