@@ -3,20 +3,20 @@
   "ligas": [
     {
       "pais": "",
-      "liga": "NCAAM Soccer",
-      "liga_id": "5487",
-      "veces_visto": 376,
-      "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
-      "fixture_id": "401902569",
+      "liga": "NCAAW Soccer",
+      "liga_id": "5499",
+      "veces_visto": 426,
+      "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
+      "fixture_id": "401900232",
       "ultimo_visto": "2026-09-24"
     },
     {
       "pais": "",
-      "liga": "NCAAW Soccer",
-      "liga_id": "5499",
-      "veces_visto": 373,
-      "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
-      "fixture_id": "401900232",
+      "liga": "NCAAM Soccer",
+      "liga_id": "5487",
+      "veces_visto": 377,
+      "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
+      "fixture_id": "401902569",
       "ultimo_visto": "2026-09-24"
     },
     {
@@ -48,21 +48,21 @@
     },
     {
       "pais": "",
+      "liga": "Club Friendly",
+      "liga_id": "19834",
+      "veces_visto": 45,
+      "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
+      "fixture_id": "401914230",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
       "liga": "KNVB Beker, Second Preliminary Round",
       "liga_id": "3957",
       "veces_visto": 40,
       "ejemplo_partido": "ACV vs Hoogeveen",
       "fixture_id": "401916456",
       "ultimo_visto": "2026-09-23"
-    },
-    {
-      "pais": "",
-      "liga": "Club Friendly",
-      "liga_id": "19834",
-      "veces_visto": 37,
-      "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
-      "fixture_id": "401914230",
-      "ultimo_visto": "2026-09-24"
     },
     {
       "pais": "",
@@ -93,21 +93,21 @@
     },
     {
       "pais": "",
+      "liga": "Liga de Expansión MX",
+      "liga_id": "3932",
+      "veces_visto": 32,
+      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
+      "fixture_id": "401886377",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
       "liga": "USL League One",
       "liga_id": "19915",
       "veces_visto": 30,
       "ejemplo_partido": "One Knoxville vs FC Naples",
       "fixture_id": "401842107",
       "ultimo_visto": "2026-09-20"
-    },
-    {
-      "pais": "",
-      "liga": "Liga de Expansión MX",
-      "liga_id": "3932",
-      "veces_visto": 30,
-      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
-      "fixture_id": "401886377",
-      "ultimo_visto": "2026-09-24"
     },
     {
       "pais": "",
@@ -129,6 +129,15 @@
     },
     {
       "pais": "",
+      "liga": "Men's International Friendly",
+      "liga_id": "3922",
+      "veces_visto": 26,
+      "ejemplo_partido": "Fiji vs Solomon Islands",
+      "fixture_id": "401922313",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
       "veces_visto": 24,
@@ -140,7 +149,7 @@
       "pais": "",
       "liga": "Guatemalan Liga Nacional",
       "liga_id": "3928",
-      "veces_visto": 22,
+      "veces_visto": 23,
       "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
       "fixture_id": "401879630",
       "ultimo_visto": "2026-09-24"
@@ -153,15 +162,6 @@
       "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
       "fixture_id": "401906485",
       "ultimo_visto": "2026-09-18"
-    },
-    {
-      "pais": "",
-      "liga": "Men's International Friendly",
-      "liga_id": "3922",
-      "veces_visto": 19,
-      "ejemplo_partido": "Fiji vs Solomon Islands",
-      "fixture_id": "401922313",
-      "ultimo_visto": "2026-09-24"
     },
     {
       "pais": "",
@@ -219,6 +219,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Chile, Round of 16",
+      "liga_id": "8312",
+      "veces_visto": 16,
+      "ejemplo_partido": "Puerto Montt vs Ñublense",
+      "fixture_id": "401916351",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
       "liga": "Argentine Nacional B",
       "liga_id": "3903",
       "veces_visto": 15,
@@ -255,11 +264,11 @@
     },
     {
       "pais": "",
-      "liga": "Copa Chile, Round of 16",
-      "liga_id": "8312",
+      "liga": "UEFA Nations League",
+      "liga_id": "2395",
       "veces_visto": 14,
-      "ejemplo_partido": "Puerto Montt vs Ñublense",
-      "fixture_id": "401916351",
+      "ejemplo_partido": "Andorra vs Malta",
+      "fixture_id": "401861047",
       "ultimo_visto": "2026-09-24"
     },
     {
@@ -345,15 +354,6 @@
     },
     {
       "pais": "",
-      "liga": "UEFA Nations League",
-      "liga_id": "2395",
-      "veces_visto": 7,
-      "ejemplo_partido": "Andorra vs Malta",
-      "fixture_id": "401861047",
-      "ultimo_visto": "2026-09-24"
-    },
-    {
-      "pais": "",
       "liga": "Argentine Primera B",
       "liga_id": "3904",
       "veces_visto": 6,
@@ -369,6 +369,15 @@
       "ejemplo_partido": "CD Estrella Roja vs Platense",
       "fixture_id": "401915261",
       "ultimo_visto": "2026-09-18"
+    },
+    {
+      "pais": "",
+      "liga": "Concacaf Nations League, League B, Group C",
+      "liga_id": "19267",
+      "veces_visto": 6,
+      "ejemplo_partido": "Aruba vs Antigua and Barbuda",
+      "fixture_id": "401900640",
+      "ultimo_visto": "2026-09-24"
     },
     {
       "pais": "",
@@ -516,11 +525,11 @@
     },
     {
       "pais": "",
-      "liga": "Concacaf Nations League, League B, Group C",
-      "liga_id": "19267",
+      "liga": "Arabian Gulf Cup, Group A",
+      "liga_id": "23107",
       "veces_visto": 4,
-      "ejemplo_partido": "Aruba vs Antigua and Barbuda",
-      "fixture_id": "401900640",
+      "ejemplo_partido": "United Arab Emirates vs Yemen",
+      "fixture_id": "401922491",
       "ultimo_visto": "2026-09-24"
     },
     {
@@ -606,11 +615,74 @@
     },
     {
       "pais": "",
-      "liga": "Arabian Gulf Cup, Group A",
-      "liga_id": "23107",
+      "liga": "UEFA Nations League, Group A1",
+      "liga_id": "2395",
       "veces_visto": 2,
-      "ejemplo_partido": "United Arab Emirates vs Yemen",
-      "fixture_id": "401922491",
+      "ejemplo_partido": "Portugal vs Wales",
+      "fixture_id": "401861044",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
+      "liga": "Concacaf Nations League, League B, Group D",
+      "liga_id": "19267",
+      "veces_visto": 2,
+      "ejemplo_partido": "Dominican Republic vs Nicaragua",
+      "fixture_id": "401900637",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
+      "liga": "Concacaf Nations League, League C, Group C",
+      "liga_id": "19267",
+      "veces_visto": 2,
+      "ejemplo_partido": "Cayman Islands vs Dominica",
+      "fixture_id": "401900634",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
+      "liga": "Concacaf Nations League, League A, Group A",
+      "liga_id": "19267",
+      "veces_visto": 2,
+      "ejemplo_partido": "Costa Rica vs Curaçao",
+      "fixture_id": "401900638",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
+      "liga": "EURO U-21 Qualifying, Group I",
+      "liga_id": "20114",
+      "veces_visto": 2,
+      "ejemplo_partido": "Belgium U21 vs Belarus U21",
+      "fixture_id": "732409",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
+      "liga": "EURO U-21 Qualifying, Group A",
+      "liga_id": "20114",
+      "veces_visto": 2,
+      "ejemplo_partido": "San Marino U21 vs Kosovo U21",
+      "fixture_id": "732413",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
+      "liga": "AFCON Qualifying, Group J",
+      "liga_id": "8315",
+      "veces_visto": 2,
+      "ejemplo_partido": "Namibia vs Congo",
+      "fixture_id": "401920057",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
+      "liga": "AFCON Qualifying, Group G",
+      "liga_id": "8315",
+      "veces_visto": 2,
+      "ejemplo_partido": "Ivory Coast vs Ghana",
+      "fixture_id": "401920050",
       "ultimo_visto": "2026-09-24"
     },
     {
@@ -639,42 +711,6 @@
       "ejemplo_partido": "PAOK vs Spartak Myjava",
       "fixture_id": "401916430",
       "ultimo_visto": "2026-09-23"
-    },
-    {
-      "pais": "",
-      "liga": "UEFA Nations League, Group A1",
-      "liga_id": "2395",
-      "veces_visto": 1,
-      "ejemplo_partido": "Portugal vs Wales",
-      "fixture_id": "401861044",
-      "ultimo_visto": "2026-09-24"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Nations League, League B, Group D",
-      "liga_id": "19267",
-      "veces_visto": 1,
-      "ejemplo_partido": "Dominican Republic vs Nicaragua",
-      "fixture_id": "401900637",
-      "ultimo_visto": "2026-09-24"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Nations League, League C, Group C",
-      "liga_id": "19267",
-      "veces_visto": 1,
-      "ejemplo_partido": "Cayman Islands vs Dominica",
-      "fixture_id": "401900634",
-      "ultimo_visto": "2026-09-24"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Nations League, League A, Group A",
-      "liga_id": "19267",
-      "veces_visto": 1,
-      "ejemplo_partido": "Costa Rica vs Curaçao",
-      "fixture_id": "401900638",
-      "ultimo_visto": "2026-09-24"
     },
     {
       "pais": "",
@@ -714,20 +750,38 @@
     },
     {
       "pais": "",
-      "liga": "EURO U-21 Qualifying, Group I",
-      "liga_id": "20114",
+      "liga": "AFCON Qualifying, Group H",
+      "liga_id": "8315",
       "veces_visto": 1,
-      "ejemplo_partido": "Belgium U21 vs Belarus U21",
-      "fixture_id": "732409",
+      "ejemplo_partido": "Congo DR vs Equatorial Guinea",
+      "fixture_id": "401920055",
       "ultimo_visto": "2026-09-24"
     },
     {
       "pais": "",
-      "liga": "EURO U-21 Qualifying, Group A",
-      "liga_id": "20114",
+      "liga": "AFCON Qualifying, Group D",
+      "liga_id": "8315",
       "veces_visto": 1,
-      "ejemplo_partido": "San Marino U21 vs Kosovo U21",
-      "fixture_id": "732413",
+      "ejemplo_partido": "Libya vs Botswana",
+      "fixture_id": "401920056",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
+      "liga": "AFCON Qualifying, Group C",
+      "liga_id": "8315",
+      "veces_visto": 1,
+      "ejemplo_partido": "Mauritania vs Central African Republic",
+      "fixture_id": "401920054",
+      "ultimo_visto": "2026-09-24"
+    },
+    {
+      "pais": "",
+      "liga": "AFCON Qualifying, Group A",
+      "liga_id": "8315",
+      "veces_visto": 1,
+      "ejemplo_partido": "Tunisia vs Uganda",
+      "fixture_id": "401920052",
       "ultimo_visto": "2026-09-24"
     }
   ]
