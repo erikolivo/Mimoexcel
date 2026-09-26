@@ -15811,7 +15811,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Operário PR vs Ceará",
@@ -17449,7 +17450,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "St. Martin vs US Virgin Islands",
@@ -17974,6 +17976,73 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "36'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "3",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "3",
+            "possessionPct": "55.2",
+            "totalShots": "1",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "83",
+            "totalPasses": "120",
+            "passPct": "0.7",
+            "accurateCrosses": "1",
+            "totalCrosses": "5",
+            "crossPct": "0.2",
+            "totalLongBalls": "25",
+            "accurateLongBalls": "6",
+            "longballPct": "0.2",
+            "blockedShots": "0",
+            "effectiveTackles": "2",
+            "totalTackles": "3",
+            "tacklePct": "0.7",
+            "interceptions": "0",
+            "effectiveClearance": "3",
+            "totalClearance": "3"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "3",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "3",
+            "saves": "0",
+            "possessionPct": "44.8",
+            "totalShots": "4",
+            "shotsOnTarget": "2",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "71",
+            "totalPasses": "96",
+            "passPct": "0.7",
+            "accurateCrosses": "0",
+            "totalCrosses": "5",
+            "crossPct": "0.0",
+            "totalLongBalls": "15",
+            "accurateLongBalls": "3",
+            "longballPct": "0.2",
+            "blockedShots": "1",
+            "effectiveTackles": "1",
+            "totalTackles": "2",
+            "tacklePct": "0.5",
+            "interceptions": "3",
+            "effectiveClearance": "12",
+            "totalClearance": "12"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
@@ -18062,7 +18131,17 @@
       "kickoff_utc": "2026-09-26T21:30Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "4'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
