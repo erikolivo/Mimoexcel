@@ -15823,7 +15823,8 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Colo Colo vs Audax Italiano",
@@ -15852,7 +15853,8 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Unión Magdalena vs Independiente Santa Fe",
@@ -15911,7 +15913,8 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Vila Nova vs Londrina",
@@ -17074,6 +17077,73 @@
             "interceptions": "10",
             "effectiveClearance": "27",
             "totalClearance": "27"
+          },
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "69'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "15",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "8",
+            "saves": "3",
+            "possessionPct": "58.7",
+            "totalShots": "16",
+            "shotsOnTarget": "8",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "274",
+            "totalPasses": "333",
+            "passPct": "0.8",
+            "accurateCrosses": "4",
+            "totalCrosses": "24",
+            "crossPct": "0.2",
+            "totalLongBalls": "38",
+            "accurateLongBalls": "14",
+            "longballPct": "0.4",
+            "blockedShots": "3",
+            "effectiveTackles": "5",
+            "totalTackles": "13",
+            "tacklePct": "0.4",
+            "interceptions": "8",
+            "effectiveClearance": "16",
+            "totalClearance": "16"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "3",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "3",
+            "saves": "6",
+            "possessionPct": "41.3",
+            "totalShots": "6",
+            "shotsOnTarget": "2",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "175",
+            "totalPasses": "238",
+            "passPct": "0.7",
+            "accurateCrosses": "3",
+            "totalCrosses": "12",
+            "crossPct": "0.3",
+            "totalLongBalls": "44",
+            "accurateLongBalls": "18",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "10",
+            "totalTackles": "15",
+            "tacklePct": "0.7",
+            "interceptions": "10",
+            "effectiveClearance": "28",
+            "totalClearance": "28"
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
