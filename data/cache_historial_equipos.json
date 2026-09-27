@@ -121879,8 +121879,15 @@
     ]
   },
   "193_usa.1_2026": {
-    "fecha_cache": "2026-09-20T00:52:51.551398",
+    "fecha_cache": "2026-09-27T04:11:11.640401",
     "historial": [
+      {
+        "fecha": "2026-09-19",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-12",
         "goles_favor": 0,
