@@ -110585,8 +110585,15 @@
     ]
   },
   "6077_usa.1_2026": {
-    "fecha_cache": "2026-09-20T01:13:13.596910",
+    "fecha_cache": "2026-09-27T01:14:16.897649",
     "historial": [
+      {
+        "fecha": "2026-09-20",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-09-13",
         "goles_favor": 0,
