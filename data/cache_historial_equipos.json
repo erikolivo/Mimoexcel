@@ -108088,8 +108088,15 @@
     ]
   },
   "7318_usa.1_2026": {
-    "fecha_cache": "2026-09-20T00:57:58.657797",
+    "fecha_cache": "2026-09-27T02:19:59.734797",
     "historial": [
+      {
+        "fecha": "2026-09-20",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-12",
         "goles_favor": 0,
@@ -108268,8 +108275,15 @@
     ]
   },
   "18986_usa.1_2026": {
-    "fecha_cache": "2026-09-20T01:59:17.673036",
+    "fecha_cache": "2026-09-27T02:19:59.478145",
     "historial": [
+      {
+        "fecha": "2026-09-20",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-12",
         "goles_favor": 2,
