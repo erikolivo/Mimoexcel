@@ -6110,6 +6110,73 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+6'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "8",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "4",
+            "saves": "0",
+            "possessionPct": "49.5",
+            "totalShots": "8",
+            "shotsOnTarget": "3",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "180",
+            "totalPasses": "221",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "13",
+            "crossPct": "0.2",
+            "totalLongBalls": "33",
+            "accurateLongBalls": "18",
+            "longballPct": "0.5",
+            "blockedShots": "1",
+            "effectiveTackles": "6",
+            "totalTackles": "9",
+            "tacklePct": "0.7",
+            "interceptions": "5",
+            "effectiveClearance": "2",
+            "totalClearance": "2"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "3",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "3",
+            "possessionPct": "50.5",
+            "totalShots": "2",
+            "shotsOnTarget": "1",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "1",
+            "accuratePasses": "197",
+            "totalPasses": "236",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "27",
+            "accurateLongBalls": "11",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "2",
+            "totalTackles": "5",
+            "tacklePct": "0.4",
+            "interceptions": "1",
+            "effectiveClearance": "28",
+            "totalClearance": "28"
+          },
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [
@@ -6132,6 +6199,26 @@
           "resolucion_notificada": true,
           "acierto": false,
           "presion_lado": 5.557335854398792
+        },
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "45'+6'",
+          "texto": "🔦 FAVORITO DOMINA\nPumas UNAM Perdiendo 0-1\nz: 3.0 | Tiros: 3.0-1.0\nPosesión: 50%\nCuota pre: 1.95 -> en vivo debería bajar",
+          "diferencia_goles": -1,
+          "id": "401876958-1",
+          "minuto_int": 51,
+          "marcador_alerta": [
+            0,
+            1
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 17.00678455827137
         }
       ],
       "diferencia_maxima_alcanzada": 0
@@ -6251,6 +6338,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+3'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [],
