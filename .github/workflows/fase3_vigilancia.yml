@@ -1,28 +1,38 @@
 name: Fase 3 - Vigilancia en vivo
 
-# 4 disparos diarios de ~5.5h cada uno (330 min), con sleep interno de
-# 5 min entre revisiones -- igual que la version anterior con
-# API-Football. Los 4 disparos cubren casi todo el dia (quedan ~2h de
-# hueco de madrugada local, franja de muy baja probabilidad de
-# partidos en vivo).
-#
-# Horarios LOCALES (UTC-5) de arranque: 05:00, 08:00, 10:30, 16:00, 21:30
-# Convertidos a UTC (+5h):               10:00, 13:00, 15:30, 21:00, 02:30
+# Local (UTC-5):
+#   - Cada job vigila ~5 h (revision cada 5 min) y al TERMINAR se
+#     re-dispara a si mismo via workflow_dispatch (arranca al instante,
+#     sin los retrasos de 2-8 h que GitHub aplica a los cron) ->
+#     cobertura CASI CONTINUA las 24 h, tambien de madrugada.
+#   - DENTRO de cada ventana de vigilancia, al inicio, corren la
+#     Fase 1 (seleccion de partidos) y la Fase 2 (resumen de la manana,
+#     solo entre 04:00 y 11:59 hora local, una sola vez al dia):
+#     el resumen llega en la manana aunque los cron de Fase 2 se retracen.
+#   - Los cron quedan como RESPALDO de la cadena: arrancan mas
+#     temprano que antes (03:43 local en vez de 05:00) y estan en
+#     minutos impares para esquivar la carga del inicio de hora.
+#   - Para DETENER la cadena: crear el archivo data/.fase3_stop (y
+#     commitearlo); para reanudar, borrarlo.
 on:
   schedule:
-    - cron: "0 10 * * *"
-    - cron: "0 13 * * *"
-    - cron: "30 15 * * *"
-    - cron: "0 21 * * *"
-    - cron: "30 2 * * *"
+    - cron: "43 8 * * *"   # 03:43 local (arranque mananero, antes 05:00)
+    - cron: "17 12 * * *"  # 07:17 local (antes 08:00)
+    - cron: "38 15 * * *"  # 10:38 local (antes 10:30)
+    - cron: "26 20 * * *"  # 15:26 local (antes 16:00)
+    - cron: "49 1 * * *"   # 20:49 local (antes 21:30)
+    - cron: "58 6 * * *"   # 01:58 local (madrugada, antes no existia)
   workflow_dispatch: {}
 
 permissions:
   contents: write
+  actions: write      # gh workflow run (cadena de re-disparos)
 
-# Un solo runner activo: si el watchdog re-dispara porque el anterior
-# se colgo, el nuevo cancela al viejo en vez de correr en paralelo
-# (dos runners empujando data/ a la vez = conflictos y runs fallidos).
+# Un solo runner activo: un dispatch nuevo (cron o cadena) cancela al
+# anterior en vez de correr en paralelo (dos runners empujando data/
+# a la vez = conflictos y runs fallidos). La cadena solo re-dispara
+# cuando el ciclo termino NORMALMENTE (nunca si fue cancelado), asi
+# no se genera un bucle de cancelaciones.
 concurrency:
   group: fase3-vigilancia
   cancel-in-progress: true
@@ -30,11 +40,11 @@ concurrency:
 jobs:
   vigilar:
     runs-on: ubuntu-latest
-    timeout-minutes: 340   # 5.5h + margen
+    timeout-minutes: 340   # ~8 min de arranque + 300 min de ciclo + margen
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # necesario para pull --rebase en el push periodico
+          fetch-depth: 0   # necesario para pull --rebase en los push
 
       - uses: actions/setup-python@v5
         with:
@@ -42,36 +52,96 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Asegurar partidos del dia (si falta partidos_hoy.json)
+      - name: "Fase 1 embebida: seleccionar partidos del dia"
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
-          if [ ! -f data/partidos_hoy.json ]; then
-            echo "No hay partidos_hoy.json — ejecutando Fase 1 primero..."
-            python seleccionar_partidos.py --forzar
-          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # --forzar fusiona con lo ya seleccionado; no pisa alertas
+          # ni snapshots que monitor.py ya haya guardado hoy.
+          python seleccionar_partidos.py --forzar
+          guardar() {
+            git add -A data/
+            git diff --staged --quiet && return 0
+            git commit -m "Fase 1 embebida: seleccion $(date -u +%Y-%m-%dT%H:%M)" || true
+            for i in 1 2 3; do
+              git push && return 0
+              # -X theirs durante el rebase conserva los cambios LOCALES
+              # (snapshots/alertas del monitor) frente a los remotos.
+              git rebase --abort 2>/dev/null || true
+              git pull --rebase --autostash -X theirs || git rebase --abort || true
+              sleep 5
+            done
+            echo "[ERROR] no se pudo pushear la seleccion (se reintenta en el proximo ciclo)"
+            return 0
+          }
+          guardar
 
-      - name: Vigilar en vivo durante ~5.5 horas (revision cada 5 min)
+      - name: "Fase 2 embebida: resumen de la manana"
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Ventana mananera local 04:00-11:59 (UTC-5); resumen.py ademas
+          # tiene guard propio de "una vez al dia" (estado_diario.json).
+          # +19 == -5 (mod 24) y mantiene el resultado en 0..23.
+          HORA_LOCAL=$(( ( $(date -u +%s) / 3600 + 19 ) % 24 ))
+          if [ "$HORA_LOCAL" -ge 4 ] && [ "$HORA_LOCAL" -lt 12 ]; then
+            python resumen.py || echo "[AVISO] resumen.py fallo — se reintentara en el proximo ciclo."
+          else
+            echo "Hora local ${HORA_LOCAL}:00 — fuera de la ventana mananera (04:00-11:59); resumen omitido."
+          fi
+          guardar() {
+            git add -A data/
+            git diff --staged --quiet && return 0
+            git commit -m "Fase 2 embebida: resumen $(date -u +%Y-%m-%dT%H:%M)" || true
+            for i in 1 2 3; do
+              git push && return 0
+              git rebase --abort 2>/dev/null || true
+              git pull --rebase --autostash -X theirs || git rebase --abort || true
+              sleep 5
+            done
+            echo "[ERROR] no se pudo pushear el resumen (se reintenta en el proximo ciclo)"
+            return 0
+          }
+          guardar
+
+      - name: "Vigilar en vivo durante ~5 horas (revision cada 5 min)"
+        id: ciclo
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Push robusto: si el rebase conflicta (p. ej. un push de
+          # Fase 4 llega primero), se aborta el rebase a medias y se
+          # reintenta — asi nunca queda el repo "trabado" que mato la
+          # vigilancia del 29-09 (pushes muertos 10:24-12:56 UTC).
           sincronizar() {
             git add -A data/
             git diff --staged --quiet || git commit -m "Fase 3: avance $(date -u +%Y-%m-%dT%H:%M)" || true
-            git pull --rebase --autostash || true
-            git push || true
+            for i in 1 2 3; do
+              git push && return 0
+              echo "[AVISO] push rechazado (intento $i/3) — limpiando rebase y reintentando..."
+              git rebase --abort 2>/dev/null || true
+              git pull --rebase --autostash -X theirs || git rebase --abort || true
+              sleep 5
+            done
+            echo "[ERROR] push fallo 3 veces — lo ya vigilado queda local y se pushea en el proximo ciclo"
+            return 0
           }
-          FIN=$(( $(date +%s) + 330*60 ))
+          FIN=$(( $(date +%s) + 300*60 ))
           while [ "$(date +%s)" -lt "$FIN" ]; do
             # Reintentar hasta 3 veces si monitor.py falla
             INTENTOS=0
             HUBO_EXITO=false
             while [ "$INTENTOS" -lt 3 ]; do
-              python monitor.py
-              if [ $? -eq 0 ]; then
+              # if (no comando suelto) para que bash -e no mate el paso
+              if python monitor.py; then
                 HUBO_EXITO=true
                 break
               fi
@@ -82,7 +152,7 @@ jobs:
             if [ "$HUBO_EXITO" = false ]; then
               echo "[ERROR] monitor.py fallo 3 veces seguidas. Verificando partidos_hoy.json..."
               if [ ! -f data/partidos_hoy.json ]; then
-                python seleccionar_partidos.py --forzar
+                python seleccionar_partidos.py --forzar || echo "[AVISO] re-seleccion fallo; se reintenta en el proximo ciclo."
               fi
             fi
             # Push periodico: si el job muere (timeout, cancel), lo ya
@@ -97,6 +167,25 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A data/
-          git diff --staged --quiet || git commit -m "Fase 3: vigilancia en vivo $(date -u +%Y-%m-%dT%H:%M)"
-          git pull --rebase --autostash || true
-          git push || true
+          git diff --staged --quiet || git commit -m "Fase 3: vigilancia en vivo $(date -u +%Y-%m-%dT%H:%M)" || true
+          for i in 1 2 3; do
+            git push && exit 0
+            echo "[AVISO] push final rechazado (intento $i/3) — limpiando y reintentando..."
+            git rebase --abort 2>/dev/null || true
+            git pull --rebase --autostash -X theirs || git rebase --abort || true
+            sleep 5
+          done
+          echo "[ERROR] push final fallo — se cubre en el proximo ciclo"
+          exit 0
+
+      - name: "Re-disparar vigilancia (cadena continua 24 h)"
+        if: always() && steps.ciclo.conclusion == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f data/.fase3_stop ]; then
+            echo "Existe data/.fase3_stop — la cadena NO se re-dispara."
+            exit 0
+          fi
+          echo "Ciclo terminado — re-disparando Fase 3 (arranque inmediato, sin retraso de cron)..."
+          gh workflow run fase3_vigilancia.yml

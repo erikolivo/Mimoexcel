@@ -142,9 +142,21 @@ permissions** → Save
 
 ### 4. Configurar los workflows de GitHub Actions
 
-Igual que antes: 4 disparos diarios para Fase 3 (con `sleep` interno
-cada 5 min), y ventanas de reintento de 15 min para Fase 2, Fase 4, y
-el Reporte diario.
+Igual que antes para Fase 4 y el Reporte diario (ventanas de reintento
+de 15 min). Fase 3 ahora funciona así:
+
+- **Cadena continua 24 h**: cada ciclo de vigilancia (~5 h, revisión
+  cada 5 min) se re-dispara solo al terminar vía `workflow_dispatch`
+  (arranca al instante, sin los retrasos de 2-8 h que GitHub aplica a
+  los cron). Los 6 cron quedan como respaldo, arrancan más temprano
+  (03:43 en vez de 05:00 hora local) y en minutos impares para
+  esquivar la carga del inicio de hora.
+- **Fases 1 y 2 dentro de la propia ventana de vigilancia**: al
+  iniciar cada job corre la selección de partidos (`--forzar`) y el
+  resumen de la mañana (solo 04:00–11:59 hora local, una vez al día):
+  el resumen llega en la mañana aunque los cron de Fase 2 se retracen.
+- **Para detener la cadena**: crear `data/.fase3_stop` (y borrarlo
+  para reanudar). El watchdog sigue actuando de red de seguridad.
 
 ### 5. Probar manualmente
 `.../actions` → "Fase 1 - Selección de partidos" → Run workflow →
@@ -227,3 +239,11 @@ Refactorización de 4 fases para mejorar la precisión y cobertura:
   partido como UNA (mayoría decide), igual que el Excel — la pareja
   70'+90'+5' contaba como dos fallos. Backtest corregido: 80.1→24.4
   alertas/día (69% menos).
+- **Round 7** (cobertura de la mañana, 2026-09-29): la vigilancia se
+  re-dispara sola al final de cada ciclo (cadena 24 h sin depender de
+  los cron, que GitHub retrasaba 2-8 h — mañanas sin alertas y digests
+  que llegaban ~13:00), Fase 1 y Fase 2 corren dentro del propio job
+  (resumen 04:00–11:59 local), cron de arranque adelantado a 03:43 y
+  `sincronizar` reparado: un choque de pushes (el del 29-09 dejó 2.5 h
+  sin monitorear) ahora aborta el rebase y reintenta con
+  `-X theirs`, conservando los snapshots locales y sin trabar el repo.
