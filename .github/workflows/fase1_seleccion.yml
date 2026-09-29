@@ -1,12 +1,14 @@
 name: Fase 1 - Seleccion de partidos
 
 # Local (UTC-5):
-#   - Reintenta cada 5 min entre las 05:00 y las 05:55 (seleccion original del dia).
+#   - RESPALDO del disparo principal 06:45 que hace el loop de Fase 3
+#     (chain 24 h). Reintentos a las 06:45, 06:50 y 06:55.
 #   - Segunda revision, cada 5 min entre las 19:00 y las 19:55, por si se
 #     subieron cambios a la hoja durante el dia. Corre con --forzar.
+#     (El arranque de cada job de Fase 3 tambien re-fusiona la seleccion.)
 on:
   schedule:
-    - cron: "*/5 10 * * *"     # 10:00-10:55 UTC = 05:00-05:55 local (seleccion de la manana)
+    - cron: "45,50,55 11 * * *"   # 11:45-11:55 UTC = 06:45-06:55 local (respaldo manana)
     - cron: "*/5 0 * * *"      # 00:00-00:55 UTC = 19:00-19:55 local (revision de la noche, forzada)
   workflow_dispatch:
     inputs:

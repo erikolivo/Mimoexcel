@@ -151,10 +151,12 @@ de 15 min). Fase 3 ahora funciona así:
   los cron). Los 6 cron quedan como respaldo, arrancan más temprano
   (03:43 en vez de 05:00 hora local) y en minutos impares para
   esquivar la carga del inicio de hora.
-- **Fases 1 y 2 dentro de la propia ventana de vigilancia**: al
-  iniciar cada job corre la selección de partidos (`--forzar`) y el
-  resumen de la mañana (solo 04:00–11:59 hora local, una vez al día):
-  el resumen llega en la mañana aunque los cron de Fase 2 se retracen.
+- **Dos disparos fijos dentro del loop de vigilancia** (cada 5 min,
+  a prueba de retrasos de cron): **resumen del día a las 06:30** y
+  **selección de partidos a las 06:45** hora local — llegan con
+  precisión ±5 min. Cada arranque de job además re-fusiona la
+  selección (frescura 24 h). Los cron de Fase 1/Fase 2 quedan como
+  respaldo desfasados a esas mismas horas.
 - **Para detener la cadena**: crear `data/.fase3_stop` (y borrarlo
   para reanudar). El watchdog sigue actuando de red de seguridad.
 
@@ -242,8 +244,8 @@ Refactorización de 4 fases para mejorar la precisión y cobertura:
 - **Round 7** (cobertura de la mañana, 2026-09-29): la vigilancia se
   re-dispara sola al final de cada ciclo (cadena 24 h sin depender de
   los cron, que GitHub retrasaba 2-8 h — mañanas sin alertas y digests
-  que llegaban ~13:00), Fase 1 y Fase 2 corren dentro del propio job
-  (resumen 04:00–11:59 local), cron de arranque adelantado a 03:43 y
-  `sincronizar` reparado: un choque de pushes (el del 29-09 dejó 2.5 h
+  que llegaban ~13:00), Fase 1 y Fase 2 corren dentro del propio loop
+  (resumen 06:30 y selección 06:45 hora local, ±5 min), cron de
+  arranque adelantado a 03:43 y `sincronizar` reparado: un choque de pushes (el del 29-09 dejó 2.5 h
   sin monitorear) ahora aborta el rebase y reintenta con
   `-X theirs`, conservando los snapshots locales y sin trabar el repo.

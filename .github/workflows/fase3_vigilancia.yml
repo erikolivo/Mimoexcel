@@ -5,10 +5,13 @@ name: Fase 3 - Vigilancia en vivo
 #     re-dispara a si mismo via workflow_dispatch (arranca al instante,
 #     sin los retrasos de 2-8 h que GitHub aplica a los cron) ->
 #     cobertura CASI CONTINUA las 24 h, tambien de madrugada.
-#   - DENTRO de cada ventana de vigilancia, al inicio, corren la
-#     Fase 1 (seleccion de partidos) y la Fase 2 (resumen de la manana,
-#     solo entre 04:00 y 11:59 hora local, una sola vez al dia):
-#     el resumen llega en la manana aunque los cron de Fase 2 se retracen.
+#   - DENTRO del loop de vigilancia (revision cada 5 min) corren dos
+#     disparos diarios fijos, a prueba de retrasos de cron:
+#       06:30 local -> resumen del dia (guard interno: 1 vez al dia)
+#       06:45 local -> seleccion de partidos (marker .sel_manana)
+#     Precision: llegan a las 06:30/06:45 +- 5 min (cadencia del loop).
+#   - Ademas cada arranque de job re-fusiona la seleccion (frescura
+#     24 h; invisible para Telegram).
 #   - Los cron quedan como RESPALDO de la cadena: arrancan mas
 #     temprano que antes (03:43 local en vez de 05:00) y estan en
 #     minutos impares para esquivar la carga del inicio de hora.
@@ -78,37 +81,6 @@ jobs:
           }
           guardar
 
-      - name: "Fase 2 embebida: resumen de la manana"
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Ventana mananera local 04:00-11:59 (UTC-5); resumen.py ademas
-          # tiene guard propio de "una vez al dia" (estado_diario.json).
-          # +19 == -5 (mod 24) y mantiene el resultado en 0..23.
-          HORA_LOCAL=$(( ( $(date -u +%s) / 3600 + 19 ) % 24 ))
-          if [ "$HORA_LOCAL" -ge 4 ] && [ "$HORA_LOCAL" -lt 12 ]; then
-            python resumen.py || echo "[AVISO] resumen.py fallo — se reintentara en el proximo ciclo."
-          else
-            echo "Hora local ${HORA_LOCAL}:00 — fuera de la ventana mananera (04:00-11:59); resumen omitido."
-          fi
-          guardar() {
-            git add -A data/
-            git diff --staged --quiet && return 0
-            git commit -m "Fase 2 embebida: resumen $(date -u +%Y-%m-%dT%H:%M)" || true
-            for i in 1 2 3; do
-              git push && return 0
-              git rebase --abort 2>/dev/null || true
-              git pull --rebase --autostash -X theirs || git rebase --abort || true
-              sleep 5
-            done
-            echo "[ERROR] no se pudo pushear el resumen (se reintenta en el proximo ciclo)"
-            return 0
-          }
-          guardar
-
       - name: "Vigilar en vivo durante ~5 horas (revision cada 5 min)"
         id: ciclo
         env:
@@ -136,6 +108,26 @@ jobs:
           }
           FIN=$(( $(date +%s) + 300*60 ))
           while [ "$(date +%s)" -lt "$FIN" ]; do
+            # --- Disparos fijos diarios (a prueba de retrasos de cron) ---
+            # Hora local UTC-5 fija (Ecuador sin DST): restar 18000 s.
+            AHORA=$(( $(date -u +%s) - 18000 ))
+            MIN_LOCALES=$(( (AHORA / 60) % 1440 ))
+            FECHA_LOCAL=$(date -u -d "@$AHORA" +%Y-%m-%d)
+            # 06:30 local (min 390): resumen del dia. resumen.py tiene
+            # guard interno de "una vez al dia" (estado_diario.json).
+            if [ "$MIN_LOCALES" -ge 390 ]; then
+              python resumen.py || echo "[AVISO] resumen 06:30 fallo — se reintenta en 5 min."
+            fi
+            # 06:45 local (min 405): seleccion del dia, una sola vez
+            # al dia via marker data/.sel_manana (fecha local).
+            if [ "$MIN_LOCALES" -ge 405 ] && [ "$(cat data/.sel_manana 2>/dev/null || true)" != "$FECHA_LOCAL" ]; then
+              echo "06:45 local: seleccion de partidos del dia..."
+              if python seleccionar_partidos.py --forzar; then
+                printf '%s' "$FECHA_LOCAL" > data/.sel_manana
+              else
+                echo "[AVISO] seleccion 06:45 fallo — se reintenta en 5 min."
+              fi
+            fi
             # Reintentar hasta 3 veces si monitor.py falla
             INTENTOS=0
             HUBO_EXITO=false
