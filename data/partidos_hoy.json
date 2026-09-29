@@ -547,35 +547,6 @@
       "aviso_final_enviado": true
     },
     {
-      "partido": "San Antonio FC vs SV Darmstadt 98",
-      "local": "San Antonio FC",
-      "visitante": "SV Darmstadt 98",
-      "favorito": "SV Darmstadt 98",
-      "no_favorito": "San Antonio FC",
-      "favorito_es_local": false,
-      "tipo_pronostico": "doble_oportunidad",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": 3.76,
-      "cuota_empate_inicial": 4.45,
-      "cuota_visitante_inicial": 1.71,
-      "prioridad": "MEDIA",
-      "fuente_favorito": "Google Sheets",
-      "fila_fuente": 30535,
-      "hora_inicio": "2026-09-29T17:30Z",
-      "fixture_id": "401905964",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "Club Friendly",
-      "home_id": "18265",
-      "away_id": "3812",
-      "kickoff_utc": "2026-09-29T17:30Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Boreham Wood vs Kidderminster Harriers",
       "local": "Boreham Wood",
       "visitante": "Kidderminster Harriers",
@@ -13130,6 +13101,35 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
+      "partido": "San Antonio FC vs SV Darmstadt 98",
+      "local": "San Antonio FC",
+      "visitante": "SV Darmstadt 98",
+      "favorito": "SV Darmstadt 98",
+      "no_favorito": "San Antonio FC",
+      "favorito_es_local": false,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 3,
+      "cuota_local_inicial": 3.76,
+      "cuota_empate_inicial": 4.45,
+      "cuota_visitante_inicial": 1.71,
+      "prioridad": "MEDIA",
+      "fuente_favorito": "Google Sheets",
+      "fila_fuente": 30535,
+      "hora_inicio": "2026-09-29T17:30Z",
+      "fixture_id": "401905964",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "Club Friendly",
+      "home_id": "18265",
+      "away_id": "3812",
+      "kickoff_utc": "2026-09-29T17:30Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
+    },
+    {
       "partido": "Independiente Medellín vs Millonarios",
       "local": "Independiente Medellín",
       "visitante": "Millonarios",
@@ -13158,7 +13158,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
