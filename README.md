@@ -72,10 +72,10 @@ puede eliminarse de GitHub Actions — ver la sección de Secrets abajo.
 
 | Fase | Cuándo | Qué hace |
 |---|---|---|
-| 1. Selección | Desde las 04:00 | Lee los favoritos de Google Sheets y localiza sus fixtures en ESPN para vigilarlos en vivo |
-| 2. Resumen | 07:00 | Manda a Telegram la lista de partidos de hoy |
+| 1. Selección | 06:45, 19:00 y con cada ciclo (~5 h) | Lee los favoritos de Google Sheets y localiza sus fixtures en ESPN para vigilarlos en vivo |
+| 2. Resumen | 06:30 | Manda a Telegram la lista de partidos de hoy |
 | 3. Vigilancia | Cada 5-15 min (adaptativo) | Boxscore en vivo de ESPN, calcula momentum real, manda la alerta que aplique |
-| 4. Cierre | 23:30 | Resuelve resultados vía ESPN, actualiza Glicko-2, audita cada alerta, archiva el día |
+| 4. Cierre | Desde las 00:00 (reintentos cada 15 min) + respaldo al cambiar de día (~05:00) | Resuelve resultados vía ESPN, actualiza Glicko-2, audita cada alerta, archiva el día |
 | Reporte diario | 06:00 (día siguiente) | Resultados + acierto por tipo de alerta + acierto por madurez + peticiones a ESPN usadas |
 
 ## Los tipos de alerta

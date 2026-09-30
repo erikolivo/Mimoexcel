@@ -100,6 +100,24 @@ def ya_se_completo_hoy():
         return False
 
 
+def _archivar_dia_anterior(datos_previos):
+    """Si la fecha cambio (nuevo dia local), archiva el dia anterior
+    completo (resultados, historial_dias/, Excel) ANTES de pisar
+    partidos_hoy.json. Sin esto el cierre dependia de que el cron de la
+    Fase 4 cayera dentro de la ventana 00:00-05:00 local: con los crons
+    de GitHub atrasados horas se archivaba la fecha recien empezada (con
+    0 snapshots) o directamente se perdia el dia."""
+    if not datos_previos or datos_previos.get("fecha") == fecha_local_hoy():
+        return
+    if not datos_previos.get("partidos"):
+        return
+    try:
+        import cerrar_resultados
+        cerrar_resultados.cerrar(datos=datos_previos, escribir_partidos=False)
+    except Exception as error:
+        print(f"[AVISO] No se pudo archivar el dia {datos_previos.get('fecha')}: {error}")
+
+
 def _normalizar_equipo(nombre):
     nombre_norm = normalizar(nombre)
     equivalente_aprendido = _cargar_cache_alias().get(nombre_norm)
@@ -241,33 +259,46 @@ def seleccionar(forzar=False):
             vistos.add(partido["fixture_id"])
     seleccionados.sort(key=lambda partido: partido["hora_inicio"])
 
-    nuevos_en_revision = None
-    if forzar and ARCHIVO_SALIDA.exists():
+    datos_previos = None
+    if ARCHIVO_SALIDA.exists():
         try:
             datos_previos = json.loads(ARCHIVO_SALIDA.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError):
             datos_previos = None
-        if datos_previos and datos_previos.get("fecha") == hoy:
-            previos_por_id = {p["fixture_id"]: p for p in datos_previos.get("partidos", [])}
-            fusionados = []
-            for nuevo in seleccionados:
-                fid = nuevo["fixture_id"]
-                previo = previos_por_id.get(fid)
-                if previo is None:
-                    fusionados.append(nuevo)
-                    continue
-                # Conserva historial si ya existia, pero repara el
-                # liga_slug si el previo quedo con "all" (no sirve para
-                # el summary en vivo) y el nuevo trae el slug real.
-                if (not previo.get("liga_slug") or previo.get("liga_slug") == "all") \
-                        and nuevo.get("liga_slug") not in (None, "", "all"):
-                    previo["liga_slug"] = nuevo["liga_slug"]
-                if not previo.get("liga_nombre") and nuevo.get("liga_nombre"):
-                    previo["liga_pais"] = nuevo.get("liga_pais", "")
-                    previo["liga_nombre"] = nuevo.get("liga_nombre", "")
-                fusionados.append(previo)  # conserva historial si ya existia
-            nuevos_en_revision = sum(1 for p in seleccionados if p["fixture_id"] not in previos_por_id)
-            seleccionados = fusionados
+
+    # La fecha cambio (nuevo dia local): primero se archiva el dia viejo
+    # con todos sus datos; recien despues se pisa partidos_hoy.json.
+    _archivar_dia_anterior(datos_previos)
+
+    if not seleccionados and datos_previos and datos_previos.get("fecha") == hoy \
+            and datos_previos.get("partidos"):
+        # 0 favoritos validos casi siempre es un fallo transitorio de la
+        # hoja: no se pisa el seguimiento en curso del dia.
+        print("[AVISO] La hoja devolvió 0 favoritos válidos; se conserva la selección existente de hoy.")
+        return
+
+    nuevos_en_revision = None
+    if forzar and datos_previos and datos_previos.get("fecha") == hoy:
+        previos_por_id = {p["fixture_id"]: p for p in datos_previos.get("partidos", [])}
+        fusionados = []
+        for nuevo in seleccionados:
+            fid = nuevo["fixture_id"]
+            previo = previos_por_id.get(fid)
+            if previo is None:
+                fusionados.append(nuevo)
+                continue
+            # Conserva historial si ya existia, pero repara el
+            # liga_slug si el previo quedo con "all" (no sirve para
+            # el summary en vivo) y el nuevo trae el slug real.
+            if (not previo.get("liga_slug") or previo.get("liga_slug") == "all") \
+                    and nuevo.get("liga_slug") not in (None, "", "all"):
+                previo["liga_slug"] = nuevo["liga_slug"]
+            if not previo.get("liga_nombre") and nuevo.get("liga_nombre"):
+                previo["liga_pais"] = nuevo.get("liga_pais", "")
+                previo["liga_nombre"] = nuevo.get("liga_nombre", "")
+            fusionados.append(previo)  # conserva historial si ya existia
+        nuevos_en_revision = sum(1 for p in seleccionados if p["fixture_id"] not in previos_por_id)
+        seleccionados = fusionados
 
     ARCHIVO_SALIDA.write_text(json.dumps({"fecha": hoy, "seleccion_version": VERSION_SELECCION, "partidos": seleccionados}, ensure_ascii=False, indent=2), encoding="utf-8")
     if nuevos_en_revision is not None:

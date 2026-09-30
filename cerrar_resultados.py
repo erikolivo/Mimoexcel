@@ -20,7 +20,7 @@ from pathlib import Path
 
 from fetch_data import obtener_resultado_fixture, obtener_estado_desde_scoreboard
 from cuota_espn import uso_de_hoy
-from estado_diario import ya_se_hizo, marcar_hecho
+from estado_diario import _fecha_local_hoy, marcar_hecho
 from resolucion_alertas import CRITERIO_POR_TIPO, TIPO_ALIAS, evaluar_alerta, nombre_normalizado, resolver_pendientes
 import ratings_store
 
@@ -101,16 +101,63 @@ def _auditar_alertas(p):
             p.get("favorito_es_local", True), marcador_final)
 
 
-def cerrar():
-    if ya_se_hizo("cierre"):
-        print("El cierre de hoy ya se hizo antes. Nada que hacer.")
+def _metricas(partidos):
+    snaps = sum(len(p.get("historial_snapshots", [])) for p in partidos)
+    resueltos = sum(1 for p in partidos if p.get("resultado_final"))
+    alertas = sum(len(p.get("alertas_enviadas", [])) for p in partidos)
+    return snaps, resueltos, alertas
+
+
+def _mas_rico(archivo, datos):
+    """True si los datos actuales aportan mas que lo ya archivado."""
+    try:
+        previo = json.loads(archivo.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return True
+    return _metricas(datos.get("partidos", [])) > _metricas(previo.get("partidos", []))
+
+
+def cerrar(datos=None, escribir_partidos=True):
+    """Cierra un dia: resultados/acierto, historial_dias/, Excel.
+
+    datos=None   -> entrada normal (Fase 4): usa partidos_hoy.json.
+    datos=<dict> -> la seleccion detecto un CAMBIO de fecha y pasa los
+                    datos del dia viejo para archivarlos ANTES de pisar
+                    partidos_hoy.json (seleccionar_partidos._archivar_dia_anterior).
+
+    Reglas (fix 2026-09-30, cierres prematuros):
+      - No se cierra la fecha que aun esta en curso (fecha >= hoy): los
+        crons de GitHub se atrasan horas y se archivaba el dia recien
+        empezado con 0 snapshots, bloqueando el cierre real del dia.
+      - Si el archivo del dia ya existe solo se reescribe si los datos
+        actuales son mas ricos (reparacion de un cierre vacio).
+    """
+    if datos is None:
+        if not ARCHIVO_PARTIDOS.exists():
+            print("No hay partidos_hoy.json todavia. Se reintentara en el proximo ciclo.")
+            return
+        datos = json.loads(ARCHIVO_PARTIDOS.read_text(encoding="utf-8"))
+
+    fecha = datos.get("fecha")
+    if not fecha:
+        print("[AVISO] Los partidos no tienen 'fecha'; no se puede archivar el dia.")
         return
 
-    if not ARCHIVO_PARTIDOS.exists():
-        print("No hay partidos_hoy.json todavia. Se reintentara en el proximo ciclo.")
+    hoy = _fecha_local_hoy()
+    if fecha >= hoy:
+        print(f"La fecha {fecha} sigue en curso (hoy es {hoy}); "
+              "se cierra cuando termine el dia.")
         return
 
-    datos = json.loads(ARCHIVO_PARTIDOS.read_text(encoding="utf-8"))
+    DIR_HISTORIAL_DIAS.mkdir(exist_ok=True, parents=True)
+    archivo_dia = DIR_HISTORIAL_DIAS / f"{fecha}.json"
+    if archivo_dia.exists() and not _mas_rico(archivo_dia, datos):
+        print(f"El dia {fecha} ya estaba archivado. Nada que hacer.")
+        return
+    if archivo_dia.exists():
+        print(f"[REPARACION] El archivo de {fecha} estaba incompleto; se reescribe "
+              "con los datos mas recientes.")
+
     cambios = False
 
     for p in datos["partidos"]:
@@ -182,21 +229,19 @@ def cerrar():
 
         cambios = True
 
-    if cambios:
+    if cambios and escribir_partidos and ARCHIVO_PARTIDOS.exists():
         ARCHIVO_PARTIDOS.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
 
     usadas, disponibles = uso_de_hoy()
 
-    DIR_HISTORIAL_DIAS.mkdir(exist_ok=True, parents=True)
-    archivo_dia = DIR_HISTORIAL_DIAS / f"{datos['fecha']}.json"
     archivo_dia.write_text(json.dumps({
-        "fecha": datos["fecha"],
+        "fecha": fecha,
         "partidos": datos["partidos"],
         "espn_peticiones_usadas": usadas,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Dia archivado en {archivo_dia}")
 
-    _actualizar_excel(datos["fecha"], datos["partidos"], usadas)
+    _actualizar_excel(fecha, datos["partidos"], usadas)
     marcar_hecho("cierre")
 
 
@@ -232,8 +277,14 @@ def _actualizar_excel(fecha, partidos, usadas):
 
     ya_registrado = any(fila[0].value == fecha for fila in hoja2.iter_rows(min_row=2) if fila[0].value)
     if ya_registrado:
-        print(f"El dia {fecha} ya estaba registrado en el Excel, no se duplica.")
-        return
+        # Un dia puede archivarse mas de una vez (cierre inicial + reparacion
+        # con datos mas completos): se reemplazan las filas del dia para que
+        # el Excel quede consistente con historial_dias/.
+        for hoja in (hoja1, hoja2, hoja3):
+            for i in range(hoja.max_row, 1, -1):
+                if hoja.cell(i, 1).value == fecha:
+                    hoja.delete_rows(i)
+        print(f"El dia {fecha} ya estaba en el Excel; se actualiza con los datos mas recientes.")
 
     total = len(partidos)
     aciertos = sum(1 for p in partidos if p.get("acierto") is True)
