@@ -1995,7 +1995,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 3
+      "grupo_destacado": 3,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Tamworth vs Sutton United",
@@ -3566,7 +3567,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Portugal U21 vs Gibraltar U21",
@@ -4160,6 +4162,73 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "43'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "5",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "4",
+            "saves": "1",
+            "possessionPct": "55.9",
+            "totalShots": "10",
+            "shotsOnTarget": "3",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "117",
+            "totalPasses": "144",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "2",
+            "effectiveTackles": "0",
+            "totalTackles": "0",
+            "tacklePct": "0.0",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "9"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "3",
+            "possessionPct": "44.1",
+            "totalShots": "3",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "83",
+            "totalPasses": "120",
+            "passPct": "0.7",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "0",
+            "effectiveTackles": "2",
+            "totalTackles": "2",
+            "tacklePct": "1.0",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "12"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [
@@ -4202,6 +4271,26 @@
           "resolucion_notificada": false,
           "acierto": null,
           "presion_lado": 9.924063562962615
+        },
+        {
+          "tipo": "posible_victoria_favorito",
+          "minuto": "43'",
+          "texto": "🟢 Gana Fav",
+          "diferencia_goles": 0,
+          "id": "401886198-2",
+          "minuto_int": 43,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 17.987440189171103
         }
       ],
       "diferencia_maxima_alcanzada": 0,
