@@ -177,7 +177,8 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Faroe Islands U21 vs Luxembourg U21",
@@ -926,5 +927,7 @@
       "es_destacado": true,
       "grupo_destacado": 2
     }
-  ]
+  ],
+  "predicciones_activas": {},
+  "historial_predicciones": {}
 }
