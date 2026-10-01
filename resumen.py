@@ -13,6 +13,7 @@ FASE 2. AJUSTADO a pedido explicito (agosto 2026):
 
 import json
 import datetime
+import difflib
 import sys
 from pathlib import Path
 
@@ -93,35 +94,92 @@ def _calcular_estilo_juego(datos_historial):
     return estilo, confianza
 
 
+# Cache en memoria por proceso: codigo de liga -> filas del CSV.
+# El CSV de una liga es igual para todos sus equipos, asi que se
+# descarga una sola vez por corrida del proceso.
+_CSV_LIGA = {}
+
+
+def _resultados_liga_cache(codigo):
+    """Filas del CSV de una liga, descargadas como mucho una vez."""
+    if codigo not in _CSV_LIGA:
+        _CSV_LIGA[codigo] = obtener_resultados_liga(codigo)
+    return _CSV_LIGA[codigo]
+
+
+def _num(x):
+    """Celda CSV como flotante; vacio o invalido = 0.0."""
+    try:
+        return float(str(x).strip())
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _tiene_valor(x):
+    """True si la celda no esta vacia (el 0 cuenta como valor)."""
+    if x is None:
+        return False
+    return str(x).strip() != ""
+
+
+def _emparejar_nombre(equipo, nombres):
+    """Nombre del equipo (ESPN) mas parecido al de football-data
+    (corte 0.72). Si no hay coincidencia clara devuelve None: mejor
+    no mostrar estilo que mostrar el de otro equipo."""
+    if not equipo or not nombres:
+        return None
+    if equipo in nombres:
+        return equipo
+    coincidencias = difflib.get_close_matches(equipo, nombres, n=1, cutoff=0.72)
+    if coincidencias:
+        return coincidencias[0]
+    print(f"[AVISO] No se pudo emparejar '{equipo}' con los equipos de football-data")
+    return None
+
+
 def _obtener_datos_estilo(equipo, liga_slug):
     """
-    Obtiene datos de football-data.co.uk para calcular estilo de juego.
+    Ultimas 6 filas de estilo del equipo en football-data.co.uk.
+
+    Usa las columnas reales del CSV (HomeTeam/AwayTeam, no
+    local/visitante), empareja el nombre del equipo por similitud y
+    solo toma partidos con marcador final completo. Si el nombre no se
+    empareja, devuelve None (preferible a estilo de otro equipo).
     """
     try:
         if liga_slug not in MAPA_LIGA_SLUG_A_CODIGO:
             return None
-        
+
         codigo_liga = MAPA_LIGA_SLUG_A_CODIGO[liga_slug]
-        resultados = obtener_resultados_liga(codigo_liga)
-        
+        resultados = _resultados_liga_cache(codigo_liga)
         if not resultados:
             return None
-        
-        # Filtrar por equipo y tomar ultimas6 fechas
+
+        nombres = sorted({f.get("HomeTeam") for f in resultados if f.get("HomeTeam")} |
+                         {f.get("AwayTeam") for f in resultados if f.get("AwayTeam")})
+        nombre = _emparejar_nombre(equipo, nombres)
+        if nombre is None:
+            return None
+
+        filas = [f for f in resultados
+                 if f.get("HomeTeam") == nombre or f.get("AwayTeam") == nombre]
+        filas = [f for f in filas
+                 if _tiene_valor(f.get("FTHG")) and _tiene_valor(f.get("FTAG"))]
+        filas = filas[-6:]
+
         datos_equipo = []
-        for r in resultados[-18:]:  # Ultimas6 jornadas approx
-            if r.get('local') == equipo or r.get('visitante') == equipo:
-                es_local = r.get('local') == equipo
-                datos_equipo.append({
-                    'tiros_totales': r.get('HS' if es_local else 'AS', 0),
-                    'tiros_puerta': r.get('HST' if es_local else 'AST', 0),
-                    'corners': r.get('HC' if es_local else 'AC', 0),
-                    'faltas': r.get('HF' if es_local else 'AF', 0),
-                    'amarillas': r.get('HY' if es_local else 'AY', 0),
-                    'goles_1t': r.get('FTHG' if es_local else 'FTAG', 0) // 2,  # Aprox
-                })
-        
-        return datos_equipo[-6:] if datos_equipo else None
+        for f in filas:
+            de_casa = f.get("HomeTeam") == nombre
+            datos_equipo.append({
+                "tiros_totales": _num(f.get("HS" if de_casa else "AS")),
+                "tiros_puerta": _num(f.get("HST" if de_casa else "AST")),
+                "corners": _num(f.get("HC" if de_casa else "AC")),
+                "faltas": _num(f.get("HF" if de_casa else "AF")),
+                "amarillas": _num(f.get("HY" if de_casa else "AY")),
+                "goles_1t": _num(f.get("HTHG" if de_casa else "HTAG")),
+            })
+
+        return datos_equipo if datos_equipo else None
     except Exception:
         return None
 
