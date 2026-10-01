@@ -14,11 +14,16 @@ Uso:
 """
 
 import argparse
+import datetime
 
 import ratings_store
+import team_resolver
 from fetch_data import (
     obtener_resultados_liga_multi_temporada,
     obtener_resultados_liga_extra,
+    obtener_ranking_clubelo,
+    CODIGO_LIGA_A_PAIS,
+    buscar_equipo_similar,
     LIGAS_FOOTBALL_DATA,
     LIGAS_FOOTBALL_DATA_EXTRA,
 )
@@ -34,12 +39,14 @@ def bootstrap_liga_principal(codigo_liga):
     print(f"Bootstrap de {codigo_liga} ({LIGAS_FOOTBALL_DATA.get(codigo_liga, codigo_liga)})...")
     partidos = obtener_resultados_liga_multi_temporada(codigo_liga, TEMPORADAS_BOOTSTRAP)
     _reproducir_partidos(partidos, codigo_liga)
+    calibrar_liga(codigo_liga)
 
 
 def bootstrap_liga_extra(codigo_liga):
     print(f"Bootstrap de liga extra {codigo_liga} ({LIGAS_FOOTBALL_DATA_EXTRA.get(codigo_liga, codigo_liga)})...")
     partidos = obtener_resultados_liga_extra(codigo_liga)
     _reproducir_partidos(partidos, codigo_liga)
+    calibrar_liga(codigo_liga)
 
 
 def _reproducir_partidos(partidos, liga):
@@ -78,16 +85,78 @@ def _reproducir_partidos(partidos, liga):
     print(f"  {procesados} partidos reproducidos.")
 
 
+def pares_elo_desde_ranking(filas, equipos, codigo_liga):
+    """Empareja los equipos del store con el ranking de ClubElo.
+
+    `filas` son las filas del CSV de ClubElo ({Club, Country, Rating}),
+    `equipos` es {llave: nombre} de los equipos de la liga. Usa la
+    logica existente de team_resolver.elegir_candidato_verificado, con
+    el filtro por pais incluido. Devuelve {llave: elo_clubelo}.
+    """
+    elo_global, elo_por_pais = {}, {}
+    for fila in filas:
+        club = fila.get("Club")
+        if not club:
+            continue
+        bruto = fila.get("Rating") or fila.get("Elo")
+        try:
+            rating = float(bruto)
+        except (TypeError, ValueError):
+            continue
+        elo_global[club] = rating
+        pais = fila.get("Country")
+        if pais:
+            elo_por_pais.setdefault(pais, {})[club] = rating
+
+    pais_liga = CODIGO_LIGA_A_PAIS.get(codigo_liga)
+    pares = {}
+    for llave, nombre in equipos.items():
+        if not nombre:
+            continue
+        rating, _encontrado, _metodo = team_resolver.elegir_candidato_verificado(
+            nombre, pais_liga, elo_por_pais, elo_global, buscar_equipo_similar)
+        if rating is not None:
+            pares[llave] = rating
+    return pares
+
+
+def calibrar_liga(codigo_liga):
+    """Descarga el ranking de ClubElo de hoy y calibra la escala de la
+    liga en el store (sin reproducir partidos)."""
+    datos = ratings_store._cargar()
+    equipos = {k: v.get("nombre") for k, v in datos["equipos"].items()
+               if v.get("liga") == codigo_liga and k.startswith("boot:")}
+    if not equipos:
+        print(f"[AVISO] Calibracion {codigo_liga}: no hay equipos "
+              "bootstrapeados de esa liga.")
+        return None
+    filas = obtener_ranking_clubelo(datetime.date.today().isoformat())
+    if not filas:
+        print(f"[AVISO] Calibracion {codigo_liga}: ranking de ClubElo "
+              "vacio (no se pudo descargar); no se calibra.")
+        return None
+    pares = pares_elo_desde_ranking(filas, equipos, codigo_liga)
+    if not pares:
+        print(f"[AVISO] Calibracion {codigo_liga}: ningun equipo emparejado "
+              "con ClubElo; no se calibra.")
+        return None
+    return ratings_store.calibrar_liga_a_clubelo(codigo_liga, pares)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Bootstrap del rating propio para una o mas ligas.")
     parser.add_argument("codigos", nargs="+", help="Codigos de liga (ej. E0 SP1) o de liga extra con --extra")
     parser.add_argument("--extra", action="store_true", help="Trata los codigos como ligas 'extra'")
+    parser.add_argument("--calibrar", action="store_true",
+                        help="Solo calibra la escala contra ClubElo (no reproduce partidos)")
     args = parser.parse_args()
 
     for codigo in args.codigos:
-        if args.extra:
+        if args.calibrar:
+            calibrar_liga(codigo)
+        elif args.extra:
             bootstrap_liga_extra(codigo)
         else:
             bootstrap_liga_principal(codigo)
 
-    print("Bootstrap completo.")
+    print("Bootstrap completo." if not args.calibrar else "Calibracion completa.")
