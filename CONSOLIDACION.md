@@ -131,3 +131,64 @@ y cobertura del sistema de alertas:
 - `backtest_mejoras.py`: reproduce Anexo A exacto (77.1→32.0).
 - 50/50 tests pasan (`pytest`).
 - Commits: `1c0ed41` (A), `adf5278` (B), `d0868f7` (C).
+
+
+## Rama fix/nivel-y-ratings (2026-10-01 - Nivel Actual, Estilo y ratings)
+
+### Fase 0 - verificacion del calendario de ESPN (fixture guardado)
+- Fixture `tests/fixtures/espn_schedule_sample.json`: schedule de equipo
+  solo trae partidos terminados (score dict); futuros/en curso viven solo
+  en scoreboard de liga (score string). Status en schedule =
+  `competitions[0].status.type`; `competitor["id"] == team["id"]`;
+  temporada actual = `season={anio}`. Detalle completo en
+  `MIGRACION_ESPN.md`.
+- Bugs latentes hallados y corregidos: URL de ligas internacionales
+  (`all/schedule?team=` daba 404 -> historial vacio cacheado 7 dias),
+  `.get("value", 0)` inventaba 0-0, score string hacia estallir
+  `int()`, y `_es_amistoso` nunca funciono (marcador real en
+  `event.league`, no en `competitions[].type`).
+
+### Nivel Actual (Tareas 1-4)
+- Historial: solo terminados, sin amistosos, dos temporadas, cache 12 h
+  con clave `v2|{team_id}|{slug}` (claves viejas huerfanas, sin borrar).
+- Formula: `(0.40*forma + 0.40*sede + 0.20*goles)/10`, ventana 6 con
+  decaimiento 0.85, sede = ultimos 6 de esa sede (fallback global si
+  hay <2), minimo 4 partidos, colores sin cambios (8/6/4).
+- Cada alerta guarda `nivel_local`/`nivel_visitante` (mensaje visible y
+  Excel sin cambios).
+
+### Estilo de juego (Tarea 3)
+- `_obtener_datos_estilo` filtra por `HomeTeam`/`AwayTeam` reales (antes
+  usaba columnas inexistentes `local`/`visitante` -> siempre vacio, el
+  estilo nunca se mostraba). Umbrales de `_calcular_estilo_juego` SIN
+  cambios (sin calibracion).
+
+### Ratings Fase 2 (Tareas 5-9)
+- RD combinado: `RD_EFECTIVO_CLUBELO = 50` (aplicar_rd no borra la
+  senal de ClubElo al 0% de peso propio).
+- Semilla: equipos nuevos/registros vacios arrancan en el Elo de
+  ClubElo con `RD_SEMILLA_CLUBELO = 150` (resiembra una sola vez).
+- Calibracion por liga: media de (elo - rating propio) con >=8 partidos
+  sobre >=6 equipos, sumada a toda la liga; idempotente; solo manual
+  (`bootstrap_ligas.py --calibrar` o al final de un bootstrap) - NO en
+  workflows diarios.
+- Peso: bootstrap cuenta 0.5 (`n_efectivo`), `n` reportado sigue total.
+- Ventaja local: `VENTAJA_LOCAL_ELO` (70, importada de poisson_model)
+  aplicada en cerrar_resultados y bootstrap, respetando `neutral`, solo
+  hacia adelante.
+- Poisson: matriz de marcadores renormalizada (suma exactamente 1).
+- Glicko-2 verificado contra el paper de Glickman (1464.06 / 151.52 /
+  0.05999).
+
+### Decisiones de NO cambiar (confirmadas en el PR)
+- Ajuste por calidad del rival en el Nivel Actual: no (los campos
+  quedan guardados en cada alerta para decidir con evidencia).
+- Goal Index doble en poisson_model, Dixon-Coles, umbrales de estilo: no.
+- `PESO_MAXIMO = 1.0` y tabla hasta 100%: intactos; tension con el
+  docstring "nunca se reemplaza por completo" anotada para decidir
+  despues.
+
+### Verificacion
+- `pytest` en verde (131 tests), `py_compile` limpio; tests con
+  tmp_path (ninguno escribe en `data/`). Sin cambios en workflows,
+  requirements ni umbrales de alertas.
