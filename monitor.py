@@ -1051,11 +1051,6 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         dominancia_mostrada = dominancia_fav if z >=0 else (1 - dominancia_fav)
         lineas.append(f"⚡ {conf} ({round(dominancia_mostrada*100)}% {escapar_html(lado_domina)})")
 
-    historial_momentum = partido.get("historial_snapshots", [])
-    if len(historial_momentum) >=2:
-        momentum_local = _calcular_momentum_equipo("local", historial_momentum, True)
-        momentum_visitante = _calcular_momentum_equipo("visitante", historial_momentum, False)
-    
     # Poder de Match
     home_id = partido.get('home_id')
     away_id = partido.get('away_id')
