@@ -1,0 +1,559 @@
+{
+ "events": [
+  {
+   "id": "401841239",
+   "date": "2026-09-19T19:00Z",
+   "name": "Chapecoense at Atlético-MG",
+   "season": {
+    "year": 2026,
+    "displayName": "2026 Futebol Brasileiro"
+   },
+   "competitions": [
+    {
+     "id": "401841239",
+     "date": "2026-09-19T19:00Z",
+     "status": {
+      "clock": 5400.0,
+      "addedClock": 300.0,
+      "displayClock": "90'+5'",
+      "period": 2,
+      "type": {
+       "id": "28",
+       "name": "STATUS_FULL_TIME",
+       "state": "post",
+       "completed": true,
+       "description": "Full Time",
+       "detail": "FT",
+       "shortDetail": "FT"
+      }
+     },
+     "type": null,
+     "competitors": [
+      {
+       "id": "7632",
+       "homeAway": "home",
+       "winner": false,
+       "score": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/bra.1/events/401841239/competitions/401841239/competitors/7632/scores/38?lang=en&region=us",
+        "value": 1.0,
+        "displayValue": "1",
+        "winner": false,
+        "source": {
+         "id": "38",
+         "description": "SA.ENVOY"
+        }
+       },
+       "team": {
+        "id": "7632",
+        "displayName": "Atlético-MG"
+       }
+      },
+      {
+       "id": "9318",
+       "homeAway": "away",
+       "winner": false,
+       "score": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/bra.1/events/401841239/competitions/401841239/competitors/9318/scores/38?lang=en&region=us",
+        "value": 1.0,
+        "displayValue": "1",
+        "winner": false,
+        "source": {
+         "id": "38",
+         "description": "SA.ENVOY"
+        }
+       },
+       "team": {
+        "id": "9318",
+        "displayName": "Chapecoense"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "401841231",
+   "date": "2026-09-12T19:00Z",
+   "name": "Fluminense at Atlético-MG",
+   "season": {
+    "year": 2026,
+    "displayName": "2026 Futebol Brasileiro"
+   },
+   "competitions": [
+    {
+     "id": "401841231",
+     "date": "2026-09-12T19:00Z",
+     "status": {
+      "clock": 5400.0,
+      "addedClock": 360.0,
+      "displayClock": "90'+6'",
+      "period": 2,
+      "type": {
+       "id": "28",
+       "name": "STATUS_FULL_TIME",
+       "state": "post",
+       "completed": true,
+       "description": "Full Time",
+       "detail": "FT",
+       "shortDetail": "FT"
+      }
+     },
+     "type": null,
+     "competitors": [
+      {
+       "id": "7632",
+       "homeAway": "home",
+       "winner": true,
+       "score": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/bra.1/events/401841231/competitions/401841231/competitors/7632/scores/38?lang=en&region=us",
+        "value": 3.0,
+        "displayValue": "3",
+        "winner": true,
+        "source": {
+         "id": "38",
+         "description": "SA.ENVOY"
+        }
+       },
+       "team": {
+        "id": "7632",
+        "displayName": "Atlético-MG"
+       }
+      },
+      {
+       "id": "3445",
+       "homeAway": "away",
+       "winner": false,
+       "score": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/bra.1/events/401841231/competitions/401841231/competitors/3445/scores/38?lang=en&region=us",
+        "value": 1.0,
+        "displayValue": "1",
+        "winner": false,
+        "source": {
+         "id": "38",
+         "description": "SA.ENVOY"
+        }
+       },
+       "team": {
+        "id": "3445",
+        "displayName": "Fluminense"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "401841226",
+   "date": "2026-09-05T21:30Z",
+   "name": "Atlético-MG at São Paulo",
+   "season": {
+    "year": 2026,
+    "displayName": "2026 Futebol Brasileiro"
+   },
+   "competitions": [
+    {
+     "id": "401841226",
+     "date": "2026-09-05T21:30Z",
+     "status": {
+      "clock": 5400.0,
+      "addedClock": 420.0,
+      "displayClock": "90'+7'",
+      "period": 2,
+      "type": {
+       "id": "28",
+       "name": "STATUS_FULL_TIME",
+       "state": "post",
+       "completed": true,
+       "description": "Full Time",
+       "detail": "FT",
+       "shortDetail": "FT"
+      }
+     },
+     "type": null,
+     "competitors": [
+      {
+       "id": "2026",
+       "homeAway": "home",
+       "winner": true,
+       "score": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/bra.1/events/401841226/competitions/401841226/competitors/2026/scores/38?lang=en&region=us",
+        "value": 2.0,
+        "displayValue": "2",
+        "winner": true,
+        "source": {
+         "id": "38",
+         "description": "SA.ENVOY"
+        }
+       },
+       "team": {
+        "id": "2026",
+        "displayName": "São Paulo"
+       }
+      },
+      {
+       "id": "7632",
+       "homeAway": "away",
+       "winner": false,
+       "score": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/bra.1/events/401841226/competitions/401841226/competitors/7632/scores/38?lang=en&region=us",
+        "value": 0.0,
+        "displayValue": "0",
+        "winner": false,
+        "source": {
+         "id": "38",
+         "description": "SA.ENVOY"
+        }
+       },
+       "team": {
+        "id": "7632",
+        "displayName": "Atlético-MG"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "401841204",
+   "date": "2026-08-22T21:30Z",
+   "name": "Atlético-MG at Internacional",
+   "season": {
+    "year": 2026,
+    "displayName": "2026 Futebol Brasileiro"
+   },
+   "competitions": [
+    {
+     "id": "401841204",
+     "date": "2026-08-22T21:30Z",
+     "status": {
+      "clock": 5400.0,
+      "addedClock": 720.0,
+      "displayClock": "90'+12'",
+      "period": 2,
+      "type": {
+       "id": "28",
+       "name": "STATUS_FULL_TIME",
+       "state": "post",
+       "completed": true,
+       "description": "Full Time",
+       "detail": "FT",
+       "shortDetail": "FT"
+      }
+     },
+     "type": null,
+     "competitors": [
+      {
+       "id": "1936",
+       "homeAway": "home",
+       "winner": false,
+       "score": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/bra.1/events/401841204/competitions/401841204/competitors/1936/scores/38?lang=en&region=us",
+        "value": 0.0,
+        "displayValue": "0",
+        "winner": false,
+        "source": {
+         "id": "38",
+         "description": "SA.ENVOY"
+        }
+       },
+       "team": {
+        "id": "1936",
+        "displayName": "Internacional"
+       }
+      },
+      {
+       "id": "7632",
+       "homeAway": "away",
+       "winner": false,
+       "score": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/bra.1/events/401841204/competitions/401841204/competitors/7632/scores/38?lang=en&region=us",
+        "value": 0.0,
+        "displayValue": "0",
+        "winner": false,
+        "source": {
+         "id": "38",
+         "description": "SA.ENVOY"
+        }
+       },
+       "team": {
+        "id": "7632",
+        "displayName": "Atlético-MG"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "401841164",
+   "date": "2026-07-26T22:30Z",
+   "name": "Atlético-MG at Palmeiras",
+   "season": {
+    "year": 2026,
+    "displayName": "2026 Futebol Brasileiro"
+   },
+   "competitions": [
+    {
+     "id": "401841164",
+     "date": "2026-07-26T22:30Z",
+     "status": {
+      "clock": 5400.0,
+      "addedClock": 360.0,
+      "displayClock": "90'+6'",
+      "period": 2,
+      "type": {
+       "id": "28",
+       "name": "STATUS_FULL_TIME",
+       "state": "post",
+       "completed": true,
+       "description": "Full Time",
+       "detail": "FT",
+       "shortDetail": "FT"
+      }
+     },
+     "type": null,
+     "competitors": [
+      {
+       "id": "2029",
+       "homeAway": "home",
+       "winner": false,
+       "score": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/bra.1/events/401841164/competitions/401841164/competitors/2029/scores/38?lang=en&region=us",
+        "value": 1.0,
+        "displayValue": "1",
+        "winner": false,
+        "source": {
+         "id": "38",
+         "description": "SA.ENVOY"
+        }
+       },
+       "team": {
+        "id": "2029",
+        "displayName": "Palmeiras"
+       }
+      },
+      {
+       "id": "7632",
+       "homeAway": "away",
+       "winner": true,
+       "score": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/bra.1/events/401841164/competitions/401841164/competitors/7632/scores/38?lang=en&region=us",
+        "value": 2.0,
+        "displayValue": "2",
+        "winner": true,
+        "source": {
+         "id": "38",
+         "description": "SA.ENVOY"
+        }
+       },
+       "team": {
+        "id": "7632",
+        "displayName": "Atlético-MG"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "401877865",
+   "uid": "s:600~l:650~e:401877865",
+   "date": "2026-10-01T01:00Z",
+   "name": "Atlético Junior at Atlético Nacional",
+   "season": {
+    "year": 2026,
+    "type": 13938,
+    "slug": "clausura"
+   },
+   "status": {
+    "clock": 3480.0,
+    "displayClock": "58'",
+    "period": 2,
+    "type": {
+     "id": "26",
+     "name": "STATUS_SECOND_HALF",
+     "state": "in",
+     "completed": false,
+     "description": "Second Half",
+     "detail": "58'",
+     "shortDetail": "58'"
+    }
+   },
+   "competitions": [
+    {
+     "id": "401877865",
+     "date": "2026-10-01T01:00Z",
+     "status": {
+      "clock": 3480.0,
+      "displayClock": "58'",
+      "period": 2,
+      "type": {
+       "id": "26",
+       "name": "STATUS_SECOND_HALF",
+       "state": "in",
+       "completed": false,
+       "description": "Second Half",
+       "detail": "58'",
+       "shortDetail": "58'"
+      }
+     },
+     "type": null,
+     "competitors": [
+      {
+       "id": "5264",
+       "homeAway": "home",
+       "winner": false,
+       "score": "2",
+       "team": {
+        "id": "5264",
+        "displayName": "Atlético Nacional"
+       }
+      },
+      {
+       "id": "4815",
+       "homeAway": "away",
+       "winner": false,
+       "score": "1",
+       "team": {
+        "id": "4815",
+        "displayName": "Atlético Junior"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "401841168",
+   "uid": "s:600~l:630~e:401841168",
+   "date": "2026-10-03T21:30Z",
+   "name": "Red Bull Bragantino at Atlético-MG",
+   "season": {
+    "year": 2026,
+    "type": 13907,
+    "slug": "2026-brasileiro-serie-a"
+   },
+   "status": {
+    "clock": 0.0,
+    "displayClock": "0'",
+    "type": {
+     "id": "1",
+     "name": "STATUS_SCHEDULED",
+     "state": "pre",
+     "completed": false,
+     "description": "Scheduled",
+     "detail": "Sat, October 3rd at 5:30 PM EDT",
+     "shortDetail": "Scheduled"
+    }
+   },
+   "competitions": [
+    {
+     "id": "401841168",
+     "date": "2026-10-03T21:30Z",
+     "status": {
+      "clock": 0.0,
+      "displayClock": "0'",
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "Sat, October 3rd at 5:30 PM EDT",
+       "shortDetail": "Scheduled"
+      }
+     },
+     "type": null,
+     "competitors": [
+      {
+       "id": "7632",
+       "homeAway": "home",
+       "winner": false,
+       "score": "0",
+       "team": {
+        "id": "7632",
+        "displayName": "Atlético-MG"
+       }
+      },
+      {
+       "id": "6079",
+       "homeAway": "away",
+       "winner": false,
+       "score": "0",
+       "team": {
+        "id": "6079",
+        "displayName": "Red Bull Bragantino"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "761798",
+   "uid": "s:600~l:770~e:761798",
+   "date": "2026-10-02T01:30Z",
+   "name": "Sporting Kansas City at Seattle Sounders FC",
+   "season": {
+    "year": 2026,
+    "type": 13846,
+    "slug": "regular-season"
+   },
+   "status": {
+    "clock": 0.0,
+    "displayClock": "0'",
+    "type": {
+     "id": "1",
+     "name": "STATUS_SCHEDULED",
+     "state": "pre",
+     "completed": false,
+     "description": "Scheduled",
+     "detail": "Thu, October 1st at 9:30 PM EDT",
+     "shortDetail": "Scheduled"
+    }
+   },
+   "competitions": [
+    {
+     "id": "761798",
+     "date": "2026-10-02T01:30Z",
+     "status": {
+      "clock": 0.0,
+      "displayClock": "0'",
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "Thu, October 1st at 9:30 PM EDT",
+       "shortDetail": "Scheduled"
+      }
+     },
+     "type": null,
+     "competitors": [
+      {
+       "id": "9726",
+       "homeAway": "home",
+       "winner": false,
+       "score": "0",
+       "team": {
+        "id": "9726",
+        "displayName": "Seattle Sounders FC"
+       }
+      },
+      {
+       "id": "186",
+       "homeAway": "away",
+       "winner": false,
+       "score": "0",
+       "team": {
+        "id": "186",
+        "displayName": "Sporting Kansas City"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
