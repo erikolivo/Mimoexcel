@@ -102,3 +102,36 @@ de ESPN (`pais.numero_de_division`) pero no se probo uno por uno. Si
 una liga nueva falla, el log lo dice explicitamente -- se agrega/corrige
 ese slug puntual sin tocar el resto, mismo espiritu que
 `bootstrap_ligas.py` para agregar ligas de forma incremental.
+
+
+## Confirmaciones de la Fase 0 sobre el calendario de ESPN (octubre 2026)
+
+Verificado con requests directas a los endpoints publicos y con el
+fixture real `tests/fixtures/espn_schedule_sample.json` (8 eventos, sin
+valores null porque ESPN omite las claves en vez de mandarlas nulas):
+
+- `{slug}/teams/{id}/schedule?season=` devuelve SOLO partidos terminados
+  (`competitions[0].status.type == "post"`), con `score` como objeto
+  (`value` flotante, `displayValue`, `winner`). Nunca trae futuros ni en
+  curso, y el parametro `dates` no filtra nada (se ignora).
+- Los partidos futuros y en curso aparecen UNICAMENTE en
+  `{slug}/scoreboard?dates=AAAA-MM-DD` de la liga, con `score` como
+  STRING (`"0"` antes del partido, `"2"` en curso). En schedule
+  `event.status` no existe; en scoreboard existen ambos y coinciden
+  (`pre`/`in` + flag `completed`).
+- `competitor["id"] == competitor["team"]["id"]` (ambos string) en
+  todas las muestras.
+- Temporada actual = `season={anio}` (2026 -> 2026-27 en ligas
+  europeas; en calendario anual, 2026). La anterior = `season={anio-1}`;
+  por eso el historial consulta [anio-1, anio] y funde.
+- URLs probadas: `{slug}/teams/{id}/schedule` -> 200. `{slug}/schedule`
+  (nivel liga), `{BASE}/scoreboard` y `all/schedule?team=` -> 404. La
+  forma correcta multi-liga del historial es `all/teams/{id}/schedule`.
+- Amistosos: `competitions[].type` NO existe (0/96 competiciones en 5
+  respuestas crudas); el marcador esta en `event.league` (slug
+  `fifa.friendly` / `club.friendly`, nombre "... Friendly").
+  `_es_amistoso()` ahora mira ahi (antes: marcador nunca detectado --
+  p.ej. el historial de Lituania traia 5 amistosos sin filtrar).
+
+Estos hallazgos sustentan el cache de 12 h y las dos temporadas del
+historial (`_descargar_historial` en `fetch_data.py`).

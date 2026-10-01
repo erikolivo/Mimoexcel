@@ -68,6 +68,30 @@ puede eliminarse de GitHub Actions — ver la sección de Secrets abajo.
 - El reporte de las 6am incluye acierto por tipo de alerta y por
   madurez del rating propio.
 
+## Nivel Actual
+
+El **Nivel Actual** (`_calcular_nivel_actual` en `resumen.py`) es un
+indicador 0-10 del rendimiento reciente de cada equipo. Aparece en el
+resumen de las 6:30 y en el mensaje de cada alerta; además se guarda en
+cada alerta (`nivel_local` / `nivel_visitante`) para poder decidir más
+adelante con evidencia real de aciertos.
+
+- **Solo partidos terminados**: victoria/derrota/empate con marcador
+  real, del historial que trae ESPN (sin amistosos, sin futuros, sin
+  partidos en curso).
+- **Ventana de 6 partidos** más recientes con **decaimiento
+  exponencial 0.85** (el más nuevo pesa 1.0, cada anterior ×0.85); el
+  historial se ordena por `(fecha, id)` por si llega desordenado.
+- Componentes en escala 0-100:
+  - **forma**: V=100, E=50, D=0 con los pesos de recencia;
+  - **sede**: 70% forma + 30% goles de los últimos 6 partidos en esa
+    sede (si hay menos de 2, usa el equivalente global);
+  - **goles**: diferencia GF−GC con los mismos pesos de recencia.
+- Combinación final: `poder = (0.40*forma + 0.40*sede + 0.20*goles)/10`,
+  acotado a 0-10. Requiere **≥ 4 partidos**; con menos el Nivel queda
+  en `—` (sin inventar datos).
+- Colores: `≥ 8` 🔵, `≥ 6` 🟢, `≥ 4` 🟡, menos 🔴.
+
 ## Las 5 fases
 
 | Fase | Cuándo | Qué hace |
@@ -168,28 +192,29 @@ revisa el log (deberías ver "ESPN: N fixtures encontrados...") → luego
 ## Estructura de archivos
 
 ```
-glicko2.py                 -> algoritmo Glicko-2 (sin cambios)
-ratings_store.py           -> rating propio + blend con ClubElo + migracion de llaves (bootstrap Y api-football->espn)
+glicko2.py                 -> algoritmo Glicko-2 (verificado contra el paper)
+ratings_store.py           -> rating propio + blend con ClubElo (RD combinado, semilla y calibracion por liga) + migracion de llaves (bootstrap Y api-football->espn)
 team_resolver.py           -> pais por equipo (liga domestica -> Goal Index -> ESPN best-effort)
 momentum.py                -> presion/momentum ADAPTADO a los campos reales de ESPN
-fetch_data.py               -> REESCRITO: ESPN (fixtures, boxscore, cuotas DraftKings) + ClubElo + football-data.co.uk (sin cambios)
-poisson_model.py           -> rating combinado -> probabilidad pre-partido (sin cambios)
+fetch_data.py               -> REESCRITO: ESPN (fixtures, boxscore, cuotas DraftKings, historial 12 h) + ClubElo + football-data.co.uk (sin cambios)
+poisson_model.py           -> rating combinado -> probabilidad pre-partido (matriz de marcadores renormalizada a 1)
 goal_index.py               -> Goal Index mezclado (sin cambios, football-data.co.uk)
 cuota_espn.py               -> contador de peticiones a ESPN (diagnostico, sin techo conocido)
 cuota_odds_api.py           -> cupo de The Odds API (respaldo secundario, sin cambios)
 cuotas_reales.py            -> The Odds API como respaldo (sin cambios de logica)
 mapeo_ligas_odds_api.py    -> mapeo liga -> sport_key de The Odds API (sin cambios)
-bootstrap_ligas.py         -> carga historica manual (football-data.co.uk, sin cambios)
+bootstrap_ligas.py         -> carga historica manual (football-data.co.uk) + calibracion de escala contra ClubElo (--calibrar, manual)
 seleccionar_partidos.py   -> Fase 1: favoritos de Google Sheets + localización en ESPN
 google_favoritos.py       -> descarga y valida los favoritos diarios de Google Sheets
 thesportsdb_aliases.py    -> respaldo gratuito de nombres alternativos de equipos
-resumen.py                  -> Fase 2 (sin cambios funcionales)
+resumen.py                  -> Fase 2: Nivel Actual + Estilo de juego (filtro real por nombres de equipo)
 monitor.py                  -> Fase 3, RECONSTRUIDA -- leer MIGRACION_ESPN.md
-cerrar_resultados.py       -> Fase 4, AJUSTADA a ESPN
+cerrar_resultados.py       -> Fase 4, AJUSTADA a ESPN + ventaja de local en Glicko-2
 reporte_diario.py           -> Reporte de las 6am, AJUSTADO (sin "disponibles" de ESPN)
 telegram_utils.py           -> envio de mensajes (sin cambios)
 estado_diario.py             -> control de "ya se hizo hoy" (sin cambios)
 storage.py                   -> utilidad de JSON, disponible sin forzar su uso (sin cambios)
+tests/                      -> pytest de todo (usan tmp_path; nunca escriben en data/)
 MIGRACION_ESPN.md           -> NUEVO -- por que se migro, que se verifico, que se gano/perdio
 filosofia_proyecto.md       -> principios de diseno (actualizado con addendum v3)
 CONSOLIDACION.md            -> historia de la consolidacion original (sin cambios, valor historico)

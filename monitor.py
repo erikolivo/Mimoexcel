@@ -632,6 +632,8 @@ def _registrar_alerta(partido, tipo, texto, minuto, diferencia_goles=None,
         "resolucion_notificada": True if criterio is None else False,
         "acierto": None,
         "presion_lado": presion_lado,
+        "nivel_local": partido.get("nivel_local"),
+        "nivel_visitante": partido.get("nivel_visitante"),
     })
 
 
@@ -1049,20 +1051,19 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         dominancia_mostrada = dominancia_fav if z >=0 else (1 - dominancia_fav)
         lineas.append(f"⚡ {conf} ({round(dominancia_mostrada*100)}% {escapar_html(lado_domina)})")
 
-    historial_momentum = partido.get("historial_snapshots", [])
-    if len(historial_momentum) >=2:
-        momentum_local = _calcular_momentum_equipo("local", historial_momentum, True)
-        momentum_visitante = _calcular_momentum_equipo("visitante", historial_momentum, False)
-    
     # Poder de Match
     home_id = partido.get('home_id')
     away_id = partido.get('away_id')
     liga_slug = partido.get('liga_slug')
+    partido["nivel_local"] = None
+    partido["nivel_visitante"] = None
     if home_id and away_id and liga_slug:
         historial_local = obtener_historial_equipo(home_id, liga_slug)
         historial_visitante = obtener_historial_equipo(away_id, liga_slug)
         poder_local, color_local, n_local = _calcular_nivel_actual(historial_local, True)
         poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(historial_visitante, False)
+        partido["nivel_local"] = round(poder_local, 1) if poder_local is not None else None
+        partido["nivel_visitante"] = round(poder_visitante, 1) if poder_visitante is not None else None
         lineas.append(f"\U0001F4C8 Nivel Actual:")
         if poder_local is not None or poder_visitante is not None:
             if poder_local is not None:

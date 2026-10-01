@@ -46,6 +46,16 @@ TRAMOS_PESO = [
 ]
 PESO_MAXIMO = 1.0
 
+# RD efectivo que se le atribuye al rating de ClubElo en el blend:
+# ClubElo se trata como un rating bien establecido, para que aplicar_rd()
+# no aplaste lo que aporta ClubElo cuando el peso propio del equipo
+# es 0%.
+RD_EFECTIVO_CLUBELO = 50.0
+
+# RD de arranque cuando un equipo nace sembrado desde ClubElo (mas
+# bajo que RD_INICIAL porque el rating ya llega calibrado).
+RD_SEMILLA_CLUBELO = 150.0
+
 
 def peso_rating_propio(n_partidos):
     for tope, peso in TRAMOS_PESO:
@@ -76,17 +86,34 @@ def llave_equipo(team_id, pais=None, nombre=None):
     return f"np:{pais or '?'}|{nombre or '?'}"
 
 
-def obtener_o_crear(llave, nombre=None, pais=None, liga=None):
+def obtener_o_crear(llave, nombre=None, pais=None, liga=None, elo_semilla=None):
+    """Obtiene (o crea) el registro del equipo.
+
+    Si `elo_semilla` viene dado (Elo de ClubElo), el equipo NUEVO arranca
+    en ese rating con RD_SEMILLA_CLUBELO en lugar de 1500/350. Un
+    registro VACIO antiguo (0 partidos, 1500, 350) se resiembra una sola
+    vez con el mismo criterio; cualquier registro con partidos ya jugados
+    nunca se re-siembra.
+    """
     datos = _cargar()
     equipo = datos["equipos"].get(llave)
     if equipo is None:
         equipo = {
             "nombre": nombre, "pais": pais, "liga": liga,
-            "rating": glicko2.RATING_BASE, "rd": glicko2.RD_INICIAL, "vol": glicko2.VOL_INICIAL,
+            "rating": elo_semilla if elo_semilla is not None else glicko2.RATING_BASE,
+            "rd": RD_SEMILLA_CLUBELO if elo_semilla is not None else glicko2.RD_INICIAL,
+            "vol": glicko2.VOL_INICIAL,
             "partidos_jugados": 0, "partidos_bootstrap": 0, "partidos_reales": 0,
             "ultima_actualizacion": None,
         }
         datos["equipos"][llave] = equipo
+        _guardar(datos)
+    elif (elo_semilla is not None
+          and equipo.get("partidos_jugados", 0) == 0
+          and equipo.get("rating") == glicko2.RATING_BASE
+          and equipo.get("rd") == glicko2.RD_INICIAL):
+        equipo["rating"] = elo_semilla
+        equipo["rd"] = RD_SEMILLA_CLUBELO
         _guardar(datos)
     return equipo
 
@@ -116,20 +143,81 @@ def actualizar_tras_partido(llave, rating_rival, rd_rival, resultado, es_bootstr
 
 
 def rating_combinado(llave, elo_clubelo, nombre=None, pais=None, liga=None):
-    eq = obtener_o_crear(llave, nombre=nombre, pais=pais, liga=liga)
+    """Devuelve (rating, n, rd) del blend ClubElo + rating propio.
+
+    El RD que devuelve describe el rating COMBINADO (no el del rating
+    propio solo): se interpola igual que el rating, usando
+    RD_EFECTIVO_CLUBELO para la parte de ClubElo. Si no hubiera elo
+    (None) se mantienen rating y RD propios tal cual.
+    """
+    eq = obtener_o_crear(llave, nombre=nombre, pais=pais, liga=liga,
+                         elo_semilla=elo_clubelo)
     n = eq.get("partidos_reales", 0) + eq.get("partidos_bootstrap", 0)
-    peso_propio = peso_rating_propio(n)
+    # Tarea 7: para el PESO el bootstrap cuenta la mitad (una temporada
+    # de una sola liga no pesa igual que partidos reales); el n que se
+    # devuelve sigue siendo el total, para no romper los reportes por
+    # madurez.
+    n_efectivo = (eq.get("partidos_reales", 0)
+                  + 0.5 * eq.get("partidos_bootstrap", 0))
+    peso_propio = peso_rating_propio(n_efectivo)
 
     if elo_clubelo is None:
         return eq["rating"], n, eq["rd"]
 
     rating_final = peso_propio * eq["rating"] + (1 - peso_propio) * elo_clubelo
-    return round(rating_final, 2), n, eq["rd"]
+    rd_final = peso_propio * eq["rd"] + (1 - peso_propio) * RD_EFECTIVO_CLUBELO
+    return round(rating_final, 2), n, round(rd_final, 2)
 
 
 def rd_de(llave):
     eq = obtener_o_crear(llave)
     return eq["rd"]
+
+
+def calibrar_liga_a_clubelo(liga, pares_elo, minimo_equipos=6,
+                            minimo_partidos=8):
+    """Alinea la escala de rating propio de una liga con la de ClubElo.
+
+    `pares_elo` es `{llave_equipo: elo_clubelo}` de los equipos de esa
+    liga presentes en el ranking de ClubElo. Se calcula la media de
+    (elo_clubelo - rating_propio) SOLO entre equipos con al menos
+    `minimo_partidos` partidos; si hay menos de `minimo_equipos` equipos
+    calificables no se hace nada y se avisa por log. Esa media se suma
+    despues a TODOS los equipos de la liga (no solo a los calificados).
+
+    Es idempotente: una segunda ejecucion encuentra una media ~0 y no
+    mueve nada. Los equipos sin registro en ClubElo se corrigen igual
+    (llevan la media de sus companeros de liga).
+    """
+    datos = _cargar()
+    equipos_liga = {llave: eq for llave, eq in datos["equipos"].items()
+                    if eq.get("liga") == liga}
+    if not equipos_liga:
+        print(f"[AVISO] Calibracion {liga}: no hay equipos de esa liga "
+              "en el store; nada que calibrar.")
+        return None
+
+    diferencias = []
+    for llave, eq in equipos_liga.items():
+        if llave not in pares_elo:
+            continue
+        if eq.get("partidos_jugados", 0) < minimo_partidos:
+            continue
+        diferencias.append(pares_elo[llave] - eq["rating"])
+
+    if len(diferencias) < minimo_equipos:
+        print(f"[AVISO] Calibracion {liga}: solo {len(diferencias)} equipos "
+              f"con >= {minimo_partidos} partidos y Elo de ClubElo "
+              f"(minimo {minimo_equipos}); no se calibra.")
+        return None
+
+    media = sum(diferencias) / len(diferencias)
+    for eq in equipos_liga.values():
+        eq["rating"] = round(eq["rating"] + media, 2)
+    _guardar(datos)
+    print(f"[INFO] Calibracion {liga}: media {media:+.2f} aplicada a "
+          f"{len(equipos_liga)} equipos (base: {len(diferencias)} con Elo).")
+    return media
 
 
 def migrar_bootstrap_a_id(nombre, team_id, liga=None, corte=0.85):

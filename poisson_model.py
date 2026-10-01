@@ -64,6 +64,12 @@ def matriz_marcadores(lambda_local, lambda_visitante, max_goles=6):
     for gl in range(max_goles + 1):
         for gv in range(max_goles + 1):
             matriz[(gl, gv)] = _poisson_pmf(gl, round(lambda_local, 4)) * _poisson_pmf(gv, round(lambda_visitante, 4))
+    # Tarea 9: la matriz se corta en max_goles, asi que la suma de las
+    # celdas queda un poco por debajo de 1 -- se renormaliza para que
+    # las probabilidades sumen exactamente 1.
+    total = sum(matriz.values())
+    if total > 0:
+        matriz = {k: v / total for k, v in matriz.items()}
     return matriz
 
 

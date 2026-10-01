@@ -13,12 +13,18 @@ FASE 2. AJUSTADO a pedido explicito (agosto 2026):
 
 import json
 import datetime
+import difflib
 import sys
 from pathlib import Path
 
 from telegram_utils import enviar_mensaje_telegram, escapar_html
 from estado_diario import ya_se_hizo, marcar_hecho
-from fetch_data import obtener_historial_equipo, obtener_resultados_liga
+from fetch_data import (
+    obtener_historial_equipo,
+    obtener_resultados_liga,
+    temporada_actual,
+    temporada_anterior,
+)
 
 ARCHIVO = Path(__file__).parent / "data" / "partidos_hoy.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
@@ -38,19 +44,69 @@ ESTILO_PRESION_ALTA = "\U0001F525 Presión Alta"
 ESTILO_JUEGO_SUCIO = "\u2660\uFE0F Juego Sucio"
 ESTILO_GOLEADOR_TEMPRANO = "\U0001F305 Goleador Temprano"
 
-# Mapeo de liga_slug (ESPN) a codigo (football-data.co.uk)
+# Mapeo de liga_slug (ESPN) a codigo (football-data.co.uk).
+# Solo ligas con stats COMPLETAS en mmz4281 -- verificado en vivo
+# 2026-10-01: todos existen en 2526 y 2627 con las 16 columnas que usa
+# el estilo. No entran: ARG/BRA/MEX/USA (football-data/new/*.csv solo
+# trae marcador+cuotas, sin tiros/corners/faltas), ger.3/ned.2/bel.2/
+# tur.2/eng.5 y el resto del mundo (sin archivo con stats).
 MAPA_LIGA_SLUG_A_CODIGO = {
     "eng.1": "E0", "eng.2": "E1",
+    "eng.3": "E2", "eng.4": "E3",
     "esp.1": "SP1", "esp.2": "SP2",
     "ita.1": "I1", "ita.2": "I2",
     "ger.1": "D1", "ger.2": "D2",
     "fra.1": "F1", "fra.2": "F2",
     "ned.1": "N1",
-    "por.1": "P1",
+    "por.1": "P1", "por.2": "P2",
     "bel.1": "B1",
     "tur.1": "T1",
     "gre.1": "G1",
-    "sco.1": "SC0",
+    "sco.1": "SC0", "sco.2": "SC1", "sco.3": "SC2",
+}
+
+# Nombre de ESPN -> nombre de football-data.co.uk para los casos que ni
+# el corte 0.72 alcanza ("Sporting CP" vs "Sp Lisbon"). Descubierto
+# comparando nombres reales del scoreboard de ESPN (4 fechas de la
+# temporada 2026-27) contra los CSV de todas las ligas del mapa.
+ALIAS_NOMBRES_FOOTBALL_DATA = {
+    "KAA Gent": "Gent",
+    "OH Leuven": "Oud-Heverlee Leuven",
+    "Racing Genk": "Genk",
+    "Royal Charleroi SC": "Charleroi",
+    "Waasland-Beveren": "Beveren",
+    "Zulte-Waregem": "Waregem",
+    "Leeds United": "Leeds",
+    "Manchester City": "Man City",
+    "Bolton Wanderers": "Bolton",
+    "West Bromwich Albion": "West Brom",
+    "West Ham United": "West Ham",
+    "Wolverhampton Wanderers": "Wolves",
+    "Deportivo": "La Coruna",
+    "Real Betis": "Betis",
+    "RC Celta Fortuna": "Celta B",
+    "Real Oviedo": "Oviedo",
+    "Paris Saint-Germain": "Paris SG",
+    "Stade Rennais": "Rennes",
+    "1. FC Heidenheim 1846": "Heidenheim",
+    "Arminia Bielefeld": "Bielefeld",
+    "Dynamo Dresden": "Dresden",
+    "Energie Cottbus": "Cottbus",
+    "Hertha Berlin": "Hertha",
+    "TSV Eintracht Braunschweig": "Braunschweig",
+    "AEK Athens": "AEK",
+    "Hellas Verona": "Verona",
+    "Ajax Amsterdam": "Ajax",
+    "Feyenoord Rotterdam": "Feyenoord",
+    "Vitória de Guimaraes": "Guimaraes",
+    "Heart of Midlothian": "Hearts",
+    "Sporting CP": "Sp Lisbon",
+    "Partick Thistle": "Partick",
+    "Amed SFK": "Amedspor",
+    "Caykur Rizespor": "Rizespor",
+    "Erzurum BB": "Erzurumspor",
+    "Istanbul Basaksehir": "Buyuksehyr",
+    "Çorum FK": "Corum",
 }
 
 
@@ -93,91 +149,174 @@ def _calcular_estilo_juego(datos_historial):
     return estilo, confianza
 
 
+# Cache en memoria por proceso: codigo de liga -> filas del CSV.
+# El CSV de una liga es igual para todos sus equipos, asi que se
+# descarga una sola vez por corrida del proceso.
+_CSV_LIGA = {}
+
+
+def _resultados_liga_cache(codigo):
+    """Filas de la liga, descargadas como mucho una vez. Pide la temporada
+    anterior y la actual: al arrancar la temporada las primeras jornadas no
+    llegan a 3 partidos por equipo y el estilo no se podria calcular."""
+    if codigo not in _CSV_LIGA:
+        _CSV_LIGA[codigo] = (
+            obtener_resultados_liga(codigo, temporada_anterior())
+            + obtener_resultados_liga(codigo, temporada_actual())
+        )
+    return _CSV_LIGA[codigo]
+
+
+def _num(x):
+    """Celda CSV como flotante; vacio o invalido = 0.0."""
+    try:
+        return float(str(x).strip())
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _tiene_valor(x):
+    """True si la celda no esta vacia (el 0 cuenta como valor)."""
+    if x is None:
+        return False
+    return str(x).strip() != ""
+
+
+def _emparejar_nombre(equipo, nombres):
+    """Nombre del equipo (ESPN) mas parecido al de football-data
+    (alias explicito o corte 0.72). Si no hay coincidencia clara
+    devuelve None: mejor no mostrar estilo que mostrar el de otro
+    equipo."""
+    if not equipo or not nombres:
+        return None
+    if equipo in nombres:
+        return equipo
+    alias = ALIAS_NOMBRES_FOOTBALL_DATA.get(equipo)
+    if alias and alias in nombres:
+        return alias
+    coincidencias = difflib.get_close_matches(equipo, nombres, n=1, cutoff=0.72)
+    if coincidencias:
+        return coincidencias[0]
+    print(f"[AVISO] No se pudo emparejar '{equipo}' con los equipos de football-data")
+    return None
+
+
 def _obtener_datos_estilo(equipo, liga_slug):
     """
-    Obtiene datos de football-data.co.uk para calcular estilo de juego.
+    Ultimas 6 filas de estilo del equipo en football-data.co.uk.
+
+    Usa las columnas reales del CSV (HomeTeam/AwayTeam, no
+    local/visitante), empareja el nombre del equipo por similitud y
+    solo toma partidos con marcador final completo. Si el nombre no se
+    empareja, devuelve None (preferible a estilo de otro equipo).
     """
     try:
         if liga_slug not in MAPA_LIGA_SLUG_A_CODIGO:
             return None
-        
+
         codigo_liga = MAPA_LIGA_SLUG_A_CODIGO[liga_slug]
-        resultados = obtener_resultados_liga(codigo_liga)
-        
+        resultados = _resultados_liga_cache(codigo_liga)
         if not resultados:
             return None
-        
-        # Filtrar por equipo y tomar ultimas6 fechas
+
+        nombres = sorted({f.get("HomeTeam") for f in resultados if f.get("HomeTeam")} |
+                         {f.get("AwayTeam") for f in resultados if f.get("AwayTeam")})
+        nombre = _emparejar_nombre(equipo, nombres)
+        if nombre is None:
+            return None
+
+        filas = [f for f in resultados
+                 if f.get("HomeTeam") == nombre or f.get("AwayTeam") == nombre]
+        filas = [f for f in filas
+                 if _tiene_valor(f.get("FTHG")) and _tiene_valor(f.get("FTAG"))]
+        filas = filas[-6:]
+
         datos_equipo = []
-        for r in resultados[-18:]:  # Ultimas6 jornadas approx
-            if r.get('local') == equipo or r.get('visitante') == equipo:
-                es_local = r.get('local') == equipo
-                datos_equipo.append({
-                    'tiros_totales': r.get('HS' if es_local else 'AS', 0),
-                    'tiros_puerta': r.get('HST' if es_local else 'AST', 0),
-                    'corners': r.get('HC' if es_local else 'AC', 0),
-                    'faltas': r.get('HF' if es_local else 'AF', 0),
-                    'amarillas': r.get('HY' if es_local else 'AY', 0),
-                    'goles_1t': r.get('FTHG' if es_local else 'FTAG', 0) // 2,  # Aprox
-                })
-        
-        return datos_equipo[-6:] if datos_equipo else None
+        for f in filas:
+            de_casa = f.get("HomeTeam") == nombre
+            datos_equipo.append({
+                "tiros_totales": _num(f.get("HS" if de_casa else "AS")),
+                "tiros_puerta": _num(f.get("HST" if de_casa else "AST")),
+                "corners": _num(f.get("HC" if de_casa else "AC")),
+                "faltas": _num(f.get("HF" if de_casa else "AF")),
+                "amarillas": _num(f.get("HY" if de_casa else "AY")),
+                "goles_1t": _num(f.get("HTHG" if de_casa else "HTAG")),
+            })
+
+        return datos_equipo if datos_equipo else None
     except Exception:
         return None
 
 
+PUNTOS = {"V": 3, "E": 1, "D": 0}
+DECAIMIENTO_FORMA = 0.85
+VENTANA_NIVEL = 6
+MIN_PARTIDOS_NIVEL = 4
+
+
+def _pesos_recencia(n):
+    """Peso de cada partido segun recencia: el mas reciente pesa 1.0
+    (el mas antiguo, 0.85 ** (n-1))."""
+    return [DECAIMIENTO_FORMA ** (n - 1 - i) for i in range(n)]
+
+
+def _forma_0_100(partidos):
+    """Puntos ponderados (V=3, E=1, D=0) sobre el maximo posible."""
+    if not partidos:
+        return 0.0
+    pesos = _pesos_recencia(len(partidos))
+    pts = sum(PUNTOS.get(p["resultado"], 0) * w for p, w in zip(partidos, pesos))
+    return pts / (sum(pesos) * 3) * 100
+
+
+def _goles_0_100(partidos):
+    """Diferencia de goles ponderada por recencia, en escala 0-100."""
+    if not partidos:
+        return 50.0
+    pesos = _pesos_recencia(len(partidos))
+    sw = sum(pesos)
+    gf = sum(p["goles_favor"] * w for p, w in zip(partidos, pesos)) / sw
+    gc = sum(p["goles_contra"] * w for p, w in zip(partidos, pesos)) / sw
+    return max(0.0, min(100.0, 50 + (gf - gc) * 20))
+
+
+def _score_mixto(partidos):
+    """70% forma + 30% goles, misma escala 0-100 para todos."""
+    return 0.70 * _forma_0_100(partidos) + 0.30 * _goles_0_100(partidos)
+
+
 def _calcular_nivel_actual(historial_equipo, es_local):
     """
-    Calcula el Nivel Actual (0-10) con el nuevo sistema de 3 componentes:
-    1. Score de Forma Global (decaimiento exponencial 0.85^i)
-    2. Score de Goles Global (diferencia GF-GC)
-    3. Score Local/Visitante (ventanas independientes de 6 partidos)
-    Combinacion: 40% forma global + 40% sede especifica + 20% goles global
+    Calcula el Nivel Actual (0-10) con 3 componentes en escala 0-100:
+    1. Forma global: puntos ponderados con decaimiento 0.85 (el mas
+       reciente pesa 1.0) sobre la ventana de 6 partidos.
+    2. Goles global: diferencia GF-GC con los MISMOS pesos de recencia.
+    3. Sede: 70% forma + 30% goles de los ultimos 6 partidos de esa
+       sede (si hay menos de 2, usa el equivalente global).
+    Combinacion: 40% forma global + 40% sede + 20% goles global,
+    dividido entre 10 y acotado a 0-10.
     Retorna (poder, color, n_partidos) o (None, None, 0) si no hay datos.
+    El historial se ordena por (fecha, id) por si llega desordenado.
     """
-    MIN_MATCHES = 4
-
-    if not historial_equipo or len(historial_equipo) < MIN_MATCHES:
+    if not historial_equipo or len(historial_equipo) < MIN_PARTIDOS_NIVEL:
         return None, None, 0
 
-    ultimos = historial_equipo[-6:] if len(historial_equipo) >= 6 else historial_equipo
-    n = len(ultimos)
+    ordenado = sorted(historial_equipo,
+                      key=lambda p: (p.get("fecha", ""), str(p.get("id") or "")))
+    ventana = ordenado[-VENTANA_NIVEL:]
+    n = len(ventana)
 
-    # --- 1. Score de Forma Global ---
-    Puntos = {"V": 3, "E": 1, "D": 0}
-    pesos = [0.85 ** i for i in range(n)]
-    suma_ponderada = sum(Puntos.get(p["resultado"], 0) * w for p, w in zip(ultimos, pesos))
-    suma_pesos = sum(pesos)
-    score_forma_global = (suma_ponderada / (suma_pesos * 3)) * 100
+    forma_global = _forma_0_100(ventana)
+    goles_global = _goles_0_100(ventana)
 
-    # --- 2. Score de Goles Global ---
-    gf_prom = sum(p["goles_favor"] for p in ultimos) / n
-    gc_prom = sum(p["goles_contra"] for p in ultimos) / n
-    diferencia_global = gf_prom - gc_prom
-    score_goles_global = max(0, min(100, 50 + (diferencia_global * 10)))
+    sede_partidos = [p for p in ordenado if p.get("es_local") == es_local][-VENTANA_NIVEL:]
+    if len(sede_partidos) >= 2:
+        sede = _score_mixto(sede_partidos)
+    else:
+        sede = _score_mixto(ventana)
 
-    # --- 3. Score Local / Visitante (ventanas independientes) ---
-    ultimos_local = [p for p in historial_equipo if p.get("es_local") is True][-6:]
-    ultimos_visitante = [p for p in historial_equipo if p.get("es_local") is False][-6:]
-
-    def _score_sede(subset):
-        if len(subset) < 2:
-            return None
-        ns = len(subset)
-        puntos_s = sum(Puntos.get(p["resultado"], 0) for p in subset)
-        gf_s = sum(p["goles_favor"] for p in subset) / ns
-        gc_s = sum(p["goles_contra"] for p in subset) / ns
-        forma_s = puntos_s / (ns * 3)
-        diff_s = gf_s - gc_s
-        return 50 + (forma_s - 0.5) * 60 + diff_s * 8
-
-    score_sede = _score_sede(ultimos_local) if es_local else _score_sede(ultimos_visitante)
-    if score_sede is None:
-        score_sede = score_forma_global
-
-    # --- 4. Combinacion final ---
-    poder = (score_forma_global * 0.40 + score_sede * 0.40 + score_goles_global * 0.20) / 10
-    poder = max(0, min(10, poder))
+    poder = (0.40 * forma_global + 0.40 * sede + 0.20 * goles_global) / 10
+    poder = max(0.0, min(10.0, poder))
 
     if poder >= 8:
         color = "🔵"
