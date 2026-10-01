@@ -18,6 +18,7 @@ import datetime
 
 import ratings_store
 import team_resolver
+from poisson_model import VENTAJA_LOCAL_ELO
 from fetch_data import (
     obtener_resultados_liga_multi_temporada,
     obtener_resultados_liga_extra,
@@ -76,9 +77,13 @@ def _reproducir_partidos(partidos, liga):
         rating_home_antes, rd_home_antes = eq_home["rating"], eq_home["rd"]
         rating_away_antes, rd_away_antes = eq_away["rating"], eq_away["rd"]
 
-        ratings_store.actualizar_tras_partido(llave_home, rating_away_antes, rd_away_antes,
+        # Tarea 8: misma ventaja de local que poisson_model (sin
+        # duplicar la constante); sede neutral: sin ajuste.
+        ajuste = 0 if p.get("neutral") else VENTAJA_LOCAL_ELO
+
+        ratings_store.actualizar_tras_partido(llave_home, rating_away_antes - ajuste, rd_away_antes,
                                                resultado_home, es_bootstrap=True, fecha=p.get("Date"))
-        ratings_store.actualizar_tras_partido(llave_away, rating_home_antes, rd_home_antes,
+        ratings_store.actualizar_tras_partido(llave_away, rating_home_antes + ajuste, rd_home_antes,
                                                resultado_away, es_bootstrap=True, fecha=p.get("Date"))
         procesados += 1
 

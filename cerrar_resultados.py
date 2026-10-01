@@ -23,6 +23,7 @@ from cuota_espn import uso_de_hoy
 from estado_diario import _fecha_local_hoy, marcar_hecho
 from resolucion_alertas import CRITERIO_POR_TIPO, TIPO_ALIAS, evaluar_alerta, nombre_normalizado, resolver_pendientes
 import ratings_store
+from poisson_model import VENTAJA_LOCAL_ELO
 
 DATA_DIR = Path(__file__).parent / "data"
 ARCHIVO_PARTIDOS = DATA_DIR / "partidos_hoy.json"
@@ -68,9 +69,15 @@ def _actualizar_rating_propio(p, goles_local, goles_visitante):
     rating_local_antes, rd_local_antes = eq_local["rating"], eq_local["rd"]
     rating_visitante_antes, rd_visitante_antes = eq_visitante["rating"], eq_visitante["rd"]
 
-    ratings_store.actualizar_tras_partido(llave_local, rating_visitante_antes, rd_visitante_antes,
+    # Tarea 8: el Poisson le suma 70 al local, asi que Glicko tambien
+    # debe ver al rival con ese ajuste -- si no, los ratings absorben el
+    # efecto de jugar en casa. Sede neutral: sin ajuste. Solo hacia
+    # adelante (no se recalculan ratings historicos).
+    ajuste = 0 if p.get("neutral") else VENTAJA_LOCAL_ELO
+
+    ratings_store.actualizar_tras_partido(llave_local, rating_visitante_antes - ajuste, rd_visitante_antes,
                                            resultado_local, es_bootstrap=False)
-    ratings_store.actualizar_tras_partido(llave_visitante, rating_local_antes, rd_local_antes,
+    ratings_store.actualizar_tras_partido(llave_visitante, rating_local_antes + ajuste, rd_local_antes,
                                            resultado_visitante, es_bootstrap=False)
 
 
