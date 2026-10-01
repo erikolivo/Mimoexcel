@@ -126,58 +126,75 @@ def _obtener_datos_estilo(equipo, liga_slug):
         return None
 
 
+PUNTOS = {"V": 3, "E": 1, "D": 0}
+DECAIMIENTO_FORMA = 0.85
+VENTANA_NIVEL = 6
+MIN_PARTIDOS_NIVEL = 4
+
+
+def _pesos_recencia(n):
+    """Peso de cada partido segun recencia: el mas reciente pesa 1.0
+    (el mas antiguo, 0.85 ** (n-1))."""
+    return [DECAIMIENTO_FORMA ** (n - 1 - i) for i in range(n)]
+
+
+def _forma_0_100(partidos):
+    """Puntos ponderados (V=3, E=1, D=0) sobre el maximo posible."""
+    if not partidos:
+        return 0.0
+    pesos = _pesos_recencia(len(partidos))
+    pts = sum(PUNTOS.get(p["resultado"], 0) * w for p, w in zip(partidos, pesos))
+    return pts / (sum(pesos) * 3) * 100
+
+
+def _goles_0_100(partidos):
+    """Diferencia de goles ponderada por recencia, en escala 0-100."""
+    if not partidos:
+        return 50.0
+    pesos = _pesos_recencia(len(partidos))
+    sw = sum(pesos)
+    gf = sum(p["goles_favor"] * w for p, w in zip(partidos, pesos)) / sw
+    gc = sum(p["goles_contra"] * w for p, w in zip(partidos, pesos)) / sw
+    return max(0.0, min(100.0, 50 + (gf - gc) * 20))
+
+
+def _score_mixto(partidos):
+    """70% forma + 30% goles, misma escala 0-100 para todos."""
+    return 0.70 * _forma_0_100(partidos) + 0.30 * _goles_0_100(partidos)
+
+
 def _calcular_nivel_actual(historial_equipo, es_local):
     """
-    Calcula el Nivel Actual (0-10) con el nuevo sistema de 3 componentes:
-    1. Score de Forma Global (decaimiento exponencial 0.85^i)
-    2. Score de Goles Global (diferencia GF-GC)
-    3. Score Local/Visitante (ventanas independientes de 6 partidos)
-    Combinacion: 40% forma global + 40% sede especifica + 20% goles global
+    Calcula el Nivel Actual (0-10) con 3 componentes en escala 0-100:
+    1. Forma global: puntos ponderados con decaimiento 0.85 (el mas
+       reciente pesa 1.0) sobre la ventana de 6 partidos.
+    2. Goles global: diferencia GF-GC con los MISMOS pesos de recencia.
+    3. Sede: 70% forma + 30% goles de los ultimos 6 partidos de esa
+       sede (si hay menos de 2, usa el equivalente global).
+    Combinacion: 40% forma global + 40% sede + 20% goles global,
+    dividido entre 10 y acotado a 0-10.
     Retorna (poder, color, n_partidos) o (None, None, 0) si no hay datos.
+    El historial se ordena por (fecha, id) por si llega desordenado.
     """
-    MIN_MATCHES = 4
-
-    if not historial_equipo or len(historial_equipo) < MIN_MATCHES:
+    if not historial_equipo or len(historial_equipo) < MIN_PARTIDOS_NIVEL:
         return None, None, 0
 
-    ultimos = historial_equipo[-6:] if len(historial_equipo) >= 6 else historial_equipo
-    n = len(ultimos)
+    ordenado = sorted(historial_equipo,
+                      key=lambda p: (p.get("fecha", ""), str(p.get("id") or "")))
+    ventana = ordenado[-VENTANA_NIVEL:]
+    n = len(ventana)
 
-    # --- 1. Score de Forma Global ---
-    Puntos = {"V": 3, "E": 1, "D": 0}
-    pesos = [0.85 ** i for i in range(n)]
-    suma_ponderada = sum(Puntos.get(p["resultado"], 0) * w for p, w in zip(ultimos, pesos))
-    suma_pesos = sum(pesos)
-    score_forma_global = (suma_ponderada / (suma_pesos * 3)) * 100
+    forma_global = _forma_0_100(ventana)
+    goles_global = _goles_0_100(ventana)
 
-    # --- 2. Score de Goles Global ---
-    gf_prom = sum(p["goles_favor"] for p in ultimos) / n
-    gc_prom = sum(p["goles_contra"] for p in ultimos) / n
-    diferencia_global = gf_prom - gc_prom
-    score_goles_global = max(0, min(100, 50 + (diferencia_global * 10)))
+    sede_partidos = [p for p in ordenado if p.get("es_local") == es_local][-VENTANA_NIVEL:]
+    if len(sede_partidos) >= 2:
+        sede = _score_mixto(sede_partidos)
+    else:
+        sede = _score_mixto(ventana)
 
-    # --- 3. Score Local / Visitante (ventanas independientes) ---
-    ultimos_local = [p for p in historial_equipo if p.get("es_local") is True][-6:]
-    ultimos_visitante = [p for p in historial_equipo if p.get("es_local") is False][-6:]
-
-    def _score_sede(subset):
-        if len(subset) < 2:
-            return None
-        ns = len(subset)
-        puntos_s = sum(Puntos.get(p["resultado"], 0) for p in subset)
-        gf_s = sum(p["goles_favor"] for p in subset) / ns
-        gc_s = sum(p["goles_contra"] for p in subset) / ns
-        forma_s = puntos_s / (ns * 3)
-        diff_s = gf_s - gc_s
-        return 50 + (forma_s - 0.5) * 60 + diff_s * 8
-
-    score_sede = _score_sede(ultimos_local) if es_local else _score_sede(ultimos_visitante)
-    if score_sede is None:
-        score_sede = score_forma_global
-
-    # --- 4. Combinacion final ---
-    poder = (score_forma_global * 0.40 + score_sede * 0.40 + score_goles_global * 0.20) / 10
-    poder = max(0, min(10, poder))
+    poder = (0.40 * forma_global + 0.40 * sede + 0.20 * goles_global) / 10
+    poder = max(0.0, min(10.0, poder))
 
     if poder >= 8:
         color = "🔵"
