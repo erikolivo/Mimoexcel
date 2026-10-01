@@ -46,6 +46,12 @@ TRAMOS_PESO = [
 ]
 PESO_MAXIMO = 1.0
 
+# RD efectivo que se le atribuye al rating de ClubElo en el blend:
+# ClubElo se trata como un rating bien establecido, para que aplicar_rd()
+# no aplaste lo que aporta ClubElo cuando el peso propio del equipo
+# es 0%.
+RD_EFECTIVO_CLUBELO = 50.0
+
 
 def peso_rating_propio(n_partidos):
     for tope, peso in TRAMOS_PESO:
@@ -116,6 +122,13 @@ def actualizar_tras_partido(llave, rating_rival, rd_rival, resultado, es_bootstr
 
 
 def rating_combinado(llave, elo_clubelo, nombre=None, pais=None, liga=None):
+    """Devuelve (rating, n, rd) del blend ClubElo + rating propio.
+
+    El RD que devuelve describe el rating COMBINADO (no el del rating
+    propio solo): se interpola igual que el rating, usando
+    RD_EFECTIVO_CLUBELO para la parte de ClubElo. Si no hubiera elo
+    (None) se mantienen rating y RD propios tal cual.
+    """
     eq = obtener_o_crear(llave, nombre=nombre, pais=pais, liga=liga)
     n = eq.get("partidos_reales", 0) + eq.get("partidos_bootstrap", 0)
     peso_propio = peso_rating_propio(n)
@@ -124,7 +137,8 @@ def rating_combinado(llave, elo_clubelo, nombre=None, pais=None, liga=None):
         return eq["rating"], n, eq["rd"]
 
     rating_final = peso_propio * eq["rating"] + (1 - peso_propio) * elo_clubelo
-    return round(rating_final, 2), n, eq["rd"]
+    rd_final = peso_propio * eq["rd"] + (1 - peso_propio) * RD_EFECTIVO_CLUBELO
+    return round(rating_final, 2), n, round(rd_final, 2)
 
 
 def rd_de(llave):
