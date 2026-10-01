@@ -153,7 +153,13 @@ def rating_combinado(llave, elo_clubelo, nombre=None, pais=None, liga=None):
     eq = obtener_o_crear(llave, nombre=nombre, pais=pais, liga=liga,
                          elo_semilla=elo_clubelo)
     n = eq.get("partidos_reales", 0) + eq.get("partidos_bootstrap", 0)
-    peso_propio = peso_rating_propio(n)
+    # Tarea 7: para el PESO el bootstrap cuenta la mitad (una temporada
+    # de una sola liga no pesa igual que partidos reales); el n que se
+    # devuelve sigue siendo el total, para no romper los reportes por
+    # madurez.
+    n_efectivo = (eq.get("partidos_reales", 0)
+                  + 0.5 * eq.get("partidos_bootstrap", 0))
+    peso_propio = peso_rating_propio(n_efectivo)
 
     if elo_clubelo is None:
         return eq["rating"], n, eq["rd"]
