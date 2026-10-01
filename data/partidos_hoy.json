@@ -245,7 +245,8 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Denmark vs Portugal",
@@ -276,7 +277,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 2
+      "grupo_destacado": 2,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Wales vs Norway",
@@ -339,7 +341,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 3
+      "grupo_destacado": 3,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Israel vs Kosovo",
