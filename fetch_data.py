@@ -882,14 +882,33 @@ CODIGO_LIGA_A_PAIS = {
     "ARG": "Argentina", "BRA": "Brazil", "MEX": "Mexico", "USA": "USA",
 }
 
-_TEMPORADA_ACTUAL = "2526"
+def temporada_actual(ahora=None):
+    """
+    Temporada de football-data.co.uk (ej. '2627' para 2026-27).
+    La temporada europea arranca en agosto: de enero a julio sigue
+    vigente la que empezo en el anio anterior.
+    """
+    ahora = ahora or datetime.now(timezone.utc)
+    inicio = ahora.year if ahora.month >= 8 else ahora.year - 1
+    return f"{inicio % 100:02d}{(inicio + 1) % 100:02d}"
 
 
-def obtener_resultados_liga(codigo, temporada=_TEMPORADA_ACTUAL):
+def temporada_anterior(ahora=None):
+    """La temporada previa a la vigente (ej. '2526' si la actual es '2627')."""
+    inicio = (int(temporada_actual(ahora)[:2]) - 1) % 100
+    return f"{inicio:02d}{(inicio + 1) % 100:02d}"
+
+
+def obtener_resultados_liga(codigo, temporada=None):
+    """Filas del CSV de una temporada. Si no se pasa temporada se detecta
+    la vigente (temporada_actual), asi nunca queda desactualizada."""
+    temporada = temporada or temporada_actual()
     url = f"https://www.football-data.co.uk/mmz4281/{temporada}/{codigo}.csv"
     try:
         r = requests.get(url, timeout=TIMEOUT)
         r.raise_for_status()
+        if r.status_code != 200:  # 300 = archivo inexistente (pagina de sugerencias)
+            raise ValueError(f"HTTP {r.status_code}")
         return list(csv.DictReader(io.StringIO(r.text)))
     except Exception as e:
         print(f"[AVISO] No se pudo descargar {codigo} ({temporada}): {e}")
@@ -908,6 +927,8 @@ def obtener_resultados_liga_extra(codigo):
     try:
         r = requests.get(url, timeout=TIMEOUT)
         r.raise_for_status()
+        if r.status_code != 200:  # 300 = archivo inexistente (pagina de sugerencias)
+            raise ValueError(f"HTTP {r.status_code}")
         return list(csv.DictReader(io.StringIO(r.text)))
     except Exception as e:
         print(f"[AVISO] No se pudo descargar liga extra {codigo}: {e}")

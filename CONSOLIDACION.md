@@ -162,6 +162,25 @@ y cobertura del sistema de alertas:
   usaba columnas inexistentes `local`/`visitante` -> siempre vacio, el
   estilo nunca se mostraba). Umbrales de `_calcular_estilo_juego` SIN
   cambios (sin calibracion).
+- Seguimiento (2026-09-30, "el estilo no llega a Telegram"):
+  1. La Tarea 3 estaba sin mergear: en `main` seguia el bug de las
+     columnas -> 0% de estilo. Se deploya con este PR.
+  2. Temporada `2526` hardcodeada (caducada): ahora `temporada_actual()`
+     autodetecta (arranque en agosto -> "2627"); el cache de estilo pide
+     anterior+actual para no quedarse sin datos al arrancar la temporada.
+     `goal_index.py` tambien usa ambas temporadas.
+  3. Cobertura ampliada de 16 a 21 ligas con stats completas verificadas
+     en vivo (2526 y 2627): + eng.3/eng.4 (E2/E3), por.2 (P2),
+     sco.2/sco.3 (SC1/SC2). NO entran ARG/BRA/MEX/USA (football-data
+     `new/*.csv` solo trae marcador+cuotas, sin stats de tiro) ni
+     ger.3/ned.2/bel.2/tur.2 (el servidor responde 300 = sin archivo).
+     `obtener_resultados_liga` ahora trata el 300 como vacio (antes el
+     HTML de "sugerencias" pasaba como si fuera CSV).
+  4. Alias de nombres ESPN -> football-data (37 pares, ej. "Sporting CP"
+     -> "Sp Lisbon", "Wolverhampton Wanderers" -> "Wolves"): descubiertos
+     comparando nombres reales del scoreboard de ESPN (4 fechas de la
+     temporada 2026-27) contra los CSV de las 21 ligas; 35 fallos
+     detectados, todos resueltos (test `test_alias_resuelve_nombres`).
 
 ### Ratings Fase 2 (Tareas 5-9)
 - RD combinado: `RD_EFECTIVO_CLUBELO = 50` (aplicar_rd no borra la
@@ -189,6 +208,6 @@ y cobertura del sistema de alertas:
   despues.
 
 ### Verificacion
-- `pytest` en verde (131 tests), `py_compile` limpio; tests con
+- `pytest` en verde (140 tests), `py_compile` limpio; tests con
   tmp_path (ninguno escribe en `data/`). Sin cambios en workflows,
   requirements ni umbrales de alertas.

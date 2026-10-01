@@ -11,12 +11,14 @@ import json
 from pathlib import Path
 
 from fetch_data import (
-    obtener_resultados_liga,
+    obtener_resultados_liga_multi_temporada,
     obtener_resultados_liga_extra,
     calcular_goal_index,
     LIGAS_FOOTBALL_DATA,
     LIGAS_FOOTBALL_DATA_EXTRA,
     CODIGO_LIGA_A_PAIS,
+    temporada_anterior,
+    temporada_actual,
 )
 
 DATA_DIR = Path(__file__).parent / "data"
@@ -68,7 +70,10 @@ def construir_goal_index_global():
 
     for codigo in LIGAS_FOOTBALL_DATA:
         try:
-            resultados = obtener_resultados_liga(codigo)
+            # temporada anterior + actual: la actual arranca incompleta y la
+            # anterior quedaria congelada si no se autodetecta la temporada
+            resultados = obtener_resultados_liga_multi_temporada(
+                codigo, [temporada_anterior(), temporada_actual()])
             goal_index_temporada.update(calcular_goal_index(resultados))
             goal_index_reciente.update(calcular_goal_index(resultados, ultimos_n=PARTIDOS_FORMA_RECIENTE))
             _registrar_paises(resultados, CODIGO_LIGA_A_PAIS.get(codigo))

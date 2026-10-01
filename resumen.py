@@ -19,7 +19,12 @@ from pathlib import Path
 
 from telegram_utils import enviar_mensaje_telegram, escapar_html
 from estado_diario import ya_se_hizo, marcar_hecho
-from fetch_data import obtener_historial_equipo, obtener_resultados_liga
+from fetch_data import (
+    obtener_historial_equipo,
+    obtener_resultados_liga,
+    temporada_actual,
+    temporada_anterior,
+)
 
 ARCHIVO = Path(__file__).parent / "data" / "partidos_hoy.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
@@ -39,19 +44,69 @@ ESTILO_PRESION_ALTA = "\U0001F525 Presión Alta"
 ESTILO_JUEGO_SUCIO = "\u2660\uFE0F Juego Sucio"
 ESTILO_GOLEADOR_TEMPRANO = "\U0001F305 Goleador Temprano"
 
-# Mapeo de liga_slug (ESPN) a codigo (football-data.co.uk)
+# Mapeo de liga_slug (ESPN) a codigo (football-data.co.uk).
+# Solo ligas con stats COMPLETAS en mmz4281 -- verificado en vivo
+# 2026-10-01: todos existen en 2526 y 2627 con las 16 columnas que usa
+# el estilo. No entran: ARG/BRA/MEX/USA (football-data/new/*.csv solo
+# trae marcador+cuotas, sin tiros/corners/faltas), ger.3/ned.2/bel.2/
+# tur.2/eng.5 y el resto del mundo (sin archivo con stats).
 MAPA_LIGA_SLUG_A_CODIGO = {
     "eng.1": "E0", "eng.2": "E1",
+    "eng.3": "E2", "eng.4": "E3",
     "esp.1": "SP1", "esp.2": "SP2",
     "ita.1": "I1", "ita.2": "I2",
     "ger.1": "D1", "ger.2": "D2",
     "fra.1": "F1", "fra.2": "F2",
     "ned.1": "N1",
-    "por.1": "P1",
+    "por.1": "P1", "por.2": "P2",
     "bel.1": "B1",
     "tur.1": "T1",
     "gre.1": "G1",
-    "sco.1": "SC0",
+    "sco.1": "SC0", "sco.2": "SC1", "sco.3": "SC2",
+}
+
+# Nombre de ESPN -> nombre de football-data.co.uk para los casos que ni
+# el corte 0.72 alcanza ("Sporting CP" vs "Sp Lisbon"). Descubierto
+# comparando nombres reales del scoreboard de ESPN (4 fechas de la
+# temporada 2026-27) contra los CSV de todas las ligas del mapa.
+ALIAS_NOMBRES_FOOTBALL_DATA = {
+    "KAA Gent": "Gent",
+    "OH Leuven": "Oud-Heverlee Leuven",
+    "Racing Genk": "Genk",
+    "Royal Charleroi SC": "Charleroi",
+    "Waasland-Beveren": "Beveren",
+    "Zulte-Waregem": "Waregem",
+    "Leeds United": "Leeds",
+    "Manchester City": "Man City",
+    "Bolton Wanderers": "Bolton",
+    "West Bromwich Albion": "West Brom",
+    "West Ham United": "West Ham",
+    "Wolverhampton Wanderers": "Wolves",
+    "Deportivo": "La Coruna",
+    "Real Betis": "Betis",
+    "RC Celta Fortuna": "Celta B",
+    "Real Oviedo": "Oviedo",
+    "Paris Saint-Germain": "Paris SG",
+    "Stade Rennais": "Rennes",
+    "1. FC Heidenheim 1846": "Heidenheim",
+    "Arminia Bielefeld": "Bielefeld",
+    "Dynamo Dresden": "Dresden",
+    "Energie Cottbus": "Cottbus",
+    "Hertha Berlin": "Hertha",
+    "TSV Eintracht Braunschweig": "Braunschweig",
+    "AEK Athens": "AEK",
+    "Hellas Verona": "Verona",
+    "Ajax Amsterdam": "Ajax",
+    "Feyenoord Rotterdam": "Feyenoord",
+    "Vitória de Guimaraes": "Guimaraes",
+    "Heart of Midlothian": "Hearts",
+    "Sporting CP": "Sp Lisbon",
+    "Partick Thistle": "Partick",
+    "Amed SFK": "Amedspor",
+    "Caykur Rizespor": "Rizespor",
+    "Erzurum BB": "Erzurumspor",
+    "Istanbul Basaksehir": "Buyuksehyr",
+    "Çorum FK": "Corum",
 }
 
 
@@ -101,9 +156,14 @@ _CSV_LIGA = {}
 
 
 def _resultados_liga_cache(codigo):
-    """Filas del CSV de una liga, descargadas como mucho una vez."""
+    """Filas de la liga, descargadas como mucho una vez. Pide la temporada
+    anterior y la actual: al arrancar la temporada las primeras jornadas no
+    llegan a 3 partidos por equipo y el estilo no se podria calcular."""
     if codigo not in _CSV_LIGA:
-        _CSV_LIGA[codigo] = obtener_resultados_liga(codigo)
+        _CSV_LIGA[codigo] = (
+            obtener_resultados_liga(codigo, temporada_anterior())
+            + obtener_resultados_liga(codigo, temporada_actual())
+        )
     return _CSV_LIGA[codigo]
 
 
@@ -124,12 +184,16 @@ def _tiene_valor(x):
 
 def _emparejar_nombre(equipo, nombres):
     """Nombre del equipo (ESPN) mas parecido al de football-data
-    (corte 0.72). Si no hay coincidencia clara devuelve None: mejor
-    no mostrar estilo que mostrar el de otro equipo."""
+    (alias explicito o corte 0.72). Si no hay coincidencia clara
+    devuelve None: mejor no mostrar estilo que mostrar el de otro
+    equipo."""
     if not equipo or not nombres:
         return None
     if equipo in nombres:
         return equipo
+    alias = ALIAS_NOMBRES_FOOTBALL_DATA.get(equipo)
+    if alias and alias in nombres:
+        return alias
     coincidencias = difflib.get_close_matches(equipo, nombres, n=1, cutoff=0.72)
     if coincidencias:
         return coincidencias[0]
