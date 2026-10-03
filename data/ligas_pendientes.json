@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "Club Friendly",
       "liga_id": "19834",
-      "veces_visto": 1187,
+      "veces_visto": 1196,
       "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
       "fixture_id": "401914230",
       "ultimo_visto": "2026-10-03"
@@ -32,7 +32,7 @@
       "pais": "",
       "liga": "Men's International Friendly",
       "liga_id": "3922",
-      "veces_visto": 276,
+      "veces_visto": 285,
       "ejemplo_partido": "Fiji vs Solomon Islands",
       "fixture_id": "401922313",
       "ultimo_visto": "2026-10-03"
@@ -41,7 +41,7 @@
       "pais": "",
       "liga": "Scottish Cup, First Round",
       "liga_id": "3959",
-      "veces_visto": 157,
+      "veces_visto": 186,
       "ejemplo_partido": "Cumnock vs Auchinleck Talbot",
       "fixture_id": "401921129",
       "ultimo_visto": "2026-10-03"
@@ -50,7 +50,7 @@
       "pais": "",
       "liga": "USL Championship",
       "liga_id": "4002",
-      "veces_visto": 149,
+      "veces_visto": 158,
       "ejemplo_partido": "New Mexico United vs Indy Eleven",
       "fixture_id": "401842218",
       "ultimo_visto": "2026-10-03"
@@ -77,27 +77,27 @@
       "pais": "",
       "liga": "Liga de Expansión MX",
       "liga_id": "3932",
-      "veces_visto": 94,
+      "veces_visto": 98,
       "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
       "fixture_id": "401886377",
       "ultimo_visto": "2026-10-03"
     },
     {
       "pais": "",
-      "liga": "NWSL",
-      "liga_id": "8301",
-      "veces_visto": 88,
-      "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
-      "fixture_id": "401853996",
+      "liga": "USL League One",
+      "liga_id": "19915",
+      "veces_visto": 96,
+      "ejemplo_partido": "One Knoxville vs FC Naples",
+      "fixture_id": "401842107",
       "ultimo_visto": "2026-10-03"
     },
     {
       "pais": "",
-      "liga": "USL League One",
-      "liga_id": "19915",
-      "veces_visto": 88,
-      "ejemplo_partido": "One Knoxville vs FC Naples",
-      "fixture_id": "401842107",
+      "liga": "NWSL",
+      "liga_id": "8301",
+      "veces_visto": 91,
+      "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
+      "fixture_id": "401853996",
       "ultimo_visto": "2026-10-03"
     },
     {
@@ -131,7 +131,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 64,
+      "veces_visto": 68,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-10-03"
@@ -149,7 +149,7 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 61,
+      "veces_visto": 62,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
       "ultimo_visto": "2026-10-03"
@@ -158,7 +158,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 51,
+      "veces_visto": 54,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-10-03"
@@ -167,7 +167,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 49,
+      "veces_visto": 54,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-10-03"
@@ -176,7 +176,7 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 45,
+      "veces_visto": 46,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
       "ultimo_visto": "2026-10-03"
@@ -228,6 +228,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa del Rey, Qualifying Round",
+      "liga_id": "3951",
+      "veces_visto": 39,
+      "ejemplo_partido": "Anaitasuna vs CD Tedeón",
+      "fixture_id": "401918750",
+      "ultimo_visto": "2026-10-03"
+    },
+    {
+      "pais": "",
       "liga": "Argentine Nacional B",
       "liga_id": "3903",
       "veces_visto": 37,
@@ -243,15 +252,6 @@
       "ejemplo_partido": "Blooming vs GV San José",
       "fixture_id": "401907939",
       "ultimo_visto": "2026-10-01"
-    },
-    {
-      "pais": "",
-      "liga": "Copa del Rey, Qualifying Round",
-      "liga_id": "3951",
-      "veces_visto": 35,
-      "ejemplo_partido": "Anaitasuna vs CD Tedeón",
-      "fixture_id": "401918750",
-      "ultimo_visto": "2026-10-03"
     },
     {
       "pais": "",
@@ -309,21 +309,30 @@
     },
     {
       "pais": "",
+      "liga": "Northern Super League",
+      "liga_id": "23286",
+      "veces_visto": 31,
+      "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
+      "fixture_id": "401859943",
+      "ultimo_visto": "2026-10-03"
+    },
+    {
+      "pais": "",
+      "liga": "Concacaf Nations League, League B, Group D",
+      "liga_id": "19267",
+      "veces_visto": 31,
+      "ejemplo_partido": "Dominican Republic vs Nicaragua",
+      "fixture_id": "401900637",
+      "ultimo_visto": "2026-10-03"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League B, Group A",
       "liga_id": "19267",
       "veces_visto": 30,
       "ejemplo_partido": "Bonaire vs St. Kitts and Nevis",
       "fixture_id": "401900627",
       "ultimo_visto": "2026-10-01"
-    },
-    {
-      "pais": "",
-      "liga": "Northern Super League",
-      "liga_id": "23286",
-      "veces_visto": 30,
-      "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
-      "fixture_id": "401859943",
-      "ultimo_visto": "2026-10-03"
     },
     {
       "pais": "",
@@ -336,11 +345,11 @@
     },
     {
       "pais": "",
-      "liga": "Concacaf Nations League, League B, Group D",
-      "liga_id": "19267",
+      "liga": "UEFA Nations League, Group C1",
+      "liga_id": "2395",
       "veces_visto": 29,
-      "ejemplo_partido": "Dominican Republic vs Nicaragua",
-      "fixture_id": "401900637",
+      "ejemplo_partido": "Sweden vs Romania",
+      "fixture_id": "401861051",
       "ultimo_visto": "2026-10-03"
     },
     {
@@ -426,27 +435,9 @@
     },
     {
       "pais": "",
-      "liga": "Guatemalan Liga Nacional",
-      "liga_id": "3928",
-      "veces_visto": 27,
-      "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
-      "fixture_id": "401879630",
-      "ultimo_visto": "2026-09-27"
-    },
-    {
-      "pais": "",
-      "liga": "UEFA Nations League, Group C1",
-      "liga_id": "2395",
-      "veces_visto": 27,
-      "ejemplo_partido": "Sweden vs Romania",
-      "fixture_id": "401861051",
-      "ultimo_visto": "2026-10-03"
-    },
-    {
-      "pais": "",
       "liga": "UEFA Nations League, Group B1",
       "liga_id": "2395",
-      "veces_visto": 26,
+      "veces_visto": 28,
       "ejemplo_partido": "Slovenia vs Scotland",
       "fixture_id": "401861057",
       "ultimo_visto": "2026-10-03"
@@ -455,7 +446,7 @@
       "pais": "",
       "liga": "UEFA Nations League, Group C4",
       "liga_id": "2395",
-      "veces_visto": 26,
+      "veces_visto": 28,
       "ejemplo_partido": "Bulgaria vs Luxembourg",
       "fixture_id": "401861061",
       "ultimo_visto": "2026-10-03"
@@ -464,10 +455,19 @@
       "pais": "",
       "liga": "UEFA Nations League, Group A3",
       "liga_id": "2395",
-      "veces_visto": 26,
+      "veces_visto": 28,
       "ejemplo_partido": "Czechia vs Croatia",
       "fixture_id": "401861063",
       "ultimo_visto": "2026-10-03"
+    },
+    {
+      "pais": "",
+      "liga": "Guatemalan Liga Nacional",
+      "liga_id": "3928",
+      "veces_visto": 27,
+      "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
+      "fixture_id": "401879630",
+      "ultimo_visto": "2026-09-27"
     },
     {
       "pais": "",
