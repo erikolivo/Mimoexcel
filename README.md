@@ -1,6 +1,8 @@
 # Alertas de gol en vivo — v3 (migrado a ESPN, rating propio Glicko-2 + momentum real)
 
-Sistema automático que toma los favoritos publicados en Google Sheets, los
+Sistema automático que toma los favoritos publicados en Google Sheets
+(si la hoja falla o está vacía, usa como respaldo las predicciones del
+dashboard elo-tilt), los
 vigila en vivo, y avisa por Telegram con distintos tipos de alerta
 según qué tan probable es que se anote un gol pronto. Corre solo,
 gratis, en GitHub Actions.
@@ -72,7 +74,7 @@ puede eliminarse de GitHub Actions — ver la sección de Secrets abajo.
 
 | Fase | Cuándo | Qué hace |
 |---|---|---|
-| 1. Selección | 06:45, 19:00 y con cada ciclo (~5 h) | Lee los favoritos de Google Sheets y localiza sus fixtures en ESPN para vigilarlos en vivo |
+| 1. Selección | 06:45, 19:00 y con cada ciclo (~5 h) | Lee los favoritos de Google Sheets (respaldo: elo-tilt) y localiza sus fixtures en ESPN para vigilarlos en vivo |
 | 2. Resumen | 06:30 | Manda a Telegram la lista de partidos de hoy |
 | 3. Vigilancia | Cada 5-15 min (adaptativo) | Boxscore en vivo de ESPN, calcula momentum real, manda la alerta que aplique |
 | 4. Cierre | Desde las 00:00 (reintentos cada 15 min) + respaldo al cambiar de día (~05:00) | Resuelve resultados vía ESPN, actualiza Glicko-2, audita cada alerta, archiva el día |
@@ -180,8 +182,9 @@ cuota_odds_api.py           -> cupo de The Odds API (respaldo secundario, sin ca
 cuotas_reales.py            -> The Odds API como respaldo (sin cambios de logica)
 mapeo_ligas_odds_api.py    -> mapeo liga -> sport_key de The Odds API (sin cambios)
 bootstrap_ligas.py         -> carga historica manual (football-data.co.uk, sin cambios)
-seleccionar_partidos.py   -> Fase 1: favoritos de Google Sheets + localización en ESPN
+seleccionar_partidos.py   -> Fase 1: favoritos (Google Sheets, respaldo elo-tilt) + localización en ESPN
 google_favoritos.py       -> descarga y valida los favoritos diarios de Google Sheets
+elo_tilt_favoritos.py     -> respaldo de favoritos desde el JSON público de erikolivo/elo-tilt (solo lectura)
 thesportsdb_aliases.py    -> respaldo gratuito de nombres alternativos de equipos
 resumen.py                  -> Fase 2 (sin cambios funcionales)
 monitor.py                  -> Fase 3, RECONSTRUIDA -- leer MIGRACION_ESPN.md

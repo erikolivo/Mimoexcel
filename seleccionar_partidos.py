@@ -1,4 +1,9 @@
-"""Fase 1: prepara para vigilancia los favoritos diarios de Google Sheets."""
+"""Fase 1: prepara para vigilancia los favoritos diarios.
+
+Fuente principal: Google Sheets (la hoja que se llena a mano). Si la
+hoja falla o devuelve 0 favoritos para hoy, se usa como respaldo elo
+tilt (erikolivo/elo-tilt, solo lectura -- ver elo_tilt_favoritos.py).
+"""
 
 import datetime
 import json
@@ -6,6 +11,7 @@ import sys
 from difflib import SequenceMatcher
 from pathlib import Path
 
+from elo_tilt_favoritos import obtener_favoritos_elo_tilt
 from fetch_data import obtener_fixtures_por_fecha
 from google_favoritos import normalizar, obtener_favoritos_google
 from thesportsdb_aliases import nombres_alternativos
@@ -17,6 +23,7 @@ ARCHIVO_CACHE_ALIAS = DATA_DIR / "alias_equipos_cache.json"
 ARCHIVO_PENDIENTES = DATA_DIR / "pendientes_revision.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
 VERSION_SELECCION = 6
+FUENTES_VALIDAS = {"Google Sheets", "elo-tilt"}
 
 # Alias FIJADOS A MANO -- para casos que se quieren garantizar sin
 # depender de que el fuzzy match o TheSportsDB los resuelvan. La
@@ -94,7 +101,7 @@ def ya_se_completo_hoy():
             and datos.get("seleccion_version") == VERSION_SELECCION
             and len(partidos) > 0  # 0 partidos casi siempre es un fallo silencioso, no un dia sin partidos --
                                     # no se marca como "completo" para que los reintentos (04:00-05:59) sigan insistiendo
-            and all(p.get("fuente_favorito") == "Google Sheets" for p in partidos)
+            and all(p.get("fuente_favorito") in FUENTES_VALIDAS for p in partidos)
         )
     except (json.JSONDecodeError, OSError):
         return False
@@ -192,9 +199,23 @@ def _buscar_fixture(entrada, fixtures):
     return fixture
 
 
+def _buscar_fixture_por_id(entrada, fixtures):
+    """Matching exacto por fixture_id, para las entradas que lo traen
+    (elo-tilt usa el mismo id de ESPN, asi que no hace falta fuzzy
+    match ni TheSportsDB). Las hojas de Google Sheets no traen id, asi
+    que para ellas esto devuelve None y sigue el camino por nombres."""
+    fid = str(entrada.get("fixture_id") or "")
+    if not fid:
+        return None
+    for fixture in fixtures:
+        if str(fixture["fixture"]["id"]) == fid:
+            return fixture
+    return None
+
+
 def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja, confianza_estrellas=0,
                            cuota_local=None, cuota_empate=None, cuota_visitante=None,
-                           prioridad="ALTA"):
+                           prioridad="ALTA", fuente="Google Sheets"):
     local, visitante = fixture["teams"]["home"], fixture["teams"]["away"]
     lado = _lado_favorito(favorito_hoja, local["name"], visitante["name"])
     if lado is None:
@@ -207,7 +228,7 @@ def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja, confianza_estrellas
         "tipo_pronostico": _tipo_pronostico(favorito_hoja), "confianza_estrellas": confianza_estrellas,
         "cuota_local_inicial": cuota_local, "cuota_empate_inicial": cuota_empate, "cuota_visitante_inicial": cuota_visitante,
         "prioridad": prioridad,
-        "fuente_favorito": "Google Sheets", "fila_fuente": fila_hoja,
+        "fuente_favorito": fuente, "fila_fuente": fila_hoja,
         "hora_inicio": fixture["fixture"]["date"], "fixture_id": fixture["fixture"]["id"], "liga_slug": fixture.get("_liga_slug"),
         "liga_pais": fixture.get("league", {}).get("country", ""), "liga_nombre": fixture.get("league", {}).get("name", ""),
         "home_id": local["id"], "away_id": visitante["id"], "kickoff_utc": fixture["fixture"]["date"],
@@ -229,16 +250,24 @@ def seleccionar(forzar=False):
         print("La selección de hoy ya se generó antes. Nada que hacer.")
         return
     hoy = fecha_local_hoy()
+    fuente = "Google Sheets"
     try:
         favoritos = obtener_favoritos_google(hoy=datetime.date.fromisoformat(hoy))
     except Exception as error:
-        print(f"[ERROR] No se pudieron leer los favoritos de Google Sheets: {error}")
-        return
+        print(f"[AVISO] No se pudieron leer los favoritos de Google Sheets: {error}")
+        favoritos = []
     print(f"Google Sheets: {len(favoritos)} favorito(s) válido(s) para procesar.")
+    if not favoritos:
+        favoritos = obtener_favoritos_elo_tilt(hoy=datetime.date.fromisoformat(hoy))
+        fuente = "elo-tilt"
+        print(f"elo-tilt (respaldo): {len(favoritos)} favorito(s) válido(s) para procesar.")
+    if not favoritos:
+        print("[ERROR] Ninguna fuente devolvió favoritos para hoy (Google Sheets y elo-tilt).")
+        return
     fixtures = obtener_fixtures_por_fecha(hoy)
     seleccionados, sin_fixture, favorito_invalido, vistos = [], 0, 0, set()
     for entrada in favoritos:
-        fixture = _buscar_fixture(entrada, fixtures)
+        fixture = _buscar_fixture_por_id(entrada, fixtures) or _buscar_fixture(entrada, fixtures)
         if fixture is None:
             sin_fixture += 1
             print(f"[AVISO] Fila {entrada['fila_hoja']}: no se encontró en ESPN: {entrada['local']} vs {entrada['visitante']}")
@@ -249,6 +278,7 @@ def seleccionar(forzar=False):
             cuota_local=entrada.get("cuota_local"), cuota_empate=entrada.get("cuota_empate"),
             cuota_visitante=entrada.get("cuota_visitante"),
             prioridad=entrada.get("prioridad", "ALTA"),
+            fuente=fuente,
         )
         if partido is None:
             favorito_invalido += 1
@@ -272,9 +302,9 @@ def seleccionar(forzar=False):
 
     if not seleccionados and datos_previos and datos_previos.get("fecha") == hoy \
             and datos_previos.get("partidos"):
-        # 0 favoritos validos casi siempre es un fallo transitorio de la
-        # hoja: no se pisa el seguimiento en curso del dia.
-        print("[AVISO] La hoja devolvió 0 favoritos válidos; se conserva la selección existente de hoy.")
+        # 0 partidos validos casi siempre es un fallo transitorio de la
+        # fuente: no se pisa el seguimiento en curso del dia.
+        print("[AVISO] La fuente no produjo partidos válidos con fixture en ESPN; se conserva la selección existente de hoy.")
         return
 
     nuevos_en_revision = None
@@ -304,7 +334,7 @@ def seleccionar(forzar=False):
     if nuevos_en_revision is not None:
         print(f"Revision de la noche: {len(seleccionados)} partido(s) en total, {nuevos_en_revision} nuevo(s) agregado(s), "
               f"el resto conserva su seguimiento en vivo ya acumulado.")
-    print(f"Guardado en {ARCHIVO_SALIDA}: {len(seleccionados)} partido(s) de Google Sheets. Sin fixture: {sin_fixture}; favorito inválido: {favorito_invalido}.")
+    print(f"Guardado en {ARCHIVO_SALIDA}: {len(seleccionados)} partido(s) de {fuente}. Sin fixture: {sin_fixture}; favorito inválido: {favorito_invalido}.")
 
 
 if __name__ == "__main__":
