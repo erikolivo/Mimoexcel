@@ -1208,45 +1208,13 @@ def _vigilar_interno():
             if not _en_ventana_horaria(partido):
                 continue
 
-            liga_slug = partido.get("liga_slug")
-            if not liga_slug or liga_slug == "all":
-                # F1: el slug "all" NO sirve para el summary en vivo,
-                # pero el scoreboard global SI funciona. Se usa para
-                # detectar si el partido termino y enviar el aviso final
-                # con resolucion de alertas pendientes.
-                if not partido.get("aviso_final_enviado"):
-                    estado = obtener_estado_desde_scoreboard(
-                        partido["fixture_id"], datos.get("fecha", ""))
-                    if estado and estado.get("estado") == "post":
-                        gl = estado.get("goles_local")
-                        gv = estado.get("goles_visitante")
-                        if gl is not None and gv is not None:
-                            snap_fin = {"minuto": estado.get("minuto"),
-                                        "goles_local": gl, "goles_visitante": gv,
-                                        "stats_local": {}, "stats_visitante": {}}
-                            resueltas = resolver_pendientes(
-                                partido, None, snap_fin, terminado=True,
-                                marcador_final=(gl, gv),
-                                sin_gol_es_fallo=SIN_GOL_ES_FALLO)
-                            if resueltas and RESOLUCION_MODO == "individual":
-                                if _enviar_resoluciones(partido, datos, resueltas, gl, gv):
-                                    hubo_cambios = True
-                            if ENVIAR_RESULTADO_PARTIDO:
-                                mensaje = _mensaje_partido_finalizado(partido, gl, gv, resueltas)
-                                if enviar_mensaje_telegram(mensaje):
-                                    partido["aviso_final_enviado"] = True
-                                    hubo_cambios = True
-                                    PREDICCIONES_ACTIVAS.pop(partido.get("fixture_id"), None)
-                            else:
-                                partido["aviso_final_enviado"] = True
-                                hubo_cambios = True
-                                PREDICCIONES_ACTIVAS.pop(partido.get("fixture_id"), None)
-                    elif estado and estado.get("estado") == "in":
-                        pass  # en vivo pero sin stats: no se monitorea
-                    else:
-                        pass  # pre o None: todavia no empieza / sin datos
-                continue
-
+            # slug "all" (fixtures hallados solo en el scoreboard global,
+            # p. ej. los que trae elo-tilt): el endpoint /all/summary?
+            # event= SI trae marcador, minuto y stats -- se monitorea en
+            # vivo igual que el resto. Antes este camino se saltaba todo
+            # lo vivo (solo aviso final), o sea: cero snapshots y cero
+            # alertas para esos partidos.
+            liga_slug = partido.get("liga_slug") or "all"
             box = obtener_boxscore_en_vivo(liga_slug, partido["fixture_id"])
             if box is None:
                 continue
