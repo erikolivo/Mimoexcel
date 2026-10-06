@@ -177431,8 +177431,22 @@
     ]
   },
   "454_all_2026": {
-    "fecha_cache": "2026-09-29T16:34:17.816175",
+    "fecha_cache": "2026-10-06T16:38:40.876442",
     "historial": [
+      {
+        "fecha": "2026-10-03",
+        "goles_favor": 6,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-29",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-06-09",
         "goles_favor": 3,
@@ -177593,20 +177607,6 @@
         "goles_contra": 0,
         "es_local": true,
         "resultado": "V"
-      },
-      {
-        "fecha": "2023-09-12",
-        "goles_favor": 1,
-        "goles_contra": 1,
-        "es_local": false,
-        "resultado": "E"
-      },
-      {
-        "fecha": "2023-09-11",
-        "goles_favor": 0,
-        "goles_contra": 0,
-        "es_local": false,
-        "resultado": "E"
       }
     ]
   },
