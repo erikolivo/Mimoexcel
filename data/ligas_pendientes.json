@@ -32,7 +32,7 @@
       "pais": "",
       "liga": "Men's International Friendly",
       "liga_id": "3922",
-      "veces_visto": 413,
+      "veces_visto": 417,
       "ejemplo_partido": "Fiji vs Solomon Islands",
       "fixture_id": "401922313",
       "ultimo_visto": "2026-10-05"
@@ -59,7 +59,7 @@
       "pais": "",
       "liga": "Argentine Nacional B",
       "liga_id": "3903",
-      "veces_visto": 176,
+      "veces_visto": 177,
       "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
       "fixture_id": "401843983",
       "ultimo_visto": "2026-10-05"
@@ -192,21 +192,21 @@
     },
     {
       "pais": "",
+      "liga": "Concacaf Nations League, League A, Group B",
+      "liga_id": "19267",
+      "veces_visto": 74,
+      "ejemplo_partido": "Jamaica vs Guatemala",
+      "fixture_id": "401900631",
+      "ultimo_visto": "2026-10-05"
+    },
+    {
+      "pais": "",
       "liga": "WSL Players Cup, League Phase",
       "liga_id": "23390",
       "veces_visto": 72,
       "ejemplo_partido": "Crystal Palace vs Watford",
       "fixture_id": "401923288",
       "ultimo_visto": "2026-09-30"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Nations League, League A, Group B",
-      "liga_id": "19267",
-      "veces_visto": 71,
-      "ejemplo_partido": "Jamaica vs Guatemala",
-      "fixture_id": "401900631",
-      "ultimo_visto": "2026-10-05"
     },
     {
       "pais": "",
@@ -228,20 +228,20 @@
     },
     {
       "pais": "",
-      "liga": "Argentine Primera B",
-      "liga_id": "3904",
-      "veces_visto": 59,
-      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
-      "fixture_id": "401845087",
+      "liga": "EURO U-21 Qualifying, Group E",
+      "liga_id": "20114",
+      "veces_visto": 62,
+      "ejemplo_partido": "Poland U21 vs Sweden U21",
+      "fixture_id": "732437",
       "ultimo_visto": "2026-10-05"
     },
     {
       "pais": "",
-      "liga": "EURO U-21 Qualifying, Group E",
-      "liga_id": "20114",
-      "veces_visto": 59,
-      "ejemplo_partido": "Poland U21 vs Sweden U21",
-      "fixture_id": "732437",
+      "liga": "Argentine Primera B",
+      "liga_id": "3904",
+      "veces_visto": 61,
+      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
+      "fixture_id": "401845087",
       "ultimo_visto": "2026-10-05"
     },
     {
@@ -284,7 +284,7 @@
       "pais": "",
       "liga": "Concacaf Nations League, League B, Group C",
       "liga_id": "19267",
-      "veces_visto": 52,
+      "veces_visto": 54,
       "ejemplo_partido": "Aruba vs Antigua and Barbuda",
       "fixture_id": "401900640",
       "ultimo_visto": "2026-10-05"
@@ -293,9 +293,45 @@
       "pais": "",
       "liga": "UEFA Nations League, Group A1",
       "liga_id": "2395",
-      "veces_visto": 49,
+      "veces_visto": 51,
       "ejemplo_partido": "Portugal vs Wales",
       "fixture_id": "401861044",
+      "ultimo_visto": "2026-10-05"
+    },
+    {
+      "pais": "",
+      "liga": "Concacaf Nations League, League B, Group B",
+      "liga_id": "19267",
+      "veces_visto": 49,
+      "ejemplo_partido": "Grenada vs Cuba",
+      "fixture_id": "401900628",
+      "ultimo_visto": "2026-10-05"
+    },
+    {
+      "pais": "",
+      "liga": "UEFA Nations League, Group C2",
+      "liga_id": "2395",
+      "veces_visto": 48,
+      "ejemplo_partido": "Armenia vs Latvia",
+      "fixture_id": "401861050",
+      "ultimo_visto": "2026-10-05"
+    },
+    {
+      "pais": "",
+      "liga": "UEFA Nations League, Group B2",
+      "liga_id": "2395",
+      "veces_visto": 48,
+      "ejemplo_partido": "Georgia vs Northern Ireland",
+      "fixture_id": "401861049",
+      "ultimo_visto": "2026-10-05"
+    },
+    {
+      "pais": "",
+      "liga": "UEFA Nations League, Group B4",
+      "liga_id": "2395",
+      "veces_visto": 48,
+      "ejemplo_partido": "Poland vs Bosnia-Herzegovina",
+      "fixture_id": "401861055",
       "ultimo_visto": "2026-10-05"
     },
     {
@@ -309,48 +345,12 @@
     },
     {
       "pais": "",
-      "liga": "Concacaf Nations League, League B, Group B",
-      "liga_id": "19267",
-      "veces_visto": 47,
-      "ejemplo_partido": "Grenada vs Cuba",
-      "fixture_id": "401900628",
-      "ultimo_visto": "2026-10-05"
-    },
-    {
-      "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
       "veces_visto": 46,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "UEFA Nations League, Group C2",
-      "liga_id": "2395",
-      "veces_visto": 46,
-      "ejemplo_partido": "Armenia vs Latvia",
-      "fixture_id": "401861050",
-      "ultimo_visto": "2026-10-05"
-    },
-    {
-      "pais": "",
-      "liga": "UEFA Nations League, Group B2",
-      "liga_id": "2395",
-      "veces_visto": 46,
-      "ejemplo_partido": "Georgia vs Northern Ireland",
-      "fixture_id": "401861049",
-      "ultimo_visto": "2026-10-05"
-    },
-    {
-      "pais": "",
-      "liga": "UEFA Nations League, Group B4",
-      "liga_id": "2395",
-      "veces_visto": 46,
-      "ejemplo_partido": "Poland vs Bosnia-Herzegovina",
-      "fixture_id": "401861055",
-      "ultimo_visto": "2026-10-05"
     },
     {
       "pais": "",
@@ -489,6 +489,15 @@
     },
     {
       "pais": "",
+      "liga": "Men's U-21 Friendly",
+      "liga_id": "20132",
+      "veces_visto": 31,
+      "ejemplo_partido": "North Macedonia U21 vs Russia U21",
+      "fixture_id": "401925163",
+      "ultimo_visto": "2026-10-05"
+    },
+    {
+      "pais": "",
       "liga": "Copa Chile, Round of 16",
       "liga_id": "8312",
       "veces_visto": 28,
@@ -522,15 +531,6 @@
       "ejemplo_partido": "Oriente Petrolero vs Guabirá",
       "fixture_id": "401907922",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "Men's U-21 Friendly",
-      "liga_id": "20132",
-      "veces_visto": 28,
-      "ejemplo_partido": "North Macedonia U21 vs Russia U21",
-      "fixture_id": "401925163",
-      "ultimo_visto": "2026-10-05"
     },
     {
       "pais": "",
