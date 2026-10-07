@@ -75,6 +75,8 @@ def test_dos_alertas_iguales_se_resuelven_ambas():
 
 
 def test_ventana_15_acierta_y_vence():
+    # Legado: alertas viejas registradas con criterio="ventana_15" en JSON
+    # conservan la regla antigua. Las nuevas usan "siguiente_gol" (mas abajo).
     p = partido_base()
     p["alertas_enviadas"] = [alerta("cuidado_rival_presiona", "52'", lado="rival", criterio="ventana_15")]
     res = R.resolver_pendientes(p, snap("52'", 0, 0), snap("60'", 0, 1))
@@ -92,6 +94,47 @@ def test_gol_del_favorito_no_resuelve_ventana_rival():
     res = R.resolver_pendientes(p, snap("52'", 0, 0), snap("60'", 1, 0))
     assert res == []
     assert p["alertas_enviadas"][0]["estado"] == "pendiente"
+
+
+# ── 2026-10: rival_domina SIN limite de tiempo (siguiente gol / final) ──────
+
+def test_rival_domina_criterio_nuevo_es_siguiente_gol():
+    assert R.CRITERIO_POR_TIPO["cuidado_rival_presiona"] == ("rival", "siguiente_gol")
+
+
+def test_rival_domina_acierto_gol_rival_muy_tarde():
+    # Alerta 52', gol del rival recien en 75' (+23 min): antes era
+    # "ventana_vencida" a los 67'; ahora acierto sin limite.
+    p = partido_base()
+    p["alertas_enviadas"] = [alerta("cuidado_rival_presiona", "52'", lado="rival",
+                                    criterio="siguiente_gol")]
+    res = R.resolver_pendientes(p, snap("74'", 0, 0), snap("75'", 0, 1))
+    assert res[0]["estado"] == "acierto" and res[0]["acierto"] is True
+    assert res[0]["resuelta_motivo"] == "gol_rival"
+    assert res[0]["resuelta_minuto"] == 75
+
+
+def test_rival_domina_fallo_gol_del_favorito():
+    # El favorito es quien marca el siguiente gol -> fallo (antes la
+    # ventana_15 dejaba la alerta pendiente ante gol del fav).
+    p = partido_base()
+    p["alertas_enviadas"] = [alerta("cuidado_rival_presiona", "52'", lado="rival",
+                                    criterio="siguiente_gol")]
+    res = R.resolver_pendientes(p, snap("74'", 0, 0), snap("76'", 1, 0))
+    assert res[0]["estado"] == "fallo" and res[0]["acierto"] is False
+    assert res[0]["resuelta_motivo"] == "gol_fav"
+
+
+def test_rival_domina_fallo_al_terminar_sin_goles():
+    # Partido acabado sin mas goles tras la notificacion -> se declara
+    # fallo (SIN_GOL_ES_FALLO); ya no queda pendiente por ventana.
+    p = partido_base()
+    p["alertas_enviadas"] = [alerta("cuidado_rival_presiona", "52'", lado="rival",
+                                    criterio="siguiente_gol")]
+    res = R.resolver_pendientes(p, snap("52'", 0, 0), snap("90'+4'", 0, 0),
+                                terminado=True, marcador_final=(0, 0))
+    assert res[0]["estado"] == "fallo"
+    assert res[0]["resuelta_motivo"] == "sin_mas_goles"
 
 
 def test_fin_1t_acierta_con_gol_38():
