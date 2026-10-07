@@ -28,7 +28,11 @@ CRITERIO_POR_TIPO = {
     "posible_empate": ("fav", "siguiente_gol"),       # alias de posible_descuento
     "posible_descuento": ("fav", "siguiente_gol"),
     "ampliacion_marcador": ("fav", "siguiente_gol"),
-    "cuidado_rival_presiona": ("rival", "ventana_15"),
+    # 2026-10: rival_domina sin limite de tiempo; se resuelve con el
+    # siguiente gol (rival->acierto, fav->fallo) o al final del partido.
+    # El criterio "ventana_15" se mantiene solo para alertas antiguas
+    # ya registradas en JSON.
+    "cuidado_rival_presiona": ("rival", "siguiente_gol"),
     "alerta_1er_tiempo": ("fav", "fin_1t"),
     "gol_de_cierre": ("fav", "siguiente_gol"),
     "fav_domina_no_gana": ("fav", "siguiente_gol"),
