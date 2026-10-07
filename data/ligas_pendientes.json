@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 1065,
+      "veces_visto": 1086,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-07"
@@ -23,7 +23,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 1002,
+      "veces_visto": 1024,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-10-07"
@@ -93,21 +93,21 @@
     },
     {
       "pais": "",
+      "liga": "USL League One",
+      "liga_id": "19915",
+      "veces_visto": 135,
+      "ejemplo_partido": "One Knoxville vs FC Naples",
+      "fixture_id": "401842107",
+      "ultimo_visto": "2026-10-07"
+    },
+    {
+      "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
       "veces_visto": 132,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "USL League One",
-      "liga_id": "19915",
-      "veces_visto": 132,
-      "ejemplo_partido": "One Knoxville vs FC Naples",
-      "fixture_id": "401842107",
-      "ultimo_visto": "2026-10-07"
     },
     {
       "pais": "",
@@ -192,21 +192,21 @@
     },
     {
       "pais": "",
+      "liga": "Women's International Friendly",
+      "liga_id": "3923",
+      "veces_visto": 75,
+      "ejemplo_partido": "China vs Vietnam",
+      "fixture_id": "401916262",
+      "ultimo_visto": "2026-10-07"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League A, Group B",
       "liga_id": "19267",
       "veces_visto": 74,
       "ejemplo_partido": "Jamaica vs Guatemala",
       "fixture_id": "401900631",
       "ultimo_visto": "2026-10-05"
-    },
-    {
-      "pais": "",
-      "liga": "Women's International Friendly",
-      "liga_id": "3923",
-      "veces_visto": 73,
-      "ejemplo_partido": "China vs Vietnam",
-      "fixture_id": "401916262",
-      "ultimo_visto": "2026-10-07"
     },
     {
       "pais": "",
@@ -489,6 +489,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Bolivia, Group D",
+      "liga_id": "23284",
+      "veces_visto": 43,
+      "ejemplo_partido": "Oriente Petrolero vs Guabirá",
+      "fixture_id": "401907922",
+      "ultimo_visto": "2026-10-07"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group D",
       "liga_id": "20114",
       "veces_visto": 41,
@@ -507,11 +516,11 @@
     },
     {
       "pais": "",
-      "liga": "Copa Bolivia, Group D",
-      "liga_id": "23284",
+      "liga": "Copa Chile, Quarterfinals",
+      "liga_id": "8312",
       "veces_visto": 40,
-      "ejemplo_partido": "Oriente Petrolero vs Guabirá",
-      "fixture_id": "401907922",
+      "ejemplo_partido": "Puerto Montt vs Colo Colo",
+      "fixture_id": "401925566",
       "ultimo_visto": "2026-10-07"
     },
     {
@@ -522,15 +531,6 @@
       "ejemplo_partido": "Worcester City vs Stratford Town",
       "fixture_id": "401917298",
       "ultimo_visto": "2026-09-29"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Chile, Quarterfinals",
-      "liga_id": "8312",
-      "veces_visto": 39,
-      "ejemplo_partido": "Puerto Montt vs Colo Colo",
-      "fixture_id": "401925566",
-      "ultimo_visto": "2026-10-07"
     },
     {
       "pais": "",
@@ -561,21 +561,21 @@
     },
     {
       "pais": "",
+      "liga": "Copa Chile, Round of 16",
+      "liga_id": "8312",
+      "veces_visto": 33,
+      "ejemplo_partido": "Puerto Montt vs Ñublense",
+      "fixture_id": "401916351",
+      "ultimo_visto": "2026-10-07"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group H",
       "liga_id": "20114",
       "veces_visto": 32,
       "ejemplo_partido": "Hungary U21 vs Lithuania U21",
       "fixture_id": "732439",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Chile, Round of 16",
-      "liga_id": "8312",
-      "veces_visto": 32,
-      "ejemplo_partido": "Puerto Montt vs Ñublense",
-      "fixture_id": "401916351",
-      "ultimo_visto": "2026-10-07"
     },
     {
       "pais": "",
