@@ -231,6 +231,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "55'",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -405,6 +414,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "58'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -474,6 +492,15 @@
         },
         {
           "minuto": "22'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "25'",
           "goles_local": 0,
           "goles_visitante": 0,
           "stats_local": {},
