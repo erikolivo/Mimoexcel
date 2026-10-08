@@ -1,13 +1,6 @@
 [
   {
     "fecha": "2026-10-06",
-    "local": "Clemson",
-    "visitante": "GA Southern",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-06",
     "local": "Cornell",
     "visitante": "UMass",
     "favorito": "LOCAL",
@@ -1368,6 +1361,13 @@
     "fecha": "2026-10-07",
     "local": "UC Davis",
     "visitante": "Grand Canyon",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-08",
+    "local": "USC",
+    "visitante": "Illinois",
     "favorito": "VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
