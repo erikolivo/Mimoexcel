@@ -971,226 +971,6 @@
       "aviso_final_enviado": true
     },
     {
-      "partido": "Arkansas State Red Wolves vs James Madison Dukes",
-      "local": "Arkansas State Red Wolves",
-      "visitante": "James Madison Dukes",
-      "favorito": "Arkansas State Red Wolves",
-      "no_favorito": "James Madison Dukes",
-      "favorito_es_local": true,
-      "tipo_pronostico": "doble_oportunidad",
-      "confianza_estrellas": 2,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "MEDIA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401890332",
-      "hora_inicio": "2026-10-07T21:00Z",
-      "fixture_id": "401890332",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "NCAAW Soccer",
-      "home_id": "20587",
-      "away_id": "20556",
-      "kickoff_utc": "2026-10-07T21:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [
-        {
-          "minuto": "3'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "8'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "13'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "18'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "23'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "27'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "31'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "37'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "42'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "45'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "Halftime"
-        },
-        {
-          "minuto": "45'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "Halftime"
-        },
-        {
-          "minuto": "46'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "50'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "55'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "60'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "65'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "70'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "75'",
-          "goles_local": 0,
-          "goles_visitante": 2,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "77'",
-          "goles_local": 0,
-          "goles_visitante": 2,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "82'",
-          "goles_local": 0,
-          "goles_visitante": 2,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "87'",
-          "goles_local": 0,
-          "goles_visitante": 2,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        }
-      ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
-    },
-    {
       "partido": "Wyoming Cowboys vs San José State Spartans",
       "local": "Wyoming Cowboys",
       "visitante": "San José State Spartans",
@@ -1481,6 +1261,226 @@
           "minuto": "90'",
           "goles_local": 4,
           "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        }
+      ],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
+    },
+    {
+      "partido": "Arkansas State Red Wolves vs James Madison Dukes",
+      "local": "Arkansas State Red Wolves",
+      "visitante": "James Madison Dukes",
+      "favorito": "Arkansas State Red Wolves",
+      "no_favorito": "James Madison Dukes",
+      "favorito_es_local": true,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 2,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "MEDIA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401890332",
+      "hora_inicio": "2026-10-07T21:00Z",
+      "fixture_id": "401890332",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "NCAAW Soccer",
+      "home_id": "20587",
+      "away_id": "20556",
+      "kickoff_utc": "2026-10-07T21:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [
+        {
+          "minuto": "3'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "8'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "13'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "18'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "23'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "27'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "31'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "37'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "42'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "46'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "50'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "55'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "60'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "65'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "70'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "75'",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "77'",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "82'",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "87'",
+          "goles_local": 0,
+          "goles_visitante": 2,
           "stats_local": {},
           "stats_visitante": {},
           "periodo": 2,
@@ -14535,7 +14535,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
