@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "Club Friendly",
       "liga_id": "19834",
-      "veces_visto": 1395,
+      "veces_visto": 1396,
       "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
       "fixture_id": "401914230",
       "ultimo_visto": "2026-10-09"
@@ -23,7 +23,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 1322,
+      "veces_visto": 1331,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-09"
@@ -50,9 +50,18 @@
       "pais": "",
       "liga": "USL Championship",
       "liga_id": "4002",
-      "veces_visto": 204,
+      "veces_visto": 205,
       "ejemplo_partido": "New Mexico United vs Indy Eleven",
       "fixture_id": "401842218",
+      "ultimo_visto": "2026-10-09"
+    },
+    {
+      "pais": "",
+      "liga": "Women's International Friendly",
+      "liga_id": "3923",
+      "veces_visto": 180,
+      "ejemplo_partido": "China vs Vietnam",
+      "fixture_id": "401916262",
       "ultimo_visto": "2026-10-09"
     },
     {
@@ -66,15 +75,6 @@
     },
     {
       "pais": "",
-      "liga": "Women's International Friendly",
-      "liga_id": "3923",
-      "veces_visto": 168,
-      "ejemplo_partido": "China vs Vietnam",
-      "fixture_id": "401916262",
-      "ultimo_visto": "2026-10-09"
-    },
-    {
-      "pais": "",
       "liga": "USL League One",
       "liga_id": "19915",
       "veces_visto": 150,
@@ -84,21 +84,21 @@
     },
     {
       "pais": "",
+      "liga": "Liga de Expansión MX",
+      "liga_id": "3932",
+      "veces_visto": 148,
+      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
+      "fixture_id": "401886377",
+      "ultimo_visto": "2026-10-09"
+    },
+    {
+      "pais": "",
       "liga": "Women's Europa Cup, Second Qualifying Round",
       "liga_id": "24079",
       "veces_visto": 146,
       "ejemplo_partido": "Metalist 1925 Kharkiv vs Torreense",
       "fixture_id": "401916437",
       "ultimo_visto": "2026-09-30"
-    },
-    {
-      "pais": "",
-      "liga": "Liga de Expansión MX",
-      "liga_id": "3932",
-      "veces_visto": 146,
-      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
-      "fixture_id": "401886377",
-      "ultimo_visto": "2026-10-09"
     },
     {
       "pais": "",
@@ -138,6 +138,15 @@
     },
     {
       "pais": "",
+      "liga": "WWCQ - UEFA, Playoff Phase - First Round",
+      "liga_id": "20649",
+      "veces_visto": 109,
+      "ejemplo_partido": "Kazakhstan vs Republic of Ireland",
+      "fixture_id": "401878167",
+      "ultimo_visto": "2026-10-09"
+    },
+    {
+      "pais": "",
       "liga": "UEFA Women's Champions League, League Phase",
       "liga_id": "19483",
       "veces_visto": 106,
@@ -147,18 +156,9 @@
     },
     {
       "pais": "",
-      "liga": "WWCQ - UEFA, Playoff Phase - First Round",
-      "liga_id": "20649",
-      "veces_visto": 94,
-      "ejemplo_partido": "Kazakhstan vs Republic of Ireland",
-      "fixture_id": "401878167",
-      "ultimo_visto": "2026-10-09"
-    },
-    {
-      "pais": "",
       "liga": "Salvadoran Primera",
       "liga_id": "3943",
-      "veces_visto": 92,
+      "veces_visto": 93,
       "ejemplo_partido": "Inca Aruba vs Atletico Balboa",
       "fixture_id": "401899791",
       "ultimo_visto": "2026-10-09"
@@ -210,21 +210,21 @@
     },
     {
       "pais": "",
+      "liga": "Argentine Primera B",
+      "liga_id": "3904",
+      "veces_visto": 75,
+      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
+      "fixture_id": "401845087",
+      "ultimo_visto": "2026-10-09"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League A, Group B",
       "liga_id": "19267",
       "veces_visto": 74,
       "ejemplo_partido": "Jamaica vs Guatemala",
       "fixture_id": "401900631",
       "ultimo_visto": "2026-10-05"
-    },
-    {
-      "pais": "",
-      "liga": "Argentine Primera B",
-      "liga_id": "3904",
-      "veces_visto": 73,
-      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
-      "fixture_id": "401845087",
-      "ultimo_visto": "2026-10-09"
     },
     {
       "pais": "",
@@ -635,7 +635,7 @@
       "pais": "",
       "liga": "Bolivian Liga Profesional",
       "liga_id": "620",
-      "veces_visto": 26,
+      "veces_visto": 27,
       "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
       "fixture_id": "401906485",
       "ultimo_visto": "2026-10-09"
@@ -651,21 +651,21 @@
     },
     {
       "pais": "",
+      "liga": "Chinese Super League",
+      "liga_id": "8376",
+      "veces_visto": 23,
+      "ejemplo_partido": "Zhejiang Professional FC vs Wuhan Three Towns",
+      "fixture_id": "401861443",
+      "ultimo_visto": "2026-10-09"
+    },
+    {
+      "pais": "",
       "liga": "UEFA Nations League",
       "liga_id": "2395",
       "veces_visto": 20,
       "ejemplo_partido": "Andorra vs Malta",
       "fixture_id": "401861047",
       "ultimo_visto": "2026-09-25"
-    },
-    {
-      "pais": "",
-      "liga": "Chinese Super League",
-      "liga_id": "8376",
-      "veces_visto": 20,
-      "ejemplo_partido": "Zhejiang Professional FC vs Wuhan Three Towns",
-      "fixture_id": "401861443",
-      "ultimo_visto": "2026-10-09"
     },
     {
       "pais": "",
@@ -822,21 +822,21 @@
     },
     {
       "pais": "",
+      "liga": "Honduran Liga Nacional",
+      "liga_id": "3929",
+      "veces_visto": 13,
+      "ejemplo_partido": "CD Estrella Roja vs Platense",
+      "fixture_id": "401915261",
+      "ultimo_visto": "2026-10-09"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group F",
       "liga_id": "8315",
       "veces_visto": 12,
       "ejemplo_partido": "Sudan vs Ethiopia",
       "fixture_id": "401920041",
       "ultimo_visto": "2026-09-29"
-    },
-    {
-      "pais": "",
-      "liga": "Honduran Liga Nacional",
-      "liga_id": "3929",
-      "veces_visto": 12,
-      "ejemplo_partido": "CD Estrella Roja vs Platense",
-      "fixture_id": "401915261",
-      "ultimo_visto": "2026-10-09"
     },
     {
       "pais": "",
@@ -855,6 +855,15 @@
       "ejemplo_partido": "Aktobe vs Ajax Amsterdam",
       "fixture_id": "401916445",
       "ultimo_visto": "2026-09-30"
+    },
+    {
+      "pais": "",
+      "liga": "Liga FPD",
+      "liga_id": "4005",
+      "veces_visto": 11,
+      "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
+      "fixture_id": "401876853",
+      "ultimo_visto": "2026-10-09"
     },
     {
       "pais": "",
@@ -882,15 +891,6 @@
       "ejemplo_partido": "United Arab Emirates vs Saudi Arabia",
       "fixture_id": "401928263",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Liga FPD",
-      "liga_id": "4005",
-      "veces_visto": 10,
-      "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
-      "fixture_id": "401876853",
-      "ultimo_visto": "2026-10-09"
     },
     {
       "pais": "",
@@ -1020,6 +1020,15 @@
     },
     {
       "pais": "",
+      "liga": "WWCQ - UEFA, Playoff Phase - First Round - 1st Leg",
+      "liga_id": "20649",
+      "veces_visto": 3,
+      "ejemplo_partido": "Kazakhstan vs Republic of Ireland",
+      "fixture_id": "401878167",
+      "ultimo_visto": "2026-10-09"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals - 1st Leg",
       "liga_id": "22947",
       "veces_visto": 2,
@@ -1098,15 +1107,6 @@
       "ejemplo_partido": "O'Higgins vs Deportes Concepcion",
       "fixture_id": "401926700",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "WWCQ - UEFA, Playoff Phase - First Round - 1st Leg",
-      "liga_id": "20649",
-      "veces_visto": 2,
-      "ejemplo_partido": "Kazakhstan vs Republic of Ireland",
-      "fixture_id": "401878167",
-      "ultimo_visto": "2026-10-09"
     },
     {
       "pais": "",
