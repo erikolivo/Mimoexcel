@@ -8041,35 +8041,6 @@
       "aviso_final_enviado": true
     },
     {
-      "partido": "Malaysia vs Saudi Arabia",
-      "local": "Malaysia",
-      "visitante": "Saudi Arabia",
-      "favorito": "Saudi Arabia",
-      "no_favorito": "Malaysia",
-      "favorito_es_local": false,
-      "tipo_pronostico": "doble_oportunidad",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401929555",
-      "hora_inicio": "2026-10-09T12:00Z",
-      "fixture_id": "401929555",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "Women's International Friendly",
-      "home_id": "22036",
-      "away_id": "21932",
-      "kickoff_utc": "2026-10-09T12:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Zhejiang Professional FC vs Shanghai Port",
       "local": "Zhejiang Professional FC",
       "visitante": "Shanghai Port",
@@ -15976,6 +15947,35 @@
       ],
       "diferencia_maxima_alcanzada": 0,
       "aviso_final_enviado": true
+    },
+    {
+      "partido": "Malaysia vs Saudi Arabia",
+      "local": "Malaysia",
+      "visitante": "Saudi Arabia",
+      "favorito": "Saudi Arabia",
+      "no_favorito": "Malaysia",
+      "favorito_es_local": false,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 3,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "ALTA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401929555",
+      "hora_inicio": "2026-10-09T12:00Z",
+      "fixture_id": "401929555",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "Women's International Friendly",
+      "home_id": "22036",
+      "away_id": "21932",
+      "kickoff_utc": "2026-10-09T12:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
     },
     {
       "partido": "Albania vs Wales",
@@ -85758,7 +85758,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
