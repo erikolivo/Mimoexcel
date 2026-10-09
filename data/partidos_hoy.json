@@ -18612,99 +18612,6 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
-      "partido": "Syracuse vs Stanford",
-      "local": "Syracuse",
-      "visitante": "Stanford",
-      "favorito": "Stanford",
-      "no_favorito": "Syracuse",
-      "favorito_es_local": false,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401889841",
-      "hora_inicio": "2026-10-08T23:00Z",
-      "fixture_id": "401889841",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "NCAAW Soccer",
-      "home_id": "20400",
-      "away_id": "20396",
-      "kickoff_utc": "2026-10-08T23:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [
-        {
-          "minuto": "5'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "10'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "14'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "18'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "23'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "28'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "33'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        }
-      ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Texas Southern vs Southern",
       "local": "Texas Southern",
       "visitante": "Southern",
@@ -20198,6 +20105,99 @@
       "grupo_destacado": 1
     },
     {
+      "partido": "Syracuse vs Stanford",
+      "local": "Syracuse",
+      "visitante": "Stanford",
+      "favorito": "Stanford",
+      "no_favorito": "Syracuse",
+      "favorito_es_local": false,
+      "tipo_pronostico": "favorito_directo",
+      "confianza_estrellas": 3,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "ALTA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401889841",
+      "hora_inicio": "2026-10-08T23:00Z",
+      "fixture_id": "401889841",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "NCAAW Soccer",
+      "home_id": "20400",
+      "away_id": "20396",
+      "kickoff_utc": "2026-10-08T23:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [
+        {
+          "minuto": "5'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "10'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "14'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "18'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "23'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "28'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "33'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
+    },
+    {
       "partido": "Kansas State vs Kansas",
       "local": "Kansas State",
       "visitante": "Kansas",
@@ -20321,90 +20321,6 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "Halftime"
-        }
-      ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
-      "partido": "Blooming vs Bolívar",
-      "local": "Blooming",
-      "visitante": "Bolívar",
-      "favorito": "Bolívar",
-      "no_favorito": "Blooming",
-      "favorito_es_local": false,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401907799",
-      "hora_inicio": "2026-10-09T00:00Z",
-      "fixture_id": "401907799",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "Copa Bolivia, Group A",
-      "home_id": "6047",
-      "away_id": "2681",
-      "kickoff_utc": "2026-10-09T00:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [
-        {
-          "minuto": "2'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "7'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "12'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "17'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "22'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "28'",
-          "goles_local": 1,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
@@ -21293,6 +21209,90 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
+      "partido": "Blooming vs Bolívar",
+      "local": "Blooming",
+      "visitante": "Bolívar",
+      "favorito": "Bolívar",
+      "no_favorito": "Blooming",
+      "favorito_es_local": false,
+      "tipo_pronostico": "favorito_directo",
+      "confianza_estrellas": 3,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "ALTA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401907799",
+      "hora_inicio": "2026-10-09T00:00Z",
+      "fixture_id": "401907799",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "Copa Bolivia, Group A",
+      "home_id": "6047",
+      "away_id": "2681",
+      "kickoff_utc": "2026-10-09T00:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [
+        {
+          "minuto": "2'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "7'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "12'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "17'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "22'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "28'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
+    },
+    {
       "partido": "Fluminense vs Coritiba",
       "local": "Fluminense",
       "visitante": "Coritiba",
@@ -21789,7 +21789,5 @@
       "es_destacado": true,
       "grupo_destacado": 2
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
