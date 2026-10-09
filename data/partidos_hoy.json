@@ -32182,6 +32182,35 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
+      "partido": "Malta vs Luxembourg",
+      "local": "Malta",
+      "visitante": "Luxembourg",
+      "favorito": "Malta",
+      "no_favorito": "Luxembourg",
+      "favorito_es_local": true,
+      "tipo_pronostico": "favorito_directo",
+      "confianza_estrellas": 3,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "ALTA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401917872",
+      "hora_inicio": "2026-10-09T17:00Z",
+      "fixture_id": "401917872",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "Women's International Friendly",
+      "home_id": "20864",
+      "away_id": "20967",
+      "kickoff_utc": "2026-10-09T17:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
+    },
+    {
       "partido": "Czechia vs Scotland",
       "local": "Czechia",
       "visitante": "Scotland",
@@ -34270,35 +34299,6 @@
           "presion_lado": 14.89460819786579
         }
       ],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
-      "partido": "Malta vs Luxembourg",
-      "local": "Malta",
-      "visitante": "Luxembourg",
-      "favorito": "Malta",
-      "no_favorito": "Luxembourg",
-      "favorito_es_local": true,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401917872",
-      "hora_inicio": "2026-10-09T17:00Z",
-      "fixture_id": "401917872",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "Women's International Friendly",
-      "home_id": "20864",
-      "away_id": "20967",
-      "kickoff_utc": "2026-10-09T17:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
     {
@@ -45846,7 +45846,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
