@@ -12873,8 +12873,29 @@
     ]
   },
   "3384_jpn.1_2026": {
-    "fecha_cache": "2026-09-06T13:44:01.943648",
+    "fecha_cache": "2026-10-10T06:36:23.470015",
     "historial": [
+      {
+        "fecha": "2026-09-19",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-06",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-02",
         "goles_favor": 1,
@@ -13053,8 +13074,22 @@
     ]
   },
   "3385_jpn.1_2026": {
-    "fecha_cache": "2026-09-06T13:43:57.043765",
+    "fecha_cache": "2026-10-10T06:36:23.775330",
     "historial": [
+      {
+        "fecha": "2026-09-19",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
+      {
+        "fecha": "2026-09-13",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 1,
