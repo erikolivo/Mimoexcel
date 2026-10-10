@@ -39,6 +39,15 @@
     },
     {
       "pais": "",
+      "liga": "USL Championship",
+      "liga_id": "4002",
+      "veces_visto": 275,
+      "ejemplo_partido": "New Mexico United vs Indy Eleven",
+      "fixture_id": "401842218",
+      "ultimo_visto": "2026-10-10"
+    },
+    {
+      "pais": "",
       "liga": "Scottish Cup, First Round",
       "liga_id": "3959",
       "veces_visto": 273,
@@ -50,25 +59,16 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 265,
+      "veces_visto": 273,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
       "ultimo_visto": "2026-10-10"
     },
     {
       "pais": "",
-      "liga": "USL Championship",
-      "liga_id": "4002",
-      "veces_visto": 264,
-      "ejemplo_partido": "New Mexico United vs Indy Eleven",
-      "fixture_id": "401842218",
-      "ultimo_visto": "2026-10-10"
-    },
-    {
-      "pais": "",
       "liga": "USL League One",
       "liga_id": "19915",
-      "veces_visto": 185,
+      "veces_visto": 192,
       "ejemplo_partido": "One Knoxville vs FC Naples",
       "fixture_id": "401842107",
       "ultimo_visto": "2026-10-10"
@@ -86,7 +86,7 @@
       "pais": "",
       "liga": "Liga de Expansión MX",
       "liga_id": "3932",
-      "veces_visto": 169,
+      "veces_visto": 171,
       "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
       "fixture_id": "401886377",
       "ultimo_visto": "2026-10-10"
@@ -309,6 +309,15 @@
     },
     {
       "pais": "",
+      "liga": "USL Super League",
+      "liga_id": "23633",
+      "veces_visto": 58,
+      "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
+      "fixture_id": "401878641",
+      "ultimo_visto": "2026-10-10"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League B, Group D",
       "liga_id": "19267",
       "veces_visto": 57,
@@ -333,15 +342,6 @@
       "ejemplo_partido": "Bonaire vs St. Kitts and Nevis",
       "fixture_id": "401900627",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "USL Super League",
-      "liga_id": "23633",
-      "veces_visto": 56,
-      "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
-      "fixture_id": "401878641",
-      "ultimo_visto": "2026-10-10"
     },
     {
       "pais": "",
