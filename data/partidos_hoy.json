@@ -3009,7 +3009,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "FC Tokyo vs Urawa Red Diamonds",
@@ -4601,7 +4602,8 @@
           "presion_lado": 4.741173157302029
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Kyoto Sanga vs Machida Zelvia",
