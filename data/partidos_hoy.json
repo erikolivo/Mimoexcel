@@ -70011,36 +70011,6 @@
       "aviso_final_enviado": true
     },
     {
-      "partido": "Abha vs Al Faisaly",
-      "local": "Abha",
-      "visitante": "Al Faisaly",
-      "favorito": "Abha",
-      "no_favorito": "Al Faisaly",
-      "favorito_es_local": true,
-      "tipo_pronostico": "doble_oportunidad",
-      "confianza_estrellas": 1,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "BAJA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401900914",
-      "hora_inicio": "2026-10-11T15:25Z",
-      "fixture_id": "401900914",
-      "liga_slug": "ksa.1",
-      "liga_pais": "Saudi Arabia",
-      "liga_nombre": "Pro League",
-      "home_id": "21833",
-      "away_id": "21446",
-      "kickoff_utc": "2026-10-11T15:25Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
-    },
-    {
       "partido": "Liverpool vs Manchester City",
       "local": "Liverpool",
       "visitante": "Manchester City",
@@ -159168,7 +159138,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }

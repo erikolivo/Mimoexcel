@@ -1,13 +1,6 @@
 [
   {
     "fecha": "2026-10-11",
-    "local": "South Florida",
-    "visitante": "Temple",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-11",
     "local": "Stetson",
     "visitante": "North Florida",
     "favorito": "VISITANTE",
@@ -598,6 +591,13 @@
     "fecha": "2026-10-11",
     "local": "UMBC",
     "visitante": "Binghamton",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-11",
+    "local": "Abha",
+    "visitante": "Al Faisaly",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
@@ -1226,6 +1226,13 @@
   },
   {
     "fecha": "2026-10-11",
+    "local": "Oral Roberts",
+    "visitante": "Richland",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-11",
     "local": "San Pedro",
     "visitante": "Comunicaciones",
     "favorito": "LOCAL",
@@ -1264,13 +1271,6 @@
     "local": "George Mason",
     "visitante": "Stony Brook",
     "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-11",
-    "local": "Oral Roberts",
-    "visitante": "Richland",
-    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
