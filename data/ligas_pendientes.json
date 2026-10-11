@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-10",
+  "actualizado": "2026-10-11",
   "ligas": [
     {
       "pais": "",
@@ -14,10 +14,10 @@
       "pais": "",
       "liga": "Club Friendly",
       "liga_id": "19834",
-      "veces_visto": 1400,
+      "veces_visto": 1402,
       "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
       "fixture_id": "401914230",
-      "ultimo_visto": "2026-10-09"
+      "ultimo_visto": "2026-10-11"
     },
     {
       "pais": "",
@@ -50,10 +50,10 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 321,
+      "veces_visto": 323,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
-      "ultimo_visto": "2026-10-10"
+      "ultimo_visto": "2026-10-11"
     },
     {
       "pais": "",
@@ -68,10 +68,19 @@
       "pais": "",
       "liga": "USL League One",
       "liga_id": "19915",
-      "veces_visto": 234,
+      "veces_visto": 235,
       "ejemplo_partido": "One Knoxville vs FC Naples",
       "fixture_id": "401842107",
-      "ultimo_visto": "2026-10-10"
+      "ultimo_visto": "2026-10-11"
+    },
+    {
+      "pais": "",
+      "liga": "Argentine Nacional B",
+      "liga_id": "3903",
+      "veces_visto": 189,
+      "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
+      "fixture_id": "401843983",
+      "ultimo_visto": "2026-10-11"
     },
     {
       "pais": "",
@@ -81,15 +90,6 @@
       "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
       "fixture_id": "401886377",
       "ultimo_visto": "2026-10-10"
-    },
-    {
-      "pais": "",
-      "liga": "Argentine Nacional B",
-      "liga_id": "3903",
-      "veces_visto": 177,
-      "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
-      "fixture_id": "401843983",
-      "ultimo_visto": "2026-10-05"
     },
     {
       "pais": "",
@@ -113,10 +113,10 @@
       "pais": "",
       "liga": "Copa del Rey, Qualifying Round",
       "liga_id": "3951",
-      "veces_visto": 140,
+      "veces_visto": 142,
       "ejemplo_partido": "Anaitasuna vs CD Tedeón",
       "fixture_id": "401918750",
-      "ultimo_visto": "2026-10-04"
+      "ultimo_visto": "2026-10-11"
     },
     {
       "pais": "",
@@ -174,21 +174,21 @@
     },
     {
       "pais": "",
+      "liga": "Argentine Primera B",
+      "liga_id": "3904",
+      "veces_visto": 84,
+      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
+      "fixture_id": "401845087",
+      "ultimo_visto": "2026-10-11"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League A, Group A",
       "liga_id": "19267",
       "veces_visto": 83,
       "ejemplo_partido": "Costa Rica vs Curaçao",
       "fixture_id": "401900638",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "Argentine Primera B",
-      "liga_id": "3904",
-      "veces_visto": 83,
-      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
-      "fixture_id": "401845087",
-      "ultimo_visto": "2026-10-09"
     },
     {
       "pais": "",
@@ -239,10 +239,10 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 70,
+      "veces_visto": 71,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
-      "ultimo_visto": "2026-10-10"
+      "ultimo_visto": "2026-10-11"
     },
     {
       "pais": "",
@@ -579,21 +579,21 @@
     },
     {
       "pais": "",
+      "liga": "Chinese Super League",
+      "liga_id": "8376",
+      "veces_visto": 38,
+      "ejemplo_partido": "Zhejiang Professional FC vs Wuhan Three Towns",
+      "fixture_id": "401861443",
+      "ultimo_visto": "2026-10-11"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group G",
       "liga_id": "20114",
       "veces_visto": 36,
       "ejemplo_partido": "Netherlands U21 vs Norway U21",
       "fixture_id": "732414",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Chinese Super League",
-      "liga_id": "8376",
-      "veces_visto": 35,
-      "ejemplo_partido": "Zhejiang Professional FC vs Wuhan Three Towns",
-      "fixture_id": "401861443",
-      "ultimo_visto": "2026-10-09"
     },
     {
       "pais": "",
@@ -849,6 +849,15 @@
     },
     {
       "pais": "",
+      "liga": "Austrian Bundesliga",
+      "liga_id": "3907",
+      "veces_visto": 13,
+      "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
+      "fixture_id": "401881790",
+      "ultimo_visto": "2026-10-11"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group F",
       "liga_id": "8315",
       "veces_visto": 12,
@@ -882,15 +891,6 @@
       "ejemplo_partido": "The Panthers FC vs ASPAC",
       "fixture_id": "401909271",
       "ultimo_visto": "2026-09-16"
-    },
-    {
-      "pais": "",
-      "liga": "Austrian Bundesliga",
-      "liga_id": "3907",
-      "veces_visto": 10,
-      "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
-      "fixture_id": "401881790",
-      "ultimo_visto": "2026-09-18"
     },
     {
       "pais": "",
