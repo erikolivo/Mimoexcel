@@ -232420,6 +232420,73 @@
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "75'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "8",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "6",
+            "saves": "1",
+            "possessionPct": "64.4",
+            "totalShots": "12",
+            "shotsOnTarget": "8",
+            "shotPct": "0.7",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "337",
+            "totalPasses": "415",
+            "passPct": "0.8",
+            "accurateCrosses": "5",
+            "totalCrosses": "16",
+            "crossPct": "0.3",
+            "totalLongBalls": "41",
+            "accurateLongBalls": "19",
+            "longballPct": "0.5",
+            "blockedShots": "0",
+            "effectiveTackles": "11",
+            "totalTackles": "15",
+            "tacklePct": "0.7",
+            "interceptions": "7",
+            "effectiveClearance": "15",
+            "totalClearance": "15"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "13",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "3",
+            "saves": "5",
+            "possessionPct": "35.6",
+            "totalShots": "7",
+            "shotsOnTarget": "2",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "163",
+            "totalPasses": "229",
+            "passPct": "0.7",
+            "accurateCrosses": "3",
+            "totalCrosses": "9",
+            "crossPct": "0.3",
+            "totalLongBalls": "57",
+            "accurateLongBalls": "25",
+            "longballPct": "0.4",
+            "blockedShots": "4",
+            "effectiveTackles": "13",
+            "totalTackles": "19",
+            "tacklePct": "0.7",
+            "interceptions": "14",
+            "effectiveClearance": "15",
+            "totalClearance": "15"
+          },
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [
@@ -232466,5 +232533,7 @@
       ],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "predicciones_activas": {},
+  "historial_predicciones": {}
 }
