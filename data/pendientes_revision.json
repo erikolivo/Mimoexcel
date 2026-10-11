@@ -218,13 +218,6 @@
   },
   {
     "fecha": "2026-10-11",
-    "local": "SF Austin",
-    "visitante": "Lamar",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-11",
     "local": "TCU",
     "visitante": "Texas Tech",
     "favorito": "DC VISITANTE",
@@ -382,6 +375,13 @@
     "local": "San Diego",
     "visitante": "Denver",
     "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-11",
+    "local": "SF Austin",
+    "visitante": "Lamar",
+    "favorito": "VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
