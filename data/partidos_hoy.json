@@ -4373,7 +4373,9 @@
         }
       ],
       "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
+      "aviso_final_enviado": true,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Konyaspor vs Istanbul Basaksehir",
@@ -8943,7 +8945,9 @@
         }
       ],
       "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
+      "aviso_final_enviado": true,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Akhmat Grozny vs FC Baltika Kaliningrad",
@@ -13360,7 +13364,9 @@
         }
       ],
       "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
+      "aviso_final_enviado": true,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "St. Pauli vs Karlsruher SC",
@@ -22492,7 +22498,9 @@
       ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
+      "aviso_final_enviado": true,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Hammarby IF vs Djurgården",
@@ -51276,7 +51284,9 @@
       ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
+      "aviso_final_enviado": true,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Iraklis vs Levadiakos",
@@ -69449,7 +69459,9 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "SC Freiburg vs Schalke 04",
@@ -70438,7 +70450,9 @@
           "presion_lado": 4.0294806082624515
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Everton CD vs La Serena",
@@ -73417,7 +73431,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "KV Mechelen vs Sint-Truidense",
@@ -73562,7 +73578,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Atlanta vs San Martín (Tucumán)",
