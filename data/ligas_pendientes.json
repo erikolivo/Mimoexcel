@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "Club Friendly",
       "liga_id": "19834",
-      "veces_visto": 1412,
+      "veces_visto": 1414,
       "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
       "fixture_id": "401914230",
       "ultimo_visto": "2026-10-11"
@@ -50,7 +50,7 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 333,
+      "veces_visto": 335,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
       "ultimo_visto": "2026-10-11"
@@ -68,7 +68,7 @@
       "pais": "",
       "liga": "Argentine Nacional B",
       "liga_id": "3903",
-      "veces_visto": 249,
+      "veces_visto": 261,
       "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
       "fixture_id": "401843983",
       "ultimo_visto": "2026-10-11"
@@ -77,7 +77,7 @@
       "pais": "",
       "liga": "USL League One",
       "liga_id": "19915",
-      "veces_visto": 240,
+      "veces_visto": 241,
       "ejemplo_partido": "One Knoxville vs FC Naples",
       "fixture_id": "401842107",
       "ultimo_visto": "2026-10-11"
@@ -104,7 +104,7 @@
       "pais": "",
       "liga": "Copa del Rey, Qualifying Round",
       "liga_id": "3951",
-      "veces_visto": 152,
+      "veces_visto": 154,
       "ejemplo_partido": "Anaitasuna vs CD Tedeón",
       "fixture_id": "401918750",
       "ultimo_visto": "2026-10-11"
@@ -165,21 +165,21 @@
     },
     {
       "pais": "",
+      "liga": "Argentine Primera B",
+      "liga_id": "3904",
+      "veces_visto": 90,
+      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
+      "fixture_id": "401845087",
+      "ultimo_visto": "2026-10-11"
+    },
+    {
+      "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
       "veces_visto": 89,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "Argentine Primera B",
-      "liga_id": "3904",
-      "veces_visto": 89,
-      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
-      "fixture_id": "401845087",
-      "ultimo_visto": "2026-10-11"
     },
     {
       "pais": "",
@@ -221,7 +221,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 76,
+      "veces_visto": 77,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-10-11"
@@ -345,6 +345,15 @@
     },
     {
       "pais": "",
+      "liga": "Chinese Super League",
+      "liga_id": "8376",
+      "veces_visto": 56,
+      "ejemplo_partido": "Zhejiang Professional FC vs Wuhan Three Towns",
+      "fixture_id": "401861443",
+      "ultimo_visto": "2026-10-11"
+    },
+    {
+      "pais": "",
       "liga": "UEFA Nations League, Group C1",
       "liga_id": "2395",
       "veces_visto": 55,
@@ -414,15 +423,6 @@
       "ejemplo_partido": "Czechia vs Croatia",
       "fixture_id": "401861063",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Chinese Super League",
-      "liga_id": "8376",
-      "veces_visto": 53,
-      "ejemplo_partido": "Zhejiang Professional FC vs Wuhan Three Towns",
-      "fixture_id": "401861443",
-      "ultimo_visto": "2026-10-11"
     },
     {
       "pais": "",
@@ -624,21 +624,21 @@
     },
     {
       "pais": "",
+      "liga": "Austrian Bundesliga",
+      "liga_id": "3907",
+      "veces_visto": 31,
+      "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
+      "fixture_id": "401881790",
+      "ultimo_visto": "2026-10-11"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group I",
       "liga_id": "20114",
       "veces_visto": 30,
       "ejemplo_partido": "Belgium U21 vs Belarus U21",
       "fixture_id": "732409",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Austrian Bundesliga",
-      "liga_id": "3907",
-      "veces_visto": 28,
-      "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
-      "fixture_id": "401881790",
-      "ultimo_visto": "2026-10-11"
     },
     {
       "pais": "",
