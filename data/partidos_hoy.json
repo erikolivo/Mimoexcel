@@ -44934,35 +44934,6 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
-      "partido": "All Boys vs Godoy Cruz Antonio Tomba",
-      "local": "All Boys",
-      "visitante": "Godoy Cruz Antonio Tomba",
-      "favorito": "Godoy Cruz Antonio Tomba",
-      "no_favorito": "All Boys",
-      "favorito_es_local": false,
-      "tipo_pronostico": "doble_oportunidad",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401844199",
-      "hora_inicio": "2026-10-12T22:00Z",
-      "fixture_id": "401844199",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "Argentine Nacional B",
-      "home_id": "9786",
-      "away_id": "6756",
-      "kickoff_utc": "2026-10-12T22:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Novorizontino vs Ponte Preta",
       "local": "Novorizontino",
       "visitante": "Ponte Preta",
@@ -45695,6 +45666,35 @@
       "grupo_destacado": 3
     },
     {
+      "partido": "All Boys vs Godoy Cruz Antonio Tomba",
+      "local": "All Boys",
+      "visitante": "Godoy Cruz Antonio Tomba",
+      "favorito": "Godoy Cruz Antonio Tomba",
+      "no_favorito": "All Boys",
+      "favorito_es_local": false,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 3,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "ALTA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401844199",
+      "hora_inicio": "2026-10-12T22:00Z",
+      "fixture_id": "401844199",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "Argentine Nacional B",
+      "home_id": "9786",
+      "away_id": "6756",
+      "kickoff_utc": "2026-10-12T22:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
+    },
+    {
       "partido": "Chapecoense vs Athletico-PR",
       "local": "Chapecoense",
       "visitante": "Athletico-PR",
@@ -45965,7 +45965,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
