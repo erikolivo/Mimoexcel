@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 1985,
+      "veces_visto": 1987,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-10-12"
@@ -23,7 +23,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 1373,
+      "veces_visto": 1376,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-12"
@@ -41,7 +41,7 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 351,
+      "veces_visto": 356,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
       "ultimo_visto": "2026-10-12"
@@ -59,7 +59,7 @@
       "pais": "",
       "liga": "Argentine Nacional B",
       "liga_id": "3903",
-      "veces_visto": 301,
+      "veces_visto": 303,
       "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
       "fixture_id": "401843983",
       "ultimo_visto": "2026-10-12"
@@ -156,21 +156,21 @@
     },
     {
       "pais": "",
+      "liga": "Argentine Primera B",
+      "liga_id": "3904",
+      "veces_visto": 99,
+      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
+      "fixture_id": "401845087",
+      "ultimo_visto": "2026-10-12"
+    },
+    {
+      "pais": "",
       "liga": "Salvadoran Primera",
       "liga_id": "3943",
       "veces_visto": 97,
       "ejemplo_partido": "Inca Aruba vs Atletico Balboa",
       "fixture_id": "401899791",
       "ultimo_visto": "2026-10-09"
-    },
-    {
-      "pais": "",
-      "liga": "Argentine Primera B",
-      "liga_id": "3904",
-      "veces_visto": 97,
-      "ejemplo_partido": "Ituzaingó vs Comunicaciones",
-      "fixture_id": "401845087",
-      "ultimo_visto": "2026-10-12"
     },
     {
       "pais": "",
@@ -597,6 +597,15 @@
     },
     {
       "pais": "",
+      "liga": "Bolivian Liga Profesional",
+      "liga_id": "620",
+      "veces_visto": 37,
+      "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
+      "fixture_id": "401906485",
+      "ultimo_visto": "2026-10-12"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group G",
       "liga_id": "20114",
       "veces_visto": 36,
@@ -606,11 +615,11 @@
     },
     {
       "pais": "",
-      "liga": "Bolivian Liga Profesional",
-      "liga_id": "620",
-      "veces_visto": 35,
-      "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
-      "fixture_id": "401906485",
+      "liga": "AFC Champions League Elite, West Region",
+      "liga_id": "3902",
+      "veces_visto": 34,
+      "ejemplo_partido": "Neftchi Fergana vs Air Force Club",
+      "fixture_id": "401912664",
       "ultimo_visto": "2026-10-12"
     },
     {
@@ -639,15 +648,6 @@
       "ejemplo_partido": "Belgium U21 vs Belarus U21",
       "fixture_id": "732409",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Elite, West Region",
-      "liga_id": "3902",
-      "veces_visto": 28,
-      "ejemplo_partido": "Neftchi Fergana vs Air Force Club",
-      "fixture_id": "401912664",
-      "ultimo_visto": "2026-10-12"
     },
     {
       "pais": "",
@@ -1029,6 +1029,15 @@
     },
     {
       "pais": "",
+      "liga": "Indian Super League",
+      "liga_id": "8316",
+      "veces_visto": 3,
+      "ejemplo_partido": "NorthEast United FC vs Mohun Bagan Super Giant",
+      "fixture_id": "401925436",
+      "ultimo_visto": "2026-10-12"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals - 1st Leg",
       "liga_id": "22947",
       "veces_visto": 2,
@@ -1107,15 +1116,6 @@
       "ejemplo_partido": "O'Higgins vs Deportes Concepcion",
       "fixture_id": "401926700",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Indian Super League",
-      "liga_id": "8316",
-      "veces_visto": 2,
-      "ejemplo_partido": "NorthEast United FC vs Mohun Bagan Super Giant",
-      "fixture_id": "401925436",
-      "ultimo_visto": "2026-10-12"
     },
     {
       "pais": "",
