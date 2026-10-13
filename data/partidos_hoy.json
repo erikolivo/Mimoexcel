@@ -92777,6 +92777,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [],
@@ -92906,6 +92915,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [],
@@ -93020,6 +93038,15 @@
         },
         {
           "minuto": "40'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "44'",
           "goles_local": 2,
           "goles_visitante": 0,
           "stats_local": {},
@@ -93458,6 +93485,73 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "34'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "3",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "3",
+            "possessionPct": "51.2",
+            "totalShots": "4",
+            "shotsOnTarget": "2",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "123",
+            "totalPasses": "138",
+            "passPct": "0.9",
+            "accurateCrosses": "4",
+            "totalCrosses": "10",
+            "crossPct": "0.4",
+            "totalLongBalls": "23",
+            "accurateLongBalls": "15",
+            "longballPct": "0.7",
+            "blockedShots": "0",
+            "effectiveTackles": "6",
+            "totalTackles": "7",
+            "tacklePct": "0.9",
+            "interceptions": "1",
+            "effectiveClearance": "6",
+            "totalClearance": "6"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "7",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "3",
+            "wonCorners": "0",
+            "saves": "1",
+            "possessionPct": "48.8",
+            "totalShots": "5",
+            "shotsOnTarget": "4",
+            "shotPct": "0.8",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "1",
+            "accuratePasses": "127",
+            "totalPasses": "143",
+            "passPct": "0.9",
+            "accurateCrosses": "0",
+            "totalCrosses": "1",
+            "crossPct": "0.0",
+            "totalLongBalls": "11",
+            "accurateLongBalls": "6",
+            "longballPct": "0.5",
+            "blockedShots": "0",
+            "effectiveTackles": "4",
+            "totalTackles": "6",
+            "tacklePct": "0.7",
+            "interceptions": "2",
+            "effectiveClearance": "5",
+            "totalClearance": "5"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
@@ -93488,7 +93582,17 @@
       "kickoff_utc": "2026-10-13T23:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "4'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
