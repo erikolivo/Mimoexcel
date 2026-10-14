@@ -100334,11 +100334,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 7.7360387741484296
         },
         {
@@ -100354,15 +100354,16 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 10.38181368894407
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Panama vs New Zealand",
@@ -100488,6 +100489,15 @@
         },
         {
           "minuto": "25'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "30'",
           "goles_local": 0,
           "goles_visitante": 0,
           "stats_local": {},
