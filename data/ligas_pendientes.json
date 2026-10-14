@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 1469,
+      "veces_visto": 1475,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-13"
@@ -32,7 +32,7 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 547,
+      "veces_visto": 560,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
       "ultimo_visto": "2026-10-13"
@@ -48,21 +48,21 @@
     },
     {
       "pais": "",
+      "liga": "WWCQ - UEFA, Playoff Phase - First Round",
+      "liga_id": "20649",
+      "veces_visto": 342,
+      "ejemplo_partido": "Kazakhstan vs Republic of Ireland",
+      "fixture_id": "401878167",
+      "ultimo_visto": "2026-10-13"
+    },
+    {
+      "pais": "",
       "liga": "USL Championship",
       "liga_id": "4002",
       "veces_visto": 341,
       "ejemplo_partido": "New Mexico United vs Indy Eleven",
       "fixture_id": "401842218",
       "ultimo_visto": "2026-10-10"
-    },
-    {
-      "pais": "",
-      "liga": "WWCQ - UEFA, Playoff Phase - First Round",
-      "liga_id": "20649",
-      "veces_visto": 326,
-      "ejemplo_partido": "Kazakhstan vs Republic of Ireland",
-      "fixture_id": "401878167",
-      "ultimo_visto": "2026-10-13"
     },
     {
       "pais": "",
@@ -95,7 +95,7 @@
       "pais": "",
       "liga": "Liga de Expansión MX",
       "liga_id": "3932",
-      "veces_visto": 195,
+      "veces_visto": 196,
       "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
       "fixture_id": "401886377",
       "ultimo_visto": "2026-10-13"
@@ -167,7 +167,7 @@
       "pais": "",
       "liga": "AFC Champions League Elite, West Region",
       "liga_id": "3902",
-      "veces_visto": 100,
+      "veces_visto": 102,
       "ejemplo_partido": "Neftchi Fergana vs Air Force Club",
       "fixture_id": "401912664",
       "ultimo_visto": "2026-10-13"
@@ -183,21 +183,21 @@
     },
     {
       "pais": "",
+      "liga": "AFC Champions League Elite, East Region",
+      "liga_id": "3902",
+      "veces_visto": 94,
+      "ejemplo_partido": "Daejeon Hana Citizen vs Kyoto Sanga",
+      "fixture_id": "401912672",
+      "ultimo_visto": "2026-10-13"
+    },
+    {
+      "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
       "veces_visto": 89,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Elite, East Region",
-      "liga_id": "3902",
-      "veces_visto": 88,
-      "ejemplo_partido": "Daejeon Hana Citizen vs Kyoto Sanga",
-      "fixture_id": "401912672",
-      "ultimo_visto": "2026-10-13"
     },
     {
       "pais": "",
@@ -579,6 +579,15 @@
     },
     {
       "pais": "",
+      "liga": "Liga FPD",
+      "liga_id": "4005",
+      "veces_visto": 41,
+      "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
+      "fixture_id": "401876853",
+      "ultimo_visto": "2026-10-13"
+    },
+    {
+      "pais": "",
       "liga": "KNVB Beker, Second Preliminary Round",
       "liga_id": "3957",
       "veces_visto": 40,
@@ -603,15 +612,6 @@
       "ejemplo_partido": "Worcester City vs Stratford Town",
       "fixture_id": "401917298",
       "ultimo_visto": "2026-09-29"
-    },
-    {
-      "pais": "",
-      "liga": "Liga FPD",
-      "liga_id": "4005",
-      "veces_visto": 39,
-      "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
-      "fixture_id": "401876853",
-      "ultimo_visto": "2026-10-13"
     },
     {
       "pais": "",
@@ -671,7 +671,7 @@
       "pais": "",
       "liga": "AFC Champions League Two, Group D",
       "liga_id": "2466",
-      "veces_visto": 28,
+      "veces_visto": 30,
       "ejemplo_partido": "Al Hussein vs SC East Bengal",
       "fixture_id": "401912812",
       "ultimo_visto": "2026-10-13"
