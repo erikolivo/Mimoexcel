@@ -17768,7 +17768,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Aston Villa vs Fenerbahce",
@@ -22303,7 +22304,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Shakhtar Donetsk vs AEK Athens",
@@ -23895,7 +23897,8 @@
           "presion_lado": 11.050681410735603
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Lincoln City vs West Ham United",
@@ -25527,7 +25530,8 @@
           "presion_lado": 20.864216756399713
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Saint Peter's vs Manhattan",
@@ -25746,6 +25750,15 @@
         },
         {
           "minuto": "72'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "75'",
           "goles_local": 0,
           "goles_visitante": 1,
           "stats_local": {},
@@ -25974,6 +25987,15 @@
         },
         {
           "minuto": "76'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "80'",
           "goles_local": 1,
           "goles_visitante": 0,
           "stats_local": {},
