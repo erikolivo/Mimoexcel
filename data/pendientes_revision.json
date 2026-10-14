@@ -1,13 +1,6 @@
 [
   {
     "fecha": "2026-10-13",
-    "local": "Wake Forest",
-    "visitante": "UNC Asheville",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-13",
     "local": "W Michigan",
     "visitante": "Holy Cross (IN)",
     "favorito": "DC VISITANTE",
@@ -1397,6 +1390,13 @@
     "local": "W Michigan",
     "visitante": "Holy Cross (IN)",
     "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-14",
+    "local": "Santa Fe",
+    "visitante": "Jaguares",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   }
 ]

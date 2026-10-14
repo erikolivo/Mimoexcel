@@ -32111,35 +32111,6 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
-      "partido": "Independiente Santa Fe vs Jaguares de Córdoba",
-      "local": "Independiente Santa Fe",
-      "visitante": "Jaguares de Córdoba",
-      "favorito": "Independiente Santa Fe",
-      "no_favorito": "Jaguares de Córdoba",
-      "favorito_es_local": true,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401877844",
-      "hora_inicio": "2026-10-14T23:30Z",
-      "fixture_id": "401877844",
-      "liga_slug": "col.1",
-      "liga_pais": "Colombia",
-      "liga_nombre": "Primera A",
-      "home_id": "5488",
-      "away_id": "10309",
-      "kickoff_utc": "2026-10-14T23:30Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Chicago Fire FC vs Philadelphia Union",
       "local": "Chicago Fire FC",
       "visitante": "Philadelphia Union",
@@ -32963,7 +32934,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
