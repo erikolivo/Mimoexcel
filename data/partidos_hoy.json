@@ -3089,11 +3089,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "acierto",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "gol_fav",
+          "resolucion_notificada": true,
+          "acierto": true,
           "presion_lado": 8.308847763108503
         },
         {
@@ -3109,15 +3109,16 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "acierto",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "gol_fav",
+          "resolucion_notificada": true,
+          "acierto": true,
           "presion_lado": 17.987596548378264
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Kuching City vs Kitchee",
@@ -4688,7 +4689,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Preah Khan Reach Svay Rieng FC vs Shanghai Shenhua",
@@ -6259,7 +6261,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Al Faisaly vs Al Kholood",
@@ -6682,6 +6685,73 @@
             "effectiveTackles": "3",
             "totalTackles": "3",
             "tacklePct": "1.0",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "5"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "33'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "2",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "0",
+            "possessionPct": "48",
+            "totalShots": "4",
+            "shotsOnTarget": "3",
+            "shotPct": "0.8",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "109",
+            "totalPasses": "131",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "6",
+            "totalTackles": "10",
+            "tacklePct": "0.6",
+            "interceptions": "0",
+            "effectiveClearance": "0",
+            "totalClearance": "7"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "1",
+            "possessionPct": "52",
+            "totalShots": "5",
+            "shotsOnTarget": "1",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "122",
+            "totalPasses": "138",
+            "passPct": "0.9",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "0",
+            "accurateLongBalls": "0",
+            "longballPct": "0.0",
+            "blockedShots": "2",
+            "effectiveTackles": "3",
+            "totalTackles": "4",
+            "tacklePct": "0.8",
             "interceptions": "0",
             "effectiveClearance": "0",
             "totalClearance": "5"
