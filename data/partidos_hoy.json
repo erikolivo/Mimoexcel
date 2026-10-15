@@ -67811,35 +67811,6 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
-      "partido": "Wyoming vs New Mexico",
-      "local": "Wyoming",
-      "visitante": "New Mexico",
-      "favorito": "Wyoming",
-      "no_favorito": "New Mexico",
-      "favorito_es_local": true,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401901009",
-      "hora_inicio": "2026-10-15T21:00Z",
-      "fixture_id": "401901009",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "NCAAW Soccer",
-      "home_id": "20539",
-      "away_id": "20321",
-      "kickoff_utc": "2026-10-15T21:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Lindenwood vs Southern Indiana",
       "local": "Lindenwood",
       "visitante": "Southern Indiana",
@@ -70249,6 +70220,35 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
+      "partido": "James Madison vs Louisiana Tech",
+      "local": "James Madison",
+      "visitante": "Louisiana Tech",
+      "favorito": "James Madison",
+      "no_favorito": "Louisiana Tech",
+      "favorito_es_local": true,
+      "tipo_pronostico": "favorito_directo",
+      "confianza_estrellas": 3,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "ALTA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401891348",
+      "hora_inicio": "2026-10-15T23:00Z",
+      "fixture_id": "401891348",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "NCAAW Soccer",
+      "home_id": "20556",
+      "away_id": "20618",
+      "kickoff_utc": "2026-10-15T23:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
+    },
+    {
       "partido": "Club Deportivo Marathón vs Olancho FC",
       "local": "Club Deportivo Marathón",
       "visitante": "Olancho FC",
@@ -70451,7 +70451,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
