@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 2262,
+      "veces_visto": 2297,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-10-15"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 1753,
+      "veces_visto": 1762,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-15"
@@ -185,9 +185,18 @@
       "pais": "",
       "liga": "Salvadoran Primera",
       "liga_id": "3943",
-      "veces_visto": 101,
+      "veces_visto": 102,
       "ejemplo_partido": "Inca Aruba vs Atletico Balboa",
       "fixture_id": "401899791",
+      "ultimo_visto": "2026-10-15"
+    },
+    {
+      "pais": "",
+      "liga": "UEFA Conference League, League Phase",
+      "liga_id": "20296",
+      "veces_visto": 90,
+      "ejemplo_partido": "CSKA Sofia vs AS Monaco",
+      "fixture_id": "401915855",
       "ultimo_visto": "2026-10-15"
     },
     {
@@ -201,21 +210,21 @@
     },
     {
       "pais": "",
+      "liga": "Guatemalan Liga Nacional",
+      "liga_id": "3928",
+      "veces_visto": 86,
+      "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
+      "fixture_id": "401879630",
+      "ultimo_visto": "2026-10-15"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League A, Group A",
       "liga_id": "19267",
       "veces_visto": 83,
       "ejemplo_partido": "Costa Rica vs Curaçao",
       "fixture_id": "401900638",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "Guatemalan Liga Nacional",
-      "liga_id": "3928",
-      "veces_visto": 83,
-      "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
-      "fixture_id": "401879630",
-      "ultimo_visto": "2026-10-15"
     },
     {
       "pais": "",
@@ -273,18 +282,9 @@
     },
     {
       "pais": "",
-      "liga": "UEFA Conference League, League Phase",
-      "liga_id": "20296",
-      "veces_visto": 72,
-      "ejemplo_partido": "CSKA Sofia vs AS Monaco",
-      "fixture_id": "401915855",
-      "ultimo_visto": "2026-10-15"
-    },
-    {
-      "pais": "",
       "liga": "Liga FPD",
       "liga_id": "4005",
-      "veces_visto": 67,
+      "veces_visto": 68,
       "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
       "fixture_id": "401876853",
       "ultimo_visto": "2026-10-15"
@@ -705,6 +705,15 @@
     },
     {
       "pais": "",
+      "liga": "Honduran Liga Nacional",
+      "liga_id": "3929",
+      "veces_visto": 27,
+      "ejemplo_partido": "CD Estrella Roja vs Platense",
+      "fixture_id": "401915261",
+      "ultimo_visto": "2026-10-15"
+    },
+    {
+      "pais": "",
       "liga": "AFC Champions League Two, Group B",
       "liga_id": "2466",
       "veces_visto": 26,
@@ -741,18 +750,9 @@
     },
     {
       "pais": "",
-      "liga": "Honduran Liga Nacional",
-      "liga_id": "3929",
-      "veces_visto": 25,
-      "ejemplo_partido": "CD Estrella Roja vs Platense",
-      "fixture_id": "401915261",
-      "ultimo_visto": "2026-10-15"
-    },
-    {
-      "pais": "",
       "liga": "AFC Champions League Two, Group F",
       "liga_id": "2466",
-      "veces_visto": 23,
+      "veces_visto": 25,
       "ejemplo_partido": "Adelaide United vs Tai Po FC",
       "fixture_id": "401912808",
       "ultimo_visto": "2026-10-15"
@@ -885,6 +885,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Colombia, Quarterfinals",
+      "liga_id": "8313",
+      "veces_visto": 16,
+      "ejemplo_partido": "Atlético Nacional vs Independiente Medellín",
+      "fixture_id": "401929277",
+      "ultimo_visto": "2026-10-15"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group K",
       "liga_id": "8315",
       "veces_visto": 15,
@@ -900,15 +909,6 @@
       "ejemplo_partido": "FC Seoul vs Persib",
       "fixture_id": "401912817",
       "ultimo_visto": "2026-10-14"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Colombia, Quarterfinals",
-      "liga_id": "8313",
-      "veces_visto": 15,
-      "ejemplo_partido": "Atlético Nacional vs Independiente Medellín",
-      "fixture_id": "401929277",
-      "ultimo_visto": "2026-10-15"
     },
     {
       "pais": "",
@@ -939,6 +939,24 @@
     },
     {
       "pais": "",
+      "liga": "AFC Champions League Two, Group G",
+      "liga_id": "2466",
+      "veces_visto": 14,
+      "ejemplo_partido": "Machida Zelvia vs Preah Khan Reach Svay Rieng FC",
+      "fixture_id": "401912807",
+      "ultimo_visto": "2026-10-15"
+    },
+    {
+      "pais": "",
+      "liga": "AFC Champions League Two, Group H",
+      "liga_id": "2466",
+      "veces_visto": 14,
+      "ejemplo_partido": "Kitchee vs Gangwon FC",
+      "fixture_id": "401912805",
+      "ultimo_visto": "2026-10-15"
+    },
+    {
+      "pais": "",
       "liga": "USL Cup, Final",
       "liga_id": "22059",
       "veces_visto": 13,
@@ -954,24 +972,6 @@
       "ejemplo_partido": "Sudan vs Ethiopia",
       "fixture_id": "401920041",
       "ultimo_visto": "2026-09-29"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Two, Group G",
-      "liga_id": "2466",
-      "veces_visto": 12,
-      "ejemplo_partido": "Machida Zelvia vs Preah Khan Reach Svay Rieng FC",
-      "fixture_id": "401912807",
-      "ultimo_visto": "2026-10-15"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Two, Group H",
-      "liga_id": "2466",
-      "veces_visto": 12,
-      "ejemplo_partido": "Kitchee vs Gangwon FC",
-      "fixture_id": "401912805",
-      "ultimo_visto": "2026-10-15"
     },
     {
       "pais": "",
