@@ -65830,6 +65830,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'",
+          "goles_local": 0,
+          "goles_visitante": 4,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -66317,7 +66326,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Eastern Michigan vs Western Michigan",
@@ -66506,6 +66516,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "77'",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -66626,6 +66645,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+8'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         },
         {
           "minuto": "45'+8'",
@@ -66782,6 +66810,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [],
@@ -66893,6 +66930,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         },
         {
           "minuto": "45'",
@@ -67058,6 +67104,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "48'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -67196,6 +67251,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [],
@@ -67309,6 +67373,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "33'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
@@ -67339,7 +67412,17 @@
       "kickoff_utc": "2026-10-15T22:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "2'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
@@ -67368,7 +67451,17 @@
       "kickoff_utc": "2026-10-15T22:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "5'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
@@ -67406,6 +67499,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "6'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
@@ -67436,7 +67538,17 @@
       "kickoff_utc": "2026-10-15T22:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "3'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
@@ -67465,7 +67577,17 @@
       "kickoff_utc": "2026-10-15T22:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "4'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
@@ -67523,7 +67645,17 @@
       "kickoff_utc": "2026-10-15T22:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "3'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
@@ -67552,7 +67684,17 @@
       "kickoff_utc": "2026-10-15T22:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "5'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
@@ -67583,7 +67725,17 @@
       "kickoff_utc": "2026-10-15T22:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "3'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
@@ -67614,7 +67766,17 @@
       "kickoff_utc": "2026-10-15T22:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "3'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
