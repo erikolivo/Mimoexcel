@@ -72985,6 +72985,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'",
+          "goles_local": 3,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -73465,6 +73474,15 @@
         },
         {
           "minuto": "88'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'",
           "goles_local": 2,
           "goles_visitante": 1,
           "stats_local": {},
@@ -74434,7 +74452,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "James Madison vs Louisiana Tech",
@@ -74888,6 +74907,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'+5'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "In Progress"
         }
       ],
       "alertas_enviadas": [],
@@ -75029,6 +75057,15 @@
         },
         {
           "minuto": "47'",
+          "goles_local": 0,
+          "goles_visitante": 4,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "51'",
           "goles_local": 0,
           "goles_visitante": 4,
           "stats_local": {},
@@ -75631,6 +75668,73 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "43'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "3",
+            "saves": "0",
+            "possessionPct": "41.4",
+            "totalShots": "11",
+            "shotsOnTarget": "3",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "122",
+            "totalPasses": "162",
+            "passPct": "0.8",
+            "accurateCrosses": "3",
+            "totalCrosses": "10",
+            "crossPct": "0.3",
+            "totalLongBalls": "26",
+            "accurateLongBalls": "10",
+            "longballPct": "0.4",
+            "blockedShots": "4",
+            "effectiveTackles": "9",
+            "totalTackles": "15",
+            "tacklePct": "0.6",
+            "interceptions": "4",
+            "effectiveClearance": "8",
+            "totalClearance": "8"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "3",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "3",
+            "possessionPct": "58.6",
+            "totalShots": "1",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "186",
+            "totalPasses": "234",
+            "passPct": "0.8",
+            "accurateCrosses": "1",
+            "totalCrosses": "5",
+            "crossPct": "0.2",
+            "totalLongBalls": "32",
+            "accurateLongBalls": "15",
+            "longballPct": "0.5",
+            "blockedShots": "0",
+            "effectiveTackles": "7",
+            "totalTackles": "8",
+            "tacklePct": "0.9",
+            "interceptions": "8",
+            "effectiveClearance": "9",
+            "totalClearance": "9"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
@@ -75679,6 +75783,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "11'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
@@ -75718,6 +75831,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "11'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "In Progress"
         }
       ],
       "alertas_enviadas": [],
