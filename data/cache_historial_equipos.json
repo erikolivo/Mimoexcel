@@ -122783,8 +122783,15 @@
     ]
   },
   "22022_ksa.1_2026": {
-    "fecha_cache": "2026-10-09T11:34:51.401873",
+    "fecha_cache": "2026-10-16T13:32:49.214467",
     "historial": [
+      {
+        "fecha": "2026-10-09",
+        "goles_favor": 5,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-11",
         "goles_favor": 3,
