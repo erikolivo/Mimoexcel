@@ -77200,7 +77200,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Club Deportivo Olimpia vs Real España",
@@ -77392,6 +77393,15 @@
         },
         {
           "minuto": "69'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "74'",
           "goles_local": 2,
           "goles_visitante": 1,
           "stats_local": {},
