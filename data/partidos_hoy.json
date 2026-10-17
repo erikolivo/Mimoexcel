@@ -55727,262 +55727,6 @@
       "aviso_final_enviado": true
     },
     {
-      "partido": "Rutgers vs Indiana",
-      "local": "Rutgers",
-      "visitante": "Indiana",
-      "favorito": "Indiana",
-      "no_favorito": "Rutgers",
-      "favorito_es_local": false,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401891000",
-      "hora_inicio": "2026-10-16T23:00Z",
-      "fixture_id": "401891000",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "NCAAM Soccer",
-      "home_id": "5650",
-      "away_id": "5585",
-      "kickoff_utc": "2026-10-16T23:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [
-        {
-          "minuto": "2'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "7'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "11'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "16'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "21'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "27'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "31'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "35'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "38'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "43'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "45'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "Halftime"
-        },
-        {
-          "minuto": "45'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "Halftime"
-        },
-        {
-          "minuto": "45'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "Halftime"
-        },
-        {
-          "minuto": "46'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "51'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "55'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "60'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "65'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "70'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "73'",
-          "goles_local": 1,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "73'",
-          "goles_local": 1,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "77'",
-          "goles_local": 1,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "81'",
-          "goles_local": 1,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "85'",
-          "goles_local": 1,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "90'",
-          "goles_local": 1,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        }
-      ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
-    },
-    {
       "partido": "West Virginia vs Kentucky",
       "local": "West Virginia",
       "visitante": "Kentucky",
@@ -62962,6 +62706,262 @@
           "minuto": "90'",
           "goles_local": 2,
           "goles_visitante": 3,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        }
+      ],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
+    },
+    {
+      "partido": "Rutgers vs Indiana",
+      "local": "Rutgers",
+      "visitante": "Indiana",
+      "favorito": "Indiana",
+      "no_favorito": "Rutgers",
+      "favorito_es_local": false,
+      "tipo_pronostico": "favorito_directo",
+      "confianza_estrellas": 3,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "ALTA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401891000",
+      "hora_inicio": "2026-10-16T23:00Z",
+      "fixture_id": "401891000",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "NCAAM Soccer",
+      "home_id": "5650",
+      "away_id": "5585",
+      "kickoff_utc": "2026-10-16T23:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [
+        {
+          "minuto": "2'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "7'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "11'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "16'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "21'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "27'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "31'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "35'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "38'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "43'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "46'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "51'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "55'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "60'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "65'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "70'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "73'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "73'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "77'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "81'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "85'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'",
+          "goles_local": 1,
+          "goles_visitante": 0,
           "stats_local": {},
           "stats_visitante": {},
           "periodo": 2,
@@ -73264,7 +73264,5 @@
       ],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
