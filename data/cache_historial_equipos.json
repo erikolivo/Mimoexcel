@@ -130049,8 +130049,15 @@
     ]
   },
   "363_eng.1_2026": {
-    "fecha_cache": "2026-10-10T11:33:29.807003",
+    "fecha_cache": "2026-10-17T12:07:12.430783",
     "historial": [
+      {
+        "fecha": "2026-10-10",
+        "goles_favor": 5,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-18",
         "goles_favor": 0,
