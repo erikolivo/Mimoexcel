@@ -15526,8 +15526,15 @@
     ]
   },
   "342_eng.3_2026": {
-    "fecha_cache": "2026-10-10T11:34:08.466988",
+    "fecha_cache": "2026-10-17T12:02:08.427613",
     "historial": [
+      {
+        "fecha": "2026-10-10",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-26",
         "goles_favor": 0,
