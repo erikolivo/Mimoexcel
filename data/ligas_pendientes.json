@@ -111,21 +111,21 @@
     },
     {
       "pais": "",
+      "liga": "NWSL",
+      "liga_id": "8301",
+      "veces_visto": 162,
+      "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
+      "fixture_id": "401853996",
+      "ultimo_visto": "2026-10-17"
+    },
+    {
+      "pais": "",
       "liga": "Copa del Rey, Qualifying Round",
       "liga_id": "3951",
       "veces_visto": 160,
       "ejemplo_partido": "Anaitasuna vs CD Tedeón",
       "fixture_id": "401918750",
       "ultimo_visto": "2026-10-11"
-    },
-    {
-      "pais": "",
-      "liga": "NWSL",
-      "liga_id": "8301",
-      "veces_visto": 158,
-      "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
-      "fixture_id": "401853996",
-      "ultimo_visto": "2026-10-17"
     },
     {
       "pais": "",
@@ -140,7 +140,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 140,
+      "veces_visto": 144,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-10-17"
@@ -149,7 +149,7 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 129,
+      "veces_visto": 130,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
       "ultimo_visto": "2026-10-17"
@@ -194,7 +194,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 104,
+      "veces_visto": 105,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-10-17"
@@ -221,7 +221,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 92,
+      "veces_visto": 97,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-10-17"
@@ -273,21 +273,21 @@
     },
     {
       "pais": "",
+      "liga": "WSL Players Cup, League Phase",
+      "liga_id": "23390",
+      "veces_visto": 75,
+      "ejemplo_partido": "Crystal Palace vs Watford",
+      "fixture_id": "401923288",
+      "ultimo_visto": "2026-10-17"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League A, Group B",
       "liga_id": "19267",
       "veces_visto": 74,
       "ejemplo_partido": "Jamaica vs Guatemala",
       "fixture_id": "401900631",
       "ultimo_visto": "2026-10-05"
-    },
-    {
-      "pais": "",
-      "liga": "WSL Players Cup, League Phase",
-      "liga_id": "23390",
-      "veces_visto": 74,
-      "ejemplo_partido": "Crystal Palace vs Watford",
-      "fixture_id": "401923288",
-      "ultimo_visto": "2026-10-17"
     },
     {
       "pais": "",
@@ -378,6 +378,15 @@
       "ejemplo_partido": "Oriente Petrolero vs Guabirá",
       "fixture_id": "401907922",
       "ultimo_visto": "2026-10-07"
+    },
+    {
+      "pais": "",
+      "liga": "Taca de Portugal, 3rd Round",
+      "liga_id": "20922",
+      "veces_visto": 58,
+      "ejemplo_partido": "União Santarém vs Gil Vicente",
+      "fixture_id": "401924423",
+      "ultimo_visto": "2026-10-17"
     },
     {
       "pais": "",
@@ -567,15 +576,6 @@
       "ejemplo_partido": "Blooming vs GV San José",
       "fixture_id": "401907939",
       "ultimo_visto": "2026-10-08"
-    },
-    {
-      "pais": "",
-      "liga": "Taca de Portugal, 3rd Round",
-      "liga_id": "20922",
-      "veces_visto": 46,
-      "ejemplo_partido": "União Santarém vs Gil Vicente",
-      "fixture_id": "401924423",
-      "ultimo_visto": "2026-10-17"
     },
     {
       "pais": "",
@@ -1002,6 +1002,15 @@
     },
     {
       "pais": "",
+      "liga": "A-League Women",
+      "liga_id": "18992",
+      "veces_visto": 12,
+      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
+      "fixture_id": "401913254",
+      "ultimo_visto": "2026-10-17"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group H",
       "liga_id": "8315",
       "veces_visto": 11,
@@ -1062,15 +1071,6 @@
       "ejemplo_partido": "Stenhousemuir vs Heart of Midlothian",
       "fixture_id": "401909668",
       "ultimo_visto": "2026-09-13"
-    },
-    {
-      "pais": "",
-      "liga": "A-League Women",
-      "liga_id": "18992",
-      "veces_visto": 8,
-      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
-      "fixture_id": "401913254",
-      "ultimo_visto": "2026-10-17"
     },
     {
       "pais": "",
