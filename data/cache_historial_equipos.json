@@ -137286,8 +137286,15 @@
     ]
   },
   "114_ita.1_2026": {
-    "fecha_cache": "2026-10-10T11:35:28.083850",
+    "fecha_cache": "2026-10-17T13:36:51.772238",
     "historial": [
+      {
+        "fecha": "2026-10-10",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-20",
         "goles_favor": 1,
