@@ -83073,8 +83073,15 @@
     ]
   },
   "130_ger.2_2026": {
-    "fecha_cache": "2026-10-09T11:34:57.929355",
+    "fecha_cache": "2026-10-17T11:17:19.649725",
     "historial": [
+      {
+        "fecha": "2026-10-09",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E"
+      },
       {
         "fecha": "2026-09-19",
         "goles_favor": 1,
