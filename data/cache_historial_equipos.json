@@ -2810,8 +2810,15 @@
     ]
   },
   "995_tur.1_2026": {
-    "fecha_cache": "2026-10-11T11:35:53.263380",
+    "fecha_cache": "2026-10-18T13:24:49.302252",
     "historial": [
+      {
+        "fecha": "2026-10-11",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-19",
         "goles_favor": 2,
