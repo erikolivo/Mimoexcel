@@ -131407,8 +131407,29 @@
     ]
   },
   "11429_tur.1_2026": {
-    "fecha_cache": "2026-09-12T13:41:36.749264",
+    "fecha_cache": "2026-10-18T10:46:32.196309",
     "historial": [
+      {
+        "fecha": "2026-10-10",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-09-20",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 5,
+        "es_local": true,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-06",
         "goles_favor": 0,
@@ -146960,8 +146981,15 @@
     "historial": []
   },
   "6870_tur.1_2026": {
-    "fecha_cache": "2026-10-09T11:35:05.491863",
+    "fecha_cache": "2026-10-18T10:46:31.853033",
     "historial": [
+      {
+        "fecha": "2026-10-09",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-18",
         "goles_favor": 0,
