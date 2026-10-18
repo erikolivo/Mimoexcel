@@ -85653,8 +85653,15 @@
     ]
   },
   "1963_rus.1_2026": {
-    "fecha_cache": "2026-10-11T11:35:13.039626",
+    "fecha_cache": "2026-10-18T13:40:06.465900",
     "historial": [
+      {
+        "fecha": "2026-10-11",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-17",
         "goles_favor": 3,
@@ -238797,8 +238804,15 @@
     ]
   },
   "596_rus.1_2026": {
-    "fecha_cache": "2026-10-11T11:36:03.771038",
+    "fecha_cache": "2026-10-18T13:40:06.164681",
     "historial": [
+      {
+        "fecha": "2026-10-11",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-17",
         "goles_favor": 3,
