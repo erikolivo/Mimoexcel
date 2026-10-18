@@ -12892,8 +12892,15 @@
     ]
   },
   "22167_jpn.1_2026": {
-    "fecha_cache": "2026-10-10T11:32:27.211660",
+    "fecha_cache": "2026-10-18T07:25:20.367394",
     "historial": [
+      {
+        "fecha": "2026-10-10",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-20",
         "goles_favor": 2,
@@ -83856,7 +83863,7 @@
     ]
   },
   "7107_jpn.1_2026": {
-    "fecha_cache": "2026-10-10T11:32:26.418616",
+    "fecha_cache": "2026-10-18T07:25:20.742333",
     "historial": [
       {
         "fecha": "2026-10-10",
