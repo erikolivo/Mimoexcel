@@ -43,13 +43,6 @@
   },
   {
     "fecha": "2026-10-18",
-    "local": "Nebraska",
-    "visitante": "Illinois",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-18",
     "local": "New Hampshire",
     "visitante": "Maine",
     "favorito": "DC VISITANTE",
@@ -144,6 +137,13 @@
     "local": "Wisconsin",
     "visitante": "Minnesota",
     "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-18",
+    "local": "Nebraska",
+    "visitante": "Illinois",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -1324,6 +1324,13 @@
   },
   {
     "fecha": "2026-10-18",
+    "local": "North Florida",
+    "visitante": "Jacksonville",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-18",
     "local": "Pérez Zeledón",
     "visitante": "Herediano",
     "favorito": "DC LOCAL",
@@ -1340,13 +1347,6 @@
     "fecha": "2026-10-18",
     "local": "Auburn",
     "visitante": "Mississippi St",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-18",
-    "local": "North Florida",
-    "visitante": "Jacksonville",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
