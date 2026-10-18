@@ -20350,8 +20350,15 @@
     ]
   },
   "2506_ger.2_2026": {
-    "fecha_cache": "2026-10-11T11:34:25.452239",
+    "fecha_cache": "2026-10-18T12:13:46.269068",
     "historial": [
+      {
+        "fecha": "2026-10-11",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-09-20",
         "goles_favor": 2,
