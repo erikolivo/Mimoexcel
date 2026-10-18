@@ -141285,8 +141285,29 @@
     ]
   },
   "118_ita.1_2026": {
-    "fecha_cache": "2026-09-14T16:25:11.539111",
+    "fecha_cache": "2026-10-18T11:21:58.635400",
     "historial": [
+      {
+        "fecha": "2026-10-12",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-09-19",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-09-14",
+        "goles_favor": 3,
+        "goles_contra": 5,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-09-07",
         "goles_favor": 1,
