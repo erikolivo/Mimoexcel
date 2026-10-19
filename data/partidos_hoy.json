@@ -4663,7 +4663,9 @@
         }
       ],
       "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
+      "aviso_final_enviado": true,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Al Fayha vs Al Ahli",
@@ -7069,7 +7071,9 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Trabzonspor vs Besiktas",
@@ -7849,7 +7853,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Al Shabab vs Al Faisaly",
@@ -8023,7 +8029,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "RC Celta Fortuna vs Tenerife",
@@ -8139,7 +8147,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Getafe vs Rayo Vallecano",
@@ -8197,7 +8207,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Mushuc Runa vs Orense",
@@ -8429,7 +8441,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Toluca vs Santos",
@@ -8458,7 +8472,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Sporting San José vs AD San Carlos",
@@ -8487,7 +8503,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Deportivo Riestra vs Unión (Santa Fe)",
