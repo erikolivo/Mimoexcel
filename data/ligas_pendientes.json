@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 2015,
+      "veces_visto": 2017,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-19"
@@ -59,7 +59,7 @@
       "pais": "",
       "liga": "Argentine Nacional B",
       "liga_id": "3903",
-      "veces_visto": 344,
+      "veces_visto": 345,
       "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
       "fixture_id": "401843983",
       "ultimo_visto": "2026-10-19"
@@ -165,21 +165,21 @@
     },
     {
       "pais": "",
+      "liga": "Liga MX Femenil",
+      "liga_id": "24220",
+      "veces_visto": 145,
+      "ejemplo_partido": "Santos vs Puebla",
+      "fixture_id": "401924388",
+      "ultimo_visto": "2026-10-19"
+    },
+    {
+      "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
       "veces_visto": 143,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-10-18"
-    },
-    {
-      "pais": "",
-      "liga": "Liga MX Femenil",
-      "liga_id": "24220",
-      "veces_visto": 143,
-      "ejemplo_partido": "Santos vs Puebla",
-      "fixture_id": "401924388",
-      "ultimo_visto": "2026-10-19"
     },
     {
       "pais": "",
@@ -237,6 +237,15 @@
     },
     {
       "pais": "",
+      "liga": "Guatemalan Liga Nacional",
+      "liga_id": "3928",
+      "veces_visto": 107,
+      "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
+      "fixture_id": "401879630",
+      "ultimo_visto": "2026-10-19"
+    },
+    {
+      "pais": "",
       "liga": "UEFA Women's Champions League, League Phase",
       "liga_id": "19483",
       "veces_visto": 106,
@@ -246,21 +255,21 @@
     },
     {
       "pais": "",
-      "liga": "Guatemalan Liga Nacional",
-      "liga_id": "3928",
-      "veces_visto": 106,
-      "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
-      "fixture_id": "401879630",
-      "ultimo_visto": "2026-10-19"
-    },
-    {
-      "pais": "",
       "liga": "AFC Champions League Elite, West Region",
       "liga_id": "3902",
       "veces_visto": 102,
       "ejemplo_partido": "Neftchi Fergana vs Air Force Club",
       "fixture_id": "401912664",
       "ultimo_visto": "2026-10-13"
+    },
+    {
+      "pais": "",
+      "liga": "Liga FPD",
+      "liga_id": "4005",
+      "veces_visto": 85,
+      "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
+      "fixture_id": "401876853",
+      "ultimo_visto": "2026-10-19"
     },
     {
       "pais": "",
@@ -279,15 +288,6 @@
       "ejemplo_partido": "Costa Rica vs Curaçao",
       "fixture_id": "401900638",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "Liga FPD",
-      "liga_id": "4005",
-      "veces_visto": 83,
-      "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
-      "fixture_id": "401876853",
-      "ultimo_visto": "2026-10-19"
     },
     {
       "pais": "",
@@ -660,21 +660,21 @@
     },
     {
       "pais": "",
+      "liga": "Indian Super League",
+      "liga_id": "8316",
+      "veces_visto": 38,
+      "ejemplo_partido": "NorthEast United FC vs Mohun Bagan Super Giant",
+      "fixture_id": "401925436",
+      "ultimo_visto": "2026-10-19"
+    },
+    {
+      "pais": "",
       "liga": "Honduran Liga Nacional",
       "liga_id": "3929",
       "veces_visto": 37,
       "ejemplo_partido": "CD Estrella Roja vs Platense",
       "fixture_id": "401915261",
       "ultimo_visto": "2026-10-15"
-    },
-    {
-      "pais": "",
-      "liga": "Indian Super League",
-      "liga_id": "8316",
-      "veces_visto": 37,
-      "ejemplo_partido": "NorthEast United FC vs Mohun Bagan Super Giant",
-      "fixture_id": "401925436",
-      "ultimo_visto": "2026-10-19"
     },
     {
       "pais": "",
@@ -1011,6 +1011,24 @@
     },
     {
       "pais": "",
+      "liga": "U-17 WWC, Group E",
+      "liga_id": "20865",
+      "veces_visto": 12,
+      "ejemplo_partido": "Kenya U17 vs China PR U17",
+      "fixture_id": "401891034",
+      "ultimo_visto": "2026-10-19"
+    },
+    {
+      "pais": "",
+      "liga": "U-17 WWC, Group F",
+      "liga_id": "20865",
+      "veces_visto": 12,
+      "ejemplo_partido": "Spain U17 vs Mexico U17",
+      "fixture_id": "401874058",
+      "ultimo_visto": "2026-10-19"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group H",
       "liga_id": "8315",
       "veces_visto": 11,
@@ -1071,24 +1089,6 @@
       "ejemplo_partido": "United Arab Emirates vs Saudi Arabia",
       "fixture_id": "401928263",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "U-17 WWC, Group E",
-      "liga_id": "20865",
-      "veces_visto": 10,
-      "ejemplo_partido": "Kenya U17 vs China PR U17",
-      "fixture_id": "401891034",
-      "ultimo_visto": "2026-10-19"
-    },
-    {
-      "pais": "",
-      "liga": "U-17 WWC, Group F",
-      "liga_id": "20865",
-      "veces_visto": 10,
-      "ejemplo_partido": "Spain U17 vs Mexico U17",
-      "fixture_id": "401874058",
-      "ultimo_visto": "2026-10-19"
     },
     {
       "pais": "",
