@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 2011,
+      "veces_visto": 2013,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-19"
@@ -57,21 +57,21 @@
     },
     {
       "pais": "",
+      "liga": "Argentine Nacional B",
+      "liga_id": "3903",
+      "veces_visto": 343,
+      "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
+      "fixture_id": "401843983",
+      "ultimo_visto": "2026-10-19"
+    },
+    {
+      "pais": "",
       "liga": "WWCQ - UEFA, Playoff Phase - First Round",
       "liga_id": "20649",
       "veces_visto": 342,
       "ejemplo_partido": "Kazakhstan vs Republic of Ireland",
       "fixture_id": "401878167",
       "ultimo_visto": "2026-10-13"
-    },
-    {
-      "pais": "",
-      "liga": "Argentine Nacional B",
-      "liga_id": "3903",
-      "veces_visto": 342,
-      "ejemplo_partido": "Defensores de Belgrano vs Los Andes",
-      "fixture_id": "401843983",
-      "ultimo_visto": "2026-10-19"
     },
     {
       "pais": "",
@@ -176,7 +176,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 139,
+      "veces_visto": 141,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-10-19"
@@ -248,7 +248,7 @@
       "pais": "",
       "liga": "Guatemalan Liga Nacional",
       "liga_id": "3928",
-      "veces_visto": 104,
+      "veces_visto": 105,
       "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
       "fixture_id": "401879630",
       "ultimo_visto": "2026-10-19"
@@ -282,6 +282,15 @@
     },
     {
       "pais": "",
+      "liga": "Liga FPD",
+      "liga_id": "4005",
+      "veces_visto": 81,
+      "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
+      "fixture_id": "401876853",
+      "ultimo_visto": "2026-10-19"
+    },
+    {
+      "pais": "",
       "liga": "Taca de Portugal, 2nd Round",
       "liga_id": "20922",
       "veces_visto": 80,
@@ -297,15 +306,6 @@
       "ejemplo_partido": "FC Twente vs Feyenoord Rotterdam",
       "fixture_id": "401882168",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "Liga FPD",
-      "liga_id": "4005",
-      "veces_visto": 79,
-      "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
-      "fixture_id": "401876853",
-      "ultimo_visto": "2026-10-19"
     },
     {
       "pais": "",
@@ -678,21 +678,21 @@
     },
     {
       "pais": "",
+      "liga": "Indian Super League",
+      "liga_id": "8316",
+      "veces_visto": 36,
+      "ejemplo_partido": "NorthEast United FC vs Mohun Bagan Super Giant",
+      "fixture_id": "401925436",
+      "ultimo_visto": "2026-10-19"
+    },
+    {
+      "pais": "",
       "liga": "AFC Champions League Two, Group F",
       "liga_id": "2466",
       "veces_visto": 35,
       "ejemplo_partido": "Adelaide United vs Tai Po FC",
       "fixture_id": "401912808",
       "ultimo_visto": "2026-10-15"
-    },
-    {
-      "pais": "",
-      "liga": "Indian Super League",
-      "liga_id": "8316",
-      "veces_visto": 35,
-      "ejemplo_partido": "NorthEast United FC vs Mohun Bagan Super Giant",
-      "fixture_id": "401925436",
-      "ultimo_visto": "2026-10-19"
     },
     {
       "pais": "",
@@ -1092,18 +1092,9 @@
     },
     {
       "pais": "",
-      "liga": "AFCON Qualifying, Group E",
-      "liga_id": "8315",
-      "veces_visto": 6,
-      "ejemplo_partido": "Togo vs Burundi",
-      "fixture_id": "401920044",
-      "ultimo_visto": "2026-09-28"
-    },
-    {
-      "pais": "",
       "liga": "U-17 WWC, Group E",
       "liga_id": "20865",
-      "veces_visto": 6,
+      "veces_visto": 8,
       "ejemplo_partido": "Kenya U17 vs China PR U17",
       "fixture_id": "401891034",
       "ultimo_visto": "2026-10-19"
@@ -1112,10 +1103,19 @@
       "pais": "",
       "liga": "U-17 WWC, Group F",
       "liga_id": "20865",
-      "veces_visto": 6,
+      "veces_visto": 8,
       "ejemplo_partido": "Spain U17 vs Mexico U17",
       "fixture_id": "401874058",
       "ultimo_visto": "2026-10-19"
+    },
+    {
+      "pais": "",
+      "liga": "AFCON Qualifying, Group E",
+      "liga_id": "8315",
+      "veces_visto": 6,
+      "ejemplo_partido": "Togo vs Burundi",
+      "fixture_id": "401920044",
+      "ultimo_visto": "2026-09-28"
     },
     {
       "pais": "",
