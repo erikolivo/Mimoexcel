@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 2147,
+      "veces_visto": 2171,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-20"
@@ -147,21 +147,21 @@
     },
     {
       "pais": "",
+      "liga": "Liga MX Femenil",
+      "liga_id": "24220",
+      "veces_visto": 161,
+      "ejemplo_partido": "Santos vs Puebla",
+      "fixture_id": "401924388",
+      "ultimo_visto": "2026-10-20"
+    },
+    {
+      "pais": "",
       "liga": "Copa del Rey, Qualifying Round",
       "liga_id": "3951",
       "veces_visto": 160,
       "ejemplo_partido": "Anaitasuna vs CD Tedeón",
       "fixture_id": "401918750",
       "ultimo_visto": "2026-10-11"
-    },
-    {
-      "pais": "",
-      "liga": "Liga MX Femenil",
-      "liga_id": "24220",
-      "veces_visto": 160,
-      "ejemplo_partido": "Santos vs Puebla",
-      "fixture_id": "401924388",
-      "ultimo_visto": "2026-10-20"
     },
     {
       "pais": "",
@@ -203,7 +203,7 @@
       "pais": "",
       "liga": "Guatemalan Liga Nacional",
       "liga_id": "3928",
-      "veces_visto": 117,
+      "veces_visto": 118,
       "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
       "fixture_id": "401879630",
       "ultimo_visto": "2026-10-20"
@@ -336,6 +336,15 @@
     },
     {
       "pais": "",
+      "liga": "English FA Cup Qualifying, Fourth Round Qualifying",
+      "liga_id": "23480",
+      "veces_visto": 66,
+      "ejemplo_partido": "Alvechurch vs Spalding United",
+      "fixture_id": "401930563",
+      "ultimo_visto": "2026-10-20"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group A",
       "liga_id": "20114",
       "veces_visto": 64,
@@ -426,6 +435,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Chile, Quarterfinals",
+      "liga_id": "8312",
+      "veces_visto": 57,
+      "ejemplo_partido": "Puerto Montt vs Colo Colo",
+      "fixture_id": "401925566",
+      "ultimo_visto": "2026-10-20"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League B, Group A",
       "liga_id": "19267",
       "veces_visto": 56,
@@ -441,24 +459,6 @@
       "ejemplo_partido": "Sweden vs Romania",
       "fixture_id": "401861051",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Chile, Quarterfinals",
-      "liga_id": "8312",
-      "veces_visto": 55,
-      "ejemplo_partido": "Puerto Montt vs Colo Colo",
-      "fixture_id": "401925566",
-      "ultimo_visto": "2026-10-20"
-    },
-    {
-      "pais": "",
-      "liga": "English FA Cup Qualifying, Fourth Round Qualifying",
-      "liga_id": "23480",
-      "veces_visto": 55,
-      "ejemplo_partido": "Alvechurch vs Spalding United",
-      "fixture_id": "401930563",
-      "ultimo_visto": "2026-10-20"
     },
     {
       "pais": "",
@@ -741,6 +741,15 @@
     },
     {
       "pais": "",
+      "liga": "CAF Confederation Cup, Second Preliminary Round",
+      "liga_id": "18000",
+      "veces_visto": 28,
+      "ejemplo_partido": "Welwalo Adigrat vs Al Ahli Tripoli",
+      "fixture_id": "401912479",
+      "ultimo_visto": "2026-10-20"
+    },
+    {
+      "pais": "",
       "liga": "UEFA Nations League, Group D2",
       "liga_id": "2395",
       "veces_visto": 27,
@@ -756,15 +765,6 @@
       "ejemplo_partido": "Gibraltar vs Andorra",
       "fixture_id": "401861069",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "CAF Confederation Cup, Second Preliminary Round",
-      "liga_id": "18000",
-      "veces_visto": 27,
-      "ejemplo_partido": "Welwalo Adigrat vs Al Ahli Tripoli",
-      "fixture_id": "401912479",
-      "ultimo_visto": "2026-10-20"
     },
     {
       "pais": "",
@@ -1038,6 +1038,24 @@
     },
     {
       "pais": "",
+      "liga": "U-17 WWC, Group A",
+      "liga_id": "20865",
+      "veces_visto": 12,
+      "ejemplo_partido": "Argentina U17 vs New Zealand U17",
+      "fixture_id": "401874122",
+      "ultimo_visto": "2026-10-20"
+    },
+    {
+      "pais": "",
+      "liga": "U-17 WWC, Group B",
+      "liga_id": "20865",
+      "veces_visto": 12,
+      "ejemplo_partido": "North Korea U17 vs Poland U17",
+      "fixture_id": "401874119",
+      "ultimo_visto": "2026-10-20"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group H",
       "liga_id": "8315",
       "veces_visto": 11,
@@ -1101,24 +1119,6 @@
     },
     {
       "pais": "",
-      "liga": "U-17 WWC, Group A",
-      "liga_id": "20865",
-      "veces_visto": 10,
-      "ejemplo_partido": "Argentina U17 vs New Zealand U17",
-      "fixture_id": "401874122",
-      "ultimo_visto": "2026-10-20"
-    },
-    {
-      "pais": "",
-      "liga": "U-17 WWC, Group B",
-      "liga_id": "20865",
-      "veces_visto": 10,
-      "ejemplo_partido": "North Korea U17 vs Poland U17",
-      "fixture_id": "401874119",
-      "ultimo_visto": "2026-10-20"
-    },
-    {
-      "pais": "",
       "liga": "CAF Champions League, First Preliminary Round",
       "liga_id": "2391",
       "veces_visto": 8,
@@ -1148,7 +1148,7 @@
       "pais": "",
       "liga": "Copa Bolivia, Quarterfinals",
       "liga_id": "23284",
-      "veces_visto": 5,
+      "veces_visto": 6,
       "ejemplo_partido": "Independiente Petrolero vs Aurora",
       "fixture_id": "401929988",
       "ultimo_visto": "2026-10-20"
@@ -1157,7 +1157,7 @@
       "pais": "",
       "liga": "Concacaf Central American Cup, Play-In",
       "liga_id": "22947",
-      "veces_visto": 5,
+      "veces_visto": 6,
       "ejemplo_partido": "Club Deportivo Marathón vs Alianza FC",
       "fixture_id": "401922488",
       "ultimo_visto": "2026-10-20"
