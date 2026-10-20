@@ -53435,7 +53435,8 @@
           "presion_lado": 21.67158349250169
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "VfB Stuttgart vs Atlético Madrid",
@@ -56608,6 +56609,15 @@
           "minuto": "40'",
           "goles_local": 3,
           "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "44'",
+          "goles_local": 3,
+          "goles_visitante": 1,
           "stats_local": {},
           "stats_visitante": {},
           "periodo": 1,
