@@ -11711,35 +11711,6 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
-      "partido": "Always Ready vs The Strongest",
-      "local": "Always Ready",
-      "visitante": "The Strongest",
-      "favorito": "Always Ready",
-      "no_favorito": "The Strongest",
-      "favorito_es_local": true,
-      "tipo_pronostico": "doble_oportunidad",
-      "confianza_estrellas": 1,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "BAJA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401929987",
-      "hora_inicio": "2026-10-21T19:00Z",
-      "fixture_id": "401929987",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "Copa Bolivia, Quarterfinals",
-      "home_id": "19425",
-      "away_id": "2687",
-      "kickoff_utc": "2026-10-21T19:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Saint Peter's vs Manhattan",
       "local": "Saint Peter's",
       "visitante": "Manhattan",
@@ -12929,6 +12900,35 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
+      "partido": "Cal Poly vs UC Santa Barbara",
+      "local": "Cal Poly",
+      "visitante": "UC Santa Barbara",
+      "favorito": "Cal Poly",
+      "no_favorito": "UC Santa Barbara",
+      "favorito_es_local": true,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 2,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "MEDIA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401897439",
+      "hora_inicio": "2026-10-22T01:00Z",
+      "fixture_id": "401897439",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "NCAAW Soccer",
+      "home_id": "20475",
+      "away_id": "20342",
+      "kickoff_utc": "2026-10-22T01:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
+    },
+    {
       "partido": "Independiente Santa Fe vs Jaguares de Córdoba",
       "local": "Independiente Santa Fe",
       "visitante": "Jaguares de Córdoba",
@@ -13189,7 +13189,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
