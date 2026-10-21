@@ -12742,8 +12742,15 @@
     ]
   },
   "7114_jpn.1_2026": {
-    "fecha_cache": "2026-10-11T11:33:56.112699",
+    "fecha_cache": "2026-10-21T10:18:47.204483",
     "historial": [
+      {
+        "fecha": "2026-10-17",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-10-11",
         "goles_favor": 2,
