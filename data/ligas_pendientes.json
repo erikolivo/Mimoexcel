@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 2832,
+      "veces_visto": 2846,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-10-21"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 2443,
+      "veces_visto": 2469,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-21"
@@ -23,7 +23,7 @@
       "pais": "",
       "liga": "Club Friendly",
       "liga_id": "19834",
-      "veces_visto": 1438,
+      "veces_visto": 1439,
       "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
       "fixture_id": "401914230",
       "ultimo_visto": "2026-10-21"
@@ -50,7 +50,7 @@
       "pais": "",
       "liga": "USL Championship",
       "liga_id": "4002",
-      "veces_visto": 399,
+      "veces_visto": 401,
       "ejemplo_partido": "New Mexico United vs Indy Eleven",
       "fixture_id": "401842218",
       "ultimo_visto": "2026-10-21"
@@ -95,7 +95,7 @@
       "pais": "",
       "liga": "USL League One",
       "liga_id": "19915",
-      "veces_visto": 269,
+      "veces_visto": 271,
       "ejemplo_partido": "One Knoxville vs FC Naples",
       "fixture_id": "401842107",
       "ultimo_visto": "2026-10-21"
@@ -140,7 +140,7 @@
       "pais": "",
       "liga": "WSL Players Cup, League Phase",
       "liga_id": "23390",
-      "veces_visto": 186,
+      "veces_visto": 193,
       "ejemplo_partido": "Crystal Palace vs Watford",
       "fixture_id": "401923288",
       "ultimo_visto": "2026-10-21"
@@ -194,7 +194,7 @@
       "pais": "",
       "liga": "Guatemalan Liga Nacional",
       "liga_id": "3928",
-      "veces_visto": 132,
+      "veces_visto": 134,
       "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
       "fixture_id": "401879630",
       "ultimo_visto": "2026-10-21"
@@ -203,7 +203,7 @@
       "pais": "",
       "liga": "Salvadoran Primera",
       "liga_id": "3943",
-      "veces_visto": 125,
+      "veces_visto": 126,
       "ejemplo_partido": "Inca Aruba vs Atletico Balboa",
       "fixture_id": "401899791",
       "ultimo_visto": "2026-10-21"
@@ -338,7 +338,7 @@
       "pais": "",
       "liga": "Copa Chile, Quarterfinals",
       "liga_id": "8312",
-      "veces_visto": 72,
+      "veces_visto": 73,
       "ejemplo_partido": "Puerto Montt vs Colo Colo",
       "fixture_id": "401925566",
       "ultimo_visto": "2026-10-21"
@@ -660,6 +660,15 @@
     },
     {
       "pais": "",
+      "liga": "CAF Champions League, Second Preliminary Round",
+      "liga_id": "2391",
+      "veces_visto": 40,
+      "ejemplo_partido": "El Merriekh Bentiu vs Pyramids FC",
+      "fixture_id": "401914250",
+      "ultimo_visto": "2026-10-21"
+    },
+    {
+      "pais": "",
       "liga": "English FA Cup Qualifying, Second Round Qualifying",
       "liga_id": "23480",
       "veces_visto": 39,
@@ -675,15 +684,6 @@
       "ejemplo_partido": "Puerto Montt vs Ñublense",
       "fixture_id": "401916351",
       "ultimo_visto": "2026-10-07"
-    },
-    {
-      "pais": "",
-      "liga": "CAF Champions League, Second Preliminary Round",
-      "liga_id": "2391",
-      "veces_visto": 38,
-      "ejemplo_partido": "El Merriekh Bentiu vs Pyramids FC",
-      "fixture_id": "401914250",
-      "ultimo_visto": "2026-10-21"
     },
     {
       "pais": "",
@@ -761,7 +761,7 @@
       "pais": "",
       "liga": "Copa Colombia, Quarterfinals",
       "liga_id": "8313",
-      "veces_visto": 28,
+      "veces_visto": 29,
       "ejemplo_partido": "Atlético Nacional vs Independiente Medellín",
       "fixture_id": "401929277",
       "ultimo_visto": "2026-10-21"
@@ -813,6 +813,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Bolivia, Quarterfinals",
+      "liga_id": "23284",
+      "veces_visto": 26,
+      "ejemplo_partido": "Independiente Petrolero vs Aurora",
+      "fixture_id": "401929988",
+      "ultimo_visto": "2026-10-21"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group D",
       "liga_id": "8315",
       "veces_visto": 25,
@@ -837,15 +846,6 @@
       "ejemplo_partido": "Kitchee vs Gangwon FC",
       "fixture_id": "401912805",
       "ultimo_visto": "2026-10-15"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Quarterfinals",
-      "liga_id": "23284",
-      "veces_visto": 24,
-      "ejemplo_partido": "Independiente Petrolero vs Aurora",
-      "fixture_id": "401929988",
-      "ultimo_visto": "2026-10-21"
     },
     {
       "pais": "",
@@ -930,6 +930,15 @@
     },
     {
       "pais": "",
+      "liga": "Dutch Vrouwen KNVB Beker, First Round",
+      "liga_id": "20115",
+      "veces_visto": 19,
+      "ejemplo_partido": "AZ Alkmaar vs FC Utrecht",
+      "fixture_id": "401922301",
+      "ultimo_visto": "2026-10-21"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group I",
       "liga_id": "8315",
       "veces_visto": 18,
@@ -966,11 +975,11 @@
     },
     {
       "pais": "",
-      "liga": "Dutch Vrouwen KNVB Beker, First Round",
-      "liga_id": "20115",
+      "liga": "Concacaf Central American Cup, Play-In",
+      "liga_id": "22947",
       "veces_visto": 18,
-      "ejemplo_partido": "AZ Alkmaar vs FC Utrecht",
-      "fixture_id": "401922301",
+      "ejemplo_partido": "Club Deportivo Marathón vs Alianza FC",
+      "fixture_id": "401922488",
       "ultimo_visto": "2026-10-21"
     },
     {
@@ -1002,21 +1011,30 @@
     },
     {
       "pais": "",
-      "liga": "Concacaf Central American Cup, Play-In",
-      "liga_id": "22947",
-      "veces_visto": 17,
-      "ejemplo_partido": "Club Deportivo Marathón vs Alianza FC",
-      "fixture_id": "401922488",
-      "ultimo_visto": "2026-10-21"
-    },
-    {
-      "pais": "",
       "liga": "AFCON Qualifying, Group G",
       "liga_id": "8315",
       "veces_visto": 16,
       "ejemplo_partido": "Ivory Coast vs Ghana",
       "fixture_id": "401920050",
       "ultimo_visto": "2026-09-29"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 Women's World Cup, Group C",
+      "liga_id": "20865",
+      "veces_visto": 16,
+      "ejemplo_partido": "Canada U17 vs Norway U17",
+      "fixture_id": "401874123",
+      "ultimo_visto": "2026-10-21"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 Women's World Cup, Group D",
+      "liga_id": "20865",
+      "veces_visto": 16,
+      "ejemplo_partido": "Japan U17 vs France U17",
+      "fixture_id": "401874130",
+      "ultimo_visto": "2026-10-21"
     },
     {
       "pais": "",
@@ -1062,24 +1080,6 @@
       "ejemplo_partido": "América de Cali vs Deportivo Pereira",
       "fixture_id": "401902716",
       "ultimo_visto": "2026-09-21"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 Women's World Cup, Group C",
-      "liga_id": "20865",
-      "veces_visto": 14,
-      "ejemplo_partido": "Canada U17 vs Norway U17",
-      "fixture_id": "401874123",
-      "ultimo_visto": "2026-10-21"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 Women's World Cup, Group D",
-      "liga_id": "20865",
-      "veces_visto": 14,
-      "ejemplo_partido": "Japan U17 vs France U17",
-      "fixture_id": "401874130",
-      "ultimo_visto": "2026-10-21"
     },
     {
       "pais": "",
@@ -1175,7 +1175,7 @@
       "pais": "",
       "liga": "U.S. Open Cup, Final",
       "liga_id": "5337",
-      "veces_visto": 7,
+      "veces_visto": 8,
       "ejemplo_partido": "Columbus Crew vs St. Louis CITY SC",
       "fixture_id": "401916449",
       "ultimo_visto": "2026-10-21"
@@ -1184,7 +1184,7 @@
       "pais": "",
       "liga": "Concacaf Central American Cup, Semifinals",
       "liga_id": "22947",
-      "veces_visto": 7,
+      "veces_visto": 8,
       "ejemplo_partido": "Cartaginés vs Club Deportivo Olimpia",
       "fixture_id": "401922486",
       "ultimo_visto": "2026-10-21"
