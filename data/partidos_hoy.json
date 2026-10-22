@@ -30875,7 +30875,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "AGF vs Egnatia",
@@ -32446,7 +32447,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Celtic vs Celta Vigo",
@@ -35522,7 +35524,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Lillestrom vs Real Sociedad",
@@ -38531,7 +38534,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Olympiacos vs Sparta Prague",
@@ -41649,7 +41653,8 @@
           "presion_lado": 16.16407506653671
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Ajax Amsterdam vs Atalanta",
@@ -44788,7 +44793,8 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
-      "grupo_destacado": 1
+      "grupo_destacado": 1,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Borac Banja Luka vs KuPS Kuopio",
@@ -52593,6 +52599,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [],
@@ -52704,6 +52719,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [],
@@ -52824,6 +52848,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "44'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
@@ -52935,6 +52968,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         },
         {
           "minuto": "",
