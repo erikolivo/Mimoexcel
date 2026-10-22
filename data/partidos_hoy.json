@@ -52618,6 +52618,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "46'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -52729,6 +52738,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         },
         {
           "minuto": "45'",
@@ -52885,6 +52903,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [],
@@ -53023,6 +53050,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "46'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -53056,6 +53092,15 @@
       "historial_snapshots": [
         {
           "minuto": "1'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "6'",
           "goles_local": 0,
           "goles_visitante": 0,
           "stats_local": {},
@@ -53121,7 +53166,17 @@
       "kickoff_utc": "2026-10-22T21:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "3'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
@@ -53150,7 +53205,17 @@
       "kickoff_utc": "2026-10-22T21:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "3'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
@@ -53179,7 +53244,17 @@
       "kickoff_utc": "2026-10-22T21:00Z",
       "resultado_final": null,
       "acierto": null,
-      "historial_snapshots": [],
+      "historial_snapshots": [
+        {
+          "minuto": "3'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        }
+      ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
