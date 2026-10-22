@@ -68812,6 +68812,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "80'",
+          "goles_local": 3,
+          "goles_visitante": 2,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -69035,6 +69044,15 @@
         {
           "minuto": "76'",
           "goles_local": 5,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "80'",
+          "goles_local": 6,
           "goles_visitante": 1,
           "stats_local": {},
           "stats_visitante": {},
@@ -69277,6 +69295,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "85'",
+          "goles_local": 3,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -69499,6 +69526,15 @@
         },
         {
           "minuto": "67'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "72'",
           "goles_local": 2,
           "goles_visitante": 1,
           "stats_local": {},
@@ -69736,6 +69772,15 @@
         },
         {
           "minuto": "82'",
+          "goles_local": 0,
+          "goles_visitante": 3,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "86'",
           "goles_local": 0,
           "goles_visitante": 3,
           "stats_local": {},
@@ -70375,10 +70420,79 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+6'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "7",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "5",
+            "saves": "1",
+            "possessionPct": "70.1",
+            "totalShots": "6",
+            "shotsOnTarget": "1",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "1",
+            "accuratePasses": "282",
+            "totalPasses": "298",
+            "passPct": "0.9",
+            "accurateCrosses": "4",
+            "totalCrosses": "8",
+            "crossPct": "0.5",
+            "totalLongBalls": "17",
+            "accurateLongBalls": "13",
+            "longballPct": "0.8",
+            "blockedShots": "1",
+            "effectiveTackles": "1",
+            "totalTackles": "1",
+            "tacklePct": "1.0",
+            "interceptions": "1",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "1",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "0",
+            "possessionPct": "29.9",
+            "totalShots": "4",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "100",
+            "totalPasses": "121",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "10",
+            "crossPct": "0.2",
+            "totalLongBalls": "22",
+            "accurateLongBalls": "14",
+            "longballPct": "0.6",
+            "blockedShots": "0",
+            "effectiveTackles": "3",
+            "totalTackles": "3",
+            "tacklePct": "1.0",
+            "interceptions": "3",
+            "effectiveClearance": "1",
+            "totalClearance": "1"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "predicciones_activas": {},
+  "historial_predicciones": {}
 }
