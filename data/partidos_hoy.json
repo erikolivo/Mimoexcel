@@ -5050,35 +5050,6 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
-      "partido": "Al Ahli vs Al Khaleej",
-      "local": "Al Ahli",
-      "visitante": "Al Khaleej",
-      "favorito": "Al Ahli",
-      "no_favorito": "Al Khaleej",
-      "favorito_es_local": true,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401900892",
-      "hora_inicio": "2026-10-22T18:00Z",
-      "fixture_id": "401900892",
-      "liga_slug": "ksa.1",
-      "liga_pais": "Saudi Arabia",
-      "liga_nombre": "Pro League",
-      "home_id": "8346",
-      "away_id": "21829",
-      "kickoff_utc": "2026-10-22T18:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Chile U17 vs Mexico U17",
       "local": "Chile U17",
       "visitante": "Mexico U17",
@@ -6946,7 +6917,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
