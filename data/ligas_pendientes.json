@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 3345,
+      "veces_visto": 3391,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-10-22"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 2575,
+      "veces_visto": 2578,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-22"
@@ -23,7 +23,7 @@
       "pais": "",
       "liga": "Club Friendly",
       "liga_id": "19834",
-      "veces_visto": 1452,
+      "veces_visto": 1453,
       "ejemplo_partido": "Vanuatu United vs Central Coast Mariners",
       "fixture_id": "401914230",
       "ultimo_visto": "2026-10-22"
@@ -59,7 +59,7 @@
       "pais": "",
       "liga": "UEFA Conference League, League Phase",
       "liga_id": "20296",
-      "veces_visto": 360,
+      "veces_visto": 378,
       "ejemplo_partido": "CSKA Sofia vs AS Monaco",
       "fixture_id": "401915855",
       "ultimo_visto": "2026-10-22"
@@ -113,7 +113,7 @@
       "pais": "",
       "liga": "Liga de Expansión MX",
       "liga_id": "3932",
-      "veces_visto": 239,
+      "veces_visto": 240,
       "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
       "fixture_id": "401886377",
       "ultimo_visto": "2026-10-22"
@@ -158,7 +158,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 175,
+      "veces_visto": 176,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-10-22"
@@ -212,7 +212,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 122,
+      "veces_visto": 123,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-10-22"
@@ -651,21 +651,21 @@
     },
     {
       "pais": "",
+      "liga": "Copa Bolivia, Quarterfinals",
+      "liga_id": "23284",
+      "veces_visto": 42,
+      "ejemplo_partido": "Independiente Petrolero vs Aurora",
+      "fixture_id": "401929988",
+      "ultimo_visto": "2026-10-22"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group D",
       "liga_id": "20114",
       "veces_visto": 41,
       "ejemplo_partido": "Slovakia U21 vs Republic of Ireland U21",
       "fixture_id": "732412",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Quarterfinals",
-      "liga_id": "23284",
-      "veces_visto": 41,
-      "ejemplo_partido": "Independiente Petrolero vs Aurora",
-      "fixture_id": "401929988",
-      "ultimo_visto": "2026-10-22"
     },
     {
       "pais": "",
@@ -903,12 +903,39 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 Women's World Cup, Group E",
+      "liga_id": "20865",
+      "veces_visto": 22,
+      "ejemplo_partido": "China PR U17 vs Samoa U17",
+      "fixture_id": "401874121",
+      "ultimo_visto": "2026-10-22"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 Women's World Cup, Group F",
+      "liga_id": "20865",
+      "veces_visto": 22,
+      "ejemplo_partido": "Spain U17 vs Australia U17",
+      "fixture_id": "401874054",
+      "ultimo_visto": "2026-10-22"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Central American Cup, Play-In",
       "liga_id": "22947",
       "veces_visto": 21,
       "ejemplo_partido": "Club Deportivo Marathón vs Alianza FC",
       "fixture_id": "401922488",
       "ultimo_visto": "2026-10-21"
+    },
+    {
+      "pais": "",
+      "liga": "Concacaf Central American Cup, Semifinals",
+      "liga_id": "22947",
+      "veces_visto": 21,
+      "ejemplo_partido": "Cartaginés vs Club Deportivo Olimpia",
+      "fixture_id": "401922486",
+      "ultimo_visto": "2026-10-22"
     },
     {
       "pais": "",
@@ -927,33 +954,6 @@
       "ejemplo_partido": "Kazakhstan vs Republic of Ireland",
       "fixture_id": "401878167",
       "ultimo_visto": "2026-10-09"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Central American Cup, Semifinals",
-      "liga_id": "22947",
-      "veces_visto": 20,
-      "ejemplo_partido": "Cartaginés vs Club Deportivo Olimpia",
-      "fixture_id": "401922486",
-      "ultimo_visto": "2026-10-22"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 Women's World Cup, Group E",
-      "liga_id": "20865",
-      "veces_visto": 20,
-      "ejemplo_partido": "China PR U17 vs Samoa U17",
-      "fixture_id": "401874121",
-      "ultimo_visto": "2026-10-22"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 Women's World Cup, Group F",
-      "liga_id": "20865",
-      "veces_visto": 20,
-      "ejemplo_partido": "Spain U17 vs Australia U17",
-      "fixture_id": "401874054",
-      "ultimo_visto": "2026-10-22"
     },
     {
       "pais": "",
@@ -1173,6 +1173,15 @@
     },
     {
       "pais": "",
+      "liga": "Women's FA Cup, First Round",
+      "liga_id": "20226",
+      "veces_visto": 11,
+      "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
+      "fixture_id": "401926253",
+      "ultimo_visto": "2026-10-22"
+    },
+    {
+      "pais": "",
       "liga": "CAF Confederation Cup, First Preliminary Round",
       "liga_id": "18000",
       "veces_visto": 10,
@@ -1188,15 +1197,6 @@
       "ejemplo_partido": "United Arab Emirates vs Saudi Arabia",
       "fixture_id": "401928263",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Women's FA Cup, First Round",
-      "liga_id": "20226",
-      "veces_visto": 10,
-      "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
-      "fixture_id": "401926253",
-      "ultimo_visto": "2026-10-22"
     },
     {
       "pais": "",
