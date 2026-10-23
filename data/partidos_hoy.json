@@ -47426,38 +47426,6 @@
       "aviso_final_enviado": true
     },
     {
-      "partido": "Penicuik vs Clyde",
-      "local": "Penicuik",
-      "visitante": "Clyde",
-      "favorito": "Penicuik",
-      "no_favorito": "Clyde",
-      "favorito_es_local": true,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401928436",
-      "hora_inicio": "2026-10-23T18:30Z",
-      "fixture_id": "401928436",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "Scottish Cup, Second Round",
-      "home_id": "20126",
-      "away_id": "255",
-      "kickoff_utc": "2026-10-23T18:30Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0,
-      "es_destacado": true,
-      "grupo_destacado": 1,
-      "aviso_final_enviado": true
-    },
-    {
       "partido": "Granada vs Real Valladolid",
       "local": "Granada",
       "visitante": "Real Valladolid",
@@ -59383,6 +59351,36 @@
       "aviso_final_enviado": true
     },
     {
+      "partido": "Raja Casablanca vs El Kanemi Warriors",
+      "local": "Raja Casablanca",
+      "visitante": "El Kanemi Warriors",
+      "favorito": "Raja Casablanca",
+      "no_favorito": "El Kanemi Warriors",
+      "favorito_es_local": true,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 1,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "BAJA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401912476",
+      "hora_inicio": "2026-10-23T20:00Z",
+      "fixture_id": "401912476",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "CAF Confederation Cup, Second Preliminary Round",
+      "home_id": "8618",
+      "away_id": "17796",
+      "kickoff_utc": "2026-10-23T20:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
+    },
+    {
       "partido": "Rubio Ñú vs Guaraní",
       "local": "Rubio Ñú",
       "visitante": "Guaraní",
@@ -60883,36 +60881,6 @@
           "estado_detalle": "Second Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
-    },
-    {
-      "partido": "Raja Casablanca vs El Kanemi Warriors",
-      "local": "Raja Casablanca",
-      "visitante": "El Kanemi Warriors",
-      "favorito": "Raja Casablanca",
-      "no_favorito": "El Kanemi Warriors",
-      "favorito_es_local": true,
-      "tipo_pronostico": "doble_oportunidad",
-      "confianza_estrellas": 1,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "BAJA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401912476",
-      "hora_inicio": "2026-10-23T20:00Z",
-      "fixture_id": "401912476",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "CAF Confederation Cup, Second Preliminary Round",
-      "home_id": "8618",
-      "away_id": "17796",
-      "kickoff_utc": "2026-10-23T20:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "aviso_final_enviado": true
@@ -62852,6 +62820,244 @@
       "aviso_final_enviado": true
     },
     {
+      "partido": "Chattanooga vs UNC Greensboro",
+      "local": "Chattanooga",
+      "visitante": "UNC Greensboro",
+      "favorito": "Chattanooga",
+      "no_favorito": "UNC Greensboro",
+      "favorito_es_local": true,
+      "tipo_pronostico": "favorito_directo",
+      "confianza_estrellas": 2,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "MEDIA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401889495",
+      "hora_inicio": "2026-10-23T21:00Z",
+      "fixture_id": "401889495",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "NCAAW Soccer",
+      "home_id": "20603",
+      "away_id": "20351",
+      "kickoff_utc": "2026-10-23T21:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [
+        {
+          "minuto": "4'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "7'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "11'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "15'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "20'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "25'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "30'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "35'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "40'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "46'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "51'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "57'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "61'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "65'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "71'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "75'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "80'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "83'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "88'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        }
+      ],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
+    },
+    {
       "partido": "Independiente del Valle vs Universidad Católica (Quito)",
       "local": "Independiente del Valle",
       "visitante": "Universidad Católica (Quito)",
@@ -64481,244 +64687,6 @@
           "presion_lado": 5.708518873169758
         }
       ],
-      "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
-    },
-    {
-      "partido": "Chattanooga vs UNC Greensboro",
-      "local": "Chattanooga",
-      "visitante": "UNC Greensboro",
-      "favorito": "Chattanooga",
-      "no_favorito": "UNC Greensboro",
-      "favorito_es_local": true,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 2,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "MEDIA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401889495",
-      "hora_inicio": "2026-10-23T21:00Z",
-      "fixture_id": "401889495",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "NCAAW Soccer",
-      "home_id": "20603",
-      "away_id": "20351",
-      "kickoff_utc": "2026-10-23T21:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [
-        {
-          "minuto": "4'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "7'",
-          "goles_local": 1,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "11'",
-          "goles_local": 1,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "15'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "20'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "25'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "30'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "35'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "40'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "45'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "First Half"
-        },
-        {
-          "minuto": "45'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "Halftime"
-        },
-        {
-          "minuto": "45'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "Halftime"
-        },
-        {
-          "minuto": "45'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 1,
-          "estado_detalle": "Halftime"
-        },
-        {
-          "minuto": "46'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "51'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "57'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "61'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "65'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "71'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "75'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "80'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "83'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        },
-        {
-          "minuto": "88'",
-          "goles_local": 1,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {},
-          "periodo": 2,
-          "estado_detalle": "Second Half"
-        }
-      ],
-      "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0,
       "aviso_final_enviado": true
     },
@@ -68444,6 +68412,35 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
+      "partido": "South Carolina vs Georgia",
+      "local": "South Carolina",
+      "visitante": "Georgia",
+      "favorito": "South Carolina",
+      "no_favorito": "Georgia",
+      "favorito_es_local": true,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 1,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "BAJA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401885834",
+      "hora_inicio": "2026-10-23T23:00Z",
+      "fixture_id": "401885834",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "NCAAW Soccer",
+      "home_id": "20368",
+      "away_id": "20532",
+      "kickoff_utc": "2026-10-23T23:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
+    },
+    {
       "partido": "Chicago Stars FC vs Houston Dash",
       "local": "Chicago Stars FC",
       "visitante": "Houston Dash",
@@ -68878,7 +68875,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }

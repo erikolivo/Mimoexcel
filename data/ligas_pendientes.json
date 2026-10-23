@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 3440,
+      "veces_visto": 3448,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-10-23"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 2674,
+      "veces_visto": 2686,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-23"
@@ -111,27 +111,27 @@
     },
     {
       "pais": "",
-      "liga": "Liga de Expansión MX",
-      "liga_id": "3932",
-      "veces_visto": 248,
-      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
-      "fixture_id": "401886377",
-      "ultimo_visto": "2026-10-23"
-    },
-    {
-      "pais": "",
       "liga": "NWSL",
       "liga_id": "8301",
-      "veces_visto": 247,
+      "veces_visto": 250,
       "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
       "fixture_id": "401853996",
       "ultimo_visto": "2026-10-23"
     },
     {
       "pais": "",
+      "liga": "Liga de Expansión MX",
+      "liga_id": "3932",
+      "veces_visto": 249,
+      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
+      "fixture_id": "401886377",
+      "ultimo_visto": "2026-10-23"
+    },
+    {
+      "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 224,
+      "veces_visto": 225,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-10-23"
@@ -158,7 +158,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 184,
+      "veces_visto": 185,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-10-23"
@@ -176,7 +176,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 151,
+      "veces_visto": 152,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-10-23"
@@ -203,7 +203,7 @@
       "pais": "",
       "liga": "Salvadoran Primera",
       "liga_id": "3943",
-      "veces_visto": 137,
+      "veces_visto": 138,
       "ejemplo_partido": "Inca Aruba vs Atletico Balboa",
       "fixture_id": "401899791",
       "ultimo_visto": "2026-10-23"
@@ -212,7 +212,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 131,
+      "veces_visto": 132,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-10-23"
@@ -266,7 +266,7 @@
       "pais": "",
       "liga": "Liga FPD",
       "liga_id": "4005",
-      "veces_visto": 103,
+      "veces_visto": 104,
       "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
       "fixture_id": "401876853",
       "ultimo_visto": "2026-10-23"
@@ -284,7 +284,7 @@
       "pais": "",
       "liga": "Austrian Bundesliga",
       "liga_id": "3907",
-      "veces_visto": 92,
+      "veces_visto": 93,
       "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
       "fixture_id": "401881790",
       "ultimo_visto": "2026-10-23"
@@ -297,6 +297,15 @@
       "ejemplo_partido": "Costa Rica vs Curaçao",
       "fixture_id": "401900638",
       "ultimo_visto": "2026-10-04"
+    },
+    {
+      "pais": "",
+      "liga": "CAF Champions League, Second Preliminary Round",
+      "liga_id": "2391",
+      "veces_visto": 82,
+      "ejemplo_partido": "El Merriekh Bentiu vs Pyramids FC",
+      "fixture_id": "401914250",
+      "ultimo_visto": "2026-10-23"
     },
     {
       "pais": "",
@@ -318,18 +327,9 @@
     },
     {
       "pais": "",
-      "liga": "CAF Champions League, Second Preliminary Round",
-      "liga_id": "2391",
-      "veces_visto": 78,
-      "ejemplo_partido": "El Merriekh Bentiu vs Pyramids FC",
-      "fixture_id": "401914250",
-      "ultimo_visto": "2026-10-23"
-    },
-    {
-      "pais": "",
       "liga": "Northern Super League",
       "liga_id": "23286",
-      "veces_visto": 77,
+      "veces_visto": 78,
       "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
       "fixture_id": "401859943",
       "ultimo_visto": "2026-10-23"
@@ -410,9 +410,18 @@
       "pais": "",
       "liga": "A-League Women",
       "liga_id": "18992",
-      "veces_visto": 59,
+      "veces_visto": 60,
       "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
       "fixture_id": "401913254",
+      "ultimo_visto": "2026-10-23"
+    },
+    {
+      "pais": "",
+      "liga": "CAF Confederation Cup, Second Preliminary Round",
+      "liga_id": "18000",
+      "veces_visto": 59,
+      "ejemplo_partido": "Welwalo Adigrat vs Al Ahli Tripoli",
+      "fixture_id": "401912479",
       "ultimo_visto": "2026-10-23"
     },
     {
@@ -468,15 +477,6 @@
       "ejemplo_partido": "Bonaire vs St. Kitts and Nevis",
       "fixture_id": "401900627",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "CAF Confederation Cup, Second Preliminary Round",
-      "liga_id": "18000",
-      "veces_visto": 56,
-      "ejemplo_partido": "Welwalo Adigrat vs Al Ahli Tripoli",
-      "fixture_id": "401912479",
-      "ultimo_visto": "2026-10-23"
     },
     {
       "pais": "",
@@ -552,21 +552,21 @@
     },
     {
       "pais": "",
+      "liga": "Indian Super League",
+      "liga_id": "8316",
+      "veces_visto": 52,
+      "ejemplo_partido": "NorthEast United FC vs Mohun Bagan Super Giant",
+      "fixture_id": "401925436",
+      "ultimo_visto": "2026-10-23"
+    },
+    {
+      "pais": "",
       "liga": "UEFA Nations League, Group A1",
       "liga_id": "2395",
       "veces_visto": 51,
       "ejemplo_partido": "Portugal vs Wales",
       "fixture_id": "401861044",
       "ultimo_visto": "2026-10-05"
-    },
-    {
-      "pais": "",
-      "liga": "Indian Super League",
-      "liga_id": "8316",
-      "veces_visto": 51,
-      "ejemplo_partido": "NorthEast United FC vs Mohun Bagan Super Giant",
-      "fixture_id": "401925436",
-      "ultimo_visto": "2026-10-23"
     },
     {
       "pais": "",
@@ -633,6 +633,15 @@
     },
     {
       "pais": "",
+      "liga": "Honduran Liga Nacional",
+      "liga_id": "3929",
+      "veces_visto": 46,
+      "ejemplo_partido": "CD Estrella Roja vs Platense",
+      "fixture_id": "401915261",
+      "ultimo_visto": "2026-10-23"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League C, Group B",
       "liga_id": "19267",
       "veces_visto": 45,
@@ -648,15 +657,6 @@
       "ejemplo_partido": "Cayman Islands vs Dominica",
       "fixture_id": "401900634",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Honduran Liga Nacional",
-      "liga_id": "3929",
-      "veces_visto": 45,
-      "ejemplo_partido": "CD Estrella Roja vs Platense",
-      "fixture_id": "401915261",
-      "ultimo_visto": "2026-10-23"
     },
     {
       "pais": "",
@@ -957,6 +957,24 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 Women's World Cup, Group A",
+      "liga_id": "20865",
+      "veces_visto": 20,
+      "ejemplo_partido": "Argentina U17 vs New Zealand U17",
+      "fixture_id": "401874122",
+      "ultimo_visto": "2026-10-23"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 Women's World Cup, Group B",
+      "liga_id": "20865",
+      "veces_visto": 20,
+      "ejemplo_partido": "North Korea U17 vs Poland U17",
+      "fixture_id": "401874119",
+      "ultimo_visto": "2026-10-23"
+    },
+    {
+      "pais": "",
       "liga": "Arabian Gulf Cup, Group B",
       "liga_id": "23107",
       "veces_visto": 19,
@@ -1026,24 +1044,6 @@
       "ejemplo_partido": "North Korea U17 vs Poland U17",
       "fixture_id": "401874119",
       "ultimo_visto": "2026-10-20"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 Women's World Cup, Group A",
-      "liga_id": "20865",
-      "veces_visto": 18,
-      "ejemplo_partido": "Argentina U17 vs New Zealand U17",
-      "fixture_id": "401874122",
-      "ultimo_visto": "2026-10-23"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 Women's World Cup, Group B",
-      "liga_id": "20865",
-      "veces_visto": 18,
-      "ejemplo_partido": "North Korea U17 vs Poland U17",
-      "fixture_id": "401874119",
-      "ultimo_visto": "2026-10-23"
     },
     {
       "pais": "",
