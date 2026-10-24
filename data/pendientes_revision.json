@@ -1,27 +1,6 @@
 [
   {
     "fecha": "2026-10-24",
-    "local": "Juárez",
-    "visitante": "Querétaro",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-24",
-    "local": "Cruz Azul",
-    "visitante": "Toluca",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-24",
-    "local": "CA Indep",
-    "visitante": "Marathón",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-24",
     "local": "San Antonio",
     "visitante": "Orange County",
     "favorito": "LOCAL",
@@ -241,6 +220,27 @@
     "fecha": "2026-10-24",
     "local": "Azam",
     "visitante": "ZED FC",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-24",
+    "local": "Hill of Beath",
+    "visitante": "Musselburgh",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-24",
+    "local": "Johnstone Burgh",
+    "visitante": "Formartine",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-24",
+    "local": "Threave Rovers",
+    "visitante": "Pollok",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
@@ -589,22 +589,15 @@
   },
   {
     "fecha": "2026-10-24",
-    "local": "Ferro",
-    "visitante": "Chaco",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-24",
-    "local": "GV San José",
-    "visitante": "Blooming",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-24",
     "local": "RSB Berkane",
     "visitante": "Star Sport",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-24",
+    "local": "Ferro",
+    "visitante": "Chaco",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
@@ -652,6 +645,13 @@
   },
   {
     "fecha": "2026-10-24",
+    "local": "Lehigh",
+    "visitante": "Boston U",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-24",
     "local": "Quilmes",
     "visitante": "San Martín (T)",
     "favorito": "DC VISITANTE",
@@ -662,13 +662,6 @@
     "local": "Xelajú MC",
     "visitante": "Municipal",
     "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-24",
-    "local": "Lehigh",
-    "visitante": "Boston U",
-    "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -690,6 +683,13 @@
     "local": "Cosmos",
     "visitante": "Chattanooga",
     "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-24",
+    "local": "GV San José",
+    "visitante": "Blooming",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
