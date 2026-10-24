@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-23",
+  "actualizado": "2026-10-24",
   "ligas": [
     {
       "pais": "",
@@ -113,10 +113,10 @@
       "pais": "",
       "liga": "NWSL",
       "liga_id": "8301",
-      "veces_visto": 256,
+      "veces_visto": 258,
       "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
       "fixture_id": "401853996",
-      "ultimo_visto": "2026-10-23"
+      "ultimo_visto": "2026-10-24"
     },
     {
       "pais": "",
@@ -131,10 +131,10 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 227,
+      "veces_visto": 232,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
-      "ultimo_visto": "2026-10-23"
+      "ultimo_visto": "2026-10-24"
     },
     {
       "pais": "",
@@ -149,10 +149,10 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 203,
+      "veces_visto": 205,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
-      "ultimo_visto": "2026-10-18"
+      "ultimo_visto": "2026-10-24"
     },
     {
       "pais": "",
@@ -176,10 +176,10 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 154,
+      "veces_visto": 159,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
-      "ultimo_visto": "2026-10-23"
+      "ultimo_visto": "2026-10-24"
     },
     {
       "pais": "",
@@ -212,10 +212,10 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 134,
+      "veces_visto": 135,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
-      "ultimo_visto": "2026-10-23"
+      "ultimo_visto": "2026-10-24"
     },
     {
       "pais": "",
@@ -372,6 +372,15 @@
     },
     {
       "pais": "",
+      "liga": "A-League Women",
+      "liga_id": "18992",
+      "veces_visto": 65,
+      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
+      "fixture_id": "401913254",
+      "ultimo_visto": "2026-10-24"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group A",
       "liga_id": "20114",
       "veces_visto": 64,
@@ -405,15 +414,6 @@
       "ejemplo_partido": "Malta U21 vs Germany U21",
       "fixture_id": "401758358",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "A-League Women",
-      "liga_id": "18992",
-      "veces_visto": 62,
-      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
-      "fixture_id": "401913254",
-      "ultimo_visto": "2026-10-23"
     },
     {
       "pais": "",
@@ -795,6 +795,15 @@
     },
     {
       "pais": "",
+      "liga": "Scottish Cup, Second Round",
+      "liga_id": "3959",
+      "veces_visto": 27,
+      "ejemplo_partido": "Penicuik vs Clyde",
+      "fixture_id": "401928436",
+      "ultimo_visto": "2026-10-24"
+    },
+    {
+      "pais": "",
       "liga": "AFC Champions League Two, Group B",
       "liga_id": "2466",
       "veces_visto": 26,
@@ -1146,6 +1155,15 @@
     },
     {
       "pais": "",
+      "liga": "Women's FA Cup, First Round",
+      "liga_id": "20226",
+      "veces_visto": 12,
+      "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
+      "fixture_id": "401926253",
+      "ultimo_visto": "2026-10-24"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group H",
       "liga_id": "8315",
       "veces_visto": 11,
@@ -1191,15 +1209,6 @@
     },
     {
       "pais": "",
-      "liga": "Women's FA Cup, First Round",
-      "liga_id": "20226",
-      "veces_visto": 11,
-      "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
-      "fixture_id": "401926253",
-      "ultimo_visto": "2026-10-22"
-    },
-    {
-      "pais": "",
       "liga": "CAF Confederation Cup, First Preliminary Round",
       "liga_id": "18000",
       "veces_visto": 10,
@@ -1233,15 +1242,6 @@
       "ejemplo_partido": "Stenhousemuir vs Heart of Midlothian",
       "fixture_id": "401909668",
       "ultimo_visto": "2026-09-13"
-    },
-    {
-      "pais": "",
-      "liga": "Scottish Cup, Second Round",
-      "liga_id": "3959",
-      "veces_visto": 8,
-      "ejemplo_partido": "Penicuik vs Clyde",
-      "fixture_id": "401928436",
-      "ultimo_visto": "2026-10-23"
     },
     {
       "pais": "",
