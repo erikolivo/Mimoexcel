@@ -18955,8 +18955,22 @@
     ]
   },
   "3891_eng.4_2026": {
-    "fecha_cache": "2026-10-17T11:46:52.328301",
+    "fecha_cache": "2026-10-24T14:18:56.784640",
     "historial": [
+      {
+        "fecha": "2026-10-20",
+        "goles_favor": 2,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D"
+      },
+      {
+        "fecha": "2026-10-17",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-10-10",
         "goles_favor": 1,
