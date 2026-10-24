@@ -164397,6 +164397,35 @@
       "aviso_final_enviado": true
     },
     {
+      "partido": "Harrogate Town vs Bolton",
+      "local": "Harrogate Town",
+      "visitante": "Bolton",
+      "favorito": "Harrogate Town",
+      "no_favorito": "Bolton",
+      "favorito_es_local": true,
+      "tipo_pronostico": "favorito_directo",
+      "confianza_estrellas": 3,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "ALTA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401928634",
+      "hora_inicio": "2026-10-24T16:30Z",
+      "fixture_id": "401928634",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "Women's FA Cup, First Round",
+      "home_id": "21247",
+      "away_id": "131477",
+      "kickoff_utc": "2026-10-24T16:30Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
+    },
+    {
       "partido": "Chelsea vs Tottenham Hotspur",
       "local": "Chelsea",
       "visitante": "Tottenham Hotspur",
@@ -168942,35 +168971,6 @@
           "presion_lado": 15.3727847604973
         }
       ],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
-      "partido": "Harrogate Town vs Bolton",
-      "local": "Harrogate Town",
-      "visitante": "Bolton",
-      "favorito": "Harrogate Town",
-      "no_favorito": "Bolton",
-      "favorito_es_local": true,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 3,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "ALTA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401928634",
-      "hora_inicio": "2026-10-24T16:30Z",
-      "fixture_id": "401928634",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "Women's FA Cup, First Round",
-      "home_id": "21247",
-      "away_id": "131477",
-      "kickoff_utc": "2026-10-24T16:30Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     },
     {
@@ -185056,7 +185056,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
