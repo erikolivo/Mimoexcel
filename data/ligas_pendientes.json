@@ -113,7 +113,7 @@
       "pais": "",
       "liga": "NWSL",
       "liga_id": "8301",
-      "veces_visto": 262,
+      "veces_visto": 264,
       "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
       "fixture_id": "401853996",
       "ultimo_visto": "2026-10-24"
@@ -131,7 +131,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 242,
+      "veces_visto": 247,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-10-24"
@@ -149,7 +149,7 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 209,
+      "veces_visto": 211,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
       "ultimo_visto": "2026-10-24"
@@ -167,7 +167,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 169,
+      "veces_visto": 174,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-10-24"
@@ -212,7 +212,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 137,
+      "veces_visto": 138,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-10-24"
@@ -300,6 +300,15 @@
     },
     {
       "pais": "",
+      "liga": "Scottish Cup, Second Round",
+      "liga_id": "3959",
+      "veces_visto": 84,
+      "ejemplo_partido": "Penicuik vs Clyde",
+      "fixture_id": "401928436",
+      "ultimo_visto": "2026-10-24"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League A, Group A",
       "liga_id": "19267",
       "veces_visto": 83,
@@ -354,6 +363,15 @@
     },
     {
       "pais": "",
+      "liga": "A-League Women",
+      "liga_id": "18992",
+      "veces_visto": 74,
+      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
+      "fixture_id": "401913254",
+      "ultimo_visto": "2026-10-24"
+    },
+    {
+      "pais": "",
       "liga": "Bolivian Liga Profesional",
       "liga_id": "620",
       "veces_visto": 73,
@@ -363,30 +381,12 @@
     },
     {
       "pais": "",
-      "liga": "A-League Women",
-      "liga_id": "18992",
-      "veces_visto": 71,
-      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
-      "fixture_id": "401913254",
-      "ultimo_visto": "2026-10-24"
-    },
-    {
-      "pais": "",
       "liga": "CAF Confederation Cup, Second Preliminary Round",
       "liga_id": "18000",
       "veces_visto": 65,
       "ejemplo_partido": "Welwalo Adigrat vs Al Ahli Tripoli",
       "fixture_id": "401912479",
       "ultimo_visto": "2026-10-23"
-    },
-    {
-      "pais": "",
-      "liga": "Scottish Cup, Second Round",
-      "liga_id": "3959",
-      "veces_visto": 65,
-      "ejemplo_partido": "Penicuik vs Clyde",
-      "fixture_id": "401928436",
-      "ultimo_visto": "2026-10-24"
     },
     {
       "pais": "",
@@ -1110,6 +1110,15 @@
     },
     {
       "pais": "",
+      "liga": "Women's FA Cup, First Round",
+      "liga_id": "20226",
+      "veces_visto": 15,
+      "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
+      "fixture_id": "401926253",
+      "ultimo_visto": "2026-10-24"
+    },
+    {
+      "pais": "",
       "liga": "Liga FUTVE",
       "liga_id": "3949",
       "veces_visto": 14,
@@ -1134,15 +1143,6 @@
       "ejemplo_partido": "América de Cali vs Deportivo Pereira",
       "fixture_id": "401902716",
       "ultimo_visto": "2026-09-21"
-    },
-    {
-      "pais": "",
-      "liga": "Women's FA Cup, First Round",
-      "liga_id": "20226",
-      "veces_visto": 14,
-      "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
-      "fixture_id": "401926253",
-      "ultimo_visto": "2026-10-24"
     },
     {
       "pais": "",
