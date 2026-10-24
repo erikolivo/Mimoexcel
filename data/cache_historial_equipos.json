@@ -27856,8 +27856,15 @@
     ]
   },
   "2980_nor.1_2026": {
-    "fecha_cache": "2026-10-17T12:22:29.447716",
+    "fecha_cache": "2026-10-24T14:24:11.368482",
     "historial": [
+      {
+        "fecha": "2026-10-17",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V"
+      },
       {
         "fecha": "2026-10-10",
         "goles_favor": 3,
