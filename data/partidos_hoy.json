@@ -12913,6 +12913,36 @@
       "aviso_final_enviado": true
     },
     {
+      "partido": "Exeter City vs Hashtag United FC",
+      "local": "Exeter City",
+      "visitante": "Hashtag United FC",
+      "favorito": "Exeter City",
+      "no_favorito": "Hashtag United FC",
+      "favorito_es_local": true,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 1,
+      "cuota_local_inicial": null,
+      "cuota_empate_inicial": null,
+      "cuota_visitante_inicial": null,
+      "prioridad": "BAJA",
+      "fuente_favorito": "elo-tilt",
+      "fila_fuente": "401928702",
+      "hora_inicio": "2026-10-25T12:00Z",
+      "fixture_id": "401928702",
+      "liga_slug": "all",
+      "liga_pais": "",
+      "liga_nombre": "Women's FA Cup, First Round",
+      "home_id": "21087",
+      "away_id": "21277",
+      "kickoff_utc": "2026-10-25T12:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
+    },
+    {
       "partido": "Crystal Palace vs Chelsea",
       "local": "Crystal Palace",
       "visitante": "Chelsea",
@@ -14566,36 +14596,6 @@
       "aviso_final_enviado": true,
       "es_destacado": true,
       "grupo_destacado": 2
-    },
-    {
-      "partido": "Exeter City vs Hashtag United FC",
-      "local": "Exeter City",
-      "visitante": "Hashtag United FC",
-      "favorito": "Exeter City",
-      "no_favorito": "Hashtag United FC",
-      "favorito_es_local": true,
-      "tipo_pronostico": "doble_oportunidad",
-      "confianza_estrellas": 1,
-      "cuota_local_inicial": null,
-      "cuota_empate_inicial": null,
-      "cuota_visitante_inicial": null,
-      "prioridad": "BAJA",
-      "fuente_favorito": "elo-tilt",
-      "fila_fuente": "401928702",
-      "hora_inicio": "2026-10-25T12:00Z",
-      "fixture_id": "401928702",
-      "liga_slug": "all",
-      "liga_pais": "",
-      "liga_nombre": "Women's FA Cup, First Round",
-      "home_id": "21087",
-      "away_id": "21277",
-      "kickoff_utc": "2026-10-25T12:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
     },
     {
       "partido": "Hibernian vs Celtic",
@@ -50300,7 +50300,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
