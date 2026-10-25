@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-24",
+  "actualizado": "2026-10-25",
   "ligas": [
     {
       "pais": "",
@@ -95,19 +95,19 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 282,
+      "veces_visto": 284,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
-      "ultimo_visto": "2026-10-24"
+      "ultimo_visto": "2026-10-25"
     },
     {
       "pais": "",
       "liga": "NWSL",
       "liga_id": "8301",
-      "veces_visto": 278,
+      "veces_visto": 281,
       "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
       "fixture_id": "401853996",
-      "ultimo_visto": "2026-10-24"
+      "ultimo_visto": "2026-10-25"
     },
     {
       "pais": "",
@@ -140,10 +140,10 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 225,
+      "veces_visto": 230,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
-      "ultimo_visto": "2026-10-24"
+      "ultimo_visto": "2026-10-25"
     },
     {
       "pais": "",
@@ -203,10 +203,10 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 145,
+      "veces_visto": 146,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
-      "ultimo_visto": "2026-10-24"
+      "ultimo_visto": "2026-10-25"
     },
     {
       "pais": "",
@@ -291,21 +291,21 @@
     },
     {
       "pais": "",
+      "liga": "A-League Women",
+      "liga_id": "18992",
+      "veces_visto": 96,
+      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
+      "fixture_id": "401913254",
+      "ultimo_visto": "2026-10-25"
+    },
+    {
+      "pais": "",
       "liga": "Austrian Bundesliga",
       "liga_id": "3907",
       "veces_visto": 95,
       "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
       "fixture_id": "401881790",
       "ultimo_visto": "2026-10-23"
-    },
-    {
-      "pais": "",
-      "liga": "A-League Women",
-      "liga_id": "18992",
-      "veces_visto": 95,
-      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
-      "fixture_id": "401913254",
-      "ultimo_visto": "2026-10-24"
     },
     {
       "pais": "",
@@ -378,6 +378,15 @@
       "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
       "fixture_id": "401906485",
       "ultimo_visto": "2026-10-16"
+    },
+    {
+      "pais": "",
+      "liga": "Women's FA Cup, First Round",
+      "liga_id": "20226",
+      "veces_visto": 69,
+      "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
+      "fixture_id": "401926253",
+      "ultimo_visto": "2026-10-25"
     },
     {
       "pais": "",
@@ -948,15 +957,6 @@
     },
     {
       "pais": "",
-      "liga": "Women's FA Cup, First Round",
-      "liga_id": "20226",
-      "veces_visto": 22,
-      "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
-      "fixture_id": "401926253",
-      "ultimo_visto": "2026-10-24"
-    },
-    {
-      "pais": "",
       "liga": "Concacaf Central American Cup, Play-In",
       "liga_id": "22947",
       "veces_visto": 21,
@@ -1449,6 +1449,15 @@
       "ejemplo_partido": "Cartaginés vs Club Deportivo Olimpia",
       "fixture_id": "401922486",
       "ultimo_visto": "2026-10-21"
+    },
+    {
+      "pais": "",
+      "liga": "Women's Champions Cup, Round 1",
+      "liga_id": "24081",
+      "veces_visto": 1,
+      "ejemplo_partido": "Naegohyang vs Auckland United FC",
+      "fixture_id": "401930375",
+      "ultimo_visto": "2026-10-25"
     }
   ]
 }
