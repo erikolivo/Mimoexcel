@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 2827,
+      "veces_visto": 2839,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-27"
@@ -158,7 +158,7 @@
       "pais": "",
       "liga": "Scottish Cup, Second Round",
       "liga_id": "3959",
-      "veces_visto": 217,
+      "veces_visto": 218,
       "ejemplo_partido": "Penicuik vs Clyde",
       "fixture_id": "401928436",
       "ultimo_visto": "2026-10-27"
@@ -192,9 +192,18 @@
     },
     {
       "pais": "",
+      "liga": "Copa del Rey, First Round",
+      "liga_id": "3951",
+      "veces_visto": 180,
+      "ejemplo_partido": "CD Cuarte vs Girona",
+      "fixture_id": "401928493",
+      "ultimo_visto": "2026-10-27"
+    },
+    {
+      "pais": "",
       "liga": "AFC Champions League Elite, West Region",
       "liga_id": "3902",
-      "veces_visto": 174,
+      "veces_visto": 176,
       "ejemplo_partido": "Neftchi Fergana vs Air Force Club",
       "fixture_id": "401912664",
       "ultimo_visto": "2026-10-27"
@@ -203,18 +212,9 @@
       "pais": "",
       "liga": "AFC Champions League Elite, East Region",
       "liga_id": "3902",
-      "veces_visto": 170,
+      "veces_visto": 176,
       "ejemplo_partido": "Daejeon Hana Citizen vs Kyoto Sanga",
       "fixture_id": "401912672",
-      "ultimo_visto": "2026-10-27"
-    },
-    {
-      "pais": "",
-      "liga": "Copa del Rey, First Round",
-      "liga_id": "3951",
-      "veces_visto": 162,
-      "ejemplo_partido": "CD Cuarte vs Girona",
-      "fixture_id": "401928493",
       "ultimo_visto": "2026-10-27"
     },
     {
@@ -345,6 +345,15 @@
     },
     {
       "pais": "",
+      "liga": "KNVB Beker, First Round",
+      "liga_id": "3957",
+      "veces_visto": 90,
+      "ejemplo_partido": "Excelsior '31 vs ADO Den Haag",
+      "fixture_id": "401925175",
+      "ultimo_visto": "2026-10-27"
+    },
+    {
+      "pais": "",
       "liga": "Northern Super League",
       "liga_id": "23286",
       "veces_visto": 89,
@@ -363,21 +372,21 @@
     },
     {
       "pais": "",
-      "liga": "KNVB Beker, First Round",
-      "liga_id": "3957",
-      "veces_visto": 81,
-      "ejemplo_partido": "Excelsior '31 vs ADO Den Haag",
-      "fixture_id": "401925175",
-      "ultimo_visto": "2026-10-27"
-    },
-    {
-      "pais": "",
       "liga": "Taca de Portugal, 2nd Round",
       "liga_id": "20922",
       "veces_visto": 80,
       "ejemplo_partido": "Real Sport Clube vs Académica de Coimbra",
       "fixture_id": "401913076",
       "ultimo_visto": "2026-09-27"
+    },
+    {
+      "pais": "",
+      "liga": "German Cup, Second Round",
+      "liga_id": "3954",
+      "veces_visto": 80,
+      "ejemplo_partido": "Hamburg SV vs Eintracht Frankfurt",
+      "fixture_id": "401916920",
+      "ultimo_visto": "2026-10-27"
     },
     {
       "pais": "",
@@ -405,15 +414,6 @@
       "ejemplo_partido": "Jamaica vs Guatemala",
       "fixture_id": "401900631",
       "ultimo_visto": "2026-10-05"
-    },
-    {
-      "pais": "",
-      "liga": "German Cup, Second Round",
-      "liga_id": "3954",
-      "veces_visto": 72,
-      "ejemplo_partido": "Hamburg SV vs Eintracht Frankfurt",
-      "fixture_id": "401916920",
-      "ultimo_visto": "2026-10-27"
     },
     {
       "pais": "",
@@ -624,6 +624,15 @@
     },
     {
       "pais": "",
+      "liga": "AFC Champions League Two, Group D",
+      "liga_id": "2466",
+      "veces_visto": 50,
+      "ejemplo_partido": "Al Hussein vs SC East Bengal",
+      "fixture_id": "401912812",
+      "ultimo_visto": "2026-10-27"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League B, Group B",
       "liga_id": "19267",
       "veces_visto": 49,
@@ -666,15 +675,6 @@
       "ejemplo_partido": "CD Estrella Roja vs Platense",
       "fixture_id": "401915261",
       "ultimo_visto": "2026-10-23"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Two, Group D",
-      "liga_id": "2466",
-      "veces_visto": 48,
-      "ejemplo_partido": "Al Hussein vs SC East Bengal",
-      "fixture_id": "401912812",
-      "ultimo_visto": "2026-10-27"
     },
     {
       "pais": "",
@@ -786,6 +786,15 @@
     },
     {
       "pais": "",
+      "liga": "Liga FUTVE",
+      "liga_id": "3949",
+      "veces_visto": 34,
+      "ejemplo_partido": "Carabobo vs Deportivo La Guaira",
+      "fixture_id": "401903324",
+      "ultimo_visto": "2026-10-27"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group H",
       "liga_id": "20114",
       "veces_visto": 32,
@@ -804,15 +813,6 @@
     },
     {
       "pais": "",
-      "liga": "Liga FUTVE",
-      "liga_id": "3949",
-      "veces_visto": 32,
-      "ejemplo_partido": "Carabobo vs Deportivo La Guaira",
-      "fixture_id": "401903324",
-      "ultimo_visto": "2026-10-27"
-    },
-    {
-      "pais": "",
       "liga": "Men's U-21 Friendly",
       "liga_id": "20132",
       "veces_visto": 31,
@@ -822,21 +822,21 @@
     },
     {
       "pais": "",
+      "liga": "Concacaf Central American Cup, Play-In",
+      "liga_id": "22947",
+      "veces_visto": 31,
+      "ejemplo_partido": "Club Deportivo Marathón vs Alianza FC",
+      "fixture_id": "401922488",
+      "ultimo_visto": "2026-10-27"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group I",
       "liga_id": "20114",
       "veces_visto": 30,
       "ejemplo_partido": "Belgium U21 vs Belarus U21",
       "fixture_id": "732409",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Central American Cup, Play-In",
-      "liga_id": "22947",
-      "veces_visto": 30,
-      "ejemplo_partido": "Club Deportivo Marathón vs Alianza FC",
-      "fixture_id": "401922488",
-      "ultimo_visto": "2026-10-27"
     },
     {
       "pais": "",
