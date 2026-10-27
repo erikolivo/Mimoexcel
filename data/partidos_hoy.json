@@ -50147,7 +50147,8 @@
           "presion_lado": 4.163619884390904
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Santos vs León",
@@ -51718,7 +51719,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     }
   ],
   "predicciones_activas": {},
