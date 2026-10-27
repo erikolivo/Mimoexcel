@@ -284022,8 +284022,15 @@
     ]
   },
   "5751_all_2026": {
-    "fecha_cache": "2026-10-20T11:35:02.050584",
+    "fecha_cache": "2026-10-27T16:24:36.070224",
     "historial": [
+      {
+        "fecha": "2026-10-20",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D"
+      },
       {
         "fecha": "2026-10-17",
         "goles_favor": 0,
