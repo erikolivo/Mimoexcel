@@ -147,6 +147,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa del Rey, First Round",
+      "liga_id": "3951",
+      "veces_visto": 264,
+      "ejemplo_partido": "CD Cuarte vs Girona",
+      "fixture_id": "401928493",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
       "liga": "Liga de Expansión MX",
       "liga_id": "3932",
       "veces_visto": 257,
@@ -156,18 +165,9 @@
     },
     {
       "pais": "",
-      "liga": "Copa del Rey, First Round",
-      "liga_id": "3951",
-      "veces_visto": 240,
-      "ejemplo_partido": "CD Cuarte vs Girona",
-      "fixture_id": "401928493",
-      "ultimo_visto": "2026-10-28"
-    },
-    {
-      "pais": "",
       "liga": "WSL Players Cup, League Phase",
       "liga_id": "23390",
-      "veces_visto": 221,
+      "veces_visto": 228,
       "ejemplo_partido": "Crystal Palace vs Watford",
       "fixture_id": "401923288",
       "ultimo_visto": "2026-10-28"
@@ -203,7 +203,7 @@
       "pais": "",
       "liga": "AFC Champions League Elite, East Region",
       "liga_id": "3902",
-      "veces_visto": 190,
+      "veces_visto": 192,
       "ejemplo_partido": "Daejeon Hana Citizen vs Kyoto Sanga",
       "fixture_id": "401912672",
       "ultimo_visto": "2026-10-28"
@@ -275,7 +275,7 @@
       "pais": "",
       "liga": "KNVB Beker, First Round",
       "liga_id": "3957",
-      "veces_visto": 117,
+      "veces_visto": 126,
       "ejemplo_partido": "Excelsior '31 vs ADO Den Haag",
       "fixture_id": "401925175",
       "ultimo_visto": "2026-10-28"
@@ -284,9 +284,18 @@
       "pais": "",
       "liga": "UEFA Women's Champions League, League Phase",
       "liga_id": "19483",
-      "veces_visto": 111,
+      "veces_visto": 116,
       "ejemplo_partido": "Bayern Munich vs Manchester City",
       "fixture_id": "401917018",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
+      "liga": "German Cup, Second Round",
+      "liga_id": "3954",
+      "veces_visto": 112,
+      "ejemplo_partido": "Hamburg SV vs Eintracht Frankfurt",
+      "fixture_id": "401916920",
       "ultimo_visto": "2026-10-28"
     },
     {
@@ -324,15 +333,6 @@
       "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
       "fixture_id": "401913254",
       "ultimo_visto": "2026-10-25"
-    },
-    {
-      "pais": "",
-      "liga": "German Cup, Second Round",
-      "liga_id": "3954",
-      "veces_visto": 104,
-      "ejemplo_partido": "Hamburg SV vs Eintracht Frankfurt",
-      "fixture_id": "401916920",
-      "ultimo_visto": "2026-10-28"
     },
     {
       "pais": "",
@@ -777,21 +777,21 @@
     },
     {
       "pais": "",
+      "liga": "AFC Champions League Two, Group F",
+      "liga_id": "2466",
+      "veces_visto": 37,
+      "ejemplo_partido": "Adelaide United vs Tai Po FC",
+      "fixture_id": "401912808",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group G",
       "liga_id": "20114",
       "veces_visto": 36,
       "ejemplo_partido": "Netherlands U21 vs Norway U21",
       "fixture_id": "732414",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Two, Group F",
-      "liga_id": "2466",
-      "veces_visto": 36,
-      "ejemplo_partido": "Adelaide United vs Tai Po FC",
-      "fixture_id": "401912808",
-      "ultimo_visto": "2026-10-28"
     },
     {
       "pais": "",
@@ -842,7 +842,7 @@
       "pais": "",
       "liga": "AFC Champions League Two, Group B",
       "liga_id": "2466",
-      "veces_visto": 28,
+      "veces_visto": 30,
       "ejemplo_partido": "Arkadag vs Al Muharraq",
       "fixture_id": "401912818",
       "ultimo_visto": "2026-10-28"
@@ -851,7 +851,7 @@
       "pais": "",
       "liga": "AFC Champions League Two, Group C",
       "liga_id": "2466",
-      "veces_visto": 28,
+      "veces_visto": 30,
       "ejemplo_partido": "Al-Nahda Muscat Club vs Al Taawoun",
       "fixture_id": "401912813",
       "ultimo_visto": "2026-10-28"
@@ -860,7 +860,7 @@
       "pais": "",
       "liga": "AFC Champions League Two, Group A",
       "liga_id": "2466",
-      "veces_visto": 28,
+      "veces_visto": 30,
       "ejemplo_partido": "Al-Wahda vs Kuwait SC",
       "fixture_id": "401912815",
       "ultimo_visto": "2026-10-28"
@@ -1128,21 +1128,21 @@
     },
     {
       "pais": "",
+      "liga": "AFC Champions League Two, Group E",
+      "liga_id": "2466",
+      "veces_visto": 17,
+      "ejemplo_partido": "FC Seoul vs Persib",
+      "fixture_id": "401912817",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group G",
       "liga_id": "8315",
       "veces_visto": 16,
       "ejemplo_partido": "Ivory Coast vs Ghana",
       "fixture_id": "401920050",
       "ultimo_visto": "2026-09-29"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Two, Group E",
-      "liga_id": "2466",
-      "veces_visto": 16,
-      "ejemplo_partido": "FC Seoul vs Persib",
-      "fixture_id": "401912817",
-      "ultimo_visto": "2026-10-28"
     },
     {
       "pais": "",
@@ -1188,6 +1188,15 @@
       "ejemplo_partido": "Sudan vs Ethiopia",
       "fixture_id": "401920041",
       "ultimo_visto": "2026-09-29"
+    },
+    {
+      "pais": "",
+      "liga": "Women's Europa Cup, Round of 16",
+      "liga_id": "24079",
+      "veces_visto": 12,
+      "ejemplo_partido": "SK Brann vs Czarni Sosnowiec",
+      "fixture_id": "401928144",
+      "ultimo_visto": "2026-10-28"
     },
     {
       "pais": "",
@@ -1287,15 +1296,6 @@
       "ejemplo_partido": "Togo vs Burundi",
       "fixture_id": "401920044",
       "ultimo_visto": "2026-09-28"
-    },
-    {
-      "pais": "",
-      "liga": "Women's Europa Cup, Round of 16",
-      "liga_id": "24079",
-      "veces_visto": 6,
-      "ejemplo_partido": "SK Brann vs Czarni Sosnowiec",
-      "fixture_id": "401928144",
-      "ultimo_visto": "2026-10-28"
     },
     {
       "pais": "",
