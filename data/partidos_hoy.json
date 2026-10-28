@@ -3072,7 +3072,9 @@
         }
       ],
       "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
+      "aviso_final_enviado": true,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "The Cong-Viettel FC vs FC Seoul",
@@ -9130,7 +9132,9 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "SC Paderborn 07 vs VfB Stuttgart",
@@ -9266,7 +9270,9 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Spartak Myjava vs Hammarby IF",
@@ -9769,7 +9775,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Pisa vs Palermo",
@@ -10117,7 +10125,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Manchester United vs Burnley",
@@ -10755,7 +10765,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Hannover 96 vs Kaiserslautern",
@@ -10842,7 +10854,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Dundee vs Kilmarnock",
@@ -11132,7 +11146,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Excelsior Maassluis vs Heerenveen",
@@ -11857,7 +11873,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     }
   ],
   "predicciones_activas": {},
