@@ -124402,7 +124402,8 @@
           "presion_lado": 20.94815360965973
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Cúcuta Deportivo vs Águilas Doradas",
@@ -126208,6 +126209,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -126445,6 +126455,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "89'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -126676,6 +126695,15 @@
         },
         {
           "minuto": "80'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "84'",
           "goles_local": 0,
           "goles_visitante": 0,
           "stats_local": {},
@@ -126922,7 +126950,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Saint Joseph's vs Villanova",
@@ -127150,6 +127179,15 @@
         },
         {
           "minuto": "81'",
+          "goles_local": 2,
+          "goles_visitante": 2,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "84'",
           "goles_local": 2,
           "goles_visitante": 2,
           "stats_local": {},
@@ -127393,6 +127431,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "77'",
+          "goles_local": 1,
+          "goles_visitante": 3,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -127579,6 +127626,15 @@
         },
         {
           "minuto": "65'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "70'",
           "goles_local": 2,
           "goles_visitante": 0,
           "stats_local": {},
