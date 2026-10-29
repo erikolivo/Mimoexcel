@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 3665,
+      "veces_visto": 3689,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-10-29"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 2919,
+      "veces_visto": 2926,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-29"
@@ -32,7 +32,7 @@
       "pais": "",
       "liga": "Copa del Rey, First Round",
       "liga_id": "3951",
-      "veces_visto": 568,
+      "veces_visto": 591,
       "ejemplo_partido": "CD Cuarte vs Girona",
       "fixture_id": "401928493",
       "ultimo_visto": "2026-10-29"
@@ -138,6 +138,15 @@
     },
     {
       "pais": "",
+      "liga": "KNVB Beker, First Round",
+      "liga_id": "3957",
+      "veces_visto": 279,
+      "ejemplo_partido": "Excelsior '31 vs ADO Den Haag",
+      "fixture_id": "401925175",
+      "ultimo_visto": "2026-10-29"
+    },
+    {
+      "pais": "",
       "liga": "USL League One",
       "liga_id": "19915",
       "veces_visto": 277,
@@ -165,18 +174,9 @@
     },
     {
       "pais": "",
-      "liga": "KNVB Beker, First Round",
-      "liga_id": "3957",
-      "veces_visto": 271,
-      "ejemplo_partido": "Excelsior '31 vs ADO Den Haag",
-      "fixture_id": "401925175",
-      "ultimo_visto": "2026-10-29"
-    },
-    {
-      "pais": "",
       "liga": "Liga de Expansión MX",
       "liga_id": "3932",
-      "veces_visto": 265,
+      "veces_visto": 266,
       "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
       "fixture_id": "401886377",
       "ultimo_visto": "2026-10-29"
@@ -221,7 +221,7 @@
       "pais": "",
       "liga": "UEFA Women's Champions League, League Phase",
       "liga_id": "19483",
-      "veces_visto": 193,
+      "veces_visto": 197,
       "ejemplo_partido": "Bayern Munich vs Manchester City",
       "fixture_id": "401917018",
       "ultimo_visto": "2026-10-29"
@@ -248,7 +248,7 @@
       "pais": "",
       "liga": "Guatemalan Liga Nacional",
       "liga_id": "3928",
-      "veces_visto": 164,
+      "veces_visto": 167,
       "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
       "fixture_id": "401879630",
       "ultimo_visto": "2026-10-29"
@@ -419,7 +419,7 @@
       "pais": "",
       "liga": "Women's Europa Cup, Round of 16",
       "liga_id": "24079",
-      "veces_visto": 71,
+      "veces_visto": 73,
       "ejemplo_partido": "SK Brann vs Czarni Sosnowiec",
       "fixture_id": "401928144",
       "ultimo_visto": "2026-10-29"
@@ -441,6 +441,15 @@
       "ejemplo_partido": "San Marino U21 vs Kosovo U21",
       "fixture_id": "732413",
       "ultimo_visto": "2026-10-06"
+    },
+    {
+      "pais": "",
+      "liga": "AFC Champions League Two, Group F",
+      "liga_id": "2466",
+      "veces_visto": 64,
+      "ejemplo_partido": "Adelaide United vs Tai Po FC",
+      "fixture_id": "401912808",
+      "ultimo_visto": "2026-10-29"
     },
     {
       "pais": "",
@@ -477,15 +486,6 @@
       "ejemplo_partido": "Malta U21 vs Germany U21",
       "fixture_id": "401758358",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Two, Group F",
-      "liga_id": "2466",
-      "veces_visto": 62,
-      "ejemplo_partido": "Adelaide United vs Tai Po FC",
-      "fixture_id": "401912808",
-      "ultimo_visto": "2026-10-29"
     },
     {
       "pais": "",
@@ -633,6 +633,15 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 Women's World Cup, Round of 16",
+      "liga_id": "20865",
+      "veces_visto": 52,
+      "ejemplo_partido": "Argentina U17 vs Ghana U17",
+      "fixture_id": "401916254",
+      "ultimo_visto": "2026-10-29"
+    },
+    {
+      "pais": "",
       "liga": "UEFA Nations League, Group A1",
       "liga_id": "2395",
       "veces_visto": 51,
@@ -723,15 +732,6 @@
     },
     {
       "pais": "",
-      "liga": "FIFA U-17 Women's World Cup, Round of 16",
-      "liga_id": "20865",
-      "veces_visto": 48,
-      "ejemplo_partido": "Argentina U17 vs Ghana U17",
-      "fixture_id": "401916254",
-      "ultimo_visto": "2026-10-29"
-    },
-    {
-      "pais": "",
       "liga": "Concacaf Nations League, League C, Group A",
       "liga_id": "19267",
       "veces_visto": 46,
@@ -786,6 +786,24 @@
     },
     {
       "pais": "",
+      "liga": "AFC Champions League Two, Group G",
+      "liga_id": "2466",
+      "veces_visto": 42,
+      "ejemplo_partido": "Machida Zelvia vs Preah Khan Reach Svay Rieng FC",
+      "fixture_id": "401912807",
+      "ultimo_visto": "2026-10-29"
+    },
+    {
+      "pais": "",
+      "liga": "AFC Champions League Two, Group H",
+      "liga_id": "2466",
+      "veces_visto": 42,
+      "ejemplo_partido": "Kitchee vs Gangwon FC",
+      "fixture_id": "401912805",
+      "ultimo_visto": "2026-10-29"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group D",
       "liga_id": "20114",
       "veces_visto": 41,
@@ -801,24 +819,6 @@
       "ejemplo_partido": "ACV vs Hoogeveen",
       "fixture_id": "401916456",
       "ultimo_visto": "2026-09-23"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Two, Group G",
-      "liga_id": "2466",
-      "veces_visto": 40,
-      "ejemplo_partido": "Machida Zelvia vs Preah Khan Reach Svay Rieng FC",
-      "fixture_id": "401912807",
-      "ultimo_visto": "2026-10-29"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Two, Group H",
-      "liga_id": "2466",
-      "veces_visto": 40,
-      "ejemplo_partido": "Kitchee vs Gangwon FC",
-      "fixture_id": "401912805",
-      "ultimo_visto": "2026-10-29"
     },
     {
       "pais": "",
@@ -905,7 +905,7 @@
       "pais": "",
       "liga": "Concacaf Central American Cup, Semifinals",
       "liga_id": "22947",
-      "veces_visto": 29,
+      "veces_visto": 30,
       "ejemplo_partido": "Cartaginés vs Club Deportivo Olimpia",
       "fixture_id": "401922486",
       "ultimo_visto": "2026-10-29"
