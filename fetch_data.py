@@ -61,7 +61,10 @@ from datetime import datetime, timedelta
 
 TIMEOUT = 20
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
-CACHE_HISTORIAL_FILE = os.path.join(DATA_DIR, "cache_historial_equipos.json")
+# 2026-10: el archivo viejo (cache_historial_equipos.json) guardaba las
+# listas con el partido mas reciente PRIMERO y sin rival_id; se invalida
+# con este nombre nuevo (v2) para no leer datos en orden descendente.
+CACHE_HISTORIAL_FILE = os.path.join(DATA_DIR, "cache_historial_v2.json")
 CACHE_HISTORIAL_DIAS = 7
 
 # =====================================================================

@@ -41,7 +41,7 @@ from resolucion_alertas import (
     tiene_trabajo_pendiente,
     linea_efectividad,
 )
-from resumen import _calcular_nivel_actual
+from resumen import _calcular_nivel_actual, ordenar_historial
 import momentum
 
 DATA_DIR = Path(__file__).parent / "data"
@@ -1063,19 +1063,22 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     if home_id and away_id and liga_slug:
         historial_local = obtener_historial_equipo(home_id, liga_slug)
         historial_visitante = obtener_historial_equipo(away_id, liga_slug)
+        # Ventanas GF/GC en orden ascendente (antiguo -> reciente)
+        hist_local = ordenar_historial(historial_local)
+        hist_visitante = ordenar_historial(historial_visitante)
         poder_local, color_local, n_local = _calcular_nivel_actual(historial_local, True)
         poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(historial_visitante, False)
         lineas.append(f"\U0001F4C8 Nivel Actual:")
         if poder_local is not None or poder_visitante is not None:
             if poder_local is not None:
                 marca_n = f" ({n_local})" if n_local < 5 else ""
-                ventana = historial_local[-6:] if len(historial_local) >= 6 else historial_local
+                ventana = hist_local[-6:]
                 gf_local = sum(p['goles_favor'] for p in ventana)
                 gc_local = sum(p['goles_contra'] for p in ventana)
                 lineas.append(f"{color_local} {escapar_html(partido['local'])}: {poder_local:.1f}{marca_n} (GF:{gf_local} GC:{gc_local})")
             if poder_visitante is not None:
                 marca_n = f" ({n_visitante})" if n_visitante < 5 else ""
-                ventana = historial_visitante[-6:] if len(historial_visitante) >= 6 else historial_visitante
+                ventana = hist_visitante[-6:]
                 gf_visitante = sum(p['goles_favor'] for p in ventana)
                 gc_visitante = sum(p['goles_contra'] for p in ventana)
                 lineas.append(f"{color_visitante} {escapar_html(partido['visitante'])}: {poder_visitante:.1f}{marca_n} (GF:{gf_visitante} GC:{gc_visitante})")
