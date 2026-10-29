@@ -6,6 +6,8 @@ import re
 import unicodedata
 from datetime import date, datetime
 
+from probabilidad import a_fraccion
+
 
 # Hoja de favoritos: la original (SHEET_ID) es PRIVADA y el export devuelve
 # 401; se usa la copia "Publicar en la web" (mismo contenido, se actualiza
@@ -52,6 +54,15 @@ def _columna(encabezados, tipo):
     return next((h for h in elegibles if normalizar(h) in candidatos or any(c in normalizar(h) for c in candidatos)), None)
 
 
+def _columna_pct(encabezados, lado):
+    """Columna de PORCENTAJE del lado ('% Local' / '% Visitante').
+
+    normalizar('% Local') da exactamente 'local', igual que el encabezado
+    del nombre del equipo, por eso hay que buscarla aparte mirando el %
+    en el encabezado original."""
+    return next((h for h in encabezados if "%" in h and normalizar(h) == lado), None)
+
+
 def _separar_partido(valor):
     partes = re.split(r"\s+(?:vs\.?|v\.?|versus|[-–—])\s+", str(valor or ""), flags=re.I)
     return (partes[0].strip(), partes[1].strip()) if len(partes) == 2 and all(p.strip() for p in partes) else (None, None)
@@ -94,6 +105,8 @@ def interpretar_csv(contenido, hoy=None):
     col_cuota_empate = _columna(encabezados, "cuota_empate")
     col_cuota_visitante = _columna(encabezados, "cuota_visitante")
     col_prioridad = _columna(encabezados, "prioridad")
+    col_pct_local = _columna_pct(encabezados, "local")
+    col_pct_visitante = _columna_pct(encabezados, "visitante")
     if not col_favorito or not (col_partido or (col_local and col_visitante)):
         raise ValueError("La hoja debe tener Favorito (o Pick) y Partido, o las columnas Local y Visitante. Encabezados: " + ", ".join(encabezados))
 
@@ -126,6 +139,10 @@ def interpretar_csv(contenido, hoy=None):
                 "cuota_empate": _num(fila.get(col_cuota_empate)) if col_cuota_empate else None,
                 "cuota_visitante": _num(fila.get(col_cuota_visitante)) if col_cuota_visitante else None,
                 "prioridad": prioridad_texto,
+                # Fraccion 0-1 del % que publica la hoja (calibrado contra
+                # resultados reales, ver probabilidad.py).
+                "pct_local": a_fraccion(fila.get(col_pct_local)) if col_pct_local else None,
+                "pct_visitante": a_fraccion(fila.get(col_pct_visitante)) if col_pct_visitante else None,
             })
     return favoritos
 

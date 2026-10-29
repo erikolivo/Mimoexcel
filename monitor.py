@@ -1041,6 +1041,8 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
     lineas.append(f"{escapar_html(partido['local'])}{corona_local} <b>{gl} - {gv}</b> {escapar_html(partido['visitante'])}{corona_visitante}")
     if cuota_str:
         lineas.append(f"Cuotas: {cuota_str} | Min {minuto}")
+    if partido.get("p_gana_fav"):
+        lineas.append(f"🎲 Favorito: gana {partido['p_gana_fav']:.0%} | no pierde {partido['p_no_pierde_fav']:.0%} [{partido['prioridad']}]")
     lineas.append(tabla)
 
     if dominancia_fav is not None and z is not None:
