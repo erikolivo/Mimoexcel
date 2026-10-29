@@ -7,9 +7,14 @@ import unicodedata
 from datetime import date, datetime
 
 
-SHEET_ID = "1j7RV3cPLcwHZwzCaxqLHVrNxN2ZkFckxyMacgFiVzlA"
+# Hoja de favoritos: la original (SHEET_ID) es PRIVADA y el export devuelve
+# 401; se usa la copia "Publicar en la web" (mismo contenido, se actualiza
+# al editar la hoja). gid=0 es la pestana publicada.
+SHEET_ID = "1mMwQF4Pl78vef3w-AjrjN574ZeyruuPv2HHoUiJzFz8"
+HOJA_PUBLICA_ID = "2PACX-1vTXOvSGOIxv5pnd7iL5b5omfljkSOf8EswendrDN4wA1PlC4zpJsBb3E2dEiuunSe9f_h6kXzXC8UGo"
 GID = "0"
-URL_EXPORTACION = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid={GID}"
+_BASE_PUBLICA = f"https://docs.google.com/spreadsheets/d/e/{HOJA_PUBLICA_ID}"
+URL_EXPORTACION = f"{_BASE_PUBLICA}/pub?gid={GID}&single=true&output=csv"
 TIMEOUT = 30
 
 _ENCABEZADOS = {
@@ -137,7 +142,11 @@ def obtener_favoritos_google(hoy=None):
 # Hoja2: resultados históricos del día anterior
 # ---------------------------------------------------------------------------
 
-_HOJA2_URL_EXPORT = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&sheet=Hoja2"
+# La "Hoja2" (resultados del dia anterior) nunca existio como pestana
+# aparte: el export con sheet=Hoja2 devolvia la tabla principal, que tiene
+# las mismas columnas (Fecha, Local, ..., Resultado). Se lee la misma
+# hoja publicada.
+_HOJA2_URL_EXPORT = URL_EXPORTACION
 
 
 def _parsear_resultado(texto):
