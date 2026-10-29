@@ -1066,8 +1066,8 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         # Ventanas GF/GC en orden ascendente (antiguo -> reciente)
         hist_local = ordenar_historial(historial_local)
         hist_visitante = ordenar_historial(historial_visitante)
-        poder_local, color_local, n_local = _calcular_nivel_actual(historial_local, True)
-        poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(historial_visitante, False)
+        poder_local, color_local, n_local = _calcular_nivel_actual(historial_local, True, home_id)
+        poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(historial_visitante, False, away_id)
         lineas.append(f"\U0001F4C8 Nivel Actual:")
         if poder_local is not None or poder_visitante is not None:
             if poder_local is not None:
