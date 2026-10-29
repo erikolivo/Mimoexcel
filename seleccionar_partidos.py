@@ -15,6 +15,7 @@ from elo_tilt_favoritos import obtener_favoritos_elo_tilt
 from fetch_data import obtener_fixtures_por_fecha
 from google_favoritos import normalizar, obtener_favoritos_google
 from thesportsdb_aliases import nombres_alternativos
+import probabilidad
 
 DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
@@ -22,7 +23,7 @@ ARCHIVO_SALIDA = DATA_DIR / "partidos_hoy.json"
 ARCHIVO_CACHE_ALIAS = DATA_DIR / "alias_equipos_cache.json"
 ARCHIVO_PENDIENTES = DATA_DIR / "pendientes_revision.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
-VERSION_SELECCION = 6
+VERSION_SELECCION = 7
 FUENTES_VALIDAS = {"Google Sheets", "elo-tilt"}
 
 # Alias FIJADOS A MANO -- para casos que se quieren garantizar sin
@@ -215,7 +216,8 @@ def _buscar_fixture_por_id(entrada, fixtures):
 
 def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja, confianza_estrellas=0,
                            cuota_local=None, cuota_empate=None, cuota_visitante=None,
-                           prioridad="ALTA", fuente="Google Sheets"):
+                           prioridad="ALTA", fuente="Google Sheets", info_prob=None,
+                           prioridad_hoja=None):
     local, visitante = fixture["teams"]["home"], fixture["teams"]["away"]
     lado = _lado_favorito(favorito_hoja, local["name"], visitante["name"])
     if lado is None:
@@ -228,6 +230,11 @@ def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja, confianza_estrellas
         "tipo_pronostico": _tipo_pronostico(favorito_hoja), "confianza_estrellas": confianza_estrellas,
         "cuota_local_inicial": cuota_local, "cuota_empate_inicial": cuota_empate, "cuota_visitante_inicial": cuota_visitante,
         "prioridad": prioridad,
+        # La prioridad de la hoja se conserva solo para auditar; la que
+        # usa el resto del sistema es la recalculada por probabilidad.
+        "prioridad_hoja": prioridad_hoja,
+        "p_gana_fav": info_prob["p_gana_fav"] if info_prob else None,
+        "p_no_pierde_fav": info_prob["p_no_pierde_fav"] if info_prob else None,
         "fuente_favorito": fuente, "fila_fuente": fila_hoja,
         "hora_inicio": fixture["fixture"]["date"], "fixture_id": fixture["fixture"]["id"], "liga_slug": fixture.get("_liga_slug"),
         "liga_pais": fixture.get("league", {}).get("country", ""), "liga_nombre": fixture.get("league", {}).get("name", ""),
@@ -266,7 +273,17 @@ def seleccionar(forzar=False):
         return
     fixtures = obtener_fixtures_por_fecha(hoy)
     seleccionados, sin_fixture, favorito_invalido, vistos = [], 0, 0, set()
+    descartados_prob = 0
     for entrada in favoritos:
+        # Se filtra ANTES de buscar el fixture: ahorra consultas a ESPN
+        # para los partidos que no se van a vigilar.
+        lado = _lado_favorito(entrada["favorito"], entrada["local"], entrada["visitante"])
+        info_prob = probabilidad.evaluar(entrada.get("pct_local"), entrada.get("pct_visitante"), lado)
+        if info_prob is None:
+            print(f"[AVISO] Fila {entrada['fila_hoja']}: sin % en la hoja, no se puede filtrar por probabilidad.")
+        elif not info_prob["seguir"]:
+            descartados_prob += 1
+            continue
         fixture = _buscar_fixture_por_id(entrada, fixtures) or _buscar_fixture(entrada, fixtures)
         if fixture is None:
             sin_fixture += 1
@@ -277,8 +294,12 @@ def seleccionar(forzar=False):
             fixture, entrada["favorito"], entrada["fila_hoja"], entrada.get("confianza_estrellas", 0),
             cuota_local=entrada.get("cuota_local"), cuota_empate=entrada.get("cuota_empate"),
             cuota_visitante=entrada.get("cuota_visitante"),
-            prioridad=entrada.get("prioridad", "ALTA"),
+            # Sin % (ej. respaldo elo-tilt) se respeta la prioridad de la
+            # fuente en vez de degradar todo a MEDIA.
+            prioridad=info_prob["prioridad"] if info_prob else (entrada.get("prioridad") or "MEDIA"),
             fuente=fuente,
+            info_prob=info_prob,
+            prioridad_hoja=entrada.get("prioridad"),
         )
         if partido is None:
             favorito_invalido += 1
@@ -326,6 +347,12 @@ def seleccionar(forzar=False):
             if not previo.get("liga_nombre") and nuevo.get("liga_nombre"):
                 previo["liga_pais"] = nuevo.get("liga_pais", "")
                 previo["liga_nombre"] = nuevo.get("liga_nombre", "")
+            # La prioridad/probabilidad SI se recalculan con la hoja
+            # actualizada; lo que se conserva es el seguimiento en vivo.
+            previo["prioridad"] = nuevo["prioridad"]
+            previo["prioridad_hoja"] = nuevo.get("prioridad_hoja")
+            previo["p_gana_fav"] = nuevo.get("p_gana_fav")
+            previo["p_no_pierde_fav"] = nuevo.get("p_no_pierde_fav")
             fusionados.append(previo)  # conserva historial si ya existia
         nuevos_en_revision = sum(1 for p in seleccionados if p["fixture_id"] not in previos_por_id)
         seleccionados = fusionados
@@ -334,7 +361,7 @@ def seleccionar(forzar=False):
     if nuevos_en_revision is not None:
         print(f"Revision de la noche: {len(seleccionados)} partido(s) en total, {nuevos_en_revision} nuevo(s) agregado(s), "
               f"el resto conserva su seguimiento en vivo ya acumulado.")
-    print(f"Guardado en {ARCHIVO_SALIDA}: {len(seleccionados)} partido(s) de {fuente}. Sin fixture: {sin_fixture}; favorito inválido: {favorito_invalido}.")
+    print(f"Guardado en {ARCHIVO_SALIDA}: {len(seleccionados)} partido(s) de {fuente}. Sin fixture: {sin_fixture}; favorito inválido: {favorito_invalido}; descartados por probabilidad: {descartados_prob}.")
 
 
 if __name__ == "__main__":
