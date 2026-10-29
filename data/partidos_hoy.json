@@ -14182,7 +14182,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Conquense vs Castellón",
@@ -20043,6 +20044,63 @@
             "tacklePct": "1.0",
             "effectiveClearance": "0",
             "totalClearance": "7"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "6",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "4",
+            "possessionPct": "30.1",
+            "totalShots": "2",
+            "shotsOnTarget": "1",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "113",
+            "totalPasses": "153",
+            "passPct": "0.7",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "8",
+            "totalTackles": "8",
+            "tacklePct": "1.0",
+            "effectiveClearance": "0",
+            "totalClearance": "17"
+          },
+          "periodo": 1,
+          "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'+2'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "4",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "3",
+            "saves": "0",
+            "possessionPct": "69.9",
+            "totalShots": "9",
+            "shotsOnTarget": "4",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "316",
+            "totalPasses": "352",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "2",
+            "totalTackles": "2",
+            "tacklePct": "1.0",
+            "effectiveClearance": "0",
+            "totalClearance": "8"
           },
           "stats_visitante": {
             "foulsCommitted": "6",
