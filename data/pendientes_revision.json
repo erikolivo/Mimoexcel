@@ -1,20 +1,6 @@
 [
   {
     "fecha": "2026-10-28",
-    "local": "UC Irvine",
-    "visitante": "Fullerton",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-28",
-    "local": "UC Riverside",
-    "visitante": "Cal Poly",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-10-28",
     "local": "Municipal",
     "visitante": "Comunicaciones",
     "favorito": "LOCAL",
@@ -1397,6 +1383,20 @@
     "local": "CD Olimpia",
     "visitante": "CS Cartagines",
     "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-28",
+    "local": "Municipal",
+    "visitante": "Comunicaciones",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-28",
+    "local": "Deportivo Saprissa",
+    "visitante": "Firpo",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   }
 ]
