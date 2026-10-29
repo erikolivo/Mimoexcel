@@ -138,6 +138,15 @@
     },
     {
       "pais": "",
+      "liga": "WSL Players Cup, League Phase",
+      "liga_id": "23390",
+      "veces_visto": 277,
+      "ejemplo_partido": "Crystal Palace vs Watford",
+      "fixture_id": "401923288",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
       "veces_visto": 275,
@@ -153,15 +162,6 @@
       "ejemplo_partido": "Cumnock vs Auchinleck Talbot",
       "fixture_id": "401921129",
       "ultimo_visto": "2026-10-03"
-    },
-    {
-      "pais": "",
-      "liga": "WSL Players Cup, League Phase",
-      "liga_id": "23390",
-      "veces_visto": 270,
-      "ejemplo_partido": "Crystal Palace vs Watford",
-      "fixture_id": "401923288",
-      "ultimo_visto": "2026-10-28"
     },
     {
       "pais": "",
@@ -203,9 +203,18 @@
       "pais": "",
       "liga": "AFC Champions League Elite, East Region",
       "liga_id": "3902",
-      "veces_visto": 204,
+      "veces_visto": 206,
       "ejemplo_partido": "Daejeon Hana Citizen vs Kyoto Sanga",
       "fixture_id": "401912672",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
+      "liga": "KNVB Beker, First Round",
+      "liga_id": "3957",
+      "veces_visto": 189,
+      "ejemplo_partido": "Excelsior '31 vs ADO Den Haag",
+      "fixture_id": "401925175",
       "ultimo_visto": "2026-10-28"
     },
     {
@@ -219,11 +228,11 @@
     },
     {
       "pais": "",
-      "liga": "KNVB Beker, First Round",
-      "liga_id": "3957",
-      "veces_visto": 180,
-      "ejemplo_partido": "Excelsior '31 vs ADO Den Haag",
-      "fixture_id": "401925175",
+      "liga": "German Cup, Second Round",
+      "liga_id": "3954",
+      "veces_visto": 168,
+      "ejemplo_partido": "Hamburg SV vs Eintracht Frankfurt",
+      "fixture_id": "401916920",
       "ultimo_visto": "2026-10-28"
     },
     {
@@ -237,15 +246,6 @@
     },
     {
       "pais": "",
-      "liga": "German Cup, Second Round",
-      "liga_id": "3954",
-      "veces_visto": 160,
-      "ejemplo_partido": "Hamburg SV vs Eintracht Frankfurt",
-      "fixture_id": "401916920",
-      "ultimo_visto": "2026-10-28"
-    },
-    {
-      "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
       "veces_visto": 155,
@@ -255,21 +255,21 @@
     },
     {
       "pais": "",
+      "liga": "UEFA Women's Champions League, League Phase",
+      "liga_id": "19483",
+      "veces_visto": 151,
+      "ejemplo_partido": "Bayern Munich vs Manchester City",
+      "fixture_id": "401917018",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
       "liga": "Women's Europa Cup, Second Qualifying Round",
       "liga_id": "24079",
       "veces_visto": 146,
       "ejemplo_partido": "Metalist 1925 Kharkiv vs Torreense",
       "fixture_id": "401916437",
       "ultimo_visto": "2026-09-30"
-    },
-    {
-      "pais": "",
-      "liga": "UEFA Women's Champions League, League Phase",
-      "liga_id": "19483",
-      "veces_visto": 146,
-      "ejemplo_partido": "Bayern Munich vs Manchester City",
-      "fixture_id": "401917018",
-      "ultimo_visto": "2026-10-28"
     },
     {
       "pais": "",
@@ -678,6 +678,15 @@
     },
     {
       "pais": "",
+      "liga": "Women's Europa Cup, Round of 16",
+      "liga_id": "24079",
+      "veces_visto": 47,
+      "ejemplo_partido": "SK Brann vs Czarni Sosnowiec",
+      "fixture_id": "401928144",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League C, Group A",
       "liga_id": "19267",
       "veces_visto": 46,
@@ -725,9 +734,36 @@
       "pais": "",
       "liga": "AFC Champions League Two, Group F",
       "liga_id": "2466",
-      "veces_visto": 43,
+      "veces_visto": 44,
       "ejemplo_partido": "Adelaide United vs Tai Po FC",
       "fixture_id": "401912808",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
+      "liga": "AFC Champions League Two, Group B",
+      "liga_id": "2466",
+      "veces_visto": 44,
+      "ejemplo_partido": "Arkadag vs Al Muharraq",
+      "fixture_id": "401912818",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
+      "liga": "AFC Champions League Two, Group C",
+      "liga_id": "2466",
+      "veces_visto": 44,
+      "ejemplo_partido": "Al-Nahda Muscat Club vs Al Taawoun",
+      "fixture_id": "401912813",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
+      "liga": "AFC Champions League Two, Group A",
+      "liga_id": "2466",
+      "veces_visto": 44,
+      "ejemplo_partido": "Al-Wahda vs Kuwait SC",
+      "fixture_id": "401912815",
       "ultimo_visto": "2026-10-28"
     },
     {
@@ -741,48 +777,12 @@
     },
     {
       "pais": "",
-      "liga": "AFC Champions League Two, Group B",
-      "liga_id": "2466",
-      "veces_visto": 42,
-      "ejemplo_partido": "Arkadag vs Al Muharraq",
-      "fixture_id": "401912818",
-      "ultimo_visto": "2026-10-28"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Two, Group C",
-      "liga_id": "2466",
-      "veces_visto": 42,
-      "ejemplo_partido": "Al-Nahda Muscat Club vs Al Taawoun",
-      "fixture_id": "401912813",
-      "ultimo_visto": "2026-10-28"
-    },
-    {
-      "pais": "",
-      "liga": "AFC Champions League Two, Group A",
-      "liga_id": "2466",
-      "veces_visto": 42,
-      "ejemplo_partido": "Al-Wahda vs Kuwait SC",
-      "fixture_id": "401912815",
-      "ultimo_visto": "2026-10-28"
-    },
-    {
-      "pais": "",
       "liga": "EURO U-21 Qualifying, Group D",
       "liga_id": "20114",
       "veces_visto": 41,
       "ejemplo_partido": "Slovakia U21 vs Republic of Ireland U21",
       "fixture_id": "732412",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Women's Europa Cup, Round of 16",
-      "liga_id": "24079",
-      "veces_visto": 41,
-      "ejemplo_partido": "SK Brann vs Czarni Sosnowiec",
-      "fixture_id": "401928144",
-      "ultimo_visto": "2026-10-28"
     },
     {
       "pais": "",
@@ -941,7 +941,7 @@
       "pais": "",
       "liga": "AFC Champions League Two, Group E",
       "liga_id": "2466",
-      "veces_visto": 23,
+      "veces_visto": 24,
       "ejemplo_partido": "FC Seoul vs Persib",
       "fixture_id": "401912817",
       "ultimo_visto": "2026-10-28"
@@ -1290,6 +1290,15 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 Women's World Cup, Round of 16",
+      "liga_id": "20865",
+      "veces_visto": 8,
+      "ejemplo_partido": "Argentina U17 vs Ghana U17",
+      "fixture_id": "401916254",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
       "liga": "Women's Europa Cup, Round of 16 - 1st Leg",
       "liga_id": "24079",
       "veces_visto": 7,
@@ -1332,15 +1341,6 @@
       "ejemplo_partido": "Columbus Crew vs Orlando City SC",
       "fixture_id": "401874270",
       "ultimo_visto": "2026-09-16"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 Women's World Cup, Round of 16",
-      "liga_id": "20865",
-      "veces_visto": 4,
-      "ejemplo_partido": "Argentina U17 vs Ghana U17",
-      "fixture_id": "401916254",
-      "ultimo_visto": "2026-10-28"
     },
     {
       "pais": "",
@@ -1434,6 +1434,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Argentina, Semifinals",
+      "liga_id": "8107",
+      "veces_visto": 2,
+      "ejemplo_partido": "Atlético Tucumán vs Platense",
+      "fixture_id": "401926287",
+      "ultimo_visto": "2026-10-28"
+    },
+    {
+      "pais": "",
       "liga": "Campeones Cup, 2026 Campeones Cup",
       "liga_id": "18771",
       "veces_visto": 1,
@@ -1512,15 +1521,6 @@
       "ejemplo_partido": "Cartaginés vs Club Deportivo Olimpia",
       "fixture_id": "401922486",
       "ultimo_visto": "2026-10-21"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Argentina, Semifinals",
-      "liga_id": "8107",
-      "veces_visto": 1,
-      "ejemplo_partido": "Atlético Tucumán vs Platense",
-      "fixture_id": "401926287",
-      "ultimo_visto": "2026-10-28"
     }
   ]
 }
