@@ -107001,7 +107001,8 @@
           "presion_lado": 6.743107499061545
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Chicago Fire FC vs Orlando City SC",
@@ -108572,7 +108573,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "FC Dallas vs Columbus Crew",
@@ -110204,7 +110206,8 @@
           "presion_lado": 8.121660904370147
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Minnesota United FC vs Sporting Kansas City",
@@ -111836,7 +111839,8 @@
           "presion_lado": 9.064629867976521
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Nashville SC vs Philadelphia Union",
@@ -113407,7 +113411,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "St. Louis CITY SC vs Portland Timbers",
@@ -114972,6 +114977,73 @@
             "interceptions": "8",
             "effectiveClearance": "23",
             "totalClearance": "23"
+          },
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'+7'",
+          "goles_local": 2,
+          "goles_visitante": 3,
+          "stats_local": {
+            "foulsCommitted": "16",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "3",
+            "wonCorners": "5",
+            "saves": "3",
+            "possessionPct": "60.7",
+            "totalShots": "13",
+            "shotsOnTarget": "5",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "366",
+            "totalPasses": "435",
+            "passPct": "0.8",
+            "accurateCrosses": "7",
+            "totalCrosses": "20",
+            "crossPct": "0.4",
+            "totalLongBalls": "54",
+            "accurateLongBalls": "36",
+            "longballPct": "0.7",
+            "blockedShots": "4",
+            "effectiveTackles": "9",
+            "totalTackles": "12",
+            "tacklePct": "0.8",
+            "interceptions": "9",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "11",
+            "yellowCards": "3",
+            "redCards": "1",
+            "offsides": "1",
+            "wonCorners": "4",
+            "saves": "3",
+            "possessionPct": "39.3",
+            "totalShots": "12",
+            "shotsOnTarget": "6",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "213",
+            "totalPasses": "280",
+            "passPct": "0.8",
+            "accurateCrosses": "3",
+            "totalCrosses": "9",
+            "crossPct": "0.3",
+            "totalLongBalls": "49",
+            "accurateLongBalls": "21",
+            "longballPct": "0.4",
+            "blockedShots": "2",
+            "effectiveTackles": "11",
+            "totalTackles": "12",
+            "tacklePct": "0.9",
+            "interceptions": "9",
+            "effectiveClearance": "27",
+            "totalClearance": "27"
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
@@ -116658,7 +116730,8 @@
           "presion_lado": 11.57056656962527
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Nashville SC vs Philadelphia Union",
@@ -118162,7 +118235,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "FC Dallas vs Columbus Crew",
@@ -119727,7 +119801,8 @@
           "presion_lado": 8.14509950462332
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Chicago Fire FC vs Orlando City SC",
@@ -121301,7 +121376,8 @@
       "diferencia_maxima_alcanzada": 0,
       "prioridad_hoja": "ALTA",
       "p_gana_fav": 0.664,
-      "p_no_pierde_fav": 0.862
+      "p_no_pierde_fav": 0.862,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Minnesota United FC vs Sporting Kansas City",
@@ -122846,7 +122922,8 @@
           "presion_lado": 10.989089647227622
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Austin FC vs Real Salt Lake",
@@ -124371,7 +124448,8 @@
           "presion_lado": 8.644294516917268
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "St. Louis CITY SC vs Portland Timbers",
@@ -125869,6 +125947,73 @@
             "interceptions": "9",
             "effectiveClearance": "25",
             "totalClearance": "25"
+          },
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'+7'",
+          "goles_local": 2,
+          "goles_visitante": 3,
+          "stats_local": {
+            "foulsCommitted": "16",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "3",
+            "wonCorners": "5",
+            "saves": "3",
+            "possessionPct": "60.7",
+            "totalShots": "13",
+            "shotsOnTarget": "5",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "366",
+            "totalPasses": "435",
+            "passPct": "0.8",
+            "accurateCrosses": "7",
+            "totalCrosses": "20",
+            "crossPct": "0.4",
+            "totalLongBalls": "54",
+            "accurateLongBalls": "36",
+            "longballPct": "0.7",
+            "blockedShots": "4",
+            "effectiveTackles": "9",
+            "totalTackles": "12",
+            "tacklePct": "0.8",
+            "interceptions": "9",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "11",
+            "yellowCards": "3",
+            "redCards": "1",
+            "offsides": "1",
+            "wonCorners": "4",
+            "saves": "3",
+            "possessionPct": "39.3",
+            "totalShots": "12",
+            "shotsOnTarget": "6",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "213",
+            "totalPasses": "280",
+            "passPct": "0.8",
+            "accurateCrosses": "3",
+            "totalCrosses": "9",
+            "crossPct": "0.3",
+            "totalLongBalls": "49",
+            "accurateLongBalls": "21",
+            "longballPct": "0.4",
+            "blockedShots": "2",
+            "effectiveTackles": "11",
+            "totalTackles": "12",
+            "tacklePct": "0.9",
+            "interceptions": "9",
+            "effectiveClearance": "27",
+            "totalClearance": "27"
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
