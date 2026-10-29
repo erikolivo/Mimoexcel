@@ -869,10 +869,49 @@ CODIGO_LIGA_A_PAIS = {
     "ARG": "Argentina", "BRA": "Brazil", "MEX": "Mexico", "USA": "USA",
 }
 
-_TEMPORADA_ACTUAL = "2526"
+# Minimo de partidos para considerar que la temporada en curso ya esta
+# publicada en football-data (al principio de temporada el CSV puede
+# devolver 404 o venir casi vacio).
+MIN_PARTIDOS_TEMPORADA = 50
 
 
-def obtener_resultados_liga(codigo, temporada=_TEMPORADA_ACTUAL):
+def temporada_actual(hoy=None):
+    """Codigo de temporada de football-data para una fecha (ej. '2627').
+
+    football-data numera por el anio en que EMPIEZA la temporada (julio):
+    2026-10-24 -> '2627', 2026-03-01 -> '2526', 2026-07-15 -> '2627'.
+    Antes estaba fijo en '2526' a mano y en julio/agosto se seguia
+    leyendo la temporada vieja. Nunca lanza excepcion."""
+    try:
+        if isinstance(hoy, datetime):
+            fecha = hoy
+        elif hoy is not None:
+            fecha = datetime(hoy.year, hoy.month, hoy.day)
+        else:
+            fecha = datetime.now()
+    except Exception:
+        # Entrada invalida: se usa la fecha de hoy en vez de fallar.
+        fecha = datetime.now()
+    try:
+        inicio = fecha.year if fecha.month >= 7 else fecha.year - 1
+        return f"{inicio % 100:02d}{(inicio + 1) % 100:02d}"
+    except Exception:
+        return ""
+
+
+def _temporada_anterior(temporada):
+    """'2627' -> '2526'. None si el codigo no tiene el formato esperado."""
+    try:
+        if len(temporada) != 4 or not temporada.isdigit():
+            return None
+        inicio, fin = int(temporada[:2]) - 1, int(temporada[2:]) - 1
+        return f"{inicio % 100:02d}{fin % 100:02d}"
+    except Exception:
+        return None
+
+
+def _descargar_resultados_temporada(codigo, temporada):
+    """Filas del CSV de football-data, o None si no se pudo descargar."""
     url = f"https://www.football-data.co.uk/mmz4281/{temporada}/{codigo}.csv"
     try:
         r = requests.get(url, timeout=TIMEOUT)
@@ -880,6 +919,32 @@ def obtener_resultados_liga(codigo, temporada=_TEMPORADA_ACTUAL):
         return list(csv.DictReader(io.StringIO(r.text)))
     except Exception as e:
         print(f"[AVISO] No se pudo descargar {codigo} ({temporada}): {e}")
+        return None
+
+
+def obtener_resultados_liga(codigo, temporada=None):
+    """Resultados de una liga. temporada=None usa la temporada en curso.
+
+    Si la temporada en curso todavia no esta publicada (404) o trae muy
+    pocos partidos, se usa la temporada anterior como respaldo. El
+    respaldo NO se aplica a temporadas historicas pedidas a proposito
+    (bootstrap), para no duplicar partidos."""
+    try:
+        actual = not temporada
+        temporada = temporada or temporada_actual()
+        if not temporada:
+            return []
+        resultados = _descargar_resultados_temporada(codigo, temporada)
+        if actual and (not resultados or len(resultados) < MIN_PARTIDOS_TEMPORADA):
+            anterior = _temporada_anterior(temporada)
+            respaldo = _descargar_resultados_temporada(codigo, anterior) if anterior else None
+            if respaldo:
+                print(f"[AVISO] {codigo}: temporada {temporada} sin datos suficientes "
+                      f"({len(resultados or [])} partidos); se usa {anterior}.")
+                return respaldo
+        return resultados or []
+    except Exception as e:
+        print(f"[AVISO] No se pudieron leer resultados de {codigo}: {e}")
         return []
 
 
