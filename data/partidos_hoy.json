@@ -1386,7 +1386,9 @@
         }
       ],
       "diferencia_maxima_alcanzada": 0,
-      "aviso_final_enviado": true
+      "aviso_final_enviado": true,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Konyaspor vs Galatasaray",
@@ -1450,7 +1452,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Nantes vs Clermont Foot",
@@ -1514,7 +1518,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Villarreal vs Espanyol",
@@ -1546,7 +1552,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Casa Pia vs Sporting CP",
@@ -1578,7 +1586,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Colo Colo vs Universidad de Concepción",
@@ -1610,7 +1620,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Real Potosí vs Independiente Petrolero",
@@ -1642,7 +1654,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Criciúma vs Ponte Preta",
@@ -1674,7 +1688,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Union Omaha vs Chattanooga Red Wolves",
@@ -1738,7 +1754,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     }
   ]
 }
