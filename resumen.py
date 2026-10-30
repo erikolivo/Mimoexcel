@@ -19,6 +19,7 @@ from pathlib import Path
 from telegram_utils import enviar_mensaje_telegram, escapar_html
 from estado_diario import ya_se_hizo, marcar_hecho
 from fetch_data import obtener_historial_equipo, obtener_resultados_liga
+from historial_elo import rating_de
 
 ARCHIVO = Path(__file__).parent / "data" / "partidos_hoy.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
@@ -126,54 +127,142 @@ def _obtener_datos_estilo(equipo, liga_slug):
         return None
 
 
-def _calcular_nivel_actual(historial_equipo, es_local):
+def ordenar_historial(historial_equipo):
+    """Copia del historial ordenada de mas antiguo a mas reciente.
+
+    Defensivo: funciona con cualquier fuente y cualquier orden de
+    entrada (la fecha ISO YYYY-MM-DD ordena lexicografico = cronologico).
+    Nunca lanza excepcion hacia arriba."""
+    try:
+        return sorted(historial_equipo or [], key=lambda p: p.get("fecha", ""))
+    except Exception:
+        return list(historial_equipo or [])
+
+
+def _clamp(valor, minimo, maximo):
+    return max(minimo, min(maximo, valor))
+
+
+# --- Ajuste por calidad del rival (solo Nivel Actual) -------------------
+# Un triunfo contra un rival fuerte vale mas que contra uno debil, y una
+# derrota contra un rival fuerte duele menos. Se usa el rating propio de
+# elo-tilt como referencia (no modifica el repositorio de elo-tilt).
+AJUSTE_RIVAL_ACTIVO = True
+ALFA_RIVAL = 0.5          # cuanto pesa la diferencia de rating
+RD_MAX_AJUSTE = 250       # ratings con mas incertidumbre no se usan
+VENTAJA_LOCAL_ELO = 50    # puntos Elo que aporta jugar en casa
+
+
+def _rating_utilizable(rating):
+    """True si hay rating y su RD es aceptable (None = se acepta)."""
+    if not isinstance(rating, dict) or rating.get("rating") is None:
+        return False
+    return rating.get("rd") is None or rating["rd"] <= RD_MAX_AJUSTE
+
+
+def _ajuste_por_rival(p, team_id):
+    """Ajuste aditivo en escala 0-1 por la calidad del rival.
+
+    diferencia = rating_rival - rating_propio_efectivo, con tope
+    +-RD_MAX_AJUSTE (rating_propio_efectivo suma VENTAJA_LOCAL_ELO si el
+    partido fue de local y la resta si fue de visitante).
+    ajuste = ALFA_RIVAL * diferencia / 400.
+    Sin ratings, con RD alta o con el ajuste apagado devuelve 0.0
+    (comportamiento identico al de antes)."""
+    if not AJUSTE_RIVAL_ACTIVO or team_id in (None, ""):
+        return 0.0
+    rival_id = p.get("rival_id")
+    if rival_id in (None, ""):
+        return 0.0
+    try:
+        propio = rating_de(team_id)
+        rival = rating_de(rival_id)
+        if not _rating_utilizable(propio) or not _rating_utilizable(rival):
+            return 0.0
+        propio_efectivo = propio["rating"] + (VENTAJA_LOCAL_ELO if p.get("es_local") else -VENTAJA_LOCAL_ELO)
+        diferencia = _clamp(rival["rating"] - propio_efectivo, -RD_MAX_AJUSTE, RD_MAX_AJUSTE)
+        return ALFA_RIVAL * diferencia / 400
+    except Exception:
+        return 0.0
+
+
+def _valor_resultado(p, team_id=None):
+    """Valor de un partido para la forma, en escala 0-1.
+
+    Base: V=1.0, E=0.5, D=0.0. Con team_id se ajusta por la calidad del
+    rival (_ajuste_por_rival) y se acota a 0-1:
+    - ganar a un rival flojo vale menos de 1.0;
+    - perder contra un rival fuerte vale mas de 0.0.
+    Sin team_id o sin ratings devuelve la base (compatibilidad)."""
+    base = {"V": 1.0, "E": 0.5, "D": 0.0}.get(p.get("resultado"), 0.0)
+    return _clamp(base + _ajuste_por_rival(p, team_id), 0.0, 1.0)
+
+
+def _score_goles_global(ultimos):
+    """Score de goles 0-100: 50 + (GF-GC por partido) * 20.
+    Antes el factor era *10 (escala demasiado comprimida)."""
+    if not ultimos:
+        return 50.0
+    gf = sum(p["goles_favor"] for p in ultimos) / len(ultimos)
+    gc = sum(p["goles_contra"] for p in ultimos) / len(ultimos)
+    return _clamp(50 + (gf - gc) * 20, 0, 100)
+
+
+def _score_sede(hist, es_local, score_forma_global, team_id=None):
+    """Score de sede 0-100 (ventana de hasta 6 partidos en ESA sede).
+    - 0 partidos: la forma global.
+    - Siempre tope 0-100 (antes el score crudo se salia de la escala).
+    - minimo efectivo de 3 partidos: con menos se mezcla con la forma
+      global (w = min(1, ns/3))."""
+    sub = [p for p in hist if p.get("es_local") is es_local][-6:]
+    ns = len(sub)
+    if ns == 0:
+        return score_forma_global
+    gf_s = sum(p["goles_favor"] for p in sub) / ns
+    gc_s = sum(p["goles_contra"] for p in sub) / ns
+    forma_s = _clamp(sum(_valor_resultado(p, team_id) for p in sub) / ns, 0, 1)
+    crudo = _clamp(50 + (forma_s - 0.5) * 60 + (gf_s - gc_s) * 8, 0, 100)
+    w = min(1.0, ns / 3)
+    return w * crudo + (1 - w) * score_forma_global
+
+
+def _calcular_nivel_actual(historial_equipo, es_local, team_id=None):
     """
     Calcula el Nivel Actual (0-10) con el nuevo sistema de 3 componentes:
-    1. Score de Forma Global (decaimiento exponencial 0.85^i)
-    2. Score de Goles Global (diferencia GF-GC)
-    3. Score Local/Visitante (ventanas independientes de 6 partidos)
+    1. Score de Forma Global (decaimiento exponencial 0.85^i, el mas
+       reciente pesa 1.0)
+    2. Score de Goles Global (diferencia GF-GC * 20)
+    3. Score Local/Visitante (ventana independiente de 6 partidos,
+       tope 0-100 y minimo efectivo de 3 partidos)
     Combinacion: 40% forma global + 40% sede especifica + 20% goles global
+    El historial se ordena DEFENSIVAMENTE de antiguo a reciente al
+    entrar (2026-10: antes dependia del orden de la fuente y con la
+    caché descendente se leian los 6 partidos mas VIEJOS).
+    team_id es opcional (solo lo usa el ajuste por rival); la firma
+    vieja de 2 argumentos sigue funcionando igual.
     Retorna (poder, color, n_partidos) o (None, None, 0) si no hay datos.
     """
     MIN_MATCHES = 4
 
-    if not historial_equipo or len(historial_equipo) < MIN_MATCHES:
+    hist = ordenar_historial(historial_equipo)
+    if len(hist) < MIN_MATCHES:
         return None, None, 0
 
-    ultimos = historial_equipo[-6:] if len(historial_equipo) >= 6 else historial_equipo
+    # De mas antiguo a mas reciente: hist[-6:] SI son los 6 recientes.
+    ultimos = hist[-6:]
     n = len(ultimos)
 
     # --- 1. Score de Forma Global ---
-    Puntos = {"V": 3, "E": 1, "D": 0}
-    pesos = [0.85 ** i for i in range(n)]
-    suma_ponderada = sum(Puntos.get(p["resultado"], 0) * w for p, w in zip(ultimos, pesos))
-    suma_pesos = sum(pesos)
-    score_forma_global = (suma_ponderada / (suma_pesos * 3)) * 100
+    # El mas reciente (ultimo) pesa 1.0 y el peso decae hacia atras.
+    pesos = [0.85 ** (n - 1 - i) for i in range(n)]
+    valores = [_valor_resultado(p, team_id) for p in ultimos]
+    score_forma_global = _clamp(sum(v * w for v, w in zip(valores, pesos)) / sum(pesos), 0, 1) * 100
 
     # --- 2. Score de Goles Global ---
-    gf_prom = sum(p["goles_favor"] for p in ultimos) / n
-    gc_prom = sum(p["goles_contra"] for p in ultimos) / n
-    diferencia_global = gf_prom - gc_prom
-    score_goles_global = max(0, min(100, 50 + (diferencia_global * 10)))
+    score_goles_global = _score_goles_global(ultimos)
 
-    # --- 3. Score Local / Visitante (ventanas independientes) ---
-    ultimos_local = [p for p in historial_equipo if p.get("es_local") is True][-6:]
-    ultimos_visitante = [p for p in historial_equipo if p.get("es_local") is False][-6:]
-
-    def _score_sede(subset):
-        if len(subset) < 2:
-            return None
-        ns = len(subset)
-        puntos_s = sum(Puntos.get(p["resultado"], 0) for p in subset)
-        gf_s = sum(p["goles_favor"] for p in subset) / ns
-        gc_s = sum(p["goles_contra"] for p in subset) / ns
-        forma_s = puntos_s / (ns * 3)
-        diff_s = gf_s - gc_s
-        return 50 + (forma_s - 0.5) * 60 + diff_s * 8
-
-    score_sede = _score_sede(ultimos_local) if es_local else _score_sede(ultimos_visitante)
-    if score_sede is None:
-        score_sede = score_forma_global
+    # --- 3. Score Local / Visitante (ventana independiente) ---
+    score_sede = _score_sede(hist, es_local, score_forma_global, team_id)
 
     # --- 4. Combinacion final ---
     poder = (score_forma_global * 0.40 + score_sede * 0.40 + score_goles_global * 0.20) / 10
@@ -263,27 +352,31 @@ def enviar_resumen(forzar=False):
             try:
                 historial_local = obtener_historial_equipo(home_id, liga_slug)
                 historial_visitante = obtener_historial_equipo(away_id, liga_slug)
-                
-                poder_local, color_local, n_local = _calcular_nivel_actual(historial_local, True)
-                poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(historial_visitante, False)
+                # Orden ascendente (antiguo -> reciente) para las ventanas
+                # y los iconos: izquierda = mas antiguo, derecha = reciente.
+                hist_local = ordenar_historial(historial_local)
+                hist_visitante = ordenar_historial(historial_visitante)
+
+                poder_local, color_local, n_local = _calcular_nivel_actual(historial_local, True, home_id)
+                poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(historial_visitante, False, away_id)
                 
                 if poder_local is not None or poder_visitante is not None:
                     if poder_local is not None:
                         marca_n = f" ({n_local})" if n_local < 5 else ""
-                        ventana = historial_local[-6:] if len(historial_local) >= 6 else historial_local
+                        ventana = hist_local[-6:]
                         gf_local = sum(p['goles_favor'] for p in ventana)
                         gc_local = sum(p['goles_contra'] for p in ventana)
                         lineas.append(f"{color_local} {escapar_html(p['local'])}: {poder_local:.1f}{marca_n} (GF:{gf_local} GC:{gc_local})")
                     if poder_visitante is not None:
                         marca_n = f" ({n_visitante})" if n_visitante < 5 else ""
-                        ventana = historial_visitante[-6:] if len(historial_visitante) >= 6 else historial_visitante
+                        ventana = hist_visitante[-6:]
                         gf_visitante = sum(p['goles_favor'] for p in ventana)
                         gc_visitante = sum(p['goles_contra'] for p in ventana)
                         lineas.append(f"{color_visitante} {escapar_html(p['visitante'])}: {poder_visitante:.1f}{marca_n} (GF:{gf_visitante} GC:{gc_visitante})")
                     
-                    # Ultimos resultados
-                    ultimos_local = historial_local[-6:] if len(historial_local) >= 6 else historial_local
-                    ultimos_visitante = historial_visitante[-6:] if len(historial_visitante) >= 6 else historial_visitante
+                    # Ultimos resultados (izquierda antiguo -> derecha reciente)
+                    ultimos_local = hist_local[-6:]
+                    ultimos_visitante = hist_visitante[-6:]
                     
                     resultados_local = ""
                     for r in ultimos_local:
