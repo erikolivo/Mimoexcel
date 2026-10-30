@@ -27,6 +27,7 @@ def _preparar(monkeypatch, tmp_path):
     monkeypatch.setattr(H, "DATA_DIR", str(tmp_path))
     monkeypatch.setattr(H, "_ahora", lambda: datetime.datetime(2026, 10, 28, 12, 0))
     H._cache_memoria.clear()
+    H._cache_meses.clear()
 
 
 def test_meses_a_consultar():
@@ -183,3 +184,18 @@ def test_sin_ratings_no_lanza(monkeypatch, tmp_path):
     monkeypatch.setattr(H, "_descargar_json", lambda url, etiqueta: ("error", None))
     assert H.rating_de("86") is None
     _limpiar_ratings()
+
+
+def test_archivo_mensual_se_descarga_una_vez_por_proceso(monkeypatch):
+    H._cache_meses.clear()
+    llamadas = []
+
+    def descarga(url, etiqueta):
+        llamadas.append(url)
+        return "ok", {"partidos": [{"fixture_id": "1"}]}
+
+    monkeypatch.setattr(H, "_descargar_json", descarga)
+    assert H._descargar_mes("2026-10") == {"partidos": [{"fixture_id": "1"}]}
+    assert H._descargar_mes("2026-10") == {"partidos": [{"fixture_id": "1"}]}
+    assert len(llamadas) == 1
+    H._cache_meses.clear()
