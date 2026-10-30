@@ -26,9 +26,12 @@ from datetime import date, datetime, timedelta
 
 BASE_ELO = "https://raw.githubusercontent.com/erikolivo/elo-tilt/master/data"
 URL_HISTORIAL = BASE_ELO + "/historial_partidos/{mes}.json"
+URL_RATINGS = BASE_ELO + "/ratings_propios.json"
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 CACHE_FILE = os.path.join(DATA_DIR, "cache_historial_elo.json")
+# Respaldo local si elo-tilt no responde (mismo formato: {"equipos": {...}}).
+RATINGS_LOCAL_FILE = os.path.join(DATA_DIR, "ratings_propios.json")
 
 MESES_MAXIMOS = 3          # ventana hacia atras (mes actual incluido)
 MIN_PARTIDOS = 8           # con esto ya no se siguen leyendo meses
@@ -40,6 +43,7 @@ REINTENTOS = 2
 USER_AGENT = "alertas-favoritos/1.0 (historial elo-tilt)"
 
 _cache_memoria = {}
+_cache_ratings = {"cargado_en": None, "equipos": {}}
 
 
 def _ahora():
@@ -122,25 +126,34 @@ def _partidos_del_equipo(datos, team_id):
     return historial
 
 
-def _descargar_mes(mes):
-    """Descarga un archivo mensual. [] si no existe (404); None si fallo la red."""
-    url = URL_HISTORIAL.format(mes=mes)
+def _descargar_json(url, etiqueta):
+    """Descarga JSON de elo-tilt. Devuelve (estado, datos).
+
+    estado: 'ok' | '404' (no publicado) | 'error' (red/JSON tras reintentos)."""
     ultimo_error = None
     for intento in range(REINTENTOS + 1):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
             with urllib.request.urlopen(req, timeout=TIMEOUT) as respuesta:
-                return json.loads(respuesta.read().decode("utf-8"))
+                return "ok", json.loads(respuesta.read().decode("utf-8"))
         except urllib.error.HTTPError as error:
             if error.code == 404:
-                return []   # mes todavia no publicado: no es un fallo
+                return "404", None
             ultimo_error = error
         except Exception as error:   # red, timeout, JSON invalido
             ultimo_error = error
         if intento < REINTENTOS:
             time.sleep(1 + intento)
-    print(f"[AVISO] historial elo-tilt {mes}: {ultimo_error}")
-    return None
+    print(f"[AVISO] elo-tilt {etiqueta}: {ultimo_error}")
+    return "error", None
+
+
+def _descargar_mes(mes):
+    """Descarga un archivo mensual. [] si no existe (404); None si fallo la red."""
+    estado, datos = _descargar_json(URL_HISTORIAL.format(mes=mes), f"historial {mes}")
+    if estado == "ok":
+        return datos
+    return [] if estado == "404" else None
 
 
 def _leer_cache_disco():
@@ -168,6 +181,59 @@ def _vigente(fecha_cache):
         return _ahora() - datetime.fromisoformat(fecha_cache) < timedelta(hours=CACHE_HORAS)
     except Exception:
         return False
+
+
+def _leer_ratings_locales():
+    try:
+        with open(RATINGS_LOCAL_FILE, "r", encoding="utf-8") as archivo:
+            return json.load(archivo)
+    except Exception:
+        return None
+
+
+def _cargar_ratings():
+    """{'espn:<id>': {rating, rd, ...}} desde elo-tilt o el respaldo local.
+
+    Cache en memoria de 3 h. Si no hay datos devuelve {} y no cachea el
+    fallo, para reintentar en la proxima llamada."""
+    equipos = _cache_ratings["equipos"]
+    if equipos and _vigente(_cache_ratings["cargado_en"]):
+        return equipos
+
+    estado, datos = _descargar_json(URL_RATINGS, "ratings_propios")
+    if estado != "ok" or not isinstance(datos, dict):
+        datos = _leer_ratings_locales()
+    if isinstance(datos, dict):
+        crudos = datos.get("equipos") if isinstance(datos.get("equipos"), dict) else datos
+        equipos = {clave: valor for clave, valor in crudos.items() if isinstance(valor, dict)}
+    else:
+        equipos = {}
+
+    if equipos:
+        _cache_ratings["equipos"] = equipos
+        _cache_ratings["cargado_en"] = _ahora().isoformat()
+    return equipos
+
+
+def rating_de(team_id):
+    """Rating propio del equipo segun elo-tilt, o None.
+
+    Devuelve {'rating': float, 'rd': float|None}. Fuente principal:
+    data/ratings_propios.json de elo-tilt; respaldo local:
+    data/ratings_propios.json del repo. Nunca lanza excepciones."""
+    try:
+        if team_id in (None, ""):
+            return None
+        equipos = _cargar_ratings()
+        clave = str(team_id)
+        entrada = equipos.get(f"espn:{clave}") or equipos.get(clave)
+        if not isinstance(entrada, dict):
+            return None
+        valor = float(entrada.get("rating"))
+        rd = entrada.get("rd")
+        return {"rating": valor, "rd": float(rd) if rd is not None else None}
+    except Exception:
+        return None
 
 
 def _historial_mes(team_id, mes, cache_disco, ahora_iso):

@@ -123,3 +123,63 @@ def test_nunca_lanza_con_entradas_raras(monkeypatch, tmp_path):
     assert H.obtener_historial_equipo_elo(None) == []
     assert H.obtener_historial_equipo_elo("", hoy=HOY) == []
     assert H.obtener_historial_equipo_elo("86", hoy=HOY) == []
+
+
+# ── rating_de (ajuste por rival) ──────────────────────────────────────────
+
+def _limpiar_ratings():
+    H._cache_ratings["equipos"] = {}
+    H._cache_ratings["cargado_en"] = None
+
+
+def test_rating_de_lee_el_mapa_de_elo_tilt(monkeypatch, tmp_path):
+    _preparar(monkeypatch, tmp_path)
+    _limpiar_ratings()
+    monkeypatch.setattr(H, "_cargar_ratings",
+                        lambda: {"espn:86": {"rating": 1600, "rd": 80.0}})
+    assert H.rating_de("86") == {"rating": 1600.0, "rd": 80.0}
+    assert H.rating_de(86) == {"rating": 1600.0, "rd": 80.0}
+    assert H.rating_de("desconocido") is None
+    assert H.rating_de(None) is None
+
+
+def test_rating_de_datos_invalidos(monkeypatch):
+    _limpiar_ratings()
+    monkeypatch.setattr(H, "_cargar_ratings",
+                        lambda: {"espn:86": {"rating": None}, "espn:87": "x"})
+    assert H.rating_de("86") is None
+    assert H.rating_de("87") is None
+
+
+def test_ratings_caen_al_archivo_local(monkeypatch, tmp_path):
+    _limpiar_ratings()
+    monkeypatch.setattr(H, "RATINGS_LOCAL_FILE", str(tmp_path / "ratings_propios.json"))
+    monkeypatch.setattr(H, "_descargar_json", lambda url, etiqueta: ("error", None))
+    (tmp_path / "ratings_propios.json").write_text(json.dumps({
+        "equipos": {"espn:86": {"rating": 1700, "rd": 90}},
+    }), encoding="utf-8")
+    assert H.rating_de("86") == {"rating": 1700.0, "rd": 90.0}
+    _limpiar_ratings()
+
+
+def test_ratings_se_cachean(monkeypatch):
+    _limpiar_ratings()
+    llamadas = []
+
+    def descarga(url, etiqueta):
+        llamadas.append(url)
+        return "ok", {"equipos": {"espn:86": {"rating": 1600, "rd": 80}}}
+
+    monkeypatch.setattr(H, "_descargar_json", descarga)
+    assert H.rating_de("86")["rating"] == 1600
+    assert H.rating_de("86")["rating"] == 1600
+    assert len(llamadas) == 1
+    _limpiar_ratings()
+
+
+def test_sin_ratings_no_lanza(monkeypatch, tmp_path):
+    _limpiar_ratings()
+    monkeypatch.setattr(H, "RATINGS_LOCAL_FILE", str(tmp_path / "no_existe.json"))
+    monkeypatch.setattr(H, "_descargar_json", lambda url, etiqueta: ("error", None))
+    assert H.rating_de("86") is None
+    _limpiar_ratings()

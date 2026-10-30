@@ -19,6 +19,7 @@ from pathlib import Path
 from telegram_utils import enviar_mensaje_telegram, escapar_html
 from estado_diario import ya_se_hizo, marcar_hecho
 from fetch_data import obtener_historial_equipo, obtener_resultados_liga
+from historial_elo import rating_de
 
 ARCHIVO = Path(__file__).parent / "data" / "partidos_hoy.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
@@ -142,11 +143,59 @@ def _clamp(valor, minimo, maximo):
     return max(minimo, min(maximo, valor))
 
 
+# --- Ajuste por calidad del rival (solo Nivel Actual) -------------------
+# Un triunfo contra un rival fuerte vale mas que contra uno debil, y una
+# derrota contra un rival fuerte duele menos. Se usa el rating propio de
+# elo-tilt como referencia (no modifica el repositorio de elo-tilt).
+AJUSTE_RIVAL_ACTIVO = True
+ALFA_RIVAL = 0.5          # cuanto pesa la diferencia de rating
+RD_MAX_AJUSTE = 250       # ratings con mas incertidumbre no se usan
+VENTAJA_LOCAL_ELO = 50    # puntos Elo que aporta jugar en casa
+
+
+def _rating_utilizable(rating):
+    """True si hay rating y su RD es aceptable (None = se acepta)."""
+    if not isinstance(rating, dict) or rating.get("rating") is None:
+        return False
+    return rating.get("rd") is None or rating["rd"] <= RD_MAX_AJUSTE
+
+
+def _ajuste_por_rival(p, team_id):
+    """Ajuste aditivo en escala 0-1 por la calidad del rival.
+
+    diferencia = rating_rival - rating_propio_efectivo, con tope
+    +-RD_MAX_AJUSTE (rating_propio_efectivo suma VENTAJA_LOCAL_ELO si el
+    partido fue de local y la resta si fue de visitante).
+    ajuste = ALFA_RIVAL * diferencia / 400.
+    Sin ratings, con RD alta o con el ajuste apagado devuelve 0.0
+    (comportamiento identico al de antes)."""
+    if not AJUSTE_RIVAL_ACTIVO or team_id in (None, ""):
+        return 0.0
+    rival_id = p.get("rival_id")
+    if rival_id in (None, ""):
+        return 0.0
+    try:
+        propio = rating_de(team_id)
+        rival = rating_de(rival_id)
+        if not _rating_utilizable(propio) or not _rating_utilizable(rival):
+            return 0.0
+        propio_efectivo = propio["rating"] + (VENTAJA_LOCAL_ELO if p.get("es_local") else -VENTAJA_LOCAL_ELO)
+        diferencia = _clamp(rival["rating"] - propio_efectivo, -RD_MAX_AJUSTE, RD_MAX_AJUSTE)
+        return ALFA_RIVAL * diferencia / 400
+    except Exception:
+        return 0.0
+
+
 def _valor_resultado(p, team_id=None):
-    """Valor de un partido para la forma: V=1.0, E=0.5, D=0.0.
-    (2026-10 v2: el ajuste por fuerza del rival se agrega en el
-    ultimo commit; por ahora team_id se ignora.)"""
-    return {"V": 1.0, "E": 0.5, "D": 0.0}.get(p.get("resultado"), 0.0)
+    """Valor de un partido para la forma, en escala 0-1.
+
+    Base: V=1.0, E=0.5, D=0.0. Con team_id se ajusta por la calidad del
+    rival (_ajuste_por_rival) y se acota a 0-1:
+    - ganar a un rival flojo vale menos de 1.0;
+    - perder contra un rival fuerte vale mas de 0.0.
+    Sin team_id o sin ratings devuelve la base (compatibilidad)."""
+    base = {"V": 1.0, "E": 0.5, "D": 0.0}.get(p.get("resultado"), 0.0)
+    return _clamp(base + _ajuste_por_rival(p, team_id), 0.0, 1.0)
 
 
 def _score_goles_global(ultimos):
