@@ -43,6 +43,9 @@ REINTENTOS = 2
 USER_AGENT = "alertas-favoritos/1.0 (historial elo-tilt)"
 
 _cache_memoria = {}
+# El archivo mensual de elo-tilt pesa ~3 MB: se cachea UNA vez por proceso
+# y mes (si no, cada equipo lo volveria a descargar).
+_cache_meses = {}
 _cache_ratings = {"cargado_en": None, "equipos": {}}
 
 
@@ -149,11 +152,20 @@ def _descargar_json(url, etiqueta):
 
 
 def _descargar_mes(mes):
-    """Descarga un archivo mensual. [] si no existe (404); None si fallo la red."""
+    """Descarga un archivo mensual (una sola vez por proceso).
+
+    [] si no existe (404); None si fallo la red."""
+    en_memoria = _cache_meses.get(mes)
+    if en_memoria and _vigente(en_memoria[0]):
+        return en_memoria[1]
     estado, datos = _descargar_json(URL_HISTORIAL.format(mes=mes), f"historial {mes}")
     if estado == "ok":
-        return datos
-    return [] if estado == "404" else None
+        resultado = datos
+    else:
+        resultado = [] if estado == "404" else None
+    if resultado is not None:
+        _cache_meses[mes] = (_ahora().isoformat(), resultado)
+    return resultado
 
 
 def _leer_cache_disco():
