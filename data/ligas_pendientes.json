@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 3263,
+      "veces_visto": 3296,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-10-30"
@@ -138,21 +138,21 @@
     },
     {
       "pais": "",
+      "liga": "Liga de Expansión MX",
+      "liga_id": "3932",
+      "veces_visto": 289,
+      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
+      "fixture_id": "401886377",
+      "ultimo_visto": "2026-10-30"
+    },
+    {
+      "pais": "",
       "liga": "KNVB Beker, First Round",
       "liga_id": "3957",
       "veces_visto": 287,
       "ejemplo_partido": "Excelsior '31 vs ADO Den Haag",
       "fixture_id": "401925175",
       "ultimo_visto": "2026-10-29"
-    },
-    {
-      "pais": "",
-      "liga": "Liga de Expansión MX",
-      "liga_id": "3932",
-      "veces_visto": 287,
-      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
-      "fixture_id": "401886377",
-      "ultimo_visto": "2026-10-30"
     },
     {
       "pais": "",
@@ -185,7 +185,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 244,
+      "veces_visto": 247,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-10-30"
@@ -203,7 +203,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 219,
+      "veces_visto": 220,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-10-30"
@@ -275,7 +275,7 @@
       "pais": "",
       "liga": "Salvadoran Primera",
       "liga_id": "3943",
-      "veces_visto": 150,
+      "veces_visto": 151,
       "ejemplo_partido": "Inca Aruba vs Atletico Balboa",
       "fixture_id": "401899791",
       "ultimo_visto": "2026-10-30"
@@ -302,7 +302,7 @@
       "pais": "",
       "liga": "Liga FPD",
       "liga_id": "4005",
-      "veces_visto": 126,
+      "veces_visto": 128,
       "ejemplo_partido": "Pérez Zeledón vs AD San Carlos",
       "fixture_id": "401876853",
       "ultimo_visto": "2026-10-30"
@@ -311,7 +311,7 @@
       "pais": "",
       "liga": "Bolivian Liga Profesional",
       "liga_id": "620",
-      "veces_visto": 111,
+      "veces_visto": 113,
       "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
       "fixture_id": "401906485",
       "ultimo_visto": "2026-10-30"
@@ -336,21 +336,21 @@
     },
     {
       "pais": "",
+      "liga": "Austrian Bundesliga",
+      "liga_id": "3907",
+      "veces_visto": 106,
+      "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
+      "fixture_id": "401881790",
+      "ultimo_visto": "2026-10-30"
+    },
+    {
+      "pais": "",
       "liga": "A-League Women",
       "liga_id": "18992",
       "veces_visto": 105,
       "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
       "fixture_id": "401913254",
       "ultimo_visto": "2026-10-25"
-    },
-    {
-      "pais": "",
-      "liga": "Austrian Bundesliga",
-      "liga_id": "3907",
-      "veces_visto": 105,
-      "ejemplo_partido": "SV Josko Ried vs RB Salzburg",
-      "fixture_id": "401881790",
-      "ultimo_visto": "2026-10-30"
     },
     {
       "pais": "",
@@ -428,7 +428,7 @@
       "pais": "",
       "liga": "Indian Super League",
       "liga_id": "8316",
-      "veces_visto": 73,
+      "veces_visto": 74,
       "ejemplo_partido": "NorthEast United FC vs Mohun Bagan Super Giant",
       "fixture_id": "401925436",
       "ultimo_visto": "2026-10-30"
@@ -498,6 +498,15 @@
     },
     {
       "pais": "",
+      "liga": "Honduran Liga Nacional",
+      "liga_id": "3929",
+      "veces_visto": 59,
+      "ejemplo_partido": "CD Estrella Roja vs Platense",
+      "fixture_id": "401915261",
+      "ultimo_visto": "2026-10-30"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group C",
       "liga_id": "20114",
       "veces_visto": 58,
@@ -522,15 +531,6 @@
       "ejemplo_partido": "Oriente Petrolero vs Guabirá",
       "fixture_id": "401907922",
       "ultimo_visto": "2026-10-07"
-    },
-    {
-      "pais": "",
-      "liga": "Honduran Liga Nacional",
-      "liga_id": "3929",
-      "veces_visto": 58,
-      "ejemplo_partido": "CD Estrella Roja vs Platense",
-      "fixture_id": "401915261",
-      "ultimo_visto": "2026-10-30"
     },
     {
       "pais": "",
@@ -795,6 +795,15 @@
     },
     {
       "pais": "",
+      "liga": "USL Championship, Eastern Conference - Quarterfinals",
+      "liga_id": "4002",
+      "veces_visto": 44,
+      "ejemplo_partido": "Louisville City FC vs Pittsburgh Riverhounds",
+      "fixture_id": "401931662",
+      "ultimo_visto": "2026-10-30"
+    },
+    {
+      "pais": "",
       "liga": "Copa Bolivia, Quarterfinals",
       "liga_id": "23284",
       "veces_visto": 42,
@@ -819,15 +828,6 @@
       "ejemplo_partido": "ACV vs Hoogeveen",
       "fixture_id": "401916456",
       "ultimo_visto": "2026-09-23"
-    },
-    {
-      "pais": "",
-      "liga": "USL Championship, Eastern Conference - Quarterfinals",
-      "liga_id": "4002",
-      "veces_visto": 40,
-      "ejemplo_partido": "Louisville City FC vs Pittsburgh Riverhounds",
-      "fixture_id": "401931662",
-      "ultimo_visto": "2026-10-30"
     },
     {
       "pais": "",
@@ -1272,6 +1272,24 @@
     },
     {
       "pais": "",
+      "liga": "USL Championship, Western Conference - Quarterfinals",
+      "liga_id": "4002",
+      "veces_visto": 11,
+      "ejemplo_partido": "El Paso Locomotive FC vs San Antonio FC",
+      "fixture_id": "401931676",
+      "ultimo_visto": "2026-10-30"
+    },
+    {
+      "pais": "",
+      "liga": "Indian I-League",
+      "liga_id": "18505",
+      "veces_visto": 11,
+      "ejemplo_partido": "Real Kashmir vs Nagaland United SC",
+      "fixture_id": "401930635",
+      "ultimo_visto": "2026-10-30"
+    },
+    {
+      "pais": "",
       "liga": "CAF Confederation Cup, First Preliminary Round",
       "liga_id": "18000",
       "veces_visto": 10,
@@ -1296,24 +1314,6 @@
       "ejemplo_partido": "Naegohyang vs Auckland United FC",
       "fixture_id": "401930375",
       "ultimo_visto": "2026-10-25"
-    },
-    {
-      "pais": "",
-      "liga": "USL Championship, Western Conference - Quarterfinals",
-      "liga_id": "4002",
-      "veces_visto": 10,
-      "ejemplo_partido": "El Paso Locomotive FC vs San Antonio FC",
-      "fixture_id": "401931676",
-      "ultimo_visto": "2026-10-30"
-    },
-    {
-      "pais": "",
-      "liga": "Indian I-League",
-      "liga_id": "18505",
-      "veces_visto": 10,
-      "ejemplo_partido": "Real Kashmir vs Nagaland United SC",
-      "fixture_id": "401930635",
-      "ultimo_visto": "2026-10-30"
     },
     {
       "pais": "",
@@ -1467,6 +1467,15 @@
       "ejemplo_partido": "Independiente Petrolero vs Aurora",
       "fixture_id": "401929988",
       "ultimo_visto": "2026-10-21"
+    },
+    {
+      "pais": "",
+      "liga": "USL League One, Quarterfinals",
+      "liga_id": "19915",
+      "veces_visto": 2,
+      "ejemplo_partido": "Union Omaha vs Chattanooga Red Wolves",
+      "fixture_id": "401931679",
+      "ultimo_visto": "2026-10-30"
     },
     {
       "pais": "",
