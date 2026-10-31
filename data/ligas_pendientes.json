@@ -102,6 +102,15 @@
     },
     {
       "pais": "",
+      "liga": "Liga F",
+      "liga_id": "20956",
+      "veces_visto": 310,
+      "ejemplo_partido": "Deportivo vs Real Madrid",
+      "fixture_id": "401882522",
+      "ultimo_visto": "2026-10-31"
+    },
+    {
+      "pais": "",
       "liga": "NWSL",
       "liga_id": "8301",
       "veces_visto": 308,
@@ -111,11 +120,11 @@
     },
     {
       "pais": "",
-      "liga": "Liga F",
-      "liga_id": "20956",
-      "veces_visto": 306,
-      "ejemplo_partido": "Deportivo vs Real Madrid",
-      "fixture_id": "401882522",
+      "liga": "Liga de Expansión MX",
+      "liga_id": "3932",
+      "veces_visto": 299,
+      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
+      "fixture_id": "401886377",
       "ultimo_visto": "2026-10-31"
     },
     {
@@ -129,18 +138,9 @@
     },
     {
       "pais": "",
-      "liga": "Liga de Expansión MX",
-      "liga_id": "3932",
-      "veces_visto": 295,
-      "ejemplo_partido": "Alebrijes de Oaxaca vs Durango",
-      "fixture_id": "401886377",
-      "ultimo_visto": "2026-10-31"
-    },
-    {
-      "pais": "",
       "liga": "WSL Players Cup, League Phase",
       "liga_id": "23390",
-      "veces_visto": 292,
+      "veces_visto": 293,
       "ejemplo_partido": "Crystal Palace vs Watford",
       "fixture_id": "401923288",
       "ultimo_visto": "2026-10-31"
@@ -167,7 +167,7 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 276,
+      "veces_visto": 277,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
       "ultimo_visto": "2026-10-31"
@@ -185,7 +185,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 253,
+      "veces_visto": 256,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-10-31"
@@ -194,7 +194,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 225,
+      "veces_visto": 229,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-10-31"
@@ -203,7 +203,7 @@
       "pais": "",
       "liga": "Scottish Cup, Second Round",
       "liga_id": "3959",
-      "veces_visto": 224,
+      "veces_visto": 228,
       "ejemplo_partido": "Penicuik vs Clyde",
       "fixture_id": "401928436",
       "ultimo_visto": "2026-10-31"
@@ -266,7 +266,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 157,
+      "veces_visto": 159,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-10-31"
@@ -336,6 +336,15 @@
     },
     {
       "pais": "",
+      "liga": "A-League Women",
+      "liga_id": "18992",
+      "veces_visto": 109,
+      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
+      "fixture_id": "401913254",
+      "ultimo_visto": "2026-10-31"
+    },
+    {
+      "pais": "",
       "liga": "Austrian Bundesliga",
       "liga_id": "3907",
       "veces_visto": 107,
@@ -345,11 +354,11 @@
     },
     {
       "pais": "",
-      "liga": "A-League Women",
-      "liga_id": "18992",
-      "veces_visto": 107,
-      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
-      "fixture_id": "401913254",
+      "liga": "Northern Super League",
+      "liga_id": "23286",
+      "veces_visto": 91,
+      "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
+      "fixture_id": "401859943",
       "ultimo_visto": "2026-10-31"
     },
     {
@@ -360,15 +369,6 @@
       "ejemplo_partido": "El Merriekh Bentiu vs Pyramids FC",
       "fixture_id": "401914250",
       "ultimo_visto": "2026-10-23"
-    },
-    {
-      "pais": "",
-      "liga": "Northern Super League",
-      "liga_id": "23286",
-      "veces_visto": 90,
-      "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
-      "fixture_id": "401859943",
-      "ultimo_visto": "2026-10-31"
     },
     {
       "pais": "",
@@ -1479,6 +1479,15 @@
     },
     {
       "pais": "",
+      "liga": "Scottish League Cup, Semifinals",
+      "liga_id": "5330",
+      "veces_visto": 2,
+      "ejemplo_partido": "Rangers vs Aberdeen",
+      "fixture_id": "401920023",
+      "ultimo_visto": "2026-10-31"
+    },
+    {
+      "pais": "",
       "liga": "Campeones Cup, 2026 Campeones Cup",
       "liga_id": "18771",
       "veces_visto": 1,
@@ -1557,15 +1566,6 @@
       "ejemplo_partido": "Cartaginés vs Club Deportivo Olimpia",
       "fixture_id": "401922486",
       "ultimo_visto": "2026-10-21"
-    },
-    {
-      "pais": "",
-      "liga": "Scottish League Cup, Semifinals",
-      "liga_id": "5330",
-      "veces_visto": 1,
-      "ejemplo_partido": "Rangers vs Aberdeen",
-      "fixture_id": "401920023",
-      "ultimo_visto": "2026-10-31"
     }
   ]
 }
