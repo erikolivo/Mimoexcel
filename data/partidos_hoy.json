@@ -8841,8 +8841,6 @@
         }
       ],
       "diferencia_maxima_alcanzada": 0,
-      "es_destacado": true,
-      "grupo_destacado": 3,
       "aviso_final_enviado": true
     },
     {
@@ -18848,8 +18846,6 @@
       "pf_hoja": 0.65,
       "clv": 0.0286,
       "n_fotos_hoja": 3,
-      "es_destacado": true,
-      "grupo_destacado": 3,
       "aviso_final_enviado": true
     },
     {
@@ -26731,8 +26727,6 @@
       "pf_hoja": 0.68,
       "clv": 0.0387,
       "n_fotos_hoja": 3,
-      "es_destacado": true,
-      "grupo_destacado": 1,
       "aviso_final_enviado": true
     },
     {
@@ -28081,8 +28075,6 @@
       "pf_hoja": 0.8,
       "clv": 0.0,
       "n_fotos_hoja": 3,
-      "es_destacado": true,
-      "grupo_destacado": 1,
       "aviso_final_enviado": true
     },
     {
@@ -31110,8 +31102,6 @@
       "pf_hoja": 0.85,
       "clv": 0.0,
       "n_fotos_hoja": 3,
-      "es_destacado": true,
-      "grupo_destacado": 1,
       "aviso_final_enviado": true
     },
     {
@@ -33967,8 +33957,6 @@
       "pf_hoja": 0.68,
       "clv": -0.0188,
       "n_fotos_hoja": 3,
-      "es_destacado": true,
-      "grupo_destacado": 2,
       "aviso_final_enviado": true
     },
     {
@@ -35547,8 +35535,6 @@
       "pf_hoja": 0.75,
       "clv": 0.0,
       "n_fotos_hoja": 3,
-      "es_destacado": true,
-      "grupo_destacado": 2,
       "aviso_final_enviado": true
     },
     {
@@ -37999,8 +37985,6 @@
       "pf_hoja": 0.72,
       "clv": 0.049,
       "n_fotos_hoja": 3,
-      "es_destacado": true,
-      "grupo_destacado": 3,
       "aviso_final_enviado": true
     },
     {
@@ -48536,9 +48520,7 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.69,
       "clv": 0.0278,
-      "n_fotos_hoja": 3,
-      "es_destacado": true,
-      "grupo_destacado": 2
+      "n_fotos_hoja": 3
     },
     {
       "partido": "Barcelona vs Alavés",
@@ -50645,7 +50627,16 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.69,
       "clv": 0.0,
-      "n_fotos_hoja": 3
+      "n_fotos_hoja": 3,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Libertad",
+        "p_exito": 0.664,
+        "cuota_estimada": 1.45,
+        "relleno": true
+      }
     },
     {
       "partido": "Piratas vs Tapatío",
@@ -50680,7 +50671,16 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.75,
       "clv": 0.0,
-      "n_fotos_hoja": 1
+      "n_fotos_hoja": 1,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Piratas",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.33,
+        "relleno": false
+      }
     },
     {
       "partido": "Guadalajara vs Atlante",
@@ -50715,7 +50715,16 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.68,
       "clv": 0.0,
-      "n_fotos_hoja": 1
+      "n_fotos_hoja": 1,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Guadalajara",
+        "p_exito": 0.664,
+        "cuota_estimada": 1.48,
+        "relleno": true
+      }
     }
   ],
   "predicciones_activas": {},
