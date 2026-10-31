@@ -25,6 +25,7 @@ _ENCABEZADOS = {
     "visitante": {"visitante", "away", "equipo visitante", "fuera"},
     "favorito": {"favorito", "favourite", "favorite", "pick", "pronostico", "seleccion", "pronostico pick recomendado"},
     "fecha": {"fecha", "date", "dia"},
+    "hora": {"hora", "hora local", "hora ecuador", "hora (ecuador)", "time"},
     "confianza": {"confianza", "confidence", "certeza"},
     "cuota_local": {"cuota 1", "cuota local"},
     "cuota_empate": {"cuota x", "cuota empate"},
@@ -68,6 +69,11 @@ def _separar_partido(valor):
     return (partes[0].strip(), partes[1].strip()) if len(partes) == 2 and all(p.strip() for p in partes) else (None, None)
 
 
+def _marca_resuelto(favorito):
+    """True si el pronostico viene marcado como jugado (✓) o fallado (✗)."""
+    return any(marca in str(favorito or "") for marca in ("✓", "✗", "✔", "✘"))
+
+
 def _es_fecha_de_hoy(valor, hoy):
     if not str(valor or "").strip():
         return None
@@ -105,6 +111,7 @@ def interpretar_csv(contenido, hoy=None):
     col_cuota_empate = _columna(encabezados, "cuota_empate")
     col_cuota_visitante = _columna(encabezados, "cuota_visitante")
     col_prioridad = _columna(encabezados, "prioridad")
+    col_hora = _columna(encabezados, "hora")
     col_pct_local = _columna_pct(encabezados, "local")
     col_pct_visitante = _columna_pct(encabezados, "visitante")
     if not col_favorito or not (col_partido or (col_local and col_visitante)):
@@ -117,10 +124,20 @@ def interpretar_csv(contenido, hoy=None):
             return None
 
     favoritos = []
+    indice = {}   # (local normalizado, visitante normalizado) -> posicion en favoritos
     for numero, fila in enumerate(filas, start=2):
         if col_fecha and _es_fecha_de_hoy(fila.get(col_fecha), hoy) is False:
             continue
+        # La hoja agrega una foto nueva de cada partido cada vez que corre.
+        # Las filas EN VIVO o marcadas ✓/✗ ya estan en juego o jugadas: no
+        # se pueden alertar. (El partido sigue entrando por su ultima foto
+        # previa al inicio, que si es limpia.)
+        hora_texto = str(fila.get(col_hora, "")).strip() if col_hora else ""
+        if "VIVO" in hora_texto.upper():
+            continue
         favorito = str(fila.get(col_favorito, "")).strip()
+        if _marca_resuelto(favorito):
+            continue
         if favorito.lower() in {"", "-", "n/a", "na", "none"}:
             continue
         local = str(fila.get(col_local, "")).strip() if col_local else ""
@@ -132,7 +149,7 @@ def interpretar_csv(contenido, hoy=None):
             prioridad_texto = str(fila.get(col_prioridad, "")).strip().upper() if col_prioridad else "ALTA"
             if prioridad_texto not in {"ALTA", "MEDIA", "BAJA"}:
                 prioridad_texto = "ALTA"
-            favoritos.append({
+            entrada = {
                 "local": local, "visitante": visitante, "favorito": favorito, "fila_hoja": numero,
                 "confianza_texto": confianza_texto, "confianza_estrellas": confianza_texto.count("★"),
                 "cuota_local": _num(fila.get(col_cuota_local)) if col_cuota_local else None,
@@ -143,7 +160,20 @@ def interpretar_csv(contenido, hoy=None):
                 # resultados reales, ver probabilidad.py).
                 "pct_local": a_fraccion(fila.get(col_pct_local)) if col_pct_local else None,
                 "pct_visitante": a_fraccion(fila.get(col_pct_visitante)) if col_pct_visitante else None,
-            })
+            }
+            clave = (normalizar(local), normalizar(visitante))
+            previa = favoritos[indice[clave]] if clave in indice else None
+            # Se conserva la ULTIMA foto limpia (la mas cercana al inicio y
+            # con las cuotas mas informadas) y, aparte, la cuota de la
+            # primera foto para medir el movimiento de la linea (CLV).
+            entrada["n_fotos"] = (previa.get("n_fotos", 1) + 1) if previa else 1
+            entrada["cuota_local_primera"] = previa.get("cuota_local_primera", previa.get("cuota_local")) if previa else entrada["cuota_local"]
+            entrada["cuota_visitante_primera"] = previa.get("cuota_visitante_primera", previa.get("cuota_visitante")) if previa else entrada["cuota_visitante"]
+            if previa is None:
+                indice[clave] = len(favoritos)
+                favoritos.append(entrada)
+            else:
+                favoritos[indice[clave]] = entrada
     return favoritos
 
 

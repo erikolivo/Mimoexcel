@@ -38,6 +38,19 @@ UMBRAL_BAJA = 0.55
 # Bajalo a 0.55 si quieres incluir tambien el tramo BAJA (gana ~57 %).
 PF_MIN_SEGUIMIENTO = 0.65
 
+# Las dobles oportunidades NO se filtran por "gana el favorito": se eligen
+# justo cuando el partido esta parejo (pf ~0.50-0.59). Su probabilidad real
+# es la de NO PERDER (p_no_pierde_fav) y el umbral va sobre esa.
+# 0.79 = tramo 0.55-0.60 de la calibracion; en las alertas archivadas las
+# DC aciertan ~71-74 % (vs 60.7 % del favorito directo).
+UMBRAL_DC_SEGUIMIENTO = 0.79
+
+
+def es_doble_oportunidad(tipo_o_texto):
+    """True si el pronostico es doble oportunidad ('DC LOCAL', etc.)."""
+    texto = str(tipo_o_texto or "").upper()
+    return "DC" in texto.replace("_", " ").split() or "DOBLE" in texto
+
 
 def a_fraccion(valor):
     """Convierte '0.80', '0,80', '80%', 80 o 0.8 a fraccion 0-1. None si no se puede."""
@@ -67,24 +80,32 @@ def prioridad_desde_pf(pf):
     return "BAJA"
 
 
-def evaluar(pct_local, pct_visitante, lado_favorito):
+def evaluar(pct_local, pct_visitante, lado_favorito, tipo_pronostico=None):
     """Devuelve un dict con la probabilidad real del favorito, o None si la
     hoja no trae los porcentajes (el llamador decide que hacer en ese caso).
 
     lado_favorito: 'local' o 'visitante' (el lado del pronostico de la hoja).
+    tipo_pronostico: opcional ('DC LOCAL', 'doble_oportunidad', ...). Con
+    doble oportunidad el filtro usa p_no_pierde_fav (probabilidad de no
+    perder), no la de ganar: una DC se elige justo cuando el partido esta
+    parejo y el % de victoria nunca llega a 0.65.
     """
     pl, pv = a_fraccion(pct_local), a_fraccion(pct_visitante)
     if pl is None or pv is None or lado_favorito not in {"local", "visitante"}:
         return None
     pf, pu = (pl, pv) if lado_favorito == "local" else (pv, pl)
     p_gana, p_no_pierde = _tramo(pf)
+    dc = es_doble_oportunidad(tipo_pronostico)
     return {
         "pf_hoja": round(pf, 3),
         "ventaja": round(pf - pu, 3),          # distancia al rival: que tan "claro" es
         "p_gana_fav": p_gana,
         "p_no_pierde_fav": p_no_pierde,
         "prioridad": prioridad_desde_pf(pf),
-        "seguir": pf >= PF_MIN_SEGUIMIENTO,
+        # La DC se queda si el favorito no pierde con la probabilidad
+        # calibrada; el directo, si gana con el % de la hoja.
+        "seguir": p_no_pierde >= UMBRAL_DC_SEGUIMIENTO if dc else pf >= PF_MIN_SEGUIMIENTO,
+        "tipo_filtro": "no_pierde" if dc else "gana",
     }
 
 
