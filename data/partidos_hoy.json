@@ -8505,7 +8505,9 @@
           "presion_lado": 17.286456916042923
         }
       ],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Schalke 04 vs RB Leipzig",
@@ -14243,7 +14245,9 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.65,
       "clv": 0.0286,
-      "n_fotos_hoja": 3
+      "n_fotos_hoja": 3,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "Fredrikstad vs Rosenborg",
@@ -18299,7 +18303,9 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.68,
       "clv": 0.0387,
-      "n_fotos_hoja": 3
+      "n_fotos_hoja": 3,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Boreham Wood vs Hartlepool United",
@@ -18962,7 +18968,9 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.8,
       "clv": 0.0,
-      "n_fotos_hoja": 3
+      "n_fotos_hoja": 3,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Wealdstone vs Southend United",
@@ -20037,7 +20045,9 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.85,
       "clv": 0.0,
-      "n_fotos_hoja": 3
+      "n_fotos_hoja": 3,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Fenerbahce vs Goztepe",
@@ -20107,7 +20117,9 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.68,
       "clv": -0.0188,
-      "n_fotos_hoja": 3
+      "n_fotos_hoja": 3,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Bayern Munich vs Borussia Dortmund",
@@ -20142,7 +20154,9 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.75,
       "clv": 0.0,
-      "n_fotos_hoja": 3
+      "n_fotos_hoja": 3,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Real Betis vs Málaga",
@@ -20212,7 +20226,9 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.72,
       "clv": 0.049,
-      "n_fotos_hoja": 3
+      "n_fotos_hoja": 3,
+      "es_destacado": true,
+      "grupo_destacado": 3
     },
     {
       "partido": "PSV Eindhoven vs Willem II",
@@ -20527,7 +20543,9 @@
       "diferencia_maxima_alcanzada": 0,
       "pf_hoja": 0.69,
       "clv": 0.0278,
-      "n_fotos_hoja": 3
+      "n_fotos_hoja": 3,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Barcelona vs Alavés",
