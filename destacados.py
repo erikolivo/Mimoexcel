@@ -1,31 +1,59 @@
 """
 destacados.py
 --------------
-NUEVO (agosto 2026, a pedido explicito) -- Fase 2.5: a las 7:30am, de
-los partidos del dia que SI tienen seguimiento en vivo disponible
-(fixture_id ya localizado en ESPN), elige los9 MEJORES partidos
-basados en Poder de Match y Estilo de Juego, divididos en3 grupos de3.
+Fase 2.5 -- COMBINADAS DEL DIA (reemplaza la seleccion anterior por
+"Poder de Match + Estilo de Juego").
+
+A las 6:05am (hora local), de los partidos del dia que SI tienen
+seguimiento en vivo disponible (fixture_id ya localizado en ESPN) y que
+todavia no empiezan, se descartan los menos probables y con los que
+quedan se arman combinadas de 3 partidos.
+
+Por que asi (analisis de 10.053 picks unicos de la hoja Seguimiento,
+26-ago a 31-oct 2026):
+- El % del favorito de la hoja es lo que mejor separa aciertos de fallos:
+  los directos con >=75 % aciertan ~75-85 %, los de 60-70 % solo ~62 %.
+  La Confianza (estrellas) y la Prioridad de la hoja aportan muy poco
+  una vez filtrado por ese %.
+- Las probabilidades calibradas de probabilidad.py predicen bien el
+  acierto de una combinada de 3: la esperada (producto de las tres) y la
+  real quedaron a 1-2 puntos en el backtest (~50-53 %).
+- Aviso honesto: el filtro sube el acierto (de ~37 % a ~50 % por
+  combinada) pero las cuotas de picks seguros pagan poco (~1.7-1.9 por
+  combinada), asi que el retorno con apuesta plana quedo entre -12 % y
+  0 % en el backtest. Mejora la tasa de acierto, no garantiza ganancia.
+
+Reglas:
+1. Candidatos: tienen fixture_id, no han empezado, y traen probabilidad
+   calibrada (p_gana_fav / p_no_pierde_fav).
+2. Filtro: favorito directo con % de la hoja >= UMBRAL_DIRECTO_COMBINADA;
+   doble oportunidad con % del lado elegido >= UMBRAL_DC_COMBINADA.
+3. Cantidad: siempre multiplo de 3, hasta MAX_PARTIDOS (9). Si los que
+   cumplen el filtro no son multiplo de 3, se completan con los MAS
+   PROBABLES de los que no lo cumplieron (marcados como "relleno"). Si
+   ninguno cumple el filtro, no se arma combinada. Si cumplen mas de 9,
+   se quedan los 9 mas probables.
+4. Combinadas AL AZAR: los partidos elegidos se revuelven y se reparten
+   de 3 en 3 (Combinada 1, 2, 3...), sin ordenar por probabilidad.
 
 Cada partido elegido queda marcado en partidos_hoy.json con
-"es_destacado": True y "grupo_destacado": 1,2 o3 -- reporte_diario.py
-usa esa marca para mostrar el % de acierto de este grupo por separado
-del total general.
+"es_destacado": True y "grupo_destacado": N (numero de combinada), mas
+"combinada_pick" con el mercado, la probabilidad y la cuota estimada,
+para poder medir despues cuantas combinadas acertaron.
 
-Reintenta cada 5 min dentro de una ventana corta (igual filosofia que
-Fase 2), y se autoprotege con estado_diario ("destacados") para no
-repetir el sorteo si ya se hizo hoy -- salvo que se llame con
---forzar (util para pruebas manuales desde Actions).
+Reintenta cada 5 min dentro de una ventana corta y se autoprotege con
+estado_diario ("destacados") para no repetir el envio si ya se hizo hoy
+-- salvo que se llame con --forzar (util para pruebas manuales).
 """
 
 import json
+import random
 import sys
 import datetime
 from pathlib import Path
 
 from telegram_utils import enviar_mensaje_telegram, escapar_html
 from estado_diario import ya_se_hizo, marcar_hecho
-from fetch_data import obtener_historial_equipo
-from resumen import _calcular_nivel_actual, _calcular_estilo_juego, _obtener_datos_estilo
 
 ARCHIVO = Path(__file__).parent / "data" / "partidos_hoy.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
@@ -36,9 +64,11 @@ EMOJI_TIPO_PRONOSTICO = {
 }
 CORONA_FAVORITO = "\U0001F451"  # 👑
 
-CANTIDAD_DESTACADOS = 9
-CANTIDAD_GRUPOS = 3
-PARTIDS_POR_GRUPO = 3
+# --- Parametros (ajustables) ---
+PARTIDOS_POR_COMBINADA = 3
+MAX_PARTIDOS = 9                   # 9 partidos = hasta 3 combinadas de 3
+UMBRAL_DIRECTO_COMBINADA = 0.75    # % de la hoja del favorito directo
+UMBRAL_DC_COMBINADA = 0.55         # % de la hoja del lado de la doble oportunidad
 
 
 def _hora_local(hora_inicio_utc_iso):
@@ -52,119 +82,181 @@ def _hora_local(hora_inicio_utc_iso):
         return hora_inicio_utc_iso
 
 
-def _titulo_partido(p):
-    emoji_tipo = EMOJI_TIPO_PRONOSTICO.get(p.get("tipo_pronostico"), EMOJI_TIPO_PRONOSTICO["favorito_directo"])
-    marca_favorito = f" {emoji_tipo}{CORONA_FAVORITO}"
-    corona_local = marca_favorito if p.get("favorito_es_local") else ""
-    corona_visitante = marca_favorito if not p.get("favorito_es_local") else ""
-    return f"{escapar_html(p['local'])}{corona_local} vs {escapar_html(p['visitante'])}{corona_visitante}"
+def _inicio_utc(partido):
+    texto = partido.get("hora_inicio") or partido.get("kickoff_utc")
+    if not texto:
+        return None
+    try:
+        dt = datetime.datetime.fromisoformat(str(texto).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return dt if dt.tzinfo else dt.replace(tzinfo=datetime.timezone.utc)
 
 
-def _calcular_probabilidad_exito(partido):
-    """
-    Calcula la probabilidad de exito de un partido basado en:
-    1. Diferencia de cuotas (fav vs no fav)
-    2. Poder de Match del favorito
-    3. Estilo de Juego favorable
-    Retorna un score de0 a100
-    """
-    score = 0
-    
-    #1. Diferencia de cuotas (40% del peso)
-    cuota_local = partido.get("cuota_local_inicial", 0) or 0
-    cuota_visitante = partido.get("cuota_visitante_inicial", 0) or 0
-    
-    if cuota_local >0 and cuota_visitante >0:
-        if partido.get("favorito_es_local"):
-            ratio_cuota = cuota_visitante / cuota_local
+def _es_dc(partido):
+    return partido.get("tipo_pronostico") == "doble_oportunidad"
+
+
+def _p_exito(partido):
+    """Probabilidad calibrada de que el pick se cumpla: gana el favorito
+    (directo) o no pierde (doble oportunidad). None si falta el dato."""
+    clave = "p_no_pierde_fav" if _es_dc(partido) else "p_gana_fav"
+    valor = partido.get(clave)
+    return float(valor) if valor is not None else None
+
+
+def _cuota_pick(partido):
+    """Cuota estimada del pick. Directo: cuota del favorito. DC: se
+    deriva de las cuotas 1X2 (aproximada, no es la cuota DC publicada)."""
+    c_fav = partido.get("cuota_local_inicial") if partido.get("favorito_es_local") \
+        else partido.get("cuota_visitante_inicial")
+    if not c_fav or c_fav <= 1:
+        return None
+    if not _es_dc(partido):
+        return float(c_fav)
+    c_x = partido.get("cuota_empate_inicial")
+    if not c_x or c_x <= 1:
+        return None
+    return 1.0 / (1.0 / c_fav + 1.0 / c_x)
+
+
+def _pasa_filtro(partido, ahora_utc):
+    if not partido.get("fixture_id"):
+        return False
+    inicio = _inicio_utc(partido)
+    if inicio is not None and inicio <= ahora_utc:
+        return False                      # ya empezo o termino
+    pf = partido.get("pf_hoja")
+    if pf is None or _p_exito(partido) is None:
+        return False
+    umbral = UMBRAL_DC_COMBINADA if _es_dc(partido) else UMBRAL_DIRECTO_COMBINADA
+    return pf >= umbral
+
+
+def _es_elegible(partido, ahora_utc):
+    """Puede entrar a una combinada (aunque no cumpla el filtro de %)."""
+    if not partido.get("fixture_id"):
+        return False
+    inicio = _inicio_utc(partido)
+    if inicio is not None and inicio <= ahora_utc:
+        return False                      # ya empezo o termino
+    return partido.get("pf_hoja") is not None and _p_exito(partido) is not None
+
+
+def _pasa_filtro(partido, ahora_utc):
+    if not _es_elegible(partido, ahora_utc):
+        return False
+    umbral = UMBRAL_DC_COMBINADA if _es_dc(partido) else UMBRAL_DIRECTO_COMBINADA
+    return partido["pf_hoja"] >= umbral
+
+
+def _por_probabilidad(partidos, ahora_utc):
+    return sorted(partidos, key=lambda p: (-_p_exito(p), -p["pf_hoja"], _inicio_utc(p) or ahora_utc))
+
+
+def armar_combinadas(partidos, ahora_utc=None, rng=None):
+    """Devuelve (combinadas, elegidos, n_cumplen, rellenos).
+
+    - n_cumplen: cuantos partidos cumplen el filtro.
+    - elegidos: lista plana de partidos elegidos (multiplo de 3, max 9),
+      en el orden en que quedaron repartidos.
+    - rellenos: ids de fixture de los que NO cumplian el filtro y entraron
+      para completar el multiplo de 3 (los mas probables de los restantes).
+    - combinadas: lista de listas de 3, repartidas AL AZAR.
+    No modifica los partidos."""
+    ahora_utc = ahora_utc or datetime.datetime.now(datetime.timezone.utc)
+    rng = rng or random.Random()
+
+    elegibles = [p for p in partidos if _es_elegible(p, ahora_utc)]
+    cumplen = _por_probabilidad([p for p in elegibles if _pasa_filtro(p, ahora_utc)], ahora_utc)
+    resto = _por_probabilidad([p for p in elegibles if not _pasa_filtro(p, ahora_utc)], ahora_utc)
+
+    if not cumplen:
+        return [], [], 0, []
+
+    # Siguiente multiplo de 3, con tope MAX_PARTIDOS
+    objetivo = -(-len(cumplen) // PARTIDOS_POR_COMBINADA) * PARTIDOS_POR_COMBINADA
+    objetivo = min(objetivo, MAX_PARTIDOS)
+
+    elegidos = cumplen[:objetivo]
+    faltan = objetivo - len(elegidos)
+    rellenos = resto[:faltan] if faltan > 0 else []
+    if len(elegidos) + len(rellenos) < objetivo:
+        # No alcanzan los partidos elegibles para completar: baja al multiplo de 3 anterior
+        total = len(elegidos) + len(rellenos)
+        recorte = total - total % PARTIDOS_POR_COMBINADA
+        todos = elegidos + rellenos
+        elegidos, rellenos = todos[:recorte], [p for p in todos[:recorte] if p in rellenos]
+        if recorte == 0:
+            return [], [], len(cumplen), []
+    else:
+        elegidos = elegidos + rellenos
+
+    # AL AZAR: se revuelven todos y se reparten de 3 en 3
+    revueltos = list(elegidos)
+    rng.shuffle(revueltos)
+    combinadas = [revueltos[i:i + PARTIDOS_POR_COMBINADA]
+                  for i in range(0, len(revueltos), PARTIDOS_POR_COMBINADA)]
+    ids_relleno = [p.get("fixture_id") for p in rellenos]
+    return combinadas, revueltos, len(cumplen), ids_relleno
+
+
+def elegir_destacados(partidos, ahora_utc=None, rng=None):
+    """Marca en los partidos (in place) a los elegidos y devuelve
+    (combinadas, elegidos, n_cumplen, ids_relleno)."""
+    for p in partidos:
+        p.pop("es_destacado", None)
+        p.pop("grupo_destacado", None)
+        p.pop("combinada_pick", None)
+
+    combinadas, elegidos, n_cumplen, ids_relleno = armar_combinadas(partidos, ahora_utc, rng)
+    for numero, grupo in enumerate(combinadas, start=1):
+        for p in grupo:
+            cuota = _cuota_pick(p)
+            p["es_destacado"] = True
+            p["grupo_destacado"] = numero
+            p["combinada_pick"] = {
+                "mercado": "doble_oportunidad" if _es_dc(p) else "gana_favorito",
+                "favorito": p.get("favorito"),
+                "p_exito": _p_exito(p),
+                "cuota_estimada": round(cuota, 2) if cuota else None,
+                "relleno": p.get("fixture_id") in ids_relleno,
+            }
+    return combinadas, elegidos, n_cumplen, ids_relleno
+
+
+def _linea_pick(indice, p, relleno=False):
+    emoji = EMOJI_TIPO_PRONOSTICO.get(p.get("tipo_pronostico"), EMOJI_TIPO_PRONOSTICO["favorito_directo"])
+    accion = "gana o empata" if _es_dc(p) else "gana"
+    cuota = _cuota_pick(p)
+    extra = f" · cuota ~{cuota:.2f}" if cuota else ""
+    if relleno:
+        extra += " · relleno"
+    return (f"{indice}. {emoji}{CORONA_FAVORITO} <b>{escapar_html(p['favorito'])}</b> {accion}\n"
+            f"    {escapar_html(p['local'])} vs {escapar_html(p['visitante'])} "
+            f"· {_hora_local(p.get('hora_inicio'))} · prob. {_p_exito(p) * 100:.0f}%{extra}")
+
+
+def _resumen_combinada(grupo):
+    prob = 1.0
+    cuota = 1.0
+    cuota_completa = True
+    for p in grupo:
+        prob *= _p_exito(p)
+        c = _cuota_pick(p)
+        if c:
+            cuota *= c
         else:
-            ratio_cuota = cuota_local / cuota_visitante
-        
-        # A mayor ratio, mas favorito es
-        score_cuota = min(ratio_cuota * 20, 40)
-        score += score_cuota
-    
-    #2. Poder de Match del favorito (40% del peso)
-    home_id = partido.get('home_id')
-    away_id = partido.get('away_id')
-    liga_slug = partido.get('liga_slug')
-    
-    if home_id and away_id:
-        try:
-            historial_local = obtener_historial_equipo(home_id, liga_slug)
-            historial_visitante = obtener_historial_equipo(away_id, liga_slug)
-            
-            poder_local, _, _ = _calcular_nivel_actual(historial_local, True, home_id)
-            poder_visitante, _, _ = _calcular_nivel_actual(historial_visitante, False, away_id)
-            
-            if poder_local is not None and poder_visitante is not None:
-                if partido.get("favorito_es_local"):
-                    poder_fav = poder_local
-                else:
-                    poder_fav = poder_visitante
-                
-                score_poder = (poder_fav / 10) * 40
-                score += score_poder
-        except Exception:
-            pass
-    
-    #3. Estilo de Juego favorable (20% del peso)
-    if liga_slug:
-        try:
-            datos_estilo_local = _obtener_datos_estilo(partido['local'], liga_slug)
-            datos_estilo_visitante = _obtener_datos_estilo(partido['visitante'], liga_slug)
-            
-            estilo_local, _ = _calcular_estilo_juego(datos_estilo_local)
-            estilo_visitante, _ = _calcular_estilo_juego(datos_estilo_visitante)
-            
-            if partido.get("favorito_es_local"):
-                estilo_fav = estilo_local
-            else:
-                estilo_fav = estilo_visitante
-            
-            # Ofensivo y Presión Alta son estilos favorables
-            if "Ofensivo" in str(estilo_fav) or "Presión" in str(estilo_fav):
-                score += 20
-            elif "Equilibrado" in str(estilo_fav):
-                score += 10
-        except Exception:
-            pass
-    
-    return score
-
-
-def elegir_destacados(partidos):
-    """Devuelve (grupos, elegidos) -- grupos es una lista de listas de
-    partidos, elegidos es la lista plana (para marcar en el JSON).
-    Selecciona los9 MEJORES partidos basados en probabilidad de exito."""
-    disponibles = [p for p in partidos if p.get("fixture_id")]
-    
-    # Calcular score de probabilidad para cada partido
-    partidos_con_score = []
-    for p in disponibles:
-        score = _calcular_probabilidad_exito(p)
-        partidos_con_score.append((p, score))
-    
-    # Ordenar por score (mayor a menor)
-    partidos_con_score.sort(key=lambda x: x[1], reverse=True)
-    
-    # Tomar los9 mejores (sin repetir)
-    elegidos = [p for p, score in partidos_con_score[:CANTIDAD_DESTACADOS]]
-    
-    # Dividir en3 grupos
-    grupos = [[] for _ in range(CANTIDAD_GRUPOS)]
-    for i, p in enumerate(elegidos):
-        grupo_idx = i % CANTIDAD_GRUPOS
-        p["es_destacado"] = True
-        p["grupo_destacado"] = grupo_idx + 1
-        grupos[grupo_idx].append(p)
-    
-    return grupos, elegidos
+            cuota_completa = False
+    texto = f"Prob. de que acierte la combinada: <b>{prob * 100:.0f}%</b>"
+    if cuota_completa:
+        texto += f" · Cuota total ~<b>{cuota:.2f}</b>"
+    return texto
 
 
 def enviar_destacados(forzar=False):
     if not forzar and ya_se_hizo("destacados"):
-        print("Los destacados de hoy ya se enviaron antes. Nada que hacer.")
+        print("Las combinadas de hoy ya se enviaron antes. Nada que hacer.")
         return
 
     if not ARCHIVO.exists():
@@ -174,43 +266,39 @@ def enviar_destacados(forzar=False):
     datos = json.loads(ARCHIVO.read_text(encoding="utf-8"))
     partidos = datos.get("partidos", [])
 
-    grupos, elegidos = elegir_destacados(partidos)
+    combinadas, elegidos, n_cumplen, ids_relleno = elegir_destacados(partidos)
 
-    if not elegidos:
+    if not combinadas:
         exito = enviar_mensaje_telegram(
-            "\U0001F3B2 Hoy no hay partidos con seguimiento en vivo disponible para destacar."
+            "\U0001F3B2 Hoy ningun partido cumple el filtro de probabilidad para armar combinadas "
+            f"(cumplen: {n_cumplen})."
         )
         if exito:
+            ARCHIVO.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
             marcar_hecho("destacados")
-        print("Destacados: 0 partidos disponibles hoy." if exito else "Fallo el envio de destacados.")
+        print("Combinadas: ningun partido cumple el filtro." if exito else "Fallo el envio de combinadas.")
         return
 
-    lineas = [f"\U0001F3B2 <b>Selección destacada de hoy</b>"]
-    
-    for idx, grupo in enumerate(grupos, start=1):
-        if not grupo:
-            continue
-        
-        # Separador visual
+    lineas = ["\U0001F3B2 <b>Combinadas de hoy</b>",
+              f"<i>{len(elegidos)} partidos repartidos al azar en {len(combinadas)} combinada(s) de "
+              f"{PARTIDOS_POR_COMBINADA}.</i>"]
+    for numero, grupo in enumerate(combinadas, start=1):
         lineas.append("\n" + "=" * 35)
-        lineas.append(f"<b>Grupo {idx}</b>")
+        lineas.append(f"<b>Combinada {numero}</b>")
         lineas.append("=" * 35)
-        
         for i, p in enumerate(grupo, start=1):
-            emoji_tipo = EMOJI_TIPO_PRONOSTICO.get(p.get("tipo_pronostico"), EMOJI_TIPO_PRONOSTICO["favorito_directo"])
-            corona_local = emoji_tipo + CORONA_FAVORITO if p.get("favorito_es_local") else ""
-            corona_visitante = emoji_tipo + CORONA_FAVORITO if not p.get("favorito_es_local") else ""
-            
-            titulo = f"{escapar_html(p['local'])}{corona_local} vs {escapar_html(p['visitante'])}{corona_visitante}"
-            lineas.append(f"{i}. {titulo}")
-        
-        lineas.append("=" * 35)
+            lineas.append(_linea_pick(i, p, relleno=p.get("fixture_id") in ids_relleno))
+        lineas.append(_resumen_combinada(grupo))
+    if ids_relleno:
+        lineas.append("\n<i>\"Relleno\": no cumplia el filtro, se agrego para completar el grupo de 3.</i>")
+    lineas.append("<i>Cuotas de doble oportunidad aproximadas (derivadas de las cuotas 1X2).</i>")
 
     exito = enviar_mensaje_telegram("\n".join(lineas))
     if exito:
         ARCHIVO.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
         marcar_hecho("destacados")
-    print(f"Destacados enviados: {len(elegidos)} partido(s) en {CANTIDAD_GRUPOS} grupos." if exito else "Fallo el envio de destacados.")
+    print(f"Combinadas enviadas: {len(combinadas)} combinada(s), {len(elegidos)} partido(s)."
+          if exito else "Fallo el envio de combinadas.")
 
 
 if __name__ == "__main__":
