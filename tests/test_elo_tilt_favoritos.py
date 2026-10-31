@@ -147,9 +147,9 @@ def test_partido_para_vigilar_default_sigue_siendo_google_sheets():
     assert partido["tipo_pronostico"] == "favorito_directo"
 
 
-def _entrada_elo():
+def _entrada_elo(favorito="DC LOCAL"):
     return {
-        "local": "Alpha FC", "visitante": "Beta United", "favorito": "LOCAL",
+        "local": "Alpha FC", "visitante": "Beta United", "favorito": favorito,
         "fila_hoja": "777", "fixture_id": "777",
         "confianza_texto": "**", "confianza_estrellas": 2,
         "cuota_local": None, "cuota_empate": None, "cuota_visitante": None,
@@ -196,6 +196,29 @@ def test_seleccionar_usa_elo_tilt_si_hoja_falla(monkeypatch, tmp_path):
     assert partido["fuente_favorito"] == "elo-tilt"
     assert partido["fixture_id"] == 777
     assert partido["favorito"] == "Alpha FC"
+
+
+def test_respaldo_elo_tilt_descarta_favoritos_directos(monkeypatch, tmp_path):
+    archivo = tmp_path / "partidos_hoy.json"
+
+    def hoja_falla(**kwargs):
+        raise RuntimeError("hoja caida")
+
+    def elo_ok(**kwargs):
+        # El respaldo no trae %: sus favoritos directos aciertan 56 % (los
+        # de la hoja, 70 %) y por eso ya no entran; las DC si.
+        return [_entrada_elo("LOCAL"), _entrada_elo("DC LOCAL")]
+
+    monkeypatch.setattr(S, "ARCHIVO_SALIDA", archivo)
+    monkeypatch.setattr(S, "fecha_local_hoy", lambda: "2026-10-04")
+    monkeypatch.setattr(S, "obtener_favoritos_google", hoja_falla)
+    monkeypatch.setattr(S, "obtener_favoritos_elo_tilt", elo_ok)
+    monkeypatch.setattr(S, "obtener_fixtures_por_fecha", lambda hoy: [_fixture_espn()])
+
+    S.seleccionar()
+    datos = json.loads(archivo.read_text(encoding="utf-8"))
+    assert [p["tipo_pronostico"] for p in datos["partidos"]] == ["doble_oportunidad"]
+    assert datos["partidos"][0]["fuente_favorito"] == "elo-tilt"
 
 
 def test_seleccionar_con_hoja_no_llama_elo_tilt(monkeypatch, tmp_path):

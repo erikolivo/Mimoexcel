@@ -23,8 +23,14 @@ ARCHIVO_SALIDA = DATA_DIR / "partidos_hoy.json"
 ARCHIVO_CACHE_ALIAS = DATA_DIR / "alias_equipos_cache.json"
 ARCHIVO_PENDIENTES = DATA_DIR / "pendientes_revision.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
-VERSION_SELECCION = 7
+VERSION_SELECCION = 8
 FUENTES_VALIDAS = {"Google Sheets", "elo-tilt"}
+
+# El respaldo elo-tilt (sin % ni cuotas) solo aporta las dobles
+# oportunidades: los favoritos directos de esa fuente aciertan 56 % contra
+# 70 % de la hoja (4.076 alertas archivadas). Poner False para recuperar el
+# comportamiento viejo (entran todos).
+RESTRINGIR_RESPALDO_ELO_TILT = True
 
 # Alias FIJADOS A MANO -- para casos que se quieren garantizar sin
 # depender de que el fuzzy match o TheSportsDB los resuelvan. La
@@ -217,13 +223,24 @@ def _buscar_fixture_por_id(entrada, fixtures):
 def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja, confianza_estrellas=0,
                            cuota_local=None, cuota_empate=None, cuota_visitante=None,
                            prioridad="ALTA", fuente="Google Sheets", info_prob=None,
-                           prioridad_hoja=None):
+                           prioridad_hoja=None, n_fotos=None,
+                           cuota_local_primera=None, cuota_visitante_primera=None):
     local, visitante = fixture["teams"]["home"], fixture["teams"]["away"]
     lado = _lado_favorito(favorito_hoja, local["name"], visitante["name"])
     if lado is None:
         return None
     favorito = local["name"] if lado == "local" else visitante["name"]
     no_favorito = visitante["name"] if lado == "local" else local["name"]
+    # Movimiento de la linea (CLV): 1/cuota_final - 1/cuota_primera del lado
+    # elegido. Positivo = la cuota bajo (el mercado se movio hacia el pick).
+    cuota_fav_final = cuota_local if lado == "local" else cuota_visitante
+    cuota_fav_primera = cuota_local_primera if lado == "local" else cuota_visitante_primera
+    clv = None
+    try:
+        if cuota_fav_final and cuota_fav_primera and cuota_fav_final > 1 and cuota_fav_primera > 1:
+            clv = round(1 / cuota_fav_final - 1 / cuota_fav_primera, 4)
+    except TypeError:
+        clv = None
     return {
         "partido": f"{local['name']} vs {visitante['name']}", "local": local["name"], "visitante": visitante["name"],
         "favorito": favorito, "no_favorito": no_favorito, "favorito_es_local": lado == "local",
@@ -235,6 +252,9 @@ def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja, confianza_estrellas
         "prioridad_hoja": prioridad_hoja,
         "p_gana_fav": info_prob["p_gana_fav"] if info_prob else None,
         "p_no_pierde_fav": info_prob["p_no_pierde_fav"] if info_prob else None,
+        "pf_hoja": info_prob["pf_hoja"] if info_prob else None,
+        "n_fotos_hoja": n_fotos,
+        "clv": clv,
         "fuente_favorito": fuente, "fila_fuente": fila_hoja,
         "hora_inicio": fixture["fixture"]["date"], "fixture_id": fixture["fixture"]["id"], "liga_slug": fixture.get("_liga_slug"),
         "liga_pais": fixture.get("league", {}).get("country", ""), "liga_nombre": fixture.get("league", {}).get("name", ""),
@@ -267,18 +287,30 @@ def seleccionar(forzar=False):
     if not favoritos:
         favoritos = obtener_favoritos_elo_tilt(hoy=datetime.date.fromisoformat(hoy))
         fuente = "elo-tilt"
-        print(f"elo-tilt (respaldo): {len(favoritos)} favorito(s) válido(s) para procesar.")
+        # El respaldo elo-tilt no trae % ni cuotas: sus favoritos directos
+        # aciertan 56 % (vs 70 % de la hoja) y antes entraban sin filtro.
+        # Solo se dejan pasar las dobles oportunidades (67 %), que es lo
+        # unico que el respaldo aporta sin degradar la calidad.
+        antes = len(favoritos)
+        favs_dc = [f for f in favoritos if probabilidad.es_doble_oportunidad(f.get("favorito"))]
+        if RESTRINGIR_RESPALDO_ELO_TILT:
+            favoritos = favs_dc
+        print(f"elo-tilt (respaldo): {len(favoritos)} favorito(s) para procesar "
+              f"({antes - len(favoritos)} descartado(s) por no ser doble oportunidad).")
     if not favoritos:
         print("[ERROR] Ninguna fuente devolvió favoritos para hoy (Google Sheets y elo-tilt).")
         return
     fixtures = obtener_fixtures_por_fecha(hoy)
     seleccionados, sin_fixture, favorito_invalido, vistos = [], 0, 0, set()
     descartados_prob = 0
+    seleccionados_dc = 0
     for entrada in favoritos:
         # Se filtra ANTES de buscar el fixture: ahorra consultas a ESPN
         # para los partidos que no se van a vigilar.
         lado = _lado_favorito(entrada["favorito"], entrada["local"], entrada["visitante"])
-        info_prob = probabilidad.evaluar(entrada.get("pct_local"), entrada.get("pct_visitante"), lado)
+        tipo_entrada = _tipo_pronostico(entrada["favorito"])
+        info_prob = probabilidad.evaluar(entrada.get("pct_local"), entrada.get("pct_visitante"),
+                                         lado, tipo_entrada)
         if info_prob is None:
             print(f"[AVISO] Fila {entrada['fila_hoja']}: sin % en la hoja, no se puede filtrar por probabilidad.")
         elif not info_prob["seguir"]:
@@ -300,6 +332,9 @@ def seleccionar(forzar=False):
             fuente=fuente,
             info_prob=info_prob,
             prioridad_hoja=entrada.get("prioridad"),
+            n_fotos=entrada.get("n_fotos"),
+            cuota_local_primera=entrada.get("cuota_local_primera"),
+            cuota_visitante_primera=entrada.get("cuota_visitante_primera"),
         )
         if partido is None:
             favorito_invalido += 1
@@ -308,6 +343,8 @@ def seleccionar(forzar=False):
         if partido["fixture_id"] not in vistos:
             seleccionados.append(partido)
             vistos.add(partido["fixture_id"])
+            if partido["tipo_pronostico"] == "doble_oportunidad":
+                seleccionados_dc += 1
     seleccionados.sort(key=lambda partido: partido["hora_inicio"])
 
     datos_previos = None
@@ -353,6 +390,9 @@ def seleccionar(forzar=False):
             previo["prioridad_hoja"] = nuevo.get("prioridad_hoja")
             previo["p_gana_fav"] = nuevo.get("p_gana_fav")
             previo["p_no_pierde_fav"] = nuevo.get("p_no_pierde_fav")
+            previo["pf_hoja"] = nuevo.get("pf_hoja")
+            previo["clv"] = nuevo.get("clv")
+            previo["n_fotos_hoja"] = nuevo.get("n_fotos_hoja")
             fusionados.append(previo)  # conserva historial si ya existia
         nuevos_en_revision = sum(1 for p in seleccionados if p["fixture_id"] not in previos_por_id)
         seleccionados = fusionados
@@ -361,7 +401,9 @@ def seleccionar(forzar=False):
     if nuevos_en_revision is not None:
         print(f"Revision de la noche: {len(seleccionados)} partido(s) en total, {nuevos_en_revision} nuevo(s) agregado(s), "
               f"el resto conserva su seguimiento en vivo ya acumulado.")
-    print(f"Guardado en {ARCHIVO_SALIDA}: {len(seleccionados)} partido(s) de {fuente}. Sin fixture: {sin_fixture}; favorito inválido: {favorito_invalido}; descartados por probabilidad: {descartados_prob}.")
+    print(f"Guardado en {ARCHIVO_SALIDA}: {len(seleccionados)} partido(s) de {fuente} "
+          f"({seleccionados_dc} doble oportunidad). Sin fixture: {sin_fixture}; "
+          f"favorito inválido: {favorito_invalido}; descartados por probabilidad: {descartados_prob}.")
 
 
 if __name__ == "__main__":

@@ -116,3 +116,58 @@ def test_partido_para_vigilar_sin_pct_deja_probabilidad_none():
     assert partido["p_gana_fav"] is None
     assert partido["p_no_pierde_fav"] is None
     assert partido["prioridad"] == "ALTA"
+
+
+def test_es_doble_oportunidad_variantes():
+    assert P.es_doble_oportunidad("DC LOCAL") is True
+    assert P.es_doble_oportunidad("dc visitante") is True
+    assert P.es_doble_oportunidad("doble_oportunidad") is True
+    assert P.es_doble_oportunidad("LOCAL") is False
+    assert P.es_doble_oportunidad(None) is False
+
+
+def test_doble_oportunidad_se_filtra_por_no_perder():
+    # 0.57 de victoria no llega al 0.65 del favorito directo, pero "no
+    # pierde" vale 0.790 y si pasa el umbral de la DC.
+    directo = P.evaluar("0.57", "0.25", "local", "LOCAL")
+    assert directo["seguir"] is False
+    assert directo["tipo_filtro"] == "gana"
+
+    dc = P.evaluar("0.57", "0.25", "local", "DC LOCAL")
+    assert dc["seguir"] is True
+    assert dc["tipo_filtro"] == "no_pierde"
+    assert dc["p_no_pierde_fav"] >= P.UMBRAL_DC_SEGUIMIENTO
+
+    # 0.52: no pierde 0.759 < 0.79 -> la DC tampoco entra.
+    assert P.evaluar("0.52", "0.25", "local", "DC LOCAL")["seguir"] is False
+
+
+def test_evaluar_sin_tipo_mantiene_el_comportamiento_viejo():
+    viejo = P.evaluar("0.80", "0.09", "local")
+    assert viejo["seguir"] is True
+    assert viejo["tipo_filtro"] == "gana"
+
+
+def test_partido_para_vigilar_guarda_clv_y_fotos():
+    partido = S._partido_para_vigilar(
+        FIXTURE, "LOCAL", 2, cuota_local=1.20, cuota_empate=6.5, cuota_visitante=12.0,
+        cuota_local_primera=1.25, cuota_visitante_primera=11.0, n_fotos=3,
+    )
+    # 1/1.20 - 1/1.25 = 0.0333: la cuota bajo, el mercado se movio al pick.
+    assert partido["clv"] == 0.0333
+    assert partido["n_fotos_hoja"] == 3
+
+
+def test_partido_para_vigilar_clv_none_sin_primera_cuota():
+    partido = S._partido_para_vigilar(FIXTURE, "LOCAL", 2, cuota_local=1.20)
+    assert partido["clv"] is None
+    assert partido["n_fotos_hoja"] is None
+
+
+def test_partido_para_vigilar_clv_del_lado_visitante():
+    partido = S._partido_para_vigilar(
+        FIXTURE, "VISITANTE", 2, cuota_local=1.25, cuota_visitante=3.00,
+        cuota_local_primera=1.20, cuota_visitante_primera=3.50,
+    )
+    # Lado visitante: 1/3.00 - 1/3.50 = 0.0476 (la cuota del pick bajo).
+    assert partido["clv"] == 0.0476
