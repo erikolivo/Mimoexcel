@@ -29,6 +29,7 @@ Qué SI cambio de forma segura (evidencia real de esta migracion):
 import json
 import datetime
 import traceback
+import urllib.parse
 from pathlib import Path
 
 from fetch_data import obtener_boxscore_en_vivo, obtener_estado_desde_scoreboard, obtener_historial_equipo
@@ -46,6 +47,10 @@ import momentum
 
 DATA_DIR = Path(__file__).parent / "data"
 ARCHIVO_PARTIDOS = DATA_DIR / "partidos_hoy.json"
+
+# Hora local de la hoja (Ecuador, UTC-5): la misma que usan
+# seleccionar_partidos, resumen y estado_diario.
+ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
 
 MINUTO_INICIO_CIERRE = 75
 MAXIMO_MINUTO_ALERTAS_NO_CIERRE = 75
@@ -959,6 +964,81 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
     return []
 
 
+SITIOS_BUSQUEDA = (
+    ("⚽ BeSoccer", "besoccer.com"),
+    ("📊 SofaScore", "sofascore.com"),
+    ("⚡ Flashscore", "flashscore.com"),
+    ("🎰 1xBet", "1xbet.com"),
+)
+
+
+def _limpiar_nombre_busqueda(nombre):
+    """Nombre de equipo listo para buscar: sin las marcas de la hoja
+    (✓/✗) ni comillas, con espacios simples."""
+    texto = str(nombre or "")
+    for marca in ("✓", "✗", "✔", "✘"):
+        texto = texto.replace(marca, " ")
+    for comilla in ('"', "“", "”"):
+        texto = texto.replace(comilla, " ")
+    return " ".join(texto.split())
+
+
+def _fecha_busqueda(partido):
+    """Fecha del partido en hora local de la hoja (UTC-5) como dd/mm/aaaa.
+
+    Se usa la fecha local y no la UTC porque las webs del partido muestran
+    la fecha de la competicion: un partido de las 02:00Z pertenece al dia
+    anterior en America y las busquedas con la fecha UTC no lo encontraban.
+    """
+    crudo = partido.get("kickoff_utc") or partido.get("hora_inicio") or ""
+    try:
+        momento = datetime.datetime.fromisoformat(str(crudo).replace("Z", "+00:00"))
+        if momento.tzinfo is None:
+            momento = momento.replace(tzinfo=datetime.timezone.utc)
+        return momento.astimezone(ZONA_HORARIA_LOCAL).strftime("%d/%m/%Y")
+    except (TypeError, ValueError):
+        return str(crudo)[:10]
+
+
+def _url_google(sitio, local, visitante, fecha):
+    """URL de Google con los equipos como frases entre comillas y la fecha.
+
+    Antes se pegaban las palabras con "+" y sin comillas: Google buscaba
+    palabras sueltas y devolvia partidos de otras temporadas (o nada).
+    quote_plus codifica &, #, %, / y acentos; sin eso un nombre como
+    "Cambrian & Clydach" cortaba la consulta en el "&".
+    """
+    partes = []
+    if sitio:
+        partes.append(f"site:{sitio}")
+    if local:
+        partes.append(f'"{local}"')
+    if visitante:
+        partes.append(f'"{visitante}"')
+    if fecha:
+        partes.append(fecha)
+    return "https://www.google.com/search?q=" + urllib.parse.quote_plus(" ".join(partes))
+
+
+def _teclado_busqueda(partido):
+    """Botones de la alerta: una busqueda por sitio y una general.
+
+    La general (sin site:) es el respaldo cuando el partido no esta
+    indexado en esas cuatro webs (ligas menores, juveniles, etc.).
+    """
+    local = _limpiar_nombre_busqueda(partido.get("local"))
+    visitante = _limpiar_nombre_busqueda(partido.get("visitante"))
+    fecha = _fecha_busqueda(partido)
+
+    botones = [
+        {"text": etiqueta, "url": _url_google(sitio, local, visitante, fecha)}
+        for etiqueta, sitio in SITIOS_BUSQUEDA
+    ]
+    filas = [botones[i:i + 2] for i in range(0, len(botones), 2)]
+    filas.append([{"text": "🔎 Buscar en Google", "url": _url_google(None, local, visitante, fecha)}])
+    return {"inline_keyboard": filas}
+
+
 def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z=None):
     """
     AMPLIADO a pedido explicito: antes solo mostraba tiros a puerta y
@@ -1092,20 +1172,7 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
             lineas.append(f"\U0001F4CA IDV: {round(datos_idv['idv'],1)} | OD:{round(datos_idv['od'],3)} MS:{round(datos_idv['ms'],3)} SD:{round(datos_idv['sd'],3)} TC:{round(datos_idv['tc'],3)} CF:{round(datos_idv['cf'],3)}")
             lineas.append(f"\U0001F4B0 Cuota fav: {datos_idv['cuota_fav']} | Posesion: {round(datos_idv['posesion_fav'])}% | Tiros: {datos_idv['tiros_fav']}-{datos_idv['tiros_riv']} | z={datos_idv['z']:.1f}")
 
-    fecha_partido = partido.get('hora_inicio', '')[:10] if partido.get('hora_inicio') else ''
-    fecha_exacta = fecha_partido if fecha_partido else ''
-    
-    local_search = partido['local'].replace(' ', '+')
-    visitante_search = partido['visitante'].replace(' ', '+')
-    
-    keyboard = [[
-        {"text": "⚽ BeSoccer", "url": f"https://www.google.com/search?q=site:besoccer.com+{local_search}+vs+{visitante_search}+{fecha_exacta}"},
-        {"text": "📊 SofaScore", "url": f"https://www.google.com/search?q=site:sofascore.com+{local_search}+vs+{visitante_search}+{fecha_exacta}"},
-    ],[
-        {"text": "⚡ Flashscore", "url": f"https://www.google.com/search?q=site:flashscore.com+{local_search}+vs+{visitante_search}+{fecha_exacta}"},
-        {"text": "🎰 1xBet", "url": f"https://www.google.com/search?q=site:1xbet.com+{local_search}+vs+{visitante_search}+{fecha_exacta}"},
-    ]]
-    reply_markup = {"inline_keyboard": keyboard}
+    reply_markup = _teclado_busqueda(partido)
 
     return "\n".join(lineas), reply_markup
 
