@@ -120,19 +120,6 @@ def _cuota_pick(partido):
     return 1.0 / (1.0 / c_fav + 1.0 / c_x)
 
 
-def _pasa_filtro(partido, ahora_utc):
-    if not partido.get("fixture_id"):
-        return False
-    inicio = _inicio_utc(partido)
-    if inicio is not None and inicio <= ahora_utc:
-        return False                      # ya empezo o termino
-    pf = partido.get("pf_hoja")
-    if pf is None or _p_exito(partido) is None:
-        return False
-    umbral = UMBRAL_DC_COMBINADA if _es_dc(partido) else UMBRAL_DIRECTO_COMBINADA
-    return pf >= umbral
-
-
 def _es_elegible(partido, ahora_utc):
     """Puede entrar a una combinada (aunque no cumpla el filtro de %)."""
     if not partido.get("fixture_id"):
