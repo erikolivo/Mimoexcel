@@ -1,0 +1,34 @@
+name: Informe semanal (lunes 6am)
+
+# Local (UTC-5): lunes 06:00. Resume los ultimos 7 dias archivados.
+on:
+  schedule:
+    - cron: "0 11 * * 1"   # 11:00 UTC = 06:00 local del lunes
+  workflow_dispatch:
+    inputs:
+      dias:
+        description: "Dias a resumir"
+        type: string
+        default: "7"
+
+permissions:
+  contents: read
+
+jobs:
+  informe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Enviar informe semanal
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python informe_semanal.py --dias "${{ github.event.inputs.dias || '7' }}"
