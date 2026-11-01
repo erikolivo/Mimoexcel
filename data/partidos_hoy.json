@@ -375,10 +375,104 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "33'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "3",
+            "saves": "2",
+            "possessionPct": "63.9",
+            "totalShots": "3",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "172",
+            "totalPasses": "200",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "4",
+            "totalTackles": "4",
+            "tacklePct": "1.0",
+            "effectiveClearance": "0",
+            "totalClearance": "4"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "1",
+            "saves": "1",
+            "possessionPct": "36.1",
+            "totalShots": "3",
+            "shotsOnTarget": "2",
+            "shotPct": "0.7",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "87",
+            "totalPasses": "117",
+            "passPct": "0.7",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "0",
+            "effectiveTackles": "1",
+            "totalTackles": "3",
+            "tacklePct": "0.3",
+            "effectiveClearance": "0",
+            "totalClearance": "5"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "33'",
+          "texto": "🔦 FAVORITO DOMINA\nMachida Zelvia Empate\nz: 1.6 | Tiros: 1.0-2.0\nPosesión: 64%\nCuota pre: 1.73 -> en vivo debería bajar",
+          "diferencia_goles": 0,
+          "id": "401877581-0",
+          "minuto_int": 33,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 7.527634240349332,
+          "nivel_local": 6.467967118441107,
+          "nivel_visitante": 5.193553702786767,
+          "color_local": "🟢",
+          "color_visitante": "🟡"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 6.467967118441107,
+          "color": "🟢",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 5.193553702786767,
+          "color": "🟡",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Amed SFK vs Eyupspor",
