@@ -611,6 +611,33 @@ def _en_ventana_horaria(partido):
     return -10 <= minutos_desde_inicio <= VENTANA_MAX_MINUTOS
 
 
+def _nivel_del_partido(partido):
+    """Nivel Actual (poder y color) de cada lado, cacheado en el partido.
+
+    Se guarda junto con cada alerta para poder medir despues que niveles
+    aciertan mas: hoy se calcula para el mensaje de Telegram y se pierde.
+    Nunca lanza: ante cualquier fallo deja los campos en None.
+    """
+    guardado = partido.get("nivel_actual")
+    if isinstance(guardado, dict) and "local" in guardado:
+        return guardado
+    contexto = {"local": None, "visitante": None}
+    try:
+        home_id, away_id = partido.get("home_id"), partido.get("away_id")
+        liga_slug = partido.get("liga_slug")
+        if home_id and away_id and liga_slug:
+            poder_local, color_local, n_local = _calcular_nivel_actual(
+                obtener_historial_equipo(home_id, liga_slug), True, home_id)
+            poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(
+                obtener_historial_equipo(away_id, liga_slug), False, away_id)
+            contexto["local"] = {"poder": poder_local, "color": color_local, "n": n_local}
+            contexto["visitante"] = {"poder": poder_visitante, "color": color_visitante, "n": n_visitante}
+    except Exception:
+        pass
+    partido["nivel_actual"] = contexto
+    return contexto
+
+
 def _registrar_alerta(partido, tipo, texto, minuto, diferencia_goles=None,
                       marcador=None, presion_lado=None, lado=None):
     """Registra el envio de una alerta con los campos del modelo R1
@@ -626,6 +653,9 @@ def _registrar_alerta(partido, tipo, texto, minuto, diferencia_goles=None,
         lado = lado_default
     minuto_int = momentum._minuto_a_entero(minuto)
     fid = partido.get("fixture_id", "?")
+    nivel = _nivel_del_partido(partido)
+    nivel_local = nivel.get("local") or {}
+    nivel_visitante = nivel.get("visitante") or {}
     alertas.append({
         "tipo": tipo, "minuto": minuto, "texto": texto, "diferencia_goles": diferencia_goles,
         "id": f"{fid}-{len(alertas)}",
@@ -637,6 +667,12 @@ def _registrar_alerta(partido, tipo, texto, minuto, diferencia_goles=None,
         "resolucion_notificada": True if criterio is None else False,
         "acierto": None,
         "presion_lado": presion_lado,
+        # Nivel Actual del partido en el momento de la alerta: permite
+        # segmentar el acierto por nivel/color en el informe semanal.
+        "nivel_local": nivel_local.get("poder"),
+        "nivel_visitante": nivel_visitante.get("poder"),
+        "color_local": nivel_local.get("color"),
+        "color_visitante": nivel_visitante.get("color"),
     })
 
 
@@ -1148,6 +1184,12 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         hist_visitante = ordenar_historial(historial_visitante)
         poder_local, color_local, n_local = _calcular_nivel_actual(historial_local, True, home_id)
         poder_visitante, color_visitante, n_visitante = _calcular_nivel_actual(historial_visitante, False, away_id)
+        # Se guarda en el partido para reutilizarlo al registrar cada alerta
+        # sin repetir las consultas de historial (ver _nivel_del_partido).
+        partido["nivel_actual"] = {
+            "local": {"poder": poder_local, "color": color_local, "n": n_local},
+            "visitante": {"poder": poder_visitante, "color": color_visitante, "n": n_visitante},
+        }
         lineas.append(f"\U0001F4C8 Nivel Actual:")
         if poder_local is not None or poder_visitante is not None:
             if poder_local is not None:
