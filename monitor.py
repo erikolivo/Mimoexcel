@@ -44,6 +44,7 @@ from resolucion_alertas import (
 )
 from resumen import _calcular_nivel_actual, ordenar_historial
 import momentum
+import datos_elo
 
 DATA_DIR = Path(__file__).parent / "data"
 ARCHIVO_PARTIDOS = DATA_DIR / "partidos_hoy.json"
@@ -1098,6 +1099,9 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
         ULTIMA linea de ese mismo bloque (ya no es una seccion aparte),
         (3) datos del enfrentamiento (equipos, marcador, favorito,
         cuota inicial) al final, como referencia.
+      - Se agrega el bloque de Elo, forma reciente y overperformance de
+        elo-tilt (datos_elo.py) despues del Nivel Actual, cuando el
+        partido esta cubierto por esa fuente.
       - El emoji de tipo de pronostico (🎯/🔀) ahora va PEGADO a la
         corona (ej. "🎯👑"), junto al nombre del equipo favorito -- ya
         no antecede a toda la linea del titulo.
@@ -1206,6 +1210,9 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z
                 lineas.append(f"{color_visitante} {escapar_html(partido['visitante'])}: {poder_visitante:.1f}{marca_n} (GF:{gf_visitante} GC:{gc_visitante})")
         else:
             lineas.append("No hay datos suficientes")
+
+    # Elo, forma y overperformance del modelo elo-tilt para cada equipo.
+    lineas.extend(datos_elo.lineas_elo(partido))
 
     if "value" in texto.lower() or "VALUE" in texto:
         historial = partido.get("historial_snapshots", [])
