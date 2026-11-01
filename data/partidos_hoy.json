@@ -55582,11 +55582,11 @@
           ],
           "lado": "rival",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "acierto",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "gol_rival",
+          "resolucion_notificada": true,
+          "acierto": true,
           "presion_lado": 19.78031792399499
         },
         {
@@ -55602,11 +55602,11 @@
           ],
           "lado": "rival",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "acierto",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "gol_rival",
+          "resolucion_notificada": true,
+          "acierto": true,
           "presion_lado": 21.47031792399499
         },
         {
@@ -55622,11 +55622,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "gol_rival",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 12.152141439276171
         }
       ],
@@ -55642,7 +55642,8 @@
         "p_exito": 0.664,
         "cuota_estimada": 1.45,
         "relleno": true
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Piratas vs Tapatío",
