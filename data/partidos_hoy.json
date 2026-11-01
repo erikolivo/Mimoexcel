@@ -15774,7 +15774,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Real Madrid",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.22,
+        "relleno": false
+      }
     },
     {
       "partido": "Arouca vs C.D. Nacional",
@@ -15809,7 +15818,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Arouca",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.22,
+        "relleno": false
+      }
     },
     {
       "partido": "IF Elfsborg vs Örgryte IS",
@@ -15879,7 +15897,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "BK Häcken",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.21,
+        "relleno": false
+      }
     },
     {
       "partido": "FC Groningen vs Sparta Rotterdam",
@@ -15914,7 +15941,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "FC Groningen",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.24,
+        "relleno": false
+      }
     },
     {
       "partido": "Sarpsborg FK vs Kristiansund BK",
@@ -16089,7 +16125,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Spartak Moscow",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.2,
+        "relleno": false
+      }
     },
     {
       "partido": "PAOK vs Asteras Tripoli",
@@ -16159,7 +16204,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Leones Negros",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.21,
+        "relleno": false
+      }
     },
     {
       "partido": "Royal Charleroi SC vs RAAL La Louvière",
@@ -16299,7 +16353,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Nacional",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.17,
+        "relleno": false
+      }
     },
     {
       "partido": "Atlético Grau vs Universitario",
@@ -16369,7 +16432,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Deportivo Cali",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.36,
+        "relleno": false
+      }
     },
     {
       "partido": "Novorizontino vs Operário PR",
@@ -16544,7 +16616,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Portland Timbers",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.25,
+        "relleno": false
+      }
     }
   ],
   "predicciones_activas": {},
