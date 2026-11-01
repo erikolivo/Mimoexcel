@@ -31011,7 +31011,8 @@
           "color": "🔴",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Eintracht Frankfurt vs Hamburg SV",
@@ -32317,6 +32318,73 @@
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "77'",
+          "goles_local": 3,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "6",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "6",
+            "saves": "1",
+            "possessionPct": "51.7",
+            "totalShots": "12",
+            "shotsOnTarget": "8",
+            "shotPct": "0.7",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "284",
+            "totalPasses": "358",
+            "passPct": "0.8",
+            "accurateCrosses": "4",
+            "totalCrosses": "17",
+            "crossPct": "0.2",
+            "totalLongBalls": "41",
+            "accurateLongBalls": "16",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "16",
+            "totalTackles": "18",
+            "tacklePct": "0.9",
+            "interceptions": "6",
+            "effectiveClearance": "16",
+            "totalClearance": "16"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "8",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "3",
+            "wonCorners": "3",
+            "saves": "6",
+            "possessionPct": "48.3",
+            "totalShots": "6",
+            "shotsOnTarget": "1",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "250",
+            "totalPasses": "332",
+            "passPct": "0.8",
+            "accurateCrosses": "3",
+            "totalCrosses": "16",
+            "crossPct": "0.2",
+            "totalLongBalls": "58",
+            "accurateLongBalls": "29",
+            "longballPct": "0.5",
+            "blockedShots": "3",
+            "effectiveTackles": "16",
+            "totalTackles": "23",
+            "tacklePct": "0.7",
+            "interceptions": "12",
+            "effectiveClearance": "24",
+            "totalClearance": "24"
+          },
+          "periodo": 2,
+          "estado_detalle": "In Progress"
         }
       ],
       "alertas_enviadas": [
@@ -33269,6 +33337,63 @@
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "61'",
+          "goles_local": 0,
+          "goles_visitante": 3,
+          "stats_local": {
+            "foulsCommitted": "10",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "4",
+            "saves": "3",
+            "possessionPct": "41",
+            "totalShots": "7",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "204",
+            "totalPasses": "255",
+            "passPct": "0.8",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "3",
+            "effectiveTackles": "10",
+            "totalTackles": "14",
+            "tacklePct": "0.7",
+            "effectiveClearance": "0",
+            "totalClearance": "25"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "10",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "5",
+            "saves": "0",
+            "possessionPct": "59",
+            "totalShots": "13",
+            "shotsOnTarget": "5",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "326",
+            "totalPasses": "376",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "3",
+            "effectiveTackles": "7",
+            "totalTackles": "10",
+            "tacklePct": "0.7",
+            "effectiveClearance": "0",
+            "totalClearance": "14"
+          },
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -34055,10 +34180,104 @@
           },
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "50'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "12",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "5",
+            "saves": "0",
+            "possessionPct": "53",
+            "totalShots": "6",
+            "shotsOnTarget": "3",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "232",
+            "totalPasses": "275",
+            "passPct": "0.8",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "2",
+            "effectiveTackles": "5",
+            "totalTackles": "6",
+            "tacklePct": "0.8",
+            "effectiveClearance": "0",
+            "totalClearance": "10"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "7",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "0",
+            "saves": "2",
+            "possessionPct": "47",
+            "totalShots": "4",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "206",
+            "totalPasses": "251",
+            "passPct": "0.8",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "10",
+            "totalTackles": "13",
+            "tacklePct": "0.8",
+            "effectiveClearance": "0",
+            "totalClearance": "21"
+          },
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "50'",
+          "texto": "🔦 FAVORITO DOMINA\nPAOK Empate\nz: 1.7 | Tiros: 3.0-1.0\nPosesión: 53%\nCuota pre: 1.30 -> en vivo debería bajar",
+          "diferencia_goles": 0,
+          "id": "401896734-0",
+          "minuto_int": 50,
+          "marcador_alerta": [
+            1,
+            1
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 6.233294177772332,
+          "nivel_local": 5.281758700001513,
+          "nivel_visitante": 4.16590843533928,
+          "color_local": "🟡",
+          "color_visitante": "🟡"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 5.281758700001513,
+          "color": "🟡",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 4.16590843533928,
+          "color": "🟡",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Leones Negros vs Tepatitlán FC",
@@ -34094,6 +34313,15 @@
       "historial_snapshots": [
         {
           "minuto": "1'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "6'",
           "goles_local": 0,
           "goles_visitante": 0,
           "stats_local": {},
