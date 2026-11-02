@@ -1,13 +1,6 @@
 [
   {
     "fecha": "2026-11-01",
-    "local": "Strindheim",
-    "visitante": "Ranheim II",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-01",
     "local": "Brann II",
     "visitante": "Gneist",
     "favorito": "LOCAL",
@@ -1387,16 +1380,23 @@
   },
   {
     "fecha": "2026-11-01",
-    "local": "Los Angeles FC",
-    "visitante": "Minnesota United FC",
-    "favorito": "DC LOCAL",
+    "local": "Managua",
+    "visitante": "UNAN Managua",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
     "fecha": "2026-11-01",
-    "local": "Managua",
-    "visitante": "UNAN Managua",
-    "favorito": "LOCAL",
+    "local": "Zamora FC B",
+    "visitante": "Deportivo Lara",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-01",
+    "local": "Comunicaciones",
+    "visitante": "Mixco",
+    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   }
 ]
