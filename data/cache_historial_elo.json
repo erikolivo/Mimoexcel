@@ -19184,5 +19184,102 @@
         "competicion": "arg.1"
       }
     ]
+  },
+  "131581|2026-11": {
+    "fecha_cache": "2026-11-02T01:26:53.448395",
+    "historial": []
+  },
+  "131581|2026-10": {
+    "fecha_cache": "2026-11-02T01:26:53.448395",
+    "historial": [
+      {
+        "id": "401842184",
+        "fecha": "2026-10-03",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "19964",
+        "competicion": "all"
+      },
+      {
+        "id": "401842197",
+        "fecha": "2026-10-10",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "22528",
+        "competicion": "all"
+      },
+      {
+        "id": "401842231",
+        "fecha": "2026-10-24",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131580",
+        "competicion": "usa.usl.l1"
+      }
+    ]
+  },
+  "131581|2026-09": {
+    "fecha_cache": "2026-11-02T01:26:53.448395",
+    "historial": []
+  },
+  "21821|2026-11": {
+    "fecha_cache": "2026-11-02T01:26:54.195231",
+    "historial": []
+  },
+  "21821|2026-10": {
+    "fecha_cache": "2026-11-02T01:26:54.195231",
+    "historial": [
+      {
+        "id": "401842174",
+        "fecha": "2026-10-03",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "17545",
+        "competicion": "all"
+      },
+      {
+        "id": "401842209",
+        "fecha": "2026-10-11",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "22130",
+        "competicion": "all"
+      },
+      {
+        "id": "401842217",
+        "fecha": "2026-10-17",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131582",
+        "competicion": "usa.usl.l1"
+      }
+    ]
+  },
+  "21821|2026-09": {
+    "fecha_cache": "2026-11-02T01:26:54.195231",
+    "historial": [
+      {
+        "id": "401842166",
+        "fecha": "2026-09-27",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "22524",
+        "competicion": "all"
+      }
+    ]
   }
 }
