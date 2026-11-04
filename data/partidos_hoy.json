@@ -6104,7 +6104,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Borussia Dortmund",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.24,
+        "relleno": false
+      }
     },
     {
       "partido": "RB Leipzig vs Manchester City",
@@ -6174,7 +6183,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Viking FK",
+        "p_exito": 0.723,
+        "cuota_estimada": 1.4,
+        "relleno": true
+      }
     },
     {
       "partido": "FC Porto vs Napoli",
@@ -6209,7 +6227,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "FC Porto",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.2,
+        "relleno": false
+      }
     },
     {
       "partido": "Nacional Potosí vs Oriente Petrolero",
@@ -6244,7 +6271,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Nacional Potosí",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.45,
+        "relleno": false
+      }
     },
     {
       "partido": "Flamengo vs Grêmio",
@@ -6279,7 +6315,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Flamengo",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.17,
+        "relleno": false
+      }
     },
     {
       "partido": "CD Estrella Roja vs FC Motagua",
@@ -6314,7 +6359,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "FC Motagua",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.18,
+        "relleno": false
+      }
     },
     {
       "partido": "Club Olimpia vs Deportivo Recoleta",
@@ -6349,7 +6403,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Club Olimpia",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.3,
+        "relleno": false
+      }
     },
     {
       "partido": "Luis Ángel Firpo vs Alianza FC",
@@ -6384,7 +6447,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Luis Ángel Firpo",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.17,
+        "relleno": false
+      }
     },
     {
       "partido": "Universitario vs Sport Boys",
@@ -6419,7 +6491,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Universitario",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.27,
+        "relleno": false
+      }
     }
   ],
   "predicciones_activas": {},
