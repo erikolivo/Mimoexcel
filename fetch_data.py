@@ -42,12 +42,12 @@ LO QUE SE PERDIO (documentado para que no se busque en vano):
   - xG -- no confirmado que ESPN lo exponga para futbol. El sistema ya
     caia al proxy por tiros cuando xg_disponible=False; sin cambios ahi.
 
-ADVERTENCIA: los slugs de LIGAS_ESPN que NO estan marcados como
-"confirmado" siguen el patron estandar de ESPN (pais.numero_division)
-pero no se probaron uno por uno. Si alguno falla, el log lo dice
-explicitamente (nunca falla en silencio) -- se corrige ese slug puntual
-sin tocar el resto. Es facil agregar mas ligas: solo se necesita el
-slug correcto en este diccionario.
+ADVERTENCIA: LIGAS_ESPN se audito por completo en noviembre 2026
+contra la hoja de favoritos: todos los slugs que quedan responden 200 y
+traen eventos reales. Si alguno empieza a fallar, el log lo dice
+explicitamente (nunca falla en silencio) -- se quita o corrige ese slug
+puntual sin tocar el resto. Es facil agregar mas ligas: solo se
+necesita el slug correcto en este diccionario.
 """
 
 import os
@@ -149,7 +149,7 @@ LIGAS_ESPN = {
     "tur.1": ("Turkey", "Super Lig"),
     "gre.1": ("Greece", "Super League 1"),
     "sco.1": ("Scotland", "Premiership"),
-    "bra.1": ("Brazil", "Campeonato Brasileiro"),           # confirmado en vivo
+    "bra.1": ("Brazil", "Serie A"),                            # ESPN: Brazilian Serie A
     "arg.1": ("Argentina", "Liga Profesional Argentina"),
     "mex.1": ("Mexico", "Liga MX"),                            # confirmado
     "usa.1": ("USA", "Major League Soccer"),                   # confirmado
@@ -164,15 +164,15 @@ LIGAS_ESPN = {
     "uefa.champions": ("World", "UEFA Champions League"),
     "uefa.europa": ("World", "UEFA Europa League"),
 
-    # AGREGADO agosto 2026, a pedido explicito -- confirmados con
-    # evidencia real: (1) tabla de slugs verificados de ESPN
-    # (github.com/pseudo-r/Public-ESPN-API) y (2) el log real de una
-    # corrida donde NO dieron error 400 (ver conversacion del
-    # 22-ago-2026). Los que SI daban 400 (Armenia, Azerbaiyan,
-    # Bulgaria, Georgia, Hungria, Islandia, Lituania, Montenegro,
-    # Serbia, Ucrania, Faroe, Kuwait, Letonia, Polonia, Portugal 2,
-    # Grecia 2, Belgica 2) se sacaron -- ESPN simplemente no tiene esas
-    # ligas en este endpoint, no es un problema de nombre de slug.
+    # AGREGADO agosto 2026 -- confirmados con evidencia real (tabla de
+    # slugs de ESPN y corridas sin error 400). ESPN NO tiene Ekstraklasa
+    # ni I Liga (Polonia), HNL (Croacia), Super Liga (Serbia), Premier
+    # League (Ucrania), Liga II (Rumania), Segunda Liga (Portugal), 3.
+    # Liga (Alemania), Challenger Pro League (Belgica), J2 League
+    # (Japon), K League 1/2 (Corea del Sur), Botola (Marruecos),
+    # Girabola (Angola), Ligue 1 (Argelia y Tunez), Premier League
+    # (Egipto y Kazajistan) ni First League (Bulgaria): esos slugs
+    # responden 400, no es un problema de nombre.
     "fin.1": ("Finland", "Veikkausliiga"),
     "mlt.1": ("Malta", "Premier League"),
     "rou.1": ("Romania", "Liga I"),
@@ -185,49 +185,32 @@ LIGAS_ESPN = {
     "par.1": ("Paraguay", "Primera Division"),
     "per.1": ("Peru", "Liga 1"),
     
-    # AGREGADO: Segundas divisiones y ligas adicionales
+    # AGREGADO: Segundas divisiones y ligas adicionales. En noviembre
+    # 2026 se corrigieron las etiquetas que no coincidian con ESPN:
+    # sco.2 es Championship, sco.3 es League One y den.2 es 1. Division.
     "eng.3": ("England", "League One"),
     "eng.4": ("England", "League Two"),
     "eng.5": ("England", "National League"),
     "ita.2": ("Italy", "Serie B"),
     "fra.2": ("France", "Ligue 2"),
     "ger.2": ("Germany", "2. Bundesliga"),
-    "ger.3": ("Germany", "3. Liga"),
-    "por.2": ("Portugal", "Segunda Liga"),
     "ned.2": ("Netherlands", "Eerste Divisie"),
-    "bel.2": ("Belgium", "Challenger Pro League"),
-    "sco.2": ("Scotland", "League One"),
-    "sco.3": ("Scotland", "League Two"),
+    "sco.2": ("Scotland", "Championship"),
+    "sco.3": ("Scotland", "League One"),
     "aut.2": ("Austria", "2. Liga"),
     "den.1": ("Denmark", "Superliga"),
-    "den.2": ("Denmark", "2. Division"),
+    "den.2": ("Denmark", "1. Division"),
     "swe.1": ("Sweden", "Allsvenskan"),
     "swe.2": ("Sweden", "Superettan"),
     "nor.1": ("Norway", "Eliteserien"),
     "nor.2": ("Norway", "1. Division"),
-    "srb.1": ("Serbia", "Super Liga"),
-    "cro.1": ("Croatia", "HNL"),
     "cze.1": ("Czech Republic", "Czech Liga"),
-    "bul.1": ("Bulgaria", "First League"),
-    "rou.2": ("Romania", "Liga II"),
-    "pol.1": ("Poland", "Ekstraklasa"),
-    "pol.2": ("Poland", "I Liga"),
     "sui.1": ("Switzerland", "Super League"),
     "sui.2": ("Switzerland", "Challenge League"),
-    "ukr.1": ("Ukraine", "Premier League"),
-    "kaz.1": ("Kazakhstan", "Premier League"),
     "jpn.1": ("Japan", "J1 League"),
-    "jpn.2": ("Japan", "J2 League"),
-    "kor.1": ("South Korea", "K League 1"),
-    "kor.2": ("South Korea", "K League 2"),
     "aus.1": ("Australia", "A-League"),
-    "egy.1": ("Egypt", "Premier League"),
     "rsa.1": ("South Africa", "Premier Soccer League"),
-    "alg.1": ("Algeria", "Ligue 1"),
-    "mar.1": ("Morocco", "Botola Pro"),
     "nga.1": ("Nigeria", "NPFL"),
-    "ang.1": ("Angola", "Girabola"),
-    "tun.1": ("Tunisia", "Ligue 1"),
 
     # AGREGADO septiembre 2026 -- copas verificadas EN VIVO contra ESPN
     # (scoreboard por slug devolvio 200 + eventos reales; eng.fa_cup da
@@ -238,6 +221,53 @@ LIGAS_ESPN = {
     "eng.fa": ("England", "FA Cup"),                       # verificado (slug responde)
     "sco.challenge": ("Scotland", "SPFL Challenge Cup"),   # verificado: 19 eventos
     "esp.copa_de_la_reina": ("Spain", "Copa de la Reina"), # verificado
+
+    # AGREGADO noviembre 2026 -- auditoria contra la hoja de favoritos.
+    # Solo se agregan slugs con evidencia real: partidos de la hoja
+    # (mismos equipos y fecha) encontrados en el scoreboard del slug, o
+    # la liga vista con eventos reales en el scoreboard global. Los
+    # slugs que responden 200 pero no traen eventos NO se agregan.
+    "arg.copa": ("Argentina", "Copa Argentina"),           # 3/4 fechas
+    "arg.2": ("Argentina", "Primera Nacional"),            # 4/4 fechas
+    "arg.3": ("Argentina", "Primera B Metropolitana"),     # 3/4 fechas
+    "aut.1": ("Austria", "Bundesliga"),                    # 2/4 fechas
+    "bol.1": ("Bolivia", "Primera Division"),              # 3/4 fechas
+    "bra.copa_do_brazil": ("Brazil", "Copa Do Brasil"),    # 3/4 fechas
+    "chi.copa_chi": ("Chile", "Copa Chile"),               # 2/4 fechas
+    "chn.1": ("China", "Super League"),                    # 1/4 fechas
+    "col.copa": ("Colombia", "Copa Colombia"),             # 2/4 fechas
+    "crc.1": ("Costa-Rica", "Primera Division"),           # 2/4 fechas
+    "slv.1": ("El-Salvador", "Primera Division"),          # 3/4 fechas
+    "ger.dfb_pokal": ("Germany", "DFB Pokal"),             # 1/2 fechas
+    "gua.1": ("Guatemala", "Liga Nacional"),               # 3/4 fechas
+    "hon.1": ("Honduras", "Liga Nacional"),                # equipos confirmados
+    "ind.1": ("India", "Indian Super League"),             # 2/3 fechas
+    "ind.2": ("India", "I-League"),                        # 1/1 fecha
+    "ita.coppa_italia": ("Italy", "Coppa Italia"),         # 4/4 fechas
+    "mex.2": ("Mexico", "Liga de Expansion MX"),           # 3/4 fechas
+    "ned.cup": ("Netherlands", "KNVB Beker"),              # 4/4 fechas
+    "por.taca.portugal": ("Portugal", "Taca de Portugal"), # 4/4 fechas
+    "sco.cis": ("Scotland", "League Cup"),                 # 5/5 fechas
+    "esp.copa_del_rey": ("Spain", "Copa del Rey"),         # 1/1 fecha
+    "usa.open": ("USA", "US Open Cup"),                    # 1/2 fechas
+    "usa.usl.1": ("USA", "USL Championship"),              # 2/4 fechas
+    "usa.usl.l1": ("USA", "USL League One"),               # 1/4 fechas
+    "ven.1": ("Venezuela", "Primera Division"),            # 3/4 fechas
+    "afc.champions": ("World", "AFC Champions League Elite"),          # 3/4
+    "afc.cup": ("World", "AFC Champions League Two"),                  # 1/4
+    "aff.championship": ("World", "ASEAN Championship"),               # 1/1
+    "caf.nations_qual": ("World", "Africa Cup of Nations - Qualification"),  # 4/4
+    "caf.champions": ("World", "CAF Champions League"),                # 3/4
+    "caf.confed": ("World", "CAF Confederation Cup"),                  # 2/3
+    "concacaf.nations.league": ("World", "CONCACAF Nations League"),   # 4/4
+    "concacaf.central.american.cup": ("World", "CONCACAF Central American Cup"),
+    "fifa.intercontinental_cup": ("World", "FIFA Intercontinental Cup"),
+    "global.gulf_cup": ("World", "Gulf Cup of Nations"),               # 4/4
+    "uefa.nations": ("World", "UEFA Nations League"),                  # 4/4
+    "uefa.euro_u21_qual": ("World", "UEFA U21 Championship - Qualification"),  # 3/4
+    "uefa.europa.conf": ("World", "UEFA Europa Conference League"),
+    "club.friendly": ("World", "Friendlies Clubs"),                    # 4/6
+    "fifa.friendly": ("World", "Friendlies"),                          # 4/6
 }
 
 

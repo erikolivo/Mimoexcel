@@ -22,7 +22,7 @@ MAPEO_LIGA_A_SPORT_KEY = {
     ("Belgium", "Jupiler Pro League"): "soccer_belgium_first_div",
     ("Turkey", "Super Lig"): "soccer_turkey_super_league",
     ("Greece", "Super League 1"): "soccer_greece_super_league",
-    ("Brazil", "Campeonato Brasileiro"): "soccer_brazil_campeonato",
+    ("Brazil", "Serie A"): "soccer_brazil_campeonato",
     ("Argentina", "Liga Profesional Argentina"): "soccer_argentina_primera_division",
     ("Mexico", "Liga MX"): "soccer_mexico_ligamx",
     ("USA", "Major League Soccer"): "soccer_usa_mls",
