@@ -1610,10 +1610,114 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "19'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "0",
+            "saves": "0",
+            "possessionPct": "44.8",
+            "totalShots": "0",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "60",
+            "totalPasses": "78",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "9",
+            "accurateLongBalls": "3",
+            "longballPct": "0.3",
+            "blockedShots": "0",
+            "effectiveTackles": "4",
+            "totalTackles": "5",
+            "tacklePct": "0.8",
+            "interceptions": "4",
+            "effectiveClearance": "3",
+            "totalClearance": "3"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "55.2",
+            "totalShots": "3",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "70",
+            "totalPasses": "92",
+            "passPct": "0.8",
+            "accurateCrosses": "1",
+            "totalCrosses": "4",
+            "crossPct": "0.3",
+            "totalLongBalls": "10",
+            "accurateLongBalls": "2",
+            "longballPct": "0.2",
+            "blockedShots": "0",
+            "effectiveTackles": "3",
+            "totalTackles": "3",
+            "tacklePct": "1.0",
+            "interceptions": "2",
+            "effectiveClearance": "2",
+            "totalClearance": "2"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "19'",
+          "texto": "🔦 FAVORITO DOMINA\nKashima Antlers Empate\nz: 1.8 | Tiros: 0.0-0.0\nPosesión: 55%\nCuota pre: 1.80 -> en vivo debería bajar",
+          "diferencia_goles": 0,
+          "id": "401912613-0",
+          "minuto_int": 19,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 1.1713212692010448,
+          "nivel_local": 5.812641086123799,
+          "nivel_visitante": 5.825042276082398,
+          "color_local": "🟡",
+          "color_visitante": "🟡"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 5.812641086123799,
+          "color": "🟡",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 5.825042276082398,
+          "color": "🟡",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Al-Rayyan SC vs Al-Nahda Club",

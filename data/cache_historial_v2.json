@@ -4462,5 +4462,310 @@
         "competicion": "uefa.champions"
       }
     ]
+  },
+  "v3|7138|all": {
+    "fecha_cache": "2026-11-04T12:34:46.654885",
+    "historial": [
+      {
+        "id": "757425",
+        "fecha": "2025-12-06",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "131290",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "756430",
+        "fecha": "2025-12-09",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "131373",
+        "competicion": "afc.champions"
+      },
+      {
+        "id": "757434",
+        "fecha": "2025-12-14",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "17757",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "759237",
+        "fecha": "2025-12-24",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "18172",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762652",
+        "fecha": "2026-01-04",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "18994",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762653",
+        "fecha": "2026-01-09",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "21960",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762665",
+        "fecha": "2026-01-18",
+        "goles_favor": 8,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "17755",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762683",
+        "fecha": "2026-02-01",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "7522",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "756446",
+        "fecha": "2026-02-10",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "21355",
+        "competicion": "afc.champions"
+      },
+      {
+        "id": "762695",
+        "fecha": "2026-02-14",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "8519",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "756458",
+        "fecha": "2026-02-17",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "977",
+        "competicion": "afc.champions"
+      },
+      {
+        "id": "762702",
+        "fecha": "2026-02-21",
+        "goles_favor": 6,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "18172",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "401861943",
+        "fecha": "2026-03-03",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "11143",
+        "competicion": "afc.champions"
+      },
+      {
+        "id": "762720",
+        "fecha": "2026-03-07",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "17759",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "401861952",
+        "fecha": "2026-03-10",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "11143",
+        "competicion": "afc.champions"
+      },
+      {
+        "id": "762725",
+        "fecha": "2026-03-14",
+        "goles_favor": 5,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "8524",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762739",
+        "fecha": "2026-03-22",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "15106",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762742",
+        "fecha": "2026-04-04",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "17760",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762684",
+        "fecha": "2026-04-12",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "131289",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "401868044",
+        "fecha": "2026-04-18",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "790",
+        "competicion": "afc.champions"
+      },
+      {
+        "id": "762754",
+        "fecha": "2026-04-26",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131290",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762710",
+        "fecha": "2026-04-29",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "20746",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762757",
+        "fecha": "2026-05-02",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "17757",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762766",
+        "fecha": "2026-05-10",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "21577",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "401913266",
+        "fecha": "2026-08-23",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131289",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401914110",
+        "fecha": "2026-08-28",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "133395",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401914210",
+        "fecha": "2026-08-29",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "17757",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401912658",
+        "fecha": "2026-09-15",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "17689",
+        "competicion": "afc.champions"
+      },
+      {
+        "id": "401912647",
+        "fecha": "2026-10-13",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "2052",
+        "competicion": "afc.champions"
+      },
+      {
+        "id": "401912632",
+        "fecha": "2026-10-28",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "7102",
+        "competicion": "afc.champions"
+      }
+    ]
   }
 }
