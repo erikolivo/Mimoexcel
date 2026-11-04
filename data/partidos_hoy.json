@@ -2079,6 +2079,73 @@
           },
           "periodo": 1,
           "estado_detalle": "Halftime"
+        },
+        {
+          "minuto": "45'+2'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "3",
+            "possessionPct": "43.4",
+            "totalShots": "2",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "182",
+            "totalPasses": "231",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "5",
+            "crossPct": "0.0",
+            "totalLongBalls": "28",
+            "accurateLongBalls": "10",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "6",
+            "totalTackles": "7",
+            "tacklePct": "0.9",
+            "interceptions": "14",
+            "effectiveClearance": "14",
+            "totalClearance": "14"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "2",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "3",
+            "saves": "0",
+            "possessionPct": "56.6",
+            "totalShots": "10",
+            "shotsOnTarget": "3",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "248",
+            "totalPasses": "298",
+            "passPct": "0.8",
+            "accurateCrosses": "3",
+            "totalCrosses": "14",
+            "crossPct": "0.2",
+            "totalLongBalls": "25",
+            "accurateLongBalls": "14",
+            "longballPct": "0.6",
+            "blockedShots": "1",
+            "effectiveTackles": "4",
+            "totalTackles": "4",
+            "tacklePct": "1.0",
+            "interceptions": "8",
+            "effectiveClearance": "7",
+            "totalClearance": "7"
+          },
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [
@@ -2659,5 +2726,7 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "predicciones_activas": {},
+  "historial_predicciones": {}
 }
