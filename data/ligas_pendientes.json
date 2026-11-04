@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-11-03",
+  "actualizado": "2026-11-04",
   "ligas": [
     {
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 3718,
+      "veces_visto": 3724,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
-      "ultimo_visto": "2026-11-03"
+      "ultimo_visto": "2026-11-04"
     },
     {
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 3350,
+      "veces_visto": 3373,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
-      "ultimo_visto": "2026-11-03"
+      "ultimo_visto": "2026-11-04"
     },
     {
       "pais": "",
@@ -41,10 +41,10 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 560,
+      "veces_visto": 562,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
-      "ultimo_visto": "2026-10-13"
+      "ultimo_visto": "2026-11-04"
     },
     {
       "pais": "",
@@ -777,6 +777,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Bolivia, Quarterfinals",
+      "liga_id": "23284",
+      "veces_visto": 45,
+      "ejemplo_partido": "Independiente Petrolero vs Aurora",
+      "fixture_id": "401929988",
+      "ultimo_visto": "2026-11-04"
+    },
+    {
+      "pais": "",
       "liga": "Copa Bolivia, Group B",
       "liga_id": "23284",
       "veces_visto": 44,
@@ -801,15 +810,6 @@
       "ejemplo_partido": "Kitchee vs Gangwon FC",
       "fixture_id": "401912805",
       "ultimo_visto": "2026-10-29"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Quarterfinals",
-      "liga_id": "23284",
-      "veces_visto": 43,
-      "ejemplo_partido": "Independiente Petrolero vs Aurora",
-      "fixture_id": "401929988",
-      "ultimo_visto": "2026-11-03"
     },
     {
       "pais": "",
@@ -1515,6 +1515,15 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 Women's World Cup, Semifinals",
+      "liga_id": "20865",
+      "veces_visto": 2,
+      "ejemplo_partido": "Japan U17 vs North Korea U17",
+      "fixture_id": "401916247",
+      "ultimo_visto": "2026-11-04"
+    },
+    {
+      "pais": "",
       "liga": "Campeones Cup, 2026 Campeones Cup",
       "liga_id": "18771",
       "veces_visto": 1,
@@ -1593,6 +1602,15 @@
       "ejemplo_partido": "Cartaginés vs Club Deportivo Olimpia",
       "fixture_id": "401922486",
       "ultimo_visto": "2026-10-21"
+    },
+    {
+      "pais": "",
+      "liga": "Coupe de France, Seventh Round",
+      "liga_id": "3952",
+      "veces_visto": 1,
+      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
+      "fixture_id": "401933098",
+      "ultimo_visto": "2026-11-04"
     }
   ]
 }
