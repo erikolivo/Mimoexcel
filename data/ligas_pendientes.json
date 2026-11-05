@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 3800,
+      "veces_visto": 3822,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-11-05"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 3585,
+      "veces_visto": 3590,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-11-05"
@@ -149,7 +149,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 311,
+      "veces_visto": 315,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-11-05"
@@ -462,21 +462,21 @@
     },
     {
       "pais": "",
+      "liga": "Copa Bolivia, Quarterfinals",
+      "liga_id": "23284",
+      "veces_visto": 64,
+      "ejemplo_partido": "Independiente Petrolero vs Aurora",
+      "fixture_id": "401929988",
+      "ultimo_visto": "2026-11-05"
+    },
+    {
+      "pais": "",
       "liga": "English FA Cup Qualifying, First Round Qualifying",
       "liga_id": "23480",
       "veces_visto": 63,
       "ejemplo_partido": "Pagham vs Ascot United",
       "fixture_id": "401917160",
       "ultimo_visto": "2026-09-15"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Quarterfinals",
-      "liga_id": "23284",
-      "veces_visto": 63,
-      "ejemplo_partido": "Independiente Petrolero vs Aurora",
-      "fixture_id": "401929988",
-      "ultimo_visto": "2026-11-05"
     },
     {
       "pais": "",
@@ -1533,6 +1533,24 @@
     },
     {
       "pais": "",
+      "liga": "SAFF Championship, Group A",
+      "liga_id": "18914",
+      "veces_visto": 2,
+      "ejemplo_partido": "Pakistan vs India",
+      "fixture_id": "401932722",
+      "ultimo_visto": "2026-11-05"
+    },
+    {
+      "pais": "",
+      "liga": "SAFF Championship, Group B",
+      "liga_id": "18914",
+      "veces_visto": 2,
+      "ejemplo_partido": "Bhutan vs Bangladesh",
+      "fixture_id": "401932723",
+      "ultimo_visto": "2026-11-05"
+    },
+    {
+      "pais": "",
       "liga": "Campeones Cup, 2026 Campeones Cup",
       "liga_id": "18771",
       "veces_visto": 1,
@@ -1620,24 +1638,6 @@
       "ejemplo_partido": "The Strongest vs Always Ready",
       "fixture_id": "401929984",
       "ultimo_visto": "2026-11-04"
-    },
-    {
-      "pais": "",
-      "liga": "SAFF Championship, Group A",
-      "liga_id": "18914",
-      "veces_visto": 1,
-      "ejemplo_partido": "Pakistan vs India",
-      "fixture_id": "401932722",
-      "ultimo_visto": "2026-11-05"
-    },
-    {
-      "pais": "",
-      "liga": "SAFF Championship, Group B",
-      "liga_id": "18914",
-      "veces_visto": 1,
-      "ejemplo_partido": "Bhutan vs Bangladesh",
-      "fixture_id": "401932723",
-      "ultimo_visto": "2026-11-05"
     }
   ]
 }
