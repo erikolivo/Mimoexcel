@@ -8392,11 +8392,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 12.482988070574319,
           "nivel_local": 4.158910197250689,
           "nivel_visitante": 3.64817593377584,
@@ -8416,7 +8416,8 @@
           "color": "🔴",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Red Star Belgrade vs Inter D'Escaldes",
@@ -10174,11 +10175,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "acierto",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "gol_fav",
+          "resolucion_notificada": true,
+          "acierto": true,
           "presion_lado": 7.2866129611335655,
           "nivel_local": 5.043277207339662,
           "nivel_visitante": 3.8559928330811033,
@@ -10198,7 +10199,8 @@
           "color": "🔴",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Lincoln Red Imps vs Hajduk Split",
@@ -11884,7 +11886,8 @@
           "color": "🟡",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "AC Milan vs Ferencvaros",
@@ -13431,11 +13434,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 4.18400401881416,
           "nivel_local": 5.7510045114823525,
           "nivel_visitante": 6.863114965623646,
@@ -13455,7 +13458,8 @@
           "color": "🟢",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Aldosivi vs River Plate",
@@ -14828,6 +14832,73 @@
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "87'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "15",
+            "yellowCards": "5",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "1",
+            "saves": "7",
+            "possessionPct": "33.3",
+            "totalShots": "2",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "146",
+            "totalPasses": "219",
+            "passPct": "0.7",
+            "accurateCrosses": "1",
+            "totalCrosses": "7",
+            "crossPct": "0.1",
+            "totalLongBalls": "43",
+            "accurateLongBalls": "18",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "8",
+            "totalTackles": "23",
+            "tacklePct": "0.3",
+            "interceptions": "15",
+            "effectiveClearance": "33",
+            "totalClearance": "33"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "3",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "8",
+            "saves": "0",
+            "possessionPct": "66.7",
+            "totalShots": "22",
+            "shotsOnTarget": "8",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "1",
+            "accuratePasses": "363",
+            "totalPasses": "439",
+            "passPct": "0.8",
+            "accurateCrosses": "4",
+            "totalCrosses": "21",
+            "crossPct": "0.2",
+            "totalLongBalls": "54",
+            "accurateLongBalls": "29",
+            "longballPct": "0.5",
+            "blockedShots": "7",
+            "effectiveTackles": "6",
+            "totalTackles": "11",
+            "tacklePct": "0.5",
+            "interceptions": "10",
+            "effectiveClearance": "7",
+            "totalClearance": "7"
+          },
+          "periodo": 2,
+          "estado_detalle": "In Progress"
         }
       ],
       "alertas_enviadas": [
