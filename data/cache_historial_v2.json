@@ -4767,5 +4767,3075 @@
         "competicion": "afc.champions"
       }
     ]
+  },
+  "v3|8896|all": {
+    "fecha_cache": "2026-11-05T11:31:09.124522",
+    "historial": [
+      {
+        "id": "401925437",
+        "fecha": "2026-10-11",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "18002",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401925431",
+        "fecha": "2026-10-18",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "8897",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401925426",
+        "fecha": "2026-10-25",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "18894",
+        "competicion": "ind.1"
+      }
+    ]
+  },
+  "v3|8519|all": {
+    "fecha_cache": "2026-11-05T11:31:09.316919",
+    "historial": [
+      {
+        "id": "757379",
+        "fecha": "2025-10-18",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "131289",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "756507",
+        "fecha": "2025-10-23",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20980",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "757389",
+        "fecha": "2025-10-26",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "18172",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "757398",
+        "fecha": "2025-11-02",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "8524",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "756527",
+        "fecha": "2025-11-06",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20980",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "757403",
+        "fecha": "2025-11-09",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "20746",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "757410",
+        "fecha": "2025-11-22",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "17760",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "756540",
+        "fecha": "2025-11-27",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "9693",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "757429",
+        "fecha": "2025-12-07",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "17759",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "756550",
+        "fecha": "2025-12-11",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "7998",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "757436",
+        "fecha": "2025-12-14",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "15106",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "757421",
+        "fecha": "2025-12-24",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "131290",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762654",
+        "fecha": "2026-01-10",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "21577",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762668",
+        "fecha": "2026-01-18",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "7522",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762674",
+        "fecha": "2026-01-25",
+        "goles_favor": 4,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "21960",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762676",
+        "fecha": "2026-01-31",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "17755",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762695",
+        "fecha": "2026-02-14",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "7138",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762706",
+        "fecha": "2026-02-22",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131289",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762713",
+        "fecha": "2026-03-01",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "18172",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762723",
+        "fecha": "2026-03-08",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "8524",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762727",
+        "fecha": "2026-03-14",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "20746",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762737",
+        "fecha": "2026-03-22",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "17760",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762741",
+        "fecha": "2026-04-04",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131290",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762691",
+        "fecha": "2026-04-19",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "17757",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762750",
+        "fecha": "2026-04-25",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "17759",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762756",
+        "fecha": "2026-05-01",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "15106",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "762765",
+        "fecha": "2026-05-10",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "18994",
+        "competicion": "tha.1"
+      },
+      {
+        "id": "401912809",
+        "fecha": "2026-09-17",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "8040",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "401912791",
+        "fecha": "2026-10-15",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "5321",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "401912774",
+        "fecha": "2026-10-29",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131377",
+        "competicion": "afc.cup"
+      }
+    ]
+  },
+  "v3|131377|all": {
+    "fecha_cache": "2026-11-05T11:31:09.476441",
+    "historial": [
+      {
+        "id": "756474",
+        "fecha": "2025-09-18",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "19340",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "756494",
+        "fecha": "2025-10-02",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "131375",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "756506",
+        "fecha": "2025-10-23",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "2052",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "756528",
+        "fecha": "2025-11-06",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2052",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "756538",
+        "fecha": "2025-11-27",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "19340",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "756548",
+        "fecha": "2025-12-11",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "131375",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "401912808",
+        "fecha": "2026-09-17",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "5321",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "401912793",
+        "fecha": "2026-10-15",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "8040",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "401912774",
+        "fecha": "2026-10-29",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "8519",
+        "competicion": "afc.cup"
+      }
+    ]
+  },
+  "v3|133293|all": {
+    "fecha_cache": "2026-11-05T11:31:09.634848",
+    "historial": [
+      {
+        "id": "401912807",
+        "fecha": "2026-09-17",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "22167",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "401912790",
+        "fecha": "2026-10-15",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "977",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "401912776",
+        "fecha": "2026-10-29",
+        "goles_favor": 5,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "7998",
+        "competicion": "afc.cup"
+      }
+    ]
+  },
+  "v3|7998|all": {
+    "fecha_cache": "2026-11-05T11:31:09.806453",
+    "historial": [
+      {
+        "id": "754442",
+        "fecha": "2025-10-19",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "7939",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "756508",
+        "fecha": "2025-10-23",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "9693",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "754445",
+        "fecha": "2025-10-27",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "17736",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "756526",
+        "fecha": "2025-11-06",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "9693",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "756543",
+        "fecha": "2025-11-27",
+        "goles_favor": 5,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20980",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "756550",
+        "fecha": "2025-12-11",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "8519",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "754451",
+        "fecha": "2026-01-16",
+        "goles_favor": 7,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "8039",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754455",
+        "fecha": "2026-01-23",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "7938",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754460",
+        "fecha": "2026-01-31",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20682",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754464",
+        "fecha": "2026-02-07",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "7939",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "401845419",
+        "fecha": "2026-02-11",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131375",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "754468",
+        "fecha": "2026-02-14",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "8011",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "401845428",
+        "fecha": "2026-02-18",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "131375",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "754473",
+        "fecha": "2026-02-22",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "8040",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754476",
+        "fecha": "2026-02-27",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "17736",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "401861871",
+        "fecha": "2026-03-05",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "7522",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "754480",
+        "fecha": "2026-03-08",
+        "goles_favor": 5,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "8039",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "401861873",
+        "fecha": "2026-03-12",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "7522",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "754486",
+        "fecha": "2026-03-16",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20682",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754487",
+        "fecha": "2026-04-04",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "8011",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754492",
+        "fecha": "2026-04-11",
+        "goles_favor": 4,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "7938",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754495",
+        "fecha": "2026-04-17",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "7939",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754499",
+        "fecha": "2026-04-24",
+        "goles_favor": 8,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "8039",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754434",
+        "fecha": "2026-04-30",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "8011",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754503",
+        "fecha": "2026-05-03",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "8040",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754509",
+        "fecha": "2026-05-10",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "17736",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "754449",
+        "fecha": "2026-05-17",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "8040",
+        "competicion": "sgp.1"
+      },
+      {
+        "id": "401912806",
+        "fecha": "2026-09-17",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "977",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "401912789",
+        "fecha": "2026-10-15",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "22167",
+        "competicion": "afc.cup"
+      },
+      {
+        "id": "401912776",
+        "fecha": "2026-10-29",
+        "goles_favor": 1,
+        "goles_contra": 5,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "133293",
+        "competicion": "afc.cup"
+      }
+    ]
+  },
+  "v3|17998|all": {
+    "fecha_cache": "2026-11-05T11:31:10.033354",
+    "historial": [
+      {
+        "id": "401860462",
+        "fecha": "2026-02-24",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "22069",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401860467",
+        "fecha": "2026-03-01",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "18000",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401860470",
+        "fecha": "2026-03-06",
+        "goles_favor": 1,
+        "goles_contra": 5,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "20774",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401860480",
+        "fecha": "2026-03-20",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "18004",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401860489",
+        "fecha": "2026-04-05",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "18002",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401860492",
+        "fecha": "2026-04-10",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "18003",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401860499",
+        "fecha": "2026-04-17",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "20842",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401860505",
+        "fecha": "2026-04-23",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "17997",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401860511",
+        "fecha": "2026-04-28",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "8897",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401860516",
+        "fecha": "2026-05-04",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "18851",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401860527",
+        "fecha": "2026-05-08",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131703",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401859974",
+        "fecha": "2026-05-16",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "18894",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401861204",
+        "fecha": "2026-05-21",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "18850",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401925435",
+        "fecha": "2026-10-14",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "18894",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401925433",
+        "fecha": "2026-10-17",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "22069",
+        "competicion": "ind.1"
+      },
+      {
+        "id": "401925427",
+        "fecha": "2026-10-24",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "18004",
+        "competicion": "ind.1"
+      }
+    ]
+  },
+  "v3|2528|all": {
+    "fecha_cache": "2026-11-05T11:31:10.488119",
+    "historial": [
+      {
+        "id": "740467",
+        "fecha": "2025-07-08",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "500",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "740481",
+        "fecha": "2025-07-15",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "500",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "753554",
+        "fecha": "2025-07-22",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "8169",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "753555",
+        "fecha": "2025-07-29",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "8169",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "754706",
+        "fecha": "2025-08-06",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "521",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "754713",
+        "fecha": "2025-08-12",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "521",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "756219",
+        "fecha": "2025-08-20",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "256",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "756221",
+        "fecha": "2025-08-26",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "256",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "757670",
+        "fecha": "2025-09-18",
+        "goles_favor": 1,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2250",
+        "competicion": "uefa.champions"
+      },
+      {
+        "id": "757671",
+        "fecha": "2025-09-30",
+        "goles_favor": 0,
+        "goles_contra": 5,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "86",
+        "competicion": "uefa.champions"
+      },
+      {
+        "id": "757689",
+        "fecha": "2025-10-21",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "22281",
+        "competicion": "uefa.champions"
+      },
+      {
+        "id": "757722",
+        "fecha": "2025-11-05",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "110",
+        "competicion": "uefa.champions"
+      },
+      {
+        "id": "757735",
+        "fecha": "2025-11-26",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "909",
+        "competicion": "uefa.champions"
+      },
+      {
+        "id": "757743",
+        "fecha": "2025-12-09",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "435",
+        "competicion": "uefa.champions"
+      },
+      {
+        "id": "757761",
+        "fecha": "2026-01-20",
+        "goles_favor": 1,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "570",
+        "competicion": "uefa.champions"
+      },
+      {
+        "id": "757780",
+        "fecha": "2026-01-28",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "359",
+        "competicion": "uefa.champions"
+      },
+      {
+        "id": "401877824",
+        "fecha": "2026-07-08",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "8281",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401877812",
+        "fecha": "2026-07-15",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "8281",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401891884",
+        "fecha": "2026-07-22",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "617",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401891862",
+        "fecha": "2026-07-29",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "617",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401902701",
+        "fecha": "2026-08-04",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "490",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401902671",
+        "fecha": "2026-08-11",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "490",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401910972",
+        "fecha": "2026-08-20",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "441",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401910975",
+        "fecha": "2026-08-27",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "441",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401915747",
+        "fecha": "2026-10-15",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "19246",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401915846",
+        "fecha": "2026-10-22",
+        "goles_favor": 1,
+        "goles_contra": 5,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "443",
+        "competicion": "uefa.europa.conf"
+      }
+    ]
+  },
+  "v3|2290|all": {
+    "fecha_cache": "2026-11-05T11:31:10.767726",
+    "historial": [
+      {
+        "id": "753127",
+        "fecha": "2025-07-22",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "17856",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "753134",
+        "fecha": "2025-07-29",
+        "goles_favor": 5,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "17856",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "754703",
+        "fecha": "2025-08-06",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "2990",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "754710",
+        "fecha": "2025-08-12",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "2990",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "756216",
+        "fecha": "2025-08-19",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "22281",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "756222",
+        "fecha": "2025-08-26",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "22281",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "757799",
+        "fecha": "2025-09-24",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "256",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757828",
+        "fecha": "2025-10-02",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "437",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757835",
+        "fecha": "2025-10-23",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2994",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757856",
+        "fecha": "2025-11-06",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "166",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757881",
+        "fecha": "2025-11-27",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "484",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757889",
+        "fecha": "2025-12-11",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "3746",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401845336",
+        "fecha": "2026-01-15",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2790",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "757907",
+        "fecha": "2026-01-22",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "2720",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757936",
+        "fecha": "2026-01-29",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "85",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401858775",
+        "fecha": "2026-02-19",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "166",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401858783",
+        "fecha": "2026-02-26",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "166",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401891687",
+        "fecha": "2026-07-21",
+        "goles_favor": 4,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20039",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401891667",
+        "fecha": "2026-07-29",
+        "goles_favor": 5,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20039",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401902702",
+        "fecha": "2026-08-04",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "13083",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401902670",
+        "fecha": "2026-08-11",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "13083",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401909222",
+        "fecha": "2026-08-20",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "11706",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401909221",
+        "fecha": "2026-08-27",
+        "goles_favor": 1,
+        "goles_contra": 5,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "11706",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401915748",
+        "fecha": "2026-10-15",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "7672",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401915843",
+        "fecha": "2026-10-22",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "909",
+        "competicion": "uefa.europa.conf"
+      }
+    ]
+  },
+  "v3|20703|all": {
+    "fecha_cache": "2026-11-05T11:31:10.941318",
+    "historial": [
+      {
+        "id": "740472",
+        "fecha": "2025-07-09",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "484",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "740482",
+        "fecha": "2025-07-15",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "484",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "753915",
+        "fecha": "2025-07-23",
+        "goles_favor": 2,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "500",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "753916",
+        "fecha": "2025-07-29",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "500",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401877823",
+        "fecha": "2026-07-07",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "17856",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401877811",
+        "fecha": "2026-07-14",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "17856",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401902951",
+        "fecha": "2026-08-06",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "12146",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401902955",
+        "fecha": "2026-08-13",
+        "goles_favor": 4,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "12146",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401910956",
+        "fecha": "2026-08-20",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "19243",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401910955",
+        "fecha": "2026-08-27",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "19243",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401924963",
+        "fecha": "2026-10-03",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "7719",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401915857",
+        "fecha": "2026-10-15",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "20301",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401915839",
+        "fecha": "2026-10-22",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "8089",
+        "competicion": "uefa.europa.conf"
+      }
+    ]
+  },
+  "v3|17856|all": {
+    "fecha_cache": "2026-11-05T11:31:11.656453",
+    "historial": [
+      {
+        "id": "740463",
+        "fecha": "2025-07-08",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "13238",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "740487",
+        "fecha": "2025-07-15",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "13238",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "753127",
+        "fecha": "2025-07-22",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "2290",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "753134",
+        "fecha": "2025-07-29",
+        "goles_favor": 1,
+        "goles_contra": 5,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2290",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "755122",
+        "fecha": "2025-08-07",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "20712",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "755133",
+        "fecha": "2025-08-14",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "20712",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "756278",
+        "fecha": "2025-08-21",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "2994",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "756282",
+        "fecha": "2025-08-28",
+        "goles_favor": 1,
+        "goles_contra": 5,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2994",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "757969",
+        "fecha": "2025-10-02",
+        "goles_favor": 0,
+        "goles_contra": 5,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "5239",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "757999",
+        "fecha": "2025-10-23",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2990",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "758017",
+        "fecha": "2025-11-06",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "2988",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "758020",
+        "fecha": "2025-11-27",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "7858",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "758046",
+        "fecha": "2025-12-11",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "609",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "758063",
+        "fecha": "2025-12-18",
+        "goles_favor": 1,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "555",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401877823",
+        "fecha": "2026-07-07",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20703",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401877811",
+        "fecha": "2026-07-14",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "20703",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401891564",
+        "fecha": "2026-07-21",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "20301",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401891562",
+        "fecha": "2026-07-28",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "20301",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401902667",
+        "fecha": "2026-08-06",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "617",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401902665",
+        "fecha": "2026-08-13",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "617",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401910970",
+        "fecha": "2026-08-20",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "20039",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401910965",
+        "fecha": "2026-08-27",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20039",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401915847",
+        "fecha": "2026-10-15",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "620",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401915833",
+        "fecha": "2026-10-22",
+        "goles_favor": 1,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "152",
+        "competicion": "uefa.europa.conf"
+      }
+    ]
+  },
+  "v3|489|all": {
+    "fecha_cache": "2026-11-05T11:31:11.833587",
+    "historial": [
+      {
+        "id": "741899",
+        "fecha": "2025-07-23",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "18754",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "741900",
+        "fecha": "2025-07-31",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "18754",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "755201",
+        "fecha": "2025-08-07",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "515",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "755208",
+        "fecha": "2025-08-14",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "515",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401878080",
+        "fecha": "2026-07-09",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2491",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401878076",
+        "fecha": "2026-07-16",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2491",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401896235",
+        "fecha": "2026-07-23",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "22281",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401896230",
+        "fecha": "2026-07-30",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "22281",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401903139",
+        "fecha": "2026-08-06",
+        "goles_favor": 5,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "523",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401903119",
+        "fecha": "2026-08-13",
+        "goles_favor": 4,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "523",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401909634",
+        "fecha": "2026-08-20",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "21005",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401909633",
+        "fecha": "2026-08-27",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "21005",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401915861",
+        "fecha": "2026-10-15",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "139",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401915834",
+        "fecha": "2026-10-22",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "3024",
+        "competicion": "uefa.europa.conf"
+      }
+    ]
+  },
+  "v3|622|all": {
+    "fecha_cache": "2026-11-05T11:31:12.065442",
+    "historial": [
+      {
+        "id": "753124",
+        "fecha": "2025-07-22",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20712",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "753139",
+        "fecha": "2025-07-30",
+        "goles_favor": 4,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20712",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "755100",
+        "fecha": "2025-08-06",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "13018",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "755102",
+        "fecha": "2025-08-12",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "13018",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "756215",
+        "fecha": "2025-08-19",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "10414",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "756224",
+        "fecha": "2025-08-27",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "10414",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "757812",
+        "fecha": "2025-09-25",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "11706",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757829",
+        "fecha": "2025-10-02",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "938",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757839",
+        "fecha": "2025-10-23",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "2790",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757864",
+        "fecha": "2025-11-06",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "13018",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757871",
+        "fecha": "2025-11-27",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "436",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757893",
+        "fecha": "2025-12-11",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "257",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757917",
+        "fecha": "2026-01-22",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "443",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "757930",
+        "fecha": "2026-01-29",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "393",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401858774",
+        "fecha": "2026-02-19",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "13018",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401858782",
+        "fecha": "2026-02-26",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "13018",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401862755",
+        "fecha": "2026-03-12",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2994",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401862758",
+        "fecha": "2026-03-18",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2994",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401878078",
+        "fecha": "2026-07-09",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "7825",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401878074",
+        "fecha": "2026-07-16",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "7825",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401896231",
+        "fecha": "2026-07-23",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "152",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401892169",
+        "fecha": "2026-07-30",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "152",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401902943",
+        "fecha": "2026-08-05",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "8180",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401900356",
+        "fecha": "2026-08-08",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "86",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401902940",
+        "fecha": "2026-08-13",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "8180",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401909832",
+        "fecha": "2026-08-20",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "997",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401909831",
+        "fecha": "2026-08-27",
+        "goles_favor": 4,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "997",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401915581",
+        "fecha": "2026-09-17",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "256",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401915564",
+        "fecha": "2026-10-15",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "11706",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401915558",
+        "fecha": "2026-10-22",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "21615",
+        "competicion": "uefa.europa"
+      }
+    ]
+  },
+  "v3|20025|all": {
+    "fecha_cache": "2026-11-05T11:31:12.414147",
+    "historial": [
+      {
+        "id": "740471",
+        "fecha": "2025-07-08",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "2720",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "740478",
+        "fecha": "2025-07-15",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2720",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "753899",
+        "fecha": "2025-07-23",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2540",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "753900",
+        "fecha": "2025-07-29",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "2540",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401877825",
+        "fecha": "2026-07-08",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "12146",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401877813",
+        "fecha": "2026-07-14",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "12146",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401891563",
+        "fecha": "2026-07-21",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "521",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401891561",
+        "fecha": "2026-07-29",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "521",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401902704",
+        "fecha": "2026-08-04",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "20039",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401902679",
+        "fecha": "2026-08-11",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20039",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401910973",
+        "fecha": "2026-08-20",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "11505",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401909627",
+        "fecha": "2026-08-27",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "11505",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401915849",
+        "fecha": "2026-10-15",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "936",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401915845",
+        "fecha": "2026-10-22",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "20301",
+        "competicion": "uefa.europa.conf"
+      }
+    ]
+  },
+  "v3|7672|all": {
+    "fecha_cache": "2026-11-05T11:31:12.571987",
+    "historial": [
+      {
+        "id": "741728",
+        "fecha": "2025-07-24",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "5260",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "743139",
+        "fecha": "2025-07-27",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "3024",
+        "competicion": "sui.1"
+      },
+      {
+        "id": "741739",
+        "fecha": "2025-07-31",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "5260",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "743144",
+        "fecha": "2025-08-03",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "3076",
+        "competicion": "sui.1"
+      },
+      {
+        "id": "755164",
+        "fecha": "2025-08-07",
+        "goles_favor": 0,
+        "goles_contra": 5,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "3362",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "743152",
+        "fecha": "2025-08-10",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "989",
+        "competicion": "sui.1"
+      },
+      {
+        "id": "755185",
+        "fecha": "2025-08-14",
+        "goles_favor": 4,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "3362",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "743163",
+        "fecha": "2025-08-31",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2722",
+        "competicion": "sui.1"
+      },
+      {
+        "id": "743166",
+        "fecha": "2025-09-13",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "557",
+        "competicion": "sui.1"
+      },
+      {
+        "id": "743156",
+        "fecha": "2025-09-17",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "11551",
+        "competicion": "sui.1"
+      },
+      {
+        "id": "743172",
+        "fecha": "2025-09-27",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "492",
+        "competicion": "sui.1"
+      },
+      {
+        "id": "401878140",
+        "fecha": "2026-07-23",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "21944",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401878124",
+        "fecha": "2026-07-29",
+        "goles_favor": 5,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "21944",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401903115",
+        "fecha": "2026-08-06",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2710",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401903037",
+        "fecha": "2026-08-13",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "2710",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401910969",
+        "fecha": "2026-08-20",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "524",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401910968",
+        "fecha": "2026-08-27",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "524",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401925345",
+        "fecha": "2026-10-02",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "119",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401915748",
+        "fecha": "2026-10-15",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2290",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401915840",
+        "fecha": "2026-10-22",
+        "goles_favor": 5,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "2922",
+        "competicion": "uefa.europa.conf"
+      }
+    ]
+  },
+  "v3|20028|all": {
+    "fecha_cache": "2026-11-05T11:31:12.725631",
+    "historial": [
+      {
+        "id": "741682",
+        "fecha": "2025-07-10",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20038",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "741693",
+        "fecha": "2025-07-17",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "20038",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "753903",
+        "fecha": "2025-07-24",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "6742",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "753904",
+        "fecha": "2025-07-31",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "6742",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "755156",
+        "fecha": "2025-08-07",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "21003",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "755190",
+        "fecha": "2025-08-14",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "21003",
+        "competicion": "uefa.europa.conf_qual"
+      },
+      {
+        "id": "401877831",
+        "fecha": "2026-07-07",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "19243",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401877819",
+        "fecha": "2026-07-14",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "19243",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401891845",
+        "fecha": "2026-07-21",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "2547",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401891844",
+        "fecha": "2026-07-29",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2547",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401902668",
+        "fecha": "2026-08-04",
+        "goles_favor": 0,
+        "goles_contra": 5,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "597",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401902666",
+        "fecha": "2026-08-11",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "597",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401909829",
+        "fecha": "2026-08-20",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "1895",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401909828",
+        "fecha": "2026-08-27",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "1895",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401915853",
+        "fecha": "2026-10-15",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "331",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401915841",
+        "fecha": "2026-10-22",
+        "goles_favor": 1,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "620",
+        "competicion": "uefa.europa.conf"
+      }
+    ]
+  },
+  "v3|2990|all": {
+    "fecha_cache": "2026-11-05T11:31:12.971662",
+    "historial": [
+      {
+        "id": "753130",
+        "fecha": "2025-07-22",
+        "goles_favor": 7,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "8250",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "753138",
+        "fecha": "2025-07-30",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "8250",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "754703",
+        "fecha": "2025-08-06",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "2290",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "754710",
+        "fecha": "2025-08-12",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "2290",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "755470",
+        "fecha": "2025-08-21",
+        "goles_favor": 1,
+        "goles_contra": 5,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "938",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "755472",
+        "fecha": "2025-08-28",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "938",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "757965",
+        "fecha": "2025-10-02",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "519",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "757999",
+        "fecha": "2025-10-23",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "17856",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "758013",
+        "fecha": "2025-11-06",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "101",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "758021",
+        "fecha": "2025-11-27",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "11551",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "758050",
+        "fecha": "2025-12-11",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "2950",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "758070",
+        "fecha": "2025-12-18",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "609",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401854525",
+        "fecha": "2026-02-19",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "8169",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401854536",
+        "fecha": "2026-02-26",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "8169",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401862853",
+        "fecha": "2026-03-12",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "493",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401862860",
+        "fecha": "2026-03-19",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "493",
+        "competicion": "uefa.europa.conf"
+      },
+      {
+        "id": "401877837",
+        "fecha": "2026-07-21",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "7853",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401877766",
+        "fecha": "2026-07-29",
+        "goles_favor": 1,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "7853",
+        "competicion": "uefa.champions_qual"
+      },
+      {
+        "id": "401902703",
+        "fecha": "2026-08-06",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2547",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401902675",
+        "fecha": "2026-08-14",
+        "goles_favor": 5,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "2547",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401909650",
+        "fecha": "2026-08-20",
+        "goles_favor": 7,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "3024",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401911217",
+        "fecha": "2026-08-27",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "3024",
+        "competicion": "uefa.europa_qual"
+      },
+      {
+        "id": "401915569",
+        "fecha": "2026-09-17",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "384",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401926950",
+        "fecha": "2026-10-03",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "123",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401915576",
+        "fecha": "2026-10-15",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "131",
+        "competicion": "uefa.europa"
+      },
+      {
+        "id": "401915546",
+        "fecha": "2026-10-22",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "366",
+        "competicion": "uefa.europa"
+      }
+    ]
   }
 }
