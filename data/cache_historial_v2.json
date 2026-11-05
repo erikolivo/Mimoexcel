@@ -305,18 +305,8 @@
     ]
   },
   "v3|2685|all": {
-    "fecha_cache": "2026-11-01T11:34:36.709536",
+    "fecha_cache": "2026-11-05T01:49:56.074282",
     "historial": [
-      {
-        "id": "401857429",
-        "fecha": "2026-03-15",
-        "goles_favor": 2,
-        "goles_contra": 0,
-        "es_local": true,
-        "resultado": "V",
-        "rival_id": "10122",
-        "competicion": "per.1"
-      },
       {
         "id": "401857440",
         "fecha": "2026-03-21",
@@ -605,6 +595,16 @@
         "es_local": true,
         "resultado": "V",
         "rival_id": "22534",
+        "competicion": "per.1"
+      },
+      {
+        "id": "401886126",
+        "fecha": "2026-11-01",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20293",
         "competicion": "per.1"
       }
     ]
