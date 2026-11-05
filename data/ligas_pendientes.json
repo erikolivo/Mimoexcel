@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 3772,
+      "veces_visto": 3778,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-11-04"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 3557,
+      "veces_visto": 3580,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-11-04"
@@ -41,7 +41,7 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 578,
+      "veces_visto": 580,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
       "ultimo_visto": "2026-11-04"
@@ -491,7 +491,7 @@
       "pais": "",
       "liga": "Copa Bolivia, Quarterfinals",
       "liga_id": "23284",
-      "veces_visto": 61,
+      "veces_visto": 62,
       "ejemplo_partido": "Independiente Petrolero vs Aurora",
       "fixture_id": "401929988",
       "ultimo_visto": "2026-11-04"
@@ -1092,6 +1092,15 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 Women's World Cup, Semifinals",
+      "liga_id": "20865",
+      "veces_visto": 20,
+      "ejemplo_partido": "Japan U17 vs North Korea U17",
+      "fixture_id": "401916247",
+      "ultimo_visto": "2026-11-04"
+    },
+    {
+      "pais": "",
       "liga": "Arabian Gulf Cup, Group B",
       "liga_id": "23107",
       "veces_visto": 19,
@@ -1161,15 +1170,6 @@
       "ejemplo_partido": "North Korea U17 vs Poland U17",
       "fixture_id": "401874119",
       "ultimo_visto": "2026-10-20"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 Women's World Cup, Semifinals",
-      "liga_id": "20865",
-      "veces_visto": 18,
-      "ejemplo_partido": "Japan U17 vs North Korea U17",
-      "fixture_id": "401916247",
-      "ultimo_visto": "2026-11-04"
     },
     {
       "pais": "",
@@ -1346,7 +1346,7 @@
       "pais": "",
       "liga": "Coupe de France, Seventh Round",
       "liga_id": "3952",
-      "veces_visto": 9,
+      "veces_visto": 10,
       "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
       "fixture_id": "401933098",
       "ultimo_visto": "2026-11-04"
@@ -1611,6 +1611,15 @@
       "ejemplo_partido": "Cartaginés vs Club Deportivo Olimpia",
       "fixture_id": "401922486",
       "ultimo_visto": "2026-10-21"
+    },
+    {
+      "pais": "",
+      "liga": "Copa Bolivia, Quarterfinals - 2nd Leg",
+      "liga_id": "23284",
+      "veces_visto": 1,
+      "ejemplo_partido": "The Strongest vs Always Ready",
+      "fixture_id": "401929984",
+      "ultimo_visto": "2026-11-04"
     }
   ]
 }
