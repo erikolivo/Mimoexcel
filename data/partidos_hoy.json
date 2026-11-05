@@ -15228,7 +15228,8 @@
           "color": "🟡",
           "n": 5
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "F.C. København vs Iberia 1999",
@@ -15696,5 +15697,7 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "predicciones_activas": {},
+  "historial_predicciones": {}
 }
