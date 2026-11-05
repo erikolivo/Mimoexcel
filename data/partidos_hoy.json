@@ -18687,7 +18687,8 @@
         "p_exito": 0.758,
         "cuota_estimada": 1.3,
         "relleno": false
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Luis Ángel Firpo vs Alianza FC",
@@ -18810,6 +18811,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+5'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         },
         {
           "minuto": "45'+5'",
@@ -18972,6 +18982,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+9'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         },
         {
           "minuto": "45'+9'",
@@ -19425,6 +19444,63 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "41'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "4",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "4",
+            "saves": "0",
+            "possessionPct": "70.6",
+            "totalShots": "4",
+            "shotsOnTarget": "3",
+            "shotPct": "0.8",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "196",
+            "totalPasses": "219",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "7",
+            "totalTackles": "8",
+            "tacklePct": "0.9",
+            "effectiveClearance": "0",
+            "totalClearance": "5"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "3",
+            "possessionPct": "29.4",
+            "totalShots": "3",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "68",
+            "totalPasses": "91",
+            "passPct": "0.7",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "3",
+            "totalTackles": "6",
+            "tacklePct": "0.5",
+            "effectiveClearance": "0",
+            "totalClearance": "12"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [
@@ -19447,6 +19523,30 @@
           "resolucion_notificada": false,
           "acierto": null,
           "presion_lado": 2.9899999999999998,
+          "nivel_local": 5.880391487574352,
+          "nivel_visitante": 4.952894129454768,
+          "color_local": "🟡",
+          "color_visitante": "🟡"
+        },
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "41'",
+          "texto": "🔦 FAVORITO DOMINA\nUniversitario Perdiendo 0-1\nz: 1.6 | Tiros: 3.0-1.0\nPosesión: 71%\nCuota pre: 1.27 -> en vivo debería bajar",
+          "diferencia_goles": -1,
+          "id": "401886151-1",
+          "minuto_int": 41,
+          "marcador_alerta": [
+            0,
+            1
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 9.07124946007148,
           "nivel_local": 5.880391487574352,
           "nivel_visitante": 4.952894129454768,
           "color_local": "🟡",
