@@ -10702,7 +10702,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "F.C. København",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.17,
+        "relleno": false
+      }
     },
     {
       "partido": "Getafe vs Brighton & Hove Albion",
@@ -10772,7 +10781,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "FC Lugano",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.2,
+        "relleno": false
+      }
     },
     {
       "partido": "Bayer Leverkusen vs Marseille",
@@ -10807,7 +10825,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Bayer Leverkusen",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.36,
+        "relleno": false
+      }
     },
     {
       "partido": "Benfica vs Lech Poznan",
@@ -10842,7 +10869,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Benfica",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.14,
+        "relleno": false
+      }
     },
     {
       "partido": "Universidad de Chile vs Antofagasta",
@@ -10877,7 +10913,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Universidad de Chile",
+        "p_exito": 0.723,
+        "cuota_estimada": 1.38,
+        "relleno": true
+      }
     },
     {
       "partido": "Palmeiras vs Remo",
@@ -10912,7 +10957,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Palmeiras",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.22,
+        "relleno": false
+      }
     },
     {
       "partido": "Botafogo-SP vs Londrina",
@@ -10947,7 +11001,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Botafogo-SP",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.17,
+        "relleno": false
+      }
     },
     {
       "partido": "Bolívar vs Real Potosí",
@@ -10982,7 +11045,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Bolívar",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.17,
+        "relleno": false
+      }
     },
     {
       "partido": "Cruzeiro vs Bahia",
@@ -11017,7 +11089,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Cruzeiro",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.18,
+        "relleno": false
+      }
     }
   ],
   "predicciones_activas": {},
