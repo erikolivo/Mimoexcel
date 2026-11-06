@@ -27701,9 +27701,9 @@
       "prioridad_hoja": "ALTA",
       "p_gana_fav": 0.553,
       "p_no_pierde_fav": 0.79,
-      "pf_hoja": 0.59,
-      "n_fotos_hoja": 1,
-      "clv": 0.0,
+      "pf_hoja": 0.57,
+      "n_fotos_hoja": 2,
+      "clv": -0.0168,
       "fuente_favorito": "Google Sheets",
       "fila_fuente": 38418,
       "hora_inicio": "2026-11-06T00:30Z",
@@ -28215,9 +28215,9 @@
       "prioridad_hoja": "ALTA",
       "p_gana_fav": 0.758,
       "p_no_pierde_fav": 0.904,
-      "pf_hoja": 0.75,
-      "n_fotos_hoja": 1,
-      "clv": 0.0,
+      "pf_hoja": 0.77,
+      "n_fotos_hoja": 2,
+      "clv": 0.0174,
       "fuente_favorito": "Google Sheets",
       "fila_fuente": 38428,
       "hora_inicio": "2026-11-06T01:30Z",
@@ -28234,7 +28234,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }

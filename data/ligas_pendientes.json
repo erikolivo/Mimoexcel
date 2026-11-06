@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 4003,
+      "veces_visto": 4030,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-11-05"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 3630,
+      "veces_visto": 3635,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-11-05"
@@ -111,21 +111,21 @@
     },
     {
       "pais": "",
+      "liga": "Liga MX Femenil",
+      "liga_id": "24220",
+      "veces_visto": 351,
+      "ejemplo_partido": "Santos vs Puebla",
+      "fixture_id": "401924388",
+      "ultimo_visto": "2026-11-05"
+    },
+    {
+      "pais": "",
       "liga": "WSL Players Cup, League Phase",
       "liga_id": "23390",
       "veces_visto": 347,
       "ejemplo_partido": "Crystal Palace vs Watford",
       "fixture_id": "401923288",
       "ultimo_visto": "2026-11-01"
-    },
-    {
-      "pais": "",
-      "liga": "Liga MX Femenil",
-      "liga_id": "24220",
-      "veces_visto": 347,
-      "ejemplo_partido": "Santos vs Puebla",
-      "fixture_id": "401924388",
-      "ultimo_visto": "2026-11-05"
     },
     {
       "pais": "",
@@ -437,7 +437,7 @@
       "pais": "",
       "liga": "Copa Bolivia, Quarterfinals",
       "liga_id": "23284",
-      "veces_visto": 72,
+      "veces_visto": 73,
       "ejemplo_partido": "Independiente Petrolero vs Aurora",
       "fixture_id": "401929988",
       "ultimo_visto": "2026-11-05"
@@ -1317,6 +1317,24 @@
     },
     {
       "pais": "",
+      "liga": "SAFF Championship, Group A",
+      "liga_id": "18914",
+      "veces_visto": 11,
+      "ejemplo_partido": "Pakistan vs India",
+      "fixture_id": "401932722",
+      "ultimo_visto": "2026-11-05"
+    },
+    {
+      "pais": "",
+      "liga": "SAFF Championship, Group B",
+      "liga_id": "18914",
+      "veces_visto": 11,
+      "ejemplo_partido": "Bhutan vs Bangladesh",
+      "fixture_id": "401932723",
+      "ultimo_visto": "2026-11-05"
+    },
+    {
+      "pais": "",
       "liga": "CAF Confederation Cup, First Preliminary Round",
       "liga_id": "18000",
       "veces_visto": 10,
@@ -1350,24 +1368,6 @@
       "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
       "fixture_id": "401933098",
       "ultimo_visto": "2026-11-04"
-    },
-    {
-      "pais": "",
-      "liga": "SAFF Championship, Group A",
-      "liga_id": "18914",
-      "veces_visto": 10,
-      "ejemplo_partido": "Pakistan vs India",
-      "fixture_id": "401932722",
-      "ultimo_visto": "2026-11-05"
-    },
-    {
-      "pais": "",
-      "liga": "SAFF Championship, Group B",
-      "liga_id": "18914",
-      "veces_visto": 10,
-      "ejemplo_partido": "Bhutan vs Bangladesh",
-      "fixture_id": "401932723",
-      "ultimo_visto": "2026-11-05"
     },
     {
       "pais": "",
