@@ -1546,7 +1546,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Hammarby IF",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.4,
+        "relleno": false
+      }
     },
     {
       "partido": "Rapid Vienna vs Wolfsberger",
@@ -1581,7 +1590,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Rapid Vienna",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.27,
+        "relleno": false
+      }
     },
     {
       "partido": "FC Dordrecht vs NAC Breda",
@@ -1686,7 +1704,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Leicester City",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.33,
+        "relleno": false
+      }
     },
     {
       "partido": "Everton vs Coventry City",
@@ -1721,7 +1748,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Everton",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.19,
+        "relleno": false
+      }
     },
     {
       "partido": "Independiente vs Deportivo Riestra",
@@ -1756,7 +1792,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Independiente",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.13,
+        "relleno": false
+      }
     },
     {
       "partido": "Atlético de San Luis vs FC Juárez",
@@ -1791,7 +1836,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Atlético de San Luis",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.18,
+        "relleno": false
+      }
     },
     {
       "partido": "CD Guastatoya vs Suchitepequez",
