@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 4054,
+      "veces_visto": 4060,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-11-06"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 3715,
+      "veces_visto": 3735,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-11-06"
@@ -113,7 +113,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 371,
+      "veces_visto": 376,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-11-06"
@@ -165,21 +165,21 @@
     },
     {
       "pais": "",
+      "liga": "Première Ligue",
+      "liga_id": "20955",
+      "veces_visto": 289,
+      "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
+      "fixture_id": "401885667",
+      "ultimo_visto": "2026-11-06"
+    },
+    {
+      "pais": "",
       "liga": "KNVB Beker, First Round",
       "liga_id": "3957",
       "veces_visto": 287,
       "ejemplo_partido": "Excelsior '31 vs ADO Den Haag",
       "fixture_id": "401925175",
       "ultimo_visto": "2026-10-29"
-    },
-    {
-      "pais": "",
-      "liga": "Première Ligue",
-      "liga_id": "20955",
-      "veces_visto": 286,
-      "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
-      "fixture_id": "401885667",
-      "ultimo_visto": "2026-11-06"
     },
     {
       "pais": "",
@@ -230,7 +230,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 203,
+      "veces_visto": 205,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-11-06"
@@ -266,7 +266,7 @@
       "pais": "",
       "liga": "A-League Women",
       "liga_id": "18992",
-      "veces_visto": 162,
+      "veces_visto": 164,
       "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
       "fixture_id": "401913254",
       "ultimo_visto": "2026-11-06"
@@ -1218,6 +1218,15 @@
     },
     {
       "pais": "",
+      "liga": "Coupe de France, Seventh Round",
+      "liga_id": "3952",
+      "veces_visto": 15,
+      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
+      "fixture_id": "401933098",
+      "ultimo_visto": "2026-11-06"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals",
       "liga_id": "22947",
       "veces_visto": 14,
@@ -1233,15 +1242,6 @@
       "ejemplo_partido": "América de Cali vs Deportivo Pereira",
       "fixture_id": "401902716",
       "ultimo_visto": "2026-09-21"
-    },
-    {
-      "pais": "",
-      "liga": "Coupe de France, Seventh Round",
-      "liga_id": "3952",
-      "veces_visto": 14,
-      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
-      "fixture_id": "401933098",
-      "ultimo_visto": "2026-11-06"
     },
     {
       "pais": "",
@@ -1407,6 +1407,15 @@
     },
     {
       "pais": "",
+      "liga": "NWSL, Playoffs - Quarterfinals",
+      "liga_id": "8301",
+      "veces_visto": 5,
+      "ejemplo_partido": "San Diego Wave FC vs Utah Royals",
+      "fixture_id": "401932959",
+      "ultimo_visto": "2026-11-06"
+    },
+    {
+      "pais": "",
       "liga": "USL Cup, Semifinals",
       "liga_id": "22059",
       "veces_visto": 4,
@@ -1449,15 +1458,6 @@
       "ejemplo_partido": "Levante vs Atlético Madrid",
       "fixture_id": "401882820",
       "ultimo_visto": "2026-10-31"
-    },
-    {
-      "pais": "",
-      "liga": "NWSL, Playoffs - Quarterfinals",
-      "liga_id": "8301",
-      "veces_visto": 4,
-      "ejemplo_partido": "San Diego Wave FC vs Utah Royals",
-      "fixture_id": "401932959",
-      "ultimo_visto": "2026-11-06"
     },
     {
       "pais": "",

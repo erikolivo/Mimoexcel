@@ -1,48 +1,6 @@
 [
   {
     "fecha": "2026-11-06",
-    "local": "Trefelin",
-    "visitante": "Colwyn Bay",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
-    "local": "GAP Connah S Quay FC",
-    "visitante": "Flint Town United",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
-    "local": "JSM Skikda",
-    "visitante": "Teleghma",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
-    "local": "Canberra FC",
-    "visitante": "Sydney United",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
-    "local": "Dukla Praha",
-    "visitante": "Příbram",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
-    "local": "Ústí nad Labem",
-    "visitante": "Viktoria Žižkov",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
     "local": "AB Copenhagen",
     "visitante": "Vendsyssel FF",
     "favorito": "DC LOCAL",
@@ -442,6 +400,13 @@
   },
   {
     "fecha": "2026-11-06",
+    "local": "Cliftonville FC",
+    "visitante": "Larne",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
     "local": "Wisla Krakow",
     "visitante": "Cracovia Krakow",
     "favorito": "DC LOCAL",
@@ -540,13 +505,6 @@
   },
   {
     "fecha": "2026-11-06",
-    "local": "B 93",
-    "visitante": "Skive",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
     "local": "Roskilde",
     "visitante": "HIK",
     "favorito": "LOCAL",
@@ -564,13 +522,6 @@
     "local": "Altglienicke",
     "visitante": "Tasmania Berlin",
     "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
-    "local": "BSG Chemie Leipzig",
-    "visitante": "FC Rot-Weiß Erfurt",
-    "favorito": "VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -603,6 +554,13 @@
   },
   {
     "fecha": "2026-11-06",
+    "local": "Union Brescia",
+    "visitante": "Arzignano Valchiampo",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
     "local": "Strabane Athletic",
     "visitante": "Annagh United",
     "favorito": "VISITANTE",
@@ -624,16 +582,16 @@
   },
   {
     "fecha": "2026-11-06",
-    "local": "Bangor City 1876 FC",
-    "visitante": "Gresford Athletic",
-    "favorito": "LOCAL",
+    "local": "Antalyaspor",
+    "visitante": "Bursaspor",
+    "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
     "fecha": "2026-11-06",
-    "local": "Bala Town",
-    "visitante": "Guilsfield",
-    "favorito": "DC LOCAL",
+    "local": "Bangor City 1876 FC",
+    "visitante": "Gresford Athletic",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -648,6 +606,13 @@
     "local": "Ruthin Town",
     "visitante": "Newtown AFC",
     "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
+    "local": "Caerau (Ely)",
+    "visitante": "Pontypridd Town",
+    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -669,13 +634,6 @@
     "local": "Tikveš",
     "visitante": "Skopje",
     "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
-    "local": "UTS Rabat",
-    "visitante": "Amal Tiznit",
-    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -715,13 +673,6 @@
   },
   {
     "fecha": "2026-11-06",
-    "local": "Hranice",
-    "visitante": "Zbrojovka Brno II",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
     "local": "Chomutov",
     "visitante": "Slovan Velvary",
     "favorito": "LOCAL",
@@ -750,8 +701,22 @@
   },
   {
     "fecha": "2026-11-06",
+    "local": "Sunderland U21",
+    "visitante": "Blackburn Rovers U21",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
     "local": "Swansea City U21",
     "visitante": "Bristol City U21",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
+    "local": "Al-Karma",
+    "visitante": "Naft Maysan",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
@@ -827,13 +792,6 @@
   },
   {
     "fecha": "2026-11-06",
-    "local": "Zagłębie Lubin II",
-    "visitante": "Goczałkowice Zdrój",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-06",
     "local": "Dinamo Moskva U19",
     "visitante": "Ural U20",
     "favorito": "DC LOCAL",
@@ -862,9 +820,51 @@
   },
   {
     "fecha": "2026-11-06",
+    "local": "Dubai City",
+    "visitante": "Forte Virtus",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
     "local": "Văn Hiến",
     "visitante": "Bóng đá Huế",
     "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
+    "local": "Aluminium Arak",
+    "visitante": "Mes Shahr-e Babak",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
+    "local": "RFC de Liege U21",
+    "visitante": "Lierse K. U21",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
+    "local": "Chambly Thelle FC",
+    "visitante": "Chantilly",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
+    "local": "USFAS Bamako",
+    "visitante": "Afrique Football Élite",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-06",
+    "local": "Marconi Stallions",
+    "visitante": "Bayswater City",
+    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
