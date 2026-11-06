@@ -25918,7 +25918,8 @@
         "p_exito": 0.816,
         "cuota_estimada": 1.22,
         "relleno": false
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Botafogo-SP vs Londrina",
@@ -27437,7 +27438,8 @@
         "p_exito": 0.79,
         "cuota_estimada": 1.17,
         "relleno": false
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Bolívar vs Real Potosí",
@@ -27608,6 +27610,15 @@
         },
         {
           "minuto": "63'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "68'",
           "goles_local": 1,
           "goles_visitante": 0,
           "stats_local": {},
