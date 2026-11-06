@@ -7837,5 +7837,345 @@
         "competicion": "uefa.europa"
       }
     ]
+  },
+  "v3|5327|all": {
+    "fecha_cache": "2026-11-06T11:34:11.076798",
+    "historial": [
+      {
+        "id": "758442",
+        "fecha": "2025-11-22",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "5328",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758448",
+        "fecha": "2025-11-29",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "13696",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758455",
+        "fecha": "2025-12-06",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "5325",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758461",
+        "fecha": "2025-12-13",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "5322",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758464",
+        "fecha": "2025-12-20",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "5323",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758475",
+        "fecha": "2026-01-03",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "11143",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758483",
+        "fecha": "2026-01-10",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "19340",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758492",
+        "fecha": "2026-01-18",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "8352",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758498",
+        "fecha": "2026-01-26",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "5328",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758502",
+        "fecha": "2026-01-31",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "13696",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758507",
+        "fecha": "2026-02-07",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "22344",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758516",
+        "fecha": "2026-02-14",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "5321",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758470",
+        "fecha": "2026-02-17",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "22344",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758519",
+        "fecha": "2026-02-21",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "5326",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758528",
+        "fecha": "2026-03-01",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "8352",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758533",
+        "fecha": "2026-03-07",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "5328",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758538",
+        "fecha": "2026-03-17",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "11143",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758545",
+        "fecha": "2026-03-22",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "5323",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758550",
+        "fecha": "2026-04-02",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "5326",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758556",
+        "fecha": "2026-04-11",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "13696",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758562",
+        "fecha": "2026-04-18",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "5322",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "758569",
+        "fecha": "2026-04-26",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "22344",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "401870489",
+        "fecha": "2026-05-02",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "5328",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "401870490",
+        "fecha": "2026-05-09",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "5323",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "401870493",
+        "fecha": "2026-05-16",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "5323",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "401873206",
+        "fecha": "2026-05-23",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "22344",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "401892162",
+        "fecha": "2026-10-16",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "13696",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "401892151",
+        "fecha": "2026-10-25",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "5321",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "401892148",
+        "fecha": "2026-10-31",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "11143",
+        "competicion": "aus.1"
+      },
+      {
+        "id": "401892144",
+        "fecha": "2026-11-06",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "5325",
+        "competicion": "aus.1"
+      }
+    ]
+  },
+  "v3|4489|all": {
+    "fecha_cache": "2026-11-06T11:34:14.606200",
+    "historial": [
+      {
+        "id": "401917339",
+        "fecha": "2026-09-19",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "133325",
+        "competicion": "eng.fa_qual"
+      },
+      {
+        "id": "401923530",
+        "fecha": "2026-10-03",
+        "goles_favor": 6,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "132164",
+        "competicion": "eng.fa_qual"
+      },
+      {
+        "id": "401928614",
+        "fecha": "2026-10-17",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "321",
+        "competicion": "eng.fa_qual"
+      }
+    ]
   }
 }
