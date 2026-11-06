@@ -28319,9 +28319,101 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "43'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "3",
+            "saves": "1",
+            "possessionPct": "56.8",
+            "totalShots": "9",
+            "shotsOnTarget": "2",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "245",
+            "totalPasses": "269",
+            "passPct": "0.9",
+            "accurateCrosses": "5",
+            "totalCrosses": "18",
+            "crossPct": "0.3",
+            "totalLongBalls": "16",
+            "accurateLongBalls": "5",
+            "longballPct": "0.3",
+            "blockedShots": "2",
+            "effectiveTackles": "4",
+            "totalTackles": "6",
+            "tacklePct": "0.7",
+            "interceptions": "7",
+            "effectiveClearance": "6",
+            "totalClearance": "6"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "3",
+            "saves": "2",
+            "possessionPct": "43.2",
+            "totalShots": "3",
+            "shotsOnTarget": "2",
+            "shotPct": "0.7",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "175",
+            "totalPasses": "208",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "9",
+            "crossPct": "0.2",
+            "totalLongBalls": "18",
+            "accurateLongBalls": "12",
+            "longballPct": "0.7",
+            "blockedShots": "1",
+            "effectiveTackles": "5",
+            "totalTackles": "6",
+            "tacklePct": "0.8",
+            "interceptions": "3",
+            "effectiveClearance": "15",
+            "totalClearance": "15"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "43'",
+          "texto": "🔦 FAVORITO DOMINA\nCruzeiro Perdiendo 0-1\nz: 1.7 | Tiros: 2.0-2.0\nPosesión: 57%\nCuota pre: 1.70 -> en vivo debería bajar",
+          "diferencia_goles": -1,
+          "id": "401841303-0",
+          "minuto_int": 43,
+          "marcador_alerta": [
+            0,
+            1
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 10.322878109332304,
+          "nivel_local": 7.12197757246165,
+          "nivel_visitante": 5.497335952420677,
+          "color_local": "🟢",
+          "color_visitante": "🟡"
+        }
+      ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
       "grupo_destacado": 2,
@@ -28331,6 +28423,18 @@
         "p_exito": 0.79,
         "cuota_estimada": 1.18,
         "relleno": false
+      },
+      "nivel_actual": {
+        "local": {
+          "poder": 7.12197757246165,
+          "color": "🟢",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 5.497335952420677,
+          "color": "🟡",
+          "n": 5
+        }
       }
     },
     {
