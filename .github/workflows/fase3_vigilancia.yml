@@ -171,7 +171,13 @@ jobs:
           exit 0
 
       - name: "Re-disparar vigilancia (cadena continua 24 h)"
-        if: always() && steps.ciclo.conclusion == 'success'
+        # Antes solo re-disparaba si el ciclo terminaba en exito: si el
+        # paso de vigilancia fallaba, la cadena se cortaba hasta el
+        # proximo cron (que puede tardar horas o, como el 03-11, no
+        # llegar nunca). Ahora re-dispara tambien cuando el ciclo fallo,
+        # pero NO cuando ni siquiera arranco (seleccion/pip fallidos),
+        # para no crear un bucle de runs fallidos cada 2 min.
+        if: ${{ !cancelled() && (steps.ciclo.outcome == 'success' || steps.ciclo.outcome == 'failure') }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

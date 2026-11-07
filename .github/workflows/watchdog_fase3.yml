@@ -6,6 +6,14 @@ name: Watchdog Fase 3
 on:
   schedule:
     - cron: "15,45 * * * *"   # Cada 30 min en :15 y :45
+  # Red de seguridad principal: se dispara en cuanto CUALQUIER run de
+  # Fase 3 termina (exito, fallo o cancelacion). Los cron de GitHub se
+  # retrasan horas y el 01-11 dejaron de llegar 3 dias seguidos, mientras
+  # que este evento es inmediato. Cuesta ~1 min por cada cierre de ciclo
+  # (~6 al dia) y evita quedarse ciego cuando el runner muere de golpe.
+  workflow_run:
+    workflows: ["Fase 3 - Vigilancia en vivo"]
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:
@@ -32,6 +40,11 @@ jobs:
           python -c "
           import subprocess, time
           from pathlib import Path
+
+          # Respetar la parada manual de la cadena.
+          if Path('data/.fase3_stop').exists():
+              print('Existe data/.fase3_stop — no se re-dispara nada.')
+              exit(0)
 
           partidos = Path('data/partidos_hoy.json')
           heartbeat = Path('data/.fase3_heartbeat')
@@ -70,4 +83,17 @@ jobs:
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run fase3_vigilancia.yml
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          gh workflow run fase3_vigilancia.yml
+          echo "Fase 3 re-disparada."
+          # Aviso al usuario: si la cadena se cayo, conviene enterarse en
+          # el momento y no dias despues por la falta de alertas.
+          python -c "
+          try:
+              from telegram_utils import enviar_mensaje_telegram
+              enviar_mensaje_telegram('Vigilancia reiniciada: llevaba mas de 25 min sin avance (runner caido o cron atrasado).')
+          except Exception as exc:
+              print(f'[AVISO] no se pudo avisar por Telegram: {exc}')
+          "
