@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-06",
+  "actualizado": "2026-11-07",
   "ligas": [
     {
       "pais": "",
@@ -41,10 +41,10 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 580,
+      "veces_visto": 582,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
-      "ultimo_visto": "2026-11-04"
+      "ultimo_visto": "2026-11-07"
     },
     {
       "pais": "",
@@ -93,21 +93,21 @@
     },
     {
       "pais": "",
+      "liga": "Liga F",
+      "liga_id": "20956",
+      "veces_visto": 382,
+      "ejemplo_partido": "Deportivo vs Real Madrid",
+      "fixture_id": "401882522",
+      "ultimo_visto": "2026-11-07"
+    },
+    {
+      "pais": "",
       "liga": "NWSL",
       "liga_id": "8301",
       "veces_visto": 380,
       "ejemplo_partido": "Racing Louisville FC vs Gotham FC",
       "fixture_id": "401853996",
       "ultimo_visto": "2026-11-01"
-    },
-    {
-      "pais": "",
-      "liga": "Liga F",
-      "liga_id": "20956",
-      "veces_visto": 379,
-      "ejemplo_partido": "Deportivo vs Real Madrid",
-      "fixture_id": "401882522",
-      "ultimo_visto": "2026-11-02"
     },
     {
       "pais": "",
@@ -149,19 +149,19 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 340,
+      "veces_visto": 342,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
-      "ultimo_visto": "2026-11-01"
+      "ultimo_visto": "2026-11-07"
     },
     {
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 307,
+      "veces_visto": 310,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
-      "ultimo_visto": "2026-11-06"
+      "ultimo_visto": "2026-11-07"
     },
     {
       "pais": "",
@@ -221,10 +221,10 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 217,
+      "veces_visto": 218,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
-      "ultimo_visto": "2026-11-06"
+      "ultimo_visto": "2026-11-07"
     },
     {
       "pais": "",
@@ -1272,6 +1272,15 @@
     },
     {
       "pais": "",
+      "liga": "NWSL, Playoffs - Quarterfinals",
+      "liga_id": "8301",
+      "veces_visto": 12,
+      "ejemplo_partido": "San Diego Wave FC vs Utah Royals",
+      "fixture_id": "401932959",
+      "ultimo_visto": "2026-11-07"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group H",
       "liga_id": "8315",
       "veces_visto": 11,
@@ -1341,15 +1350,6 @@
       "ejemplo_partido": "Bhutan vs Bangladesh",
       "fixture_id": "401932723",
       "ultimo_visto": "2026-11-05"
-    },
-    {
-      "pais": "",
-      "liga": "NWSL, Playoffs - Quarterfinals",
-      "liga_id": "8301",
-      "veces_visto": 11,
-      "ejemplo_partido": "San Diego Wave FC vs Utah Royals",
-      "fixture_id": "401932959",
-      "ultimo_visto": "2026-11-06"
     },
     {
       "pais": "",
