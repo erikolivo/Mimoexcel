@@ -1,6 +1,20 @@
 [
   {
     "fecha": "2026-11-07",
+    "local": "Olympiakos",
+    "visitante": "Apollon Limassol",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-07",
+    "local": "Slovan Liberec",
+    "visitante": "Bohemians 1905",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-07",
     "local": "FC Levadia Tallinn",
     "visitante": "Kalju Nomme",
     "favorito": "DC LOCAL",
@@ -143,13 +157,6 @@
     "fecha": "2026-11-07",
     "local": "Port FC",
     "visitante": "Chonburi FC",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-07",
-    "local": "Galatasaray",
-    "visitante": "Amed",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
@@ -1369,13 +1376,6 @@
     "local": "Galatasaray U19",
     "visitante": "Amedspor U19",
     "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-07",
-    "local": "Samsunspor U19",
-    "visitante": "Konyaspor U19",
-    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
