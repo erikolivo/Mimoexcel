@@ -41,7 +41,7 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 586,
+      "veces_visto": 588,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
       "ultimo_visto": "2026-11-07"
@@ -86,7 +86,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 388,
+      "veces_visto": 391,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-11-07"
@@ -120,21 +120,21 @@
     },
     {
       "pais": "",
+      "liga": "Women's Super League",
+      "liga_id": "8097",
+      "veces_visto": 348,
+      "ejemplo_partido": "West Ham United vs London City Lionesses",
+      "fixture_id": "401902921",
+      "ultimo_visto": "2026-11-07"
+    },
+    {
+      "pais": "",
       "liga": "WSL Players Cup, League Phase",
       "liga_id": "23390",
       "veces_visto": 347,
       "ejemplo_partido": "Crystal Palace vs Watford",
       "fixture_id": "401923288",
       "ultimo_visto": "2026-11-01"
-    },
-    {
-      "pais": "",
-      "liga": "Women's Super League",
-      "liga_id": "8097",
-      "veces_visto": 346,
-      "ejemplo_partido": "West Ham United vs London City Lionesses",
-      "fixture_id": "401902921",
-      "ultimo_visto": "2026-11-07"
     },
     {
       "pais": "",
@@ -158,7 +158,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 316,
+      "veces_visto": 319,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-11-07"
@@ -212,7 +212,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 220,
+      "veces_visto": 221,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-11-07"
@@ -1227,6 +1227,15 @@
     },
     {
       "pais": "",
+      "liga": "NWSL, Playoffs - Quarterfinals",
+      "liga_id": "8301",
+      "veces_visto": 15,
+      "ejemplo_partido": "San Diego Wave FC vs Utah Royals",
+      "fixture_id": "401932959",
+      "ultimo_visto": "2026-11-07"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals",
       "liga_id": "22947",
       "veces_visto": 14,
@@ -1242,15 +1251,6 @@
       "ejemplo_partido": "América de Cali vs Deportivo Pereira",
       "fixture_id": "401902716",
       "ultimo_visto": "2026-09-21"
-    },
-    {
-      "pais": "",
-      "liga": "NWSL, Playoffs - Quarterfinals",
-      "liga_id": "8301",
-      "veces_visto": 14,
-      "ejemplo_partido": "San Diego Wave FC vs Utah Royals",
-      "fixture_id": "401932959",
-      "ultimo_visto": "2026-11-07"
     },
     {
       "pais": "",
