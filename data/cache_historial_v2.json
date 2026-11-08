@@ -1525,18 +1525,8 @@
     ]
   },
   "v3|131581|all": {
-    "fecha_cache": "2026-11-02T01:26:54.191467",
+    "fecha_cache": "2026-11-08T02:34:19.327438",
     "historial": [
-      {
-        "id": "401841772",
-        "fecha": "2026-05-06",
-        "goles_favor": 0,
-        "goles_contra": 1,
-        "es_local": false,
-        "resultado": "D",
-        "rival_id": "17826",
-        "competicion": "usa.usl.l1"
-      },
       {
         "id": "401841792",
         "fecha": "2026-05-14",
@@ -1825,6 +1815,16 @@
         "es_local": false,
         "resultado": "V",
         "rival_id": "131580",
+        "competicion": "usa.usl.l1"
+      },
+      {
+        "id": "401931663",
+        "fecha": "2026-11-02",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "21821",
         "competicion": "usa.usl.l1"
       }
     ]
