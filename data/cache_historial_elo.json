@@ -13160,7 +13160,7 @@
     ]
   },
   "140|2026-10": {
-    "fecha_cache": "2026-11-08T11:32:57.751607",
+    "fecha_cache": "2026-11-08T16:11:51.674848",
     "historial": [
       {
         "id": "401875591",
@@ -13225,7 +13225,7 @@
     ]
   },
   "140|2026-09": {
-    "fecha_cache": "2026-11-08T11:32:57.751607",
+    "fecha_cache": "2026-11-08T16:11:51.674848",
     "historial": [
       {
         "id": "401875615",
@@ -17074,11 +17074,22 @@
     ]
   },
   "7834|2026-11": {
-    "fecha_cache": "2026-11-01T16:23:39.583069",
-    "historial": []
+    "fecha_cache": "2026-11-08T16:11:50.849651",
+    "historial": [
+      {
+        "id": "401842869",
+        "fecha": "2026-11-01",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2556",
+        "competicion": "swe.1"
+      }
+    ]
   },
   "7834|2026-10": {
-    "fecha_cache": "2026-11-01T16:23:39.583069",
+    "fecha_cache": "2026-11-08T16:11:50.849651",
     "historial": [
       {
         "id": "401923791",
@@ -17133,7 +17144,7 @@
     ]
   },
   "7834|2026-09": {
-    "fecha_cache": "2026-11-01T16:23:39.583069",
+    "fecha_cache": "2026-11-08T16:11:50.849651",
     "historial": [
       {
         "id": "401873993",
@@ -17252,7 +17263,7 @@
     ]
   },
   "145|2026-11": {
-    "fecha_cache": "2026-11-08T11:32:57.808945",
+    "fecha_cache": "2026-11-08T16:11:51.728631",
     "historial": [
       {
         "id": "401875557",
@@ -17267,7 +17278,7 @@
     ]
   },
   "145|2026-10": {
-    "fecha_cache": "2026-11-08T11:32:57.808945",
+    "fecha_cache": "2026-11-08T16:11:51.728631",
     "historial": [
       {
         "id": "401875584",
@@ -17312,7 +17323,7 @@
     ]
   },
   "145|2026-09": {
-    "fecha_cache": "2026-11-08T11:32:57.808945",
+    "fecha_cache": "2026-11-08T16:11:51.728631",
     "historial": [
       {
         "id": "401875616",
@@ -39364,7 +39375,7 @@
     ]
   },
   "140|2026-11": {
-    "fecha_cache": "2026-11-08T11:32:57.751607",
+    "fecha_cache": "2026-11-08T16:11:51.674848",
     "historial": [
       {
         "id": "401915529",
@@ -43020,5 +43031,110 @@
   "2594|2026-11": {
     "fecha_cache": "2026-11-08T15:28:43.550544",
     "historial": []
+  },
+  "994|2026-11": {
+    "fecha_cache": "2026-11-08T16:11:50.360055",
+    "historial": [
+      {
+        "id": "401842870",
+        "fecha": "2026-11-02",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "8222",
+        "competicion": "all"
+      }
+    ]
+  },
+  "994|2026-10": {
+    "fecha_cache": "2026-11-08T16:11:50.360055",
+    "historial": [
+      {
+        "id": "401874022",
+        "fecha": "2026-10-10",
+        "goles_favor": 5,
+        "goles_contra": 6,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "8221",
+        "competicion": "swe.1"
+      },
+      {
+        "id": "401842848",
+        "fecha": "2026-10-17",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "2556",
+        "competicion": "swe.1"
+      },
+      {
+        "id": "401842853",
+        "fecha": "2026-10-24",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "8547",
+        "competicion": "swe.1"
+      },
+      {
+        "id": "401842858",
+        "fecha": "2026-10-27",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "529",
+        "competicion": "all"
+      }
+    ]
+  },
+  "994|2026-09": {
+    "fecha_cache": "2026-11-08T16:11:50.360055",
+    "historial": [
+      {
+        "id": "401874084",
+        "fecha": "2026-09-07",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "2720",
+        "competicion": "all"
+      },
+      {
+        "id": "401874086",
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "22163",
+        "competicion": "swe.1"
+      },
+      {
+        "id": "401874083",
+        "fecha": "2026-09-16",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "20301",
+        "competicion": "all"
+      },
+      {
+        "id": "401842832",
+        "fecha": "2026-09-20",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "3017",
+        "competicion": "swe.1"
+      }
+    ]
   }
 }
