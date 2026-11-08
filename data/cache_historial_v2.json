@@ -9432,5 +9432,310 @@
         "competicion": "usa.1"
       }
     ]
+  },
+  "v3|22529|all": {
+    "fecha_cache": "2026-11-08T00:28:15.431283",
+    "historial": [
+      {
+        "id": "761540",
+        "fecha": "2026-04-12",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "17362",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761556",
+        "fecha": "2026-04-19",
+        "goles_favor": 2,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "4771",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761565",
+        "fecha": "2026-04-23",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "6077",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761580",
+        "fecha": "2026-04-26",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "9723",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761595",
+        "fecha": "2026-05-03",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "18966",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761609",
+        "fecha": "2026-05-10",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "9726",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761627",
+        "fecha": "2026-05-14",
+        "goles_favor": 5,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20906",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761640",
+        "fecha": "2026-05-17",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "18267",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761652",
+        "fecha": "2026-05-24",
+        "goles_favor": 2,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "9727",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761675",
+        "fecha": "2026-07-23",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "184",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761691",
+        "fecha": "2026-07-26",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "185",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761703",
+        "fecha": "2026-08-02",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "17362",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "401863554",
+        "fecha": "2026-08-07",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "227",
+        "competicion": "concacaf.leagues.cup"
+      },
+      {
+        "id": "401863607",
+        "fecha": "2026-08-10",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "10125",
+        "competicion": "concacaf.leagues.cup"
+      },
+      {
+        "id": "401863618",
+        "fecha": "2026-08-13",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "231",
+        "competicion": "concacaf.leagues.cup"
+      },
+      {
+        "id": "761720",
+        "fecha": "2026-08-16",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "18966",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761737",
+        "fecha": "2026-08-20",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "9723",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761750",
+        "fecha": "2026-08-23",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "184",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761767",
+        "fecha": "2026-08-30",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "187",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761771",
+        "fecha": "2026-09-05",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "12011",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761797",
+        "fecha": "2026-09-10",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "191",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761814",
+        "fecha": "2026-09-14",
+        "goles_favor": 0,
+        "goles_contra": 5,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "10739",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761829",
+        "fecha": "2026-09-20",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "20232",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761839",
+        "fecha": "2026-09-27",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "20906",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761853",
+        "fecha": "2026-10-10",
+        "goles_favor": 1,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "190",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761872",
+        "fecha": "2026-10-15",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "6077",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761887",
+        "fecha": "2026-10-18",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "187",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761901",
+        "fecha": "2026-10-25",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "9726",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761918",
+        "fecha": "2026-10-29",
+        "goles_favor": 1,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "9727",
+        "competicion": "usa.1"
+      },
+      {
+        "id": "761926",
+        "fecha": "2026-10-31",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "21812",
+        "competicion": "usa.1"
+      }
+    ]
   }
 }
