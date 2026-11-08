@@ -50,7 +50,7 @@
       "pais": "",
       "liga": "Women's FA Cup, First Round",
       "liga_id": "20226",
-      "veces_visto": 542,
+      "veces_visto": 543,
       "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
       "fixture_id": "401926253",
       "ultimo_visto": "2026-11-08"
@@ -68,7 +68,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 421,
+      "veces_visto": 424,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-11-08"
@@ -111,21 +111,21 @@
     },
     {
       "pais": "",
+      "liga": "Women's Super League",
+      "liga_id": "8097",
+      "veces_visto": 379,
+      "ejemplo_partido": "West Ham United vs London City Lionesses",
+      "fixture_id": "401902921",
+      "ultimo_visto": "2026-11-08"
+    },
+    {
+      "pais": "",
       "liga": "UEFA Conference League, League Phase",
       "liga_id": "20296",
       "veces_visto": 378,
       "ejemplo_partido": "CSKA Sofia vs AS Monaco",
       "fixture_id": "401915855",
       "ultimo_visto": "2026-10-22"
-    },
-    {
-      "pais": "",
-      "liga": "Women's Super League",
-      "liga_id": "8097",
-      "veces_visto": 374,
-      "ejemplo_partido": "West Ham United vs London City Lionesses",
-      "fixture_id": "401902921",
-      "ultimo_visto": "2026-11-08"
     },
     {
       "pais": "",
@@ -212,7 +212,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 231,
+      "veces_visto": 232,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-11-08"
@@ -329,7 +329,7 @@
       "pais": "",
       "liga": "Northern Super League",
       "liga_id": "23286",
-      "veces_visto": 111,
+      "veces_visto": 112,
       "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
       "fixture_id": "401859943",
       "ultimo_visto": "2026-11-08"
@@ -930,6 +930,15 @@
     },
     {
       "pais": "",
+      "liga": "NWSL, Playoffs - Quarterfinals",
+      "liga_id": "8301",
+      "veces_visto": 29,
+      "ejemplo_partido": "San Diego Wave FC vs Utah Royals",
+      "fixture_id": "401932959",
+      "ultimo_visto": "2026-11-08"
+    },
+    {
+      "pais": "",
       "liga": "UEFA Nations League, Group D2",
       "liga_id": "2395",
       "veces_visto": 27,
@@ -945,15 +954,6 @@
       "ejemplo_partido": "Gibraltar vs Andorra",
       "fixture_id": "401861069",
       "ultimo_visto": "2026-10-04"
-    },
-    {
-      "pais": "",
-      "liga": "NWSL, Playoffs - Quarterfinals",
-      "liga_id": "8301",
-      "veces_visto": 27,
-      "ejemplo_partido": "San Diego Wave FC vs Utah Royals",
-      "fixture_id": "401932959",
-      "ultimo_visto": "2026-11-08"
     },
     {
       "pais": "",
