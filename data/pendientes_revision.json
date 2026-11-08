@@ -1,13 +1,6 @@
 [
   {
     "fecha": "2026-11-08",
-    "local": "Universitario",
-    "visitante": "UCV Moquegua",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-08",
     "local": "Egnatia Rrogozhinë",
     "visitante": "Vora",
     "favorito": "LOCAL",
@@ -1397,6 +1390,13 @@
     "local": "Universitario",
     "visitante": "UCV Moquegua",
     "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-08",
+    "local": "Barra SE",
+    "visitante": "Maruinense",
+    "favorito": "VISITANTE",
     "motivo": "no_encontrado_en_espn"
   }
 ]
