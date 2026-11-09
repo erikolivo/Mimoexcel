@@ -78227,7 +78227,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "CD FAS vs Fuerte San Francisco",
@@ -78398,6 +78399,15 @@
         },
         {
           "minuto": "63'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "68'",
           "goles_local": 1,
           "goles_visitante": 1,
           "stats_local": {},
