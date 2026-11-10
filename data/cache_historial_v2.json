@@ -3490,7 +3490,7 @@
     ]
   },
   "v3|20776|all": {
-    "fecha_cache": "2026-11-03T11:30:18.845440",
+    "fecha_cache": "2026-11-10T11:32:43.061689",
     "historial": [
       {
         "id": "401918750",
@@ -3515,7 +3515,7 @@
     ]
   },
   "v3|133835|all": {
-    "fecha_cache": "2026-11-03T11:30:19.049591",
+    "fecha_cache": "2026-11-10T11:32:43.719401",
     "historial": []
   },
   "v3|521|all": {
@@ -10345,6 +10345,200 @@
         "resultado": "D",
         "rival_id": "233",
         "competicion": "mex.1"
+      }
+    ]
+  },
+  "v3|21979|all": {
+    "fecha_cache": "2026-11-10T11:32:44.338994",
+    "historial": [
+      {
+        "id": "755794",
+        "fecha": "2025-09-09",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "345",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "755823",
+        "fecha": "2025-10-14",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "346",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "755830",
+        "fecha": "2025-10-28",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "642",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "401906374",
+        "fecha": "2026-09-22",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "2567",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "401906350",
+        "fecha": "2026-10-13",
+        "goles_favor": 1,
+        "goles_contra": 5,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "340",
+        "competicion": "eng.trophy"
+      }
+    ]
+  },
+  "v3|16728|all": {
+    "fecha_cache": "2026-11-10T11:32:44.608135",
+    "historial": [
+      {
+        "id": "755886",
+        "fecha": "2025-09-02",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2567",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "759101",
+        "fecha": "2025-10-14",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "396",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "755836",
+        "fecha": "2025-11-11",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "343",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "401909638",
+        "fecha": "2026-09-22",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "303",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "401923268",
+        "fecha": "2026-10-06",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "279",
+        "competicion": "eng.trophy"
+      }
+    ]
+  },
+  "v3|18777|all": {
+    "fecha_cache": "2026-11-10T11:32:45.154355",
+    "historial": [
+      {
+        "id": "755785",
+        "fecha": "2025-09-02",
+        "goles_favor": 1,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "389",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "755811",
+        "fecha": "2025-10-07",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "344",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "756347",
+        "fecha": "2025-11-11",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "339",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "401906370",
+        "fecha": "2026-09-22",
+        "goles_favor": 1,
+        "goles_contra": 6,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "375",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "401906348",
+        "fecha": "2026-10-13",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "401",
+        "competicion": "eng.trophy"
+      }
+    ]
+  },
+  "v3|17573|all": {
+    "fecha_cache": "2026-11-10T11:32:45.429201",
+    "historial": []
+  },
+  "v3|133846|all": {
+    "fecha_cache": "2026-11-10T11:32:45.854157",
+    "historial": [
+      {
+        "id": "401918766",
+        "fecha": "2026-09-27",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "131412",
+        "competicion": "esp.copa_del_rey"
+      },
+      {
+        "id": "401918761",
+        "fecha": "2026-10-04",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "131412",
+        "competicion": "esp.copa_del_rey"
       }
     ]
   }
