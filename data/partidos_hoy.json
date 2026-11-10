@@ -4577,10 +4577,114 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "31'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "0",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "4",
+            "saves": "1",
+            "possessionPct": "48.3",
+            "totalShots": "7",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "96",
+            "totalPasses": "118",
+            "passPct": "0.8",
+            "accurateCrosses": "5",
+            "totalCrosses": "11",
+            "crossPct": "0.5",
+            "totalLongBalls": "17",
+            "accurateLongBalls": "13",
+            "longballPct": "0.8",
+            "blockedShots": "2",
+            "effectiveTackles": "2",
+            "totalTackles": "3",
+            "tacklePct": "0.7",
+            "interceptions": "0",
+            "effectiveClearance": "1",
+            "totalClearance": "1"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "0",
+            "possessionPct": "51.7",
+            "totalShots": "4",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "110",
+            "totalPasses": "138",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "1",
+            "crossPct": "0.0",
+            "totalLongBalls": "26",
+            "accurateLongBalls": "12",
+            "longballPct": "0.5",
+            "blockedShots": "0",
+            "effectiveTackles": "7",
+            "totalTackles": "8",
+            "tacklePct": "0.9",
+            "interceptions": "2",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "31'",
+          "texto": "🔦 FAVORITO DOMINA\nAtlético Junior Empate\nz: 1.6 | Tiros: 0.0-1.0\nPosesión: 48%\nCuota pre: 1.53 -> en vivo debería bajar",
+          "diferencia_goles": 0,
+          "id": "401877901-0",
+          "minuto_int": 31,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 5.446934341759517,
+          "nivel_local": 4.084342100361617,
+          "nivel_visitante": 5.01060046082253,
+          "color_local": "🟡",
+          "color_visitante": "🟡"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 4.084342100361617,
+          "color": "🟡",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 5.01060046082253,
+          "color": "🟡",
+          "n": 5
+        }
+      }
     }
   ],
   "predicciones_activas": {},
