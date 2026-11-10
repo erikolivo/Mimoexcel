@@ -1130,7 +1130,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Huddersfield Town",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.28,
+        "relleno": false
+      }
     },
     {
       "partido": "Oxford United vs Cheltenham Town",
@@ -1165,7 +1174,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Oxford United",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.22,
+        "relleno": false
+      }
     },
     {
       "partido": "Leicester City vs Walsall",
@@ -1200,7 +1218,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Leicester City",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.27,
+        "relleno": false
+      }
     },
     {
       "partido": "Stevenage vs Fulham U21",
@@ -1270,7 +1297,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Real Jaen CF",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.19,
+        "relleno": false
+      }
     },
     {
       "partido": "Trival Valderas vs Leganés",
@@ -1305,7 +1341,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Leganés",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.12,
+        "relleno": false
+      }
     },
     {
       "partido": "Tavernes de la Valldigna vs Valencia",
@@ -1340,7 +1385,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Valencia",
+        "p_exito": 0.928,
+        "cuota_estimada": null,
+        "relleno": false
+      }
     }
   ],
   "predicciones_activas": {},
