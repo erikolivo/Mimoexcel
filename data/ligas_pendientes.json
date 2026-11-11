@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 4511,
+      "veces_visto": 4535,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-11-11"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 4101,
+      "veces_visto": 4121,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-11-11"
@@ -77,7 +77,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 444,
+      "veces_visto": 446,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-11-11"
@@ -104,7 +104,7 @@
       "pais": "",
       "liga": "WSL Players Cup, League Phase",
       "liga_id": "23390",
-      "veces_visto": 395,
+      "veces_visto": 401,
       "ejemplo_partido": "Crystal Palace vs Watford",
       "fixture_id": "401923288",
       "ultimo_visto": "2026-11-11"
@@ -140,7 +140,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 351,
+      "veces_visto": 352,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-11-11"
@@ -194,7 +194,7 @@
       "pais": "",
       "liga": "UEFA Women's Champions League, League Phase",
       "liga_id": "19483",
-      "veces_visto": 276,
+      "veces_visto": 278,
       "ejemplo_partido": "Bayern Munich vs Manchester City",
       "fixture_id": "401917018",
       "ultimo_visto": "2026-11-11"
@@ -221,7 +221,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 248,
+      "veces_visto": 249,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-11-11"
@@ -311,7 +311,7 @@
       "pais": "",
       "liga": "Women's Europa Cup, Round of 16",
       "liga_id": "24079",
-      "veces_visto": 132,
+      "veces_visto": 136,
       "ejemplo_partido": "SK Brann vs Czarni Sosnowiec",
       "fixture_id": "401928144",
       "ultimo_visto": "2026-11-11"
@@ -1119,6 +1119,24 @@
     },
     {
       "pais": "",
+      "liga": "SAFF Championship, Group A",
+      "liga_id": "18914",
+      "veces_visto": 20,
+      "ejemplo_partido": "Pakistan vs India",
+      "fixture_id": "401932722",
+      "ultimo_visto": "2026-11-11"
+    },
+    {
+      "pais": "",
+      "liga": "SAFF Championship, Group B",
+      "liga_id": "18914",
+      "veces_visto": 20,
+      "ejemplo_partido": "Bhutan vs Bangladesh",
+      "fixture_id": "401932723",
+      "ultimo_visto": "2026-11-11"
+    },
+    {
+      "pais": "",
       "liga": "Arabian Gulf Cup, Group B",
       "liga_id": "23107",
       "veces_visto": 19,
@@ -1152,24 +1170,6 @@
       "ejemplo_partido": "Morocco vs Gabon",
       "fixture_id": "401920036",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "SAFF Championship, Group A",
-      "liga_id": "18914",
-      "veces_visto": 19,
-      "ejemplo_partido": "Pakistan vs India",
-      "fixture_id": "401932722",
-      "ultimo_visto": "2026-11-11"
-    },
-    {
-      "pais": "",
-      "liga": "SAFF Championship, Group B",
-      "liga_id": "18914",
-      "veces_visto": 19,
-      "ejemplo_partido": "Bhutan vs Bangladesh",
-      "fixture_id": "401932723",
-      "ultimo_visto": "2026-11-11"
     },
     {
       "pais": "",
@@ -1380,6 +1380,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Bolivia, Semifinals",
+      "liga_id": "23284",
+      "veces_visto": 9,
+      "ejemplo_partido": "Independiente Petrolero vs Always Ready",
+      "fixture_id": "401930275",
+      "ultimo_visto": "2026-11-11"
+    },
+    {
+      "pais": "",
       "liga": "CAF Champions League, First Preliminary Round",
       "liga_id": "2391",
       "veces_visto": 8,
@@ -1398,11 +1407,11 @@
     },
     {
       "pais": "",
-      "liga": "Copa Bolivia, Semifinals",
-      "liga_id": "23284",
+      "liga": "Women's Europa Cup, Round of 16 - 2nd Leg",
+      "liga_id": "24079",
       "veces_visto": 8,
-      "ejemplo_partido": "Independiente Petrolero vs Always Ready",
-      "fixture_id": "401930275",
+      "ejemplo_partido": "Feyenoord Rotterdam vs VfL Wolfsburg",
+      "fixture_id": "401928137",
       "ultimo_visto": "2026-11-11"
     },
     {
@@ -1422,15 +1431,6 @@
       "ejemplo_partido": "Bayer Leverkusen vs VfB Stuttgart",
       "fixture_id": "401884753",
       "ultimo_visto": "2026-10-31"
-    },
-    {
-      "pais": "",
-      "liga": "Women's Europa Cup, Round of 16 - 2nd Leg",
-      "liga_id": "24079",
-      "veces_visto": 6,
-      "ejemplo_partido": "Feyenoord Rotterdam vs VfL Wolfsburg",
-      "fixture_id": "401928137",
-      "ultimo_visto": "2026-11-11"
     },
     {
       "pais": "",
