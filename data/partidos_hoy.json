@@ -4790,7 +4790,8 @@
           "color": "🔴",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Independiente Petrolero vs Always Ready",
@@ -5024,6 +5025,15 @@
         },
         {
           "minuto": "90'+2'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'+6'",
           "goles_local": 0,
           "goles_visitante": 0,
           "stats_local": {},
