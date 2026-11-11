@@ -176,13 +176,6 @@
   },
   {
     "fecha": "2026-11-10",
-    "local": "WA Tlemcen",
-    "visitante": "RC Arba",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-10",
     "local": "Salisbury",
     "visitante": "Braintree",
     "favorito": "LOCAL",
@@ -192,13 +185,6 @@
     "fecha": "2026-11-10",
     "local": "Cray Wanderers",
     "visitante": "Three Bridges",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-10",
-    "local": "Enfield Town",
-    "visitante": "Lewes",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
@@ -207,6 +193,13 @@
     "local": "Whitehawk",
     "visitante": "Welling United",
     "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-10",
+    "local": "Eastbourne Borough",
+    "visitante": "Dulwich Hamlet",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -227,7 +220,7 @@
     "fecha": "2026-11-10",
     "local": "Bury Town",
     "visitante": "Bishop's Stortford",
-    "favorito": "LOCAL",
+    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -239,15 +232,15 @@
   },
   {
     "fecha": "2026-11-10",
-    "local": "Bath City",
-    "visitante": "Taunton Town",
-    "favorito": "DC LOCAL",
+    "local": "Leiston",
+    "visitante": "Real Bedford",
+    "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
     "fecha": "2026-11-10",
-    "local": "Chertsey Town",
-    "visitante": "Chichester City",
+    "local": "Bath City",
+    "visitante": "Taunton Town",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
@@ -274,9 +267,9 @@
   },
   {
     "fecha": "2026-11-10",
-    "local": "Gimnasia Mendoza 2",
-    "visitante": "Aldosivi Res.",
-    "favorito": "DC LOCAL",
+    "local": "JS Jijel",
+    "visitante": "CR Béni Thour",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -288,23 +281,9 @@
   },
   {
     "fecha": "2026-11-10",
-    "local": "Envigado",
-    "visitante": "Popayan",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-10",
-    "local": "El Mokawloon",
-    "visitante": "Itesalat",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-10",
-    "local": "Hull City U21",
-    "visitante": "Fleetwood Town U21",
-    "favorito": "DC LOCAL",
+    "local": "Colchester United U21",
+    "visitante": "Charlton Athletic U21",
+    "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -318,6 +297,27 @@
     "fecha": "2026-11-10",
     "local": "Qatar U23",
     "visitante": "Singapore U23",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-10",
+    "local": "Remo U20",
+    "visitante": "Comercial PA U20",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-10",
+    "local": "Nimes",
+    "visitante": "Istres",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-10",
+    "local": "Sint Maarten",
+    "visitante": "Anguilla",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
