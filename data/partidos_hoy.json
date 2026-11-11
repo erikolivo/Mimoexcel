@@ -71,7 +71,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Sheffield Wednesday",
+        "p_exito": 0.664,
+        "cuota_estimada": 1.53,
+        "relleno": true
+      }
     },
     {
       "partido": "Barnsley vs Oldham Athletic",
@@ -106,7 +115,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Barnsley",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.27,
+        "relleno": false
+      }
     },
     {
       "partido": "Fuerte San Francisco vs Alianza FC",
@@ -141,7 +159,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Alianza FC",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.15,
+        "relleno": false
+      }
     },
     {
       "partido": "Londrina vs Náutico",
@@ -176,7 +203,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Londrina",
+        "p_exito": 0.553,
+        "cuota_estimada": 1.55,
+        "relleno": true
+      }
     },
     {
       "partido": "Independiente Petrolero vs Always Ready",
@@ -211,7 +247,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Always Ready",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.21,
+        "relleno": false
+      }
     },
     {
       "partido": "CD FAS vs Internacional Santa Tecla",
@@ -246,7 +291,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "CD FAS",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.19,
+        "relleno": false
+      }
     }
   ]
 }
