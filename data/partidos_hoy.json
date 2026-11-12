@@ -24814,11 +24814,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "acierto",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "gol_fav",
+          "resolucion_notificada": true,
+          "acierto": true,
           "presion_lado": 9.062026041588766,
           "nivel_local": 0.4133333333333333,
           "nivel_visitante": 9.38,
@@ -24847,7 +24847,8 @@
           "color": "🔵",
           "n": 4
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Águila vs CD Municipal Limeño",
@@ -24883,6 +24884,15 @@
       "historial_snapshots": [
         {
           "minuto": "5'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "10'",
           "goles_local": 0,
           "goles_visitante": 0,
           "stats_local": {},
@@ -24939,6 +24949,15 @@
           "minuto": "7'",
           "goles_local": 0,
           "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "12'",
+          "goles_local": 0,
+          "goles_visitante": 1,
           "stats_local": {},
           "stats_visitante": {},
           "periodo": 1,
