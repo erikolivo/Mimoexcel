@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 4781,
+      "veces_visto": 4803,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-11-12"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 4233,
+      "veces_visto": 4241,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-11-12"
@@ -167,7 +167,7 @@
       "pais": "",
       "liga": "UEFA Women's Champions League, League Phase",
       "liga_id": "19483",
-      "veces_visto": 300,
+      "veces_visto": 302,
       "ejemplo_partido": "Bayern Munich vs Manchester City",
       "fixture_id": "401917018",
       "ultimo_visto": "2026-11-12"
@@ -293,7 +293,7 @@
       "pais": "",
       "liga": "Women's Europa Cup, Round of 16",
       "liga_id": "24079",
-      "veces_visto": 156,
+      "veces_visto": 157,
       "ejemplo_partido": "SK Brann vs Czarni Sosnowiec",
       "fixture_id": "401928144",
       "ultimo_visto": "2026-11-12"
@@ -669,6 +669,15 @@
     },
     {
       "pais": "",
+      "liga": "Men's U-21 Friendly",
+      "liga_id": "20132",
+      "veces_visto": 51,
+      "ejemplo_partido": "North Macedonia U21 vs Russia U21",
+      "fixture_id": "401925163",
+      "ultimo_visto": "2026-11-12"
+    },
+    {
+      "pais": "",
       "liga": "English FA Cup Qualifying, Third Round Qualifying",
       "liga_id": "23480",
       "veces_visto": 50,
@@ -684,15 +693,6 @@
       "ejemplo_partido": "Grenada vs Cuba",
       "fixture_id": "401900628",
       "ultimo_visto": "2026-10-05"
-    },
-    {
-      "pais": "",
-      "liga": "Men's U-21 Friendly",
-      "liga_id": "20132",
-      "veces_visto": 49,
-      "ejemplo_partido": "North Macedonia U21 vs Russia U21",
-      "fixture_id": "401925163",
-      "ultimo_visto": "2026-11-12"
     },
     {
       "pais": "",
@@ -930,21 +930,21 @@
     },
     {
       "pais": "",
+      "liga": "Coupe de France, Seventh Round",
+      "liga_id": "3952",
+      "veces_visto": 31,
+      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
+      "fixture_id": "401933098",
+      "ultimo_visto": "2026-11-12"
+    },
+    {
+      "pais": "",
       "liga": "EURO U-21 Qualifying, Group I",
       "liga_id": "20114",
       "veces_visto": 30,
       "ejemplo_partido": "Belgium U21 vs Belarus U21",
       "fixture_id": "732409",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Coupe de France, Seventh Round",
-      "liga_id": "3952",
-      "veces_visto": 30,
-      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
-      "fixture_id": "401933098",
-      "ultimo_visto": "2026-11-12"
     },
     {
       "pais": "",
@@ -1137,6 +1137,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Bolivia, Semifinals",
+      "liga_id": "23284",
+      "veces_visto": 20,
+      "ejemplo_partido": "Independiente Petrolero vs Always Ready",
+      "fixture_id": "401930275",
+      "ultimo_visto": "2026-11-12"
+    },
+    {
+      "pais": "",
       "liga": "Arabian Gulf Cup, Group B",
       "liga_id": "23107",
       "veces_visto": 19,
@@ -1170,15 +1179,6 @@
       "ejemplo_partido": "Morocco vs Gabon",
       "fixture_id": "401920036",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Semifinals",
-      "liga_id": "23284",
-      "veces_visto": 19,
-      "ejemplo_partido": "Independiente Petrolero vs Always Ready",
-      "fixture_id": "401930275",
-      "ultimo_visto": "2026-11-12"
     },
     {
       "pais": "",
@@ -1389,20 +1389,20 @@
     },
     {
       "pais": "",
+      "liga": "Argentine Supercopa, Argentine Supercopa",
+      "liga_id": "8346",
+      "veces_visto": 10,
+      "ejemplo_partido": "Estudiantes de La Plata vs Independiente Rivadavia",
+      "fixture_id": "401875813",
+      "ultimo_visto": "2026-11-12"
+    },
+    {
+      "pais": "",
       "liga": "Women's Europa Cup, Round of 16 - 2nd Leg",
       "liga_id": "24079",
       "veces_visto": 9,
       "ejemplo_partido": "Feyenoord Rotterdam vs VfL Wolfsburg",
       "fixture_id": "401928137",
-      "ultimo_visto": "2026-11-12"
-    },
-    {
-      "pais": "",
-      "liga": "Argentine Supercopa, Argentine Supercopa",
-      "liga_id": "8346",
-      "veces_visto": 9,
-      "ejemplo_partido": "Estudiantes de La Plata vs Independiente Rivadavia",
-      "fixture_id": "401875813",
       "ultimo_visto": "2026-11-12"
     },
     {
