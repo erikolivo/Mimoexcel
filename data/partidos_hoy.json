@@ -24971,6 +24971,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+7'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
       "alertas_enviadas": [],
@@ -25100,6 +25109,15 @@
         },
         {
           "minuto": "45'+6'",
+          "goles_local": 3,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+11'",
           "goles_local": 3,
           "goles_visitante": 1,
           "stats_local": {},
@@ -25486,10 +25504,114 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "30'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "5",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "0",
+            "possessionPct": "35",
+            "totalShots": "3",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "59",
+            "totalPasses": "86",
+            "passPct": "0.7",
+            "accurateCrosses": "0",
+            "totalCrosses": "2",
+            "crossPct": "0.0",
+            "totalLongBalls": "29",
+            "accurateLongBalls": "13",
+            "longballPct": "0.4",
+            "blockedShots": "2",
+            "effectiveTackles": "9",
+            "totalTackles": "12",
+            "tacklePct": "0.8",
+            "interceptions": "2",
+            "effectiveClearance": "6",
+            "totalClearance": "6"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "7",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "0",
+            "possessionPct": "65",
+            "totalShots": "4",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "139",
+            "totalPasses": "159",
+            "passPct": "0.9",
+            "accurateCrosses": "4",
+            "totalCrosses": "5",
+            "crossPct": "0.8",
+            "totalLongBalls": "17",
+            "accurateLongBalls": "14",
+            "longballPct": "0.8",
+            "blockedShots": "0",
+            "effectiveTackles": "1",
+            "totalTackles": "2",
+            "tacklePct": "0.5",
+            "interceptions": "2",
+            "effectiveClearance": "7",
+            "totalClearance": "7"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "alerta_1er_tiempo",
+          "minuto": "30'",
+          "texto": "⏱️ Alerta de primer tiempo -- el favorito domina el 0-0 (87%).",
+          "diferencia_goles": 0,
+          "id": "401929779-0",
+          "minuto_int": 30,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "fav",
+          "criterio": "fin_1t",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 2.5553910524340093,
+          "nivel_local": 6.173831516698017,
+          "nivel_visitante": 3.566628538185993,
+          "color_local": "🟢",
+          "color_visitante": "🔴"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 6.173831516698017,
+          "color": "🟢",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 3.566628538185993,
+          "color": "🔴",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Cerro Largo vs Progreso",
