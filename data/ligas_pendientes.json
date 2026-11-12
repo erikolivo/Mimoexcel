@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 4605,
+      "veces_visto": 4627,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-11-12"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 4169,
+      "veces_visto": 4177,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-11-12"
@@ -183,21 +183,21 @@
     },
     {
       "pais": "",
+      "liga": "UEFA Women's Champions League, League Phase",
+      "liga_id": "19483",
+      "veces_visto": 286,
+      "ejemplo_partido": "Bayern Munich vs Manchester City",
+      "fixture_id": "401917018",
+      "ultimo_visto": "2026-11-12"
+    },
+    {
+      "pais": "",
       "liga": "Taca de Portugal, 3rd Round",
       "liga_id": "20922",
       "veces_visto": 285,
       "ejemplo_partido": "União Santarém vs Gil Vicente",
       "fixture_id": "401924423",
       "ultimo_visto": "2026-10-18"
-    },
-    {
-      "pais": "",
-      "liga": "UEFA Women's Champions League, League Phase",
-      "liga_id": "19483",
-      "veces_visto": 284,
-      "ejemplo_partido": "Bayern Munich vs Manchester City",
-      "fixture_id": "401917018",
-      "ultimo_visto": "2026-11-12"
     },
     {
       "pais": "",
@@ -302,7 +302,7 @@
       "pais": "",
       "liga": "Women's Europa Cup, Round of 16",
       "liga_id": "24079",
-      "veces_visto": 149,
+      "veces_visto": 150,
       "ejemplo_partido": "SK Brann vs Czarni Sosnowiec",
       "fixture_id": "401928144",
       "ultimo_visto": "2026-11-12"
@@ -885,21 +885,21 @@
     },
     {
       "pais": "",
+      "liga": "Men's U-21 Friendly",
+      "liga_id": "20132",
+      "veces_visto": 35,
+      "ejemplo_partido": "North Macedonia U21 vs Russia U21",
+      "fixture_id": "401925163",
+      "ultimo_visto": "2026-11-12"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Central American Cup, Play-In",
       "liga_id": "22947",
       "veces_visto": 33,
       "ejemplo_partido": "Club Deportivo Marathón vs Alianza FC",
       "fixture_id": "401922488",
       "ultimo_visto": "2026-10-27"
-    },
-    {
-      "pais": "",
-      "liga": "Men's U-21 Friendly",
-      "liga_id": "20132",
-      "veces_visto": 33,
-      "ejemplo_partido": "North Macedonia U21 vs Russia U21",
-      "fixture_id": "401925163",
-      "ultimo_visto": "2026-11-12"
     },
     {
       "pais": "",
@@ -990,6 +990,15 @@
       "ejemplo_partido": "North Korea U17 vs Poland U17",
       "fixture_id": "401874119",
       "ultimo_visto": "2026-10-23"
+    },
+    {
+      "pais": "",
+      "liga": "Coupe de France, Seventh Round",
+      "liga_id": "3952",
+      "veces_visto": 23,
+      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
+      "fixture_id": "401933098",
+      "ultimo_visto": "2026-11-12"
     },
     {
       "pais": "",
@@ -1089,15 +1098,6 @@
       "ejemplo_partido": "Bhutan vs Bangladesh",
       "fixture_id": "401932723",
       "ultimo_visto": "2026-11-11"
-    },
-    {
-      "pais": "",
-      "liga": "Coupe de France, Seventh Round",
-      "liga_id": "3952",
-      "veces_visto": 22,
-      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
-      "fixture_id": "401933098",
-      "ultimo_visto": "2026-11-12"
     },
     {
       "pais": "",
@@ -1299,6 +1299,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Bolivia, Semifinals",
+      "liga_id": "23284",
+      "veces_visto": 12,
+      "ejemplo_partido": "Independiente Petrolero vs Always Ready",
+      "fixture_id": "401930275",
+      "ultimo_visto": "2026-11-12"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group H",
       "liga_id": "8315",
       "veces_visto": 11,
@@ -1350,15 +1359,6 @@
       "ejemplo_partido": "SK Brann vs Czarni Sosnowiec",
       "fixture_id": "401928144",
       "ultimo_visto": "2026-10-29"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Semifinals",
-      "liga_id": "23284",
-      "veces_visto": 11,
-      "ejemplo_partido": "Independiente Petrolero vs Always Ready",
-      "fixture_id": "401930275",
-      "ultimo_visto": "2026-11-12"
     },
     {
       "pais": "",
@@ -1578,6 +1578,15 @@
     },
     {
       "pais": "",
+      "liga": "Argentine Supercopa, Argentine Supercopa",
+      "liga_id": "8346",
+      "veces_visto": 2,
+      "ejemplo_partido": "Estudiantes de La Plata vs Independiente Rivadavia",
+      "fixture_id": "401875813",
+      "ultimo_visto": "2026-11-12"
+    },
+    {
+      "pais": "",
       "liga": "Campeones Cup, 2026 Campeones Cup",
       "liga_id": "18771",
       "veces_visto": 1,
@@ -1683,15 +1692,6 @@
       "ejemplo_partido": "América vs Toluca",
       "fixture_id": "401932063",
       "ultimo_visto": "2026-11-11"
-    },
-    {
-      "pais": "",
-      "liga": "Argentine Supercopa, Argentine Supercopa",
-      "liga_id": "8346",
-      "veces_visto": 1,
-      "ejemplo_partido": "Estudiantes de La Plata vs Independiente Rivadavia",
-      "fixture_id": "401875813",
-      "ultimo_visto": "2026-11-12"
     }
   ]
 }
