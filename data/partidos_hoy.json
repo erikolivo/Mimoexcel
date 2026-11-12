@@ -5185,6 +5185,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+10'",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
@@ -5199,5 +5208,7 @@
         "relleno": false
       }
     }
-  ]
+  ],
+  "predicciones_activas": {},
+  "historial_predicciones": {}
 }
