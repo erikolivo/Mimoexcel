@@ -33652,11 +33652,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 2.577695526217005,
           "nivel_local": 4.630821230835056,
           "nivel_visitante": 3.3925734508550804,
@@ -33676,11 +33676,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 13.669736628149096,
           "nivel_local": 4.630821230835056,
           "nivel_visitante": 3.3925734508550804,
@@ -33700,7 +33700,8 @@
           "color": "🔴",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     }
   ],
   "predicciones_activas": {},
