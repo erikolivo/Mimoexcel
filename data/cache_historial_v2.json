@@ -20240,5 +20240,260 @@
         "competicion": "concacaf.nations.league"
       }
     ]
+  },
+  "v3|10343|all": {
+    "fecha_cache": "2026-11-13T18:40:27.184613",
+    "historial": [
+      {
+        "id": "701979",
+        "fecha": "2024-06-10",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "2874",
+        "competicion": "global.toulon"
+      },
+      {
+        "id": "701983",
+        "fecha": "2024-06-12",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "22268",
+        "competicion": "global.toulon"
+      },
+      {
+        "id": "704222",
+        "fecha": "2024-06-16",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "12062",
+        "competicion": "global.toulon"
+      },
+      {
+        "id": "665050",
+        "fecha": "2024-09-05",
+        "goles_favor": 7,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20943",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "665069",
+        "fecha": "2024-09-10",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "14253",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "665116",
+        "fecha": "2024-10-15",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "20003",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "722907",
+        "fecha": "2024-11-15",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "11676",
+        "competicion": "fifa.friendly_u21"
+      },
+      {
+        "id": "722910",
+        "fecha": "2024-11-19",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "4207",
+        "competicion": "fifa.friendly_u21"
+      },
+      {
+        "id": "733683",
+        "fecha": "2025-03-21",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "11627",
+        "competicion": "fifa.friendly_u21"
+      },
+      {
+        "id": "734195",
+        "fecha": "2025-03-24",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "4366",
+        "competicion": "fifa.friendly_u21"
+      },
+      {
+        "id": "724199",
+        "fecha": "2025-06-11",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "19349",
+        "competicion": "uefa.euro_u21"
+      },
+      {
+        "id": "724207",
+        "fecha": "2025-06-14",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "18415",
+        "competicion": "uefa.euro_u21"
+      },
+      {
+        "id": "724216",
+        "fecha": "2025-06-17",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "4371",
+        "competicion": "uefa.euro_u21"
+      },
+      {
+        "id": "724174",
+        "fecha": "2025-06-22",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "4379",
+        "competicion": "uefa.euro_u21"
+      },
+      {
+        "id": "732365",
+        "fecha": "2025-09-05",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20931",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "732391",
+        "fecha": "2025-09-09",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "18413",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "732403",
+        "fecha": "2025-10-10",
+        "goles_favor": 4,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "4365",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "732476",
+        "fecha": "2025-10-14",
+        "goles_favor": 5,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20937",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "732498",
+        "fecha": "2025-11-14",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "18414",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "732514",
+        "fecha": "2025-11-18",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20931",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "732520",
+        "fecha": "2026-03-26",
+        "goles_favor": 4,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "18413",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "732551",
+        "fecha": "2026-03-31",
+        "goles_favor": 4,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "4365",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "401872735",
+        "fecha": "2026-06-08",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20925",
+        "competicion": "fifa.friendly_u21"
+      },
+      {
+        "id": "732438",
+        "fecha": "2026-10-01",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20937",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "732446",
+        "fecha": "2026-10-05",
+        "goles_favor": 6,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "18414",
+        "competicion": "uefa.euro_u21_qual"
+      }
+    ]
   }
 }

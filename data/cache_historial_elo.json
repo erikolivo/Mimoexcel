@@ -49373,5 +49373,92 @@
         "competicion": "all"
       }
     ]
+  },
+  "11676|2026-11": {
+    "fecha_cache": "2026-11-13T18:40:25.311377",
+    "historial": []
+  },
+  "11676|2026-10": {
+    "fecha_cache": "2026-11-13T18:40:25.311377",
+    "historial": [
+      {
+        "id": "732376",
+        "fecha": "2026-10-03",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "20932",
+        "competicion": "uefa.euro_u21_qual"
+      },
+      {
+        "id": "732349",
+        "fecha": "2026-10-06",
+        "goles_favor": 7,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "4257",
+        "competicion": "all"
+      }
+    ]
+  },
+  "11676|2026-09": {
+    "fecha_cache": "2026-11-13T18:40:25.311377",
+    "historial": [
+      {
+        "id": "732415",
+        "fecha": "2026-09-25",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "4282",
+        "competicion": "all"
+      },
+      {
+        "id": "732428",
+        "fecha": "2026-09-29",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20934",
+        "competicion": "all"
+      }
+    ]
+  },
+  "10343|2026-11": {
+    "fecha_cache": "2026-11-13T18:40:26.597661",
+    "historial": []
+  },
+  "10343|2026-10": {
+    "fecha_cache": "2026-11-13T18:40:26.597661",
+    "historial": [
+      {
+        "id": "732438",
+        "fecha": "2026-10-01",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20937",
+        "competicion": "all"
+      },
+      {
+        "id": "732446",
+        "fecha": "2026-10-05",
+        "goles_favor": 6,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "18414",
+        "competicion": "all"
+      }
+    ]
+  },
+  "10343|2026-09": {
+    "fecha_cache": "2026-11-13T18:40:26.597661",
+    "historial": []
   }
 }
