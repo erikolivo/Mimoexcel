@@ -5,7 +5,7 @@
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 4865,
+      "veces_visto": 4875,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
       "ultimo_visto": "2026-11-13"
@@ -14,7 +14,7 @@
       "pais": "",
       "liga": "NCAAM Soccer",
       "liga_id": "5487",
-      "veces_visto": 4253,
+      "veces_visto": 4254,
       "ejemplo_partido": "Long Island University Sharks vs Lafayette Leopards",
       "fixture_id": "401902569",
       "ultimo_visto": "2026-11-13"
@@ -140,7 +140,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 358,
+      "veces_visto": 359,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-11-13"
@@ -221,7 +221,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 255,
+      "veces_visto": 256,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-11-13"
@@ -246,21 +246,21 @@
     },
     {
       "pais": "",
+      "liga": "A-League Women",
+      "liga_id": "18992",
+      "veces_visto": 186,
+      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
+      "fixture_id": "401913254",
+      "ultimo_visto": "2026-11-13"
+    },
+    {
+      "pais": "",
       "liga": "German Cup, Second Round",
       "liga_id": "3954",
       "veces_visto": 184,
       "ejemplo_partido": "Hamburg SV vs Eintracht Frankfurt",
       "fixture_id": "401916920",
       "ultimo_visto": "2026-10-28"
-    },
-    {
-      "pais": "",
-      "liga": "A-League Women",
-      "liga_id": "18992",
-      "veces_visto": 184,
-      "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
-      "fixture_id": "401913254",
-      "ultimo_visto": "2026-11-13"
     },
     {
       "pais": "",
@@ -381,6 +381,15 @@
     },
     {
       "pais": "",
+      "liga": "Men's U-21 Friendly",
+      "liga_id": "20132",
+      "veces_visto": 88,
+      "ejemplo_partido": "North Macedonia U21 vs Russia U21",
+      "fixture_id": "401925163",
+      "ultimo_visto": "2026-11-13"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League A, Group A",
       "liga_id": "19267",
       "veces_visto": 83,
@@ -396,15 +405,6 @@
       "ejemplo_partido": "Puerto Montt vs Colo Colo",
       "fixture_id": "401925566",
       "ultimo_visto": "2026-11-02"
-    },
-    {
-      "pais": "",
-      "liga": "Men's U-21 Friendly",
-      "liga_id": "20132",
-      "veces_visto": 81,
-      "ejemplo_partido": "North Macedonia U21 vs Russia U21",
-      "fixture_id": "401925163",
-      "ultimo_visto": "2026-11-13"
     },
     {
       "pais": "",
@@ -759,6 +759,15 @@
     },
     {
       "pais": "",
+      "liga": "Coupe de France, Seventh Round",
+      "liga_id": "3952",
+      "veces_visto": 47,
+      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
+      "fixture_id": "401933098",
+      "ultimo_visto": "2026-11-13"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Nations League, League C, Group A",
       "liga_id": "19267",
       "veces_visto": 46,
@@ -828,15 +837,6 @@
       "ejemplo_partido": "Kitchee vs Gangwon FC",
       "fixture_id": "401912805",
       "ultimo_visto": "2026-10-29"
-    },
-    {
-      "pais": "",
-      "liga": "Coupe de France, Seventh Round",
-      "liga_id": "3952",
-      "veces_visto": 44,
-      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
-      "fixture_id": "401933098",
-      "ultimo_visto": "2026-11-13"
     },
     {
       "pais": "",
