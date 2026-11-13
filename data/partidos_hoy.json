@@ -21666,11 +21666,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 7.601696110798885,
           "nivel_local": 2.84384399782947,
           "nivel_visitante": 4.68915833444475,
@@ -21690,7 +21690,8 @@
           "color": "🟡",
           "n": 4
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Slovakia vs Faroe Islands",
@@ -23309,11 +23310,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 11.192496408066553,
           "nivel_local": 8.775360294982937,
           "nivel_visitante": 5.0,
@@ -23333,7 +23334,8 @@
           "color": "🟡",
           "n": 4
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Bulgaria vs Iceland",
@@ -24843,7 +24845,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Liechtenstein vs Azerbaijan",
@@ -26505,11 +26508,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 18.1929906587314,
           "nivel_local": 2.158880819702141,
           "nivel_visitante": 6.5861885755566885,
@@ -26529,7 +26532,8 @@
           "color": "🟢",
           "n": 4
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Scotland vs North Macedonia",
@@ -28229,7 +28233,8 @@
           "color": "🔴",
           "n": 4
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Salamanca UDS vs Celta Vigo",
@@ -29468,6 +29473,73 @@
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "82'",
+          "goles_local": 0,
+          "goles_visitante": 4,
+          "stats_local": {
+            "foulsCommitted": "16",
+            "yellowCards": "1",
+            "redCards": "1",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "3",
+            "possessionPct": "46.8",
+            "totalShots": "2",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "296",
+            "totalPasses": "349",
+            "passPct": "0.8",
+            "accurateCrosses": "2",
+            "totalCrosses": "14",
+            "crossPct": "0.1",
+            "totalLongBalls": "37",
+            "accurateLongBalls": "15",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "10",
+            "totalTackles": "14",
+            "tacklePct": "0.7",
+            "interceptions": "6",
+            "effectiveClearance": "8",
+            "totalClearance": "8"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "19",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "4",
+            "wonCorners": "2",
+            "saves": "0",
+            "possessionPct": "53.2",
+            "totalShots": "15",
+            "shotsOnTarget": "7",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "375",
+            "totalPasses": "411",
+            "passPct": "0.9",
+            "accurateCrosses": "1",
+            "totalCrosses": "6",
+            "crossPct": "0.2",
+            "totalLongBalls": "38",
+            "accurateLongBalls": "23",
+            "longballPct": "0.6",
+            "blockedShots": "4",
+            "effectiveTackles": "6",
+            "totalTackles": "11",
+            "tacklePct": "0.5",
+            "interceptions": "6",
+            "effectiveClearance": "11",
+            "totalClearance": "11"
+          },
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [
@@ -29484,11 +29556,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
-          "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "estado": "acierto",
+          "resuelta_minuto": 82,
+          "resuelta_motivo": "gol_fav",
+          "resolucion_notificada": true,
+          "acierto": true,
           "presion_lado": 2.666196519301483,
           "nivel_local": null,
           "nivel_visitante": 4.63156330108737,
@@ -30630,6 +30702,63 @@
             "tacklePct": "0.6",
             "effectiveClearance": "0",
             "totalClearance": "19"
+          },
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "73'",
+          "goles_local": 3,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "13",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "4",
+            "saves": "5",
+            "possessionPct": "72.5",
+            "totalShots": "11",
+            "shotsOnTarget": "7",
+            "shotPct": "0.6",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "528",
+            "totalPasses": "583",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "3",
+            "effectiveTackles": "7",
+            "totalTackles": "13",
+            "tacklePct": "0.5",
+            "effectiveClearance": "0",
+            "totalClearance": "10"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "15",
+            "yellowCards": "3",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "3",
+            "possessionPct": "27.5",
+            "totalShots": "10",
+            "shotsOnTarget": "6",
+            "shotPct": "0.6",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "166",
+            "totalPasses": "213",
+            "passPct": "0.8",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "5",
+            "totalTackles": "9",
+            "tacklePct": "0.6",
+            "effectiveClearance": "0",
+            "totalClearance": "20"
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
