@@ -12255,7 +12255,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Egypt",
+        "p_exito": 0.928,
+        "cuota_estimada": 1.1,
+        "relleno": false
+      }
     },
     {
       "partido": "Mali vs Rwanda",
@@ -12325,7 +12334,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "St. Lucia",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.3,
+        "relleno": false
+      }
     },
     {
       "partido": "Puerto Rico vs Dominica",
@@ -12360,7 +12378,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Puerto Rico",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.28,
+        "relleno": false
+      }
     },
     {
       "partido": "Dijon FCO vs Orléans",
@@ -12605,7 +12632,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 3,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Scotland",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.18,
+        "relleno": false
+      }
     },
     {
       "partido": "Salamanca UDS vs Celta Vigo",
@@ -12640,7 +12676,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Celta Vigo",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.33,
+        "relleno": false
+      }
     },
     {
       "partido": "Morocco vs Niger",
@@ -12675,7 +12720,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Morocco",
+        "p_exito": 0.928,
+        "cuota_estimada": 1.07,
+        "relleno": false
+      }
     },
     {
       "partido": "St. Martin vs El Salvador",
@@ -12710,7 +12764,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "El Salvador",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.22,
+        "relleno": false
+      }
     },
     {
       "partido": "Montserrat vs Nicaragua",
@@ -12745,7 +12808,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Nicaragua",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.22,
+        "relleno": false
+      }
     },
     {
       "partido": "Colombia vs Chile",
@@ -12815,7 +12887,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Ecuador",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.2,
+        "relleno": false
+      }
     }
   ],
   "predicciones_activas": {},
