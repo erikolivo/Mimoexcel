@@ -41424,7 +41424,7 @@
     "historial": []
   },
   "20851|2026-11": {
-    "fecha_cache": "2026-11-08T19:42:45.065753",
+    "fecha_cache": "2026-11-13T00:26:23.038409",
     "historial": [
       {
         "id": "401860412",
@@ -41435,11 +41435,21 @@
         "resultado": "V",
         "rival_id": "9969",
         "competicion": "all"
+      },
+      {
+        "id": "401860422",
+        "fecha": "2026-11-08",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "10357",
+        "competicion": "bra.2"
       }
     ]
   },
   "20851|2026-10": {
-    "fecha_cache": "2026-11-08T19:42:45.065753",
+    "fecha_cache": "2026-11-13T00:26:23.038409",
     "historial": [
       {
         "id": "401860394",
@@ -41464,7 +41474,7 @@
     ]
   },
   "20851|2026-09": {
-    "fecha_cache": "2026-11-08T19:42:45.065753",
+    "fecha_cache": "2026-11-13T00:26:23.038409",
     "historial": [
       {
         "id": "401860353",
@@ -47339,6 +47349,70 @@
   },
   "2627|2026-09": {
     "fecha_cache": "2026-11-12T23:25:53.325720",
+    "historial": []
+  },
+  "11268|2026-11": {
+    "fecha_cache": "2026-11-13T00:26:22.102639",
+    "historial": [
+      {
+        "id": "401860423",
+        "fecha": "2026-11-07",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "9966",
+        "competicion": "bra.2"
+      }
+    ]
+  },
+  "11268|2026-10": {
+    "fecha_cache": "2026-11-13T00:26:22.102639",
+    "historial": [
+      {
+        "id": "401860364",
+        "fecha": "2026-10-02",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "9970",
+        "competicion": "bra.2"
+      },
+      {
+        "id": "401860384",
+        "fecha": "2026-10-11",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "6270",
+        "competicion": "bra.2"
+      },
+      {
+        "id": "401860400",
+        "fecha": "2026-10-18",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "9971",
+        "competicion": "bra.2"
+      },
+      {
+        "id": "401860407",
+        "fecha": "2026-10-24",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "9973",
+        "competicion": "bra.2"
+      }
+    ]
+  },
+  "11268|2026-09": {
+    "fecha_cache": "2026-11-13T00:26:22.102639",
     "historial": []
   }
 }
