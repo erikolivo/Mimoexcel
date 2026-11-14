@@ -49572,5 +49572,62 @@
   "207|2026-09": {
     "fecha_cache": "2026-11-14T00:38:20.004229",
     "historial": []
+  },
+  "209|2026-11": {
+    "fecha_cache": "2026-11-14T01:23:36.779558",
+    "historial": []
+  },
+  "209|2026-10": {
+    "fecha_cache": "2026-11-14T01:23:36.779558",
+    "historial": []
+  },
+  "209|2026-09": {
+    "fecha_cache": "2026-11-14T01:23:36.779558",
+    "historial": [
+      {
+        "id": "401905196",
+        "fecha": "2026-09-24",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "451",
+        "competicion": "all"
+      }
+    ]
+  },
+  "214|2026-11": {
+    "fecha_cache": "2026-11-14T01:23:38.124876",
+    "historial": []
+  },
+  "214|2026-10": {
+    "fecha_cache": "2026-11-14T01:23:38.124876",
+    "historial": [
+      {
+        "id": "401900575",
+        "fecha": "2026-10-04",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2654",
+        "competicion": "all"
+      }
+    ]
+  },
+  "214|2026-09": {
+    "fecha_cache": "2026-11-14T01:23:38.124876",
+    "historial": [
+      {
+        "id": "401900619",
+        "fecha": "2026-09-27",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2654",
+        "competicion": "all"
+      }
+    ]
   }
 }
