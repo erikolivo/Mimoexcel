@@ -52573,5 +52573,92 @@
         "competicion": "eng.4"
       }
     ]
+  },
+  "6167|2026-11": {
+    "fecha_cache": "2026-11-14T16:32:22.450701",
+    "historial": []
+  },
+  "6167|2026-10": {
+    "fecha_cache": "2026-11-14T16:32:22.450701",
+    "historial": [
+      {
+        "id": "401914141",
+        "fecha": "2026-10-02",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "658",
+        "competicion": "all"
+      }
+    ]
+  },
+  "6167|2026-09": {
+    "fecha_cache": "2026-11-14T16:32:22.450701",
+    "historial": [
+      {
+        "id": "401920058",
+        "fecha": "2026-09-24",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "2666",
+        "competicion": "all"
+      },
+      {
+        "id": "401915925",
+        "fecha": "2026-09-28",
+        "goles_favor": 4,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "6723",
+        "competicion": "all"
+      },
+      {
+        "id": "401916227",
+        "fecha": "2026-09-28",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "7507",
+        "competicion": "all"
+      }
+    ]
+  },
+  "469|2026-11": {
+    "fecha_cache": "2026-11-14T16:32:23.564753",
+    "historial": []
+  },
+  "469|2026-10": {
+    "fecha_cache": "2026-11-14T16:32:23.564753",
+    "historial": []
+  },
+  "469|2026-09": {
+    "fecha_cache": "2026-11-14T16:32:23.564753",
+    "historial": [
+      {
+        "id": "401915914",
+        "fecha": "2026-09-24",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2570",
+        "competicion": "all"
+      },
+      {
+        "id": "401911182",
+        "fecha": "2026-09-29",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "454",
+        "competicion": "all"
+      }
+    ]
   }
 }
