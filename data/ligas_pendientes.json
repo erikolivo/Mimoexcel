@@ -68,7 +68,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 471,
+      "veces_visto": 474,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-11-14"
@@ -77,7 +77,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 451,
+      "veces_visto": 453,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-11-14"
@@ -86,7 +86,7 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 423,
+      "veces_visto": 427,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
       "ultimo_visto": "2026-11-14"
@@ -140,7 +140,7 @@
       "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 370,
+      "veces_visto": 375,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-11-14"
@@ -248,7 +248,7 @@
       "pais": "",
       "liga": "A-League Women",
       "liga_id": "18992",
-      "veces_visto": 201,
+      "veces_visto": 204,
       "ejemplo_partido": "Newcastle Jets  vs Perth Glory",
       "fixture_id": "401913254",
       "ultimo_visto": "2026-11-14"
@@ -270,6 +270,15 @@
       "ejemplo_partido": "Deportivo San Pedro vs Deportivo Mixco",
       "fixture_id": "401879630",
       "ultimo_visto": "2026-11-03"
+    },
+    {
+      "pais": "",
+      "liga": "Coupe de France, Seventh Round",
+      "liga_id": "3952",
+      "veces_visto": 171,
+      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
+      "fixture_id": "401933098",
+      "ultimo_visto": "2026-11-14"
     },
     {
       "pais": "",
@@ -336,30 +345,21 @@
     },
     {
       "pais": "",
-      "liga": "Bolivian Liga Profesional",
-      "liga_id": "620",
-      "veces_visto": 121,
-      "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
-      "fixture_id": "401906485",
-      "ultimo_visto": "2026-11-02"
-    },
-    {
-      "pais": "",
       "liga": "Northern Super League",
       "liga_id": "23286",
-      "veces_visto": 121,
+      "veces_visto": 122,
       "ejemplo_partido": "Montreal Roses FC vs AFC Toronto",
       "fixture_id": "401859943",
       "ultimo_visto": "2026-11-14"
     },
     {
       "pais": "",
-      "liga": "Coupe de France, Seventh Round",
-      "liga_id": "3952",
-      "veces_visto": 118,
-      "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
-      "fixture_id": "401933098",
-      "ultimo_visto": "2026-11-14"
+      "liga": "Bolivian Liga Profesional",
+      "liga_id": "620",
+      "veces_visto": 121,
+      "ejemplo_partido": "San Antonio Bulo Bulo vs Aurora",
+      "fixture_id": "401906485",
+      "ultimo_visto": "2026-11-02"
     },
     {
       "pais": "",
@@ -1587,6 +1587,24 @@
     },
     {
       "pais": "",
+      "liga": "NWSL, Semifinals",
+      "liga_id": "8301",
+      "veces_visto": 2,
+      "ejemplo_partido": "Washington Spirit vs Utah Royals",
+      "fixture_id": "401933734",
+      "ultimo_visto": "2026-11-14"
+    },
+    {
+      "pais": "",
+      "liga": "Women's FA Cup, Second Round",
+      "liga_id": "20226",
+      "veces_visto": 2,
+      "ejemplo_partido": "Dulwich Hamlet vs Portishead Town",
+      "fixture_id": "401931842",
+      "ultimo_visto": "2026-11-14"
+    },
+    {
+      "pais": "",
       "liga": "Campeones Cup, 2026 Campeones Cup",
       "liga_id": "18771",
       "veces_visto": 1,
@@ -1692,24 +1710,6 @@
       "ejemplo_partido": "América vs Toluca",
       "fixture_id": "401932063",
       "ultimo_visto": "2026-11-11"
-    },
-    {
-      "pais": "",
-      "liga": "NWSL, Semifinals",
-      "liga_id": "8301",
-      "veces_visto": 1,
-      "ejemplo_partido": "Washington Spirit vs Utah Royals",
-      "fixture_id": "401933734",
-      "ultimo_visto": "2026-11-14"
-    },
-    {
-      "pais": "",
-      "liga": "Women's FA Cup, Second Round",
-      "liga_id": "20226",
-      "veces_visto": 1,
-      "ejemplo_partido": "Dulwich Hamlet vs Portishead Town",
-      "fixture_id": "401931842",
-      "ultimo_visto": "2026-11-14"
     }
   ]
 }
