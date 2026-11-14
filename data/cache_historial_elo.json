@@ -49537,5 +49537,40 @@
         "competicion": "all"
       }
     ]
+  },
+  "208|2026-11": {
+    "fecha_cache": "2026-11-14T00:38:18.856496",
+    "historial": []
+  },
+  "208|2026-10": {
+    "fecha_cache": "2026-11-14T00:38:18.856496",
+    "historial": [
+      {
+        "id": "401913267",
+        "fecha": "2026-10-02",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "210",
+        "competicion": "all"
+      }
+    ]
+  },
+  "208|2026-09": {
+    "fecha_cache": "2026-11-14T00:38:18.856496",
+    "historial": []
+  },
+  "207|2026-11": {
+    "fecha_cache": "2026-11-14T00:38:20.004229",
+    "historial": []
+  },
+  "207|2026-10": {
+    "fecha_cache": "2026-11-14T00:38:20.004229",
+    "historial": []
+  },
+  "207|2026-09": {
+    "fecha_cache": "2026-11-14T00:38:20.004229",
+    "historial": []
   }
 }
