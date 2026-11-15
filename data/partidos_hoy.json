@@ -6294,9 +6294,101 @@
           },
           "periodo": 1,
           "estado_detalle": "In Progress"
+        },
+        {
+          "minuto": "16'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "74.5",
+            "totalShots": "5",
+            "shotsOnTarget": "2",
+            "shotPct": "0.4",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "132",
+            "totalPasses": "147",
+            "passPct": "0.9",
+            "accurateCrosses": "0",
+            "totalCrosses": "1",
+            "crossPct": "0.0",
+            "totalLongBalls": "5",
+            "accurateLongBalls": "2",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "0",
+            "totalTackles": "0",
+            "tacklePct": "0.0",
+            "interceptions": "1",
+            "effectiveClearance": "0",
+            "totalClearance": "0"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "2",
+            "possessionPct": "25.5",
+            "totalShots": "2",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "40",
+            "totalPasses": "50",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "0",
+            "crossPct": "0.0",
+            "totalLongBalls": "8",
+            "accurateLongBalls": "3",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "0",
+            "totalTackles": "0",
+            "tacklePct": "0.0",
+            "interceptions": "2",
+            "effectiveClearance": "6",
+            "totalClearance": "6"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "16'",
+          "texto": "🔦 FAVORITO DOMINA\nFrance Empate\nz: 1.7 | Tiros: 2.0-0.0\nPosesión: 74%\nCuota pre: 1.22 -> en vivo debería bajar",
+          "diferencia_goles": 0,
+          "id": "401861177-0",
+          "minuto_int": 16,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 11.245000000000001,
+          "nivel_local": 6.483908317399221,
+          "nivel_visitante": 1.1686316522886084,
+          "color_local": "🟢",
+          "color_visitante": "🔴"
+        }
+      ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
       "grupo_destacado": 1,
@@ -6306,6 +6398,18 @@
         "p_exito": 0.816,
         "cuota_estimada": 1.22,
         "relleno": false
+      },
+      "nivel_actual": {
+        "local": {
+          "poder": 6.483908317399221,
+          "color": "🟢",
+          "n": 5
+        },
+        "visitante": {
+          "poder": 1.1686316522886084,
+          "color": "🔴",
+          "n": 5
+        }
       }
     },
     {
