@@ -52942,5 +52942,51 @@
   "2641|2026-09": {
     "fecha_cache": "2026-11-15T00:24:47.990349",
     "historial": []
+  },
+  "1038|2026-11": {
+    "fecha_cache": "2026-11-15T01:20:12.340454",
+    "historial": []
+  },
+  "1038|2026-10": {
+    "fecha_cache": "2026-11-15T01:20:12.340454",
+    "historial": [
+      {
+        "id": "401900582",
+        "fecha": "2026-10-05",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "215",
+        "competicion": "all"
+      }
+    ]
+  },
+  "1038|2026-09": {
+    "fecha_cache": "2026-11-15T01:20:12.340454",
+    "historial": [
+      {
+        "id": "401900612",
+        "fecha": "2026-09-28",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "215",
+        "competicion": "all"
+      }
+    ]
+  },
+  "203|2026-11": {
+    "fecha_cache": "2026-11-15T01:20:13.170614",
+    "historial": []
+  },
+  "203|2026-10": {
+    "fecha_cache": "2026-11-15T01:20:13.170614",
+    "historial": []
+  },
+  "203|2026-09": {
+    "fecha_cache": "2026-11-15T01:20:13.170614",
+    "historial": []
   }
 }
