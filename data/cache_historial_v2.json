@@ -3734,28 +3734,8 @@
     ]
   },
   "v3|7252|all": {
-    "fecha_cache": "2026-11-03T11:30:20.414298",
+    "fecha_cache": "2026-11-15T11:35:04.675170",
     "historial": [
-      {
-        "id": "401845265",
-        "fecha": "2026-03-08",
-        "goles_favor": 1,
-        "goles_contra": 0,
-        "es_local": true,
-        "resultado": "V",
-        "rival_id": "7870",
-        "competicion": "gua.1"
-      },
-      {
-        "id": "401845267",
-        "fecha": "2026-03-15",
-        "goles_favor": 2,
-        "goles_contra": 1,
-        "es_local": false,
-        "resultado": "V",
-        "rival_id": "20727",
-        "competicion": "gua.1"
-      },
       {
         "id": "401845274",
         "fecha": "2026-03-19",
@@ -4034,6 +4014,26 @@
         "es_local": true,
         "resultado": "E",
         "rival_id": "17516",
+        "competicion": "gua.1"
+      },
+      {
+        "id": "401879601",
+        "fecha": "2026-11-03",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "7259",
+        "competicion": "gua.1"
+      },
+      {
+        "id": "401879606",
+        "fecha": "2026-11-08",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "7257",
         "competicion": "gua.1"
       }
     ]
@@ -24158,6 +24158,306 @@
         "resultado": "D",
         "rival_id": "207",
         "competicion": "fifa.friendly"
+      }
+    ]
+  },
+  "v3|134170|all": {
+    "fecha_cache": "2026-11-15T11:34:57.965797",
+    "historial": []
+  },
+  "v3|168|all": {
+    "fecha_cache": "2026-11-15T11:35:02.262173",
+    "historial": []
+  },
+  "v3|18085|all": {
+    "fecha_cache": "2026-11-15T11:35:02.493548",
+    "historial": []
+  },
+  "v3|134096|all": {
+    "fecha_cache": "2026-11-15T11:35:02.871185",
+    "historial": []
+  },
+  "v3|21306|all": {
+    "fecha_cache": "2026-11-15T11:35:03.132184",
+    "historial": [
+      {
+        "id": "754283",
+        "fecha": "2025-07-31",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "104",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401886549",
+        "fecha": "2026-07-26",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "104",
+        "competicion": "club.friendly"
+      }
+    ]
+  },
+  "v3|20871|all": {
+    "fecha_cache": "2026-11-15T11:35:03.506572",
+    "historial": []
+  },
+  "v3|2659|all": {
+    "fecha_cache": "2026-11-15T11:35:05.011763",
+    "historial": [
+      {
+        "id": "723672",
+        "fecha": "2025-03-24",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "203",
+        "competicion": "concacaf.nations.league"
+      },
+      {
+        "id": "698183",
+        "fecha": "2025-06-08",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "2641",
+        "competicion": "fifa.worldq.concacaf"
+      },
+      {
+        "id": "698197",
+        "fecha": "2025-06-11",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2658",
+        "competicion": "fifa.worldq.concacaf"
+      },
+      {
+        "id": "735322",
+        "fecha": "2025-06-16",
+        "goles_favor": 5,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "7657",
+        "competicion": "concacaf.gold"
+      },
+      {
+        "id": "735331",
+        "fecha": "2025-06-21",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "2652",
+        "competicion": "concacaf.gold"
+      },
+      {
+        "id": "735338",
+        "fecha": "2025-06-24",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "1038",
+        "competicion": "concacaf.gold"
+      },
+      {
+        "id": "735345",
+        "fecha": "2025-06-28",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "215",
+        "competicion": "concacaf.gold"
+      },
+      {
+        "id": "754236",
+        "fecha": "2025-09-04",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "2664",
+        "competicion": "fifa.worldq.concacaf"
+      },
+      {
+        "id": "754243",
+        "fecha": "2025-09-09",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "2652",
+        "competicion": "fifa.worldq.concacaf"
+      },
+      {
+        "id": "754252",
+        "fecha": "2025-10-11",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "2650",
+        "competicion": "fifa.worldq.concacaf"
+      },
+      {
+        "id": "754257",
+        "fecha": "2025-10-15",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "2664",
+        "competicion": "fifa.worldq.concacaf"
+      },
+      {
+        "id": "754263",
+        "fecha": "2025-11-14",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "2652",
+        "competicion": "fifa.worldq.concacaf"
+      },
+      {
+        "id": "754266",
+        "fecha": "2025-11-19",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2650",
+        "competicion": "fifa.worldq.concacaf"
+      },
+      {
+        "id": "762557",
+        "fecha": "2026-01-18",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "204",
+        "competicion": "fifa.friendly"
+      },
+      {
+        "id": "401842387",
+        "fecha": "2026-01-23",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "203",
+        "competicion": "fifa.friendly"
+      },
+      {
+        "id": "401860541",
+        "fecha": "2026-03-27",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "467",
+        "competicion": "fifa.friendly"
+      },
+      {
+        "id": "401860542",
+        "fecha": "2026-03-31",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "467",
+        "competicion": "fifa.friendly"
+      },
+      {
+        "id": "401864003",
+        "fecha": "2026-05-31",
+        "goles_favor": 2,
+        "goles_contra": 6,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "205",
+        "competicion": "fifa.friendly"
+      },
+      {
+        "id": "401870075",
+        "fecha": "2026-06-04",
+        "goles_favor": 4,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2649",
+        "competicion": "fifa.friendly"
+      },
+      {
+        "id": "401871528",
+        "fecha": "2026-06-06",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "452",
+        "competicion": "fifa.friendly"
+      },
+      {
+        "id": "760434",
+        "fecha": "2026-06-17",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "4469",
+        "competicion": "fifa.world"
+      },
+      {
+        "id": "760460",
+        "fecha": "2026-06-23",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "477",
+        "competicion": "fifa.world"
+      },
+      {
+        "id": "760485",
+        "fecha": "2026-06-27",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "448",
+        "competicion": "fifa.world"
+      },
+      {
+        "id": "401914098",
+        "fecha": "2026-09-25",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "4385",
+        "competicion": "fifa.friendly"
+      },
+      {
+        "id": "401929776",
+        "fecha": "2026-11-13",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "11678",
+        "competicion": "concacaf.nations.league"
       }
     ]
   }
