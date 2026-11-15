@@ -32,7 +32,7 @@
       "pais": "",
       "liga": "Coupe de France, Seventh Round",
       "liga_id": "3952",
-      "veces_visto": 723,
+      "veces_visto": 756,
       "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
       "fixture_id": "401933098",
       "ultimo_visto": "2026-11-15"
@@ -59,7 +59,7 @@
       "pais": "",
       "liga": "Women's FA Cup, First Round",
       "liga_id": "20226",
-      "veces_visto": 555,
+      "veces_visto": 556,
       "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
       "fixture_id": "401926253",
       "ultimo_visto": "2026-11-15"
@@ -68,7 +68,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 518,
+      "veces_visto": 523,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-11-15"
@@ -86,7 +86,7 @@
       "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
-      "veces_visto": 476,
+      "veces_visto": 478,
       "ejemplo_partido": "Santos vs Puebla",
       "fixture_id": "401924388",
       "ultimo_visto": "2026-11-15"
@@ -95,7 +95,7 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 471,
+      "veces_visto": 474,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
       "ultimo_visto": "2026-11-15"
@@ -221,7 +221,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 270,
+      "veces_visto": 272,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-11-15"
@@ -329,7 +329,7 @@
       "pais": "",
       "liga": "Men's U-21 Friendly",
       "liga_id": "20132",
-      "veces_visto": 134,
+      "veces_visto": 135,
       "ejemplo_partido": "North Macedonia U21 vs Russia U21",
       "fixture_id": "401925163",
       "ultimo_visto": "2026-11-15"
@@ -363,6 +363,15 @@
     },
     {
       "pais": "",
+      "liga": "Women's FA Cup, Second Round",
+      "liga_id": "20226",
+      "veces_visto": 120,
+      "ejemplo_partido": "Dulwich Hamlet vs Portishead Town",
+      "fixture_id": "401931842",
+      "ultimo_visto": "2026-11-15"
+    },
+    {
+      "pais": "",
       "liga": "English FA Cup Qualifying, Fourth Round Qualifying",
       "liga_id": "23480",
       "veces_visto": 110,
@@ -392,18 +401,9 @@
       "pais": "",
       "liga": "Dutch Vrouwen Eredivisie",
       "liga_id": "19945",
-      "veces_visto": 99,
+      "veces_visto": 104,
       "ejemplo_partido": "FC Twente vs Feyenoord Rotterdam",
       "fixture_id": "401882168",
-      "ultimo_visto": "2026-11-15"
-    },
-    {
-      "pais": "",
-      "liga": "Women's FA Cup, Second Round",
-      "liga_id": "20226",
-      "veces_visto": 98,
-      "ejemplo_partido": "Dulwich Hamlet vs Portishead Town",
-      "fixture_id": "401931842",
       "ultimo_visto": "2026-11-15"
     },
     {
@@ -1272,6 +1272,15 @@
     },
     {
       "pais": "",
+      "liga": "NWSL, Semifinals",
+      "liga_id": "8301",
+      "veces_visto": 15,
+      "ejemplo_partido": "Washington Spirit vs Utah Royals",
+      "fixture_id": "401933734",
+      "ultimo_visto": "2026-11-15"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals",
       "liga_id": "22947",
       "veces_visto": 14,
@@ -1287,15 +1296,6 @@
       "ejemplo_partido": "América de Cali vs Deportivo Pereira",
       "fixture_id": "401902716",
       "ultimo_visto": "2026-09-21"
-    },
-    {
-      "pais": "",
-      "liga": "NWSL, Semifinals",
-      "liga_id": "8301",
-      "veces_visto": 14,
-      "ejemplo_partido": "Washington Spirit vs Utah Royals",
-      "fixture_id": "401933734",
-      "ultimo_visto": "2026-11-15"
     },
     {
       "pais": "",
