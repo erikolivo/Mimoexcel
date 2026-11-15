@@ -239,10 +239,104 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "17'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "3",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "18.3",
+            "totalShots": "2",
+            "shotsOnTarget": "1",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "16",
+            "totalPasses": "27",
+            "passPct": "0.6",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "1",
+            "totalTackles": "1",
+            "tacklePct": "1.0",
+            "effectiveClearance": "0",
+            "totalClearance": "4"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "2",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "1",
+            "possessionPct": "81.7",
+            "totalShots": "1",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "104",
+            "totalPasses": "122",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "0",
+            "effectiveTackles": "1",
+            "totalTackles": "3",
+            "tacklePct": "0.3",
+            "effectiveClearance": "0",
+            "totalClearance": "1"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "17'",
+          "texto": "🔦 FAVORITO DOMINA\nTenerife Empate\nz: 1.6 | Tiros: 1.0-0.0\nPosesión: 18%\nCuota pre: 1.75 -> en vivo debería bajar",
+          "diferencia_goles": 0,
+          "id": "401883113-0",
+          "minuto_int": 17,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 6.6642492757477765,
+          "nivel_local": 5.11656583498075,
+          "nivel_visitante": 2.9250324265184426,
+          "color_local": "🟡",
+          "color_visitante": "🔴"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 5.11656583498075,
+          "color": "🟡",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 2.9250324265184426,
+          "color": "🔴",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Sedan vs Bourges Foot",
