@@ -1,13 +1,6 @@
 [
   {
     "fecha": "2026-11-14",
-    "local": "Braintree",
-    "visitante": "Kettering Town",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-14",
     "local": "Bridlington Town",
     "visitante": "Macclesfield",
     "favorito": "VISITANTE",
@@ -1261,6 +1254,13 @@
   },
   {
     "fecha": "2026-11-14",
+    "local": "Fraserburgh",
+    "visitante": "Huntly",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-14",
     "local": "Dob",
     "visitante": "Tolmin",
     "favorito": "LOCAL",
@@ -1373,13 +1373,6 @@
   },
   {
     "fecha": "2026-11-14",
-    "local": "Broadmeadow Magic",
-    "visitante": "Avondale",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-11-14",
     "local": "Sutherland Sharks",
     "visitante": "Canberra FC",
     "favorito": "LOCAL",
@@ -1396,7 +1389,14 @@
     "fecha": "2026-11-14",
     "local": "Napier City Rovers",
     "visitante": "Ferrymead Bays",
-    "favorito": "DC LOCAL",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-11-14",
+    "local": "Panargiakos",
+    "visitante": "Panthyreatikos",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   }
 ]
