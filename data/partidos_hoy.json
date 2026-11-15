@@ -3714,7 +3714,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Comerciantes Unidos",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.19,
+        "relleno": false
+      }
     },
     {
       "partido": "France vs Türkiye",
@@ -3749,7 +3758,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "France",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.22,
+        "relleno": false
+      }
     },
     {
       "partido": "Panama vs Curaçao",
@@ -3819,7 +3837,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Águila",
+        "p_exito": 0.664,
+        "cuota_estimada": 1.45,
+        "relleno": true
+      }
     }
   ],
   "predicciones_activas": {},
