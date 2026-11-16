@@ -32,7 +32,7 @@
       "pais": "",
       "liga": "Coupe de France, Seventh Round",
       "liga_id": "3952",
-      "veces_visto": 888,
+      "veces_visto": 921,
       "ejemplo_partido": "Sporting Club Baie-Mahault vs Siroco Les Abymes",
       "fixture_id": "401933098",
       "ultimo_visto": "2026-11-15"
@@ -59,7 +59,7 @@
       "pais": "",
       "liga": "Women's FA Cup, First Round",
       "liga_id": "20226",
-      "veces_visto": 560,
+      "veces_visto": 561,
       "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
       "fixture_id": "401926253",
       "ultimo_visto": "2026-11-15"
@@ -68,7 +68,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 543,
+      "veces_visto": 548,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-11-15"
@@ -84,20 +84,20 @@
     },
     {
       "pais": "",
-      "liga": "Liga MX Femenil",
-      "liga_id": "24220",
-      "veces_visto": 486,
-      "ejemplo_partido": "Santos vs Puebla",
-      "fixture_id": "401924388",
+      "liga": "Women's Super League",
+      "liga_id": "8097",
+      "veces_visto": 489,
+      "ejemplo_partido": "West Ham United vs London City Lionesses",
+      "fixture_id": "401902921",
       "ultimo_visto": "2026-11-15"
     },
     {
       "pais": "",
-      "liga": "Women's Super League",
-      "liga_id": "8097",
-      "veces_visto": 486,
-      "ejemplo_partido": "West Ham United vs London City Lionesses",
-      "fixture_id": "401902921",
+      "liga": "Liga MX Femenil",
+      "liga_id": "24220",
+      "veces_visto": 488,
+      "ejemplo_partido": "Santos vs Puebla",
+      "fixture_id": "401924388",
       "ultimo_visto": "2026-11-15"
     },
     {
@@ -212,7 +212,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 280,
+      "veces_visto": 281,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-11-15"
@@ -234,6 +234,15 @@
       "ejemplo_partido": "Penicuik vs Clyde",
       "fixture_id": "401928436",
       "ultimo_visto": "2026-10-31"
+    },
+    {
+      "pais": "",
+      "liga": "Women's FA Cup, Second Round",
+      "liga_id": "20226",
+      "veces_visto": 230,
+      "ejemplo_partido": "Dulwich Hamlet vs Portishead Town",
+      "fixture_id": "401931842",
+      "ultimo_visto": "2026-11-15"
     },
     {
       "pais": "",
@@ -261,15 +270,6 @@
       "ejemplo_partido": "Daejeon Hana Citizen vs Kyoto Sanga",
       "fixture_id": "401912672",
       "ultimo_visto": "2026-11-03"
-    },
-    {
-      "pais": "",
-      "liga": "Women's FA Cup, Second Round",
-      "liga_id": "20226",
-      "veces_visto": 208,
-      "ejemplo_partido": "Dulwich Hamlet vs Portishead Town",
-      "fixture_id": "401931842",
-      "ultimo_visto": "2026-11-15"
     },
     {
       "pais": "",
@@ -338,7 +338,7 @@
       "pais": "",
       "liga": "Men's U-21 Friendly",
       "liga_id": "20132",
-      "veces_visto": 139,
+      "veces_visto": 140,
       "ejemplo_partido": "North Macedonia U21 vs Russia U21",
       "fixture_id": "401925163",
       "ultimo_visto": "2026-11-15"
@@ -365,7 +365,7 @@
       "pais": "",
       "liga": "Dutch Vrouwen Eredivisie",
       "liga_id": "19945",
-      "veces_visto": 124,
+      "veces_visto": 129,
       "ejemplo_partido": "FC Twente vs Feyenoord Rotterdam",
       "fixture_id": "401882168",
       "ultimo_visto": "2026-11-15"
@@ -1155,6 +1155,15 @@
     },
     {
       "pais": "",
+      "liga": "NWSL, Semifinals",
+      "liga_id": "8301",
+      "veces_visto": 20,
+      "ejemplo_partido": "Washington Spirit vs Utah Royals",
+      "fixture_id": "401933734",
+      "ultimo_visto": "2026-11-15"
+    },
+    {
+      "pais": "",
       "liga": "Arabian Gulf Cup, Group B",
       "liga_id": "23107",
       "veces_visto": 19,
@@ -1188,15 +1197,6 @@
       "ejemplo_partido": "Morocco vs Gabon",
       "fixture_id": "401920036",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "NWSL, Semifinals",
-      "liga_id": "8301",
-      "veces_visto": 19,
-      "ejemplo_partido": "Washington Spirit vs Utah Royals",
-      "fixture_id": "401933734",
-      "ultimo_visto": "2026-11-15"
     },
     {
       "pais": "",
