@@ -20605,7 +20605,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Portugal",
+        "p_exito": 0.664,
+        "cuota_estimada": 1.42,
+        "relleno": true
+      }
     },
     {
       "partido": "Israel vs Austria",
@@ -20640,7 +20649,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Austria",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.2,
+        "relleno": false
+      }
     },
     {
       "partido": "Atlético Nacional vs Once Caldas",
@@ -20675,7 +20693,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Atlético Nacional",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.19,
+        "relleno": false
+      }
     },
     {
       "partido": "El Salvador vs St. Martin",
@@ -20710,7 +20737,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "El Salvador",
+        "p_exito": 0.758,
+        "cuota_estimada": 1.3,
+        "relleno": false
+      }
     },
     {
       "partido": "América de Cali vs Internacional de Bogotá",
@@ -20745,7 +20781,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "América de Cali",
+        "p_exito": 0.664,
+        "cuota_estimada": 1.45,
+        "relleno": true
+      }
     },
     {
       "partido": "Mexico vs Jamaica",
@@ -20780,7 +20825,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Mexico",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.12,
+        "relleno": false
+      }
     }
   ],
   "predicciones_activas": {},
