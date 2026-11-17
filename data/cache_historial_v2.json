@@ -16787,18 +16787,8 @@
     ]
   },
   "v3|2597|all": {
-    "fecha_cache": "2026-11-13T11:34:05.873359",
+    "fecha_cache": "2026-11-17T19:44:39.396136",
     "historial": [
-      {
-        "id": "715422",
-        "fecha": "2024-09-10",
-        "goles_favor": 2,
-        "goles_contra": 0,
-        "es_local": true,
-        "resultado": "V",
-        "rival_id": "8940",
-        "competicion": "caf.nations_qual"
-      },
       {
         "id": "722041",
         "fecha": "2024-10-10",
@@ -17038,22 +17028,22 @@
         "resultado": "D",
         "rival_id": "2851",
         "competicion": "caf.nations_qual"
+      },
+      {
+        "id": "401927186",
+        "fecha": "2026-11-13",
+        "goles_favor": 4,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "4205",
+        "competicion": "caf.nations_qual"
       }
     ]
   },
   "v3|4205|all": {
-    "fecha_cache": "2026-11-13T11:34:06.155655",
+    "fecha_cache": "2026-11-17T19:44:39.151088",
     "historial": [
-      {
-        "id": "701336",
-        "fecha": "2024-03-26",
-        "goles_favor": 0,
-        "goles_contra": 0,
-        "es_local": true,
-        "resultado": "E",
-        "rival_id": "5775",
-        "competicion": "caf.nations_qual"
-      },
       {
         "id": "687342",
         "fecha": "2024-06-05",
@@ -17292,6 +17282,16 @@
         "es_local": true,
         "resultado": "D",
         "rival_id": "2849",
+        "competicion": "caf.nations_qual"
+      },
+      {
+        "id": "401927186",
+        "fecha": "2026-11-13",
+        "goles_favor": 2,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2597",
         "competicion": "caf.nations_qual"
       }
     ]
