@@ -17785,7 +17785,8 @@
           "color": "🔴",
           "n": 4
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Netherlands U21 vs Denmark U21",
@@ -17964,6 +17965,15 @@
           "minuto": "27'",
           "goles_local": 0,
           "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "33'",
+          "goles_local": 0,
+          "goles_visitante": 2,
           "stats_local": {},
           "stats_visitante": {},
           "periodo": 1,
