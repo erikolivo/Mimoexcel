@@ -10430,11 +10430,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 16.224792250015295,
           "nivel_local": 5.466582096247324,
           "nivel_visitante": 4.32810678142711,
@@ -10454,7 +10454,8 @@
           "color": "🟡",
           "n": 5
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Guinea-Bissau vs Madagascar",
