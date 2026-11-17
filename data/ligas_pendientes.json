@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-16",
+  "actualizado": "2026-11-17",
   "ligas": [
     {
       "pais": "",
@@ -275,10 +275,10 @@
       "pais": "",
       "liga": "Men's U-21 Friendly",
       "liga_id": "20132",
-      "veces_visto": 195,
+      "veces_visto": 200,
       "ejemplo_partido": "North Macedonia U21 vs Russia U21",
       "fixture_id": "401925163",
-      "ultimo_visto": "2026-11-16"
+      "ultimo_visto": "2026-11-17"
     },
     {
       "pais": "",
@@ -1719,6 +1719,15 @@
       "ejemplo_partido": "Tigres UANL vs Pumas UNAM",
       "fixture_id": "401932077",
       "ultimo_visto": "2026-11-14"
+    },
+    {
+      "pais": "",
+      "liga": "SAFF Championship, Final",
+      "liga_id": "18914",
+      "veces_visto": 1,
+      "ejemplo_partido": "India vs Pakistan",
+      "fixture_id": "401934455",
+      "ultimo_visto": "2026-11-17"
     }
   ]
 }
