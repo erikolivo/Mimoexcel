@@ -25681,11 +25681,11 @@
           ],
           "lado": "rival",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 12.49185616440548,
           "nivel_local": 2.9723509852860133,
           "nivel_visitante": 7.508579951161228,
@@ -25714,7 +25714,8 @@
           "color": "🟢",
           "n": 5
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Israel vs Austria",
@@ -27285,11 +27286,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 15.776379472841834,
           "nivel_local": 3.7514430874373565,
           "nivel_visitante": 6.935970986600514,
@@ -27318,7 +27319,8 @@
           "color": "🟢",
           "n": 5
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Atlético Nacional vs Once Caldas",
