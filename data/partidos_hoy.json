@@ -24828,10 +24828,114 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "25'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "1",
+            "possessionPct": "62.8",
+            "totalShots": "6",
+            "shotsOnTarget": "3",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "100",
+            "totalPasses": "121",
+            "passPct": "0.8",
+            "accurateCrosses": "4",
+            "totalCrosses": "8",
+            "crossPct": "0.5",
+            "totalLongBalls": "11",
+            "accurateLongBalls": "8",
+            "longballPct": "0.7",
+            "blockedShots": "1",
+            "effectiveTackles": "1",
+            "totalTackles": "3",
+            "tacklePct": "0.3",
+            "interceptions": "2",
+            "effectiveClearance": "3",
+            "totalClearance": "3"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "3",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "2",
+            "possessionPct": "37.2",
+            "totalShots": "2",
+            "shotsOnTarget": "1",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "54",
+            "totalPasses": "75",
+            "passPct": "0.7",
+            "accurateCrosses": "0",
+            "totalCrosses": "1",
+            "crossPct": "0.0",
+            "totalLongBalls": "17",
+            "accurateLongBalls": "8",
+            "longballPct": "0.5",
+            "blockedShots": "0",
+            "effectiveTackles": "3",
+            "totalTackles": "8",
+            "tacklePct": "0.4",
+            "interceptions": "0",
+            "effectiveClearance": "10",
+            "totalClearance": "10"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "alerta_1er_tiempo",
+          "minuto": "25'",
+          "texto": "⏱️ Alerta de primer tiempo -- el favorito domina el 0-0 (87%).",
+          "diferencia_goles": 0,
+          "id": "401929706-0",
+          "minuto_int": 25,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "fav",
+          "criterio": "fin_1t",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 15.873297795175919,
+          "nivel_local": 5.723833658912905,
+          "nivel_visitante": 5.205433597363894,
+          "color_local": "🟡",
+          "color_visitante": "🟡"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 5.723833658912905,
+          "color": "🟡",
+          "n": 4
+        },
+        "visitante": {
+          "poder": 5.205433597363894,
+          "color": "🟡",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Canada vs Guatemala",
