@@ -59,7 +59,7 @@
       "pais": "",
       "liga": "Women's FA Cup, First Round",
       "liga_id": "20226",
-      "veces_visto": 562,
+      "veces_visto": 563,
       "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
       "fixture_id": "401926253",
       "ultimo_visto": "2026-11-18"
@@ -104,7 +104,7 @@
       "pais": "",
       "liga": "WSL Players Cup, League Phase",
       "liga_id": "23390",
-      "veces_visto": 418,
+      "veces_visto": 423,
       "ejemplo_partido": "Crystal Palace vs Watford",
       "fixture_id": "401923288",
       "ultimo_visto": "2026-11-18"
@@ -176,7 +176,7 @@
       "pais": "",
       "liga": "UEFA Women's Champions League, League Phase",
       "liga_id": "19483",
-      "veces_visto": 308,
+      "veces_visto": 312,
       "ejemplo_partido": "Bayern Munich vs Manchester City",
       "fixture_id": "401917018",
       "ultimo_visto": "2026-11-18"
@@ -1614,6 +1614,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Bolivia, Finals",
+      "liga_id": "23284",
+      "veces_visto": 2,
+      "ejemplo_partido": "Always Ready vs Real Potosí",
+      "fixture_id": "401930226",
+      "ultimo_visto": "2026-11-18"
+    },
+    {
+      "pais": "",
       "liga": "Campeones Cup, 2026 Campeones Cup",
       "liga_id": "18771",
       "veces_visto": 1,
@@ -1728,15 +1737,6 @@
       "ejemplo_partido": "Tigres UANL vs Pumas UNAM",
       "fixture_id": "401932077",
       "ultimo_visto": "2026-11-14"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Finals",
-      "liga_id": "23284",
-      "veces_visto": 1,
-      "ejemplo_partido": "Always Ready vs Real Potosí",
-      "fixture_id": "401930226",
-      "ultimo_visto": "2026-11-18"
     }
   ]
 }
