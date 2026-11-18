@@ -19997,18 +19997,8 @@
     ]
   },
   "v3|2650|all": {
-    "fecha_cache": "2026-11-13T11:34:10.175243",
+    "fecha_cache": "2026-11-18T01:39:31.402653",
     "historial": [
-      {
-        "id": "702753",
-        "fecha": "2024-09-09",
-        "goles_favor": 2,
-        "goles_contra": 1,
-        "es_local": true,
-        "resultado": "V",
-        "rival_id": "19314",
-        "competicion": "concacaf.nations.league"
-      },
       {
         "id": "702772",
         "fecha": "2024-10-11",
@@ -20247,6 +20237,16 @@
         "es_local": false,
         "resultado": "E",
         "rival_id": "2728",
+        "competicion": "concacaf.nations.league"
+      },
+      {
+        "id": "401929712",
+        "fecha": "2026-11-13",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "10596",
         "competicion": "concacaf.nations.league"
       }
     ]
