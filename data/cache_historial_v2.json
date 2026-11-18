@@ -26575,5 +26575,69 @@
         "competicion": "fifa.friendly"
       }
     ]
+  },
+  "v3|21723|all": {
+    "fecha_cache": "2026-11-18T11:30:09.201757",
+    "historial": [
+      {
+        "id": "759790",
+        "fecha": "2025-10-28",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "5413",
+        "competicion": "esp.copa_del_rey"
+      }
+    ]
+  },
+  "v3|6827|all": {
+    "fecha_cache": "2026-11-18T11:30:09.630663",
+    "historial": [
+      {
+        "id": "401906459",
+        "fecha": "2026-08-08",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "20224",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401909040",
+        "fecha": "2026-08-14",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "6833",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401911647",
+        "fecha": "2026-08-19",
+        "goles_favor": 0,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "21299",
+        "competicion": "club.friendly"
+      },
+      {
+        "id": "401912689",
+        "fecha": "2026-08-22",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "21381",
+        "competicion": "club.friendly"
+      }
+    ]
+  },
+  "v3|5535|all": {
+    "fecha_cache": "2026-11-18T11:30:09.935420",
+    "historial": []
   }
 }
