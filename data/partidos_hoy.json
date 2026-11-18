@@ -28967,7 +28967,8 @@
           "color": "🟢",
           "n": 5
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "América de Cali vs Internacional de Bogotá",
@@ -29126,6 +29127,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "54'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "In Progress"
         }
       ],
       "alertas_enviadas": [],
@@ -29503,6 +29513,73 @@
             "interceptions": "4",
             "effectiveClearance": "6",
             "totalClearance": "6"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "31'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "2",
+            "saves": "0",
+            "possessionPct": "68.4",
+            "totalShots": "6",
+            "shotsOnTarget": "2",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "179",
+            "totalPasses": "204",
+            "passPct": "0.9",
+            "accurateCrosses": "1",
+            "totalCrosses": "5",
+            "crossPct": "0.2",
+            "totalLongBalls": "16",
+            "accurateLongBalls": "7",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "3",
+            "totalTackles": "4",
+            "tacklePct": "0.8",
+            "interceptions": "1",
+            "effectiveClearance": "3",
+            "totalClearance": "3"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "1",
+            "possessionPct": "31.6",
+            "totalShots": "1",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "71",
+            "totalPasses": "94",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "1",
+            "crossPct": "0.0",
+            "totalLongBalls": "21",
+            "accurateLongBalls": "10",
+            "longballPct": "0.5",
+            "blockedShots": "1",
+            "effectiveTackles": "2",
+            "totalTackles": "5",
+            "tacklePct": "0.4",
+            "interceptions": "8",
+            "effectiveClearance": "7",
+            "totalClearance": "7"
           },
           "periodo": 1,
           "estado_detalle": "First Half"
