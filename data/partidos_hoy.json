@@ -30792,11 +30792,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 14.855965231800507,
           "nivel_local": 3.0805583633371483,
           "nivel_visitante": 6.134580986098791,
@@ -30825,7 +30825,8 @@
           "color": "🟢",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     }
   ],
   "predicciones_activas": {},
