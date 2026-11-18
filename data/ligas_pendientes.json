@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-17",
+  "actualizado": "2026-11-18",
   "ligas": [
     {
       "pais": "",
@@ -59,10 +59,10 @@
       "pais": "",
       "liga": "Women's FA Cup, First Round",
       "liga_id": "20226",
-      "veces_visto": 561,
+      "veces_visto": 562,
       "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
       "fixture_id": "401926253",
-      "ultimo_visto": "2026-11-15"
+      "ultimo_visto": "2026-11-18"
     },
     {
       "pais": "",
@@ -102,21 +102,21 @@
     },
     {
       "pais": "",
+      "liga": "WSL Players Cup, League Phase",
+      "liga_id": "23390",
+      "veces_visto": 418,
+      "ejemplo_partido": "Crystal Palace vs Watford",
+      "fixture_id": "401923288",
+      "ultimo_visto": "2026-11-18"
+    },
+    {
+      "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
       "veces_visto": 415,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-11-14"
-    },
-    {
-      "pais": "",
-      "liga": "WSL Players Cup, League Phase",
-      "liga_id": "23390",
-      "veces_visto": 413,
-      "ejemplo_partido": "Crystal Palace vs Watford",
-      "fixture_id": "401923288",
-      "ultimo_visto": "2026-11-11"
     },
     {
       "pais": "",
@@ -176,10 +176,10 @@
       "pais": "",
       "liga": "UEFA Women's Champions League, League Phase",
       "liga_id": "19483",
-      "veces_visto": 304,
+      "veces_visto": 308,
       "ejemplo_partido": "Bayern Munich vs Manchester City",
       "fixture_id": "401917018",
-      "ultimo_visto": "2026-11-12"
+      "ultimo_visto": "2026-11-18"
     },
     {
       "pais": "",
@@ -1728,6 +1728,15 @@
       "ejemplo_partido": "Tigres UANL vs Pumas UNAM",
       "fixture_id": "401932077",
       "ultimo_visto": "2026-11-14"
+    },
+    {
+      "pais": "",
+      "liga": "Copa Bolivia, Finals",
+      "liga_id": "23284",
+      "veces_visto": 1,
+      "ejemplo_partido": "Always Ready vs Real Potosí",
+      "fixture_id": "401930226",
+      "ultimo_visto": "2026-11-18"
     }
   ]
 }
