@@ -1252,13 +1252,13 @@
       "nombre": "Mallorca",
       "pais": null,
       "liga": null,
-      "rating": 1687.69,
-      "rd": 143.44,
-      "vol": 0.059993,
-      "partidos_jugados": 10,
+      "rating": 1712.07,
+      "rd": 139.2,
+      "vol": 0.059992,
+      "partidos_jugados": 11,
       "partidos_bootstrap": 0,
-      "partidos_reales": 10,
-      "ultima_actualizacion": "2026-11-03"
+      "partidos_reales": 11,
+      "ultima_actualizacion": "2026-11-19"
     },
     "espn:5404": {
       "nombre": "Ceuta",
@@ -8920,13 +8920,13 @@
       "nombre": "CD Sabadell",
       "pais": null,
       "liga": null,
-      "rating": 1534.93,
-      "rd": 162.13,
+      "rating": 1578.14,
+      "rd": 155.08,
       "vol": 0.059996,
-      "partidos_jugados": 7,
+      "partidos_jugados": 8,
       "partidos_bootstrap": 0,
-      "partidos_reales": 7,
-      "ultima_actualizacion": "2026-11-10"
+      "partidos_reales": 8,
+      "ultima_actualizacion": "2026-11-19"
     },
     "espn:165": {
       "nombre": "Nantes",
@@ -9592,13 +9592,13 @@
       "nombre": "Real Potosí",
       "pais": null,
       "liga": null,
-      "rating": 1597.8,
-      "rd": 144.7,
-      "vol": 0.060001,
-      "partidos_jugados": 9,
+      "rating": 1540.79,
+      "rd": 136.01,
+      "vol": 0.060002,
+      "partidos_jugados": 10,
       "partidos_bootstrap": 0,
-      "partidos_reales": 9,
-      "ultima_actualizacion": "2026-11-06"
+      "partidos_reales": 10,
+      "ultima_actualizacion": "2026-11-19"
     },
     "espn:20851": {
       "nombre": "Athletic",
@@ -10048,13 +10048,13 @@
       "nombre": "Always Ready",
       "pais": null,
       "liga": null,
-      "rating": 1526.27,
-      "rd": 148.77,
-      "vol": 0.059999,
-      "partidos_jugados": 8,
+      "rating": 1586.37,
+      "rd": 139.25,
+      "vol": 0.06,
+      "partidos_jugados": 9,
       "partidos_bootstrap": 0,
-      "partidos_reales": 8,
-      "ultima_actualizacion": "2026-11-12"
+      "partidos_reales": 9,
+      "ultima_actualizacion": "2026-11-19"
     },
     "espn:7870": {
       "nombre": "CD Malacateco",
@@ -10624,13 +10624,13 @@
       "nombre": "Tenerife",
       "pais": null,
       "liga": null,
-      "rating": 1480.62,
-      "rd": 160.31,
+      "rating": 1527.68,
+      "rd": 153.48,
       "vol": 0.059996,
-      "partidos_jugados": 7,
+      "partidos_jugados": 8,
       "partidos_bootstrap": 0,
-      "partidos_reales": 7,
-      "ultima_actualizacion": "2026-11-16"
+      "partidos_reales": 8,
+      "ultima_actualizacion": "2026-11-19"
     },
     "espn:9": {
       "nombre": "Gimnasia La Plata",
@@ -28907,6 +28907,42 @@
       "partidos_bootstrap": 0,
       "partidos_reales": 1,
       "ultima_actualizacion": "2026-11-18"
+    },
+    "espn:21723": {
+      "nombre": "Utebo",
+      "pais": null,
+      "liga": null,
+      "rating": 1340.92,
+      "rd": 261.23,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-11-19"
+    },
+    "espn:6827": {
+      "nombre": "Alcoyano",
+      "pais": null,
+      "liga": null,
+      "rating": 1395.08,
+      "rd": 271.22,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-11-19"
+    },
+    "espn:5535": {
+      "nombre": "Badajoz",
+      "pais": null,
+      "liga": null,
+      "rating": 1317.08,
+      "rd": 260.64,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-11-19"
     }
   }
 }
