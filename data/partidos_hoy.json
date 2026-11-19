@@ -231,6 +231,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": null,
+          "goles_local": 3,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": null,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -459,6 +468,15 @@
         },
         {
           "minuto": "88'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'+3'",
           "goles_local": 1,
           "goles_visitante": 0,
           "stats_local": {},
