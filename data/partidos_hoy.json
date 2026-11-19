@@ -19,8 +19,8 @@
       "p_gana_fav": 0.664,
       "p_no_pierde_fav": 0.862,
       "pf_hoja": 0.65,
-      "n_fotos_hoja": 3,
-      "clv": -0.0305,
+      "n_fotos_hoja": 4,
+      "clv": -0.0221,
       "fuente_favorito": "Google Sheets",
       "fila_fuente": 49439,
       "hora_inicio": "2026-11-18T18:00Z",
@@ -1310,8 +1310,8 @@
       "p_gana_fav": 0.664,
       "p_no_pierde_fav": 0.862,
       "pf_hoja": 0.65,
-      "n_fotos_hoja": 3,
-      "clv": -0.0215,
+      "n_fotos_hoja": 4,
+      "clv": -0.0131,
       "fuente_favorito": "Google Sheets",
       "fila_fuente": 49440,
       "hora_inicio": "2026-11-18T19:00Z",
@@ -3057,7 +3057,7 @@
       "p_gana_fav": 0.553,
       "p_no_pierde_fav": 0.79,
       "pf_hoja": 0.55,
-      "n_fotos_hoja": 3,
+      "n_fotos_hoja": 4,
       "clv": -0.0418,
       "fuente_favorito": "Google Sheets",
       "fila_fuente": 49441,
@@ -4442,7 +4442,7 @@
       "p_gana_fav": 0.723,
       "p_no_pierde_fav": 0.895,
       "pf_hoja": 0.74,
-      "n_fotos_hoja": 1,
+      "n_fotos_hoja": 2,
       "clv": 0.0,
       "fuente_favorito": "Google Sheets",
       "fila_fuente": 49473,
@@ -4660,7 +4660,5 @@
       "diferencia_maxima_alcanzada": 0,
       "aviso_final_enviado": true
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
