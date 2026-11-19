@@ -243,7 +243,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Boston River vs Deportivo Maldonado",
@@ -477,6 +478,15 @@
         },
         {
           "minuto": "90'+3'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'+8'",
           "goles_local": 1,
           "goles_visitante": 0,
           "stats_local": {},
