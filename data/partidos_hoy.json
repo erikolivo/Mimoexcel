@@ -4442,11 +4442,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 7.468006580995822,
           "nivel_local": 3.986722259135926,
           "nivel_visitante": 5.988709287788959,
@@ -4466,7 +4466,8 @@
           "color": "🟡",
           "n": 5
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Bengaluru FC vs Mumbai City FC",
