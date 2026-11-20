@@ -8897,7 +8897,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Bayern Munich",
+        "p_exito": 0.928,
+        "cuota_estimada": 1.07,
+        "relleno": false
+      }
     },
     {
       "partido": "Hellas Verona vs Cesena",
@@ -8932,7 +8941,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Hellas Verona",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.16,
+        "relleno": false
+      }
     },
     {
       "partido": "Athletic Club vs Espanyol",
@@ -9002,7 +9020,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "FC Porto",
+        "p_exito": 0.928,
+        "cuota_estimada": 1.1,
+        "relleno": false
+      }
     },
     {
       "partido": "Deportivo Recoleta vs Guaraní",
