@@ -11120,7 +11120,7 @@
     ]
   },
   "7115|2026-10": {
-    "fecha_cache": "2026-11-04T12:34:46.659736",
+    "fecha_cache": "2026-11-20T10:19:22.459513",
     "historial": [
       {
         "id": "401877610",
@@ -27827,8 +27827,29 @@
     ]
   },
   "7115|2026-11": {
-    "fecha_cache": "2026-11-04T12:34:46.659736",
-    "historial": []
+    "fecha_cache": "2026-11-20T10:19:22.459513",
+    "historial": [
+      {
+        "id": "401912613",
+        "fecha": "2026-11-04",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "7138",
+        "competicion": "all"
+      },
+      {
+        "id": "401877556",
+        "fecha": "2026-11-07",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "3384",
+        "competicion": "jpn.1"
+      }
+    ]
   },
   "977|2026-11": {
     "fecha_cache": "2026-11-08T11:32:24.221850",
@@ -56746,5 +56767,99 @@
   "5535|2026-09": {
     "fecha_cache": "2026-11-18T20:25:42.719232",
     "historial": []
+  },
+  "7104|2026-11": {
+    "fecha_cache": "2026-11-20T10:19:23.468710",
+    "historial": []
+  },
+  "7104|2026-10": {
+    "fecha_cache": "2026-11-20T10:19:23.468710",
+    "historial": [
+      {
+        "id": "401877618",
+        "fecha": "2026-10-11",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131701",
+        "competicion": "jpn.1"
+      },
+      {
+        "id": "401877600",
+        "fecha": "2026-10-17",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "7102",
+        "competicion": "jpn.1"
+      },
+      {
+        "id": "401877592",
+        "fecha": "2026-10-21",
+        "goles_favor": 0,
+        "goles_contra": 5,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "22167",
+        "competicion": "all"
+      },
+      {
+        "id": "401877565",
+        "fecha": "2026-10-24",
+        "goles_favor": 0,
+        "goles_contra": 4,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "7114",
+        "competicion": "jpn.1"
+      },
+      {
+        "id": "401877562",
+        "fecha": "2026-10-31",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "21361",
+        "competicion": "jpn.1"
+      }
+    ]
+  },
+  "7104|2026-09": {
+    "fecha_cache": "2026-11-20T10:19:23.468710",
+    "historial": [
+      {
+        "id": "401877641",
+        "fecha": "2026-09-06",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "7112",
+        "competicion": "jpn.1"
+      },
+      {
+        "id": "401877639",
+        "fecha": "2026-09-12",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "7107",
+        "competicion": "jpn.1"
+      },
+      {
+        "id": "401877613",
+        "fecha": "2026-09-19",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "7111",
+        "competicion": "jpn.1"
+      }
+    ]
   }
 }
