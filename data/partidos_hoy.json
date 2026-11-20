@@ -18960,7 +18960,8 @@
           "color": "🟡",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "FC Porto vs Paredes",
@@ -19110,6 +19111,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "In Progress"
+        },
+        {
+          "minuto": "52'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
