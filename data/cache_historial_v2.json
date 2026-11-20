@@ -26639,5 +26639,40 @@
   "v3|5535|all": {
     "fecha_cache": "2026-11-18T11:30:09.935420",
     "historial": []
+  },
+  "v3|21606|all": {
+    "fecha_cache": "2026-11-20T11:35:14.067331",
+    "historial": [
+      {
+        "id": "401909611",
+        "fecha": "2026-08-30",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "132844",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401915757",
+        "fecha": "2026-09-20",
+        "goles_favor": 5,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "22397",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401924425",
+        "fecha": "2026-10-18",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "12698",
+        "competicion": "por.taca.portugal"
+      }
+    ]
   }
 }
