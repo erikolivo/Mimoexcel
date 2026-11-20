@@ -6418,10 +6418,104 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+3'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "6",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "5",
+            "saves": "2",
+            "possessionPct": "64.9",
+            "totalShots": "9",
+            "shotsOnTarget": "3",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "220",
+            "totalPasses": "257",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "2",
+            "totalTackles": "2",
+            "tacklePct": "1.0",
+            "effectiveClearance": "0",
+            "totalClearance": "8"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "3",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "3",
+            "saves": "3",
+            "possessionPct": "35.1",
+            "totalShots": "6",
+            "shotsOnTarget": "2",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "106",
+            "totalPasses": "135",
+            "passPct": "0.8",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "5",
+            "totalTackles": "6",
+            "tacklePct": "0.8",
+            "effectiveClearance": "0",
+            "totalClearance": "17"
+          },
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "45'+3'",
+          "texto": "🔦 FAVORITO DOMINA\nIndependiente del Valle Perdiendo 0-1\nz: 1.8 | Tiros: 3.0-2.0\nPosesión: 65%\nCuota pre: 1.45 -> en vivo debería bajar",
+          "diferencia_goles": -1,
+          "id": "401921320-0",
+          "minuto_int": 48,
+          "marcador_alerta": [
+            0,
+            1
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 8.199622616047131,
+          "nivel_local": 5.543554540730343,
+          "nivel_visitante": 6.854674375103572,
+          "color_local": "🟡",
+          "color_visitante": "🟢"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 5.543554540730343,
+          "color": "🟡",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 6.854674375103572,
+          "color": "🟢",
+          "n": 5
+        }
+      }
     },
     {
       "partido": "AGF vs Lyngby Boldklub",
