@@ -27284,5 +27284,40 @@
         "competicion": "mex.1"
       }
     ]
+  },
+  "v3|12705|all": {
+    "fecha_cache": "2026-11-21T11:32:28.898494",
+    "historial": [
+      {
+        "id": "759143",
+        "fecha": "2025-10-17",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "1929",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401913643",
+        "fecha": "2026-09-20",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "132868",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401924403",
+        "fecha": "2026-10-16",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "22394",
+        "competicion": "por.taca.portugal"
+      }
+    ]
   }
 }
