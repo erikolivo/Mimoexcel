@@ -51806,7 +51806,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Pisa",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.2,
+        "relleno": false
+      }
     },
     {
       "partido": "Xelajú MC vs Suchitepequez",
@@ -51841,7 +51850,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Xelajú MC",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.14,
+        "relleno": false
+      }
     },
     {
       "partido": "AS Monaco vs AJ Auxerre",
@@ -51981,7 +51999,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Real Madrid",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.17,
+        "relleno": false
+      }
     },
     {
       "partido": "Motherwell vs Rangers",
@@ -52086,7 +52113,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2,
+      "combinada_pick": {
+        "mercado": "gana_favorito",
+        "favorito": "Alianza Lima",
+        "p_exito": 0.816,
+        "cuota_estimada": 1.22,
+        "relleno": false
+      }
     },
     {
       "partido": "CD FAS vs Cacahuatique",
@@ -52261,7 +52297,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "Wellington Phoenix",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.25,
+        "relleno": false
+      }
     },
     {
       "partido": "Pérez Zeledón vs Saprissa",
@@ -52331,7 +52376,16 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "combinada_pick": {
+        "mercado": "doble_oportunidad",
+        "favorito": "CD Guastatoya",
+        "p_exito": 0.79,
+        "cuota_estimada": 1.12,
+        "relleno": false
+      }
     }
   ],
   "predicciones_activas": {},
