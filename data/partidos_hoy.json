@@ -74608,6 +74608,15 @@
           "stats_visitante": {},
           "periodo": 2,
           "estado_detalle": "In Progress"
+        },
+        {
+          "minuto": "87'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -74827,6 +74836,15 @@
         },
         {
           "minuto": "84'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "89'",
           "goles_local": 2,
           "goles_visitante": 0,
           "stats_local": {},
