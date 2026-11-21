@@ -20633,8 +20633,41 @@
         }
       },
       "aviso_final_enviado": true
+    },
+    {
+      "partido": "Tijuana vs Atlante",
+      "local": "Tijuana",
+      "visitante": "Atlante",
+      "favorito": "Tijuana",
+      "no_favorito": "Atlante",
+      "favorito_es_local": true,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 3,
+      "cuota_local_inicial": 1.75,
+      "cuota_empate_inicial": 3.6,
+      "cuota_visitante_inicial": 3.8,
+      "prioridad": "BAJA",
+      "prioridad_hoja": "MEDIA",
+      "p_gana_fav": 0.553,
+      "p_no_pierde_fav": 0.79,
+      "pf_hoja": 0.57,
+      "n_fotos_hoja": 3,
+      "clv": -0.0274,
+      "fuente_favorito": "Google Sheets",
+      "fila_fuente": 51204,
+      "hora_inicio": "2026-11-21T03:10Z",
+      "fixture_id": "401877052",
+      "liga_slug": "mex.1",
+      "liga_pais": "Mexico",
+      "liga_nombre": "Liga MX",
+      "home_id": "10125",
+      "away_id": "226",
+      "kickoff_utc": "2026-11-21T03:10Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
