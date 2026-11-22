@@ -59,7 +59,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 593,
+      "veces_visto": 597,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-11-22"
@@ -68,7 +68,7 @@
       "pais": "",
       "liga": "Women's FA Cup, First Round",
       "liga_id": "20226",
-      "veces_visto": 569,
+      "veces_visto": 570,
       "ejemplo_partido": "Lye Town vs COTON GREEN WOMEN",
       "fixture_id": "401926253",
       "ultimo_visto": "2026-11-22"
@@ -77,7 +77,7 @@
       "pais": "",
       "liga": "Women's Super League",
       "liga_id": "8097",
-      "veces_visto": 526,
+      "veces_visto": 531,
       "ejemplo_partido": "West Ham United vs London City Lionesses",
       "fixture_id": "401902921",
       "ultimo_visto": "2026-11-22"
@@ -93,6 +93,15 @@
     },
     {
       "pais": "",
+      "liga": "WSL Players Cup, League Phase",
+      "liga_id": "23390",
+      "veces_visto": 492,
+      "ejemplo_partido": "Crystal Palace vs Watford",
+      "fixture_id": "401923288",
+      "ultimo_visto": "2026-11-22"
+    },
+    {
+      "pais": "",
       "liga": "Liga MX Femenil",
       "liga_id": "24220",
       "veces_visto": 488,
@@ -102,18 +111,9 @@
     },
     {
       "pais": "",
-      "liga": "WSL Players Cup, League Phase",
-      "liga_id": "23390",
-      "veces_visto": 486,
-      "ejemplo_partido": "Crystal Palace vs Watford",
-      "fixture_id": "401923288",
-      "ultimo_visto": "2026-11-22"
-    },
-    {
-      "pais": "",
       "liga": "Première Ligue",
       "liga_id": "20955",
-      "veces_visto": 465,
+      "veces_visto": 467,
       "ejemplo_partido": "Paris Saint-Germain vs Strasbourg",
       "fixture_id": "401885667",
       "ultimo_visto": "2026-11-22"
@@ -336,21 +336,21 @@
     },
     {
       "pais": "",
+      "liga": "Dutch Vrouwen Eredivisie",
+      "liga_id": "19945",
+      "veces_visto": 149,
+      "ejemplo_partido": "FC Twente vs Feyenoord Rotterdam",
+      "fixture_id": "401882168",
+      "ultimo_visto": "2026-11-22"
+    },
+    {
+      "pais": "",
       "liga": "Women's Europa Cup, Second Qualifying Round",
       "liga_id": "24079",
       "veces_visto": 146,
       "ejemplo_partido": "Metalist 1925 Kharkiv vs Torreense",
       "fixture_id": "401916437",
       "ultimo_visto": "2026-09-30"
-    },
-    {
-      "pais": "",
-      "liga": "Dutch Vrouwen Eredivisie",
-      "liga_id": "19945",
-      "veces_visto": 144,
-      "ejemplo_partido": "FC Twente vs Feyenoord Rotterdam",
-      "fixture_id": "401882168",
-      "ultimo_visto": "2026-11-22"
     },
     {
       "pais": "",
@@ -959,7 +959,7 @@
       "pais": "",
       "liga": "FIFA U-17 World Cup, Group D",
       "liga_id": "5697",
-      "veces_visto": 28,
+      "veces_visto": 30,
       "ejemplo_partido": "France U17 vs Haiti U17",
       "fixture_id": "401873513",
       "ultimo_visto": "2026-11-22"
@@ -968,7 +968,7 @@
       "pais": "",
       "liga": "FIFA U-17 World Cup, Group B",
       "liga_id": "5697",
-      "veces_visto": 28,
+      "veces_visto": 30,
       "ejemplo_partido": "New Caledonia U17 vs Ecuador U17",
       "fixture_id": "401873510",
       "ultimo_visto": "2026-11-22"
@@ -977,7 +977,7 @@
       "pais": "",
       "liga": "FIFA U-17 World Cup, Group C",
       "liga_id": "5697",
-      "veces_visto": 28,
+      "veces_visto": 30,
       "ejemplo_partido": "Mozambique U17 vs Denmark U17",
       "fixture_id": "401873512",
       "ultimo_visto": "2026-11-22"
@@ -986,7 +986,7 @@
       "pais": "",
       "liga": "FIFA U-17 World Cup, Group A",
       "liga_id": "5697",
-      "veces_visto": 28,
+      "veces_visto": 30,
       "ejemplo_partido": "Qatar U17 vs Panama U17",
       "fixture_id": "401873515",
       "ultimo_visto": "2026-11-22"
