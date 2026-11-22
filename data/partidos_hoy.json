@@ -79583,7 +79583,8 @@
           "color": "🔴",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Pérez Zeledón vs Saprissa",
@@ -79808,6 +79809,15 @@
         },
         {
           "minuto": "90'+1'",
+          "goles_local": 1,
+          "goles_visitante": 3,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'+6'",
           "goles_local": 1,
           "goles_visitante": 3,
           "stats_local": {},
@@ -80043,6 +80053,15 @@
         {
           "minuto": "84'",
           "goles_local": 3,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'",
+          "goles_local": 4,
           "goles_visitante": 1,
           "stats_local": {},
           "stats_visitante": {},
