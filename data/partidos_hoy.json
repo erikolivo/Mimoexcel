@@ -78529,9 +78529,101 @@
           },
           "periodo": 1,
           "estado_detalle": "In Progress"
+        },
+        {
+          "minuto": "40'",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "stats_local": {
+            "foulsCommitted": "3",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "1",
+            "possessionPct": "49.3",
+            "totalShots": "4",
+            "shotsOnTarget": "3",
+            "shotPct": "0.8",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "229",
+            "totalPasses": "259",
+            "passPct": "0.9",
+            "accurateCrosses": "1",
+            "totalCrosses": "7",
+            "crossPct": "0.1",
+            "totalLongBalls": "14",
+            "accurateLongBalls": "8",
+            "longballPct": "0.6",
+            "blockedShots": "1",
+            "effectiveTackles": "2",
+            "totalTackles": "4",
+            "tacklePct": "0.5",
+            "interceptions": "3",
+            "effectiveClearance": "2",
+            "totalClearance": "2"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "3",
+            "possessionPct": "50.7",
+            "totalShots": "6",
+            "shotsOnTarget": "3",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "238",
+            "totalPasses": "267",
+            "passPct": "0.9",
+            "accurateCrosses": "3",
+            "totalCrosses": "5",
+            "crossPct": "0.6",
+            "totalLongBalls": "17",
+            "accurateLongBalls": "7",
+            "longballPct": "0.4",
+            "blockedShots": "1",
+            "effectiveTackles": "1",
+            "totalTackles": "4",
+            "tacklePct": "0.3",
+            "interceptions": "2",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "40'",
+          "texto": "🔦 FAVORITO DOMINA\nWellington Phoenix Perdiendo 0-2\nz: 1.5 | Tiros: 3.0-3.0\nPosesión: 49%\nCuota pre: 1.83 -> en vivo debería bajar",
+          "diferencia_goles": -2,
+          "id": "401892134-0",
+          "minuto_int": 40,
+          "marcador_alerta": [
+            0,
+            2
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 5.74375,
+          "nivel_local": 6.615488041860769,
+          "nivel_visitante": 3.716816505569868,
+          "color_local": "🟢",
+          "color_visitante": "🔴"
+        }
+      ],
       "diferencia_maxima_alcanzada": 0,
       "es_destacado": true,
       "grupo_destacado": 1,
@@ -78541,6 +78633,18 @@
         "p_exito": 0.79,
         "cuota_estimada": 1.25,
         "relleno": false
+      },
+      "nivel_actual": {
+        "local": {
+          "poder": 6.615488041860769,
+          "color": "🟢",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 3.716816505569868,
+          "color": "🔴",
+          "n": 6
+        }
       }
     },
     {
@@ -78633,6 +78737,15 @@
           "minuto": "34'",
           "goles_local": 0,
           "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "39'",
+          "goles_local": 0,
+          "goles_visitante": 2,
           "stats_local": {},
           "stats_visitante": {},
           "periodo": 1,
@@ -78736,6 +78849,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "36'",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "In Progress"
         }
       ],
       "alertas_enviadas": [],

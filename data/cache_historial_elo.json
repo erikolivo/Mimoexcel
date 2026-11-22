@@ -65752,5 +65752,71 @@
         "competicion": "ger.2"
       }
     ]
+  },
+  "8352|2026-11": {
+    "fecha_cache": "2026-11-22T02:40:51.660110",
+    "historial": []
+  },
+  "8352|2026-10": {
+    "fecha_cache": "2026-11-22T02:40:51.660110",
+    "historial": [
+      {
+        "id": "401892149",
+        "fecha": "2026-10-31",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "5323",
+        "competicion": "all"
+      }
+    ]
+  },
+  "8352|2026-09": {
+    "fecha_cache": "2026-11-22T02:40:51.660110",
+    "historial": []
+  },
+  "19340|2026-11": {
+    "fecha_cache": "2026-11-22T02:40:53.021024",
+    "historial": []
+  },
+  "19340|2026-10": {
+    "fecha_cache": "2026-11-22T02:40:53.021024",
+    "historial": [
+      {
+        "id": "401892160",
+        "fecha": "2026-10-17",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "5322",
+        "competicion": "all"
+      },
+      {
+        "id": "401892155",
+        "fecha": "2026-10-24",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "5323",
+        "competicion": "all"
+      },
+      {
+        "id": "401892147",
+        "fecha": "2026-10-31",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "13696",
+        "competicion": "all"
+      }
+    ]
+  },
+  "19340|2026-09": {
+    "fecha_cache": "2026-11-22T02:40:53.021024",
+    "historial": []
   }
 }
