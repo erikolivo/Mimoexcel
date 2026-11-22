@@ -1830,28 +1830,8 @@
     ]
   },
   "v3|218|all": {
-    "fecha_cache": "2026-11-02T01:31:57.556690",
+    "fecha_cache": "2026-11-22T11:35:54.263339",
     "historial": [
-      {
-        "id": "401840938",
-        "fecha": "2026-04-12",
-        "goles_favor": 1,
-        "goles_contra": 1,
-        "es_local": false,
-        "resultado": "E",
-        "rival_id": "227",
-        "competicion": "mex.1"
-      },
-      {
-        "id": "401865594",
-        "fecha": "2026-04-15",
-        "goles_favor": 1,
-        "goles_contra": 1,
-        "es_local": true,
-        "resultado": "E",
-        "rival_id": "18966",
-        "competicion": "concacaf.champions"
-      },
       {
         "id": "401840944",
         "fecha": "2026-04-18",
@@ -2130,6 +2110,26 @@
         "es_local": false,
         "resultado": "V",
         "rival_id": "222",
+        "competicion": "mex.1"
+      },
+      {
+        "id": "401876911",
+        "fecha": "2026-11-02",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "228",
+        "competicion": "mex.1"
+      },
+      {
+        "id": "401876906",
+        "fecha": "2026-11-08",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "232",
         "competicion": "mex.1"
       }
     ]
@@ -27927,6 +27927,236 @@
         "resultado": "D",
         "rival_id": "5326",
         "competicion": "aus.1"
+      }
+    ]
+  },
+  "v3|21701|all": {
+    "fecha_cache": "2026-11-22T11:34:56.921866",
+    "historial": [
+      {
+        "id": "401909612",
+        "fecha": "2026-08-30",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "132842",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401915760",
+        "fecha": "2026-09-20",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "131438",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401924382",
+        "fecha": "2026-10-17",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "3472",
+        "competicion": "por.taca.portugal"
+      }
+    ]
+  },
+  "v3|3698|all": {
+    "fecha_cache": "2026-11-22T11:34:57.189802",
+    "historial": [
+      {
+        "id": "401913076",
+        "fecha": "2026-09-18",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "21604",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401924406",
+        "fecha": "2026-10-17",
+        "goles_favor": 3,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "22050",
+        "competicion": "por.taca.portugal"
+      }
+    ]
+  },
+  "v3|132849|all": {
+    "fecha_cache": "2026-11-22T11:35:19.706064",
+    "historial": [
+      {
+        "id": "401909251",
+        "fecha": "2026-08-30",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "132852",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401915579",
+        "fecha": "2026-09-19",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "21611",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401924427",
+        "fecha": "2026-10-18",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "130232",
+        "competicion": "por.taca.portugal"
+      }
+    ]
+  },
+  "v3|22055|all": {
+    "fecha_cache": "2026-11-22T11:35:19.959368",
+    "historial": [
+      {
+        "id": "759148",
+        "fecha": "2025-10-19",
+        "goles_favor": 2,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "131443",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "760099",
+        "fecha": "2025-11-23",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "21615",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401915753",
+        "fecha": "2026-09-20",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "132863",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401924415",
+        "fecha": "2026-10-18",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "133196",
+        "competicion": "por.taca.portugal"
+      }
+    ]
+  },
+  "v3|20740|all": {
+    "fecha_cache": "2026-11-22T11:35:22.847710",
+    "historial": [
+      {
+        "id": "759134",
+        "fecha": "2025-10-18",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "22063",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "760106",
+        "fecha": "2025-11-23",
+        "goles_favor": 5,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "131435",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "762055",
+        "fecha": "2025-12-17",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "1929",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401915865",
+        "fecha": "2026-09-20",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "V",
+        "rival_id": "133199",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401924379",
+        "fecha": "2026-10-17",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "22063",
+        "competicion": "por.taca.portugal"
+      }
+    ]
+  },
+  "v3|133193|all": {
+    "fecha_cache": "2026-11-22T11:35:23.580132",
+    "historial": [
+      {
+        "id": "401906015",
+        "fecha": "2026-08-29",
+        "goles_favor": 3,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "21626",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401913962",
+        "fecha": "2026-09-20",
+        "goles_favor": 4,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "132866",
+        "competicion": "por.taca.portugal"
+      },
+      {
+        "id": "401924407",
+        "fecha": "2026-10-18",
+        "goles_favor": 1,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "21607",
+        "competicion": "por.taca.portugal"
       }
     ]
   }
