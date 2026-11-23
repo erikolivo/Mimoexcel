@@ -5075,10 +5075,104 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "30'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "3",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "5",
+            "saves": "1",
+            "possessionPct": "71.3",
+            "totalShots": "3",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "187",
+            "totalPasses": "214",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "8",
+            "totalTackles": "9",
+            "tacklePct": "0.9",
+            "effectiveClearance": "0",
+            "totalClearance": "3"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "28.7",
+            "totalShots": "2",
+            "shotsOnTarget": "1",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "56",
+            "totalPasses": "85",
+            "passPct": "0.7",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "7",
+            "totalTackles": "9",
+            "tacklePct": "0.8",
+            "effectiveClearance": "0",
+            "totalClearance": "8"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "30'",
+          "texto": "🔦 FAVORITO DOMINA\nHammarby IF Empate\nz: 1.6 | Tiros: 0.0-1.0\nPosesión: 71%\nCuota pre: 1.22 -> en vivo debería bajar",
+          "diferencia_goles": 0,
+          "id": "401842888-0",
+          "minuto_int": 30,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 6.816699583738472,
+          "nivel_local": 6.696600509430608,
+          "nivel_visitante": 5.041547351844146,
+          "color_local": "🟢",
+          "color_visitante": "🟡"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 6.696600509430608,
+          "color": "🟢",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 5.041547351844146,
+          "color": "🟡",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Real Oruro vs Guabirá",
