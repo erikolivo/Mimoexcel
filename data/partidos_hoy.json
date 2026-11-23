@@ -54738,6 +54738,15 @@
           "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "42'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
       "alertas_enviadas": [],
@@ -55176,10 +55185,114 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "32'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "3",
+            "saves": "2",
+            "possessionPct": "70.5",
+            "totalShots": "6",
+            "shotsOnTarget": "1",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "217",
+            "totalPasses": "242",
+            "passPct": "0.9",
+            "accurateCrosses": "2",
+            "totalCrosses": "10",
+            "crossPct": "0.2",
+            "totalLongBalls": "15",
+            "accurateLongBalls": "8",
+            "longballPct": "0.5",
+            "blockedShots": "1",
+            "effectiveTackles": "4",
+            "totalTackles": "5",
+            "tacklePct": "0.8",
+            "interceptions": "5",
+            "effectiveClearance": "3",
+            "totalClearance": "3"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "2",
+            "saves": "1",
+            "possessionPct": "29.5",
+            "totalShots": "3",
+            "shotsOnTarget": "2",
+            "shotPct": "0.7",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "66",
+            "totalPasses": "101",
+            "passPct": "0.7",
+            "accurateCrosses": "0",
+            "totalCrosses": "2",
+            "crossPct": "0.0",
+            "totalLongBalls": "17",
+            "accurateLongBalls": "4",
+            "longballPct": "0.2",
+            "blockedShots": "1",
+            "effectiveTackles": "3",
+            "totalTackles": "3",
+            "tacklePct": "1.0",
+            "interceptions": "4",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "32'",
+          "texto": "🔦 FAVORITO DOMINA\nVancouver Whitecaps Empate\nz: 1.5 | Tiros: 1.0-2.0\nPosesión: 70%\nCuota pre: 1.48 -> en vivo debería bajar",
+          "diferencia_goles": 0,
+          "id": "401933729-0",
+          "minuto_int": 32,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 10.334671708797583,
+          "nivel_local": 7.108127940349638,
+          "nivel_visitante": 5.544224035585905,
+          "color_local": "🟢",
+          "color_visitante": "🟡"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 7.108127940349638,
+          "color": "🟢",
+          "n": 4
+        },
+        "visitante": {
+          "poder": 5.544224035585905,
+          "color": "🟡",
+          "n": 5
+        }
+      }
     }
   ],
   "predicciones_activas": {},
