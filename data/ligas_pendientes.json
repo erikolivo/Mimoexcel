@@ -41,7 +41,7 @@
       "pais": "",
       "liga": "Liga F",
       "liga_id": "20956",
-      "veces_visto": 632,
+      "veces_visto": 633,
       "ejemplo_partido": "Deportivo vs Real Madrid",
       "fixture_id": "401882522",
       "ultimo_visto": "2026-11-23"
@@ -939,18 +939,9 @@
     },
     {
       "pais": "",
-      "liga": "EURO U-21 Qualifying, Group G",
-      "liga_id": "20114",
-      "veces_visto": 36,
-      "ejemplo_partido": "Netherlands U21 vs Norway U21",
-      "fixture_id": "732414",
-      "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
       "liga": "FIFA U-17 World Cup, Group G",
       "liga_id": "5697",
-      "veces_visto": 36,
+      "veces_visto": 38,
       "ejemplo_partido": "Belgium U17 vs Vietnam U17",
       "fixture_id": "401873519",
       "ultimo_visto": "2026-11-23"
@@ -959,7 +950,7 @@
       "pais": "",
       "liga": "FIFA U-17 World Cup, Group F",
       "liga_id": "5697",
-      "veces_visto": 36,
+      "veces_visto": 38,
       "ejemplo_partido": "Cuba U17 vs Tajikistan U17",
       "fixture_id": "401873521",
       "ultimo_visto": "2026-11-23"
@@ -968,7 +959,7 @@
       "pais": "",
       "liga": "FIFA U-17 World Cup, Group H",
       "liga_id": "5697",
-      "veces_visto": 36,
+      "veces_visto": 38,
       "ejemplo_partido": "Spain U17 vs China U17",
       "fixture_id": "401873520",
       "ultimo_visto": "2026-11-23"
@@ -977,10 +968,19 @@
       "pais": "",
       "liga": "FIFA U-17 World Cup, Group E",
       "liga_id": "5697",
-      "veces_visto": 36,
+      "veces_visto": 38,
       "ejemplo_partido": "Italy U17 vs Jamaica U17",
       "fixture_id": "401873524",
       "ultimo_visto": "2026-11-23"
+    },
+    {
+      "pais": "",
+      "liga": "EURO U-21 Qualifying, Group G",
+      "liga_id": "20114",
+      "veces_visto": 36,
+      "ejemplo_partido": "Netherlands U21 vs Norway U21",
+      "fixture_id": "732414",
+      "ultimo_visto": "2026-10-06"
     },
     {
       "pais": "",
