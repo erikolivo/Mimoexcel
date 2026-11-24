@@ -69233,5 +69233,175 @@
         "competicion": "esp.2"
       }
     ]
+  },
+  "1936|2026-11": {
+    "fecha_cache": "2026-11-24T00:03:29.671784",
+    "historial": [
+      {
+        "id": "401841308",
+        "fecha": "2026-11-19",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "3454",
+        "competicion": "all"
+      }
+    ]
+  },
+  "1936|2026-10": {
+    "fecha_cache": "2026-11-24T00:03:29.671784",
+    "historial": [
+      {
+        "id": "401841255",
+        "fecha": "2026-10-07",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "874",
+        "competicion": "all"
+      },
+      {
+        "id": "401841267",
+        "fecha": "2026-10-11",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "6273",
+        "competicion": "bra.1"
+      },
+      {
+        "id": "401841275",
+        "fecha": "2026-10-16",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "9169",
+        "competicion": "all"
+      },
+      {
+        "id": "401841285",
+        "fecha": "2026-10-24",
+        "goles_favor": 3,
+        "goles_contra": 0,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "6086",
+        "competicion": "bra.1"
+      },
+      {
+        "id": "401841289",
+        "fecha": "2026-10-28",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "3445",
+        "competicion": "all"
+      }
+    ]
+  },
+  "1936|2026-09": {
+    "fecha_cache": "2026-11-24T00:03:29.671784",
+    "historial": [
+      {
+        "id": "401841223",
+        "fecha": "2026-09-06",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "2674",
+        "competicion": "bra.1"
+      }
+    ]
+  },
+  "3457|2026-11": {
+    "fecha_cache": "2026-11-24T00:03:30.739635",
+    "historial": [
+      {
+        "id": "401841317",
+        "fecha": "2026-11-19",
+        "goles_favor": 2,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "6079",
+        "competicion": "all"
+      }
+    ]
+  },
+  "3457|2026-10": {
+    "fecha_cache": "2026-11-24T00:03:30.739635",
+    "historial": [
+      {
+        "id": "401841259",
+        "fecha": "2026-10-10",
+        "goles_favor": 1,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "2026",
+        "competicion": "bra.1"
+      },
+      {
+        "id": "401841272",
+        "fecha": "2026-10-19",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "874",
+        "competicion": "all"
+      },
+      {
+        "id": "401841280",
+        "fecha": "2026-10-24",
+        "goles_favor": 1,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "E",
+        "rival_id": "3458",
+        "competicion": "bra.1"
+      },
+      {
+        "id": "401841294",
+        "fecha": "2026-10-31",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "3456",
+        "competicion": "bra.1"
+      }
+    ]
+  },
+  "3457|2026-09": {
+    "fecha_cache": "2026-11-24T00:03:30.739635",
+    "historial": [
+      {
+        "id": "401841235",
+        "fecha": "2026-09-13",
+        "goles_favor": 2,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "9169",
+        "competicion": "bra.1"
+      },
+      {
+        "id": "401841242",
+        "fecha": "2026-09-20",
+        "goles_favor": 1,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "2022",
+        "competicion": "bra.1"
+      }
+    ]
   }
 }

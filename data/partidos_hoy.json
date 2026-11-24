@@ -11805,10 +11805,114 @@
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "68'",
+          "goles_local": 1,
+          "goles_visitante": 3,
+          "stats_local": {
+            "foulsCommitted": "11",
+            "yellowCards": "2",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "9",
+            "saves": "3",
+            "possessionPct": "71.6",
+            "totalShots": "16",
+            "shotsOnTarget": "3",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "296",
+            "totalPasses": "358",
+            "passPct": "0.8",
+            "accurateCrosses": "10",
+            "totalCrosses": "41",
+            "crossPct": "0.2",
+            "totalLongBalls": "31",
+            "accurateLongBalls": "16",
+            "longballPct": "0.5",
+            "blockedShots": "8",
+            "effectiveTackles": "5",
+            "totalTackles": "8",
+            "tacklePct": "0.6",
+            "interceptions": "1",
+            "effectiveClearance": "10",
+            "totalClearance": "10"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "8",
+            "yellowCards": "4",
+            "redCards": "0",
+            "offsides": "5",
+            "wonCorners": "5",
+            "saves": "2",
+            "possessionPct": "28.4",
+            "totalShots": "10",
+            "shotsOnTarget": "6",
+            "shotPct": "0.6",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "100",
+            "totalPasses": "154",
+            "passPct": "0.6",
+            "accurateCrosses": "1",
+            "totalCrosses": "6",
+            "crossPct": "0.2",
+            "totalLongBalls": "51",
+            "accurateLongBalls": "14",
+            "longballPct": "0.3",
+            "blockedShots": "1",
+            "effectiveTackles": "11",
+            "totalTackles": "12",
+            "tacklePct": "0.9",
+            "interceptions": "11",
+            "effectiveClearance": "40",
+            "totalClearance": "40"
+          },
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "fav_domina_no_gana",
+          "minuto": "68'",
+          "texto": "🔦 FAVORITO DOMINA\nInternacional Perdiendo 1-3\nz: 2.1 | Tiros: 3.0-6.0\nPosesión: 72%\nCuota pre: 1.70 -> en vivo debería bajar",
+          "diferencia_goles": -2,
+          "id": "401841323-0",
+          "minuto_int": 68,
+          "marcador_alerta": [
+            1,
+            3
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 10.936217841277632,
+          "nivel_local": 5.679613520522368,
+          "nivel_visitante": 4.647856520044023,
+          "color_local": "🟡",
+          "color_visitante": "🟡"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 5.679613520522368,
+          "color": "🟡",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 4.647856520044023,
+          "color": "🟡",
+          "n": 6
+        }
+      }
     }
   ],
   "predicciones_activas": {},
