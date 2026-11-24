@@ -5711,10 +5711,104 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "4",
+            "saves": "0",
+            "possessionPct": "58.8",
+            "totalShots": "11",
+            "shotsOnTarget": "5",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "150",
+            "totalPasses": "176",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "2",
+            "effectiveTackles": "7",
+            "totalTackles": "8",
+            "tacklePct": "0.9",
+            "effectiveClearance": "0",
+            "totalClearance": "12"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "4",
+            "saves": "4",
+            "possessionPct": "41.2",
+            "totalShots": "4",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "100",
+            "totalPasses": "124",
+            "passPct": "0.8",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "9",
+            "totalTackles": "11",
+            "tacklePct": "0.8",
+            "effectiveClearance": "0",
+            "totalClearance": "20"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "posible_victoria_favorito",
+          "minuto": "45'",
+          "texto": "🟢 Gana Fav [BAJA]",
+          "diferencia_goles": 0,
+          "id": "401925407-0",
+          "minuto_int": 45,
+          "marcador_alerta": [
+            1,
+            1
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 15.715920350417257,
+          "nivel_local": 6.2662261300621624,
+          "nivel_visitante": 5.958447952907538,
+          "color_local": "🟢",
+          "color_visitante": "🟡"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 6.2662261300621624,
+          "color": "🟢",
+          "n": 6
+        },
+        "visitante": {
+          "poder": 5.958447952907538,
+          "color": "🟡",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Orlando Pirates vs Golden Arrows",
