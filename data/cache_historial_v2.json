@@ -28269,5 +28269,30 @@
         "competicion": "eng.trophy"
       }
     ]
+  },
+  "v3|18785|all": {
+    "fecha_cache": "2026-11-24T19:47:57.449703",
+    "historial": [
+      {
+        "id": "401906379",
+        "fecha": "2026-09-22",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "2731",
+        "competicion": "eng.trophy"
+      },
+      {
+        "id": "401906363",
+        "fecha": "2026-10-06",
+        "goles_favor": 0,
+        "goles_contra": 2,
+        "es_local": false,
+        "resultado": "D",
+        "rival_id": "399",
+        "competicion": "eng.trophy"
+      }
+    ]
   }
 }
