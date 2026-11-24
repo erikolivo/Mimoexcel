@@ -6682,41 +6682,6 @@
       "diferencia_maxima_alcanzada": 0
     },
     {
-      "partido": "Fleetwood Town vs Leeds United U21",
-      "local": "Fleetwood Town",
-      "visitante": "Leeds United U21",
-      "favorito": "Fleetwood Town",
-      "no_favorito": "Leeds United U21",
-      "favorito_es_local": true,
-      "tipo_pronostico": "favorito_directo",
-      "confianza_estrellas": 2,
-      "cuota_local_inicial": 1.45,
-      "cuota_empate_inicial": 5.0,
-      "cuota_visitante_inicial": 4.75,
-      "prioridad": "MEDIA",
-      "prioridad_hoja": "ALTA",
-      "p_gana_fav": 0.664,
-      "p_no_pierde_fav": 0.862,
-      "pf_hoja": 0.69,
-      "n_fotos_hoja": 3,
-      "clv": 0.0,
-      "fuente_favorito": "Google Sheets",
-      "fila_fuente": 56145,
-      "hora_inicio": "2026-11-24T19:00Z",
-      "fixture_id": "401906325",
-      "liga_slug": "eng.trophy",
-      "liga_pais": "England",
-      "liga_nombre": "EFL Trophy",
-      "home_id": "3891",
-      "away_id": "20728",
-      "kickoff_utc": "2026-11-24T19:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
-    },
-    {
       "partido": "Salford City vs Sunderland U21",
       "local": "Salford City",
       "visitante": "Sunderland U21",
@@ -7486,7 +7451,5 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ],
-  "predicciones_activas": {},
-  "historial_predicciones": {}
+  ]
 }
