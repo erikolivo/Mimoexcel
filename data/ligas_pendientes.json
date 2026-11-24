@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-23",
+  "actualizado": "2026-11-24",
   "ligas": [
     {
       "pais": "",
@@ -185,10 +185,10 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 314,
+      "veces_visto": 315,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
-      "ultimo_visto": "2026-11-21"
+      "ultimo_visto": "2026-11-24"
     },
     {
       "pais": "",
@@ -1695,6 +1695,42 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 World Cup, Group I",
+      "liga_id": "5697",
+      "veces_visto": 2,
+      "ejemplo_partido": "Costa Rica U17 vs Republic of Ireland U17",
+      "fixture_id": "401873555",
+      "ultimo_visto": "2026-11-24"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 World Cup, Group K",
+      "liga_id": "5697",
+      "veces_visto": 2,
+      "ejemplo_partido": "Venezuela U17 vs Romania U17",
+      "fixture_id": "401873551",
+      "ultimo_visto": "2026-11-24"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 World Cup, Group L",
+      "liga_id": "5697",
+      "veces_visto": 2,
+      "ejemplo_partido": "Japan U17 vs Serbia U17",
+      "fixture_id": "401873550",
+      "ultimo_visto": "2026-11-24"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 World Cup, Group J",
+      "liga_id": "5697",
+      "veces_visto": 2,
+      "ejemplo_partido": "Dominican Republic U17 vs Chile U17",
+      "fixture_id": "401873554",
+      "ultimo_visto": "2026-11-24"
+    },
+    {
+      "pais": "",
       "liga": "Campeones Cup, 2026 Campeones Cup",
       "liga_id": "18771",
       "veces_visto": 1,
@@ -1764,42 +1800,6 @@
       "ejemplo_partido": "Galatasaray vs Kasimpasa",
       "fixture_id": "401888280",
       "ultimo_visto": "2026-10-09"
-    },
-    {
-      "pais": "",
-      "liga": "Concacaf Central American Cup, Semifinals - 1st Leg",
-      "liga_id": "22947",
-      "veces_visto": 1,
-      "ejemplo_partido": "Cartaginés vs Club Deportivo Olimpia",
-      "fixture_id": "401922486",
-      "ultimo_visto": "2026-10-21"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Quarterfinals - 2nd Leg",
-      "liga_id": "23284",
-      "veces_visto": 1,
-      "ejemplo_partido": "The Strongest vs Always Ready",
-      "fixture_id": "401929984",
-      "ultimo_visto": "2026-11-04"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Semifinals - 1st Leg",
-      "liga_id": "23284",
-      "veces_visto": 1,
-      "ejemplo_partido": "Independiente Petrolero vs Always Ready",
-      "fixture_id": "401930275",
-      "ultimo_visto": "2026-11-11"
-    },
-    {
-      "pais": "",
-      "liga": "Liga MX Femenil - 1st Leg",
-      "liga_id": "23541",
-      "veces_visto": 1,
-      "ejemplo_partido": "América vs Toluca",
-      "fixture_id": "401932063",
-      "ultimo_visto": "2026-11-11"
     }
   ]
 }
