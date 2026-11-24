@@ -2053,11 +2053,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 2.701483088752444,
           "nivel_local": 4.913792208580132,
           "nivel_visitante": 5.4114067021062,
@@ -2077,7 +2077,8 @@
           "color": "🟡",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Ratchaburi FC vs Johor Darul Ta'zim",
