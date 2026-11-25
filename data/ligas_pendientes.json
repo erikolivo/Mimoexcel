@@ -615,6 +615,15 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 World Cup, Group C",
+      "liga_id": "5697",
+      "veces_visto": 56,
+      "ejemplo_partido": "Mozambique U17 vs Denmark U17",
+      "fixture_id": "401873512",
+      "ultimo_visto": "2026-11-25"
+    },
+    {
+      "pais": "",
       "liga": "UEFA Nations League, Group C1",
       "liga_id": "2395",
       "veces_visto": 55,
@@ -687,11 +696,20 @@
     },
     {
       "pais": "",
-      "liga": "FIFA U-17 World Cup, Group C",
+      "liga": "FIFA U-17 World Cup, Group D",
       "liga_id": "5697",
-      "veces_visto": 53,
-      "ejemplo_partido": "Mozambique U17 vs Denmark U17",
-      "fixture_id": "401873512",
+      "veces_visto": 52,
+      "ejemplo_partido": "France U17 vs Haiti U17",
+      "fixture_id": "401873513",
+      "ultimo_visto": "2026-11-25"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 World Cup, Group A",
+      "liga_id": "5697",
+      "veces_visto": 52,
+      "ejemplo_partido": "Qatar U17 vs Panama U17",
+      "fixture_id": "401873515",
       "ultimo_visto": "2026-11-25"
     },
     {
@@ -711,24 +729,6 @@
       "ejemplo_partido": "Atherton Collieries vs Trafford",
       "fixture_id": "401928244",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 World Cup, Group D",
-      "liga_id": "5697",
-      "veces_visto": 50,
-      "ejemplo_partido": "France U17 vs Haiti U17",
-      "fixture_id": "401873513",
-      "ultimo_visto": "2026-11-25"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 World Cup, Group A",
-      "liga_id": "5697",
-      "veces_visto": 50,
-      "ejemplo_partido": "Qatar U17 vs Panama U17",
-      "fixture_id": "401873515",
-      "ultimo_visto": "2026-11-25"
     },
     {
       "pais": "",
@@ -806,7 +806,7 @@
       "pais": "",
       "liga": "FIFA U-17 World Cup, Group B",
       "liga_id": "5697",
-      "veces_visto": 47,
+      "veces_visto": 48,
       "ejemplo_partido": "New Caledonia U17 vs Ecuador U17",
       "fixture_id": "401873510",
       "ultimo_visto": "2026-11-25"
@@ -1389,6 +1389,15 @@
     },
     {
       "pais": "",
+      "liga": "Copa Bolivia, Finals",
+      "liga_id": "23284",
+      "veces_visto": 15,
+      "ejemplo_partido": "Always Ready vs Real Potosí",
+      "fixture_id": "401930226",
+      "ultimo_visto": "2026-11-25"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals",
       "liga_id": "22947",
       "veces_visto": 14,
@@ -1404,15 +1413,6 @@
       "ejemplo_partido": "América de Cali vs Deportivo Pereira",
       "fixture_id": "401902716",
       "ultimo_visto": "2026-09-21"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Bolivia, Finals",
-      "liga_id": "23284",
-      "veces_visto": 14,
-      "ejemplo_partido": "Always Ready vs Real Potosí",
-      "fixture_id": "401930226",
-      "ultimo_visto": "2026-11-25"
     },
     {
       "pais": "",
