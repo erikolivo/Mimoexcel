@@ -14122,11 +14122,52 @@
     ]
   },
   "7102|2026-11": {
-    "fecha_cache": "2026-11-01T11:33:57.728229",
-    "historial": []
+    "fecha_cache": "2026-11-25T10:22:39.351784",
+    "historial": [
+      {
+        "id": "401877581",
+        "fecha": "2026-11-01",
+        "goles_favor": 0,
+        "goles_contra": 0,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "22167",
+        "competicion": "jpn.1"
+      },
+      {
+        "id": "401912614",
+        "fecha": "2026-11-04",
+        "goles_favor": 3,
+        "goles_contra": 3,
+        "es_local": false,
+        "resultado": "E",
+        "rival_id": "9693",
+        "competicion": "all"
+      },
+      {
+        "id": "401877555",
+        "fecha": "2026-11-08",
+        "goles_favor": 2,
+        "goles_contra": 3,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "7109",
+        "competicion": "jpn.1"
+      },
+      {
+        "id": "401877532",
+        "fecha": "2026-11-21",
+        "goles_favor": 0,
+        "goles_contra": 1,
+        "es_local": true,
+        "resultado": "D",
+        "rival_id": "22522",
+        "competicion": "jpn.1"
+      }
+    ]
   },
   "7102|2026-10": {
-    "fecha_cache": "2026-11-01T11:33:57.728229",
+    "fecha_cache": "2026-11-25T10:22:39.351784",
     "historial": [
       {
         "id": "401877610",
@@ -24353,11 +24394,22 @@
     ]
   },
   "17757|2026-11": {
-    "fecha_cache": "2026-11-03T11:30:17.367769",
-    "historial": []
+    "fecha_cache": "2026-11-25T10:22:40.454720",
+    "historial": [
+      {
+        "id": "401912616",
+        "fecha": "2026-11-03",
+        "goles_favor": 7,
+        "goles_contra": 4,
+        "es_local": true,
+        "resultado": "V",
+        "rival_id": "2052",
+        "competicion": "all"
+      }
+    ]
   },
   "17757|2026-10": {
-    "fecha_cache": "2026-11-03T11:30:17.367769",
+    "fecha_cache": "2026-11-25T10:22:40.454720",
     "historial": [
       {
         "id": "401912623",
@@ -24382,7 +24434,7 @@
     ]
   },
   "17757|2026-09": {
-    "fecha_cache": "2026-11-03T11:30:17.367769",
+    "fecha_cache": "2026-11-25T10:22:40.454720",
     "historial": [
       {
         "id": "401912654",
