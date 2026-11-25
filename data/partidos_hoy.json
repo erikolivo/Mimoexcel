@@ -11080,11 +11080,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 6.7487267383989025,
           "nivel_local": 8.081070974384378,
           "nivel_visitante": 6.164038745024958,
@@ -11104,7 +11104,8 @@
           "color": "🟢",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Internazionale vs VfB Stuttgart",
@@ -12766,7 +12767,8 @@
           "color": "🟡",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Atlético Madrid vs Viking FK",
@@ -14289,11 +14291,11 @@
           ],
           "lado": "fav",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 14.543962021873632,
           "nivel_local": 5.031643186859325,
           "nivel_visitante": 4.146064523265026,
@@ -14313,7 +14315,8 @@
           "color": "🟡",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     }
   ],
   "predicciones_activas": {},
