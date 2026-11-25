@@ -462,21 +462,21 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 World Cup, Group C",
+      "liga_id": "5697",
+      "veces_visto": 74,
+      "ejemplo_partido": "Mozambique U17 vs Denmark U17",
+      "fixture_id": "401873512",
+      "ultimo_visto": "2026-11-25"
+    },
+    {
+      "pais": "",
       "liga": "Copa Bolivia, Quarterfinals",
       "liga_id": "23284",
       "veces_visto": 73,
       "ejemplo_partido": "Independiente Petrolero vs Aurora",
       "fixture_id": "401929988",
       "ultimo_visto": "2026-11-05"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 World Cup, Group C",
-      "liga_id": "5697",
-      "veces_visto": 71,
-      "ejemplo_partido": "Mozambique U17 vs Denmark U17",
-      "fixture_id": "401873512",
-      "ultimo_visto": "2026-11-25"
     },
     {
       "pais": "",
@@ -507,6 +507,24 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 World Cup, Group D",
+      "liga_id": "5697",
+      "veces_visto": 64,
+      "ejemplo_partido": "France U17 vs Haiti U17",
+      "fixture_id": "401873513",
+      "ultimo_visto": "2026-11-25"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 World Cup, Group A",
+      "liga_id": "5697",
+      "veces_visto": 64,
+      "ejemplo_partido": "Qatar U17 vs Panama U17",
+      "fixture_id": "401873515",
+      "ultimo_visto": "2026-11-25"
+    },
+    {
+      "pais": "",
       "liga": "English FA Cup Qualifying, First Round Qualifying",
       "liga_id": "23480",
       "veces_visto": 63,
@@ -531,24 +549,6 @@
       "ejemplo_partido": "Malta U21 vs Germany U21",
       "fixture_id": "401758358",
       "ultimo_visto": "2026-10-06"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 World Cup, Group D",
-      "liga_id": "5697",
-      "veces_visto": 62,
-      "ejemplo_partido": "France U17 vs Haiti U17",
-      "fixture_id": "401873513",
-      "ultimo_visto": "2026-11-25"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 World Cup, Group A",
-      "liga_id": "5697",
-      "veces_visto": 62,
-      "ejemplo_partido": "Qatar U17 vs Panama U17",
-      "fixture_id": "401873515",
-      "ultimo_visto": "2026-11-25"
     },
     {
       "pais": "",
@@ -716,7 +716,7 @@
       "pais": "",
       "liga": "FIFA U-17 World Cup, Group B",
       "liga_id": "5697",
-      "veces_visto": 53,
+      "veces_visto": 54,
       "ejemplo_partido": "New Caledonia U17 vs Ecuador U17",
       "fixture_id": "401873510",
       "ultimo_visto": "2026-11-25"
