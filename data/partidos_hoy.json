@@ -7873,10 +7873,114 @@
           },
           "periodo": 1,
           "estado_detalle": "In Progress"
+        },
+        {
+          "minuto": "45'+1'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {
+            "foulsCommitted": "3",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "1",
+            "saves": "4",
+            "possessionPct": "25.1",
+            "totalShots": "3",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "95",
+            "totalPasses": "126",
+            "passPct": "0.8",
+            "accurateCrosses": "0",
+            "totalCrosses": "2",
+            "crossPct": "0.0",
+            "totalLongBalls": "24",
+            "accurateLongBalls": "9",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "5",
+            "totalTackles": "10",
+            "tacklePct": "0.5",
+            "interceptions": "6",
+            "effectiveClearance": "10",
+            "totalClearance": "10"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "4",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "2",
+            "wonCorners": "2",
+            "saves": "1",
+            "possessionPct": "74.9",
+            "totalShots": "11",
+            "shotsOnTarget": "5",
+            "shotPct": "0.5",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "353",
+            "totalPasses": "380",
+            "passPct": "0.9",
+            "accurateCrosses": "1",
+            "totalCrosses": "6",
+            "crossPct": "0.2",
+            "totalLongBalls": "7",
+            "accurateLongBalls": "5",
+            "longballPct": "0.7",
+            "blockedShots": "1",
+            "effectiveTackles": "5",
+            "totalTackles": "8",
+            "tacklePct": "0.6",
+            "interceptions": "2",
+            "effectiveClearance": "4",
+            "totalClearance": "4"
+          },
+          "periodo": 1,
+          "estado_detalle": "Halftime"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "ampliacion_marcador",
+          "minuto": "45'+1'",
+          "texto": "🔵 Proximo gol: Fav",
+          "diferencia_goles": 1,
+          "id": "401915378-0",
+          "minuto_int": 46,
+          "marcador_alerta": [
+            0,
+            1
+          ],
+          "lado": "fav",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 15.791781593446014,
+          "nivel_local": 3.8675301511526046,
+          "nivel_visitante": 6.374991871275489,
+          "color_local": "🔴",
+          "color_visitante": "🟢"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 3.8675301511526046,
+          "color": "🔴",
+          "n": 4
+        },
+        "visitante": {
+          "poder": 6.374991871275489,
+          "color": "🟢",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Boreham Wood vs Aldershot Town",
