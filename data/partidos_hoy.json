@@ -8784,7 +8784,8 @@
           "color": "🟢",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Boreham Wood vs Aldershot Town",
@@ -9013,6 +9014,15 @@
             "effectiveClearance": "0",
             "totalClearance": "0"
           },
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "36'",
+          "goles_local": 1,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
           "periodo": 1,
           "estado_detalle": "First Half"
         }
