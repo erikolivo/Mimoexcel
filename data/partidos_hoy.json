@@ -2638,7 +2638,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Tai Po FC vs Adelaide United FC",
@@ -3965,7 +3966,8 @@
           "color": "🔴",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Vietnam U17 vs Mali U17",
@@ -4739,10 +4741,104 @@
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "54'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "8",
+            "yellowCards": "1",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "3",
+            "possessionPct": "21.6",
+            "totalShots": "3",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "72",
+            "totalPasses": "124",
+            "passPct": "0.6",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "5",
+            "totalTackles": "11",
+            "tacklePct": "0.5",
+            "effectiveClearance": "0",
+            "totalClearance": "19"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "9",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "6",
+            "saves": "0",
+            "possessionPct": "78.4",
+            "totalShots": "18",
+            "shotsOnTarget": "3",
+            "shotPct": "0.2",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "406",
+            "totalPasses": "446",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "6",
+            "effectiveTackles": "7",
+            "totalTackles": "8",
+            "tacklePct": "0.9",
+            "effectiveClearance": "0",
+            "totalClearance": "8"
+          },
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "cuidado_rival_presiona",
+          "minuto": "54'",
+          "texto": "⚠️ Rival domina [MEDIA]",
+          "diferencia_goles": 0,
+          "id": "401873570-0",
+          "minuto_int": 54,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "rival",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 20.490325937604236,
+          "nivel_local": null,
+          "nivel_visitante": 7.023245869776481,
+          "color_local": null,
+          "color_visitante": "🟢"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": null,
+          "color": null,
+          "n": 0
+        },
+        "visitante": {
+          "poder": 7.023245869776481,
+          "color": "🟢",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Jamaica U17 vs Ivory Coast U17",
@@ -4827,6 +4923,63 @@
             "effectiveTackles": "0",
             "totalTackles": "0",
             "tacklePct": "0.0",
+            "effectiveClearance": "0",
+            "totalClearance": "0"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "11'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "0",
+            "saves": "0",
+            "possessionPct": "12.4",
+            "totalShots": "0",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "3",
+            "totalPasses": "10",
+            "passPct": "0.3",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "0",
+            "effectiveTackles": "2",
+            "totalTackles": "2",
+            "tacklePct": "1.0",
+            "effectiveClearance": "0",
+            "totalClearance": "6"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "1",
+            "yellowCards": "0",
+            "redCards": "0",
+            "offsides": "0",
+            "wonCorners": "2",
+            "saves": "0",
+            "possessionPct": "87.6",
+            "totalShots": "4",
+            "shotsOnTarget": "1",
+            "shotPct": "0.3",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "65",
+            "totalPasses": "74",
+            "passPct": "0.9",
+            "crossPct": "0.0",
+            "longballPct": "0.0",
+            "blockedShots": "1",
+            "effectiveTackles": "1",
+            "totalTackles": "2",
+            "tacklePct": "0.5",
             "effectiveClearance": "0",
             "totalClearance": "0"
           },
