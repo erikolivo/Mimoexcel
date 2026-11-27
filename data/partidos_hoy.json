@@ -15658,7 +15658,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Venezia vs Bologna",
@@ -17235,7 +17236,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Brest vs Paris FC",
@@ -18825,11 +18827,11 @@
           ],
           "lado": "rival",
           "criterio": "siguiente_gol",
-          "estado": "pendiente",
+          "estado": "fallo",
           "resuelta_minuto": null,
-          "resuelta_motivo": null,
-          "resolucion_notificada": false,
-          "acierto": null,
+          "resuelta_motivo": "sin_mas_goles",
+          "resolucion_notificada": true,
+          "acierto": false,
           "presion_lado": 22.35419374785927,
           "nivel_local": 6.792394185069332,
           "nivel_visitante": 5.85084923829219,
@@ -18849,7 +18851,8 @@
           "color": "🟡",
           "n": 6
         }
-      }
+      },
+      "aviso_final_enviado": true
     },
     {
       "partido": "Scunthorpe United vs Wealdstone",
@@ -19761,6 +19764,15 @@
           },
           "periodo": 2,
           "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "90'+8'",
+          "goles_local": 4,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
         }
       ],
       "alertas_enviadas": [],
@@ -19962,6 +19974,15 @@
         },
         {
           "minuto": "69'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "71'",
           "goles_local": 2,
           "goles_visitante": 0,
           "stats_local": {},
