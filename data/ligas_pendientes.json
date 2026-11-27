@@ -1,14 +1,14 @@
 {
-  "actualizado": "2026-11-26",
+  "actualizado": "2026-11-27",
   "ligas": [
     {
       "pais": "",
       "liga": "NCAAW Soccer",
       "liga_id": "5499",
-      "veces_visto": 5199,
+      "veces_visto": 5215,
       "ejemplo_partido": "Jacksonville Dolphins vs South Carolina State SOUTH CAROLINA STATE BULLDOGS",
       "fixture_id": "401900232",
-      "ultimo_visto": "2026-11-20"
+      "ultimo_visto": "2026-11-27"
     },
     {
       "pais": "",
@@ -50,10 +50,10 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 626,
+      "veces_visto": 632,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
-      "ultimo_visto": "2026-11-10"
+      "ultimo_visto": "2026-11-27"
     },
     {
       "pais": "",
@@ -1182,6 +1182,42 @@
     },
     {
       "pais": "",
+      "liga": "FIFA U-17 World Cup, Group I",
+      "liga_id": "5697",
+      "veces_visto": 22,
+      "ejemplo_partido": "Costa Rica U17 vs Republic of Ireland U17",
+      "fixture_id": "401873555",
+      "ultimo_visto": "2026-11-27"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 World Cup, Group K",
+      "liga_id": "5697",
+      "veces_visto": 22,
+      "ejemplo_partido": "Venezuela U17 vs Romania U17",
+      "fixture_id": "401873551",
+      "ultimo_visto": "2026-11-27"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 World Cup, Group L",
+      "liga_id": "5697",
+      "veces_visto": 22,
+      "ejemplo_partido": "Japan U17 vs Serbia U17",
+      "fixture_id": "401873550",
+      "ultimo_visto": "2026-11-27"
+    },
+    {
+      "pais": "",
+      "liga": "FIFA U-17 World Cup, Group J",
+      "liga_id": "5697",
+      "veces_visto": 22,
+      "ejemplo_partido": "Dominican Republic U17 vs Chile U17",
+      "fixture_id": "401873554",
+      "ultimo_visto": "2026-11-27"
+    },
+    {
+      "pais": "",
       "liga": "Copa Bolivia, Semifinals",
       "liga_id": "23284",
       "veces_visto": 21,
@@ -1242,42 +1278,6 @@
       "ejemplo_partido": "Washington Spirit vs Utah Royals",
       "fixture_id": "401933734",
       "ultimo_visto": "2026-11-15"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 World Cup, Group I",
-      "liga_id": "5697",
-      "veces_visto": 20,
-      "ejemplo_partido": "Costa Rica U17 vs Republic of Ireland U17",
-      "fixture_id": "401873555",
-      "ultimo_visto": "2026-11-24"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 World Cup, Group K",
-      "liga_id": "5697",
-      "veces_visto": 20,
-      "ejemplo_partido": "Venezuela U17 vs Romania U17",
-      "fixture_id": "401873551",
-      "ultimo_visto": "2026-11-24"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 World Cup, Group L",
-      "liga_id": "5697",
-      "veces_visto": 20,
-      "ejemplo_partido": "Japan U17 vs Serbia U17",
-      "fixture_id": "401873550",
-      "ultimo_visto": "2026-11-24"
-    },
-    {
-      "pais": "",
-      "liga": "FIFA U-17 World Cup, Group J",
-      "liga_id": "5697",
-      "veces_visto": 20,
-      "ejemplo_partido": "Dominican Republic U17 vs Chile U17",
-      "fixture_id": "401873554",
-      "ultimo_visto": "2026-11-24"
     },
     {
       "pais": "",
@@ -1641,6 +1641,15 @@
     },
     {
       "pais": "",
+      "liga": "Coupe de France, Eighth Round",
+      "liga_id": "3952",
+      "veces_visto": 3,
+      "ejemplo_partido": "AS Cannes vs Le Puy",
+      "fixture_id": "401934489",
+      "ultimo_visto": "2026-11-27"
+    },
+    {
+      "pais": "",
       "liga": "Concacaf Central American Cup, Quarterfinals - 1st Leg",
       "liga_id": "22947",
       "veces_visto": 2,
@@ -1731,6 +1740,15 @@
     },
     {
       "pais": "",
+      "liga": "Concacaf W Championship, Quarterfinals",
+      "liga_id": "18969",
+      "veces_visto": 2,
+      "ejemplo_partido": "Jamaica vs Costa Rica",
+      "fixture_id": "401870039",
+      "ultimo_visto": "2026-11-27"
+    },
+    {
+      "pais": "",
       "liga": "Campeones Cup, 2026 Campeones Cup",
       "liga_id": "18771",
       "veces_visto": 1,
@@ -1782,24 +1800,6 @@
       "ejemplo_partido": "Tunisia vs Uganda",
       "fixture_id": "401920052",
       "ultimo_visto": "2026-09-24"
-    },
-    {
-      "pais": "",
-      "liga": "Copa Chile, Quarterfinals - 1st Leg",
-      "liga_id": "8312",
-      "veces_visto": 1,
-      "ejemplo_partido": "Deportes Concepcion vs O'Higgins",
-      "fixture_id": "401926701",
-      "ultimo_visto": "2026-09-30"
-    },
-    {
-      "pais": "",
-      "liga": "Turkish Super Lig",
-      "liga_id": "3946",
-      "veces_visto": 1,
-      "ejemplo_partido": "Galatasaray vs Kasimpasa",
-      "fixture_id": "401888280",
-      "ultimo_visto": "2026-10-09"
     }
   ]
 }
