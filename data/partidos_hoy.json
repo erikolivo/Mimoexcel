@@ -19776,7 +19776,8 @@
         }
       ],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "aviso_final_enviado": true
     },
     {
       "partido": "Kansas vs UCLA",
@@ -19983,6 +19984,15 @@
         },
         {
           "minuto": "71'",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {},
+          "periodo": 2,
+          "estado_detalle": "Second Half"
+        },
+        {
+          "minuto": "76'",
           "goles_local": 2,
           "goles_visitante": 0,
           "stats_local": {},
