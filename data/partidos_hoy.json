@@ -27192,10 +27192,114 @@
           },
           "periodo": 1,
           "estado_detalle": "First Half"
+        },
+        {
+          "minuto": "45'+9'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {
+            "foulsCommitted": "6",
+            "yellowCards": "1",
+            "redCards": "1",
+            "offsides": "0",
+            "wonCorners": "1",
+            "saves": "1",
+            "possessionPct": "54.6",
+            "totalShots": "2",
+            "shotsOnTarget": "0",
+            "shotPct": "0.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "205",
+            "totalPasses": "237",
+            "passPct": "0.9",
+            "accurateCrosses": "3",
+            "totalCrosses": "11",
+            "crossPct": "0.3",
+            "totalLongBalls": "35",
+            "accurateLongBalls": "25",
+            "longballPct": "0.7",
+            "blockedShots": "1",
+            "effectiveTackles": "7",
+            "totalTackles": "8",
+            "tacklePct": "0.9",
+            "interceptions": "2",
+            "effectiveClearance": "8",
+            "totalClearance": "8"
+          },
+          "stats_visitante": {
+            "foulsCommitted": "6",
+            "yellowCards": "4",
+            "redCards": "0",
+            "offsides": "1",
+            "wonCorners": "1",
+            "saves": "0",
+            "possessionPct": "45.4",
+            "totalShots": "1",
+            "shotsOnTarget": "1",
+            "shotPct": "1.0",
+            "penaltyKickGoals": "0",
+            "penaltyKickShots": "0",
+            "accuratePasses": "150",
+            "totalPasses": "201",
+            "passPct": "0.7",
+            "accurateCrosses": "1",
+            "totalCrosses": "3",
+            "crossPct": "0.3",
+            "totalLongBalls": "38",
+            "accurateLongBalls": "16",
+            "longballPct": "0.4",
+            "blockedShots": "0",
+            "effectiveTackles": "7",
+            "totalTackles": "11",
+            "tacklePct": "0.6",
+            "interceptions": "0",
+            "effectiveClearance": "13",
+            "totalClearance": "13"
+          },
+          "periodo": 1,
+          "estado_detalle": "First Half"
         }
       ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "alertas_enviadas": [
+        {
+          "tipo": "tarjeta_roja",
+          "minuto": "45'+9'",
+          "texto": "🟥 Tarjeta roja para Millonarios.",
+          "diferencia_goles": 0,
+          "id": "401936054-0",
+          "minuto_int": 54,
+          "marcador_alerta": [
+            0,
+            0
+          ],
+          "lado": "rival",
+          "criterio": "siguiente_gol",
+          "estado": "pendiente",
+          "resuelta_minuto": null,
+          "resuelta_motivo": null,
+          "resolucion_notificada": false,
+          "acierto": null,
+          "presion_lado": 1.194952425971407,
+          "nivel_local": 7.697909546126351,
+          "nivel_visitante": 6.3420759760679175,
+          "color_local": "🟢",
+          "color_visitante": "🟢"
+        }
+      ],
+      "diferencia_maxima_alcanzada": 0,
+      "nivel_actual": {
+        "local": {
+          "poder": 7.697909546126351,
+          "color": "🟢",
+          "n": 5
+        },
+        "visitante": {
+          "poder": 6.3420759760679175,
+          "color": "🟢",
+          "n": 6
+        }
+      }
     },
     {
       "partido": "Real Salt Lake vs Vancouver Whitecaps",
