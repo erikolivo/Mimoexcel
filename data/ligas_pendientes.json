@@ -41,7 +41,7 @@
       "pais": "",
       "liga": "Women's International Friendly",
       "liga_id": "3923",
-      "veces_visto": 716,
+      "veces_visto": 724,
       "ejemplo_partido": "China vs Vietnam",
       "fixture_id": "401916262",
       "ultimo_visto": "2026-11-28"
@@ -185,7 +185,7 @@
       "pais": "",
       "liga": "USL Super League",
       "liga_id": "23633",
-      "veces_visto": 336,
+      "veces_visto": 340,
       "ejemplo_partido": "Lexington SC vs Carolina Ascent FC",
       "fixture_id": "401878641",
       "ultimo_visto": "2026-11-28"
@@ -309,6 +309,15 @@
     },
     {
       "pais": "",
+      "liga": "Coupe de France, Eighth Round",
+      "liga_id": "3952",
+      "veces_visto": 165,
+      "ejemplo_partido": "AS Cannes vs Le Puy",
+      "fixture_id": "401934489",
+      "ultimo_visto": "2026-11-28"
+    },
+    {
+      "pais": "",
       "liga": "Argentine Primera B",
       "liga_id": "3904",
       "veces_visto": 161,
@@ -351,15 +360,6 @@
       "ejemplo_partido": "Metalist 1925 Kharkiv vs Torreense",
       "fixture_id": "401916437",
       "ultimo_visto": "2026-09-30"
-    },
-    {
-      "pais": "",
-      "liga": "Coupe de France, Eighth Round",
-      "liga_id": "3952",
-      "veces_visto": 132,
-      "ejemplo_partido": "AS Cannes vs Le Puy",
-      "fixture_id": "401934489",
-      "ultimo_visto": "2026-11-28"
     },
     {
       "pais": "",
@@ -1076,7 +1076,7 @@
       "pais": "",
       "liga": "Concacaf W Championship, Quarterfinals",
       "liga_id": "18969",
-      "veces_visto": 28,
+      "veces_visto": 30,
       "ejemplo_partido": "Jamaica vs Costa Rica",
       "fixture_id": "401870039",
       "ultimo_visto": "2026-11-28"
@@ -1461,6 +1461,24 @@
     },
     {
       "pais": "",
+      "liga": "WWCQ - Playoff Tournament, Preliminary Phase",
+      "liga_id": "21211",
+      "veces_visto": 12,
+      "ejemplo_partido": "Chinese Taipei vs South Africa",
+      "fixture_id": "401932280",
+      "ultimo_visto": "2026-11-28"
+    },
+    {
+      "pais": "",
+      "liga": "Scottish Cup, Third Round",
+      "liga_id": "3959",
+      "veces_visto": 12,
+      "ejemplo_partido": "Annan Athletic vs Greenock Morton",
+      "fixture_id": "401931701",
+      "ultimo_visto": "2026-11-28"
+    },
+    {
+      "pais": "",
       "liga": "AFCON Qualifying, Group H",
       "liga_id": "8315",
       "veces_visto": 11,
@@ -1566,24 +1584,6 @@
       "ejemplo_partido": "Feyenoord Rotterdam vs VfL Wolfsburg",
       "fixture_id": "401928137",
       "ultimo_visto": "2026-11-12"
-    },
-    {
-      "pais": "",
-      "liga": "WWCQ - Playoff Tournament, Preliminary Phase",
-      "liga_id": "21211",
-      "veces_visto": 9,
-      "ejemplo_partido": "Chinese Taipei vs South Africa",
-      "fixture_id": "401932280",
-      "ultimo_visto": "2026-11-28"
-    },
-    {
-      "pais": "",
-      "liga": "Scottish Cup, Third Round",
-      "liga_id": "3959",
-      "veces_visto": 9,
-      "ejemplo_partido": "Annan Athletic vs Greenock Morton",
-      "fixture_id": "401931701",
-      "ultimo_visto": "2026-11-28"
     },
     {
       "pais": "",
